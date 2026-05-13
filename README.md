@@ -112,41 +112,42 @@ src/
 
 ## 🚢 Deploy Production
 
-### 1. Supabase
+### 1. Neon Database (thay Supabase — không bao giờ bị pause!)
 ```bash
-# Tạo project tại supabase.com → Free Plan → Region: Singapore
-# Chạy migrations trong SQL Editor theo thứ tự:
-supabase/migrations/001_initial_schema.sql
-supabase/migrations/002_permissions_categories.sql
-supabase/migrations/003_production_ready.sql
+# Tạo project tại console.neon.tech → Free → Region: Singapore
+# Chạy migration trong SQL Editor:
+supabase/migrations/004_neon_full_schema.sql
 ```
 
 ### 2. Vercel
 ```bash
-git add . && git commit -m "Production ready"
-git push origin main
+git remote add origin https://github.com/YOUR_USER/khodetoan.git
+git push -u origin master
 # Vercel → Import repo → Set environment variables
 ```
 
 ### 3. Environment Variables (Vercel Dashboard)
 ```env
-NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+DATABASE_URL=postgresql://...@ep-xxx.neon.tech/neondb?sslmode=require
+JWT_SECRET=your-random-32-char-secret
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
 CLOUDINARY_UPLOAD_PRESET=khodetoan_unsigned
 ```
 
-### 4. UptimeRobot (giữ Supabase sống)
-- Monitor: `GET https://your-app.vercel.app/api/health` — 5 phút
+### 4. Tạo Admin
+```sql
+-- Đăng ký tại /register, rồi chạy SQL trong Neon:
+UPDATE public.users SET role = 'admin' WHERE email = 'your_email';
+```
 
 ### 📊 Dung lượng miễn phí
 
 | Tài nguyên | Giới hạn | Đủ cho |
 |-----------|:--------:|:------:|
-| Database | 500 MB | ~5000 GV (shared pool) |
-| Auth | 50K MAU | ~50,000 GV |
+| Neon DB | 0.5 GB/project | ~5000 GV (shared pool) |
+| Cold start | 350ms | Không cần UptimeRobot! |
 | Cloudinary (×3) | 75 credits | ~60,000 ảnh |
-| Bandwidth | 100 GB/tháng | ~500 GV active/ngày |
+| Vercel BW | 100 GB/tháng | ~500 GV active/ngày |
 
 ## 📄 License
 
