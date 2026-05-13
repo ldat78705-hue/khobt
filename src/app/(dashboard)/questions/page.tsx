@@ -1,0 +1,431 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
+import { Header } from "@/components/dashboard/Header";
+import {
+  Plus, Search, Filter, Grid3X3, List, MoreHorizontal,
+  Trash2, Copy, Edit, Eye, ChevronDown, X, BookOpen, Upload, Heart, FileDown
+} from "lucide-react";
+import Link from "next/link";
+import { cn, getDifficultyColor, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
+import { GRADES, TOPICS, DIFFICULTIES, QUESTION_TYPES, QUESTION_STATUSES } from "@/types";
+import type { Question, Grade, Topic, Difficulty, QuestionType, QuestionStatus } from "@/types";
+import { createClient } from "@/lib/supabase/client";
+import { toast } from "sonner";
+import { QuestionContent } from "@/components/shared/MathRenderer";
+import { isDemoMode, demoDb } from "@/lib/demo-data";
+import { ImportDialog } from "@/components/shared/ImportDialog";
+import { DEMO_USER } from "@/lib/demo-data";
+
+export default function QuestionsPage() {
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedGrade, setSelectedGrade] = useState<Grade | "">("");
+  const [selectedTopic, setSelectedTopic] = useState<Topic | "">("");
+  const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | "">("");
+  const [selectedType, setSelectedType] = useState<QuestionType | "">("");
+  const [selectedStatus, setSelectedStatus] = useState<QuestionStatus | "">("");
+  const [filterHasSolution, setFilterHasSolution] = useState(false);
+  const [filterHasImages, setFilterHasImages] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [showImport, setShowImport] = useState(false);
+  const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+
+  const fetchQuestions = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      if (isDemoMode) {
+        let data = demoDb.getQuestions({
+          grade: selectedGrade || undefined,
+          topic: selectedTopic || undefined,
+          difficulty: selectedDifficulty || undefined,
+          question_type: selectedType || undefined,
+          search: searchQuery || undefined,
+          status: selectedStatus || undefined,
+        });
+        if (filterHasSolution) data = data.filter(q => q.solution);
+        if (filterHasImages) data = data.filter(q => q.images && q.images.length > 0);
+        setQuestions(data);
+      } else {
+        const supabase = createClient();
+        let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
+        if (selectedGrade) query = query.eq("grade", selectedGrade);
+        if (selectedTopic) query = query.eq("topic", selectedTopic);
+        if (selectedDifficulty) query = query.eq("difficulty", selectedDifficulty);
+        if (selectedType) query = query.eq("question_type", selectedType);
+        if (searchQuery) query = query.ilike("content", `%${searchQuery}%`);
+        const { data, error } = await query.limit(50);
+        if (error) throw error;
+        setQuestions(data || []);
+      }
+    } catch {
+      toast.error("Không thể tải bài tập");
+    } finally {
+      setIsLoading(false);
+    }
+  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages]);
+
+  useEffect(() => {
+    fetchQuestions();
+  }, [fetchQuestions]);
+
+  // Load favorites
+  useEffect(() => {
+    if (isDemoMode) {
+      const favs = demoDb.getFavoriteQuestions(DEMO_USER.id);
+      setFavoriteIds(favs.map(q => q.id));
+    }
+  }, []);
+
+  const handleToggleFavorite = (questionId: string) => {
+    if (isDemoMode) {
+      const result = demoDb.toggleFavorite(DEMO_USER.id, questionId);
+      setFavoriteIds(prev => result ? [...prev, questionId] : prev.filter(id => id !== questionId));
+      toast.success(result ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+    }
+  };
+
+  const handleDelete = async (id: string) => {
+    if (!confirm("Bạn có chắc muốn xóa bài tập này?")) return;
+    try {
+      if (isDemoMode) {
+        demoDb.deleteQuestion(id);
+      } else {
+        const supabase = createClient();
+        const { error } = await supabase.from("questions").delete().eq("id", id);
+        if (error) throw error;
+      }
+      setQuestions((prev) => prev.filter((q) => q.id !== id));
+      toast.success("Đã xóa bài tập");
+    } catch {
+      toast.error("Không thể xóa bài tập");
+    }
+  };
+
+  const toggleSelect = (id: string) => {
+    setSelectedIds((prev) =>
+      prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
+    );
+  };
+
+  const handleClone = async (q: Question) => {
+    try {
+      if (isDemoMode) {
+        const { id, question_code, created_at, updated_at, ...rest } = q;
+        demoDb.createQuestion({ ...rest, content: q.content, status: 'draft' as const });
+      } else {
+        const supabase = createClient();
+        const { data: { user } } = await supabase.auth.getUser();
+        if (!user) return;
+        const { id, question_code, created_at, updated_at, user_id, ...rest } = q;
+        await supabase.from("questions").insert({ ...rest, user_id: user.id, status: 'draft' });
+      }
+      toast.success("Đã nhân bản bài tập");
+      fetchQuestions();
+    } catch {
+      toast.error("Không thể nhân bản bài tập");
+    }
+  };
+
+  const handleBulkDelete = async () => {
+    if (!confirm(`Xóa ${selectedIds.length} bài tập đã chọn? Không thể hoàn tác.`)) return;
+    try {
+      let deleted = 0;
+      for (const id of selectedIds) {
+        if (isDemoMode) {
+          demoDb.deleteQuestion(id);
+          deleted++;
+        } else {
+          const supabase = createClient();
+          const { error } = await supabase.from("questions").delete().eq("id", id);
+          if (!error) deleted++;
+        }
+      }
+      toast.success(`Đã xóa ${deleted} bài tập`);
+      setSelectedIds([]);
+      fetchQuestions();
+    } catch {
+      toast.error("Lỗi khi xóa hàng loạt");
+    }
+  };
+
+  const handleBulkClone = async () => {
+    try {
+      let cloned = 0;
+      for (const id of selectedIds) {
+        const q = questions.find(q => q.id === id);
+        if (!q) continue;
+        if (isDemoMode) {
+          const { id: _, question_code, created_at, updated_at, ...rest } = q;
+          demoDb.createQuestion({ ...rest, status: 'draft' as const });
+          cloned++;
+        } else {
+          const supabase = createClient();
+          const { data: { user } } = await supabase.auth.getUser();
+          if (!user) continue;
+          const { id: _, question_code, created_at, updated_at, user_id, ...rest } = q;
+          const { error } = await supabase.from("questions").insert({ ...rest, user_id: user.id, status: 'draft' });
+          if (!error) cloned++;
+        }
+      }
+      toast.success(`Đã nhân bản ${cloned} bài tập`);
+      setSelectedIds([]);
+      fetchQuestions();
+    } catch {
+      toast.error("Lỗi khi nhân bản hàng loạt");
+    }
+  };
+
+  const clearFilters = () => {
+    setSelectedGrade("");
+    setSelectedTopic("");
+    setSelectedDifficulty("");
+    setSelectedType("");
+    setSelectedStatus("");
+    setFilterHasSolution(false);
+    setFilterHasImages(false);
+    setSearchQuery("");
+  };
+
+  const hasFilters = selectedGrade || selectedTopic || selectedDifficulty || selectedType || selectedStatus || filterHasSolution || filterHasImages;
+
+  return (
+    <>
+      <Header
+        title="Kho bài tập"
+        subtitle={`${questions.length} bài tập`}
+        actions={
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowImport(true)}
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors"
+            >
+              <Upload className="w-4 h-4" />
+              Nhập từ file
+            </button>
+            <Link
+              href="/questions/new"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-white rounded-lg gradient-primary hover:opacity-90 transition-all shadow-sm"
+            >
+              <Plus className="w-4 h-4" />
+              Thêm bài tập
+            </Link>
+          </div>
+        }
+      />
+      <div className="p-6 space-y-4">
+        {/* Toolbar */}
+        <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm">
+          <div className="flex items-center gap-3">
+            {/* Search */}
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Tìm kiếm bài tập..."
+                className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+              />
+            </div>
+
+            {/* Filter toggle */}
+            <button
+              onClick={() => setShowFilters(!showFilters)}
+              className={cn(
+                "flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border transition-all",
+                showFilters ? "bg-blue-50 text-blue-600 border-blue-200" : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50"
+              )}
+            >
+              <Filter className="w-4 h-4" />
+              Bộ lọc
+              {hasFilters && <span className="w-2 h-2 bg-blue-500 rounded-full" />}
+            </button>
+
+            {/* View mode */}
+            <div className="flex items-center border border-slate-200 rounded-xl overflow-hidden">
+              <button
+                onClick={() => setViewMode("list")}
+                className={cn("p-2.5 transition-colors", viewMode === "list" ? "bg-blue-50 text-blue-600" : "text-slate-400 hover:text-slate-600")}
+              >
+                <List className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setViewMode("grid")}
+                className={cn("p-2.5 transition-colors", viewMode === "grid" ? "bg-blue-50 text-blue-600" : "text-slate-400 hover:text-slate-600")}
+              >
+                <Grid3X3 className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Filters panel */}
+          {showFilters && (
+            <div className="mt-4 pt-4 border-t border-slate-100 grid grid-cols-2 lg:grid-cols-4 gap-3 animate-slide-in-up">
+              <div>
+                <label className="block text-xs font-medium text-slate-500 mb-1">Lớp</label>
+                <select value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value as Grade | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả</option>
+                  {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề</label>
+                <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value as Topic | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả</option>
+                  {TOPICS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-500 mb-1">Mức độ</label>
+                <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value as Difficulty | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả</option>
+                  {DIFFICULTIES.map((d) => <option key={d.value} value={d.value}>{d.label}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-500 mb-1">Dạng bài</label>
+                <select value={selectedType} onChange={(e) => setSelectedType(e.target.value as QuestionType | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả</option>
+                  {QUESTION_TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-slate-500 mb-1">Trạng thái</label>
+                <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value as QuestionStatus | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả</option>
+                  {QUESTION_STATUSES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
+                </select>
+              </div>
+              <div className="col-span-full flex items-center gap-4 pt-1">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked={filterHasSolution} onChange={(e) => setFilterHasSolution(e.target.checked)} className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                  <span className="text-xs font-medium text-slate-600">Có lời giải</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input type="checkbox" checked={filterHasImages} onChange={(e) => setFilterHasImages(e.target.checked)} className="w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500" />
+                  <span className="text-xs font-medium text-slate-600">Có hình ảnh</span>
+                </label>
+              </div>
+              {hasFilters && (
+                <div className="col-span-full">
+                  <button onClick={clearFilters} className="flex items-center gap-1 text-sm text-red-500 hover:text-red-600 font-medium">
+                    <X className="w-4 h-4" /> Xóa bộ lọc
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Bulk actions */}
+          {selectedIds.length > 0 && (
+            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center gap-3 animate-slide-in-up">
+              <span className="text-sm text-slate-600">Đã chọn <strong>{selectedIds.length}</strong> bài tập</span>
+              <button onClick={handleBulkDelete} className="px-3 py-1.5 text-xs font-medium text-red-600 bg-red-50 rounded-lg hover:bg-red-100 flex items-center gap-1">
+                <Trash2 className="w-3.5 h-3.5" /> Xóa
+              </button>
+              <button onClick={handleBulkClone} className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 flex items-center gap-1">
+                <Copy className="w-3.5 h-3.5" /> Nhân bản
+              </button>
+              <Link href="/questions/export" className="px-3 py-1.5 text-xs font-medium text-green-600 bg-green-50 rounded-lg hover:bg-green-100 flex items-center gap-1">
+                <FileDown className="w-3.5 h-3.5" /> Xuất Word
+              </Link>
+              <button onClick={() => setSelectedIds([])} className="ml-auto text-sm text-slate-500 hover:text-slate-700">
+                Bỏ chọn
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Question list */}
+        {isLoading ? (
+          <div className="space-y-3">
+            {[1, 2, 3, 4, 5].map((i) => (
+              <div key={i} className="bg-white rounded-2xl border border-slate-100 p-5">
+                <div className="skeleton h-4 w-3/4 mb-3" />
+                <div className="skeleton h-3 w-1/2 mb-2" />
+                <div className="flex gap-2">
+                  <div className="skeleton h-6 w-16 rounded-full" />
+                  <div className="skeleton h-6 w-20 rounded-full" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : questions.length === 0 ? (
+          <div className="bg-white rounded-2xl border border-slate-100 p-16 text-center shadow-sm">
+            <div className="w-20 h-20 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
+              <BookOpen className="w-10 h-10 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">Chưa có bài tập nào</h3>
+            <p className="text-slate-500 mb-6">Bắt đầu bằng cách thêm bài tập đầu tiên vào kho.</p>
+            <Link href="/questions/new" className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl gradient-primary hover:opacity-90 transition-all shadow-md shadow-blue-500/25">
+              <Plus className="w-4 h-4" /> Thêm bài tập đầu tiên
+            </Link>
+          </div>
+        ) : (
+          <div className={viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 gap-4" : "space-y-3"}>
+            {questions.map((q) => (
+              <div
+                key={q.id}
+                className={cn(
+                  "bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group",
+                  selectedIds.includes(q.id) && "ring-2 ring-blue-500 border-blue-200"
+                )}
+              >
+                <div className="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedIds.includes(q.id)}
+                    onChange={() => toggleSelect(q.id)}
+                    className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-slate-800 leading-relaxed line-clamp-3">
+                      {q.question_code && <span className="inline-block px-1.5 py-0.5 text-[10px] font-bold bg-blue-100 text-blue-700 rounded mr-2 align-middle font-mono">{q.question_code}</span>}
+                      <QuestionContent content={q.content} images={q.images} />
+                    </div>
+                    <div className="flex flex-wrap items-center gap-2 mt-3">
+                      <span className="px-2.5 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">
+                        Toán {q.grade}
+                      </span>
+                      <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">
+                        {getTopicLabel(q.topic)}
+                      </span>
+                      <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>
+                        {getDifficultyLabel(q.difficulty)}
+                      </span>
+                      <span className="px-2.5 py-0.5 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">
+                        {getQuestionTypeLabel(q.question_type)}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button onClick={() => handleToggleFavorite(q.id)} className={cn("p-2 rounded-lg transition-colors", favoriteIds.includes(q.id) ? "text-red-500 bg-red-50" : "text-slate-400 hover:text-red-500 hover:bg-red-50")} title="Yêu thích">
+                      <Heart className={cn("w-4 h-4", favoriteIds.includes(q.id) && "fill-current")} />
+                    </button>
+                    <Link href={`/questions/${q.id}`} className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600 transition-colors">
+                      <Eye className="w-4 h-4" />
+                    </Link>
+                    <Link href={`/questions/${q.id}/edit`} className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600 transition-colors">
+                      <Edit className="w-4 h-4" />
+                    </Link>
+                    <button onClick={() => handleClone(q)} className="p-2 rounded-lg hover:bg-blue-50 text-slate-400 hover:text-blue-600 transition-colors" title="Nhân bản">
+                      <Copy className="w-4 h-4" />
+                    </button>
+                    <button onClick={() => handleDelete(q.id)} className="p-2 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600 transition-colors" title="Xóa">
+                      <Trash2 className="w-4 h-4" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+      <ImportDialog isOpen={showImport} onClose={() => setShowImport(false)} onImported={fetchQuestions} />
+    </>
+  );
+}

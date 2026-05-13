@@ -1,26 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
+/* ==========================================
+   KhoDeToán - Global Styles
+   ========================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Primary palette - Professional blue */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+
+  /* Accent palette */
+  --accent-50: #f0fdf4;
+  --accent-500: #22c55e;
+  --accent-600: #16a34a;
+
+  /* Surfaces */
+  --surface-0: #ffffff;
+  --surface-50: #f8fafc;
+  --surface-100: #f1f5f9;
+  --surface-200: #e2e8f0;
+  --surface-300: #cbd5e1;
+  --surface-400: #94a3b8;
+  --surface-500: #64748b;
+  --surface-600: #475569;
+  --surface-700: #334155;
+  --surface-800: #1e293b;
+  --surface-900: #0f172a;
+
+  /* Sidebar */
+  --sidebar-width: 280px;
+  --sidebar-collapsed-width: 72px;
+  --header-height: 64px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--surface-50);
+  color: var(--surface-800);
+  line-height: 1.6;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--surface-400);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--primary-200);
+  color: var(--primary-900);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--primary-500);
+  outline-offset: 2px;
+}
+
+/* KaTeX overrides */
+.katex {
+  font-size: 1.1em !important;
+}
+
+.katex-display {
+  margin: 0.8em 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* MathLive overrides */
+math-field {
+  font-size: 18px;
+  border: 2px solid var(--surface-200);
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-height: 48px;
+  width: 100%;
+  transition: border-color var(--transition-fast);
+}
+
+math-field:focus-within {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.33); }
+  80%, 100% { opacity: 0; }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight var(--transition-normal) ease-out;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp var(--transition-normal) ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-fast) ease-out;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-100) 25%, var(--surface-200) 50%, var(--surface-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 6px;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Print styles */
+@media print {
+  .no-print, aside, header, nav, .fixed {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .print-paper {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 15mm 20mm !important;
+    min-height: auto !important;
+    margin: 0 !important;
+  }
+
+  /* Hide everything except print-paper */
+  body > * {
+    display: none !important;
+  }
+
+  /* Show the paper */
+  .print-paper {
+    display: block !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+}
+
+/* Custom utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+.gradient-primary {
+  background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Question content styles */
+.question-content {
+  line-height: 1.8;
+}
+
+.question-content p {
+  margin-bottom: 0.5em;
+}
+
+.question-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.5em 0;
+}
+
+/* Math content rendering */
+.math-content {
+  line-height: 1.8;
+}
+
+.math-content .katex-block {
+  display: block;
+  text-align: center;
+  margin: 0.8em 0;
+  overflow-x: auto;
+}
+
+.math-content .katex-error {
+  color: #ef4444;
+  font-family: monospace;
+  font-size: 0.9em;
+  padding: 2px 4px;
+  background: #fef2f2;
+  border-radius: 4px;
+}
+
+.math-content .katex {
+  font-size: 1.1em;
+}
+
+.math-content.inline {
+  display: inline;
+}
+
+/* Markdown tables */
+.md-table {
+  width: auto;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.875rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.md-table th,
+.md-table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.md-table thead th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.8125rem;
+}
+
+.md-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.md-table tbody td {
+  color: #334155;
+}
+
+.math-content .md-table {
+  display: table;
+}
+
+/* Prevent line-clamp from breaking table layout */
+.line-clamp-3 .md-table,
+.line-clamp-2 .md-table {
+  display: none;
+}
+
+.line-clamp-3:has(.md-table)::after,
+.line-clamp-2:has(.md-table)::after {
+  content: " [Bảng dữ liệu]";
+  color: #64748b;
+  font-style: italic;
+  font-size: 0.8125rem;
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  /* Hide the main app layout */
+  body > div > div > aside,
+  body > div > div > main > header,
+  body > div > div > main > div:not(:has(.print-preview)) {
+    display: none !important;
+  }
+
+  /* The modal overlay - make it static and transparent */
+  .no-print {
+    position: static !important;
+    background: transparent !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hide controls inside the modal but keep the paper */
+  .no-print > div > div > .sticky {
+    display: none !important;
+  }
+
+  /* The print-preview paper */
+  .print-preview {
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: white !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-family: 'Times New Roman', serif !important;
+    font-size: 13pt !important;
+    line-height: 1.6 !important;
+    color: #000 !important;
+  }
+
+  /* Hide all buttons globally */
+  button {
+    display: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 15mm 20mm;
+  }
+
+  .print-preview h1,
+  .print-preview h2,
+  .print-preview h3 {
+    color: #000 !important;
+  }
+
+  /* Table in print */
+  .print-preview .md-table {
+    border: 1px solid #000 !important;
+  }
+
+  .print-preview .md-table th,
+  .print-preview .md-table td {
+    border: 1px solid #000 !important;
+    padding: 4px 8px !important;
+  }
+
+  /* Answer/solution boxes in print */
+  .print-preview [style*="background: #eff6ff"],
+  .print-preview [style*="background: #f0fdf4"] {
+    background: #f5f5f5 !important;
+    border: 1px solid #ccc !important;
+  }
+
+  /* KaTeX in print */
+  .print-preview .katex {
+    font-size: 1em !important;
+  }
+
+  /* Sidebar */
+  .sidebar,
+  nav,
+  aside,
+  .gradient-primary,
+  .search-dialog {
+    display: none !important;
+  }
 }

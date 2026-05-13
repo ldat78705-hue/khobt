@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📐 KhoDeToán
 
-## Getting Started
+> Ứng dụng quản lý kho đề thi & bài tập Toán THCS dành cho giáo viên.
 
-First, run the development server:
+## ✨ Tính năng chính
+
+- **📚 Kho bài tập** — CRUD bài tập với LaTeX, ảnh, trắc nghiệm/tự luận
+- **📝 Kho đề thi** — Soạn đề từ kho bài tập, xem trước bản in
+- **📤 Xuất Word** — Export `.docx` với công thức OMML (chỉnh sửa được trong Word)
+- **🔍 Tìm kiếm** — Global search (Ctrl+K), filter theo lớp/chuyên đề/mức độ
+- **👥 Phân quyền** — Admin / Giáo viên / Reviewer
+- **✅ Duyệt bài** — Workflow duyệt/từ chối bài tập
+- **📁 Thư mục** — Phân loại đề thi
+- **📥 Import** — Nhập hàng loạt từ file text/markdown
+- **🖼️ Cloudinary** — Upload & optimize ảnh minh họa
+
+## 🚀 Cài đặt
 
 ```bash
+# Clone project
+git clone <repo-url>
+cd khode
+
+# Cài dependencies
+npm install
+
+# Chạy development
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) — ứng dụng sẽ tự chạy ở **chế độ Demo** nếu chưa cấu hình Supabase.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Cấu hình
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` thành `.env.local`:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Chế độ Demo (mặc định)
+- Không cần cấu hình gì
+- Dữ liệu lưu trong localStorage
+- Đầy đủ tính năng để trải nghiệm
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Production (Supabase)
+1. Tạo project tại [supabase.com](https://supabase.com)
+2. Chạy migrations trong `supabase/migrations/` theo thứ tự
+3. Điền `NEXT_PUBLIC_SUPABASE_URL` và `NEXT_PUBLIC_SUPABASE_ANON_KEY` vào `.env.local`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Cloudinary (upload ảnh)
+1. Đăng ký tại [cloudinary.com](https://cloudinary.com)
+2. Điền `NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME`, `CLOUDINARY_API_KEY`, `CLOUDINARY_API_SECRET`
 
-## Deploy on Vercel
+## 🗂️ Cấu trúc dự án
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+src/
+├── app/
+│   ├── (auth)/          # Login, Register, Forgot Password
+│   ├── (dashboard)/     # Dashboard, Questions, Exams, Folders, Admin
+│   └── api/upload/      # Cloudinary upload API
+├── components/
+│   ├── dashboard/       # Header, Sidebar
+│   └── shared/          # MathRenderer, ImageUpload
+├── lib/
+│   ├── supabase/        # Supabase client/server
+│   ├── export/          # Word export, Clipboard
+│   ├── demo-data.ts     # Demo mode data provider
+│   ├── cloudinary.ts    # Cloudinary helpers
+│   └── utils.ts         # Utility functions
+├── stores/              # Zustand stores
+└── types/               # TypeScript types
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗️ Tech Stack
+
+| | Công nghệ |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| State | Zustand |
+| Database | Supabase PostgreSQL |
+| Auth | Supabase Auth |
+| Math | KaTeX |
+| Export | docx.js (OMML) |
+| Images | Cloudinary |
+
+## 📊 Routes (20)
+
+| Route | Mô tả |
+|---|---|
+| `/` | Landing page |
+| `/login` | Đăng nhập |
+| `/register` | Đăng ký |
+| `/forgot-password` | Quên mật khẩu |
+| `/dashboard` | Tổng quan |
+| `/questions` | Kho bài tập |
+| `/questions/new` | Thêm bài tập |
+| `/questions/[id]` | Chi tiết bài tập |
+| `/questions/[id]/edit` | Sửa bài tập |
+| `/exams` | Kho đề thi |
+| `/exams/new` | Tạo đề thi |
+| `/exams/[id]` | Chi tiết đề + print preview |
+| `/exams/[id]/edit` | Soạn đề |
+| `/folders` | Thư mục |
+| `/admin/review` | Duyệt bài tập |
+| `/admin/categories` | Quản lý danh mục |
+| `/admin/users` | Quản lý người dùng |
+| `/admin/settings` | Cài đặt hệ thống |
+
+## 🚢 Deploy Production
+
+### 1. Supabase
+```bash
+# Tạo project tại supabase.com → Free Plan → Region: Singapore
+# Chạy migrations trong SQL Editor theo thứ tự:
+supabase/migrations/001_initial_schema.sql
+supabase/migrations/002_permissions_categories.sql
+supabase/migrations/003_production_ready.sql
+```
+
+### 2. Vercel
+```bash
+git add . && git commit -m "Production ready"
+git push origin main
+# Vercel → Import repo → Set environment variables
+```
+
+### 3. Environment Variables (Vercel Dashboard)
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://xxx.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJ...
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_UPLOAD_PRESET=khodetoan_unsigned
+```
+
+### 4. UptimeRobot (giữ Supabase sống)
+- Monitor: `GET https://your-app.vercel.app/api/health` — 5 phút
+
+### 📊 Dung lượng miễn phí
+
+| Tài nguyên | Giới hạn | Đủ cho |
+|-----------|:--------:|:------:|
+| Database | 500 MB | ~5000 GV (shared pool) |
+| Auth | 50K MAU | ~50,000 GV |
+| Cloudinary (×3) | 75 credits | ~60,000 ảnh |
+| Bandwidth | 100 GB/tháng | ~500 GV active/ngày |
+
+## 📄 License
+
+MIT
+
