@@ -1,19 +1,25 @@
 /**
  * Demo Data Provider
- * Cho phép ứng dụng chạy đầy đủ chức năng khi chưa cấu hình Supabase.
+ * Cho phép ứng dụng chạy đầy đủ chức năng khi chưa cấu hình Database.
  * Dữ liệu lưu trong localStorage.
+ * Hỗ trợ: Neon / Supabase / Demo
  */
 
 import type { Question, Profile, Exam, ExamQuestion, Folder, Category, FavoriteQuestion, SavedExam, Notification, QuestionReport } from '@/types';
 
 const STORAGE_KEY = 'khodetoan_demo';
 
-function isSupabaseConfigured(): boolean {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-  return url.length > 10 && url.startsWith('http');
+function isDatabaseConfigured(): boolean {
+  // Check Neon
+  const dbUrl = process.env.DATABASE_URL || '';
+  if (dbUrl.includes('neon.tech') || dbUrl.includes('neon.')) return true;
+  // Check Supabase
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  if (supabaseUrl.length > 10 && supabaseUrl.startsWith('http')) return true;
+  return false;
 }
 
-export const isDemoMode = !isSupabaseConfigured();
+export const isDemoMode = !isDatabaseConfigured();
 
 // Demo user
 export const DEMO_USER: Profile = {
