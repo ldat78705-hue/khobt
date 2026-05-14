@@ -374,8 +374,10 @@ export default function QuestionDetailPage() {
               {relatedQuestions.map(rq => (
                 <Link key={rq.id} href={`/questions/${rq.id}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
                   <BookOpen className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                  <span className="text-sm text-slate-700 truncate flex-1">{rq.content.slice(0, 80)}...</span>
-                  <span className={`px-2 py-0.5 text-[10px] font-medium rounded-full border ${getDifficultyColor(rq.difficulty)}`}>{getDifficultyLabel(rq.difficulty)}</span>
+                  <span className="text-sm text-slate-700 truncate flex-1">
+                    <MathRenderer content={rq.content.length > 100 ? rq.content.slice(0, 100) + '...' : rq.content} />
+                  </span>
+                  <span className={`px-2 py-0.5 text-[10px] font-medium rounded-full border whitespace-nowrap ${getDifficultyColor(rq.difficulty)}`}>{getDifficultyLabel(rq.difficulty)}</span>
                 </Link>
               ))}
             </div>

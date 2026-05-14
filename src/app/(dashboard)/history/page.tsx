@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { Clock, BookOpen, FileText, Heart, ThumbsUp, Flag, Eye, Edit, Trash2, Plus } from "lucide-react";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
-import { formatDate } from "@/lib/utils";
+import { formatDate, stripLatex } from "@/lib/utils";
 import Link from "next/link";
 
 interface ActivityItem {
@@ -37,7 +37,7 @@ export default function HistoryPage() {
       questions.slice(0, 5).forEach(q => {
         items.push({
           id: `q-${q.id}`, type: 'create', 
-          title: `Tạo bài tập: ${q.content.slice(0, 60)}...`,
+          title: `Tạo bài tập: ${stripLatex(q.content).slice(0, 60)}...`,
           link: `/questions/${q.id}`, time: q.created_at,
         });
       });
@@ -55,7 +55,7 @@ export default function HistoryPage() {
       favs.forEach(q => {
         items.push({
           id: `fav-${q.id}`, type: 'favorite',
-          title: `Yêu thích: ${q.content.slice(0, 60)}...`,
+          title: `Yêu thích: ${stripLatex(q.content).slice(0, 60)}...`,
           link: `/questions/${q.id}`, time: new Date().toISOString(),
         });
       });

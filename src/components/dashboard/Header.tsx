@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Bell, Search, X, BookOpen, FileText, LogOut, User, Settings, ChevronDown } from "lucide-react";
 import { useSidebarStore } from "@/stores/sidebar-store";
 import { useAuthStore } from "@/stores/auth-store";
-import { cn } from "@/lib/utils";
+import { cn, stripLatex } from "@/lib/utils";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import type { Notification as AppNotification } from "@/types";
 import { createClient } from "@/lib/supabase/client";
@@ -78,7 +78,7 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
     if (isDemoMode) {
       const questions = demoDb.getQuestions({ search: query });
       questions.slice(0, 5).forEach(q => {
-        results.push({ type: "bài tập", title: q.content.substring(0, 80) + (q.content.length > 80 ? "..." : ""), href: `/questions/${q.id}` });
+        results.push({ type: "bài tập", title: stripLatex(q.content).substring(0, 80) + (q.content.length > 80 ? "..." : ""), href: `/questions/${q.id}` });
       });
       const exams = demoDb.getExams().filter(e => e.title.toLowerCase().includes(query));
       exams.slice(0, 3).forEach(e => {

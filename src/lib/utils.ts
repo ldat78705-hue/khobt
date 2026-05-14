@@ -41,6 +41,34 @@ export function truncateText(text: string, maxLength: number) {
   return text.substring(0, maxLength) + '...';
 }
 
+/** Strip LaTeX markup to readable text for search results / tooltips */
+export function stripLatex(text: string): string {
+  return text
+    .replace(/\$\$(.*?)\$\$/g, ' $1 ')     // display math
+    .replace(/\$(.*?)\$/g, '$1')             // inline math
+    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '$1/$2')
+    .replace(/\\sqrt\{([^}]*)\}/g, '√($1)')
+    .replace(/\\(?:left|right|Big|big)[()[\]{}|.]/g, '')
+    .replace(/\\(?:text|mathrm|mathbf)\{([^}]*)\}/g, '$1')
+    .replace(/\\(?:cdot|times)/g, '×')
+    .replace(/\\(?:pm)/g, '±')
+    .replace(/\\(?:leq|le)/g, '≤')
+    .replace(/\\(?:geq|ge)/g, '≥')
+    .replace(/\\(?:neq|ne)/g, '≠')
+    .replace(/\\(?:infty)/g, '∞')
+    .replace(/\\(?:pi)/g, 'π')
+    .replace(/\\(?:alpha)/g, 'α')
+    .replace(/\\(?:beta)/g, 'β')
+    .replace(/\\(?:Delta)/g, 'Δ')
+    .replace(/\^{([^}]*)}/g, '^$1')
+    .replace(/_{([^}]*)}/g, '_$1')
+    .replace(/\\\\/g, ' ')
+    .replace(/\\[a-zA-Z]+/g, '')             // remaining commands
+    .replace(/[{}]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function generateVariantCode(index: number): string {
   return String(index + 1).padStart(3, '0');
 }

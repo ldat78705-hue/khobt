@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Upload, FileText, Loader2, X, Check, AlertCircle } from "lucide-react";
+import { MathRenderer } from "@/components/shared/MathRenderer";
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { createClient } from "@/lib/supabase/client";
@@ -224,9 +225,9 @@ export function ImportDialog({ isOpen, onClose, onImported, defaultGrade = 9, de
                         {selectedIndices.has(i) && <Check className="w-3 h-3" />}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="text-sm text-slate-800 line-clamp-3 whitespace-pre-wrap">{q.content}</div>
+                        <div className="text-sm text-slate-800 line-clamp-3 whitespace-pre-wrap"><MathRenderer content={q.content} /></div>
                         {q.answer && (
-                          <div className="mt-2 text-xs text-green-600 font-medium">Đáp án: {q.answer.substring(0, 80)}...</div>
+                          <div className="mt-2 text-xs text-green-600 font-medium">Đáp án: <MathRenderer content={q.answer.substring(0, 80) + '...'} /></div>
                         )}
                       </div>
                     </div>
