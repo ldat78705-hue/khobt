@@ -239,6 +239,63 @@ function createExamHeader(settings: ExamSettings, title: string, duration?: numb
   return paragraphs;
 }
 
+function createWorksheetHeader(settings: ExamSettings, title: string): Paragraph[] {
+  const paragraphs: Paragraph[] = [];
+  const centerName = getSettingValue(settings, 'schoolName', 'school_name');
+  const teacherName = getSettingValue(settings, 'teacherName', 'teacher_name');
+
+  // Center name + teacher on same line
+  if (centerName || teacherName) {
+    const lineChildren: TextRun[] = [];
+    if (centerName) {
+      lineChildren.push(new TextRun({ text: centerName.toUpperCase(), bold: true, size: 22, font: "Times New Roman" }));
+    }
+    if (centerName && teacherName) {
+      lineChildren.push(new TextRun({ text: '                              ', size: 22, font: "Times New Roman" }));
+    }
+    if (teacherName) {
+      lineChildren.push(new TextRun({ text: `GV: ${teacherName}`, size: 22, font: "Times New Roman", italics: true }));
+    }
+    paragraphs.push(new Paragraph({
+      children: lineChildren,
+      ...(centerName && teacherName ? {} : { alignment: centerName ? AlignmentType.LEFT : AlignmentType.RIGHT }),
+    }));
+  }
+
+  // Title
+  paragraphs.push(
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { before: 120 },
+      children: [new TextRun({ text: title.toUpperCase(), bold: true, size: 28, font: "Times New Roman" })],
+    }),
+    new Paragraph({
+      alignment: AlignmentType.CENTER,
+      spacing: { after: 60 },
+      border: { bottom: { style: BorderStyle.SINGLE, size: 1, color: "000000" } },
+      children: [],
+    })
+  );
+
+  // Student info
+  paragraphs.push(
+    new Paragraph({
+      spacing: { before: 80, after: 60 },
+      children: [
+        new TextRun({ text: 'Họ và tên: ....................................................', size: 22, font: "Times New Roman" }),
+        new TextRun({ text: '          Lớp: ............', size: 22, font: "Times New Roman" }),
+      ],
+    }),
+    new Paragraph({
+      spacing: { after: 100 },
+      border: { bottom: { style: BorderStyle.DASHED, size: 1, color: "999999" } },
+      children: [],
+    })
+  );
+
+  return paragraphs;
+}
+
 /**
  * Fetch image from URL and return as Uint8Array for embedding in Word doc.
  * Works in browser (no Node.js Buffer needed).
@@ -271,31 +328,32 @@ async function fetchImageAsUint8Array(url: string): Promise<{ data: Uint8Array; 
 export async function exportToWord(
   exam: Exam,
   questions: (ExamQuestion & { question: Question })[],
-  options: { showAnswer?: boolean; showSolution?: boolean } = {}
+  options: { showAnswer?: boolean; showSolution?: boolean; isWorksheet?: boolean } = {}
 ) {
-  const headerParagraphs = createExamHeader(
-    exam.settings || {},
-    exam.title,
-    exam.duration,
-    exam.grade
-  );
+  const headerParagraphs = options.isWorksheet
+    ? createWorksheetHeader(exam.settings || {}, exam.title)
+    : createExamHeader(exam.settings || {}, exam.title, exam.duration, exam.grade);
 
   const questionParagraphs: Paragraph[] = [];
+  const label = options.isWorksheet ? 'Bài' : 'Câu';
 
   for (const [index, eq] of questions.entries()) {
     const q = eq.question;
 
     // Question number + content with LaTeX as OMML
     const contentChildren = parseContentToDocxChildren(q.content);
+    const children: (TextRun | DocxMath)[] = [
+      new TextRun({ text: `${label} ${index + 1}`, bold: true, size: 26, font: "Times New Roman" }),
+    ];
+    if (!options.isWorksheet && eq.points) {
+      children.push(new TextRun({ text: ` (${eq.points} điểm)`, size: 22, font: "Times New Roman", italics: true }));
+    }
+    children.push(new TextRun({ text: `. `, size: 26, font: "Times New Roman" }));
+    children.push(...contentChildren);
     questionParagraphs.push(
       new Paragraph({
-        spacing: { before: 200, after: 100 },
-        children: [
-          new TextRun({ text: `Câu ${index + 1}`, bold: true, size: 26, font: "Times New Roman" }),
-          new TextRun({ text: ` (${eq.points} điểm)`, size: 22, font: "Times New Roman", italics: true }),
-          new TextRun({ text: `. `, size: 26, font: "Times New Roman" }),
-          ...contentChildren,
-        ],
+        spacing: { before: options.isWorksheet ? 120 : 200, after: options.isWorksheet ? 40 : 100 },
+        children,
       })
     );
 

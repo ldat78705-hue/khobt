@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
-  FileText, Search, Filter, Printer, Download, CheckSquare,
-  X, BookOpen, Loader2, ChevronDown, Eye, Clipboard, FileDown
+  FileText, Search, CheckSquare, Eye, Printer, Clipboard,
+  FileDown, Loader2, Settings2, X, ChevronDown
 } from "lucide-react";
 import { cn, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import { GRADES, TOPICS, DIFFICULTIES } from "@/types";
@@ -14,13 +14,25 @@ import { toast } from "sonner";
 import { QuestionContent, MathRenderer } from "@/components/shared/MathRenderer";
 import { exportToWord } from "@/lib/export/word";
 
-type WorksheetType = 'bai_tap' | 'on_tap' | 'luyen_tap';
+interface WorksheetConfig {
+  title: string;
+  teacherName: string;
+  centerName: string;
+  studentNote: string;
+  showAnswers: boolean;
+  showStudentInfo: boolean;
+  fontSize: number;
+}
 
-const WORKSHEET_TYPES: { value: WorksheetType; label: string; desc: string }[] = [
-  { value: 'bai_tap', label: 'Phiếu bài tập', desc: 'Bài tập về nhà / trên lớp' },
-  { value: 'on_tap', label: 'Phiếu ôn tập', desc: 'Ôn tập theo chuyên đề' },
-  { value: 'luyen_tap', label: 'Phiếu luyện tập', desc: 'Luyện tập bổ sung' },
-];
+const DEFAULT_CONFIG: WorksheetConfig = {
+  title: "",
+  teacherName: "",
+  centerName: "",
+  studentNote: "",
+  showAnswers: false,
+  showStudentInfo: true,
+  fontSize: 13,
+};
 
 export default function WorksheetPage() {
   const [step, setStep] = useState<'select' | 'preview'>('select');
@@ -30,12 +42,11 @@ export default function WorksheetPage() {
   const [filterTopic, setFilterTopic] = useState<Topic | "">("");
   const [filterDifficulty, setFilterDifficulty] = useState<Difficulty | "">("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [worksheetType, setWorksheetType] = useState<WorksheetType>('bai_tap');
-  const [worksheetTitle, setWorksheetTitle] = useState("");
-  const [worksheetNote, setWorksheetNote] = useState("");
-  const [showAnswers, setShowAnswers] = useState(false);
+  const [config, setConfig] = useState<WorksheetConfig>(DEFAULT_CONFIG);
   const [isExporting, setIsExporting] = useState(false);
-  const [showPrintPreview, setShowPrintPreview] = useState(false);
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [showConfig, setShowConfig] = useState(false);
+  const printRef = useRef<HTMLDivElement>(null);
 
   const fetchQuestions = useCallback(() => {
     if (isDemoMode) {
@@ -50,45 +61,56 @@ export default function WorksheetPage() {
 
   useEffect(() => { fetchQuestions(); }, [fetchQuestions]);
 
+  // Load saved config from localStorage
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('kdt_worksheet_config');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        setConfig(prev => ({ ...prev, ...parsed }));
+      }
+    } catch { /* ignore */ }
+  }, []);
+
+  const saveConfig = (updates: Partial<WorksheetConfig>) => {
+    const next = { ...config, ...updates };
+    setConfig(next);
+    localStorage.setItem('kdt_worksheet_config', JSON.stringify({
+      teacherName: next.teacherName,
+      centerName: next.centerName,
+      fontSize: next.fontSize,
+      showStudentInfo: next.showStudentInfo,
+    }));
+  };
+
   const toggleSelect = (id: string) => {
     setSelectedIds(prev => prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]);
   };
 
   const selectAll = () => {
-    if (selectedIds.length === questions.length) {
-      setSelectedIds([]);
-    } else {
-      setSelectedIds(questions.map(q => q.id));
-    }
+    setSelectedIds(selectedIds.length === questions.length ? [] : questions.map(q => q.id));
   };
 
   const selectedQuestions = questions.filter(q => selectedIds.includes(q.id));
 
-  const typeConfig = WORKSHEET_TYPES.find(t => t.value === worksheetType)!;
-  const autoTitle = worksheetTitle || `${typeConfig.label}${filterGrade ? ` - Toán ${filterGrade}` : ''}${filterTopic ? ` - ${getTopicLabel(filterTopic)}` : ''}`;
-
-  const handleProceed = () => {
-    if (selectedIds.length === 0) {
-      toast.error("Vui lòng chọn ít nhất 1 bài tập");
-      return;
-    }
-    setStep('preview');
-  };
+  const autoTitle = config.title || `PHIẾU BÀI TẬP${filterGrade ? ` TOÁN ${filterGrade}` : ''}`;
 
   const handlePrint = () => {
-    setShowPrintPreview(true);
-    setTimeout(() => window.print(), 500);
+    window.print();
   };
 
   const handleExportWord = async () => {
     if (selectedQuestions.length === 0) return;
     setIsExporting(true);
     try {
-      // Create a temporary exam-like object for export
       const fakeExam = {
-        id: 'worksheet', title: autoTitle, description: worksheetNote,
+        id: 'worksheet', title: autoTitle, description: config.studentNote,
         grade: (filterGrade || 9) as number, duration: undefined,
-        user_id: DEMO_USER.id, settings: {},
+        user_id: DEMO_USER.id,
+        settings: {
+          schoolName: config.centerName,
+          teacherName: config.teacherName,
+        },
         created_at: new Date().toISOString(), updated_at: new Date().toISOString(),
       };
       const fakeEqs = selectedQuestions.map((q, i) => ({
@@ -96,7 +118,7 @@ export default function WorksheetPage() {
         sort_order: i, points: 0, created_at: new Date().toISOString(),
         question: q,
       }));
-      await exportToWord(fakeExam as any, fakeEqs, { showAnswer: showAnswers });
+      await exportToWord(fakeExam as any, fakeEqs, { showAnswer: config.showAnswers, isWorksheet: true });
       toast.success("Đã xuất file Word!");
     } catch {
       toast.error("Không thể xuất Word");
@@ -111,6 +133,7 @@ export default function WorksheetPage() {
     toast.success("Đã copy nội dung!");
   };
 
+  // ============ RENDER ============
   return (
     <>
       <Header
@@ -124,56 +147,56 @@ export default function WorksheetPage() {
       <div className="p-6 max-w-6xl space-y-4">
         {step === 'select' ? (
           <>
-            {/* Worksheet type selector */}
+            {/* Config bar */}
             <div className="bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-5 text-white">
-              <div className="flex items-center gap-3 mb-3">
-                <FileText className="w-6 h-6" />
-                <h2 className="text-lg font-bold">Tạo phiếu bài tập</h2>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-3">
+                  <FileText className="w-6 h-6" />
+                  <h2 className="text-lg font-bold">Tạo phiếu bài tập</h2>
+                </div>
+                <button onClick={() => setShowConfig(!showConfig)} className="flex items-center gap-2 px-3 py-1.5 bg-white/20 rounded-lg text-sm hover:bg-white/30 transition-colors">
+                  <Settings2 className="w-4 h-4" /> Cấu hình
+                </button>
               </div>
-              <p className="text-indigo-100 text-sm mb-4">Chọn loại phiếu, chọn bài tập từ kho và xuất ra Word / PDF.</p>
-              <div className="grid grid-cols-3 gap-3">
-                {WORKSHEET_TYPES.map(t => (
-                  <button
-                    key={t.value}
-                    onClick={() => setWorksheetType(t.value)}
-                    className={cn(
-                      "p-3 rounded-xl text-left transition-all",
-                      worksheetType === t.value
-                        ? "bg-white/20 ring-2 ring-white/40"
-                        : "bg-white/10 hover:bg-white/15"
-                    )}
-                  >
-                    <p className="text-sm font-semibold">{t.label}</p>
-                    <p className="text-xs text-white/70 mt-0.5">{t.desc}</p>
-                  </button>
-                ))}
-              </div>
-            </div>
+              <p className="text-indigo-100 text-sm">Chọn bài tập → Xem trước → Xuất Word / In PDF.</p>
 
-            {/* Worksheet config */}
-            <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Tiêu đề phiếu (tùy chọn)</label>
-                  <input
-                    type="text"
-                    value={worksheetTitle}
-                    onChange={e => setWorksheetTitle(e.target.value)}
-                    placeholder={`VD: ${typeConfig.label} Chương 1 - Toán 9`}
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
-                  />
+              {showConfig && (
+                <div className="mt-4 bg-white/10 rounded-xl p-4 space-y-3 animate-fade-in">
+                  <div className="grid grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-medium text-white/80 mb-1">Tên giáo viên</label>
+                      <input type="text" value={config.teacherName} onChange={e => saveConfig({ teacherName: e.target.value })} placeholder="VD: Nguyễn Văn A" className="w-full px-3 py-2 bg-white/20 rounded-lg text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-medium text-white/80 mb-1">Tên trung tâm / trường</label>
+                      <input type="text" value={config.centerName} onChange={e => saveConfig({ centerName: e.target.value })} placeholder="VD: Trung tâm Toán Thầy A" className="w-full px-3 py-2 bg-white/20 rounded-lg text-sm text-white placeholder:text-white/50 focus:outline-none focus:ring-2 focus:ring-white/30" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs font-medium text-white/80 mb-1">Cỡ chữ (pt)</label>
+                      <select value={config.fontSize} onChange={e => saveConfig({ fontSize: Number(e.target.value) })} className="w-full px-3 py-2 bg-white/20 rounded-lg text-sm text-white focus:outline-none">
+                        <option value={11} className="text-slate-800">11pt</option>
+                        <option value={12} className="text-slate-800">12pt</option>
+                        <option value={13} className="text-slate-800">13pt (mặc định)</option>
+                        <option value={14} className="text-slate-800">14pt</option>
+                      </select>
+                    </div>
+                    <div className="flex items-end">
+                      <label className="flex items-center gap-2 text-sm text-white/90 cursor-pointer">
+                        <input type="checkbox" checked={config.showStudentInfo} onChange={e => saveConfig({ showStudentInfo: e.target.checked })} className="w-4 h-4 rounded" />
+                        Hiện ô Họ tên / Lớp
+                      </label>
+                    </div>
+                    <div className="flex items-end">
+                      <label className="flex items-center gap-2 text-sm text-white/90 cursor-pointer">
+                        <input type="checkbox" checked={config.showAnswers} onChange={e => saveConfig({ showAnswers: e.target.checked })} className="w-4 h-4 rounded" />
+                        Kèm đáp án
+                      </label>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-semibold text-slate-700 mb-1.5">Ghi chú cho học sinh (tùy chọn)</label>
-                  <input
-                    type="text"
-                    value={worksheetNote}
-                    onChange={e => setWorksheetNote(e.target.value)}
-                    placeholder="VD: Nộp vào thứ 2 tuần sau"
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
-                  />
-                </div>
-              </div>
+              )}
             </div>
 
             {/* Filters */}
@@ -203,12 +226,12 @@ export default function WorksheetPage() {
               <div className="flex items-center gap-3">
                 <button onClick={selectAll} className="flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700">
                   <CheckSquare className="w-4 h-4" />
-                  {selectedIds.length === questions.length ? 'Bỏ chọn tất cả' : 'Chọn tất cả'}
+                  {selectedIds.length === questions.length ? 'Bỏ chọn' : 'Chọn tất cả'}
                 </button>
-                <span className="text-sm text-slate-500">Đã chọn <strong className="text-blue-600">{selectedIds.length}</strong> / {questions.length} bài tập</span>
+                <span className="text-sm text-slate-500">Đã chọn <strong className="text-blue-600">{selectedIds.length}</strong> / {questions.length}</span>
               </div>
               <button
-                onClick={handleProceed}
+                onClick={() => { if (selectedIds.length === 0) { toast.error("Chọn ít nhất 1 bài"); return; } setStep('preview'); }}
                 disabled={selectedIds.length === 0}
                 className="flex items-center gap-2 px-5 py-2.5 text-sm font-semibold text-white rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 transition-all shadow-sm"
               >
@@ -219,26 +242,14 @@ export default function WorksheetPage() {
             {/* Question list */}
             <div className="space-y-2">
               {questions.map(q => (
-                <label
-                  key={q.id}
-                  className={cn(
-                    "flex items-start gap-3 p-4 bg-white rounded-xl border cursor-pointer transition-all hover:shadow-sm",
-                    selectedIds.includes(q.id) ? "border-indigo-300 bg-indigo-50/30 ring-1 ring-indigo-200" : "border-slate-100"
-                  )}
-                >
-                  <input
-                    type="checkbox"
-                    checked={selectedIds.includes(q.id)}
-                    onChange={() => toggleSelect(q.id)}
-                    className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 mt-0.5"
-                  />
+                <label key={q.id} className={cn("flex items-start gap-3 p-4 bg-white rounded-xl border cursor-pointer transition-all hover:shadow-sm", selectedIds.includes(q.id) ? "border-indigo-300 bg-indigo-50/30 ring-1 ring-indigo-200" : "border-slate-100")}>
+                  <input type="checkbox" checked={selectedIds.includes(q.id)} onChange={() => toggleSelect(q.id)} className="w-4 h-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 mt-0.5" />
                   <div className="flex-1 min-w-0">
                     <QuestionContent content={q.content} images={q.images} className="text-sm text-slate-800 line-clamp-2" />
                     <div className="flex items-center gap-2 mt-2">
                       <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {q.grade}</span>
                       <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(q.topic)}</span>
                       <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
-                      <span className="px-2 py-0.5 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
                     </div>
                   </div>
                 </label>
@@ -247,18 +258,17 @@ export default function WorksheetPage() {
           </>
         ) : (
           <>
-            {/* Preview + Export */}
-            <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h2 className="text-lg font-bold text-slate-800">{autoTitle}</h2>
-                  <p className="text-sm text-slate-500 mt-0.5">{selectedQuestions.length} bài tập{worksheetNote && ` • ${worksheetNote}`}</p>
-                </div>
-                <div className="flex items-center gap-2">
+            {/* Toolbar */}
+            <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm no-print">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="text-sm text-slate-600">{selectedQuestions.length} bài tập</span>
                   <label className="flex items-center gap-2 text-sm text-slate-600 cursor-pointer">
-                    <input type="checkbox" checked={showAnswers} onChange={e => setShowAnswers(e.target.checked)} className="w-4 h-4 rounded border-slate-300 text-blue-600" />
+                    <input type="checkbox" checked={config.showAnswers} onChange={e => setConfig(p => ({ ...p, showAnswers: e.target.checked }))} className="w-4 h-4 rounded" />
                     Kèm đáp án
                   </label>
+                </div>
+                <div className="flex items-center gap-2">
                   <button onClick={handleCopy} className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-slate-600 bg-slate-100 rounded-xl hover:bg-slate-200">
                     <Clipboard className="w-4 h-4" /> Copy
                   </button>
@@ -270,77 +280,144 @@ export default function WorksheetPage() {
                   </button>
                 </div>
               </div>
+            </div>
 
-              {/* Worksheet preview */}
-              <div className="border border-slate-200 rounded-xl overflow-hidden">
-                <div className="p-8 bg-white" style={{ fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8' }}>
-                  {/* Worksheet header - simpler than exam */}
-                  <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-                    <p style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                      {autoTitle}
-                    </p>
-                    {worksheetNote && (
-                      <p style={{ fontSize: '13px', fontStyle: 'italic', color: '#555', marginTop: '4px' }}>
-                        {worksheetNote}
-                      </p>
+            {/* A4 Preview — this is the print target */}
+            <div className="flex justify-center">
+              <div
+                ref={printRef}
+                id="worksheet-print"
+                className="worksheet-paper bg-white shadow-lg"
+                style={{
+                  width: '210mm',
+                  minHeight: '297mm',
+                  padding: '15mm 20mm',
+                  fontFamily: '"Times New Roman", serif',
+                  fontSize: `${config.fontSize}pt`,
+                  lineHeight: '1.5',
+                  color: '#000',
+                  boxSizing: 'border-box',
+                }}
+              >
+                {/* Header: Center name + Teacher */}
+                {(config.centerName || config.teacherName) && (
+                  <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px', fontSize: `${config.fontSize - 1}pt` }}>
+                    {config.centerName ? (
+                      <div style={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          onBlur={e => setConfig(p => ({ ...p, centerName: e.currentTarget.textContent || '' }))}
+                          style={{ outline: 'none', borderBottom: '1px dashed transparent' }}
+                          className="hover:border-blue-300 focus:border-blue-400"
+                        >
+                          {config.centerName}
+                        </span>
+                      </div>
+                    ) : <div />}
+                    {config.teacherName && (
+                      <div style={{ fontStyle: 'italic' }}>
+                        GV:{' '}
+                        <span
+                          contentEditable
+                          suppressContentEditableWarning
+                          onBlur={e => setConfig(p => ({ ...p, teacherName: e.currentTarget.textContent || '' }))}
+                          style={{ outline: 'none', fontWeight: '600', fontStyle: 'normal' }}
+                        >
+                          {config.teacherName}
+                        </span>
+                      </div>
                     )}
-                    <hr style={{ border: 'none', borderTop: '1.5px solid #000', margin: '10px auto', width: '30%' }} />
                   </div>
+                )}
 
-                  {/* Student info - simple */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '13px', marginBottom: '16px', paddingBottom: '6px', borderBottom: '1px dotted #999' }}>
+                {/* Title */}
+                <div style={{ textAlign: 'center', marginBottom: '8px' }}>
+                  <p
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={e => setConfig(p => ({ ...p, title: e.currentTarget.textContent || '' }))}
+                    style={{
+                      fontSize: `${config.fontSize + 3}pt`,
+                      fontWeight: 'bold',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
+                      outline: 'none',
+                      margin: 0,
+                      padding: '2px 4px',
+                    }}
+                    className="hover:bg-blue-50/50 focus:bg-blue-50/80 rounded"
+                  >
+                    {autoTitle}
+                  </p>
+                  {config.studentNote && (
+                    <p
+                      contentEditable
+                      suppressContentEditableWarning
+                      onBlur={e => setConfig(p => ({ ...p, studentNote: e.currentTarget.textContent || '' }))}
+                      style={{ fontSize: `${config.fontSize - 1}pt`, fontStyle: 'italic', color: '#333', marginTop: '2px', outline: 'none' }}
+                    >
+                      {config.studentNote}
+                    </p>
+                  )}
+                  <hr style={{ border: 'none', borderTop: '1.5px solid #000', margin: '6px auto 0', width: '25%' }} />
+                </div>
+
+                {/* Student info */}
+                {config.showStudentInfo && (
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: `${config.fontSize - 1}pt`, margin: '8px 0 10px', paddingBottom: '4px', borderBottom: '1px dotted #999' }}>
                     <span>Họ và tên: .............................................</span>
                     <span>Lớp: ............</span>
                   </div>
+                )}
 
-                  {/* Questions */}
-                  <div>
-                    {selectedQuestions.map((q, index) => (
-                      <div key={q.id} style={{ marginBottom: '14px', pageBreakInside: 'avoid' }}>
-                        <div>
-                          <strong>Bài {index + 1}.</strong>
-                        </div>
-                        <div style={{ marginLeft: '4px', marginTop: '2px' }}>
+                {/* Questions — compact layout */}
+                <div>
+                  {selectedQuestions.map((q, index) => (
+                    <div key={q.id} style={{ marginBottom: '6px', pageBreakInside: 'avoid' }}>
+                      <div style={{ display: 'flex', gap: '4px', alignItems: 'baseline' }}>
+                        <strong style={{ whiteSpace: 'nowrap' }}>Bài {index + 1}.</strong>
+                        <div style={{ flex: 1 }}>
                           <QuestionContent content={q.content} images={q.images} />
                         </div>
-                        {q.question_type === 'trac_nghiem' && q.options && (
-                          <div style={{ marginLeft: '16px', marginTop: '4px' }}>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px 24px' }}>
-                              {q.options.map(opt => (
-                                <div key={opt.key} style={{ display: 'flex', gap: '4px', alignItems: 'baseline' }}>
-                                  <strong>{opt.key}.</strong> <MathRenderer content={opt.value} />
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-                        {q.question_type === 'dung_sai' && q.options && (
-                          <div style={{ marginLeft: '16px', marginTop: '4px' }}>
+                      </div>
+                      {q.question_type === 'trac_nghiem' && q.options && (
+                        <div style={{ marginLeft: '20px', marginTop: '2px' }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0 20px' }}>
                             {q.options.map(opt => (
-                              <div key={opt.key} style={{ display: 'flex', gap: '8px', alignItems: 'baseline', marginBottom: '2px' }}>
-                                <strong>{opt.key})</strong> <MathRenderer content={opt.value} />
-                                <span style={{ marginLeft: 'auto', fontSize: '12px' }}>☐ Đ  ☐ S</span>
+                              <div key={opt.key} style={{ display: 'flex', gap: '4px', alignItems: 'baseline' }}>
+                                <strong>{opt.key}.</strong> <MathRenderer content={opt.value} />
                               </div>
                             ))}
                           </div>
-                        )}
-                        {q.question_type === 'dien_dap_an' && (
-                          <div style={{ marginLeft: '16px', marginTop: '4px', fontSize: '13px', color: '#555' }}>
-                            Đáp án: ............................
-                          </div>
-                        )}
-                        {showAnswers && q.answer && (
-                          <div style={{ marginLeft: '16px', marginTop: '4px', padding: '4px 10px', background: '#f0f7ff', borderRadius: '4px', fontSize: '13px' }}>
-                            <strong>Đáp án:</strong> <MathRenderer content={q.answer} className="inline" />
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                        </div>
+                      )}
+                      {q.question_type === 'dung_sai' && q.options && (
+                        <div style={{ marginLeft: '20px', marginTop: '2px' }}>
+                          {q.options.map(opt => (
+                            <div key={opt.key} style={{ display: 'flex', gap: '6px', alignItems: 'baseline', marginBottom: '1px' }}>
+                              <strong>{opt.key})</strong> <MathRenderer content={opt.value} />
+                              <span style={{ marginLeft: 'auto', fontSize: '11pt' }}>☐ Đ  ☐ S</span>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                      {q.question_type === 'dien_dap_an' && (
+                        <div style={{ marginLeft: '20px', marginTop: '2px', fontSize: `${config.fontSize - 1}pt`, color: '#555' }}>
+                          Đáp án: ............................
+                        </div>
+                      )}
+                      {config.showAnswers && q.answer && (
+                        <div style={{ marginLeft: '20px', marginTop: '2px', padding: '2px 8px', background: '#f0f7ff', borderLeft: '2px solid #3b82f6', fontSize: `${config.fontSize - 1}pt` }}>
+                          <strong>ĐA:</strong> <MathRenderer content={q.answer} className="inline" />
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
 
-                  <div style={{ textAlign: 'center', marginTop: '24px', paddingTop: '12px', borderTop: '1px solid #ccc' }}>
-                    <p style={{ fontSize: '13px', fontWeight: 'bold' }}>— Hết —</p>
-                  </div>
+                <div style={{ textAlign: 'center', marginTop: '12px', paddingTop: '6px', borderTop: '1px solid #ccc' }}>
+                  <p style={{ fontSize: `${config.fontSize}pt`, fontWeight: 'bold', margin: 0 }}>— Hết —</p>
                 </div>
               </div>
             </div>

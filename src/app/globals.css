@@ -196,43 +196,6 @@ math-field:focus-within {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Print styles */
-@media print {
-  .no-print, aside, header, nav, .fixed {
-    display: none !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .print-paper {
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 15mm 20mm !important;
-    min-height: auto !important;
-    margin: 0 !important;
-  }
-
-  /* Hide everything except print-paper */
-  body > * {
-    display: none !important;
-  }
-
-  /* Show the paper */
-  .print-paper {
-    display: block !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99999;
-  }
-}
-
 /* Custom utility classes */
 .text-balance {
   text-wrap: balance;
@@ -329,7 +292,6 @@ math-field:focus-within {
   display: table;
 }
 
-/* Prevent line-clamp from breaking table layout */
 .line-clamp-3 .md-table,
 .line-clamp-2 .md-table {
   display: none;
@@ -345,28 +307,65 @@ math-field:focus-within {
 
 /* ========== PRINT STYLES ========== */
 @media print {
-  /* Hide the main app layout */
-  body > div > div > aside,
-  body > div > div > main > header,
-  body > div > div > main > div:not(:has(.print-preview)) {
-    display: none !important;
+  /* Page setup */
+  @page {
+    size: A4;
+    margin: 0;
   }
 
-  /* The modal overlay - make it static and transparent */
-  .no-print {
-    position: static !important;
-    background: transparent !important;
-    overflow: visible !important;
-    padding: 0 !important;
+  /* Hide everything by default */
+  body {
+    background: white !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
-  /* Hide controls inside the modal but keep the paper */
-  .no-print > div > div > .sticky {
+  /* Hide UI elements */
+  .no-print,
+  aside,
+  header,
+  nav,
+  .fixed,
+  .sidebar,
+  .gradient-primary,
+  button,
+  select,
+  input[type="checkbox"] {
     display: none !important;
   }
 
-  /* The print-preview paper */
+  /* Hide sidebar and header in layout */
+  body > div > div > aside,
+  body > div > div > main > header {
+    display: none !important;
+  }
+
+  /* Reset main layout */
+  body > div > div > main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* The worksheet paper — this is what prints */
+  .worksheet-paper {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: auto !important;
+    background: white !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 15mm 20mm !important;
+    margin: 0 !important;
+    font-family: 'Times New Roman', serif !important;
+    color: #000 !important;
+    page-break-after: auto;
+  }
+
+  /* Print preview paper (exam page) */
   .print-preview {
     position: static !important;
     width: 100% !important;
@@ -374,60 +373,52 @@ math-field:focus-within {
     background: white !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 0 !important;
+    padding: 15mm 20mm !important;
     margin: 0 !important;
     font-family: 'Times New Roman', serif !important;
     font-size: 13pt !important;
-    line-height: 1.6 !important;
+    line-height: 1.5 !important;
     color: #000 !important;
-  }
-
-  /* Hide all buttons globally */
-  button {
-    display: none !important;
-  }
-
-  /* Page setup */
-  @page {
-    size: A4;
-    margin: 15mm 20mm;
-  }
-
-  .print-preview h1,
-  .print-preview h2,
-  .print-preview h3 {
-    color: #000 !important;
-  }
-
-  /* Table in print */
-  .print-preview .md-table {
-    border: 1px solid #000 !important;
-  }
-
-  .print-preview .md-table th,
-  .print-preview .md-table td {
-    border: 1px solid #000 !important;
-    padding: 4px 8px !important;
-  }
-
-  /* Answer/solution boxes in print */
-  .print-preview [style*="background: #eff6ff"],
-  .print-preview [style*="background: #f0fdf4"] {
-    background: #f5f5f5 !important;
-    border: 1px solid #ccc !important;
   }
 
   /* KaTeX in print */
-  .print-preview .katex {
+  .katex {
     font-size: 1em !important;
   }
 
-  /* Sidebar */
-  .sidebar,
-  nav,
-  aside,
-  .gradient-primary,
-  .search-dialog {
-    display: none !important;
+  /* Ensure math renders */
+  .math-content,
+  .question-content {
+    color: #000 !important;
+  }
+
+  /* Tables in print */
+  .md-table {
+    border: 1px solid #000 !important;
+  }
+
+  .md-table th,
+  .md-table td {
+    border: 1px solid #000 !important;
+    padding: 3px 6px !important;
+  }
+
+  /* Editable borders should not show */
+  [contenteditable] {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+  }
+
+  /* Answer box in print */
+  div[style*="background: #f0f7ff"] {
+    background: #f5f5f5 !important;
+    border-left: 2px solid #000 !important;
+  }
+
+  /* Page breaks */
+  .page-break-avoid {
+    page-break-inside: avoid;
   }
 }
+
