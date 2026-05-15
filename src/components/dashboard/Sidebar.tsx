@@ -11,7 +11,7 @@ import {
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
 import { useAuthStore } from "@/stores/auth-store";
-import { createClient } from "@/lib/supabase/client";
+
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { isDemoMode, DEMO_USER } from "@/lib/demo-data";

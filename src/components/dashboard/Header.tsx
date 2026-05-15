@@ -7,7 +7,7 @@ import { useAuthStore } from "@/stores/auth-store";
 import { cn, stripLatex } from "@/lib/utils";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import type { Notification as AppNotification } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";

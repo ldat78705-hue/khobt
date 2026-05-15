@@ -199,4 +199,88 @@ export async function cleanExpiredSessions() {
   await sql`DELETE FROM public.sessions WHERE expires_at < NOW()`;
 }
 
+/** Create a password reset token (stored in sessions with special prefix) */
+export async function createResetToken(email: string): Promise<{ token: string; userId: string } | null> {
+  const sql = getDb();
+  
+  const users = await sql`
+    SELECT id FROM public.users WHERE email = ${email} AND is_active = true
+  `;
+  
+  if (users.length === 0) return null;
+  
+  const userId = users[0].id as string;
+  
+  // Generate a short reset token
+  const resetToken = 'rst_' + crypto.randomUUID().replace(/-/g, '').substring(0, 24);
+  const expiresAt = new Date(Date.now() + 30 * 60 * 1000); // 30 minutes
+  
+  // Delete any existing reset tokens for this user
+  await sql`
+    DELETE FROM public.sessions 
+    WHERE user_id = ${userId} AND token LIKE 'rst_%'
+  `;
+  
+  // Save new reset token
+  await sql`
+    INSERT INTO public.sessions (user_id, token, expires_at)
+    VALUES (${userId}, ${resetToken}, ${expiresAt.toISOString()})
+  `;
+  
+  return { token: resetToken, userId };
+}
+
+/** Reset password using a reset token */
+export async function resetPassword(token: string, newPassword: string): Promise<boolean> {
+  const sql = getDb();
+  
+  // Find valid reset token
+  const sessions = await sql`
+    SELECT user_id FROM public.sessions
+    WHERE token = ${token} AND token LIKE 'rst_%' AND expires_at > NOW()
+  `;
+  
+  if (sessions.length === 0) return false;
+  
+  const userId = sessions[0].user_id as string;
+  const passwordHash = await hashPassword(newPassword);
+  
+  // Update password
+  await sql`
+    UPDATE public.users SET password_hash = ${passwordHash}, updated_at = NOW()
+    WHERE id = ${userId}
+  `;
+  
+  // Delete the reset token
+  await sql`
+    DELETE FROM public.sessions WHERE token = ${token}
+  `;
+  
+  // Also delete all existing sessions for security
+  await sql`
+    DELETE FROM public.sessions WHERE user_id = ${userId}
+  `;
+  
+  return true;
+}
+
+/** Admin: directly reset a user's password */
+export async function adminResetPassword(userId: string, newPassword: string): Promise<boolean> {
+  const sql = getDb();
+  const passwordHash = await hashPassword(newPassword);
+  
+  const result = await sql`
+    UPDATE public.users SET password_hash = ${passwordHash}, updated_at = NOW()
+    WHERE id = ${userId}
+    RETURNING id
+  `;
+  
+  if (result.length === 0) return false;
+  
+  // Clear all sessions
+  await sql`DELETE FROM public.sessions WHERE user_id = ${userId}`;
+  
+  return true;
+}
+
 export { COOKIE_NAME };
