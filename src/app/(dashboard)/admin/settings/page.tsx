@@ -199,10 +199,6 @@ export default function AdminSettingsPage() {
               <div className="text-xs text-slate-500 mt-1">Đề thi</div>
             </div>
             <div className="p-4 rounded-xl bg-slate-50 text-center">
-              <div className="text-2xl font-bold text-purple-600">{stats.folders}</div>
-              <div className="text-xs text-slate-500 mt-1">Thư mục</div>
-            </div>
-            <div className="p-4 rounded-xl bg-slate-50 text-center">
               <div className="text-2xl font-bold text-emerald-600">{stats.categories}</div>
               <div className="text-xs text-slate-500 mt-1">Danh mục</div>
             </div>
