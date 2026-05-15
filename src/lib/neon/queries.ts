@@ -228,9 +228,74 @@ export async function createExam(data: Partial<Exam>) {
   return result[0] as Exam;
 }
 
+export async function updateExam(id: string, data: Partial<Exam> & Record<string, any>) {
+  const sql = getDb();
+  const result = await sql`
+    UPDATE public.exams SET
+      title = COALESCE(${data.title ?? null}, title),
+      description = COALESCE(${data.description ?? null}, description),
+      grade = COALESCE(${data.grade ?? null}, grade),
+      duration = COALESCE(${data.duration ?? null}, duration),
+      tags = COALESCE(${data.tags ?? null}, tags),
+      settings = COALESCE(${data.settings ? JSON.stringify(data.settings) : null}::jsonb, settings),
+      exam_status = COALESCE(${data.exam_status ?? null}, exam_status),
+      reviewed_by = COALESCE(${data.reviewed_by ?? null}, reviewed_by),
+      reviewed_at = COALESCE(${data.reviewed_at ?? null}::timestamptz, reviewed_at),
+      review_note = COALESCE(${data.review_note ?? null}, review_note)
+    WHERE id = ${id}
+    RETURNING *
+  `;
+  return result[0] as Exam;
+}
+
 export async function deleteExam(id: string) {
   const sql = getDb();
   await sql`DELETE FROM public.exams WHERE id = ${id}`;
+}
+
+export async function getPersonalExams(userId: string, filters?: {
+  grade?: number;
+  status?: string;
+  search?: string;
+  limit?: number;
+}) {
+  const sql = getRawDb();
+  const { grade, status, search, limit = 50 } = filters || {};
+  const result = await sql`
+    SELECT e.*, u.full_name as author_name,
+      (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
+    FROM public.exams e
+    LEFT JOIN public.users u ON e.user_id = u.id
+    WHERE e.user_id = ${userId}
+      AND (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
+      AND (${status ?? null}::text IS NULL OR e.exam_status = ${status ?? null})
+      AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
+    ORDER BY e.created_at DESC
+    LIMIT ${limit}
+  `;
+  return result as unknown as Exam[];
+}
+
+export async function getSharedExams(filters?: {
+  grade?: number;
+  status?: string;
+  search?: string;
+  limit?: number;
+}) {
+  const sql = getRawDb();
+  const { grade, status, search, limit = 50 } = filters || {};
+  const result = await sql`
+    SELECT e.*, u.full_name as author_name,
+      (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
+    FROM public.exams e
+    LEFT JOIN public.users u ON e.user_id = u.id
+    WHERE (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
+      AND (${status ?? null}::text IS NULL OR e.exam_status = ${status ?? null})
+      AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
+    ORDER BY e.created_at DESC
+    LIMIT ${limit}
+  `;
+  return result as unknown as Exam[];
 }
 
 // ==========================================
@@ -288,8 +353,16 @@ export async function getFavorites(userId: string) {
 // USERS (Admin)
 // ==========================================
 
-export async function getUsers() {
-  const sql = getDb();
+export async function getUsers(search?: string) {
+  const sql = getRawDb();
+  if (search) {
+    return await sql`
+      SELECT id, email, full_name, role, is_active, permissions, avatar_url, created_at
+      FROM public.users
+      WHERE full_name ILIKE ${'%' + search + '%'} OR email ILIKE ${'%' + search + '%'}
+      ORDER BY created_at DESC
+    `;
+  }
   return await sql`
     SELECT id, email, full_name, role, is_active, permissions, avatar_url, created_at
     FROM public.users
@@ -305,6 +378,16 @@ export async function updateUserRole(userId: string, role: string) {
 export async function toggleUserActive(userId: string) {
   const sql = getDb();
   await sql`UPDATE public.users SET is_active = NOT is_active WHERE id = ${userId}`;
+}
+
+export async function updateUser(userId: string, data: { role?: string; is_active?: boolean }) {
+  const sql = getDb();
+  if (data.role !== undefined) {
+    await sql`UPDATE public.users SET role = ${data.role} WHERE id = ${userId}`;
+  }
+  if (data.is_active !== undefined) {
+    await sql`UPDATE public.users SET is_active = ${data.is_active} WHERE id = ${userId}`;
+  }
 }
 
 // ==========================================

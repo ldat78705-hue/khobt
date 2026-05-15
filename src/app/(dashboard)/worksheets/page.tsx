@@ -44,6 +44,7 @@ export default function WorksheetPage() {
   const [filterDifficulty, setFilterDifficulty] = useState<Difficulty | "">("");
   const [searchQuery, setSearchQuery] = useState("");
   const [config, setConfig] = useState<WorksheetConfig>(DEFAULT_CONFIG);
+  const [isLoading, setIsLoading] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [editingTitle, setEditingTitle] = useState(false);
   const [showConfig, setShowConfig] = useState(false);
