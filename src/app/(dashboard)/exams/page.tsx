@@ -29,6 +29,7 @@ export default function ExamsPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedGrade, setSelectedGrade] = useState<Grade | "">("");
   const [activeTab, setActiveTab] = useState<TabType>("shared");
+  const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const { user } = useAuthStore();
   const currentUserId = user?.id || DEMO_USER.id;
 
@@ -135,6 +136,63 @@ export default function ExamsPage() {
     );
   };
 
+  const toggleSelectExam = (id: string) => {
+    setSelectedIds(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
+  };
+
+  const handleSelectAllExams = () => {
+    if (selectedIds.length === exams.length) {
+      setSelectedIds([]);
+    } else {
+      setSelectedIds(exams.map(e => e.id));
+    }
+  };
+
+  const handleBulkDeleteExams = async () => {
+    if (!selectedIds.length) return;
+    if (!confirm(`Xóa ${selectedIds.length} đề thi đã chọn? Không thể hoàn tác!`)) return;
+    try {
+      let deleted = 0;
+      for (const id of selectedIds) {
+        if (isDemoMode) {
+          demoDb.deleteExam(id);
+          deleted++;
+        } else {
+          const res = await fetch(`/api/exams?id=${id}`, { method: 'DELETE' });
+          if (res.ok) deleted++;
+        }
+      }
+      toast.success(`Đã xóa ${deleted} đề thi`);
+      setSelectedIds([]);
+      fetchExams();
+    } catch {
+      toast.error("Lỗi khi xóa đề thi");
+    }
+  };
+
+  const handleDeleteAllFilteredExams = async () => {
+    const count = exams.length;
+    if (!confirm(`Xóa TẤT CẢ ${count} đề thi đang hiển thị? KHÔNG THỂ hoàn tác!`)) return;
+    if (!confirm(`Xác nhận lần cuối: Xóa ${count} đề thi?`)) return;
+    try {
+      let deleted = 0;
+      for (const e of exams) {
+        if (isDemoMode) {
+          demoDb.deleteExam(e.id);
+          deleted++;
+        } else {
+          const res = await fetch(`/api/exams?id=${e.id}`, { method: 'DELETE' });
+          if (res.ok) deleted++;
+        }
+      }
+      toast.success(`Đã xóa ${deleted} đề thi`);
+      setSelectedIds([]);
+      fetchExams();
+    } catch {
+      toast.error("Lỗi khi xóa");
+    }
+  };
+
   return (
     <>
       <Header
@@ -190,15 +248,60 @@ export default function ExamsPage() {
         )}
 
         {/* Toolbar */}
-        <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm flex items-center gap-3">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-            <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Tìm kiếm đề thi..." className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
+        <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm space-y-3">
+          <div className="flex items-center gap-3">
+            <div className="relative flex-1">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Tìm kiếm đề thi..." className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
+            </div>
+            <select value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value as Grade | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+              <option value="">Tất cả lớp</option>
+              {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+            </select>
           </div>
-          <select value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value as Grade | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-            <option value="">Tất cả lớp</option>
-            {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
-          </select>
+
+          {/* Bulk actions bar */}
+          <div className="flex items-center gap-3 flex-wrap pt-2 border-t border-slate-100">
+            <button
+              onClick={handleSelectAllExams}
+              className={cn(
+                "px-3 py-1.5 text-xs font-medium rounded-lg flex items-center gap-1 transition-colors",
+                selectedIds.length === exams.length && exams.length > 0
+                  ? "text-blue-700 bg-blue-100 hover:bg-blue-200"
+                  : "text-slate-600 bg-slate-100 hover:bg-slate-200"
+              )}
+            >
+              <input
+                type="checkbox"
+                checked={selectedIds.length === exams.length && exams.length > 0}
+                onChange={handleSelectAllExams}
+                className="w-3.5 h-3.5 rounded border-slate-300 text-blue-600"
+              />
+              {selectedIds.length === exams.length && exams.length > 0 ? 'Bỏ chọn tất cả' : `Chọn tất cả (${exams.length})`}
+            </button>
+
+            {selectedIds.length > 0 && (
+              <>
+                <span className="text-sm text-slate-500">|</span>
+                <span className="text-sm text-slate-600">Đã chọn <strong className="text-blue-600">{selectedIds.length}</strong></span>
+                <button onClick={handleBulkDeleteExams} className="px-3 py-1.5 text-xs font-medium text-red-600 bg-red-50 rounded-lg hover:bg-red-100 flex items-center gap-1">
+                  <Trash2 className="w-3.5 h-3.5" /> Xóa ({selectedIds.length})
+                </button>
+                <button onClick={() => setSelectedIds([])} className="ml-auto text-sm text-slate-500 hover:text-slate-700">
+                  Bỏ chọn
+                </button>
+              </>
+            )}
+
+            {(searchQuery || selectedGrade) && exams.length > 0 && (
+              <button
+                onClick={handleDeleteAllFilteredExams}
+                className="ml-auto px-3 py-1.5 text-xs font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 flex items-center gap-1 shadow-sm"
+              >
+                <Trash2 className="w-3.5 h-3.5" /> Xóa tất cả kết quả lọc ({exams.length})
+              </button>
+            )}
+          </div>
         </div>
 
         {/* Exam list */}
@@ -235,8 +338,17 @@ export default function ExamsPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {exams.map((exam) => (
-              <div key={exam.id} className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group">
-                <div className="flex items-start justify-between mb-3">
+              <div key={exam.id} className={cn(
+                "bg-white rounded-2xl border p-5 shadow-sm hover:shadow-md transition-all group",
+                selectedIds.includes(exam.id) ? "border-blue-300 ring-2 ring-blue-100" : "border-slate-100"
+              )}>
+                <div className="flex items-start gap-3 mb-3">
+                  <input
+                    type="checkbox"
+                    checked={selectedIds.includes(exam.id)}
+                    onChange={() => toggleSelectExam(exam.id)}
+                    className="w-4 h-4 mt-1 rounded border-slate-300 text-blue-600 flex-shrink-0"
+                  />
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       {exam.is_template && <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full">Đề mẫu</span>}
@@ -256,9 +368,7 @@ export default function ExamsPage() {
                         <Send className="w-4 h-4" />
                       </button>
                     )}
-                    {activeTab === 'personal' && (
-                      <button onClick={() => handleDelete(exam.id)} className="p-1.5 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600" title="Xóa"><Trash2 className="w-4 h-4" /></button>
-                    )}
+                    <button onClick={() => handleDelete(exam.id)} className="p-1.5 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600" title="Xóa"><Trash2 className="w-4 h-4" /></button>
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">

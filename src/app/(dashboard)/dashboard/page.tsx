@@ -49,16 +49,41 @@ export default function DashboardPage() {
           fetch('/api/questions?status=pending&limit=1'),
         ]);
         
+        // Fetch real counts
+        const [qCountRes, eCountRes, pCountRes] = await Promise.all([
+          fetch('/api/questions?limit=1000'),
+          fetch('/api/exams?limit=500'),
+          fetch('/api/questions?status=pending&limit=500'),
+        ]);
+        
         if (qRes.ok) {
           const qData = await qRes.json();
           setRecentQuestions(qData || []);
-          // Note: total counts would ideally come from a stats endpoint
-          // But for now we use what we have or set to a placeholder
-          setQuestionCount(qData.length > 0 ? 100 : 0); // Simplified
         }
-        if (eRes.ok) {
-          const eData = await eRes.json();
-          setExamCount(eData.length > 0 ? 20 : 0);
+        if (qCountRes.ok) {
+          const allQ = await qCountRes.json();
+          setQuestionCount(Array.isArray(allQ) ? allQ.length : 0);
+          // Build distributions from full data
+          const gd: Record<number, number> = {};
+          const dd: Record<string, number> = {};
+          const td: Record<string, number> = {};
+          (allQ || []).forEach((q: any) => {
+            gd[q.grade] = (gd[q.grade] || 0) + 1;
+            dd[q.difficulty] = (dd[q.difficulty] || 0) + 1;
+            td[q.topic] = (td[q.topic] || 0) + 1;
+          });
+          setGradeDistribution(gd);
+          setDifficultyDistribution(dd);
+          const sorted = Object.entries(td).sort((a, b) => b[1] - a[1]).slice(0, 6);
+          setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
+        }
+        if (eCountRes.ok) {
+          const allE = await eCountRes.json();
+          setExamCount(Array.isArray(allE) ? allE.length : 0);
+        }
+        if (pCountRes.ok) {
+          const allP = await pCountRes.json();
+          setPendingCount(Array.isArray(allP) ? allP.length : 0);
         }
       } catch { /* ignore */ }
     }

@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
     difficulty: searchParams.get('difficulty') || undefined,
     status: searchParams.get('status') || undefined,
     search: searchParams.get('search') || undefined,
-    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 50,
+    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 500,
     offset: searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0,
   };
 

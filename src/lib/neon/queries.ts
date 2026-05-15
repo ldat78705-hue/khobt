@@ -29,7 +29,7 @@ export async function getQuestions(filters?: {
   offset?: number;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, userId, search, limit = 50, offset = 0 } = filters || {};
+  const { grade, topic, difficulty, status, userId, search, limit = 500, offset = 0 } = filters || {};
 
   // Use simple approach: fetch with all possible filters using COALESCE/CASE
   const result = await sql`
@@ -309,7 +309,7 @@ export async function getSharedExams(filters?: {
   limit?: number;
 }) {
   const sql = getRawDb();
-  const { grade, status, search, limit = 50 } = filters || {};
+  const { grade, status, search, limit = 200 } = filters || {};
   const result = await sql`
     SELECT e.*, u.full_name as author_name,
       (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count

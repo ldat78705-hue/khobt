@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
     grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
     status: (searchParams.get('status') as any) || undefined,
     search: searchParams.get('search') || undefined,
-    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 50,
+    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 200,
   };
 
   const activeTab = searchParams.get('tab') || 'shared';
