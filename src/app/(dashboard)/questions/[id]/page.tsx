@@ -72,11 +72,23 @@ export default function QuestionDetailPage() {
 
   useEffect(() => { fetchQuestion(); }, [fetchQuestion]);
 
-  const handleToggleFavorite = () => {
+  const handleToggleFavorite = async () => {
     if (isDemoMode) {
       const result = demoDb.toggleFavorite(DEMO_USER.id, questionId);
       setIsFavorite(result);
       toast.success(result ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+    } else {
+      try {
+        const res = await fetch('/api/questions', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: questionId, toggle_favorite: true }),
+        });
+        if (res.ok) {
+          setIsFavorite(!isFavorite);
+          toast.success(!isFavorite ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+        }
+      } catch { /* ignore */ }
     }
   };
 
@@ -125,8 +137,16 @@ export default function QuestionDetailPage() {
         toast.success("Đã nhân bản bài tập!");
         router.push(`/questions/${cloned.id}/edit`);
       } else {
-        toast.info("Tính năng nhân bản đang phát triển");
-        return;
+        const { id, question_code, created_at, updated_at, user_id, reviewed_by, reviewed_at, review_note, ...rest } = question;
+        const res = await fetch('/api/questions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...rest, status: 'draft' }),
+        });
+        if (!res.ok) throw new Error('Lỗi');
+        const cloned = await res.json();
+        toast.success("Đã nhân bản bài tập!");
+        router.push(`/questions/${cloned.id}/edit`);
       }
     } catch {
       toast.error("Không thể nhân bản bài tập");

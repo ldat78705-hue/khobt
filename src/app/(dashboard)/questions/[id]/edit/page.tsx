@@ -7,7 +7,7 @@ import { Save, ArrowLeft, Loader2, Plus, X } from "lucide-react";
 import Link from "next/link";
 import { GRADES, TOPICS, DIFFICULTIES, QUESTION_TYPES } from "@/types";
 import type { Grade, Topic, Difficulty, QuestionType, QuestionOption, Question } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import RichEditor from "@/components/shared/RichEditor";
@@ -49,10 +49,9 @@ export default function EditQuestionPage() {
       if (isDemoMode) {
         q = demoDb.getQuestion(questionId);
       } else {
-        const supabase = createClient();
-        const { data, error } = await supabase.from("questions").select("*").eq("id", questionId).single();
-        if (error) throw error;
-        q = data;
+        const res = await fetch(`/api/questions?id=${questionId}`);
+        if (!res.ok) throw new Error('Lỗi');
+        q = await res.json();
       }
       if (q) {
         // Permission check
@@ -112,9 +111,12 @@ export default function EditQuestionPage() {
       if (isDemoMode) {
         demoDb.updateQuestion(questionId, updates, currentUser.role);
       } else {
-        const supabase = createClient();
-        const { error } = await supabase.from("questions").update(updates).eq("id", questionId);
-        if (error) throw error;
+        const res = await fetch('/api/questions', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: questionId, ...updates }),
+        });
+        if (!res.ok) throw new Error('Lỗi');
       }
 
       if (currentUser.role !== 'admin') {
