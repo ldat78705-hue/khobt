@@ -67,11 +67,12 @@ export default function WorksheetPage() {
         if (filterDifficulty) params.append("difficulty", filterDifficulty);
         if (searchQuery) params.append("search", searchQuery);
         params.append("status", "approved");
+        params.append("limit", "200");
 
         const res = await fetch(`/api/questions?${params.toString()}`);
         if (res.ok) {
           const data = await res.json();
-          setQuestions(data || []);
+          setQuestions(Array.isArray(data) ? data : (data.data || []));
         } else {
           throw new Error('API error');
         }

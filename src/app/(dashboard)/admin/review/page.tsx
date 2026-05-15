@@ -39,7 +39,7 @@ export default function ReviewQuestionsPage() {
         const res = await fetch(`/api/questions?${params.toString()}`);
         if (res.ok) {
           const data = await res.json();
-          setQuestions(data || []);
+          setQuestions(Array.isArray(data) ? data : (data.data || []));
         } else {
           throw new Error('API error');
         }

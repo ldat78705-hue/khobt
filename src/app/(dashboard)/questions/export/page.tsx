@@ -56,11 +56,12 @@ export default function QuickExportPage() {
         if (selectedType) params.append("question_type", selectedType);
         if (searchQuery) params.append("search", searchQuery);
         params.append("status", "approved");
+        params.append("limit", "200");
 
         const res = await fetch(`/api/questions?${params.toString()}`);
         if (res.ok) {
           const data = await res.json();
-          setQuestions(data || []);
+          setQuestions(Array.isArray(data) ? data : (data.data || []));
         } else {
           throw new Error('API error');
         }

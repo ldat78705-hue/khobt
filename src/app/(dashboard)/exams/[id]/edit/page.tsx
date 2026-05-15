@@ -101,7 +101,10 @@ export default function EditExamPage() {
         if (searchQuery) params.append('search', searchQuery);
         params.append('limit', '30');
         const res = await fetch(`/api/questions?${params}`);
-        if (res.ok) setAvailableQuestions(await res.json());
+        if (res.ok) {
+          const json = await res.json();
+          setAvailableQuestions(Array.isArray(json) ? json : (json.data || []));
+        }
       }
     } catch {
       toast.error("Không thể tải bài tập");

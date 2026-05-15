@@ -92,6 +92,11 @@ export default function QuestionsPage() {
     fetchQuestions();
   }, [fetchQuestions]);
 
+  // Reset to page 1 when filters/search change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages]);
+
   // Load favorites
   useEffect(() => {
     if (isDemoMode) {
@@ -330,7 +335,7 @@ export default function QuestionsPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Tìm kiếm bài tập..."
+                placeholder="Tìm theo nội dung hoặc mã ID (VD: TK-001)..."
                 className="w-full pl-9 pr-4 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
               />
             </div>
