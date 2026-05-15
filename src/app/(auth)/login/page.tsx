@@ -32,12 +32,19 @@ export default function LoginPage() {
     }
     setIsLoading(true);
     try {
-      const supabase = createClient();
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) {
-        toast.error(error.message.includes("Invalid login") ? "Email hoặc mật khẩu không đúng" : error.message);
+      const res = await fetch("/api/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password }),
+      });
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        toast.error(data.error || "Đăng nhập thất bại");
         return;
       }
+      
       toast.success("Đăng nhập thành công!");
       router.push("/dashboard");
       router.refresh();

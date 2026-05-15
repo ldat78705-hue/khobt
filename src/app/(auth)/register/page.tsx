@@ -32,18 +32,22 @@ export default function RegisterPage() {
     }
     setIsLoading(true);
     try {
-      const supabase = createClient();
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { data: { full_name: fullName } },
+      const res = await fetch("/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, password, fullName }),
       });
-      if (error) {
-        toast.error(error.message);
+      
+      const data = await res.json();
+      
+      if (!res.ok) {
+        toast.error(data.error || "Đăng ký thất bại");
         return;
       }
-      toast.success("Đăng ký thành công! Vui lòng kiểm tra email để xác nhận.");
-      router.push("/login");
+      
+      toast.success("Đăng ký thành công! Đang chuyển hướng...");
+      router.push("/dashboard");
+      router.refresh();
     } catch {
       toast.error("Đã có lỗi xảy ra");
     } finally {
