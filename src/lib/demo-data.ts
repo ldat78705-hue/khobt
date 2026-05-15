@@ -905,7 +905,7 @@ function loadData(): DemoData {
       // Same for categories
       const savedCategories: Category[] = saved.categories || [];
       const savedCatIds = new Set(savedCategories.map((c: Category) => c.id));
-      const newCats = SAMPLE_CATEGORIES.filter(c => !savedCatIds.has(c.id));
+      const newCats = CATEGORIES.filter(c => !savedCatIds.has(c.id));
       if (newCats.length > 0) {
         savedCategories.push(...newCats);
       }
