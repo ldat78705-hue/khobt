@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   Plus, Search, Filter, Grid3X3, List, MoreHorizontal,
-  Trash2, Copy, Edit, Eye, ChevronDown, X, BookOpen, Upload, Heart, FileDown
+  Trash2, Copy, Edit, Eye, ChevronDown, X, BookOpen, Upload, Heart, FileDown, Loader2
 } from "lucide-react";
 import Link from "next/link";
 import { cn, getDifficultyColor, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
@@ -16,6 +16,8 @@ import { QuestionContent } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { ImportDialog } from "@/components/shared/ImportDialog";
 import { DEMO_USER } from "@/lib/demo-data";
+import { parseContentToDocxParagraphs, downloadDocx } from "@/lib/export/word";
+import { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } from "docx";
 
 export default function QuestionsPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -33,6 +35,7 @@ export default function QuestionsPage() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [showImport, setShowImport] = useState(false);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
+  const [isExporting, setIsExporting] = useState(false);
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
@@ -195,6 +198,56 @@ export default function QuestionsPage() {
     }
   };
 
+  const handleBulkExportWord = async () => {
+    const selected = questions.filter(q => selectedIds.includes(q.id));
+    if (!selected.length) { toast.error("Chọn ít nhất 1 bài tập"); return; }
+    setIsExporting(true);
+    try {
+      const children: (Paragraph | any)[] = [];
+      for (const [index, q] of selected.entries()) {
+        const contentParas = parseContentToDocxParagraphs(`Bài ${index + 1}. ` + q.content);
+        if (contentParas.length > 0) {
+          children.push(...contentParas);
+        } else {
+          children.push(new Paragraph({
+            spacing: { before: 200, after: 80 },
+            children: [new TextRun({ text: `Bài ${index + 1}. ` + q.content, size: 26, font: "Times New Roman" })],
+          }));
+        }
+        if (q.question_type === "trac_nghiem" && q.options) {
+          for (const opt of q.options) {
+            const optParas = parseContentToDocxParagraphs(`${opt.key}. ${opt.value}`);
+            children.push(...(optParas.length > 0 ? optParas : [
+              new Paragraph({ indent: { left: 720 }, spacing: { before: 40 }, children: [new TextRun({ text: `${opt.key}. ${opt.value}`, size: 26, font: "Times New Roman" })] })
+            ]));
+          }
+        }
+        if (q.answer) {
+          children.push(new Paragraph({
+            spacing: { before: 60 }, indent: { left: 360 },
+            children: [
+              new TextRun({ text: "Đáp án: ", bold: true, size: 22, font: "Times New Roman", color: "0000FF" }),
+              new TextRun({ text: q.answer, size: 22, font: "Times New Roman" }),
+            ],
+          }));
+        }
+      }
+      const doc = new Document({
+        sections: [{
+          properties: { page: { margin: { top: 1134, bottom: 1134, left: 1134, right: 1134 } } },
+          children,
+        }],
+      });
+      const blob = await Packer.toBlob(doc);
+      await downloadDocx(blob, `Bai_tap_${selected.length}_cau`);
+      toast.success(`Đã xuất ${selected.length} bài tập!`);
+    } catch {
+      toast.error("Lỗi khi xuất file Word");
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
   const clearFilters = () => {
     setSelectedGrade("");
     setSelectedTopic("");
@@ -346,9 +399,9 @@ export default function QuestionsPage() {
               <button onClick={handleBulkClone} className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 flex items-center gap-1">
                 <Copy className="w-3.5 h-3.5" /> Nhân bản
               </button>
-              <Link href="/questions/export" className="px-3 py-1.5 text-xs font-medium text-green-600 bg-green-50 rounded-lg hover:bg-green-100 flex items-center gap-1">
-                <FileDown className="w-3.5 h-3.5" /> Xuất Word
-              </Link>
+              <button onClick={handleBulkExportWord} disabled={isExporting} className="px-3 py-1.5 text-xs font-medium text-green-600 bg-green-50 rounded-lg hover:bg-green-100 flex items-center gap-1 disabled:opacity-50">
+                {isExporting ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <FileDown className="w-3.5 h-3.5" />} Xuất Word
+              </button>
               <button onClick={() => setSelectedIds([])} className="ml-auto text-sm text-slate-500 hover:text-slate-700">
                 Bỏ chọn
               </button>

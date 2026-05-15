@@ -5,35 +5,12 @@ import {
   ImageRun, Table, TableRow, TableCell, WidthType,
 } from "docx";
 // Download .docx file with correct filename
-// Uses File System Access API (Save As dialog) — guaranteed correct filename
 export async function downloadDocx(blob: Blob, fileName: string) {
   const name = fileName.endsWith('.docx') ? fileName : `${fileName}.docx`;
   const docxBlob = new Blob([blob], {
     type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   });
 
-  // Method 1: File System Access API (Chrome 86+, Edge 86+)
-  if ('showSaveFilePicker' in window) {
-    try {
-      const handle = await (window as any).showSaveFilePicker({
-        suggestedName: name,
-        types: [{
-          description: 'Word Document',
-          accept: { 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'] },
-        }],
-      });
-      const writable = await handle.createWritable();
-      await writable.write(docxBlob);
-      await writable.close();
-      return;
-    } catch (err: any) {
-      // User cancelled the dialog — not an error
-      if (err?.name === 'AbortError') return;
-      // Fall through to fallback
-    }
-  }
-
-  // Method 2: Fallback — anchor element with blob URL
   const url = URL.createObjectURL(docxBlob);
   const a = document.createElement('a');
   a.href = url;
@@ -44,7 +21,7 @@ export async function downloadDocx(blob: Blob, fileName: string) {
   setTimeout(() => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-  }, 1000);
+  }, 500);
 }
 import type { Exam, ExamQuestion, Question, ExamSettings } from "@/types";
 

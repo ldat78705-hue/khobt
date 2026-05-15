@@ -320,14 +320,21 @@ math-field:focus-within {
     print-color-adjust: exact;
   }
 
-  /* Hide ALL UI chrome */
+  /* Hide ALL UI chrome completely */
   aside,
   header,
-  nav {
+  nav,
+  .no-print > .sticky,
+  button,
+  select,
+  input[type="text"],
+  input[type="checkbox"] {
     display: none !important;
+    height: 0 !important;
+    overflow: hidden !important;
   }
 
-  /* Reset main layout */
+  /* Reset main layout — remove sidebar offset */
   main {
     margin-left: 0 !important;
     padding: 0 !important;
@@ -339,56 +346,46 @@ math-field:focus-within {
     max-width: none !important;
   }
 
-  /* Make .no-print overlay transparent + static (not hidden!)
-     so .print-preview inside can show through */
+  /* ============================================
+     .no-print modal: make transparent & flat
+     so .print-preview can print through
+     ============================================ */
   .no-print {
     background: transparent !important;
     position: static !important;
     overflow: visible !important;
     z-index: auto !important;
     inset: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
   }
 
-  /* Hide toolbar inside modal */
-  .no-print .sticky {
-    display: none !important;
-  }
-
-  /* Reset modal wrapper padding */
   .no-print > div {
     padding: 0 !important;
     margin: 0 !important;
     min-height: auto !important;
+    height: auto !important;
   }
 
   .no-print > div > div {
     max-width: none !important;
   }
 
-  /* ============================================
-     KEY RULE: Hide everything inside main > div 
-     EXCEPT elements that contain .print-preview
-     ============================================ */
-
-  /* Hide all direct children of main content area */
-  main > div > * {
+  /* Hide all main content EXCEPT print containers */
+  main > div > *:not(.no-print):not(.fixed):not(:has(.worksheet-paper)):not(:has(.print-preview)) {
     display: none !important;
   }
 
-  /* But show the .no-print modal container (it wraps .print-preview) */
+  /* Show the modal container */
   main > div > .no-print,
   main > div > .fixed {
     display: block !important;
   }
 
-  /* Hide non-preview content inside modal */
+  /* Hide non-print elements inside modal */
   .no-print > div > div > .sticky,
+  .no-print > div > div > .bg-white:not(.print-preview),
   .no-print > div > div > div:not(.print-preview):not(:has(.print-preview)) {
-    display: none !important;
-  }
-
-  /* Show .print-preview screen preview siblings that aren't the toolbar */
-  .no-print > div > div > .bg-white:not(.print-preview) {
     display: none !important;
   }
 
@@ -401,12 +398,14 @@ math-field:focus-within {
     background: white !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    padding: 5mm 10mm !important;
+    padding: 0 !important;
     margin: 0 !important;
     font-family: 'Times New Roman', serif !important;
     font-size: 13pt !important;
     line-height: 1.5 !important;
     color: #000 !important;
+    min-height: auto !important;
+    height: auto !important;
   }
 
   /* Worksheet paper (worksheets page) */
@@ -416,34 +415,24 @@ math-field:focus-within {
     width: 100% !important;
     max-width: none !important;
     min-height: auto !important;
+    height: auto !important;
     background: white !important;
     box-shadow: none !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 5mm 10mm !important;
+    padding: 0 !important;
     margin: 0 !important;
     font-family: 'Times New Roman', serif !important;
     color: #000 !important;
   }
 
-  /* Also show worksheet-paper parent */
+  /* Show worksheet-paper parent containers */
   main > div > div:has(.worksheet-paper) {
-    display: block !important;
-  }
-
-  /* Hide buttons inside print areas */
-  .print-preview button,
-  .worksheet-paper button {
-    display: none !important;
-  }
-
-  /* Hide inputs/selects/checkboxes everywhere */
-  button, select, input[type="text"], input[type="checkbox"] {
-    display: none !important;
+    display: flex !important;
+    justify-content: center;
   }
 
   /* === MATH & TABLE RENDERING === */
-
   .katex {
     font-size: 1em !important;
   }
