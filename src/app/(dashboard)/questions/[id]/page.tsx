@@ -8,7 +8,7 @@ import Link from "next/link";
 import { formatDate, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import type { Question } from "@/types";
 import { QUESTION_STATUSES } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { QuestionContent, MathRenderer, CloudinaryImage } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
@@ -45,9 +45,13 @@ export default function QuestionDetailPage() {
         setIsLiked(demoDb.isLiked(DEMO_USER.id, questionId));
         setLikeCount(demoDb.getLikeCount(questionId));
       } else {
-        const supabase = createClient();
-        const { data, error } = await supabase.from("questions").select("*").eq("id", questionId).single();
-        if (error) throw error;
+        const res = await fetch(`/api/questions?id=${questionId}`);
+        if (res.status === 404) {
+          setQuestion(null);
+          return;
+        }
+        if (!res.ok) throw new Error('Không tải được');
+        const data = await res.json();
         setQuestion(data);
       }
     } catch {
@@ -88,9 +92,8 @@ export default function QuestionDetailPage() {
       if (isDemoMode) {
         demoDb.deleteQuestion(questionId);
       } else {
-        const supabase = createClient();
-        const { error } = await supabase.from("questions").delete().eq("id", questionId);
-        if (error) throw error;
+        const res = await fetch(`/api/questions?id=${questionId}`, { method: 'DELETE' });
+        if (!res.ok) throw new Error('Không thể xóa');
       }
       toast.success("Đã xóa bài tập");
       router.push("/questions");
@@ -122,14 +125,8 @@ export default function QuestionDetailPage() {
         toast.success("Đã nhân bản bài tập!");
         router.push(`/questions/${cloned.id}/edit`);
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return;
-        const { id, question_code, created_at, updated_at, user_id, ...rest } = question;
-        const { data, error } = await supabase.from("questions").insert({ ...rest, user_id: user.id, status: 'draft' }).select().single();
-        if (error) throw error;
-        toast.success("Đã nhân bản bài tập!");
-        router.push(`/questions/${data.id}/edit`);
+        toast.info("Tính năng nhân bản đang phát triển");
+        return;
       }
     } catch {
       toast.error("Không thể nhân bản bài tập");

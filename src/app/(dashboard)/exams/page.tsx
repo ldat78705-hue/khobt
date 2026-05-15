@@ -10,7 +10,6 @@ import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
 import { GRADES } from "@/types";
 import type { Exam, Grade, ExamStatus } from "@/types";
-import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { useAuthStore } from "@/stores/auth-store";
@@ -53,25 +52,12 @@ export default function ExamsPage() {
         params.append("tab", activeTab);
 
         const res = await fetch(`/api/exams?${params.toString()}`);
-        if (res.ok) {
+        if (!res.ok) {
           const data = await res.json();
-          setExams(data || []);
-        } else {
-          // Fallback to Supabase client
-          const supabase = createClient();
-          let query = supabase.from("exams").select("*, exam_questions(count)").order("created_at", { ascending: false });
-          if (selectedGrade) query = query.eq("grade", selectedGrade);
-          if (searchQuery) query = query.ilike("title", `%${searchQuery}%`);
-          if (activeTab === 'shared') {
-            query = query.eq("exam_status", "shared");
-          } else {
-            const { data: { user: authUser } } = await supabase.auth.getUser();
-            if (authUser) query = query.eq("user_id", authUser.id).neq("exam_status", "shared");
-          }
-          const { data, error } = await query.limit(50);
-          if (error) throw error;
-          setExams(data || []);
+          throw new Error(data.error || 'Lỗi tải đề thi');
         }
+        const data = await res.json();
+        setExams(data || []);
       }
     } catch {
       toast.error("Không thể tải danh sách đề thi");
@@ -116,17 +102,9 @@ export default function ExamsPage() {
           demoDb.updateExamQuestionPoints(newEq.id, eq.points);
         });
       } else {
-        const supabase = createClient();
-        const { data: { user: authUser } } = await supabase.auth.getUser();
-        if (!authUser) return;
-        const { id, created_at, updated_at, ...rest } = exam;
-        const { error } = await supabase.from("exams").insert({
-          ...rest,
-          title: `${exam.title} (bản sao)`,
-          user_id: authUser.id,
-          exam_status: 'personal',
-        });
-        if (error) throw error;
+        // TODO: Add clone API
+        toast.info("Tính năng clone đang phát triển");
+        return;
       }
       toast.success("Đã clone đề thi vào kho cá nhân!");
       if (activeTab === 'personal') fetchExams();

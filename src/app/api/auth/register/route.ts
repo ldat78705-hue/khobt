@@ -20,24 +20,22 @@ export async function POST(request: NextRequest) {
     }
 
     if (provider === 'neon') {
-      const { register, setSessionCookie } = await import('@/lib/neon/auth');
-      const { user, token } = await register(email, password, fullName || 'Giáo viên');
-      await setSessionCookie(token);
+      const { register } = await import('@/lib/neon/auth');
+      const { user, needsApproval } = await register(email, password, fullName || 'Giáo viên');
+      
+      if (needsApproval) {
+        return NextResponse.json({
+          success: true,
+          needsApproval: true,
+          message: 'Đăng ký thành công! Tài khoản đang chờ admin duyệt. Bạn sẽ nhận thông báo qua email khi được duyệt.',
+          user: { email: user.email, full_name: user.full_name },
+        });
+      }
+      
       return NextResponse.json({ user });
     }
 
-    // Supabase mode
-    const { createClient } = await import('@/lib/supabase/server');
-    const supabase = await createClient();
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: { data: { full_name: fullName || 'Giáo viên' } },
-    });
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 400 });
-    }
-    return NextResponse.json({ user: data.user });
+    return NextResponse.json({ error: 'Provider not supported' }, { status: 501 });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Đăng ký thất bại';
     if (message.includes('duplicate') || message.includes('unique')) {

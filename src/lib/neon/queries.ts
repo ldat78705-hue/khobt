@@ -357,14 +357,14 @@ export async function getUsers(search?: string) {
   const sql = getRawDb();
   if (search) {
     return await sql`
-      SELECT id, email, full_name, role, is_active, permissions, avatar_url, created_at
+      SELECT id, email, full_name, role, is_active, is_approved, permissions, avatar_url, created_at
       FROM public.users
       WHERE full_name ILIKE ${'%' + search + '%'} OR email ILIKE ${'%' + search + '%'}
       ORDER BY created_at DESC
     `;
   }
   return await sql`
-    SELECT id, email, full_name, role, is_active, permissions, avatar_url, created_at
+    SELECT id, email, full_name, role, is_active, is_approved, permissions, avatar_url, created_at
     FROM public.users
     ORDER BY created_at DESC
   `;

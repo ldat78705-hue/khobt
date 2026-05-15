@@ -49,32 +49,25 @@ export async function verifyToken(token: string): Promise<string | null> {
   }
 }
 
-/** Register new user */
+/** Register new user — chờ admin duyệt */
 export async function register(email: string, password: string, fullName: string) {
   const sql = getDb();
   const passwordHash = await hashPassword(password);
 
   const result = await sql`
-    INSERT INTO public.users (email, password_hash, full_name)
-    VALUES (${email}, ${passwordHash}, ${fullName})
-    RETURNING id, email, full_name, role, is_active, permissions, avatar_url
+    INSERT INTO public.users (email, password_hash, full_name, is_approved)
+    VALUES (${email}, ${passwordHash}, ${fullName}, ${false})
+    RETURNING id, email, full_name, role, is_active, is_approved, permissions, avatar_url
   `;
 
   if (result.length === 0) {
     throw new Error('Failed to create user');
   }
 
-  const user = result[0] as AuthUser;
-  const token = await createToken(user.id);
+  const user = result[0] as AuthUser & { is_approved: boolean };
 
-  // Save session
-  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
-  await sql`
-    INSERT INTO public.sessions (user_id, token, expires_at)
-    VALUES (${user.id}, ${token}, ${expiresAt.toISOString()})
-  `;
-
-  return { user, token };
+  // Không tạo session — user phải chờ admin duyệt mới đăng nhập được
+  return { user, token: null, needsApproval: true };
 }
 
 /** Login */
@@ -94,6 +87,11 @@ export async function login(email: string, password: string) {
   const user = result[0];
   if (!user.is_active) {
     throw new Error('Tài khoản đã bị khóa');
+  }
+
+  // Kiểm tra duyệt tài khoản
+  if (user.is_approved === false) {
+    throw new Error('Tài khoản đang chờ admin duyệt. Vui lòng liên hệ lienhe@thaydat.edu.vn');
   }
 
   const valid = await verifyPassword(password, user.password_hash as string);
