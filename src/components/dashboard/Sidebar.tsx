@@ -102,8 +102,6 @@ export function Sidebar() {
     try {
       if (!isDemoMode) {
         await fetch('/api/auth/logout', { method: 'POST' });
-        const supabase = createClient();
-        await supabase.auth.signOut();
       }
       toast.success("Đã đăng xuất");
       router.push("/login");

@@ -81,7 +81,7 @@ export default function LoginPage() {
               <label className="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
               <div className="relative">
                 <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                <input id="login-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="teacher@school.edu.vn" className="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all" />
+                <input id="login-email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="lienhe@thaydat.edu.vn" className="w-full pl-11 pr-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all" />
               </div>
             </div>
             <div>
