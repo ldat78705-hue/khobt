@@ -4,7 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   Plus, Search, Filter, Grid3X3, List, MoreHorizontal,
-  Trash2, Copy, Edit, Eye, ChevronDown, X, BookOpen, Upload, Heart, FileDown, Loader2
+  Trash2, Copy, Edit, Eye, ChevronDown, X, BookOpen, Upload, Heart, FileDown, Loader2,
+  ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight
 } from "lucide-react";
 import Link from "next/link";
 import { cn, getDifficultyColor, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
@@ -36,6 +37,9 @@ export default function QuestionsPage() {
   const [showImport, setShowImport] = useState(false);
   const [favoriteIds, setFavoriteIds] = useState<string[]>([]);
   const [isExporting, setIsExporting] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const PAGE_SIZE = 30;
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
@@ -53,18 +57,26 @@ export default function QuestionsPage() {
         if (filterHasImages) data = data.filter(q => q.images && q.images.length > 0);
         setQuestions(data);
       } else {
-        // Try Neon API first
         const params = new URLSearchParams();
         if (selectedGrade) params.append("grade", selectedGrade.toString());
         if (selectedTopic) params.append("topic", selectedTopic);
         if (selectedDifficulty) params.append("difficulty", selectedDifficulty);
         if (selectedType) params.append("question_type", selectedType);
         if (searchQuery) params.append("search", searchQuery);
+        params.append("limit", PAGE_SIZE.toString());
+        params.append("offset", ((currentPage - 1) * PAGE_SIZE).toString());
         
         const res = await fetch(`/api/questions?${params.toString()}`);
         if (res.ok) {
-          const data = await res.json();
-          setQuestions(data || []);
+          const json = await res.json();
+          // Support both old array format and new paginated format
+          if (Array.isArray(json)) {
+            setQuestions(json);
+            setTotalCount(json.length);
+          } else {
+            setQuestions(json.data || []);
+            setTotalCount(json.total || 0);
+          }
         } else {
           throw new Error('API error');
         }
@@ -74,7 +86,7 @@ export default function QuestionsPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages]);
+  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages, currentPage]);
 
   useEffect(() => {
     fetchQuestions();
@@ -247,6 +259,7 @@ export default function QuestionsPage() {
     setFilterHasSolution(false);
     setFilterHasImages(false);
     setSearchQuery("");
+    setCurrentPage(1);
   };
 
   const handleSelectAll = () => {
@@ -286,7 +299,7 @@ export default function QuestionsPage() {
     <>
       <Header
         title="Kho bài tập"
-        subtitle={`${questions.length} bài tập`}
+        subtitle={`${totalCount || questions.length} bài tập`}
         actions={
           <div className="flex items-center gap-2">
             <button
@@ -542,6 +555,72 @@ export default function QuestionsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {!isDemoMode && totalCount > PAGE_SIZE && (
+          <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm flex items-center justify-between">
+            <span className="text-sm text-slate-500">
+              Hiển thị {((currentPage - 1) * PAGE_SIZE) + 1}–{Math.min(currentPage * PAGE_SIZE, totalCount)} / <strong>{totalCount}</strong> bài tập
+            </span>
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => setCurrentPage(1)}
+                disabled={currentPage === 1}
+                className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                title="Trang đầu"
+              >
+                <ChevronsLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                title="Trang trước"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <div className="flex items-center gap-1 px-2">
+                {(() => {
+                  const totalPages = Math.ceil(totalCount / PAGE_SIZE);
+                  const pages: number[] = [];
+                  const start = Math.max(1, currentPage - 2);
+                  const end = Math.min(totalPages, currentPage + 2);
+                  for (let i = start; i <= end; i++) pages.push(i);
+                  return pages.map(p => (
+                    <button
+                      key={p}
+                      onClick={() => setCurrentPage(p)}
+                      className={cn(
+                        "w-8 h-8 rounded-lg text-sm font-medium transition-colors",
+                        p === currentPage
+                          ? "bg-blue-600 text-white shadow-sm"
+                          : "text-slate-600 hover:bg-slate-100"
+                      )}
+                    >
+                      {p}
+                    </button>
+                  ));
+                })()}
+              </div>
+              <button
+                onClick={() => setCurrentPage(p => Math.min(Math.ceil(totalCount / PAGE_SIZE), p + 1))}
+                disabled={currentPage >= Math.ceil(totalCount / PAGE_SIZE)}
+                className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                title="Trang sau"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+              <button
+                onClick={() => setCurrentPage(Math.ceil(totalCount / PAGE_SIZE))}
+                disabled={currentPage >= Math.ceil(totalCount / PAGE_SIZE)}
+                className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                title="Trang cuối"
+              >
+                <ChevronsRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         )}
       </div>

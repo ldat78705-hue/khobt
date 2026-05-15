@@ -43,47 +43,48 @@ export default function DashboardPage() {
       setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
     } else {
       try {
-        const [qRes, eRes, pRes] = await Promise.all([
+        // Fetch recent questions + counts efficiently
+        const [recentRes, qCountRes, eCountRes, pCountRes, distRes] = await Promise.all([
           fetch('/api/questions?limit=5'),
-          fetch('/api/exams?limit=1'),
-          fetch('/api/questions?status=pending&limit=1'),
+          fetch('/api/questions?count_only=true'),
+          fetch('/api/exams?limit=200'),
+          fetch('/api/questions?count_only=true&status=pending'),
+          fetch('/api/questions?limit=1000'), // for distributions
         ]);
         
-        // Fetch real counts
-        const [qCountRes, eCountRes, pCountRes] = await Promise.all([
-          fetch('/api/questions?limit=1000'),
-          fetch('/api/exams?limit=500'),
-          fetch('/api/questions?status=pending&limit=500'),
-        ]);
-        
-        if (qRes.ok) {
-          const qData = await qRes.json();
-          setRecentQuestions(qData || []);
+        if (recentRes.ok) {
+          const json = await recentRes.json();
+          setRecentQuestions(json.data || json || []);
         }
         if (qCountRes.ok) {
-          const allQ = await qCountRes.json();
-          setQuestionCount(Array.isArray(allQ) ? allQ.length : 0);
-          // Build distributions from full data
-          const gd: Record<number, number> = {};
-          const dd: Record<string, number> = {};
-          const td: Record<string, number> = {};
-          (allQ || []).forEach((q: any) => {
-            gd[q.grade] = (gd[q.grade] || 0) + 1;
-            dd[q.difficulty] = (dd[q.difficulty] || 0) + 1;
-            td[q.topic] = (td[q.topic] || 0) + 1;
-          });
-          setGradeDistribution(gd);
-          setDifficultyDistribution(dd);
-          const sorted = Object.entries(td).sort((a, b) => b[1] - a[1]).slice(0, 6);
-          setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
+          const json = await qCountRes.json();
+          setQuestionCount(json.count || 0);
         }
         if (eCountRes.ok) {
           const allE = await eCountRes.json();
           setExamCount(Array.isArray(allE) ? allE.length : 0);
         }
         if (pCountRes.ok) {
-          const allP = await pCountRes.json();
-          setPendingCount(Array.isArray(allP) ? allP.length : 0);
+          const json = await pCountRes.json();
+          setPendingCount(json.count || 0);
+        }
+        if (distRes.ok) {
+          const json = await distRes.json();
+          const allQ = json.data || json || [];
+          if (Array.isArray(allQ) && allQ.length > 0) {
+            const gd: Record<number, number> = {};
+            const dd: Record<string, number> = {};
+            const td: Record<string, number> = {};
+            allQ.forEach((q: any) => {
+              gd[q.grade] = (gd[q.grade] || 0) + 1;
+              dd[q.difficulty] = (dd[q.difficulty] || 0) + 1;
+              td[q.topic] = (td[q.topic] || 0) + 1;
+            });
+            setGradeDistribution(gd);
+            setDifficultyDistribution(dd);
+            const sorted = Object.entries(td).sort((a, b) => b[1] - a[1]).slice(0, 6);
+            setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
+          }
         }
       } catch { /* ignore */ }
     }

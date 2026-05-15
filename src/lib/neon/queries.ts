@@ -29,9 +29,8 @@ export async function getQuestions(filters?: {
   offset?: number;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, userId, search, limit = 500, offset = 0 } = filters || {};
+  const { grade, topic, difficulty, status, userId, search, limit = 30, offset = 0 } = filters || {};
 
-  // Use simple approach: fetch with all possible filters using COALESCE/CASE
   const result = await sql`
     SELECT q.*, u.full_name as author_name, c.name as category_name
     FROM public.questions q
@@ -43,12 +42,63 @@ export async function getQuestions(filters?: {
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
       AND (${userId ?? null}::uuid IS NULL OR q.user_id = ${userId ?? null}::uuid)
-      AND (${search ?? null}::text IS NULL OR q.search_vector @@ to_tsquery('simple', ${search ? search.split(' ').join(' & ') : ''}))
+      AND (
+        ${search ?? null}::text IS NULL
+        OR q.question_code ILIKE ${'%' + (search || '') + '%'}
+        OR q.content ILIKE ${'%' + (search || '') + '%'}
+      )
     ORDER BY q.created_at DESC
     LIMIT ${limit}
     OFFSET ${offset}
   `;
   return result as unknown as Question[];
+}
+
+export async function getQuestionCount(filters?: {
+  grade?: number;
+  topic?: string;
+  difficulty?: string;
+  status?: string;
+  search?: string;
+}) {
+  const sql = getRawDb();
+  const { grade, topic, difficulty, status, search } = filters || {};
+  const result = await sql`
+    SELECT COUNT(*)::int as count FROM public.questions q
+    WHERE
+      (${grade ?? null}::int IS NULL OR q.grade = ${grade ?? null})
+      AND (${topic ?? null}::text IS NULL OR q.topic = ${topic ?? null})
+      AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
+      AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
+      AND (
+        ${search ?? null}::text IS NULL
+        OR q.question_code ILIKE ${'%' + (search || '') + '%'}
+        OR q.content ILIKE ${'%' + (search || '') + '%'}
+      )
+  `;
+  return result[0]?.count || 0;
+}
+
+export async function generateQuestionCode(prefix: string): Promise<string> {
+  const sql = getRawDb();
+  const result = await sql`
+    SELECT question_code FROM public.questions
+    WHERE question_code LIKE ${prefix + '-%'}
+    ORDER BY question_code DESC
+    LIMIT 1
+  `;
+  if (result.length === 0) return `${prefix}-001`;
+  const lastCode = result[0].question_code as string;
+  const numPart = parseInt(lastCode.split('-').pop() || '0');
+  return `${prefix}-${String(numPart + 1).padStart(3, '0')}`;
+}
+
+export async function findByQuestionCode(code: string) {
+  const sql = getRawDb();
+  const result = await sql`
+    SELECT id, question_code FROM public.questions WHERE question_code = ${code} LIMIT 1
+  `;
+  return result[0] as { id: string; question_code: string } | undefined;
 }
 
 export async function getQuestionById(id: string) {

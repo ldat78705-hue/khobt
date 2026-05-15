@@ -18,6 +18,20 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ error: err.message }, { status: 500 });
     }
   }
+
+  // Count only mode for dashboard
+  const countOnly = searchParams.get('count_only') === 'true';
+  if (countOnly && provider === 'neon') {
+    try {
+      const count = await neonQueries.getQuestionCount({
+        grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
+        status: searchParams.get('status') || undefined,
+      });
+      return NextResponse.json({ count });
+    } catch (err: any) {
+      return NextResponse.json({ error: err.message }, { status: 500 });
+    }
+  }
   
   const filters = {
     grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
@@ -25,20 +39,40 @@ export async function GET(req: NextRequest) {
     difficulty: searchParams.get('difficulty') || undefined,
     status: searchParams.get('status') || undefined,
     search: searchParams.get('search') || undefined,
-    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 500,
+    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 30,
     offset: searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0,
   };
 
   if (provider === 'neon') {
     try {
-      const questions = await neonQueries.getQuestions(filters);
-      return NextResponse.json(questions);
+      const [questions, totalResult] = await Promise.all([
+        neonQueries.getQuestions(filters),
+        neonQueries.getQuestionCount({
+          grade: filters.grade,
+          topic: filters.topic,
+          difficulty: filters.difficulty,
+          status: filters.status,
+          search: filters.search,
+        }),
+      ]);
+      return NextResponse.json({ data: questions, total: totalResult, limit: filters.limit, offset: filters.offset });
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });
     }
   }
 
   return NextResponse.json({ error: 'Neon not active' }, { status: 501 });
+}
+
+// Topic → prefix code mapping
+function getTopicPrefix(topic: string): string {
+  const map: Record<string, string> = {
+    'thong_ke': 'TK', 'xac_suat': 'XS', 'bieu_thuc': 'RG',
+    'pt_bpt': 'PT', 'hinh_khong_gian': 'HK', 'hinh_hoc': 'HP',
+    'so_hoc': 'SH', 'dai_so': 'DS', 'ham_so': 'HS',
+    'luong_giac': 'LG', 'to_hop': 'TH', 'gioi_han': 'GH',
+  };
+  return map[topic] || 'BT';
 }
 
 export async function POST(req: NextRequest) {
@@ -49,6 +83,19 @@ export async function POST(req: NextRequest) {
     
     try {
       const data = await req.json();
+      
+      // Auto-generate question_code if not provided
+      if (!data.question_code) {
+        const prefix = getTopicPrefix(data.topic || 'bt');
+        data.question_code = await neonQueries.generateQuestionCode(prefix);
+      } else {
+        // Validate uniqueness of provided code
+        const existing = await neonQueries.findByQuestionCode(data.question_code);
+        if (existing) {
+          return NextResponse.json({ error: `Mã "${data.question_code}" đã tồn tại` }, { status: 409 });
+        }
+      }
+      
       const question = await neonQueries.createQuestion({
         ...data,
         user_id: user.id,
@@ -78,6 +125,14 @@ export async function PATCH(req: NextRequest) {
         }
         updates.reviewed_by = user.id;
         updates.reviewed_at = new Date().toISOString();
+      }
+
+      // Validate unique question_code if changed
+      if (updates.question_code) {
+        const existing = await neonQueries.findByQuestionCode(updates.question_code);
+        if (existing && existing.id !== id) {
+          return NextResponse.json({ error: `Mã "${updates.question_code}" đã tồn tại` }, { status: 409 });
+        }
       }
 
       await neonQueries.updateQuestion(id, updates);

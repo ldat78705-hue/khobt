@@ -40,6 +40,7 @@ export default function EditQuestionPage() {
   const [images, setImages] = useState<string[]>([]);
   const [answerImages, setAnswerImages] = useState<string[]>([]);
   const [solutionImages, setSolutionImages] = useState<string[]>([]);
+  const [questionCode, setQuestionCode] = useState("");
 
 
   const fetchQuestion = useCallback(async () => {
@@ -71,6 +72,7 @@ export default function EditQuestionPage() {
         if (q.images) setImages(q.images);
         if (q.answer_images) setAnswerImages(q.answer_images);
         if (q.solution_images) setSolutionImages(q.solution_images);
+        if (q.question_code) setQuestionCode(q.question_code);
       }
     } catch {
       toast.error("Không thể tải bài tập");
@@ -99,13 +101,14 @@ export default function EditQuestionPage() {
     if (!content.trim()) { toast.error("Vui lòng nhập nội dung bài tập"); return; }
     setIsSaving(true);
     try {
-      const updates = {
+      const updates: any = {
         content, answer: answer || undefined, solution: solution || undefined,
         grade, topic, difficulty, question_type: questionType,
         options: questionType === "trac_nghiem" ? options : undefined,
         correct_answer: questionType === "trac_nghiem" ? correctAnswer : undefined,
         tags: tags.length > 0 ? tags : undefined,
         images: images.length > 0 ? images : undefined,
+        question_code: questionCode || undefined,
       };
 
       if (isDemoMode) {
@@ -203,6 +206,21 @@ export default function EditQuestionPage() {
                   {QUESTION_TYPES.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
                 </select>
               </div>
+            </div>
+          </div>
+
+          {/* Question Code */}
+          <div className="bg-white rounded-2xl border border-slate-100 p-6 shadow-sm">
+            <h2 className="text-base font-semibold text-slate-800 mb-3">Mã bài tập</h2>
+            <div className="flex items-center gap-3">
+              <input
+                type="text"
+                value={questionCode}
+                onChange={(e) => setQuestionCode(e.target.value.toUpperCase())}
+                placeholder="VD: TK-001, HP-245..."
+                className="flex-1 max-w-xs px-3 py-2 border border-slate-200 rounded-xl text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+              />
+              <span className="text-xs text-slate-400">Tự động tạo nếu để trống. Mã không được trùng.</span>
             </div>
           </div>
 
