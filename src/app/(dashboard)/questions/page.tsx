@@ -249,6 +249,37 @@ export default function QuestionsPage() {
     setSearchQuery("");
   };
 
+  const handleSelectAll = () => {
+    if (selectedIds.length === questions.length) {
+      setSelectedIds([]);
+    } else {
+      setSelectedIds(questions.map(q => q.id));
+    }
+  };
+
+  const handleDeleteAllFiltered = async () => {
+    const count = questions.length;
+    if (!confirm(`Xóa TẤT CẢ ${count} bài tập đang hiển thị? Hành động này KHÔNG THỂ hoàn tác!`)) return;
+    if (!confirm(`Xác nhận lần cuối: Xóa ${count} bài tập?`)) return;
+    try {
+      let deleted = 0;
+      for (const q of questions) {
+        if (isDemoMode) {
+          demoDb.deleteQuestion(q.id);
+          deleted++;
+        } else {
+          const res = await fetch(`/api/questions?id=${q.id}`, { method: 'DELETE' });
+          if (res.ok) deleted++;
+        }
+      }
+      toast.success(`Đã xóa ${deleted} bài tập`);
+      setSelectedIds([]);
+      fetchQuestions();
+    } catch {
+      toast.error("Lỗi khi xóa");
+    }
+  };
+
   const hasFilters = selectedGrade || selectedTopic || selectedDifficulty || selectedType || selectedStatus || filterHasSolution || filterHasImages;
 
   return (
@@ -379,24 +410,54 @@ export default function QuestionsPage() {
             </div>
           )}
 
-          {/* Bulk actions */}
-          {selectedIds.length > 0 && (
-            <div className="mt-4 pt-4 border-t border-slate-100 flex items-center gap-3 animate-slide-in-up">
-              <span className="text-sm text-slate-600">Đã chọn <strong>{selectedIds.length}</strong> bài tập</span>
-              <button onClick={handleBulkDelete} className="px-3 py-1.5 text-xs font-medium text-red-600 bg-red-50 rounded-lg hover:bg-red-100 flex items-center gap-1">
-                <Trash2 className="w-3.5 h-3.5" /> Xóa
+          {/* Bulk actions bar */}
+          <div className="mt-4 pt-4 border-t border-slate-100 flex items-center gap-3 flex-wrap">
+            <button
+              onClick={handleSelectAll}
+              className={cn(
+                "px-3 py-1.5 text-xs font-medium rounded-lg flex items-center gap-1 transition-colors",
+                selectedIds.length === questions.length && questions.length > 0
+                  ? "text-blue-700 bg-blue-100 hover:bg-blue-200"
+                  : "text-slate-600 bg-slate-100 hover:bg-slate-200"
+              )}
+            >
+              <input
+                type="checkbox"
+                checked={selectedIds.length === questions.length && questions.length > 0}
+                onChange={handleSelectAll}
+                className="w-3.5 h-3.5 rounded border-slate-300 text-blue-600"
+              />
+              {selectedIds.length === questions.length && questions.length > 0 ? 'Bỏ chọn tất cả' : `Chọn tất cả (${questions.length})`}
+            </button>
+
+            {selectedIds.length > 0 && (
+              <>
+                <span className="text-sm text-slate-500">|</span>
+                <span className="text-sm text-slate-600">Đã chọn <strong className="text-blue-600">{selectedIds.length}</strong></span>
+                <button onClick={handleBulkDelete} className="px-3 py-1.5 text-xs font-medium text-red-600 bg-red-50 rounded-lg hover:bg-red-100 flex items-center gap-1">
+                  <Trash2 className="w-3.5 h-3.5" /> Xóa ({selectedIds.length})
+                </button>
+                <button onClick={handleBulkClone} className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 flex items-center gap-1">
+                  <Copy className="w-3.5 h-3.5" /> Nhân bản
+                </button>
+                <button onClick={handleBulkExportWord} disabled={isExporting} className="px-3 py-1.5 text-xs font-medium text-green-600 bg-green-50 rounded-lg hover:bg-green-100 flex items-center gap-1 disabled:opacity-50">
+                  {isExporting ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <FileDown className="w-3.5 h-3.5" />} Xuất Word
+                </button>
+                <button onClick={() => setSelectedIds([])} className="ml-auto text-sm text-slate-500 hover:text-slate-700">
+                  Bỏ chọn
+                </button>
+              </>
+            )}
+
+            {hasFilters && questions.length > 0 && (
+              <button
+                onClick={handleDeleteAllFiltered}
+                className="ml-auto px-3 py-1.5 text-xs font-medium text-white bg-red-500 rounded-lg hover:bg-red-600 flex items-center gap-1 shadow-sm"
+              >
+                <Trash2 className="w-3.5 h-3.5" /> Xóa tất cả kết quả lọc ({questions.length})
               </button>
-              <button onClick={handleBulkClone} className="px-3 py-1.5 text-xs font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 flex items-center gap-1">
-                <Copy className="w-3.5 h-3.5" /> Nhân bản
-              </button>
-              <button onClick={handleBulkExportWord} disabled={isExporting} className="px-3 py-1.5 text-xs font-medium text-green-600 bg-green-50 rounded-lg hover:bg-green-100 flex items-center gap-1 disabled:opacity-50">
-                {isExporting ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <FileDown className="w-3.5 h-3.5" />} Xuất Word
-              </button>
-              <button onClick={() => setSelectedIds([])} className="ml-auto text-sm text-slate-500 hover:text-slate-700">
-                Bỏ chọn
-              </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
 
         {/* Question list */}
