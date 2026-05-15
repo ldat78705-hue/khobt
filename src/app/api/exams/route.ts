@@ -48,6 +48,27 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({ error: 'Neon not active' }, { status: 501 });
 }
 
+export async function POST(req: NextRequest) {
+  const provider = getDatabaseProvider();
+  if (provider === 'neon') {
+    const user = await getCurrentUser();
+    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    
+    try {
+      const data = await req.json();
+      const exam = await neonQueries.createExam({
+        ...data,
+        user_id: user.id,
+        exam_status: 'personal',
+      });
+      return NextResponse.json(exam);
+    } catch (err: any) {
+      return NextResponse.json({ error: err.message }, { status: 500 });
+    }
+  }
+  return NextResponse.json({ error: 'Neon not active' }, { status: 501 });
+}
+
 export async function DELETE(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const id = searchParams.get('id');

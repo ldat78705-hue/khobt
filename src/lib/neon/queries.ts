@@ -253,6 +253,32 @@ export async function deleteExam(id: string) {
   await sql`DELETE FROM public.exams WHERE id = ${id}`;
 }
 
+export async function addExamQuestion(examId: string, questionId: string, sortOrder: number = 0, points: number = 1.0) {
+  const sql = getDb();
+  const result = await sql`
+    INSERT INTO public.exam_questions (exam_id, question_id, sort_order, points)
+    VALUES (${examId}, ${questionId}, ${sortOrder}, ${points})
+    RETURNING *
+  `;
+  return result[0];
+}
+
+export async function removeExamQuestion(id: string) {
+  const sql = getDb();
+  await sql`DELETE FROM public.exam_questions WHERE id = ${id}`;
+}
+
+export async function updateExamQuestionPoints(id: string, points: number) {
+  const sql = getDb();
+  await sql`UPDATE public.exam_questions SET points = ${points} WHERE id = ${id}`;
+}
+
+export async function updateExamQuestionOrder(id: string, sortOrder: number) {
+  const sql = getDb();
+  await sql`UPDATE public.exam_questions SET sort_order = ${sortOrder} WHERE id = ${id}`;
+}
+
+
 export async function getPersonalExams(userId: string, filters?: {
   grade?: number;
   status?: string;

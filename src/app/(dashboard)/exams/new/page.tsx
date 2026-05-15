@@ -7,7 +7,7 @@ import { Save, ArrowLeft, Loader2, Plus, X, Settings, Zap } from "lucide-react";
 import Link from "next/link";
 import { GRADES } from "@/types";
 import type { Grade } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { cn } from "@/lib/utils";
@@ -77,11 +77,16 @@ export default function NewExamPage() {
         const exam = demoDb.createExam(examData);
         newId = exam.id;
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { toast.error("Vui lòng đăng nhập lại"); setIsLoading(false); return; }
-        const { data, error } = await supabase.from("exams").insert({ ...examData, user_id: user.id }).select().single();
-        if (error) throw error;
+        const res = await fetch('/api/exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(examData),
+        });
+        if (!res.ok) {
+          const err = await res.json();
+          throw new Error(err.error || 'Lỗi tạo đề');
+        }
+        const data = await res.json();
         newId = data.id;
       }
 
