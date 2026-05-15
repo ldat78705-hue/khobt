@@ -12,7 +12,7 @@ import type { Question, Grade, Topic, Difficulty, QuestionType } from "@/types";
 import { toast } from "sonner";
 import { QuestionContent, MathRenderer } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
-import { createClient } from "@/lib/supabase/client";
+
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle,
 } from "docx";
@@ -62,16 +62,7 @@ export default function QuickExportPage() {
           const data = await res.json();
           setQuestions(data || []);
         } else {
-          // Fallback to Supabase client
-          const supabase = createClient();
-          let query = supabase.from("questions").select("*").eq("status", "approved").order("created_at", { ascending: false });
-          if (selectedGrade) query = query.eq("grade", selectedGrade);
-          if (selectedTopic) query = query.eq("topic", selectedTopic);
-          if (selectedDifficulty) query = query.eq("difficulty", selectedDifficulty);
-          if (selectedType) query = query.eq("question_type", selectedType);
-          if (searchQuery) query = query.ilike("content", `%${searchQuery}%`);
-          const { data } = await query.limit(100);
-          setQuestions(data || []);
+          throw new Error('API error');
         }
       }
     } catch {

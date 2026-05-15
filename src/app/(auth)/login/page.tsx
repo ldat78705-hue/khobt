@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GraduationCap, Mail, Lock, Eye, EyeOff, Loader2, Zap } from "lucide-react";
 import { toast } from "sonner";
-import { createClient } from "@/lib/supabase/client";
 import { isDemoMode } from "@/lib/demo-data";
 
 export default function LoginPage() {

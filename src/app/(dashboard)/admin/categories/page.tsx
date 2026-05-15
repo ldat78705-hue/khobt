@@ -6,7 +6,7 @@ import { Plus, Trash2, Edit, GripVertical, FolderTree, Save, X, Loader2, Chevron
 import { cn, formatDate } from "@/lib/utils";
 import type { Category } from "@/types";
 import { GRADES, type Grade } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 
@@ -45,10 +45,7 @@ export default function AdminCategoriesPage() {
           const data = await res.json();
           setCategories(data || []);
         } else {
-          const supabase = createClient();
-          const { data, error } = await supabase.from("categories").select("*").order("sort_order").order("name");
-          if (error) throw error;
-          setCategories(data || []);
+          throw new Error('API error');
         }
       }
     } catch {

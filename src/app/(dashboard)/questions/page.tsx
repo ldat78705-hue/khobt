@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cn, getDifficultyColor, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import { GRADES, TOPICS, DIFFICULTIES, QUESTION_TYPES, QUESTION_STATUSES } from "@/types";
 import type { Question, Grade, Topic, Difficulty, QuestionType, QuestionStatus } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { QuestionContent } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
@@ -66,17 +66,7 @@ export default function QuestionsPage() {
           const data = await res.json();
           setQuestions(data || []);
         } else {
-          // Fallback to Supabase client if API fails
-          const supabase = createClient();
-          let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
-          if (selectedGrade) query = query.eq("grade", selectedGrade);
-          if (selectedTopic) query = query.eq("topic", selectedTopic);
-          if (selectedDifficulty) query = query.eq("difficulty", selectedDifficulty);
-          if (selectedType) query = query.eq("question_type", selectedType);
-          if (searchQuery) query = query.ilike("content", `%${searchQuery}%`);
-          const { data, error } = await query.limit(50);
-          if (error) throw error;
-          setQuestions(data || []);
+          throw new Error('API error');
         }
       }
     } catch {
@@ -158,9 +148,8 @@ export default function QuestionsPage() {
           demoDb.deleteQuestion(id);
           deleted++;
         } else {
-          const supabase = createClient();
-          const { error } = await supabase.from("questions").delete().eq("id", id);
-          if (!error) deleted++;
+          const res = await fetch(`/api/questions?id=${id}`, { method: 'DELETE' });
+          if (res.ok) deleted++;
         }
       }
       toast.success(`Đã xóa ${deleted} bài tập`);
@@ -182,12 +171,13 @@ export default function QuestionsPage() {
           demoDb.createQuestion({ ...rest, status: 'draft' as const });
           cloned++;
         } else {
-          const supabase = createClient();
-          const { data: { user } } = await supabase.auth.getUser();
-          if (!user) continue;
-          const { id: _, question_code, created_at, updated_at, user_id, ...rest } = q;
-          const { error } = await supabase.from("questions").insert({ ...rest, user_id: user.id, status: 'draft' });
-          if (!error) cloned++;
+          const { id: _, question_code, created_at, updated_at, user_id, reviewed_by, reviewed_at, review_note, ...rest } = q;
+          const res = await fetch('/api/questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...rest, status: 'draft' }),
+          });
+          if (res.ok) cloned++;
         }
       }
       toast.success(`Đã nhân bản ${cloned} bài tập`);

@@ -6,7 +6,7 @@ import { CheckCircle, XCircle, Eye, Clock, Filter, MessageSquare, ChevronDown, U
 import { cn, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel, formatDate } from "@/lib/utils";
 import { GRADES, QUESTION_STATUSES } from "@/types";
 import type { Question, QuestionStatus, Grade } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { MathRenderer, QuestionContent } from "@/components/shared/MathRenderer";
@@ -41,13 +41,7 @@ export default function ReviewQuestionsPage() {
           const data = await res.json();
           setQuestions(data || []);
         } else {
-          const supabase = createClient();
-          let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
-          if (statusFilter) query = query.eq("status", statusFilter);
-          if (gradeFilter) query = query.eq("grade", gradeFilter);
-          const { data, error } = await query.limit(50);
-          if (error) throw error;
-          setQuestions(data || []);
+          throw new Error('API error');
         }
       }
     } catch {

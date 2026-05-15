@@ -12,7 +12,7 @@ import type { Grade, Topic, Difficulty, Question } from "@/types";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { toast } from "sonner";
 import { QuestionContent, MathRenderer } from "@/components/shared/MathRenderer";
-import { createClient } from "@/lib/supabase/client";
+
 import { exportToWord } from "@/lib/export/word";
 
 interface WorksheetConfig {
@@ -73,15 +73,7 @@ export default function WorksheetPage() {
           const data = await res.json();
           setQuestions(data || []);
         } else {
-          // Fallback
-          const supabase = createClient();
-          let query = supabase.from("questions").select("*").eq("status", "approved").order("created_at", { ascending: false });
-          if (filterGrade) query = query.eq("grade", filterGrade);
-          if (filterTopic) query = query.eq("topic", filterTopic);
-          if (filterDifficulty) query = query.eq("difficulty", filterDifficulty);
-          const { data, error } = await query;
-          if (error) throw error;
-          setQuestions(data || []);
+          throw new Error('API error');
         }
       }
     } catch {

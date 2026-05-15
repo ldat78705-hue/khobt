@@ -5,7 +5,6 @@ import { Header } from "@/components/dashboard/Header";
 import { BookOpen, FileText, TrendingUp, Plus, ArrowRight, Clock, Sparkles, CheckCircle, Download, BarChart3, Target } from "lucide-react";
 import Link from "next/link";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
-import { createClient } from "@/lib/supabase/client";
 import { QuestionContent } from "@/components/shared/MathRenderer";
 import { formatDate, getDifficultyLabel, getDifficultyColor, getTopicLabel } from "@/lib/utils";
 import { DIFFICULTIES, TOPICS } from "@/types";
