@@ -6,22 +6,41 @@ import {
 } from "docx";
 // Download .docx file with correct filename
 export async function downloadDocx(blob: Blob, fileName: string) {
+  // Ensure .docx extension
   const name = fileName.endsWith('.docx') ? fileName : `${fileName}.docx`;
+  // Re-wrap with correct MIME type
   const docxBlob = new Blob([blob], {
     type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
   });
 
-  const url = URL.createObjectURL(docxBlob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = name;
-  a.style.display = 'none';
-  document.body.appendChild(a);
-  a.click();
-  setTimeout(() => {
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }, 500);
+  // Use File API for better filename support (especially Vietnamese chars)
+  try {
+    const file = new File([docxBlob], name, { type: docxBlob.type });
+    const url = URL.createObjectURL(file);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 1000);
+  } catch {
+    // Fallback for older browsers
+    const url = URL.createObjectURL(docxBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = name;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(() => {
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }, 1000);
+  }
 }
 import type { Exam, ExamQuestion, Question, ExamSettings } from "@/types";
 

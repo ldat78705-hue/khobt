@@ -7,7 +7,7 @@ import { Save, ArrowLeft, Plus, X, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { GRADES, TOPICS, DIFFICULTIES, QUESTION_TYPES } from "@/types";
 import type { Grade, Topic, Difficulty, QuestionType, QuestionOption } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import RichEditor from "@/components/shared/RichEditor";
@@ -82,11 +82,12 @@ export default function NewQuestionPage() {
       if (isDemoMode) {
         demoDb.createQuestion(questionData);
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { toast.error("Vui l\u00f2ng \u0111\u0103ng nh\u1eadp l\u1ea1i"); setIsLoading(false); return; }
-        const { error } = await supabase.from("questions").insert({ ...questionData, user_id: user.id });
-        if (error) throw error;
+        const res = await fetch('/api/questions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(questionData),
+        });
+        if (!res.ok) throw new Error('Lỗi');
       }
 
       toast.success("Đã thêm bài tập thành công!");
