@@ -83,7 +83,7 @@ export default function DashboardPage() {
 
   return (
     <>
-      <Header title="Tổng quan" subtitle="Chào mừng bạn đến với KhoDeToán" />
+      <Header title="Tổng quan" subtitle="Chào mừng bạn đến với KhoĐềToán" />
       <div className="p-6 space-y-6">
         {isDemoMode && (
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-3">

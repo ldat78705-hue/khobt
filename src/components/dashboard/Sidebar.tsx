@@ -120,7 +120,7 @@ export function Sidebar() {
             <GraduationCap className="w-5 h-5 text-white" />
           </div>
           {!isCollapsed && (
-            <span className="text-lg font-bold text-slate-800 truncate">KhoDeToán</span>
+            <span className="text-lg font-bold text-slate-800 truncate">KhoĐềToán</span>
           )}
         </Link>
       </div>

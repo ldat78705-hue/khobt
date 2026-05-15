@@ -872,7 +872,7 @@ function getDefaultData(): DemoData {
     ],
     reports: [],
     notifications: [
-      { id: 'notif-1', user_id: 'demo-user-001', type: 'system', title: '🎉 Chào mừng!', message: 'Chào mừng bạn đến với KhoDeToán. Bắt đầu tạo bài tập và đề thi ngay!', is_read: false, created_at: new Date().toISOString() },
+      { id: 'notif-1', user_id: 'demo-user-001', type: 'system', title: '🎉 Chào mừng!', message: 'Chào mừng bạn đến với KhoĐềToán. Bắt đầu tạo bài tập và đề thi ngay!', is_read: false, created_at: new Date().toISOString() },
       { id: 'notif-2', user_id: 'demo-user-001', type: 'system', title: '💡 Mẹo', message: 'Nhấn Ctrl+K để tìm kiếm nhanh bài tập, đề thi và trang quản trị.', is_read: false, created_at: new Date().toISOString() },
       { id: 'notif-3', user_id: 'demo-user-001', type: 'system', title: '📝 2 bài chờ duyệt', message: 'Có 2 bài tập mới cần bạn duyệt.', link: '/admin/review', is_read: false, created_at: new Date().toISOString() },
     ],
@@ -938,7 +938,7 @@ function loadData(): DemoData {
       return merged;
     }
   } catch (err) {
-    console.warn('[KhoDeToán] Corrupted demo data, resetting...', err);
+    console.warn('[KhoĐềToán] Corrupted demo data, resetting...', err);
     try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
   }
   // First load or corrupted data: initialize from defaults

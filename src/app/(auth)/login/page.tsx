@@ -56,7 +56,7 @@ export default function LoginPage() {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-slate-800">KhoDeToán</span>
+            <span className="text-2xl font-bold text-slate-800">KhoĐềToán</span>
           </Link>
           <h1 className="text-3xl font-bold text-slate-800 mb-2">Đăng nhập</h1>
           <p className="text-slate-500 mb-8">Chào mừng trở lại! Đăng nhập để quản lý kho đề.</p>

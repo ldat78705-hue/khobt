@@ -65,7 +65,7 @@ export default function LandingPage() {
               <GraduationCap className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-slate-800">
-              KhoDeToán
+              KhoĐềToán
             </span>
           </div>
           <div className="flex items-center gap-3">
@@ -274,9 +274,9 @@ export default function LandingPage() {
             <div className="w-6 h-6 rounded gradient-primary flex items-center justify-center">
               <GraduationCap className="w-3.5 h-3.5 text-white" />
             </div>
-            <span className="font-medium text-slate-500">KhoDeToán</span>
+            <span className="font-medium text-slate-500">KhoĐềToán</span>
           </div>
-          <p>© 2024 KhoDeToán. Công cụ miễn phí cho giáo viên.</p>
+          <p>© 2024 KhoĐềToán. Công cụ miễn phí cho giáo viên.</p>
         </div>
       </footer>
     </div>

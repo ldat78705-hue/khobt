@@ -1,5 +1,5 @@
 // ==========================================
-// KhoDeToán - Type Definitions
+// KhoĐềToán - Type Definitions
 // ==========================================
 
 // User / Profile types

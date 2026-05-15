@@ -38,7 +38,7 @@ export default function ForgotPasswordPage() {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-slate-800">KhoDeToán</span>
+            <span className="text-2xl font-bold text-slate-800">KhoĐềToán</span>
           </Link>
           {isSent ? (
             <div className="text-center py-6">

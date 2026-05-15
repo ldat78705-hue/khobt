@@ -9,7 +9,7 @@ import { toast } from "sonner";
 
 export default function AdminSettingsPage() {
   const { user } = useAuthStore();
-  const [appName, setAppName] = useState("KhoDeToán");
+  const [appName, setAppName] = useState("KhoĐềToán");
   const [appDesc, setAppDesc] = useState("Quản lý kho đề thi Toán THCS");
   const [exportFont, setExportFont] = useState("Times New Roman");
   const [exportSize, setExportSize] = useState("12pt");

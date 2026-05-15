@@ -3,7 +3,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "KhoDeToán - Quản lý kho đề thi Toán THCS",
+  title: "KhoĐềToán - Quản lý kho đề thi Toán THCS",
   description:
     "Ứng dụng quản lý kho đề thi và bài tập môn Toán dành cho giáo viên THCS. Hỗ trợ công thức toán, xuất Word/PDF, tạo đề nhanh.",
   keywords: [

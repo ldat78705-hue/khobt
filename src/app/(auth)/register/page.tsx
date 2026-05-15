@@ -59,7 +59,7 @@ export default function RegisterPage() {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-2xl font-bold text-slate-800">KhoDeToán</span>
+            <span className="text-2xl font-bold text-slate-800">KhoĐềToán</span>
           </Link>
           <h1 className="text-3xl font-bold text-slate-800 mb-2">Đăng ký</h1>
           <p className="text-slate-500 mb-8">Tạo tài khoản miễn phí để bắt đầu quản lý kho đề.</p>
