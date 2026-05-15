@@ -31,13 +31,24 @@ export default function ReviewQuestionsPage() {
         });
         setQuestions(data);
       } else {
-        const supabase = createClient();
-        let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
-        if (statusFilter) query = query.eq("status", statusFilter);
-        if (gradeFilter) query = query.eq("grade", gradeFilter);
-        const { data, error } = await query.limit(50);
-        if (error) throw error;
-        setQuestions(data || []);
+        const params = new URLSearchParams();
+        if (statusFilter) params.append("status", statusFilter);
+        if (gradeFilter) params.append("grade", gradeFilter.toString());
+        params.append("limit", "50");
+
+        const res = await fetch(`/api/questions?${params.toString()}`);
+        if (res.ok) {
+          const data = await res.json();
+          setQuestions(data || []);
+        } else {
+          const supabase = createClient();
+          let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
+          if (statusFilter) query = query.eq("status", statusFilter);
+          if (gradeFilter) query = query.eq("grade", gradeFilter);
+          const { data, error } = await query.limit(50);
+          if (error) throw error;
+          setQuestions(data || []);
+        }
       }
     } catch {
       toast.error("Không thể tải bài tập");
@@ -59,21 +70,22 @@ export default function ReviewQuestionsPage() {
           review_note: reviewNote || undefined,
         });
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { toast.error("Vui lòng đăng nhập"); return; }
-        const { error } = await supabase.from("questions").update({
-          status: newStatus, reviewed_by: user.id,
-          reviewed_at: new Date().toISOString(), review_note: reviewNote || null,
-        }).eq("id", questionId);
-        if (error) throw error;
+        const res = await fetch('/api/questions', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: questionId, status: newStatus, review_note: reviewNote }),
+        });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || "Không thể cập nhật");
+        }
       }
       toast.success(newStatus === 'approved' ? "Đã duyệt bài tập" : "Đã từ chối bài tập");
       setSelectedQuestion(null);
       setReviewNote("");
       fetchQuestions();
-    } catch {
-      toast.error("Không thể cập nhật");
+    } catch (err: any) {
+      toast.error(err.message || "Không thể cập nhật");
     } finally {
       setIsReviewing(false);
     }
@@ -84,14 +96,17 @@ export default function ReviewQuestionsPage() {
     if (!confirm(`${newStatus === 'approved' ? 'Duyệt' : 'Từ chối'} ${selectedIds.length} bài tập?`)) return;
     setIsReviewing(true);
     try {
-      for (const id of selectedIds) {
-        if (isDemoMode) {
+      if (isDemoMode) {
+        for (const id of selectedIds) {
           demoDb.updateQuestion(id, { status: newStatus, reviewed_by: DEMO_USER.id, reviewed_at: new Date().toISOString() });
-        } else {
-          const supabase = createClient();
-          const { data: { user } } = await supabase.auth.getUser();
-          if (!user) continue;
-          await supabase.from("questions").update({ status: newStatus, reviewed_by: user.id, reviewed_at: new Date().toISOString() }).eq("id", id);
+        }
+      } else {
+        for (const id of selectedIds) {
+          await fetch('/api/questions', {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id, status: newStatus }),
+          });
         }
       }
       toast.success(`Đã ${newStatus === 'approved' ? 'duyệt' : 'từ chối'} ${selectedIds.length} bài tập`);

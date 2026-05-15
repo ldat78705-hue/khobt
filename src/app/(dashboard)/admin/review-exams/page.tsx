@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   CheckCircle, XCircle, Eye, Clock, FileText, BookOpen, MessageSquare, Send, Shield
@@ -18,35 +18,70 @@ export default function ReviewExamsPage() {
   const [reviewNote, setReviewNote] = useState("");
   const [reviewingId, setReviewingId] = useState<string | null>(null);
 
-  useEffect(() => {
+  const fetchPending = useCallback(async () => {
     setIsLoading(true);
-    if (isDemoMode) {
-      setPendingExams(demoDb.getPendingExams());
+    try {
+      if (isDemoMode) {
+        setPendingExams(demoDb.getPendingExams());
+      } else {
+        const res = await fetch('/api/exams?status=pending&tab=shared');
+        if (res.ok) {
+          const data = await res.json();
+          setPendingExams(data || []);
+        }
+      }
+    } catch {
+      toast.error("Không thể tải danh sách đề thi");
+    } finally {
+      setIsLoading(false);
     }
-    setIsLoading(false);
   }, []);
 
-  const handleApprove = (examId: string) => {
-    if (isDemoMode) {
-      demoDb.reviewExam(examId, 'approve', reviewNote || undefined);
+  useEffect(() => { fetchPending(); }, [fetchPending]);
+
+  const handleApprove = async (examId: string) => {
+    try {
+      if (isDemoMode) {
+        demoDb.reviewExam(examId, 'approve', reviewNote || undefined);
+      } else {
+        const res = await fetch('/api/exams', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: examId, status: 'approved', review_note: reviewNote }),
+        });
+        if (!res.ok) throw new Error("Không thể duyệt");
+      }
       setPendingExams(prev => prev.filter(e => e.id !== examId));
       toast.success("Đã duyệt đề thi và xuất bản lên kho chung!");
       setReviewingId(null);
       setReviewNote("");
+    } catch {
+      toast.error("Lỗi khi duyệt đề thi");
     }
   };
 
-  const handleReject = (examId: string) => {
+  const handleReject = async (examId: string) => {
     if (!reviewNote.trim()) {
       toast.error("Vui lòng nhập lý do từ chối");
       return;
     }
-    if (isDemoMode) {
-      demoDb.reviewExam(examId, 'reject', reviewNote);
+    try {
+      if (isDemoMode) {
+        demoDb.reviewExam(examId, 'reject', reviewNote);
+      } else {
+        const res = await fetch('/api/exams', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: examId, status: 'rejected', review_note: reviewNote }),
+        });
+        if (!res.ok) throw new Error("Không thể từ chối");
+      }
       setPendingExams(prev => prev.filter(e => e.id !== examId));
       toast.success("Đã từ chối đề thi");
       setReviewingId(null);
       setReviewNote("");
+    } catch {
+      toast.error("Lỗi khi từ chối đề thi");
     }
   };
 

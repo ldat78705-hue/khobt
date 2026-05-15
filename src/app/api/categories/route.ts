@@ -4,23 +4,12 @@ import * as neonQueries from '@/lib/neon/queries';
 import { getCurrentUser } from '@/lib/neon/auth';
 
 export async function GET(req: NextRequest) {
-  const { searchParams } = new URL(req.url);
   const provider = getDatabaseProvider();
   
-  const filters = {
-    grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
-    topic: searchParams.get('topic') || undefined,
-    difficulty: searchParams.get('difficulty') || undefined,
-    status: searchParams.get('status') || undefined,
-    search: searchParams.get('search') || undefined,
-    limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 50,
-    offset: searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0,
-  };
-
   if (provider === 'neon') {
     try {
-      const questions = await neonQueries.getQuestions(filters);
-      return NextResponse.json(questions);
+      const categories = await neonQueries.getCategories();
+      return NextResponse.json(categories);
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });
     }
@@ -33,15 +22,14 @@ export async function POST(req: NextRequest) {
   const provider = getDatabaseProvider();
   if (provider === 'neon') {
     const user = await getCurrentUser();
-    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!user || user.role !== 'admin') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     
     try {
       const data = await req.json();
-      const question = await neonQueries.createQuestion({
-        ...data,
-        user_id: user.id,
-      });
-      return NextResponse.json(question);
+      const newCategory = await neonQueries.createCategory(data);
+      return NextResponse.json(newCategory);
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });
     }
@@ -53,22 +41,15 @@ export async function PATCH(req: NextRequest) {
   const provider = getDatabaseProvider();
   if (provider === 'neon') {
     const user = await getCurrentUser();
-    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!user || user.role !== 'admin') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     
     try {
       const { id, ...updates } = await req.json();
       if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
       
-      // If updating status, check permissions
-      if (updates.status && updates.status !== 'draft') {
-        if (user.role !== 'admin' && user.role !== 'reviewer') {
-          return NextResponse.json({ error: 'Permission denied' }, { status: 403 });
-        }
-        updates.reviewed_by = user.id;
-        updates.reviewed_at = new Date().toISOString();
-      }
-
-      await neonQueries.updateQuestion(id, updates);
+      await neonQueries.updateCategory(id, updates);
       return NextResponse.json({ success: true });
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });
@@ -85,10 +66,12 @@ export async function DELETE(req: NextRequest) {
   const provider = getDatabaseProvider();
   if (provider === 'neon') {
     const user = await getCurrentUser();
-    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    if (!user || user.role !== 'admin') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
     
     try {
-      await neonQueries.deleteQuestion(id);
+      await neonQueries.deleteCategory(id);
       return NextResponse.json({ success: true });
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });

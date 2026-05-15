@@ -47,19 +47,31 @@ export default function ExamsPage() {
           setExams(demoDb.getPersonalExams(currentUserId, filter));
         }
       } else {
-        const supabase = createClient();
-        let query = supabase.from("exams").select("*, exam_questions(count)").order("created_at", { ascending: false });
-        if (selectedGrade) query = query.eq("grade", selectedGrade);
-        if (searchQuery) query = query.ilike("title", `%${searchQuery}%`);
-        if (activeTab === 'shared') {
-          query = query.eq("exam_status", "shared");
+        const params = new URLSearchParams();
+        if (selectedGrade) params.append("grade", selectedGrade.toString());
+        if (searchQuery) params.append("search", searchQuery);
+        params.append("tab", activeTab);
+
+        const res = await fetch(`/api/exams?${params.toString()}`);
+        if (res.ok) {
+          const data = await res.json();
+          setExams(data || []);
         } else {
-          const { data: { user: authUser } } = await supabase.auth.getUser();
-          if (authUser) query = query.eq("user_id", authUser.id).neq("exam_status", "shared");
+          // Fallback to Supabase client
+          const supabase = createClient();
+          let query = supabase.from("exams").select("*, exam_questions(count)").order("created_at", { ascending: false });
+          if (selectedGrade) query = query.eq("grade", selectedGrade);
+          if (searchQuery) query = query.ilike("title", `%${searchQuery}%`);
+          if (activeTab === 'shared') {
+            query = query.eq("exam_status", "shared");
+          } else {
+            const { data: { user: authUser } } = await supabase.auth.getUser();
+            if (authUser) query = query.eq("user_id", authUser.id).neq("exam_status", "shared");
+          }
+          const { data, error } = await query.limit(50);
+          if (error) throw error;
+          setExams(data || []);
         }
-        const { data, error } = await query.limit(50);
-        if (error) throw error;
-        setExams(data || []);
       }
     } catch {
       toast.error("Không thể tải danh sách đề thi");
@@ -76,14 +88,16 @@ export default function ExamsPage() {
       if (isDemoMode) {
         demoDb.deleteExam(id);
       } else {
-        const supabase = createClient();
-        const { error } = await supabase.from("exams").delete().eq("id", id);
-        if (error) throw error;
+        const res = await fetch(`/api/exams?id=${id}`, { method: 'DELETE' });
+        if (!res.ok) {
+          const data = await res.json();
+          throw new Error(data.error || "Không thể xóa đề thi");
+        }
       }
       setExams((prev) => prev.filter((e) => e.id !== id));
       toast.success("Đã xóa đề thi");
-    } catch {
-      toast.error("Không thể xóa đề thi");
+    } catch (err: any) {
+      toast.error(err.message || "Không thể xóa đề thi");
     }
   };
 

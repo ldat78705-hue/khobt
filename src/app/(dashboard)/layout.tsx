@@ -27,8 +27,8 @@ export default function DashboardLayout({
       fetch('/api/auth/me')
         .then(res => res.json())
         .then(data => {
-          if (data.id) {
-            setUser(data);
+          if (data.user && data.user.id) {
+            setUser(data.user);
           } else {
             // Not logged in
             router.push('/login');

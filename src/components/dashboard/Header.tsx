@@ -104,12 +104,18 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
   }, [searchQuery]);
 
   const handleLogout = async () => {
-    if (!isDemoMode) {
-      const supabase = createClient();
-      await supabase.auth.signOut();
+    try {
+      if (!isDemoMode) {
+        await fetch('/api/auth/logout', { method: 'POST' });
+        const supabase = createClient();
+        await supabase.auth.signOut();
+      }
+      toast.success("Đã đăng xuất");
+      router.push("/login");
+      router.refresh();
+    } catch {
+      toast.error("Lỗi khi đăng xuất");
     }
-    toast.success("Đã đăng xuất");
-    router.push("/login");
   };
 
   const userInitials = user?.full_name

@@ -43,12 +43,21 @@ export default function AdminUsersPage() {
         }
         setUsers(data);
       } else {
-        const supabase = createClient();
-        let query = supabase.from("profiles").select("*").order("created_at", { ascending: false });
-        if (searchQuery) query = query.or(`full_name.ilike.%${searchQuery}%,email.ilike.%${searchQuery}%`);
-        const { data, error } = await query;
-        if (error) throw error;
-        setUsers(data || []);
+        const params = new URLSearchParams();
+        if (searchQuery) params.append("search", searchQuery);
+
+        const res = await fetch(`/api/users?${params.toString()}`);
+        if (res.ok) {
+          const data = await res.json();
+          setUsers(data || []);
+        } else {
+          const supabase = createClient();
+          let query = supabase.from("profiles").select("*").order("created_at", { ascending: false });
+          if (searchQuery) query = query.or(`full_name.ilike.%${searchQuery}%,email.ilike.%${searchQuery}%`);
+          const { data, error } = await query;
+          if (error) throw error;
+          setUsers(data || []);
+        }
       }
     } catch {
       toast.error("Không thể tải danh sách người dùng");
@@ -59,10 +68,24 @@ export default function AdminUsersPage() {
 
   useEffect(() => { fetchUsers(); }, [fetchUsers]);
 
-  const toggleActive = (id: string, currentStatus: boolean) => {
+  const toggleActive = async (id: string, currentStatus: boolean) => {
     if (id === DEMO_USER.id) { toast.error("Không thể khóa tài khoản admin chính"); return; }
-    setUsers(prev => prev.map(u => u.id === id ? { ...u, is_active: !currentStatus } : u));
-    toast.success(currentStatus ? "Đã khóa tài khoản" : "Đã mở khóa tài khoản");
+    try {
+      if (isDemoMode) {
+        setUsers(prev => prev.map(u => u.id === id ? { ...u, is_active: !currentStatus } : u));
+      } else {
+        const res = await fetch('/api/users', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, is_active: !currentStatus }),
+        });
+        if (!res.ok) throw new Error("Không thể cập nhật");
+        fetchUsers();
+      }
+      toast.success(currentStatus ? "Đã khóa tài khoản" : "Đã mở khóa tài khoản");
+    } catch {
+      toast.error("Lỗi khi cập nhật trạng thái");
+    }
   };
 
   const startEditRole = (user: Profile) => {
@@ -70,11 +93,25 @@ export default function AdminUsersPage() {
     setEditRole(user.role);
   };
 
-  const saveRole = (id: string) => {
+  const saveRole = async (id: string) => {
     if (id === DEMO_USER.id && editRole !== 'admin') { toast.error("Không thể hạ quyền admin chính"); return; }
-    setUsers(prev => prev.map(u => u.id === id ? { ...u, role: editRole as Profile['role'] } : u));
-    setEditingId(null);
-    toast.success("Đã cập nhật vai trò");
+    try {
+      if (isDemoMode) {
+        setUsers(prev => prev.map(u => u.id === id ? { ...u, role: editRole as Profile['role'] } : u));
+      } else {
+        const res = await fetch('/api/users', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, role: editRole }),
+        });
+        if (!res.ok) throw new Error("Không thể cập nhật");
+        fetchUsers();
+      }
+      setEditingId(null);
+      toast.success("Đã cập nhật vai trò");
+    } catch {
+      toast.error("Lỗi khi cập nhật vai trò");
+    }
   };
 
   const handleResetPassword = (id: string) => {

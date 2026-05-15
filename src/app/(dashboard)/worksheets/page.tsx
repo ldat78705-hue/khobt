@@ -12,6 +12,7 @@ import type { Grade, Topic, Difficulty, Question } from "@/types";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { toast } from "sonner";
 import { QuestionContent, MathRenderer } from "@/components/shared/MathRenderer";
+import { createClient } from "@/lib/supabase/client";
 import { exportToWord } from "@/lib/export/word";
 
 interface WorksheetConfig {
@@ -48,14 +49,44 @@ export default function WorksheetPage() {
   const [showConfig, setShowConfig] = useState(false);
   const printRef = useRef<HTMLDivElement>(null);
 
-  const fetchQuestions = useCallback(() => {
-    if (isDemoMode) {
-      setQuestions(demoDb.getQuestions({
-        grade: filterGrade || undefined,
-        topic: filterTopic || undefined,
-        difficulty: filterDifficulty || undefined,
-        search: searchQuery || undefined,
-      }).filter(q => q.status === 'approved'));
+  const fetchQuestions = useCallback(async () => {
+    setIsLoading(true);
+    try {
+      if (isDemoMode) {
+        setQuestions(demoDb.getQuestions({
+          grade: filterGrade || undefined,
+          topic: filterTopic || undefined,
+          difficulty: filterDifficulty || undefined,
+          search: searchQuery || undefined,
+        }).filter(q => q.status === 'approved'));
+      } else {
+        const params = new URLSearchParams();
+        if (filterGrade) params.append("grade", filterGrade.toString());
+        if (filterTopic) params.append("topic", filterTopic);
+        if (filterDifficulty) params.append("difficulty", filterDifficulty);
+        if (searchQuery) params.append("search", searchQuery);
+        params.append("status", "approved");
+
+        const res = await fetch(`/api/questions?${params.toString()}`);
+        if (res.ok) {
+          const data = await res.json();
+          setQuestions(data || []);
+        } else {
+          // Fallback
+          const supabase = createClient();
+          let query = supabase.from("questions").select("*").eq("status", "approved").order("created_at", { ascending: false });
+          if (filterGrade) query = query.eq("grade", filterGrade);
+          if (filterTopic) query = query.eq("topic", filterTopic);
+          if (filterDifficulty) query = query.eq("difficulty", filterDifficulty);
+          const { data, error } = await query;
+          if (error) throw error;
+          setQuestions(data || []);
+        }
+      }
+    } catch {
+      toast.error("Không thể tải bài tập");
+    } finally {
+      setIsLoading(false);
     }
   }, [filterGrade, filterTopic, filterDifficulty, searchQuery]);
 

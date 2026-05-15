@@ -109,9 +109,8 @@ export default function QuestionsPage() {
       if (isDemoMode) {
         demoDb.deleteQuestion(id);
       } else {
-        const supabase = createClient();
-        const { error } = await supabase.from("questions").delete().eq("id", id);
-        if (error) throw error;
+        const res = await fetch(`/api/questions?id=${id}`, { method: 'DELETE' });
+        if (!res.ok) throw new Error("Không thể xóa");
       }
       setQuestions((prev) => prev.filter((q) => q.id !== id));
       toast.success("Đã xóa bài tập");
@@ -132,11 +131,13 @@ export default function QuestionsPage() {
         const { id, question_code, created_at, updated_at, ...rest } = q;
         demoDb.createQuestion({ ...rest, content: q.content, status: 'draft' as const });
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return;
         const { id, question_code, created_at, updated_at, user_id, ...rest } = q;
-        await supabase.from("questions").insert({ ...rest, user_id: user.id, status: 'draft' });
+        const res = await fetch('/api/questions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...rest, status: 'draft' }),
+        });
+        if (!res.ok) throw new Error("Không thể nhân bản");
       }
       toast.success("Đã nhân bản bài tập");
       fetchQuestions();

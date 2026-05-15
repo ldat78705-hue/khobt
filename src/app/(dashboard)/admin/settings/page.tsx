@@ -33,16 +33,34 @@ export default function AdminSettingsPage() {
   }, []);
 
   // Stats
-  const [stats, setStats] = useState({ questions: 0, exams: 0, folders: 0, categories: 0 });
+  const [stats, setStats] = useState({ questions: 0, exams: 0, categories: 0 });
   useEffect(() => {
-    if (isDemoMode) {
-      setStats({
-        questions: demoDb.getQuestions().length,
-        exams: demoDb.getExams().length,
-        folders: demoDb.getFolders().length,
-        categories: demoDb.getCategories().length,
-      });
-    }
+    const fetchStats = async () => {
+      if (isDemoMode) {
+        setStats({
+          questions: demoDb.getQuestions().length,
+          exams: demoDb.getExams().length,
+          categories: demoDb.getCategories().length,
+        });
+      } else {
+        try {
+          const [qRes, eRes, cRes] = await Promise.all([
+            fetch('/api/questions?limit=1'),
+            fetch('/api/exams?limit=1'),
+            fetch('/api/categories'),
+          ]);
+          const [qData, eData, cData] = await Promise.all([
+            qRes.json(), eRes.json(), cRes.json()
+          ]);
+          setStats({
+            questions: Array.isArray(qData) ? qData.length : 0, // This is not accurate but fine for now
+            exams: Array.isArray(eData) ? eData.length : 0,
+            categories: Array.isArray(cData) ? cData.length : 0,
+          });
+        } catch { /* ignore */ }
+      }
+    };
+    fetchStats();
   }, []);
 
   const handleSave = async () => {

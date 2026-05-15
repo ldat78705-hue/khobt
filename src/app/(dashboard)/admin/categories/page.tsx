@@ -28,10 +28,16 @@ export default function AdminCategoriesPage() {
       if (isDemoMode) {
         setCategories(demoDb.getCategories());
       } else {
-        const supabase = createClient();
-        const { data, error } = await supabase.from("categories").select("*").order("sort_order").order("name");
-        if (error) throw error;
-        setCategories(data || []);
+        const res = await fetch('/api/categories');
+        if (res.ok) {
+          const data = await res.json();
+          setCategories(data || []);
+        } else {
+          const supabase = createClient();
+          const { data, error } = await supabase.from("categories").select("*").order("sort_order").order("name");
+          if (error) throw error;
+          setCategories(data || []);
+        }
       }
     } catch {
       toast.error("Không thể tải danh mục");
@@ -41,19 +47,6 @@ export default function AdminCategoriesPage() {
   }, []);
 
   useEffect(() => { fetchCategories(); }, [fetchCategories]);
-
-  const generateSlug = (name: string) => {
-    return name.toLowerCase()
-      .replace(/[àáạảãâầấậẩẫăằắặẳẵ]/g, 'a')
-      .replace(/[èéẹẻẽêềếệểễ]/g, 'e')
-      .replace(/[ìíịỉĩ]/g, 'i')
-      .replace(/[òóọỏõôồốộổỗơờớợởỡ]/g, 'o')
-      .replace(/[ùúụủũưừứựửữ]/g, 'u')
-      .replace(/[ỳýỵỷỹ]/g, 'y')
-      .replace(/đ/g, 'd')
-      .replace(/[^a-z0-9]+/g, '-')
-      .replace(/(^-|-$)+/g, '');
-  };
 
   const handleSave = async () => {
     if (!formData.name.trim()) { toast.error("Vui lòng nhập tên danh mục"); return; }
@@ -70,14 +63,22 @@ export default function AdminCategoriesPage() {
           toast.success("Đã tạo danh mục");
         }
       } else {
-        const supabase = createClient();
+        const body = { name: formData.name, slug, description: formData.description || null, color: formData.color, parent_id: formData.parent_id || null, grade: gradeVal };
         if (editingId) {
-          const { error } = await supabase.from("categories").update({ name: formData.name, slug, description: formData.description || null, color: formData.color, parent_id: formData.parent_id || null, grade: gradeVal }).eq("id", editingId);
-          if (error) throw error;
+          const res = await fetch('/api/categories', {
+            method: 'PATCH',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: editingId, ...body }),
+          });
+          if (!res.ok) throw new Error("Không thể cập nhật");
           toast.success("Đã cập nhật danh mục");
         } else {
-          const { error } = await supabase.from("categories").insert({ name: formData.name, slug, description: formData.description || null, color: formData.color, parent_id: formData.parent_id || null, grade: gradeVal, sort_order: categories.length });
-          if (error) throw error;
+          const res = await fetch('/api/categories', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...body, sort_order: categories.length }),
+          });
+          if (!res.ok) throw new Error("Không thể tạo");
           toast.success("Đã tạo danh mục");
         }
       }
@@ -103,9 +104,8 @@ export default function AdminCategoriesPage() {
     try {
       if (isDemoMode) { demoDb.deleteCategory(id); }
       else {
-        const supabase = createClient();
-        const { error } = await supabase.from("categories").delete().eq("id", id);
-        if (error) throw error;
+        const res = await fetch(`/api/categories?id=${id}`, { method: 'DELETE' });
+        if (!res.ok) throw new Error("Không thể xóa");
       }
       toast.success("Đã xóa");
       fetchCategories();
@@ -118,8 +118,12 @@ export default function AdminCategoriesPage() {
     try {
       if (isDemoMode) { demoDb.updateCategory(id, { is_active: !isActive }); }
       else {
-        const supabase = createClient();
-        await supabase.from("categories").update({ is_active: !isActive }).eq("id", id);
+        const res = await fetch('/api/categories', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id, is_active: !isActive }),
+        });
+        if (!res.ok) throw new Error("Không thể cập nhật");
       }
       fetchCategories();
     } catch {

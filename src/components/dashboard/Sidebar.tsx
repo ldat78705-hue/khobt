@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
-  LayoutDashboard, BookOpen, FileText, FolderOpen, Settings,
+  LayoutDashboard, BookOpen, FileText, Settings,
   Users, ChevronLeft, ChevronRight, GraduationCap, Plus,
   LogOut, FolderTree, CheckCircle, Heart, Bookmark, Sparkles,
   BarChart3, Clock, Download, ClipboardList, Wrench
@@ -170,6 +170,17 @@ export function Sidebar() {
 
       {/* Bottom */}
       <div className="p-3 border-t border-slate-100">
+        {!isCollapsed && user && (
+          <div className="flex items-center gap-3 px-3 py-3 mb-2 bg-slate-50 rounded-xl border border-slate-100">
+            <div className="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm font-bold">
+              {user.full_name?.charAt(0).toUpperCase() || "G"}
+            </div>
+            <div className="flex-1 min-w-0">
+              <p className="text-xs font-bold text-slate-800 truncate">{user.full_name}</p>
+              <p className="text-[10px] text-slate-500 truncate">{user.email}</p>
+            </div>
+          </div>
+        )}
         <button
           onClick={handleLogout}
           className={cn(
