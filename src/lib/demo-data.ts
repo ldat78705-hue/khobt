@@ -861,7 +861,7 @@ function getDefaultData(): DemoData {
     exams: SAMPLE_EXAMS,
     examQuestions: SAMPLE_EXAM_QUESTIONS,
     folders: SAMPLE_FOLDERS,
-    categories: SAMPLE_CATEGORIES,
+    categories: CATEGORIES,
     favorites: [
       { id: 'fav1', user_id: 'demo-user-001', question_id: 'q1', created_at: '2024-10-20T00:00:00Z' },
       { id: 'fav2', user_id: 'demo-user-001', question_id: 'q3', created_at: '2024-10-20T00:00:00Z' },
