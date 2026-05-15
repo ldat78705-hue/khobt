@@ -5,7 +5,6 @@ import { Upload, FileText, Loader2, X, Check, AlertCircle } from "lucide-react";
 import { MathRenderer } from "@/components/shared/MathRenderer";
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
-import { createClient } from "@/lib/supabase/client";
 import type { Grade, Topic, Difficulty } from "@/types";
 
 interface ImportQuestion {
@@ -120,17 +119,29 @@ export function ImportDialog({ isOpen, onClose, onImported, defaultGrade = 9, de
           });
         }
       } else {
-        const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { toast.error("Vui lòng đăng nhập"); setIsImporting(false); return; }
-        
-        const rows = toImport.map(q => ({
-          content: q.content, answer: q.answer || null, solution: q.solution || null,
-          grade: defaultGrade, topic: defaultTopic, difficulty: defaultDifficulty,
-          question_type: 'tu_luan', user_id: user.id, is_public: false, status: 'pending',
-        }));
-        const { error } = await supabase.from("questions").insert(rows);
-        if (error) throw error;
+        // Production mode: use API
+        let imported = 0;
+        for (const q of toImport) {
+          const res = await fetch('/api/questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              content: q.content,
+              answer: q.answer || null,
+              solution: q.solution || null,
+              grade: defaultGrade,
+              topic: defaultTopic,
+              difficulty: defaultDifficulty,
+              question_type: 'tu_luan',
+              is_public: false,
+              status: 'pending',
+            }),
+          });
+          if (res.ok) imported++;
+        }
+        if (imported < toImport.length) {
+          toast.warning(`Đã nhập ${imported}/${toImport.length} bài (một số bị lỗi)`);
+        }
       }
 
       toast.success(`Đã nhập ${toImport.length} bài tập!`);

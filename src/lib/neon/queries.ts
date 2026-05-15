@@ -145,10 +145,18 @@ export async function updateQuestion(id: string, data: Partial<Question>) {
       topic = COALESCE(${data.topic ?? null}, topic),
       difficulty = COALESCE(${data.difficulty ?? null}, difficulty),
       question_type = COALESCE(${data.question_type ?? null}, question_type),
+      options = COALESCE(${data.options ? JSON.stringify(data.options) : null}::jsonb, options),
+      correct_answer = COALESCE(${data.correct_answer ?? null}, correct_answer),
       tags = COALESCE(${data.tags ?? null}, tags),
+      images = COALESCE(${data.images ?? null}, images),
       is_public = COALESCE(${data.is_public ?? null}, is_public),
       status = COALESCE(${data.status ?? null}, status),
-      category_id = ${data.category_id ?? null}
+      question_code = COALESCE(${data.question_code ?? null}, question_code),
+      category_id = COALESCE(${data.category_id ?? null}, category_id),
+      reviewed_by = COALESCE(${(data as any).reviewed_by ?? null}, reviewed_by),
+      reviewed_at = COALESCE(${(data as any).reviewed_at ?? null}::timestamptz, reviewed_at),
+      review_note = COALESCE(${(data as any).review_note ?? null}, review_note),
+      updated_at = NOW()
     WHERE id = ${id}
     RETURNING *
   `;

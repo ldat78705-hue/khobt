@@ -155,6 +155,12 @@ export async function DELETE(req: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     
     try {
+      // Check ownership: only owner or admin can delete
+      const question = await neonQueries.getQuestionById(id);
+      if (!question) return NextResponse.json({ error: 'Không tìm thấy bài tập' }, { status: 404 });
+      if (question.user_id !== user.id && user.role !== 'admin') {
+        return NextResponse.json({ error: 'Không có quyền xóa bài tập này' }, { status: 403 });
+      }
       await neonQueries.deleteQuestion(id);
       return NextResponse.json({ success: true });
     } catch (err: any) {

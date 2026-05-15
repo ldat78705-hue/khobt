@@ -80,6 +80,12 @@ export async function DELETE(req: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     
     try {
+      // Check ownership: only owner or admin can delete
+      const exam = await neonQueries.getExamById(id);
+      if (!exam) return NextResponse.json({ error: 'Exam not found' }, { status: 404 });
+      if (exam.user_id !== user.id && user.role !== 'admin') {
+        return NextResponse.json({ error: 'Không có quyền xóa đề thi này' }, { status: 403 });
+      }
       await neonQueries.deleteExam(id);
       return NextResponse.json({ success: true });
     } catch (err: any) {
