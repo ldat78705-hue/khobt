@@ -262,6 +262,35 @@ export async function resetPassword(token: string, newPassword: string): Promise
   return true;
 }
 
+/** Change password for current user (requires old password verification) */
+export async function changePassword(userId: string, currentPassword: string, newPassword: string): Promise<{ success: boolean; error?: string }> {
+  const sql = getDb();
+  
+  // Get current password hash
+  const result = await sql`
+    SELECT password_hash FROM public.users WHERE id = ${userId}
+  `;
+  
+  if (result.length === 0) {
+    return { success: false, error: 'Không tìm thấy tài khoản' };
+  }
+  
+  // Verify current password
+  const valid = await verifyPassword(currentPassword, result[0].password_hash as string);
+  if (!valid) {
+    return { success: false, error: 'Mật khẩu hiện tại không đúng' };
+  }
+  
+  // Hash and update new password
+  const passwordHash = await hashPassword(newPassword);
+  await sql`
+    UPDATE public.users SET password_hash = ${passwordHash}, updated_at = NOW()
+    WHERE id = ${userId}
+  `;
+  
+  return { success: true };
+}
+
 /** Admin: directly reset a user's password */
 export async function adminResetPassword(userId: string, newPassword: string): Promise<boolean> {
   const sql = getDb();

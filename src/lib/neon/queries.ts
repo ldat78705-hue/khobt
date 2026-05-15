@@ -336,7 +336,7 @@ export async function getPersonalExams(userId: string, filters?: {
   limit?: number;
 }) {
   const sql = getRawDb();
-  const { grade, status, search, limit = 50 } = filters || {};
+  const { grade, status, search, limit = 200 } = filters || {};
   const result = await sql`
     SELECT e.*, u.full_name as author_name,
       (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count

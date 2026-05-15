@@ -7,6 +7,65 @@ import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { useAuthStore } from "@/stores/auth-store";
 import { toast } from "sonner";
 
+import { Loader2 as Loader2Icon } from "lucide-react";
+
+function ChangePasswordForm() {
+  const [currentPwd, setCurrentPwd] = useState("");
+  const [newPwd, setNewPwd] = useState("");
+  const [confirmPwd, setConfirmPwd] = useState("");
+  const [isChanging, setIsChanging] = useState(false);
+
+  const handleChangePassword = async () => {
+    if (!currentPwd) { toast.error("Vui lòng nhập mật khẩu hiện tại"); return; }
+    if (!newPwd || newPwd.length < 6) { toast.error("Mật khẩu mới phải có ít nhất 6 ký tự"); return; }
+    if (newPwd !== confirmPwd) { toast.error("Mật khẩu xác nhận không khớp"); return; }
+
+    setIsChanging(true);
+    try {
+      const res = await fetch('/api/auth/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ current_password: currentPwd, new_password: newPwd }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        toast.success("Đã đổi mật khẩu thành công!");
+        setCurrentPwd(""); setNewPwd(""); setConfirmPwd("");
+      } else {
+        toast.error(data.error || "Không thể đổi mật khẩu");
+      }
+    } catch {
+      toast.error("Lỗi kết nối server");
+    }
+    setIsChanging(false);
+  };
+
+  return (
+    <div className="space-y-4 max-w-md">
+      <div>
+        <label className="block text-sm font-medium text-slate-600 mb-1.5">Mật khẩu hiện tại</label>
+        <input type="password" value={currentPwd} onChange={e => setCurrentPwd(e.target.value)} placeholder="••••••••" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-slate-600 mb-1.5">Mật khẩu mới</label>
+        <input type="password" value={newPwd} onChange={e => setNewPwd(e.target.value)} placeholder="Ít nhất 6 ký tự" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-slate-600 mb-1.5">Xác nhận mật khẩu mới</label>
+        <input type="password" value={confirmPwd} onChange={e => setConfirmPwd(e.target.value)} placeholder="Nhập lại mật khẩu mới" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
+      </div>
+      <button
+        onClick={handleChangePassword}
+        disabled={isChanging}
+        className="px-5 py-2.5 text-sm font-medium text-white bg-red-500 rounded-xl hover:bg-red-600 transition-colors disabled:opacity-50 flex items-center gap-2"
+      >
+        {isChanging && <Loader2Icon className="w-4 h-4 animate-spin" />}
+        {isChanging ? "Đang xử lý..." : "Cập nhật mật khẩu"}
+      </button>
+    </div>
+  );
+}
+
 export default function AdminSettingsPage() {
   const { user } = useAuthStore();
   const [appName, setAppName] = useState("KhoĐềToán");
@@ -45,15 +104,15 @@ export default function AdminSettingsPage() {
       } else {
         try {
           const [qRes, eRes, cRes] = await Promise.all([
-            fetch('/api/questions?limit=1'),
-            fetch('/api/exams?limit=1'),
+            fetch('/api/questions?count_only=true'),
+            fetch('/api/exams?limit=500'),
             fetch('/api/categories'),
           ]);
           const [qData, eData, cData] = await Promise.all([
             qRes.json(), eRes.json(), cRes.json()
           ]);
           setStats({
-            questions: Array.isArray(qData) ? qData.length : 0, // This is not accurate but fine for now
+            questions: qData.count || 0,
             exams: Array.isArray(eData) ? eData.length : 0,
             categories: Array.isArray(cData) ? cData.length : 0,
           });
@@ -451,26 +510,7 @@ export default function AdminSettingsPage() {
               <p className="text-sm text-slate-500">Cập nhật mật khẩu đăng nhập</p>
             </div>
           </div>
-          <div className="space-y-4 max-w-md">
-            <div>
-              <label className="block text-sm font-medium text-slate-600 mb-1.5">Mật khẩu hiện tại</label>
-              <input type="password" placeholder="••••••••" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-600 mb-1.5">Mật khẩu mới</label>
-              <input type="password" placeholder="••••••••" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-slate-600 mb-1.5">Xác nhận mật khẩu mới</label>
-              <input type="password" placeholder="••••••••" className="w-full px-4 py-3 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
-            </div>
-            <button
-              onClick={() => { toast.success("Đã cập nhật mật khẩu (demo)"); }}
-              className="px-5 py-2.5 text-sm font-medium text-white bg-red-500 rounded-xl hover:bg-red-600 transition-colors"
-            >
-              Cập nhật mật khẩu
-            </button>
-          </div>
+          <ChangePasswordForm />
         </div>
 
         {/* Permission info */}
