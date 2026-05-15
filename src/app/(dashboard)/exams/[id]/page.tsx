@@ -11,7 +11,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { formatDate, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel, getDifficultyColor } from "@/lib/utils";
 import type { Exam, ExamQuestion, Question } from "@/types";
-import { createClient } from "@/lib/supabase/client";
+
 import { toast } from "sonner";
 import { exportToWord } from "@/lib/export/word";
 import { copyToClipboard } from "@/lib/export/clipboard";
@@ -40,15 +40,30 @@ export default function ExamDetailPage() {
         setExamQuestions(demoDb.getExamQuestions(examId));
         setIsSaved(demoDb.isExamSaved(DEMO_USER.id, examId));
       } else {
-        const supabase = createClient();
-        const { data: examData, error: examError } = await supabase
-          .from("exams").select("*").eq("id", examId).single();
-        if (examError) throw examError;
-        setExam(examData);
-        const { data: eqData, error: eqError } = await supabase
-          .from("exam_questions").select("*, question:questions(*)").eq("exam_id", examId).order("sort_order");
-        if (eqError) throw eqError;
-        setExamQuestions(eqData || []);
+        const res = await fetch(`/api/exams?id=${examId}`);
+        if (res.status === 404) { setExam(null); return; }
+        if (!res.ok) throw new Error('Lỗi');
+        const data = await res.json();
+        setExam(data.exam);
+        // API returns flat objects, wrap question data
+        const eqs = (data.questions || []).map((eq: any) => ({
+          ...eq,
+          question: {
+            id: eq.question_id,
+            content: eq.content,
+            answer: eq.answer,
+            solution: eq.solution,
+            grade: eq.grade,
+            topic: eq.topic,
+            difficulty: eq.difficulty,
+            question_type: eq.question_type,
+            options: eq.options,
+            correct_answer: eq.correct_answer,
+            images: eq.images,
+            tags: eq.tags,
+          }
+        }));
+        setExamQuestions(eqs);
       }
     } catch {
       toast.error("Không thể tải đề thi");

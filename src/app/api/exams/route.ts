@@ -7,6 +7,19 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const provider = getDatabaseProvider();
   
+  // Single exam by ID (with questions)
+  const id = searchParams.get('id');
+  if (id && provider === 'neon') {
+    try {
+      const exam = await neonQueries.getExamById(id);
+      if (!exam) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+      const questions = await neonQueries.getExamQuestions(id);
+      return NextResponse.json({ exam, questions });
+    } catch (err: any) {
+      return NextResponse.json({ error: err.message }, { status: 500 });
+    }
+  }
+  
   const filters = {
     grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
     status: (searchParams.get('status') as any) || undefined,
