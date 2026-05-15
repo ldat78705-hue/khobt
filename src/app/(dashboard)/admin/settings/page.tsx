@@ -62,6 +62,10 @@ export default function AdminSettingsPage() {
   const cloudinaryName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "Chưa cấu hình";
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
   const isSupabaseOk = supabaseUrl.length > 10 && supabaseUrl.startsWith("http");
+  
+  // Neon check (can only be true if isDemoMode is false on client)
+  const isNeonOk = !isDemoMode && !isSupabaseOk;
+  const isDbOk = !isDemoMode;
 
   return (
     <>
@@ -79,13 +83,13 @@ export default function AdminSettingsPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className={`p-4 rounded-xl border ${isSupabaseOk ? "bg-green-50 border-green-200" : "bg-amber-50 border-amber-200"}`}>
+            <div className={`p-4 rounded-xl border ${isDbOk ? "bg-green-50 border-green-200" : "bg-amber-50 border-amber-200"}`}>
               <div className="flex items-center gap-2 mb-2">
-                <Database className={`w-4 h-4 ${isSupabaseOk ? "text-green-600" : "text-amber-600"}`} />
-                <span className="text-sm font-semibold text-slate-700">Supabase</span>
+                <Database className={`w-4 h-4 ${isDbOk ? "text-green-600" : "text-amber-600"}`} />
+                <span className="text-sm font-semibold text-slate-700">{isSupabaseOk ? "Supabase" : isNeonOk ? "Neon Postgres" : "Cơ sở dữ liệu"}</span>
               </div>
               <div className="flex items-center gap-1.5">
-                {isSupabaseOk ? (
+                {isDbOk ? (
                   <><Check className="w-3.5 h-3.5 text-green-600" /><span className="text-xs text-green-700">Đã kết nối</span></>
                 ) : (
                   <><AlertTriangle className="w-3.5 h-3.5 text-amber-600" /><span className="text-xs text-amber-700">Chế độ Demo</span></>
@@ -206,7 +210,7 @@ export default function AdminSettingsPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             <div className="p-3 rounded-xl bg-slate-50">
               <div className="text-xs text-slate-400 font-medium">Database</div>
-              <div className="text-sm font-semibold text-slate-700 mt-1">{isDemoMode ? "localStorage" : "Supabase"}</div>
+              <div className="text-sm font-semibold text-slate-700 mt-1">{isDemoMode ? "localStorage" : isSupabaseOk ? "Supabase" : "Neon Postgres"}</div>
             </div>
             <div className="p-3 rounded-xl bg-slate-50">
               <div className="text-xs text-slate-400 font-medium">Storage</div>

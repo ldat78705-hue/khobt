@@ -50,16 +50,31 @@ export default function QuestionsPage() {
         if (filterHasImages) data = data.filter(q => q.images && q.images.length > 0);
         setQuestions(data);
       } else {
-        const supabase = createClient();
-        let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
-        if (selectedGrade) query = query.eq("grade", selectedGrade);
-        if (selectedTopic) query = query.eq("topic", selectedTopic);
-        if (selectedDifficulty) query = query.eq("difficulty", selectedDifficulty);
-        if (selectedType) query = query.eq("question_type", selectedType);
-        if (searchQuery) query = query.ilike("content", `%${searchQuery}%`);
-        const { data, error } = await query.limit(50);
-        if (error) throw error;
-        setQuestions(data || []);
+        // Try Neon API first
+        const params = new URLSearchParams();
+        if (selectedGrade) params.append("grade", selectedGrade.toString());
+        if (selectedTopic) params.append("topic", selectedTopic);
+        if (selectedDifficulty) params.append("difficulty", selectedDifficulty);
+        if (selectedType) params.append("question_type", selectedType);
+        if (searchQuery) params.append("search", searchQuery);
+        
+        const res = await fetch(`/api/questions?${params.toString()}`);
+        if (res.ok) {
+          const data = await res.json();
+          setQuestions(data || []);
+        } else {
+          // Fallback to Supabase client if API fails
+          const supabase = createClient();
+          let query = supabase.from("questions").select("*").order("created_at", { ascending: false });
+          if (selectedGrade) query = query.eq("grade", selectedGrade);
+          if (selectedTopic) query = query.eq("topic", selectedTopic);
+          if (selectedDifficulty) query = query.eq("difficulty", selectedDifficulty);
+          if (selectedType) query = query.eq("question_type", selectedType);
+          if (searchQuery) query = query.ilike("content", `%${searchQuery}%`);
+          const { data, error } = await query.limit(50);
+          if (error) throw error;
+          setQuestions(data || []);
+        }
       }
     } catch {
       toast.error("Không thể tải bài tập");

@@ -10,10 +10,13 @@ import type { Question, Profile, Exam, ExamQuestion, Folder, Category, FavoriteQ
 const STORAGE_KEY = 'khodetoan_demo';
 
 function isDatabaseConfigured(): boolean {
-  // Check Neon
+  // Check public flag first (for client-side)
+  if (process.env.NEXT_PUBLIC_DATABASE_CONFIGURED === 'true') return true;
+  
+  // Check Neon (Server-side)
   const dbUrl = process.env.DATABASE_URL || '';
   if (dbUrl.includes('neon.tech') || dbUrl.includes('neon.')) return true;
-  // Check Supabase
+  // Check Supabase (Client & Server)
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
   if (supabaseUrl.length > 10 && supabaseUrl.startsWith('http')) return true;
   return false;
@@ -34,7 +37,7 @@ export const DEMO_USER: Profile = {
 };
 
 // Sample questions with LaTeX
-const SAMPLE_QUESTIONS: Question[] = [
+export const SAMPLE_QUESTIONS: Question[] = [
   {
     id: 'q1', question_code: 'BT001', content: 'Rút gọn biểu thức $P = \\frac{\\sqrt{x}+1}{\\sqrt{x}-2} + \\frac{2\\sqrt{x}}{\\sqrt{x}+2} + \\frac{2+5\\sqrt{x}}{4-x}$ với $x \\geq 0, x \\neq 4$.\n\na) Rút gọn $P$.\nb) Tính giá trị của $P$ khi $x = 9$.\nc) Tìm $x$ để $P = 2$.',
     answer: '$P = \\frac{3\\sqrt{x}}{\\sqrt{x}+2}$', solution: 'a) $P = \\frac{(\\sqrt{x}+1)(\\sqrt{x}+2) + 2\\sqrt{x}(\\sqrt{x}-2) - (2+5\\sqrt{x})}{(\\sqrt{x}-2)(\\sqrt{x}+2)}$\n\n$= \\frac{x+3\\sqrt{x}+2+2x-4\\sqrt{x}-2-5\\sqrt{x}}{x-4}$\n\n$= \\frac{3x-6\\sqrt{x}}{x-4} = \\frac{3\\sqrt{x}(\\sqrt{x}-2)}{(\\sqrt{x}-2)(\\sqrt{x}+2)} = \\frac{3\\sqrt{x}}{\\sqrt{x}+2}$',
@@ -152,8 +155,8 @@ const SAMPLE_QUESTIONS: Question[] = [
   // --- Toán 6: Phân số ---
   {
     id: 'q6-07', question_code: 'BT025', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n\na) $\\frac{5}{7} + \\frac{-3}{11} + \\frac{2}{7} + \\frac{3}{11}$\nb) $\\frac{3}{5} \\cdot \\frac{7}{9} + \\frac{3}{5} \\cdot \\frac{2}{9}$',
-    answer: 'a) $1$\nb) $\\frac{1}{3}$',
-    solution: 'a) $= \\left(\\frac{5}{7} + \\frac{2}{7}\\right) + \\left(\\frac{-3}{11} + \\frac{3}{11}\\right) = 1 + 0 = 1$\nb) $= \\frac{3}{5} \\cdot \\left(\\frac{7}{9} + \\frac{2}{9}\\right) = \\frac{3}{5} \\cdot 1 = \\frac{3}{5}$\n\n(Sửa: $\\frac{3}{5} \\cdot \\frac{9}{9} = \\frac{3}{5} \\cdot 1 = \\frac{3}{5}$. Tính lại: $\\frac{3}{5} \\cdot \\frac{7+2}{9} = \\frac{3}{5} \\cdot 1 = \\frac{3}{5}$)\n\nĐáp án đúng: b) $\\frac{3}{5}$',
+    answer: 'a) $1$\nb) $\\frac{3}{5}$',
+    solution: 'a) $= \\left(\\frac{5}{7} + \\frac{2}{7}\\right) + \\left(\\frac{-3}{11} + \\frac{3}{11}\\right) = 1 + 0 = 1$\nb) $= \\frac{3}{5} \\cdot \\left(\\frac{7}{9} + \\frac{2}{9}\\right) = \\frac{3}{5} \\cdot \\frac{9}{9} = \\frac{3}{5} \\cdot 1 = \\frac{3}{5}$',
     grade: 6, topic: 'phan_so', difficulty: 'van_dung', question_type: 'tu_luan',
     tags: ['phân số', 'tính hợp lý'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-2',
     created_at: '2024-11-07T08:00:00Z', updated_at: '2024-11-07T08:00:00Z',
@@ -235,8 +238,8 @@ const SAMPLE_QUESTIONS: Question[] = [
   // --- Toán 6: Bài nâng cao ---
   {
     id: 'q6-17', question_code: 'BT035', content: 'Ba bạn An, Bình, Chi đi mua vở. An mua được số vở bằng $\\frac{1}{3}$ tổng số vở của ba bạn. Bình mua được nhiều hơn An $4$ quyển. Chi mua được $12$ quyển. Hỏi mỗi bạn mua được bao nhiêu quyển vở?',
-    answer: 'An: $8$ quyển, Bình: $12$ quyển, Chi: $12$ quyển.',
-    solution: 'Gọi tổng số vở là $S$.\nAn = $\\frac{S}{3}$, Bình = $\\frac{S}{3} + 4$, Chi = 12.\n$\\frac{S}{3} + \\frac{S}{3} + 4 + 12 = S$\n$\\frac{2S}{3} + 16 = S \\Rightarrow S - \\frac{2S}{3} = 16 \\Rightarrow \\frac{S}{3} = 16$... \n\nSửa lại: $\\frac{S}{3} = 8 \\Rightarrow S = 24$. An = 8, Bình = 12, Chi = ... Kiểm tra: cần $S = 8 + 12 + \\text{Chi}$. Nếu Chi = 12 thì $S = 32$, nhưng $S/3 \\approx 10,67$. \n\nĐặt lại: $\\frac{S}{3} + (\\frac{S}{3}+4) + 12 = S \\Rightarrow \\frac{2S}{3}+16 = S \\Rightarrow 16 = \\frac{S}{3} \\Rightarrow S = 48$.\nAn = 16, Bình = 20, Chi = 12.',
+    answer: 'An: $16$ quyển, Bình: $20$ quyển, Chi: $12$ quyển.',
+    solution: 'Gọi tổng số vở của ba bạn là $S$.\nSố vở An mua là: $\\frac{S}{3}$\nSố vở Bình mua là: $\\frac{S}{3} + 4$\nSố vở Chi mua là: $12$\nTa có phương trình: $\\frac{S}{3} + \\left(\\frac{S}{3} + 4\\right) + 12 = S$\n$\\Rightarrow \\frac{2S}{3} + 16 = S$\n$\\Rightarrow S - \\frac{2S}{3} = 16$\n$\\Rightarrow \\frac{S}{3} = 16 \\Rightarrow S = 48$\nVậy An mua được: $48 : 3 = 16$ (quyển).\nBình mua được: $16 + 4 = 20$ (quyển).\nChi mua được $12$ (quyển).',
     grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
     tags: ['giải toán bằng phân số', 'toán có lời văn'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-2',
     created_at: '2024-11-17T08:00:00Z', updated_at: '2024-11-17T08:00:00Z',
@@ -798,7 +801,7 @@ const SAMPLE_FOLDERS: Folder[] = [
   { id: 'f3', name: 'Đề thi vào 10', parent_id: null, user_id: 'demo-user-001', color: '#EF4444', icon: 'folder', sort_order: 3, created_at: '2024-10-01T00:00:00Z', updated_at: '2024-10-01T00:00:00Z' },
 ];
 
-const SAMPLE_CATEGORIES: Category[] = [
+export const CATEGORIES: Category[] = [
   // === Lớp 9 (parent + children) ===
   { id: 'cat-9', name: 'Toán lớp 9', slug: 'toan-9', description: 'Chuyên đề toán lớp 9', parent_id: null, grade: 9, icon: 'folder', color: '#3B82F6', sort_order: 1, is_active: true, created_at: '2024-01-01T00:00:00Z', updated_at: '2024-01-01T00:00:00Z' },
   { id: 'cat-9-1', name: 'Căn thức', slug: 'can-thuc-9', description: 'Căn bậc hai, rút gọn biểu thức', parent_id: 'cat-9', grade: 9, icon: 'folder', color: '#8B5CF6', sort_order: 1, is_active: true, created_at: '2024-01-01T00:00:00Z', updated_at: '2024-01-01T00:00:00Z' },
