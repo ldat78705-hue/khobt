@@ -307,47 +307,109 @@ math-field:focus-within {
 
 /* ========== PRINT STYLES ========== */
 @media print {
-  /* Page setup */
   @page {
     size: A4;
-    margin: 0;
+    margin: 10mm 15mm;
   }
 
-  /* Hide everything by default */
   body {
     background: white !important;
     margin: 0 !important;
     padding: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
-  /* Hide UI elements */
-  .no-print,
+  /* Hide ALL UI chrome */
   aside,
   header,
-  nav,
-  .fixed,
-  .sidebar,
-  .gradient-primary,
-  button,
-  select,
-  input[type="checkbox"] {
-    display: none !important;
-  }
-
-  /* Hide sidebar and header in layout */
-  body > div > div > aside,
-  body > div > div > main > header {
+  nav {
     display: none !important;
   }
 
   /* Reset main layout */
-  body > div > div > main {
-    margin: 0 !important;
+  main {
+    margin-left: 0 !important;
     padding: 0 !important;
     width: 100% !important;
   }
 
-  /* The worksheet paper — this is what prints */
+  main > div {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  /* Make .no-print overlay transparent + static (not hidden!)
+     so .print-preview inside can show through */
+  .no-print {
+    background: transparent !important;
+    position: static !important;
+    overflow: visible !important;
+    z-index: auto !important;
+    inset: auto !important;
+  }
+
+  /* Hide toolbar inside modal */
+  .no-print .sticky {
+    display: none !important;
+  }
+
+  /* Reset modal wrapper padding */
+  .no-print > div {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+  }
+
+  .no-print > div > div {
+    max-width: none !important;
+  }
+
+  /* ============================================
+     KEY RULE: Hide everything inside main > div 
+     EXCEPT elements that contain .print-preview
+     ============================================ */
+
+  /* Hide all direct children of main content area */
+  main > div > * {
+    display: none !important;
+  }
+
+  /* But show the .no-print modal container (it wraps .print-preview) */
+  main > div > .no-print,
+  main > div > .fixed {
+    display: block !important;
+  }
+
+  /* Hide non-preview content inside modal */
+  .no-print > div > div > .sticky,
+  .no-print > div > div > div:not(.print-preview):not(:has(.print-preview)) {
+    display: none !important;
+  }
+
+  /* Show .print-preview screen preview siblings that aren't the toolbar */
+  .no-print > div > div > .bg-white:not(.print-preview) {
+    display: none !important;
+  }
+
+  /* === PRINT-PREVIEW: the actual printed content === */
+  .print-preview {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: none !important;
+    background: white !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 5mm 10mm !important;
+    margin: 0 !important;
+    font-family: 'Times New Roman', serif !important;
+    font-size: 13pt !important;
+    line-height: 1.5 !important;
+    color: #000 !important;
+  }
+
+  /* Worksheet paper (worksheets page) */
   .worksheet-paper {
     display: block !important;
     position: relative !important;
@@ -358,41 +420,39 @@ math-field:focus-within {
     box-shadow: none !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 15mm 20mm !important;
+    padding: 5mm 10mm !important;
     margin: 0 !important;
     font-family: 'Times New Roman', serif !important;
     color: #000 !important;
-    page-break-after: auto;
   }
 
-  /* Print preview paper (exam page) */
-  .print-preview {
-    position: static !important;
-    width: 100% !important;
-    max-width: none !important;
-    background: white !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    padding: 15mm 20mm !important;
-    margin: 0 !important;
-    font-family: 'Times New Roman', serif !important;
-    font-size: 13pt !important;
-    line-height: 1.5 !important;
-    color: #000 !important;
+  /* Also show worksheet-paper parent */
+  main > div > div:has(.worksheet-paper) {
+    display: block !important;
   }
 
-  /* KaTeX in print */
+  /* Hide buttons inside print areas */
+  .print-preview button,
+  .worksheet-paper button {
+    display: none !important;
+  }
+
+  /* Hide inputs/selects/checkboxes everywhere */
+  button, select, input[type="text"], input[type="checkbox"] {
+    display: none !important;
+  }
+
+  /* === MATH & TABLE RENDERING === */
+
   .katex {
     font-size: 1em !important;
   }
 
-  /* Ensure math renders */
   .math-content,
   .question-content {
     color: #000 !important;
   }
 
-  /* Tables in print */
   .md-table {
     border: 1px solid #000 !important;
   }
@@ -410,13 +470,14 @@ math-field:focus-within {
     outline: none !important;
   }
 
-  /* Answer box in print */
-  div[style*="background: #f0f7ff"] {
+  /* Answer highlight in print */
+  div[style*="background: #f0f7ff"],
+  div[style*="background: rgb(240, 247, 255)"] {
     background: #f5f5f5 !important;
     border-left: 2px solid #000 !important;
   }
 
-  /* Page breaks */
+  /* Page break control */
   .page-break-avoid {
     page-break-inside: avoid;
   }

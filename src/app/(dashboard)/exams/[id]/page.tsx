@@ -83,13 +83,17 @@ export default function ExamDetailPage() {
   };
 
   const handlePrint = () => {
+    // Temporarily clear title to suppress browser header/footer (URL, date)
+    const origTitle = document.title;
+    document.title = ' ';
     window.print();
+    setTimeout(() => { document.title = origTitle; }, 1000);
   };
 
   const handleExportPDF = () => {
     toast.info("Đang mở hộp thoại xuất PDF...");
     setShowPrintPreview(true);
-    setTimeout(() => { window.print(); }, 500);
+    setTimeout(() => { handlePrint(); }, 500);
   };
 
   /** Export exam questions only (no answers) as separate Word file */
@@ -380,7 +384,7 @@ export default function ExamDetailPage() {
                 </div>
 
                 {/* Paper - Đề bài */}
-                <div className="bg-white shadow-2xl rounded-lg print-preview" style={{ padding: '20mm', minHeight: '297mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000' }}>
+                <div className="bg-white shadow-2xl rounded-lg print-preview" contentEditable suppressContentEditableWarning style={{ padding: '20mm', minHeight: '297mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000' }}>
                   <div style={{ textAlign: 'center', marginBottom: '16px' }}>
                     <p style={{ fontSize: '13px', fontWeight: 'bold', textTransform: 'uppercase', margin: 0 }}>
                       {exam.settings?.schoolName || exam.settings?.school_name || 'TRƯỜNG THCS ...'}
@@ -491,7 +495,7 @@ export default function ExamDetailPage() {
 
                 {/* Answer Key Page */}
                 {showAnswers && (
-                  <div className="bg-white shadow-2xl rounded-lg mt-6 print-preview" style={{ padding: '20mm', minHeight: '200mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000', pageBreakBefore: 'always' }}>
+                  <div className="bg-white shadow-2xl rounded-lg mt-6 print-preview" contentEditable suppressContentEditableWarning style={{ padding: '20mm', minHeight: '200mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000', pageBreakBefore: 'always' }}>
                     <div style={{ textAlign: 'center', marginBottom: '20px' }}>
                       <p style={{ fontSize: '16px', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         ĐÁP ÁN VÀ BIỂU ĐIỂM

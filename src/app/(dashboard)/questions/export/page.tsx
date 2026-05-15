@@ -16,7 +16,8 @@ import { createClient } from "@/lib/supabase/client";
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle,
 } from "docx";
-import { saveAs } from "file-saver";
+import { downloadDocx, parseContentToDocxParagraphs } from "@/lib/export/word";
+
 
 export default function QuickExportPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -81,12 +82,12 @@ export default function QuickExportPage() {
 
   const selectedQuestions = questions.filter(q => selectedIds.includes(q.id));
 
-  // Export to Word
+  // Export to Word — uses parseContentToDocxParagraphs for LaTeX & table support
   const handleExportWord = async () => {
     if (!selectedQuestions.length) { toast.error("Chọn ít nhất 1 bài tập"); return; }
     setIsExporting(true);
     try {
-      const children: Paragraph[] = [];
+      const children: (Paragraph | any)[] = [];
 
       // Title
       if (exportOptions.title) {
@@ -102,59 +103,65 @@ export default function QuickExportPage() {
 
       for (const [index, q] of selectedQuestions.entries()) {
         const prefix = exportOptions.showIndex ? `Bài ${index + 1}. ` : "";
-        // Question content
-        children.push(
-          new Paragraph({
-            spacing: { before: 200, after: 80 },
-            children: [
-              new TextRun({ text: prefix, bold: true, size: 26, font: "Times New Roman" }),
-              new TextRun({ text: q.content.replace(/\$[^$]*\$/g, (m) => m.slice(1, -1)), size: 26, font: "Times New Roman" }),
-            ],
-          })
-        );
 
-        // MCQ options
+        // Question content — full LaTeX + table support
+        const contentParas = parseContentToDocxParagraphs(prefix + q.content);
+        if (contentParas.length > 0) {
+          children.push(...contentParas);
+        } else {
+          children.push(new Paragraph({
+            spacing: { before: 200, after: 80 },
+            children: [new TextRun({ text: prefix + q.content, size: 26, font: "Times New Roman" })],
+          }));
+        }
+
+        // MCQ options — with LaTeX
         if (q.question_type === "trac_nghiem" && q.options) {
           for (const opt of q.options) {
-            children.push(
-              new Paragraph({
+            const optText = `${opt.key}. ${opt.value}`;
+            const optParas = parseContentToDocxParagraphs(optText);
+            if (optParas.length > 0) {
+              children.push(...optParas);
+            } else {
+              children.push(new Paragraph({
                 indent: { left: 720 },
                 spacing: { before: 40 },
-                children: [
-                  new TextRun({ text: `${opt.key}. `, bold: true, size: 26, font: "Times New Roman" }),
-                  new TextRun({ text: opt.value.replace(/\$[^$]*\$/g, (m) => m.slice(1, -1)), size: 26, font: "Times New Roman" }),
-                ],
-              })
-            );
+                children: [new TextRun({ text: optText, size: 26, font: "Times New Roman" })],
+              }));
+            }
           }
         }
 
-        // Answer
+        // Answer — with LaTeX
         if (exportOptions.showAnswer && q.answer) {
-          children.push(
-            new Paragraph({
-              spacing: { before: 60 },
-              indent: { left: 360 },
+          const ansParas = parseContentToDocxParagraphs("Đáp án: " + q.answer);
+          if (ansParas.length > 0) {
+            children.push(...ansParas);
+          } else {
+            children.push(new Paragraph({
+              spacing: { before: 60 }, indent: { left: 360 },
               children: [
                 new TextRun({ text: "Đáp án: ", bold: true, size: 22, font: "Times New Roman", color: "0000FF" }),
-                new TextRun({ text: q.answer.replace(/\$[^$]*\$/g, (m) => m.slice(1, -1)), size: 22, font: "Times New Roman" }),
+                new TextRun({ text: q.answer, size: 22, font: "Times New Roman" }),
               ],
-            })
-          );
+            }));
+          }
         }
 
-        // Solution
+        // Solution — with LaTeX
         if (exportOptions.showSolution && q.solution) {
-          children.push(
-            new Paragraph({
-              spacing: { before: 60 },
-              indent: { left: 360 },
+          const solParas = parseContentToDocxParagraphs("Lời giải: " + q.solution);
+          if (solParas.length > 0) {
+            children.push(...solParas);
+          } else {
+            children.push(new Paragraph({
+              spacing: { before: 60 }, indent: { left: 360 },
               children: [
                 new TextRun({ text: "Lời giải: ", bold: true, size: 22, font: "Times New Roman", italics: true, color: "008000" }),
-                new TextRun({ text: q.solution.replace(/\$[^$]*\$/g, (m) => m.slice(1, -1)), size: 22, font: "Times New Roman" }),
+                new TextRun({ text: q.solution, size: 22, font: "Times New Roman" }),
               ],
-            })
-          );
+            }));
+          }
         }
       }
 
@@ -166,8 +173,9 @@ export default function QuickExportPage() {
       });
 
       const blob = await Packer.toBlob(doc);
-      const filename = exportOptions.title || `Bai_tap_${selectedQuestions.length}_cau`;
-      saveAs(blob, `${filename}.docx`);
+      const rawName = exportOptions.title || `Bai_tap_${selectedQuestions.length}_cau`;
+      const safeName = rawName.replace(/[<>:"/\\|?*]/g, '').replace(/\s+/g, ' ').trim() || 'Bai_tap';
+      await downloadDocx(blob, safeName);
       toast.success(`Đã xuất ${selectedQuestions.length} bài tập!`);
     } catch {
       toast.error("Lỗi khi xuất file");
@@ -216,7 +224,12 @@ export default function QuickExportPage() {
   const handlePrint = () => {
     if (!selectedQuestions.length) { toast.error("Chọn ít nhất 1 bài tập"); return; }
     setShowExportPanel(true);
-    setTimeout(() => window.print(), 500);
+    setTimeout(() => {
+      const origTitle = document.title;
+      document.title = ' ';
+      window.print();
+      setTimeout(() => { document.title = origTitle; }, 1000);
+    }, 500);
   };
 
   return (
@@ -341,7 +354,7 @@ export default function QuickExportPage() {
           )}
         </div>
 
-        {/* Print preview (hidden on screen, shown on print) */}
+        {/* Export preview modal (screen only — hidden when printing) */}
         {showExportPanel && selectedQuestions.length > 0 && (
           <div className="fixed inset-0 z-50 bg-slate-900/80 overflow-y-auto no-print">
             <div className="min-h-screen py-8 px-4 flex justify-center">
@@ -349,7 +362,7 @@ export default function QuickExportPage() {
                 <div className="sticky top-0 z-10 flex items-center justify-between mb-4 bg-slate-900/90 backdrop-blur rounded-xl px-4 py-3">
                   <h3 className="text-white font-semibold">Xem trước ({selectedQuestions.length} bài)</h3>
                   <div className="flex items-center gap-2">
-                    <button onClick={() => window.print()} className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    <button onClick={() => { const t = document.title; document.title = ' '; window.print(); setTimeout(() => { document.title = t; }, 1000); }} className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                       <Printer className="w-4 h-4" /> In / PDF
                     </button>
                     <button onClick={() => setShowExportPanel(false)} className="p-2 text-white/70 hover:text-white rounded-lg hover:bg-white/10">
@@ -403,6 +416,8 @@ export default function QuickExportPage() {
             </div>
           </div>
         )}
+
+
       </div>
     </>
   );

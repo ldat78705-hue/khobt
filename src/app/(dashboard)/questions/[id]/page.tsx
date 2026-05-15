@@ -375,7 +375,20 @@ export default function QuestionDetailPage() {
                 <Link key={rq.id} href={`/questions/${rq.id}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-slate-50 transition-colors">
                   <BookOpen className="w-4 h-4 text-blue-500 flex-shrink-0" />
                   <span className="text-sm text-slate-700 truncate flex-1">
-                    <MathRenderer content={rq.content.length > 100 ? rq.content.slice(0, 100) + '...' : rq.content} />
+                    <MathRenderer content={(() => {
+                      const c = rq.content;
+                      if (c.length <= 100) return c;
+                      // Don't cut inside $...$ — find safe cut point
+                      let cutAt = 100;
+                      const beforeCut = c.slice(0, cutAt);
+                      const dollarCount = (beforeCut.match(/\$/g) || []).length;
+                      if (dollarCount % 2 !== 0) {
+                        // Odd $ count = we're inside a formula. Find the closing $
+                        const nextDollar = c.indexOf('$', cutAt);
+                        cutAt = nextDollar !== -1 ? nextDollar + 1 : cutAt;
+                      }
+                      return c.slice(0, cutAt) + '...';
+                    })()} />
                   </span>
                   <span className={`px-2 py-0.5 text-[10px] font-medium rounded-full border whitespace-nowrap ${getDifficultyColor(rq.difficulty)}`}>{getDifficultyLabel(rq.difficulty)}</span>
                 </Link>

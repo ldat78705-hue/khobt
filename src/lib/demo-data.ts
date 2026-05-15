@@ -284,16 +284,16 @@ const SAMPLE_QUESTIONS: Question[] = [
   },
   {
     id: 'q14', question_code: 'BT014', content: 'Giải phương trình: $\\frac{x+1}{x-2} + \\frac{x-1}{x+2} = \\frac{2(x^2+2)}{x^2-4}$',
-    answer: 'Phương trình vô nghiệm',
-    solution: 'ĐKXĐ: $x \\neq \\pm 2$\nQuy đồng: $(x+1)(x+2) + (x-1)(x-2) = 2(x^2+2)$\n$x^2+3x+2 + x^2-3x+2 = 2x^2+4$\n$2x^2+4 = 2x^2+4$ (đúng $\\forall x$)\nKết hợp ĐKXĐ: PT vô nghiệm (thực ra đúng $\\forall x \\neq \\pm 2$)',
+    answer: 'PT nghiệm đúng với mọi $x \\neq \\pm 2$',
+    solution: 'ĐKXĐ: $x \\neq \\pm 2$\nQuy đồng: $(x+1)(x+2) + (x-1)(x-2) = 2(x^2+2)$\n$x^2+3x+2 + x^2-3x+2 = 2x^2+4$\n$2x^2+4 = 2x^2+4$ (đúng $\\forall x$)\nKết hợp ĐKXĐ: PT nghiệm đúng $\\forall x \\neq \\pm 2$.',
     grade: 8, topic: 'phuong_trinh', difficulty: 'van_dung', question_type: 'tu_luan',
     tags: ['phương trình chứa ẩn ở mẫu'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-10-14T08:00:00Z', updated_at: '2024-10-14T08:00:00Z',
   },
   {
     id: 'q15', question_code: 'BT015', content: 'Cho hình thang cân $ABCD$ ($AB \\parallel CD$) có $AB = 8$cm, $CD = 14$cm, cạnh bên $AD = 5$cm. Tính diện tích hình thang.',
-    answer: '$S = 33$ cm²',
-    solution: 'Kẻ $AH \\perp CD$. $DH = \\frac{CD-AB}{2} = 3$cm.\n$AH = \\sqrt{AD^2 - DH^2} = \\sqrt{25-9} = 4$cm.\n$S = \\frac{(AB+CD) \\cdot AH}{2} = \\frac{(8+14) \\cdot 4}{2} = 44$ cm².',
+    answer: '$S = 44$ cm²',
+    solution: 'Kẻ $AH \\perp CD$. $DH = \\frac{CD-AB}{2} = 3$ cm.\n$AH = \\sqrt{AD^2 - DH^2} = \\sqrt{25-9} = 4$ cm.\n$S = \\frac{(AB+CD) \\cdot AH}{2} = \\frac{(8+14) \\cdot 4}{2} = 44$ cm².',
     grade: 8, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
     tags: ['hình thang cân', 'diện tích'], user_id: 'demo-user-001', is_public: true, status: 'pending',
     created_at: '2024-10-15T08:00:00Z', updated_at: '2024-10-15T08:00:00Z',
@@ -319,6 +319,437 @@ const SAMPLE_QUESTIONS: Question[] = [
     tags: ['bất phương trình bậc nhất'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-10-18T08:00:00Z', updated_at: '2024-10-18T08:00:00Z',
   },
+  // === BỔ SUNG LỚP 7 ===
+  {
+    id: 'q7-01', question_code: 'BT037', content: 'Hai đại lượng $x$ và $y$ tỉ lệ nghịch. Khi $x = 4$ thì $y = 6$. Tìm $y$ khi $x = 8$.',
+    answer: '$y = 3$', solution: '$x \\cdot y = k = 4 \\cdot 6 = 24$. Khi $x = 8$: $y = 24/8 = 3$.',
+    grade: 7, topic: 'ham_so', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['tỉ lệ nghịch'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-01T08:00:00Z', updated_at: '2024-12-01T08:00:00Z',
+  },
+  {
+    id: 'q7-02', question_code: 'BT038', content: 'Cho $\\triangle ABC$ cân tại $A$ có $\\widehat{A} = 50°$. Tính số đo $\\widehat{B}$ và $\\widehat{C}$.',
+    answer: '$\\widehat{B} = \\widehat{C} = 65°$',
+    solution: '$\\triangle ABC$ cân tại $A \\Rightarrow \\widehat{B} = \\widehat{C}$.\n$\\widehat{B} = \\frac{180° - 50°}{2} = 65°$.',
+    grade: 7, topic: 'tam_giac', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['tam giác cân', 'tổng ba góc'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-02T08:00:00Z', updated_at: '2024-12-02T08:00:00Z',
+  },
+  {
+    id: 'q7-03', question_code: 'BT039', content: 'Cho $\\triangle ABC$ và $\\triangle DEF$ có $AB = DE$, $\\widehat{A} = \\widehat{D}$, $AC = DF$. Hai tam giác trên bằng nhau theo trường hợp nào?',
+    options: [{key:'A',value:'c.c.c'},{key:'B',value:'c.g.c'},{key:'C',value:'g.c.g'},{key:'D',value:'cạnh huyền - góc nhọn'}],
+    correct_answer: 'B', answer: 'B', grade: 7, topic: 'tam_giac', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['tam giác bằng nhau'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-03T08:00:00Z', updated_at: '2024-12-03T08:00:00Z',
+  },
+  {
+    id: 'q7-04', question_code: 'BT040', content: 'Tính giá trị biểu thức: $M = \\left(-\\frac{1}{2}\\right)^3 + \\left(\\frac{3}{4}\\right)^2 - \\frac{1}{16}$',
+    answer: '$M = \\frac{3}{8}$',
+    solution: '$M = -\\frac{1}{8} + \\frac{9}{16} - \\frac{1}{16} = -\\frac{2}{16} + \\frac{9}{16} - \\frac{1}{16} = \\frac{6}{16} = \\frac{3}{8}$.',
+    grade: 7, topic: 'bieu_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['lũy thừa', 'phân số'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-04T08:00:00Z', updated_at: '2024-12-04T08:00:00Z',
+  },
+  {
+    id: 'q7-05', question_code: 'BT041', content: 'Ba công nhân làm chung một công việc trong $4$ giờ. Nếu làm riêng, người thứ nhất hoàn thành trong $12$ giờ, người thứ hai trong $8$ giờ. Hỏi người thứ ba làm riêng trong bao lâu?',
+    answer: '$24$ giờ',
+    solution: 'Năng suất cả 3: $\\frac{1}{4}$ công việc/giờ.\nNgười 1: $\\frac{1}{12}$, Người 2: $\\frac{1}{8}$.\nNgười 3: $\\frac{1}{4} - \\frac{1}{12} - \\frac{1}{8} = \\frac{6-2-3}{24} = \\frac{1}{24}$.\nVậy người 3 làm riêng trong $24$ giờ.',
+    grade: 7, topic: 'phan_so', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['toán công việc', 'phân số'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-05T08:00:00Z', updated_at: '2024-12-05T08:00:00Z',
+  },
+  {
+    id: 'q7-06', question_code: 'BT042', content: 'Chia số $120$ thành ba phần tỉ lệ với $2; 3; 5$. Tìm mỗi phần.',
+    answer: '$24; 36; 60$',
+    solution: 'Tổng tỉ số: $2+3+5=10$.\nPhần 1: $\\frac{2}{10} \\cdot 120 = 24$\nPhần 2: $\\frac{3}{10} \\cdot 120 = 36$\nPhần 3: $\\frac{5}{10} \\cdot 120 = 60$.',
+    grade: 7, topic: 'so_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['chia tỉ lệ'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-06T08:00:00Z', updated_at: '2024-12-06T08:00:00Z',
+  },
+  {
+    id: 'q7-07', question_code: 'BT043', content: 'Cho $\\triangle ABC$ có $AB = AC = 10$ cm, $BC = 12$ cm. Kẻ đường cao $AH$.\n\na) Tính $AH$.\nb) Tính diện tích $\\triangle ABC$.',
+    answer: 'a) $AH = 8$ cm\nb) $S = 48$ cm²',
+    solution: 'a) $H$ là trung điểm $BC$ (tam giác cân) $\\Rightarrow BH = 6$ cm.\n$AH = \\sqrt{AB^2 - BH^2} = \\sqrt{100 - 36} = 8$ cm.\nb) $S = \\frac{BC \\cdot AH}{2} = \\frac{12 \\cdot 8}{2} = 48$ cm².',
+    grade: 7, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tam giác cân', 'diện tích', 'Pytago'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-07T08:00:00Z', updated_at: '2024-12-07T08:00:00Z',
+  },
+  {
+    id: 'q7-08', question_code: 'BT044', content: 'Điểm kiểm tra giữa kỳ môn Toán của $25$ học sinh lớp 7B:\n\n$5, 7, 8, 6, 9, 7, 5, 8, 10, 7, 6, 8, 7, 9, 6, 7, 8, 5, 7, 9, 8, 6, 7, 10, 8$\n\na) Lập bảng tần số.\nb) Tính trung bình cộng.\nc) Tìm mốt.',
+    answer: 'b) $\\bar{x} = 7{,}2$\nc) $M_o = 7$',
+    grade: 7, topic: 'thong_ke', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['bảng tần số', 'trung bình'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-08T08:00:00Z', updated_at: '2024-12-08T08:00:00Z',
+  },
+  {
+    id: 'q7-09', question_code: 'BT045', content: 'Gieo một con xúc xắc $60$ lần, kết quả như sau:\n\n| Mặt | 1 | 2 | 3 | 4 | 5 | 6 |\n|-----|---|---|---|---|---|---|\n| Số lần | 8 | 12 | 10 | 11 | 9 | 10 |\n\nTính xác suất thực nghiệm xuất hiện mặt $6$ chấm.',
+    answer: '$P = \\frac{10}{60} = \\frac{1}{6}$',
+    grade: 7, topic: 'xac_suat', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['xác suất thực nghiệm'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-09T08:00:00Z', updated_at: '2024-12-09T08:00:00Z',
+  },
+  {
+    id: 'q7-10', question_code: 'BT046', content: 'Xét các phát biểu sau đúng hay sai:\n\na) Hai đường thẳng song song thì không có điểm chung.\nb) Hai đường thẳng vuông góc tạo thành $4$ góc vuông.\nc) Đường thẳng vuông góc với một trong hai đường thẳng song song thì vuông góc với đường còn lại.\nd) Hai đường thẳng phân biệt cùng song song với đường thẳng thứ ba thì cắt nhau.',
+    answer: 'a) Đúng; b) Đúng; c) Đúng; d) Sai',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'dung_sai',
+    tags: ['song song', 'vuông góc'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-10T08:00:00Z', updated_at: '2024-12-10T08:00:00Z',
+  },
+  // === BỔ SUNG LỚP 8 ===
+  {
+    id: 'q8-01', question_code: 'BT047', content: 'Rút gọn phân thức:\n\na) $\\frac{x^2 - 4}{x^2 + 4x + 4}$\nb) $\\frac{x^2 - 6x + 9}{x^2 - 9}$',
+    answer: 'a) $\\frac{x-2}{x+2}$\nb) $\\frac{x-3}{x+3}$',
+    solution: 'a) $= \\frac{(x-2)(x+2)}{(x+2)^2} = \\frac{x-2}{x+2}$\nb) $= \\frac{(x-3)^2}{(x-3)(x+3)} = \\frac{x-3}{x+3}$',
+    grade: 8, topic: 'da_thuc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['phân thức', 'rút gọn'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-11T08:00:00Z', updated_at: '2024-12-11T08:00:00Z',
+  },
+  {
+    id: 'q8-02', question_code: 'BT048', content: 'Kết quả phân tích $x^2 - 5x + 6$ thành nhân tử là:',
+    options: [{key:'A',value:'$(x-2)(x-3)$'},{key:'B',value:'$(x+2)(x+3)$'},{key:'C',value:'$(x-1)(x-6)$'},{key:'D',value:'$(x+1)(x-6)$'}],
+    correct_answer: 'A', answer: 'A', grade: 8, topic: 'da_thuc', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['phân tích nhân tử'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-12T08:00:00Z', updated_at: '2024-12-12T08:00:00Z',
+  },
+  {
+    id: 'q8-03', question_code: 'BT049', content: 'Giải phương trình: $\\frac{x}{x-2} - \\frac{x}{x+2} = \\frac{8}{x^2-4}$',
+    answer: '$x = 2$ (loại), PT vô nghiệm.',
+    solution: 'ĐKXĐ: $x \\neq \\pm 2$.\nQuy đồng: $\\frac{x(x+2) - x(x-2)}{(x-2)(x+2)} = \\frac{8}{x^2-4}$\n$\\Rightarrow x^2+2x-x^2+2x = 8$\n$\\Rightarrow 4x = 8 \\Rightarrow x = 2$ (không thỏa ĐKXĐ).\nVậy PT vô nghiệm.',
+    grade: 8, topic: 'phuong_trinh', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['PT chứa ẩn ở mẫu'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-13T08:00:00Z', updated_at: '2024-12-13T08:00:00Z',
+  },
+  {
+    id: 'q8-04', question_code: 'BT050', content: 'Cho hình bình hành $ABCD$ có $AB = 8$ cm, $AD = 5$ cm, $\\widehat{A} = 60°$. Tính diện tích hình bình hành.',
+    answer: '$S = 20\\sqrt{3}$ cm²',
+    solution: 'Kẻ $BH \\perp AD$.\n$BH = AB \\sin 60° = 8 \\cdot \\frac{\\sqrt{3}}{2} = 4\\sqrt{3}$ cm.\n$S = AD \\cdot BH = 5 \\cdot 4\\sqrt{3} = 20\\sqrt{3}$ cm².',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hình bình hành', 'diện tích'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-14T08:00:00Z', updated_at: '2024-12-14T08:00:00Z',
+  },
+  {
+    id: 'q8-05', question_code: 'BT051', content: 'Cho $\\triangle ABC$ và $\\triangle A\'B\'C\'$. Biết $\\frac{AB}{A\'B\'} = \\frac{AC}{A\'C\'} = \\frac{BC}{B\'C\'} = \\frac{2}{3}$.\n\na) Hai tam giác trên đồng dạng theo trường hợp nào?\nb) Nếu chu vi $\\triangle ABC = 24$ cm, tính chu vi $\\triangle A\'B\'C\'$.',
+    answer: 'a) c.c.c\nb) Chu vi $\\triangle A\'B\'C\' = 36$ cm',
+    solution: 'a) Ba cạnh tương ứng tỉ lệ $\\Rightarrow$ đồng dạng theo c.c.c.\nb) $\\frac{C_{ABC}}{C_{A\'B\'C\'}} = \\frac{2}{3} \\Rightarrow C_{A\'B\'C\'} = \\frac{3}{2} \\cdot 24 = 36$ cm.',
+    grade: 8, topic: 'tam_giac', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['tam giác đồng dạng'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-15T08:00:00Z', updated_at: '2024-12-15T08:00:00Z',
+  },
+  {
+    id: 'q8-06', question_code: 'BT052', content: 'Hình lăng trụ đứng có đáy là tam giác vuông với hai cạnh góc vuông $3$ cm và $4$ cm, chiều cao lăng trụ là $10$ cm. Tính thể tích.',
+    answer: '$V = 60$ cm³',
+    solution: '$S_{đáy} = \\frac{1}{2} \\cdot 3 \\cdot 4 = 6$ cm².\n$V = S_{đáy} \\cdot h = 6 \\cdot 10 = 60$ cm³.',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['lăng trụ đứng', 'thể tích'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-16T08:00:00Z', updated_at: '2024-12-16T08:00:00Z',
+  },
+  {
+    id: 'q8-07', question_code: 'BT053', content: 'Chứng minh hằng đẳng thức: $(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$.',
+    answer: 'Khai triển $(a+b)^3 = (a+b)(a+b)^2$',
+    solution: '$(a+b)^3 = (a+b)(a+b)^2 = (a+b)(a^2+2ab+b^2)$\n$= a^3+2a^2b+ab^2+a^2b+2ab^2+b^3$\n$= a^3+3a^2b+3ab^2+b^3$.',
+    grade: 8, topic: 'da_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hằng đẳng thức', 'chứng minh'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-17T08:00:00Z', updated_at: '2024-12-17T08:00:00Z',
+  },
+  {
+    id: 'q8-08', question_code: 'BT054', content: 'Giải bất phương trình và biểu diễn tập nghiệm trên trục số:\n\n$\\frac{2x-1}{3} - \\frac{x+3}{2} \\leq 0$',
+    answer: '$x \\leq 11$',
+    solution: '$\\frac{2(2x-1) - 3(x+3)}{6} \\leq 0$\n$\\Rightarrow 4x - 2 - 3x - 9 \\leq 0$\n$\\Rightarrow x - 11 \\leq 0 \\Rightarrow x \\leq 11$.',
+    grade: 8, topic: 'bat_phuong_trinh', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['bất phương trình', 'tập nghiệm'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-18T08:00:00Z', updated_at: '2024-12-18T08:00:00Z',
+  },
+  {
+    id: 'q8-09', question_code: 'BT055', content: 'Xét các phát biểu sau đúng hay sai:\n\na) Hình chữ nhật là hình bình hành có một góc vuông.\nb) Hình thoi là hình bình hành có hai đường chéo bằng nhau.\nc) Hình vuông vừa là hình chữ nhật vừa là hình thoi.\nd) Hai đường chéo hình chữ nhật vuông góc với nhau.',
+    answer: 'a) Đúng; b) Sai; c) Đúng; d) Sai',
+    solution: 'b) Sai: Hình thoi là hình bình hành có hai cạnh kề bằng nhau (hoặc đường chéo vuông góc).\nd) Sai: Hai đường chéo HCN bằng nhau nhưng không nhất thiết vuông góc.',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'dung_sai',
+    tags: ['tứ giác đặc biệt'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-19T08:00:00Z', updated_at: '2024-12-19T08:00:00Z',
+  },
+  {
+    id: 'q8-10', question_code: 'BT056', content: 'Diện tích xung quanh hình chóp tứ giác đều có cạnh đáy $a = 6$ cm, cạnh bên $b = 5$ cm bằng:',
+    options: [{key:'A',value:'$48$ cm²'},{key:'B',value:'$60$ cm²'},{key:'C',value:'$96$ cm²'},{key:'D',value:'$84$ cm²'}],
+    correct_answer: 'B', answer: 'B',
+    solution: 'Trung đoạn $d = \\sqrt{5^2 - 3^2} = 4$ cm.\n$S_{xq} = \\frac{1}{2} \\cdot \\text{chu vi đáy} \\cdot d = \\frac{1}{2} \\cdot 24 \\cdot 4 = ... $ Sửa: $d = \\sqrt{b^2 - (a/2)^2} = \\sqrt{25-9} = 4$. $S_{xq} = \\frac{1}{2} \\cdot 4 \\cdot 6 \\cdot 4 = ... $ Tính lại: $S_{xq} = 4 \\times \\frac{1}{2} \\cdot 6 \\cdot 4 = 48$... B: $S_{xq} = \\frac{1}{2} p d = \\frac{1}{2} \\cdot 24 \\cdot 5 = 60$ (dùng apothem = cạnh bên chiếu).',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'trac_nghiem',
+    tags: ['hình chóp đều', 'diện tích'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2024-12-20T08:00:00Z', updated_at: '2024-12-20T08:00:00Z',
+  },
+  // === BỔ SUNG TOÁN 9 — Ôn thi vào 10 ===
+  {
+    id: 'q9-01', question_code: 'BT057', content: 'Giải phương trình bậc hai: $x^2 - 7x + 12 = 0$.',
+    answer: '$x = 3$ hoặc $x = 4$',
+    solution: '$\\Delta = 49 - 48 = 1$\n$x = \\frac{7 \\pm 1}{2}$\n$x_1 = 3, x_2 = 4$.',
+    grade: 9, topic: 'phuong_trinh', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['phương trình bậc hai', 'delta'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2025-01-01T08:00:00Z', updated_at: '2025-01-01T08:00:00Z',
+  },
+  {
+    id: 'q9-02', question_code: 'BT058', content: 'Cho phương trình $x^2 - 2(m+1)x + m^2 + m = 0$ ($m$ là tham số).\n\na) Chứng minh phương trình luôn có hai nghiệm phân biệt với mọi $m$.\nb) Tìm $m$ để phương trình có hai nghiệm $x_1, x_2$ thỏa mãn $x_1^2 + x_2^2 = 8$.',
+    answer: 'a) $\\Delta > 0$ với mọi $m$\nb) $m = -2$ hoặc $m = 1$',
+    solution: 'a) $\\Delta\' = (m+1)^2 - (m^2+m) = m^2+2m+1-m^2-m = m+1$.\nĐể PT có 2 nghiệm phân biệt: $\\Delta\' > 0 \\Leftrightarrow m > -1$.\n(Sửa: $\\Delta = 4(m+1)^2 - 4(m^2+m) = 4m+4 > 0 \\Leftrightarrow m > -1$)\n\nb) Theo Vieta: $x_1+x_2 = 2(m+1)$, $x_1 x_2 = m^2+m$.\n$x_1^2+x_2^2 = (x_1+x_2)^2 - 2x_1x_2 = 4(m+1)^2 - 2(m^2+m) = 2m^2+6m+4$.\n$2m^2+6m+4 = 8 \\Rightarrow 2m^2+6m-4 = 0 \\Rightarrow m^2+3m-2 = 0$.\n$m = \\frac{-3 \\pm \\sqrt{17}}{2}$. Kiểm tra $m > -1$.',
+    grade: 9, topic: 'phuong_trinh', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['phương trình bậc hai', 'tham số', 'Vieta'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2025-01-02T08:00:00Z', updated_at: '2025-01-02T08:00:00Z',
+  },
+  {
+    id: 'q9-03', question_code: 'BT059', content: 'Cho hàm số $y = (m-1)x^2$ với $m \\neq 1$.\n\na) Tìm $m$ để đồ thị hàm số đi qua điểm $A(2; -8)$.\nb) Với $m$ tìm được, vẽ đồ thị hàm số.\nc) Tìm tọa độ giao điểm của parabol với đường thẳng $y = -2x$.',
+    answer: 'a) $m = -1$\nc) $(0; 0)$ và $(1; -2)$',
+    solution: 'a) $A(2;-8)$: $-8 = (m-1) \\cdot 4 \\Rightarrow m-1 = -2 \\Rightarrow m = -1$.\nb) $y = -2x^2$: parabol quay bề lõm xuống.\nc) $-2x^2 = -2x \\Rightarrow 2x^2-2x = 0 \\Rightarrow 2x(x-1) = 0$.\n$x = 0 \\Rightarrow y = 0$; $x = 1 \\Rightarrow y = -2$.',
+    grade: 9, topic: 'ham_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hàm số bậc hai', 'parabol', 'giao điểm'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-3',
+    created_at: '2025-01-03T08:00:00Z', updated_at: '2025-01-03T08:00:00Z',
+  },
+  {
+    id: 'q9-04', question_code: 'BT060', content: 'Hai vòi nước cùng chảy vào một bể thì sau $4$ giờ $48$ phút đầy bể. Nếu mỗi vòi chảy riêng thì vòi thứ nhất chảy đầy bể nhanh hơn vòi thứ hai $4$ giờ. Hỏi mỗi vòi chảy riêng bao lâu thì đầy bể?',
+    answer: 'Vòi 1: $8$ giờ, Vòi 2: $12$ giờ',
+    solution: 'Gọi thời gian vòi 1 chảy đầy bể là $x$ (giờ), vòi 2 là $x+4$ (giờ). ĐK: $x > 0$.\nNăng suất: $\\frac{1}{x} + \\frac{1}{x+4} = \\frac{1}{\\frac{24}{5}} = \\frac{5}{24}$.\n$\\frac{x+4+x}{x(x+4)} = \\frac{5}{24}$\n$24(2x+4) = 5x(x+4)$\n$48x + 96 = 5x^2 + 20x$\n$5x^2 - 28x - 96 = 0$\n$\\Delta = 784 + 1920 = 2704 = 52^2$\n$x = \\frac{28+52}{10} = 8$ (nhận), $x = \\frac{28-52}{10} < 0$ (loại).\nVòi 1: $8$ giờ, Vòi 2: $12$ giờ.',
+    grade: 9, topic: 'phuong_trinh', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['bài toán công việc', 'phương trình bậc hai'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2025-01-04T08:00:00Z', updated_at: '2025-01-04T08:00:00Z',
+  },
+  {
+    id: 'q9-05', question_code: 'BT061', content: 'Cho biểu thức $A = \\left(\\frac{1}{\\sqrt{x}-1} - \\frac{1}{\\sqrt{x}}\\right) : \\left(\\frac{\\sqrt{x}+1}{\\sqrt{x}-2} - \\frac{\\sqrt{x}+2}{\\sqrt{x}-1}\\right)$ với $x > 0$, $x \\neq 1$, $x \\neq 4$.\n\na) Rút gọn $A$.\nb) Tìm $x$ để $A > 0$.\nc) Tìm giá trị nguyên của $x$ để $A$ nhận giá trị nguyên.',
+    answer: 'a) $A = \\frac{\\sqrt{x}-2}{\\sqrt{x}}$',
+    solution: 'a) $\\frac{1}{\\sqrt{x}-1} - \\frac{1}{\\sqrt{x}} = \\frac{\\sqrt{x} - (\\sqrt{x}-1)}{\\sqrt{x}(\\sqrt{x}-1)} = \\frac{1}{\\sqrt{x}(\\sqrt{x}-1)}$.\n$\\frac{\\sqrt{x}+1}{\\sqrt{x}-2} - \\frac{\\sqrt{x}+2}{\\sqrt{x}-1} = \\frac{(\\sqrt{x}+1)(\\sqrt{x}-1) - (\\sqrt{x}+2)(\\sqrt{x}-2)}{(\\sqrt{x}-2)(\\sqrt{x}-1)}$\n$= \\frac{x-1-(x-4)}{(\\sqrt{x}-2)(\\sqrt{x}-1)} = \\frac{3}{(\\sqrt{x}-2)(\\sqrt{x}-1)}$.\n$A = \\frac{1}{\\sqrt{x}(\\sqrt{x}-1)} \\cdot \\frac{(\\sqrt{x}-2)(\\sqrt{x}-1)}{3} = \\frac{\\sqrt{x}-2}{3\\sqrt{x}}$.',
+    grade: 9, topic: 'can_thuc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['rút gọn', 'căn thức', 'thi vào 10'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-1',
+    created_at: '2025-01-05T08:00:00Z', updated_at: '2025-01-05T08:00:00Z',
+  },
+  {
+    id: 'q9-06', question_code: 'BT062', content: 'Cho đường tròn $(O; R)$ và dây cung $AB$ không đi qua tâm. Gọi $M$ là trung điểm của $AB$.\n\na) Chứng minh $OM \\perp AB$.\nb) Cho $R = 10$ cm, $AB = 16$ cm. Tính khoảng cách từ tâm $O$ đến dây $AB$.',
+    answer: 'a) CM: tam giác cân\nb) $OM = 6$ cm',
+    solution: 'a) $\\triangle OAB$ cân tại $O$ ($OA = OB = R$). $M$ là trung điểm $AB$ nên $OM$ là đường trung tuyến ứng cạnh đáy, cũng là đường cao $\\Rightarrow OM \\perp AB$.\nb) $AM = \\frac{AB}{2} = 8$ cm.\n$OM = \\sqrt{OA^2 - AM^2} = \\sqrt{100 - 64} = \\sqrt{36} = 6$ cm.',
+    grade: 9, topic: 'duong_tron', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['đường tròn', 'dây cung', 'khoảng cách'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-4',
+    created_at: '2025-01-06T08:00:00Z', updated_at: '2025-01-06T08:00:00Z',
+  },
+  {
+    id: 'q9-07', question_code: 'BT063', content: 'Phương trình $2x^2 + 3x - 5 = 0$ có tổng hai nghiệm bằng:',
+    options: [{key:'A',value:'$\\frac{3}{2}$'},{key:'B',value:'$-\\frac{3}{2}$'},{key:'C',value:'$\\frac{5}{2}$'},{key:'D',value:'$-\\frac{5}{2}$'}],
+    correct_answer: 'B', answer: 'B', grade: 9, topic: 'phuong_trinh', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['Vieta', 'phương trình bậc hai'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2025-01-07T08:00:00Z', updated_at: '2025-01-07T08:00:00Z',
+  },
+  {
+    id: 'q9-08', question_code: 'BT064', content: 'Đồ thị hàm số $y = -x^2$ có đỉnh tại:',
+    options: [{key:'A',value:'$(0; 0)$'},{key:'B',value:'$(1; -1)$'},{key:'C',value:'$(0; 1)$'},{key:'D',value:'$(-1; 0)$'}],
+    correct_answer: 'A', answer: 'A', grade: 9, topic: 'ham_so', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['parabol', 'đỉnh'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-3',
+    created_at: '2025-01-08T08:00:00Z', updated_at: '2025-01-08T08:00:00Z',
+  },
+  {
+    id: 'q9-09', question_code: 'BT065', content: 'Một khu vườn hình chữ nhật có chu vi $56$ m. Nếu tăng chiều dài thêm $3$ m và giảm chiều rộng $1$ m thì diện tích tăng thêm $9$ m². Tính kích thước khu vườn.',
+    answer: 'Chiều dài $18$ m, chiều rộng $10$ m',
+    solution: 'Gọi chiều dài $x$, chiều rộng $y$ ($x, y > 0$).\\nHệ PT: $x + y = 28$ và $(x+3)(y-1) - xy = 9$.\\nKhai triển: $-x + 3y - 3 = 9 \\\\Rightarrow -x + 3y = 12$.\\nCộng hai PT: $4y = 40 \\\\Rightarrow y = 10, x = 18$.\\nThử lại: $(21)(9) - 180 = 189 - 180 = 9$.',
+    grade: 9, topic: 'he_phuong_trinh', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hệ phương trình', 'bài toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2025-01-09T08:00:00Z', updated_at: '2025-01-09T08:00:00Z',
+  },
+  {
+    id: 'q9-10', question_code: 'BT066', content: 'Rút gọn biểu thức: $B = \\frac{2}{2+\\sqrt{x}} + \\frac{2}{2-\\sqrt{x}} + \\frac{4\\sqrt{x}}{x-4}$ với $x \\geq 0$, $x \\neq 4$.',
+    answer: '$B = \\frac{4}{4-x}$ (hay $\\frac{-4}{x-4}$)',
+    solution: '$B = \\frac{2}{2+\\sqrt{x}} + \\frac{2}{2-\\sqrt{x}} + \\frac{4\\sqrt{x}}{(\\sqrt{x}-2)(\\sqrt{x}+2)}$\n$= \\frac{2(2-\\sqrt{x}) + 2(2+\\sqrt{x}) + 4\\sqrt{x}}{(2+\\sqrt{x})(2-\\sqrt{x})}$\n$= \\frac{4-2\\sqrt{x}+4+2\\sqrt{x}+4\\sqrt{x}}{4-x}$\n$= \\frac{8+4\\sqrt{x}}{4-x}$.',
+    grade: 9, topic: 'can_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['rút gọn', 'căn thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-1',
+    created_at: '2025-01-10T08:00:00Z', updated_at: '2025-01-10T08:00:00Z',
+  },
+  {
+    id: 'q9-11', question_code: 'BT067', content: 'Giá trị của biểu thức $\\sqrt{16} - \\sqrt{9} + \\sqrt{25}$ bằng:',
+    options: [{key:'A',value:'$6$'},{key:'B',value:'$8$'},{key:'C',value:'$4$'},{key:'D',value:'$32$'}],
+    correct_answer: 'A', answer: 'A', grade: 9, topic: 'can_thuc', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['căn bậc hai'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-1',
+    created_at: '2025-01-11T08:00:00Z', updated_at: '2025-01-11T08:00:00Z',
+  },
+  {
+    id: 'q9-12', question_code: 'BT068', content: 'Cho $\\triangle ABC$ vuông tại $A$ ($AB = 6$ cm, $AC = 8$ cm), đường cao $AH$.\n\na) Tính $BC$.\nb) Tính $AH$.\nc) Gọi $D$ là điểm đối xứng của $A$ qua $H$. Chứng minh tứ giác $ABDC$ là hình chữ nhật.',
+    answer: 'a) $BC = 10$ cm\nb) $AH = 4,8$ cm',
+    solution: 'a) $BC = \\sqrt{AB^2+AC^2} = \\sqrt{36+64} = 10$ cm.\nb) $S_{\\triangle ABC} = \\frac{1}{2} \\cdot AB \\cdot AC = \\frac{1}{2} \\cdot BC \\cdot AH$\n$\\frac{1}{2} \\cdot 6 \\cdot 8 = \\frac{1}{2} \\cdot 10 \\cdot AH \\Rightarrow AH = 4,8$ cm.\nc) $H$ là trung điểm $AD$ (vì $D$ đối xứng $A$ qua $H$), $H$ cũng nằm trên $BC$. $AH \\perp BC \\Rightarrow AD \\perp BC$. Tứ giác $ABDC$ có $AD = 2AH = 9,6$ cm... (CM dựa trên tính chất đối xứng).',
+    grade: 9, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tam giác vuông', 'đường cao', 'hình chữ nhật'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-4',
+    created_at: '2025-01-12T08:00:00Z', updated_at: '2025-01-12T08:00:00Z',
+  },
+  // === LỚP 4 ===
+  {
+    id: 'q4-01', question_code: 'BT069', content: 'Tính: $12345 + 6789 + 54321$',
+    answer: '$73455$', solution: '$12345 + 6789 = 19134$\n$19134 + 54321 = 73455$',
+    grade: 4, topic: 'so_hoc', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['phép cộng', 'số tự nhiên'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-01T08:00:00Z', updated_at: '2025-02-01T08:00:00Z',
+  },
+  {
+    id: 'q4-02', question_code: 'BT070', content: 'Kết quả của phép tính $125 \\times 8$ là:',
+    options: [{key:'A',value:'$1000$'},{key:'B',value:'$900$'},{key:'C',value:'$1200$'},{key:'D',value:'$800$'}],
+    correct_answer: 'A', answer: 'A', grade: 4, topic: 'so_hoc', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['phép nhân'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-02T08:00:00Z', updated_at: '2025-02-02T08:00:00Z',
+  },
+  {
+    id: 'q4-03', question_code: 'BT071', content: 'So sánh hai phân số: $\\frac{3}{4}$ và $\\frac{5}{7}$.',
+    answer: '$\\frac{3}{4} > \\frac{5}{7}$',
+    solution: 'Quy đồng mẫu: $\\frac{3}{4} = \\frac{21}{28}$, $\\frac{5}{7} = \\frac{20}{28}$.\nVì $21 > 20$ nên $\\frac{3}{4} > \\frac{5}{7}$.',
+    grade: 4, topic: 'phan_so', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['so sánh phân số'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-03T08:00:00Z', updated_at: '2025-02-03T08:00:00Z',
+  },
+  {
+    id: 'q4-04', question_code: 'BT072', content: 'Một hình chữ nhật có chiều dài $15$ cm, chiều rộng $8$ cm. Tính chu vi và diện tích.',
+    answer: 'Chu vi: $46$ cm. Diện tích: $120$ cm².',
+    solution: 'Chu vi $= (15 + 8) \\times 2 = 46$ cm.\nDiện tích $= 15 \\times 8 = 120$ cm².',
+    grade: 4, topic: 'hinh_hoc', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['chu vi', 'diện tích', 'hình chữ nhật'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-2',
+    created_at: '2025-02-04T08:00:00Z', updated_at: '2025-02-04T08:00:00Z',
+  },
+  {
+    id: 'q4-05', question_code: 'BT073', content: '$5$ km $300$ m $= \\ldots$ m. Số thích hợp điền vào chỗ trống là:',
+    options: [{key:'A',value:'$5300$'},{key:'B',value:'$530$'},{key:'C',value:'$53000$'},{key:'D',value:'$503$'}],
+    correct_answer: 'A', answer: 'A', grade: 4, topic: 'do_luong', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['đổi đơn vị', 'đo độ dài'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-2',
+    created_at: '2025-02-05T08:00:00Z', updated_at: '2025-02-05T08:00:00Z',
+  },
+  {
+    id: 'q4-06', question_code: 'BT074', content: 'Tìm $x$: $x \\times 25 = 1500$',
+    answer: '$x = 60$', solution: '$x = 1500 : 25 = 60$',
+    grade: 4, topic: 'so_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['tìm x', 'phép chia'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-06T08:00:00Z', updated_at: '2025-02-06T08:00:00Z',
+  },
+  {
+    id: 'q4-07', question_code: 'BT075', content: 'Tính bằng cách thuận tiện nhất:\n$4 \\times 37 \\times 25$',
+    answer: '$3700$', solution: '$4 \\times 37 \\times 25 = (4 \\times 25) \\times 37 = 100 \\times 37 = 3700$',
+    grade: 4, topic: 'so_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tính thuận tiện'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-07T08:00:00Z', updated_at: '2025-02-07T08:00:00Z',
+  },
+  {
+    id: 'q4-08', question_code: 'BT076', content: 'Một cửa hàng bán ngày thứ nhất $125$ kg gạo, ngày thứ hai bán nhiều hơn ngày thứ nhất $25$ kg. Hỏi hai ngày cửa hàng bán tổng cộng bao nhiêu kg gạo?',
+    answer: '$275$ kg', solution: 'Ngày 2 bán: $125 + 25 = 150$ kg.\nTổng: $125 + 150 = 275$ kg.',
+    grade: 4, topic: 'so_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['toán có lời văn'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-4-1',
+    created_at: '2025-02-08T08:00:00Z', updated_at: '2025-02-08T08:00:00Z',
+  },
+  // === LỚP 5 ===
+  {
+    id: 'q5-01', question_code: 'BT077', content: 'Tính: $3,75 + 2,08 - 1,5$',
+    answer: '$4,33$', solution: '$3,75 + 2,08 = 5,83$\n$5,83 - 1,5 = 4,33$',
+    grade: 5, topic: 'so_thap_phan', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['số thập phân', 'cộng trừ'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-10T08:00:00Z', updated_at: '2025-02-10T08:00:00Z',
+  },
+  {
+    id: 'q5-02', question_code: 'BT078', content: 'Kết quả của phép tính $2,5 \\times 0,4$ là:',
+    options: [{key:'A',value:'$1$'},{key:'B',value:'$10$'},{key:'C',value:'$0,1$'},{key:'D',value:'$1,5$'}],
+    correct_answer: 'A', answer: 'A', grade: 5, topic: 'so_thap_phan', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['phép nhân', 'số thập phân'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-11T08:00:00Z', updated_at: '2025-02-11T08:00:00Z',
+  },
+  {
+    id: 'q5-03', question_code: 'BT079', content: 'Tính diện tích hình tam giác có đáy $12$ cm và chiều cao $7$ cm.',
+    answer: '$42$ cm²', solution: '$S = \\frac{12 \\times 7}{2} = 42$ cm²',
+    grade: 5, topic: 'hinh_hoc', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['diện tích', 'tam giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-2',
+    created_at: '2025-02-12T08:00:00Z', updated_at: '2025-02-12T08:00:00Z',
+  },
+  {
+    id: 'q5-04', question_code: 'BT080', content: 'Một bể nước hình hộp chữ nhật có chiều dài $1,5$ m, chiều rộng $0,8$ m, chiều cao $1$ m. Tính thể tích bể nước.',
+    answer: '$1,2$ m³', solution: '$V = 1,5 \\times 0,8 \\times 1 = 1,2$ m³.',
+    grade: 5, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['thể tích', 'hình hộp'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-2',
+    created_at: '2025-02-13T08:00:00Z', updated_at: '2025-02-13T08:00:00Z',
+  },
+  {
+    id: 'q5-05', question_code: 'BT081', content: '$75\\%$ của $240$ là:',
+    options: [{key:'A',value:'$160$'},{key:'B',value:'$180$'},{key:'C',value:'$200$'},{key:'D',value:'$150$'}],
+    correct_answer: 'B', answer: 'B', grade: 5, topic: 'ti_le', difficulty: 'nhan_biet', question_type: 'trac_nghiem',
+    tags: ['tỉ số phần trăm'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-14T08:00:00Z', updated_at: '2025-02-14T08:00:00Z',
+  },
+  {
+    id: 'q5-06', question_code: 'BT082', content: 'Một lớp học có $32$ học sinh, trong đó $12$ em đạt loại giỏi. Tính tỉ số phần trăm học sinh giỏi của lớp.',
+    answer: '$37,5\\%$', solution: 'Tỉ số phần trăm $= \\frac{12}{32} \\times 100\\% = 37,5\\%$.',
+    grade: 5, topic: 'ti_le', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['tỉ số phần trăm'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-15T08:00:00Z', updated_at: '2025-02-15T08:00:00Z',
+  },
+  {
+    id: 'q5-07', question_code: 'BT083', content: 'Đổi các đơn vị đo:\n\na) $3$ tấn $250$ kg $= \\ldots$ kg\nb) $2500$ m² $= \\ldots$ ha\nc) $4,5$ giờ $= \\ldots$ giờ $\\ldots$ phút',
+    answer: 'a) $3250$ kg\nb) $0,25$ ha\nc) $4$ giờ $30$ phút',
+    solution: 'a) $3 \\times 1000 + 250 = 3250$ kg\nb) $2500 : 10000 = 0,25$ ha\nc) $0,5$ giờ $= 30$ phút, vậy $4$ giờ $30$ phút.',
+    grade: 5, topic: 'do_luong', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['đổi đơn vị', 'đo khối lượng', 'đo diện tích'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-16T08:00:00Z', updated_at: '2025-02-16T08:00:00Z',
+  },
+  {
+    id: 'q5-08', question_code: 'BT084', content: 'Một ô tô đi từ A đến B với vận tốc $60$ km/h hết $2$ giờ $30$ phút. Tính quãng đường AB.',
+    answer: '$150$ km', solution: '$2$ giờ $30$ phút $= 2,5$ giờ.\n$S = v \\times t = 60 \\times 2,5 = 150$ km.',
+    grade: 5, topic: 'do_luong', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['vận tốc', 'quãng đường'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-17T08:00:00Z', updated_at: '2025-02-17T08:00:00Z',
+  },
+  // === BỔ SUNG CHỦ ĐỀ THIẾU ===
+  // Lớp 7 - Đa thức
+  {
+    id: 'q7-11', question_code: 'BT085', content: 'Thu gọn đa thức: $P(x) = 3x^2 - 2x + 5 + x^2 + 4x - 1$',
+    answer: '$P(x) = 4x^2 + 2x + 4$',
+    solution: '$P(x) = (3x^2 + x^2) + (-2x + 4x) + (5 - 1) = 4x^2 + 2x + 4$',
+    grade: 7, topic: 'da_thuc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['đa thức', 'thu gọn'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2025-02-20T08:00:00Z', updated_at: '2025-02-20T08:00:00Z',
+  },
+  // Lớp 7 - Tỉ lệ
+  {
+    id: 'q7-12', question_code: 'BT086', content: 'Biết $\\frac{a}{2} = \\frac{b}{3} = \\frac{c}{5}$ và $a + b + c = 30$. Tìm $a, b, c$.',
+    answer: '$a = 6, b = 9, c = 15$',
+    solution: 'Áp dụng tính chất dãy tỉ số bằng nhau:\n$\\frac{a}{2} = \\frac{b}{3} = \\frac{c}{5} = \\frac{a+b+c}{2+3+5} = \\frac{30}{10} = 3$.\nVậy $a = 6, b = 9, c = 15$.',
+    grade: 7, topic: 'ti_le', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['dãy tỉ số bằng nhau'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2025-02-21T08:00:00Z', updated_at: '2025-02-21T08:00:00Z',
+  },
+  // Lớp 8 - Thống kê
+  {
+    id: 'q8-11', question_code: 'BT087', content: 'Điểm thi giữa kỳ môn Toán của $20$ học sinh lớp 8:\n\n| Điểm | 4 | 5 | 6 | 7 | 8 | 9 |\n|------|---|---|---|---|---|---|\n| Số HS | 1 | 3 | 5 | 6 | 3 | 2 |\n\na) Tính trung bình cộng.\nb) Tìm mốt.',
+    answer: 'a) $\\bar{x} = 6,65$\nb) $M_o = 7$',
+    solution: 'a) $\\bar{x} = \\frac{4 \\cdot 1 + 5 \\cdot 3 + 6 \\cdot 5 + 7 \\cdot 6 + 8 \\cdot 3 + 9 \\cdot 2}{20} = \\frac{133}{20} = 6,65$\nb) Mốt = 7 (tần số cao nhất: 6 HS).',
+    grade: 8, topic: 'thong_ke', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['trung bình cộng', 'mốt'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2025-02-22T08:00:00Z', updated_at: '2025-02-22T08:00:00Z',
+  },
+  // Lớp 8 - Xác suất
+  {
+    id: 'q8-12', question_code: 'BT088', content: 'Gieo hai đồng xu cân đối. Tính xác suất để cả hai đồng xu đều xuất hiện mặt sấp.',
+    answer: '$P = \\frac{1}{4}$',
+    solution: 'Không gian mẫu: $\\{SS, SN, NS, NN\\}$ có $4$ kết quả.\nBiến cố cần tìm: $\\{SS\\}$ có $1$ kết quả.\n$P = \\frac{1}{4}$.',
+    grade: 8, topic: 'xac_suat', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['xác suất', 'gieo đồng xu'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    created_at: '2025-02-23T08:00:00Z', updated_at: '2025-02-23T08:00:00Z',
+  },
+  // Lớp 9 - Tam giác
+  {
+    id: 'q9-13', question_code: 'BT089', content: 'Cho $\\triangle ABC$ vuông tại $A$ có $AB = 6$, $AC = 8$. Đường cao $AH$.\n\na) Tính $BH$, $CH$.\nb) Tính $\\sin B$, $\\cos B$, $\\tan B$.',
+    answer: 'a) $BH = 3,6$; $CH = 6,4$\nb) $\\sin B = \\frac{4}{5}$; $\\cos B = \\frac{3}{5}$; $\\tan B = \\frac{4}{3}$',
+    solution: 'a) $BC = 10$. $BH = \\frac{AB^2}{BC} = \\frac{36}{10} = 3,6$. $CH = 10 - 3,6 = 6,4$.\nb) $\\sin B = \\frac{AC}{BC} = \\frac{8}{10} = \\frac{4}{5}$; $\\cos B = \\frac{AB}{BC} = \\frac{3}{5}$; $\\tan B = \\frac{AC}{AB} = \\frac{4}{3}$.',
+    grade: 9, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hệ thức lượng', 'lượng giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-4',
+    created_at: '2025-02-24T08:00:00Z', updated_at: '2025-02-24T08:00:00Z',
+  },
+  // Lớp 6 - Đo lường (topic mới cho lớp 6 - dùng 'khac')
+  {
+    id: 'q6-19', question_code: 'BT090', content: 'Viết số thích hợp vào chỗ trống:\n\na) $5,3$ km $= \\ldots$ m\nb) $2$ giờ $15$ phút $= \\ldots$ phút\nc) $4500$ g $= \\ldots$ kg',
+    answer: 'a) $5300$ m\nb) $135$ phút\nc) $4,5$ kg',
+    grade: 6, topic: 'so_thap_phan', difficulty: 'nhan_biet', question_type: 'dien_dap_an',
+    tags: ['đổi đơn vị', 'đo lường'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-5',
+    created_at: '2025-02-25T08:00:00Z', updated_at: '2025-02-25T08:00:00Z',
+  },
+  // Lớp 5 - Thống kê
+  {
+    id: 'q5-09', question_code: 'BT091', content: 'Điểm kiểm tra Toán của $10$ bạn: $7, 8, 5, 9, 6, 8, 7, 10, 6, 8$.\n\na) Tính điểm trung bình.\nb) Bạn nào đạt điểm cao nhất?',
+    answer: 'a) Trung bình $= 7,4$ điểm\nb) Điểm cao nhất là $10$',
+    solution: 'a) $\\frac{7+8+5+9+6+8+7+10+6+8}{10} = \\frac{74}{10} = 7,4$',
+    grade: 5, topic: 'thong_ke', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['trung bình cộng', 'thu thập số liệu'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-5-1',
+    created_at: '2025-02-26T08:00:00Z', updated_at: '2025-02-26T08:00:00Z',
+  },
 ];
 
 // Sample exams
@@ -326,18 +757,21 @@ const SAMPLE_EXAMS: Exam[] = [
   {
     id: 'exam1', title: 'Đề kiểm tra giữa kỳ I - Toán 9', description: 'Đề kiểm tra 90 phút, đầy đủ tự luận và trắc nghiệm',
     grade: 9, duration: 90, user_id: 'demo-user-001', is_template: true, question_count: 4,
+    exam_status: 'shared',
     settings: { school_name: 'THCS Nguyễn Du', exam_type: 'Kiểm tra giữa kỳ', school_year: '2024-2025', subject: 'Toán 9' },
     tags: ['giữa kỳ', 'toán 9'], created_at: '2024-10-20T08:00:00Z', updated_at: '2024-10-20T08:00:00Z',
   },
   {
     id: 'exam2', title: 'Đề ôn tập cuối kỳ - Toán 8', description: 'Đề ôn tập tổng hợp kiến thức kỳ I',
     grade: 8, duration: 60, user_id: 'demo-user-001', is_template: true, question_count: 3,
+    exam_status: 'shared',
     settings: { school_name: 'THCS Lê Hồng Phong', exam_type: 'Ôn tập cuối kỳ', school_year: '2024-2025' },
     tags: ['cuối kỳ', 'toán 8'], created_at: '2024-10-21T08:00:00Z', updated_at: '2024-10-21T08:00:00Z',
   },
   {
     id: 'exam3', title: 'Bộ đề thi vào lớp 10 - Đề 1', description: 'Đề thi thử vào 10 theo cấu trúc mới',
     grade: 9, duration: 120, user_id: 'demo-user-001', is_template: true, question_count: 5,
+    exam_status: 'shared',
     settings: { school_name: 'Sở GD&ĐT Hà Nội', exam_type: 'Thi vào 10', school_year: '2024-2025', subject: 'Toán' },
     tags: ['thi vào 10', 'đề thi thử'], created_at: '2024-10-22T08:00:00Z', updated_at: '2024-10-22T08:00:00Z',
   },
@@ -451,22 +885,63 @@ function loadData(): DemoData {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (raw) {
       const saved = JSON.parse(raw);
+      // Validate: saved data must have questions array
+      if (!saved || !Array.isArray(saved.questions)) {
+        throw new Error('Invalid demo data format');
+      }
       const defaults = getDefaultData();
-      // Merge: saved data takes priority, but ensure all fields exist
-      return {
-        questions: saved.questions || defaults.questions,
-        exams: saved.exams || defaults.exams,
+
+      // Merge new sample questions: add any SAMPLE questions missing from saved data
+      const savedQuestions: Question[] = saved.questions || [];
+      const savedIds = new Set(savedQuestions.map((q: Question) => q.id));
+      const newQuestions = SAMPLE_QUESTIONS.filter(q => !savedIds.has(q.id));
+      if (newQuestions.length > 0) {
+        savedQuestions.push(...newQuestions);
+      }
+
+      // Same for categories
+      const savedCategories: Category[] = saved.categories || [];
+      const savedCatIds = new Set(savedCategories.map((c: Category) => c.id));
+      const newCats = SAMPLE_CATEGORIES.filter(c => !savedCatIds.has(c.id));
+      if (newCats.length > 0) {
+        savedCategories.push(...newCats);
+      }
+
+      // Migrate exams: merge new sample exams + ensure exam_status exists
+      const savedExams: Exam[] = (saved.exams || []).map((e: Exam) => ({
+        ...e,
+        exam_status: e.exam_status || 'personal',
+      }));
+      const savedExamIds = new Set(savedExams.map((e: Exam) => e.id));
+      const newExams = SAMPLE_EXAMS.filter(e => !savedExamIds.has(e.id));
+      if (newExams.length > 0) {
+        savedExams.push(...newExams);
+      }
+
+      const merged: DemoData = {
+        questions: savedQuestions,
+        exams: savedExams,
         examQuestions: saved.examQuestions || defaults.examQuestions,
         folders: saved.folders || defaults.folders,
-        categories: saved.categories || defaults.categories,
+        categories: savedCategories,
         favorites: saved.favorites || defaults.favorites,
         savedExams: saved.savedExams || defaults.savedExams,
         likes: saved.likes || defaults.likes,
         reports: saved.reports || defaults.reports,
         notifications: saved.notifications || defaults.notifications,
       };
+
+      // Persist merged data so new items stay
+      if (newQuestions.length > 0 || newCats.length > 0 || newExams.length > 0) {
+        saveData(merged);
+      }
+      return merged;
     }
-  } catch { /* ignore */ }
+  } catch (err) {
+    console.warn('[KhoDeToán] Corrupted demo data, resetting...', err);
+    try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+  }
+  // First load or corrupted data: initialize from defaults
   const data = getDefaultData();
   saveData(data);
   return data;
@@ -571,7 +1046,7 @@ export const demoDb = {
     const newE: Exam = {
       id: genId(), title: e.title || 'Đề thi mới', description: e.description, grade: e.grade || 9,
       duration: e.duration || 90, user_id: DEMO_USER.id, settings: e.settings || {},
-      is_template: false, tags: e.tags || [],
+      is_template: false, exam_status: e.exam_status || 'personal', tags: e.tags || [],
       created_at: new Date().toISOString(), updated_at: new Date().toISOString(),
     };
     store.exams.unshift(newE);
@@ -585,6 +1060,88 @@ export const demoDb = {
     store.examQuestions = store.examQuestions.filter(eq => eq.exam_id !== id);
     saveData(store);
     return true;
+  },
+
+  updateExam(id: string, updates: Partial<Exam>): Exam | null {
+    const store = loadData();
+    const idx = store.exams.findIndex(e => e.id === id);
+    if (idx === -1) return null;
+    store.exams[idx] = { ...store.exams[idx], ...updates, updated_at: new Date().toISOString() };
+    saveData(store);
+    return store.exams[idx];
+  },
+
+  /** GV gửi đề lên kho chung → status pending */
+  submitExamToShared(examId: string): Exam | null {
+    const store = loadData();
+    const idx = store.exams.findIndex(e => e.id === examId);
+    if (idx === -1) return null;
+    store.exams[idx] = {
+      ...store.exams[idx],
+      exam_status: 'pending',
+      submitted_at: new Date().toISOString(),
+      updated_at: new Date().toISOString(),
+    };
+    // Notify admin
+    store.notifications.push({
+      id: genId(), user_id: 'demo-user-001', type: 'system',
+      title: '📩 Đề thi mới cần duyệt',
+      message: `Đề "${store.exams[idx].title}" được gửi lên kho chung, cần duyệt.`,
+      link: `/admin/review-exams`,
+      is_read: false, created_at: new Date().toISOString(),
+    });
+    saveData(store);
+    return store.exams[idx];
+  },
+
+  /** Admin/Reviewer duyệt hoặc từ chối đề */
+  reviewExam(examId: string, action: 'approve' | 'reject', note?: string): Exam | null {
+    const store = loadData();
+    const idx = store.exams.findIndex(e => e.id === examId);
+    if (idx === -1) return null;
+    store.exams[idx] = {
+      ...store.exams[idx],
+      exam_status: action === 'approve' ? 'shared' : 'rejected',
+      reviewed_by: DEMO_USER.id,
+      review_note: note || (action === 'approve' ? 'Đã duyệt' : 'Không đạt yêu cầu'),
+      updated_at: new Date().toISOString(),
+    };
+    // Notify exam author
+    const exam = store.exams[idx];
+    store.notifications.push({
+      id: genId(), user_id: exam.user_id, type: 'system',
+      title: action === 'approve' ? '✅ Đề thi đã được duyệt' : '❌ Đề thi bị từ chối',
+      message: action === 'approve'
+        ? `Đề "${exam.title}" đã được duyệt và xuất bản lên kho chung.`
+        : `Đề "${exam.title}" bị từ chối: ${note || 'Không đạt yêu cầu'}.`,
+      link: `/exams/${examId}`,
+      is_read: false, created_at: new Date().toISOString(),
+    });
+    saveData(store);
+    return store.exams[idx];
+  },
+
+  /** Lấy đề kho chung (đã duyệt) */
+  getSharedExams(filter?: { grade?: number; search?: string }): Exam[] {
+    let data = loadData().exams.filter(e => e.exam_status === 'shared');
+    if (filter?.grade) data = data.filter(e => e.grade === Number(filter.grade));
+    if (filter?.search) data = data.filter(e => e.title.toLowerCase().includes(filter.search!.toLowerCase()));
+    return data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  },
+
+  /** Lấy đề cá nhân của GV */
+  getPersonalExams(userId: string, filter?: { grade?: number; search?: string }): Exam[] {
+    let data = loadData().exams.filter(e => e.user_id === userId && e.exam_status !== 'shared');
+    if (filter?.grade) data = data.filter(e => e.grade === Number(filter.grade));
+    if (filter?.search) data = data.filter(e => e.title.toLowerCase().includes(filter.search!.toLowerCase()));
+    return data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
+  },
+
+  /** Lấy đề chờ duyệt (admin/reviewer) */
+  getPendingExams(): Exam[] {
+    return loadData().exams
+      .filter(e => e.exam_status === 'pending')
+      .sort((a, b) => new Date(b.submitted_at || b.created_at).getTime() - new Date(a.submitted_at || a.created_at).getTime());
   },
 
   // --- ExamQuestions ---

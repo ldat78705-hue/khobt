@@ -2,34 +2,61 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
-import { Plus, Search, FileText, MoreHorizontal, Trash2, Copy, Edit, Eye, Download, Clock, BookOpen, FolderOpen, Sparkles } from "lucide-react";
+import {
+  Plus, Search, FileText, Trash2, Copy, Edit, Eye, Download,
+  Clock, BookOpen, Sparkles, Upload, Globe, User, Send, Shield
+} from "lucide-react";
 import Link from "next/link";
 import { cn, formatDate } from "@/lib/utils";
 import { GRADES } from "@/types";
-import type { Exam, Grade } from "@/types";
+import type { Exam, Grade, ExamStatus } from "@/types";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
-import { isDemoMode, demoDb } from "@/lib/demo-data";
+import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
+import { useAuthStore } from "@/stores/auth-store";
+
+const EXAM_STATUS_CONFIG: Record<ExamStatus, { label: string; color: string; icon: string }> = {
+  personal: { label: 'Cá nhân', color: 'bg-slate-100 text-slate-600 border-slate-200', icon: '🔒' },
+  pending: { label: 'Chờ duyệt', color: 'bg-yellow-100 text-yellow-700 border-yellow-200', icon: '⏳' },
+  shared: { label: 'Kho chung', color: 'bg-green-100 text-green-700 border-green-200', icon: '🌐' },
+  rejected: { label: 'Từ chối', color: 'bg-red-100 text-red-700 border-red-200', icon: '❌' },
+};
+
+type TabType = 'personal' | 'shared';
 
 export default function ExamsPage() {
   const [exams, setExams] = useState<Exam[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedGrade, setSelectedGrade] = useState<Grade | "">("");
+  const [activeTab, setActiveTab] = useState<TabType>("shared");
+  const { user } = useAuthStore();
+  const currentUserId = user?.id || DEMO_USER.id;
 
   const fetchExams = useCallback(async () => {
     setIsLoading(true);
     try {
       if (isDemoMode) {
-        let data = demoDb.getExams();
-        if (selectedGrade) data = data.filter(e => e.grade === Number(selectedGrade));
-        if (searchQuery) data = data.filter(e => e.title.toLowerCase().includes(searchQuery.toLowerCase()));
-        setExams(data);
+        const filter = {
+          grade: selectedGrade ? Number(selectedGrade) : undefined,
+          search: searchQuery || undefined,
+        };
+        if (activeTab === 'shared') {
+          setExams(demoDb.getSharedExams(filter));
+        } else {
+          setExams(demoDb.getPersonalExams(currentUserId, filter));
+        }
       } else {
         const supabase = createClient();
         let query = supabase.from("exams").select("*, exam_questions(count)").order("created_at", { ascending: false });
         if (selectedGrade) query = query.eq("grade", selectedGrade);
         if (searchQuery) query = query.ilike("title", `%${searchQuery}%`);
+        if (activeTab === 'shared') {
+          query = query.eq("exam_status", "shared");
+        } else {
+          const { data: { user: authUser } } = await supabase.auth.getUser();
+          if (authUser) query = query.eq("user_id", authUser.id).neq("exam_status", "shared");
+        }
         const { data, error } = await query.limit(50);
         if (error) throw error;
         setExams(data || []);
@@ -39,7 +66,7 @@ export default function ExamsPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [selectedGrade, searchQuery]);
+  }, [selectedGrade, searchQuery, activeTab, currentUserId]);
 
   useEffect(() => { fetchExams(); }, [fetchExams]);
 
@@ -63,20 +90,57 @@ export default function ExamsPage() {
   const handleClone = async (exam: Exam) => {
     try {
       if (isDemoMode) {
-        demoDb.createExam({ ...exam, title: `${exam.title} (bản sao)` });
+        const cloned = demoDb.createExam({
+          ...exam,
+          title: `${exam.title} (bản sao)`,
+          exam_status: 'personal',
+        });
+        // Clone exam questions
+        const eqs = demoDb.getExamQuestions(exam.id);
+        eqs.forEach(eq => {
+          const newEq = demoDb.addExamQuestion(cloned.id, eq.question_id);
+          demoDb.updateExamQuestionPoints(newEq.id, eq.points);
+        });
       } else {
         const supabase = createClient();
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) return;
+        const { data: { user: authUser } } = await supabase.auth.getUser();
+        if (!authUser) return;
         const { id, created_at, updated_at, ...rest } = exam;
-        const { error } = await supabase.from("exams").insert({ ...rest, title: `${exam.title} (bản sao)`, user_id: user.id });
+        const { error } = await supabase.from("exams").insert({
+          ...rest,
+          title: `${exam.title} (bản sao)`,
+          user_id: authUser.id,
+          exam_status: 'personal',
+        });
         if (error) throw error;
       }
-      toast.success("Đã clone đề thi");
-      fetchExams();
+      toast.success("Đã clone đề thi vào kho cá nhân!");
+      if (activeTab === 'personal') fetchExams();
     } catch {
       toast.error("Không thể clone đề thi");
     }
+  };
+
+  const handleSubmitToShared = async (examId: string) => {
+    if (!confirm("Gửi đề thi này lên kho chung? Đề sẽ cần được duyệt trước khi xuất bản.")) return;
+    try {
+      if (isDemoMode) {
+        demoDb.submitExamToShared(examId);
+      }
+      toast.success("Đã gửi đề lên kho chung! Vui lòng chờ duyệt.");
+      fetchExams();
+    } catch {
+      toast.error("Không thể gửi đề");
+    }
+  };
+
+  const getStatusBadge = (status: ExamStatus) => {
+    const config = EXAM_STATUS_CONFIG[status] || EXAM_STATUS_CONFIG.personal;
+    return (
+      <span className={`inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full border ${config.color}`}>
+        {config.icon} {config.label}
+      </span>
+    );
   };
 
   return (
@@ -96,6 +160,43 @@ export default function ExamsPage() {
         }
       />
       <div className="p-6 space-y-4">
+        {/* Tabs: Kho chung / Đề của tôi */}
+        <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl w-fit">
+          <button
+            onClick={() => setActiveTab("shared")}
+            className={cn(
+              "flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all",
+              activeTab === "shared"
+                ? "bg-white text-blue-700 shadow-sm"
+                : "text-slate-500 hover:text-slate-700"
+            )}
+          >
+            <Globe className="w-4 h-4" /> Kho chung
+          </button>
+          <button
+            onClick={() => setActiveTab("personal")}
+            className={cn(
+              "flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg transition-all",
+              activeTab === "personal"
+                ? "bg-white text-blue-700 shadow-sm"
+                : "text-slate-500 hover:text-slate-700"
+            )}
+          >
+            <User className="w-4 h-4" /> Đề của tôi
+          </button>
+        </div>
+
+        {/* Info banner */}
+        {activeTab === "personal" && (
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-start gap-3">
+            <Shield className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
+            <div className="text-sm text-blue-700">
+              <p className="font-semibold mb-1">Đề cá nhân lưu trên máy của bạn</p>
+              <p className="text-blue-600">Đề tạo mới sẽ chỉ hiển thị cho bạn. Bạn có thể gửi lên kho chung để chia sẻ với đồng nghiệp (cần được duyệt).</p>
+            </div>
+          </div>
+        )}
+
         {/* Toolbar */}
         <div className="bg-white rounded-2xl border border-slate-100 p-4 shadow-sm flex items-center gap-3">
           <div className="relative flex-1">
@@ -127,10 +228,16 @@ export default function ExamsPage() {
             <div className="w-20 h-20 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
               <FileText className="w-10 h-10 text-slate-400" />
             </div>
-            <h3 className="text-xl font-semibold text-slate-700 mb-2">Chưa có đề thi nào</h3>
-            <p className="text-slate-500 mb-6">Bắt đầu tạo đề thi đầu tiên.</p>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">
+              {activeTab === 'shared' ? 'Chưa có đề thi trong kho chung' : 'Chưa có đề cá nhân'}
+            </h3>
+            <p className="text-slate-500 mb-6">
+              {activeTab === 'shared'
+                ? 'Hãy tạo đề thi và gửi lên kho chung để chia sẻ.'
+                : 'Bắt đầu tạo đề thi đầu tiên.'}
+            </p>
             <Link href="/exams/new" className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white rounded-xl gradient-primary hover:opacity-90 shadow-md shadow-blue-500/25">
-              <Plus className="w-4 h-4" /> Tạo đề thi đầu tiên
+              <Plus className="w-4 h-4" /> Tạo đề thi
             </Link>
           </div>
         ) : (
@@ -139,17 +246,27 @@ export default function ExamsPage() {
               <div key={exam.id} className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-slate-800 truncate">
-                      {exam.is_template && <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full mr-2">Đề mẫu</span>}
-                      {exam.title}
-                    </h3>
+                    <div className="flex items-center gap-2 mb-1">
+                      {exam.is_template && <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-200 rounded-full">Đề mẫu</span>}
+                      {activeTab === 'personal' && getStatusBadge(exam.exam_status)}
+                    </div>
+                    <h3 className="font-semibold text-slate-800 truncate">{exam.title}</h3>
                     {exam.description && <p className="text-sm text-slate-500 mt-1 line-clamp-1">{exam.description}</p>}
                   </div>
                   <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity ml-2">
-                    <Link href={`/exams/${exam.id}`} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600"><Eye className="w-4 h-4" /></Link>
-                    <Link href={`/exams/${exam.id}/edit`} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600"><Edit className="w-4 h-4" /></Link>
-                    <button onClick={() => handleClone(exam)} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600"><Copy className="w-4 h-4" /></button>
-                    <button onClick={() => handleDelete(exam.id)} className="p-1.5 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
+                    <Link href={`/exams/${exam.id}`} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600" title="Xem đề"><Eye className="w-4 h-4" /></Link>
+                    {activeTab === 'personal' && (
+                      <Link href={`/exams/${exam.id}/edit`} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600" title="Sửa đề"><Edit className="w-4 h-4" /></Link>
+                    )}
+                    <button onClick={() => handleClone(exam)} className="p-1.5 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600" title="Clone vào đề cá nhân"><Copy className="w-4 h-4" /></button>
+                    {activeTab === 'personal' && exam.exam_status === 'personal' && (
+                      <button onClick={() => handleSubmitToShared(exam.id)} className="p-1.5 rounded-lg hover:bg-green-50 text-slate-400 hover:text-green-600" title="Gửi lên kho chung">
+                        <Send className="w-4 h-4" />
+                      </button>
+                    )}
+                    {activeTab === 'personal' && (
+                      <button onClick={() => handleDelete(exam.id)} className="p-1.5 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600" title="Xóa"><Trash2 className="w-4 h-4" /></button>
+                    )}
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center gap-2">

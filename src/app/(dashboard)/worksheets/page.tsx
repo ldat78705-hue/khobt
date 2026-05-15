@@ -96,7 +96,10 @@ export default function WorksheetPage() {
   const autoTitle = config.title || `PHIẾU BÀI TẬP${filterGrade ? ` TOÁN ${filterGrade}` : ''}`;
 
   const handlePrint = () => {
+    const origTitle = document.title;
+    document.title = ' ';
     window.print();
+    setTimeout(() => { document.title = origTitle; }, 1000);
   };
 
   const handleExportWord = async () => {
@@ -287,6 +290,8 @@ export default function WorksheetPage() {
               <div
                 ref={printRef}
                 id="worksheet-print"
+                contentEditable
+                suppressContentEditableWarning
                 className="worksheet-paper bg-white shadow-lg"
                 style={{
                   width: '210mm',
@@ -307,7 +312,7 @@ export default function WorksheetPage() {
                         <span
                           contentEditable
                           suppressContentEditableWarning
-                          onBlur={e => setConfig(p => ({ ...p, centerName: e.currentTarget.textContent || '' }))}
+                          onBlur={e => setConfig(p => ({ ...p, centerName: e.currentTarget?.textContent || '' }))}
                           style={{ outline: 'none', borderBottom: '1px dashed transparent' }}
                           className="hover:border-blue-300 focus:border-blue-400"
                         >
@@ -321,7 +326,7 @@ export default function WorksheetPage() {
                         <span
                           contentEditable
                           suppressContentEditableWarning
-                          onBlur={e => setConfig(p => ({ ...p, teacherName: e.currentTarget.textContent || '' }))}
+                          onBlur={e => setConfig(p => ({ ...p, teacherName: e.currentTarget?.textContent || '' }))}
                           style={{ outline: 'none', fontWeight: '600', fontStyle: 'normal' }}
                         >
                           {config.teacherName}
@@ -336,7 +341,7 @@ export default function WorksheetPage() {
                   <p
                     contentEditable
                     suppressContentEditableWarning
-                    onBlur={e => setConfig(p => ({ ...p, title: e.currentTarget.textContent || '' }))}
+                    onBlur={e => setConfig(p => ({ ...p, title: e.currentTarget?.textContent || '' }))}
                     style={{
                       fontSize: `${config.fontSize + 3}pt`,
                       fontWeight: 'bold',
@@ -354,7 +359,7 @@ export default function WorksheetPage() {
                     <p
                       contentEditable
                       suppressContentEditableWarning
-                      onBlur={e => setConfig(p => ({ ...p, studentNote: e.currentTarget.textContent || '' }))}
+                      onBlur={e => setConfig(p => ({ ...p, studentNote: e.currentTarget?.textContent || '' }))}
                       style={{ fontSize: `${config.fontSize - 1}pt`, fontStyle: 'italic', color: '#333', marginTop: '2px', outline: 'none' }}
                     >
                       {config.studentNote}

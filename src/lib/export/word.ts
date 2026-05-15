@@ -2,45 +2,91 @@ import {
   Document, Packer, Paragraph, TextRun, HeadingLevel,
   AlignmentType, BorderStyle, Math as DocxMath, MathRun,
   MathFraction, MathSuperScript, MathSubScript, MathRadical,
-  ImageRun,
+  ImageRun, Table, TableRow, TableCell, WidthType,
 } from "docx";
-import { saveAs } from "file-saver";
+// Download .docx file with correct filename
+// Uses File System Access API (Save As dialog) — guaranteed correct filename
+export async function downloadDocx(blob: Blob, fileName: string) {
+  const name = fileName.endsWith('.docx') ? fileName : `${fileName}.docx`;
+  const docxBlob = new Blob([blob], {
+    type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+  });
+
+  // Method 1: File System Access API (Chrome 86+, Edge 86+)
+  if ('showSaveFilePicker' in window) {
+    try {
+      const handle = await (window as any).showSaveFilePicker({
+        suggestedName: name,
+        types: [{
+          description: 'Word Document',
+          accept: { 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': ['.docx'] },
+        }],
+      });
+      const writable = await handle.createWritable();
+      await writable.write(docxBlob);
+      await writable.close();
+      return;
+    } catch (err: any) {
+      // User cancelled the dialog — not an error
+      if (err?.name === 'AbortError') return;
+      // Fall through to fallback
+    }
+  }
+
+  // Method 2: Fallback — anchor element with blob URL
+  const url = URL.createObjectURL(docxBlob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = name;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 1000);
+}
 import type { Exam, ExamQuestion, Question, ExamSettings } from "@/types";
 
 /**
- * Parse LaTeX content and convert to docx paragraph children.
- * Supports inline $...$ and block $$...$$ LaTeX.
- * LaTeX is exported as OMML (Office Math Markup Language) which
- * Microsoft Word renders natively as editable math equations.
+ * Parse content and convert to docx paragraph children.
+ * LaTeX formulas ($...$) are kept as-is in the text so teachers
+ * can use MathType plugin in Word to batch-convert them.
+ * LaTeX text is styled in italic to distinguish from regular text.
  */
-function parseContentToDocxChildren(text: string): (TextRun | DocxMath)[] {
+function parseContentToDocxChildren(text: string, fontSize = 26, isBold = false): TextRun[] {
   if (!text) return [];
   
-  const children: (TextRun | DocxMath)[] = [];
+  const children: TextRun[] = [];
   
   // Split by LaTeX delimiters: $$...$$ (block) and $...$ (inline)
-  // Process block math first ($$...$$), then inline ($...$)
-  const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$]*?\$)/g);
+  const parts = text.split(/(\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g);
   
   for (const part of parts) {
     if (!part) continue;
     
-    if (part.startsWith('$$') && part.endsWith('$$')) {
-      // Block LaTeX -> OMML Math
-      const latex = part.slice(2, -2).trim();
-      children.push(createOmmlFromLatex(latex));
-    } else if (part.startsWith('$') && part.endsWith('$') && part.length > 2) {
-      // Inline LaTeX -> OMML Math  
-      const latex = part.slice(1, -1).trim();
-      children.push(createOmmlFromLatex(latex));
+    if ((part.startsWith('$$') && part.endsWith('$$') && part.length > 4) ||
+        (part.startsWith('$') && part.endsWith('$') && part.length > 2)) {
+      // LaTeX formula — keep as-is with $ delimiters, style italic
+      children.push(
+        new TextRun({
+          text: part,
+          size: fontSize,
+          font: "Times New Roman",
+          italics: true,
+          bold: isBold,
+        })
+      );
     } else {
       // Regular text
-      if (part.trim()) {
+      const cleanText = part.trim();
+      if (cleanText) {
         children.push(
           new TextRun({
-            text: part,
-            size: 26, // 13pt
+            text: cleanText + ' ',
+            size: fontSize,
             font: "Times New Roman",
+            bold: isBold,
           })
         );
       }
@@ -48,6 +94,89 @@ function parseContentToDocxChildren(text: string): (TextRun | DocxMath)[] {
   }
   
   return children;
+}
+
+/**
+ * Check if a text block contains a markdown table.
+ */
+function isMarkdownTable(text: string): boolean {
+  const lines = text.trim().split('\n');
+  return lines.length >= 2 && lines[0].includes('|') && lines[1].includes('---');
+}
+
+/**
+ * Convert a markdown table to a Word Table object.
+ */
+function markdownTableToDocxTable(text: string): Table {
+  const lines = text.trim().split('\n').filter(l => l.trim().startsWith('|'));
+  const parseRow = (line: string) =>
+    line.split('|').map(c => c.trim()).filter(c => c.length > 0 && !c.match(/^[-:]+$/));
+  
+  // Filter out the separator row (contains only |, -, :, spaces)
+  const dataLines = lines.filter(l => {
+    const cells = l.split('|').map(c => c.trim()).filter(c => c.length > 0);
+    return !cells.every(c => /^[-:]+$/.test(c));
+  });
+  const rows = dataLines.map(parseRow).filter(r => r.length > 0);
+  if (rows.length === 0) return new Table({ rows: [] });
+
+  const colCount = Math.max(...rows.map(r => r.length));
+
+  return new Table({
+    width: { size: 100, type: WidthType.PERCENTAGE },
+    rows: rows.map((cells, rowIdx) => new TableRow({
+      children: Array.from({ length: colCount }, (_, i) => {
+        const cellText = cells[i] || '';
+        const cellChildren = parseContentToDocxChildren(cellText, 22);
+        return new TableCell({
+          children: [new Paragraph({
+            alignment: AlignmentType.CENTER,
+            children: rowIdx === 0
+              ? parseContentToDocxChildren(cellText, 22, true)
+              : cellChildren.length > 0 ? cellChildren : [new TextRun({ text: cellText, size: 22, font: 'Times New Roman' })],
+          })],
+          borders: {
+            top: { style: BorderStyle.SINGLE, size: 1, color: '000000' },
+            bottom: { style: BorderStyle.SINGLE, size: 1, color: '000000' },
+            left: { style: BorderStyle.SINGLE, size: 1, color: '000000' },
+            right: { style: BorderStyle.SINGLE, size: 1, color: '000000' },
+          },
+        });
+      }),
+    })),
+  });
+}
+
+/**
+ * Parse multi-line content into an array of Paragraph (and Table).
+ * Each \n creates a new paragraph. Markdown tables become Word tables.
+ */
+export function parseContentToDocxParagraphs(text: string, fontSize = 26): (Paragraph | Table)[] {
+  if (!text) return [];
+  const results: (Paragraph | Table)[] = [];
+  
+  // Split by double newline to find table blocks vs text blocks
+  const blocks = text.split(/\n\n/);
+  
+  for (const block of blocks) {
+    if (isMarkdownTable(block)) {
+      results.push(markdownTableToDocxTable(block));
+    } else {
+      // Split single block by \n for sub-lines (a), b), c) etc.)
+      const lines = block.split('\n');
+      for (const line of lines) {
+        if (!line.trim()) continue;
+        const children = parseContentToDocxChildren(line);
+        if (children.length > 0) {
+          results.push(new Paragraph({
+            spacing: { before: 40, after: 20 },
+            children,
+          }));
+        }
+      }
+    }
+  }
+  return results;
 }
 
 /**
@@ -334,28 +463,39 @@ export async function exportToWord(
     ? createWorksheetHeader(exam.settings || {}, exam.title)
     : createExamHeader(exam.settings || {}, exam.title, exam.duration, exam.grade);
 
-  const questionParagraphs: Paragraph[] = [];
+  const questionParagraphs: (Paragraph | Table)[] = [];
   const label = options.isWorksheet ? 'Bài' : 'Câu';
 
   for (const [index, eq] of questions.entries()) {
     const q = eq.question;
 
-    // Question number + content with LaTeX as OMML
-    const contentChildren = parseContentToDocxChildren(q.content);
-    const children: (TextRun | DocxMath)[] = [
+    // Split content into first line (with question number) + rest
+    const contentLines = (q.content || '').split('\n');
+    const firstLine = contentLines[0] || '';
+    const restContent = contentLines.slice(1).join('\n');
+
+    // Question header: "Câu X (Y điểm). <first line>"
+    const firstLineChildren = parseContentToDocxChildren(firstLine);
+    const headerChildren: (TextRun | DocxMath)[] = [
       new TextRun({ text: `${label} ${index + 1}`, bold: true, size: 26, font: "Times New Roman" }),
     ];
     if (!options.isWorksheet && eq.points) {
-      children.push(new TextRun({ text: ` (${eq.points} điểm)`, size: 22, font: "Times New Roman", italics: true }));
+      headerChildren.push(new TextRun({ text: ` (${eq.points} điểm)`, size: 22, font: "Times New Roman", italics: true }));
     }
-    children.push(new TextRun({ text: `. `, size: 26, font: "Times New Roman" }));
-    children.push(...contentChildren);
+    headerChildren.push(new TextRun({ text: `. `, size: 26, font: "Times New Roman" }));
+    headerChildren.push(...firstLineChildren);
     questionParagraphs.push(
       new Paragraph({
-        spacing: { before: options.isWorksheet ? 120 : 200, after: options.isWorksheet ? 40 : 100 },
-        children,
+        spacing: { before: options.isWorksheet ? 120 : 200, after: 40 },
+        children: headerChildren,
       })
     );
+
+    // Remaining content lines (sub-questions, tables, etc.)
+    if (restContent.trim()) {
+      const extraParagraphs = parseContentToDocxParagraphs(restContent);
+      questionParagraphs.push(...extraParagraphs);
+    }
 
     // Images (from Cloudinary or inline)
     if (q.images && q.images.length > 0) {
@@ -495,5 +635,12 @@ export async function exportToWord(
 
   const doc = new Document({ sections });
   const blob = await Packer.toBlob(doc);
-  saveAs(blob, `${exam.title}.docx`);
+  
+  // Sanitize filename: remove special chars, ensure .docx extension
+  const safeName = exam.title
+    .replace(/[<>:"/\\|?*]/g, '') // Remove invalid filename chars
+    .replace(/\s+/g, ' ')         // Normalize spaces
+    .trim() || 'DeThi';
+  
+  await downloadDocx(blob, safeName);
 }

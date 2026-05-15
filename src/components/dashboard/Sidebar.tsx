@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, FileText, FolderOpen, Settings,
   Users, ChevronLeft, ChevronRight, GraduationCap, Plus,
   LogOut, FolderTree, CheckCircle, Heart, Bookmark, Sparkles,
-  BarChart3, Clock, Download, ClipboardList
+  BarChart3, Clock, Download, ClipboardList, Wrench
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
@@ -16,29 +16,78 @@ import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { isDemoMode, DEMO_USER } from "@/lib/demo-data";
 
-const navItems = [
+// ===== MENU CHÍNH — Tất cả GV đều thấy =====
+const mainItems = [
   { href: "/dashboard", icon: LayoutDashboard, label: "Tổng quan" },
   { href: "/questions", icon: BookOpen, label: "Kho bài tập" },
   { href: "/exams", icon: FileText, label: "Kho đề thi" },
-  { href: "/exams/auto", icon: Sparkles, label: "Tạo đề tự động" },
-  { href: "/questions/export", icon: Download, label: "Xuất bài tập" },
-  { href: "/worksheets", icon: ClipboardList, label: "Phiếu bài tập" },
 ];
 
+// ===== SOẠN ĐỀ — Công cụ tạo đề =====
+const toolItems = [
+  { href: "/exams/auto", icon: Sparkles, label: "Tạo đề tự động" },
+  { href: "/worksheets", icon: ClipboardList, label: "Phiếu bài tập" },
+  { href: "/questions/export", icon: Download, label: "Xuất bài tập" },
+];
+
+// ===== CÁ NHÂN =====
 const personalItems = [
   { href: "/favorites", icon: Heart, label: "Yêu thích" },
   { href: "/saved-exams", icon: Bookmark, label: "Đề đã lưu" },
   { href: "/history", icon: Clock, label: "Lịch sử" },
 ];
 
-const adminItems = [
+// ===== DUYỆT — Reviewer + Admin thấy =====
+const reviewItems = [
   { href: "/admin/review", icon: CheckCircle, label: "Duyệt bài tập" },
+  { href: "/admin/review-exams", icon: FileText, label: "Duyệt đề thi" },
   { href: "/admin/stats", icon: BarChart3, label: "Thống kê" },
+];
+
+// ===== QUẢN TRỊ — Chỉ Admin thấy =====
+const adminOnlyItems = [
   { href: "/admin/categories", icon: FolderTree, label: "Quản lý danh mục" },
   { href: "/admin/grades", icon: GraduationCap, label: "Lớp & Loại đề" },
   { href: "/admin/users", icon: Users, label: "Quản lý người dùng" },
-  { href: "/admin/settings", icon: Settings, label: "Cài đặt" },
+  { href: "/admin/settings", icon: Settings, label: "Cài đặt hệ thống" },
 ];
+
+function NavSection({ 
+  title, items, pathname, isCollapsed 
+}: { 
+  title: string; 
+  items: typeof mainItems; 
+  pathname: string; 
+  isCollapsed: boolean;
+}) {
+  return (
+    <div className="pt-3">
+      <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 mb-1.5">
+        {!isCollapsed && title}
+      </div>
+      {items.map((item) => {
+        const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={cn(
+              "flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-all",
+              isActive
+                ? "bg-blue-50 text-blue-700"
+                : "text-slate-600 hover:bg-slate-50 hover:text-slate-800",
+              isCollapsed && "justify-center px-2"
+            )}
+            title={isCollapsed ? item.label : undefined}
+          >
+            <item.icon className={cn("w-[18px] h-[18px] flex-shrink-0", isActive && "text-blue-600")} />
+            {!isCollapsed && item.label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -77,7 +126,7 @@ export function Sidebar() {
       </div>
 
       {/* Quick action */}
-      <div className="px-3 py-4">
+      <div className="px-3 py-3">
         <Link
           href="/questions/new"
           className={cn(
@@ -91,89 +140,29 @@ export function Sidebar() {
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
-        <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">
-          {!isCollapsed && "Menu chính"}
-        </div>
-        {navItems.map((item) => {
-          const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={cn(
-                "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
-                isActive
-                  ? "bg-blue-50 text-blue-700"
-                  : "text-slate-600 hover:bg-slate-50 hover:text-slate-800",
-                isCollapsed && "justify-center px-2"
-              )}
-              title={isCollapsed ? item.label : undefined}
-            >
-              <item.icon className={cn("w-5 h-5 flex-shrink-0", isActive && "text-blue-600")} />
-              {!isCollapsed && item.label}
-            </Link>
-          );
-        })}
+      <nav className="flex-1 px-3 overflow-y-auto pb-2">
+        {/* Menu chính */}
+        <NavSection title="Menu chính" items={mainItems} pathname={pathname} isCollapsed={isCollapsed} />
 
-        <div className="pt-4">
-          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">
-            {!isCollapsed && "Cá nhân"}
-          </div>
-          {personalItems.map((item) => {
-            const isActive = pathname === item.href || pathname.startsWith(item.href + "/");
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
-                  isActive
-                    ? "bg-blue-50 text-blue-700"
-                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-800",
-                  isCollapsed && "justify-center px-2"
-                )}
-                title={isCollapsed ? item.label : undefined}
-              >
-                <item.icon className={cn("w-5 h-5 flex-shrink-0", isActive && "text-blue-600")} />
-                {!isCollapsed && item.label}
-              </Link>
-            );
-          })}
-        </div>
+        {/* Công cụ soạn đề */}
+        <NavSection title="Công cụ" items={toolItems} pathname={pathname} isCollapsed={isCollapsed} />
 
-        {/* Admin section - only for admin/reviewer */}
+        {/* Cá nhân */}
+        <NavSection title="Cá nhân" items={personalItems} pathname={pathname} isCollapsed={isCollapsed} />
+
+        {/* Duyệt & Thống kê — Reviewer + Admin */}
         {(isAdmin || isReviewer) && (
-        <div className="pt-4">
-          <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 mb-2">
-            {!isCollapsed && "Quản trị"}
-          </div>
-          {adminItems.map((item) => {
-            const isActive = pathname.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
-                  isActive
-                    ? "bg-blue-50 text-blue-700"
-                    : "text-slate-600 hover:bg-slate-50 hover:text-slate-800",
-                  isCollapsed && "justify-center px-2"
-                )}
-                title={isCollapsed ? item.label : undefined}
-              >
-                <item.icon className={cn("w-5 h-5 flex-shrink-0", isActive && "text-blue-600")} />
-                {!isCollapsed && item.label}
-              </Link>
-            );
-          })}
-        </div>
+          <NavSection title="Duyệt & Báo cáo" items={reviewItems} pathname={pathname} isCollapsed={isCollapsed} />
+        )}
+
+        {/* Quản trị — Chỉ Admin */}
+        {isAdmin && (
+          <NavSection title="Quản trị" items={adminOnlyItems} pathname={pathname} isCollapsed={isCollapsed} />
         )}
       </nav>
 
       {/* Bottom */}
-      <div className="p-3 border-t border-slate-100 space-y-1">
+      <div className="p-3 border-t border-slate-100">
         <button
           onClick={handleLogout}
           className={cn(

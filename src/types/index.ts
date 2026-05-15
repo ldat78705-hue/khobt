@@ -187,6 +187,8 @@ export interface QuestionReport {
 }
 
 // Exam types
+export type ExamStatus = 'personal' | 'pending' | 'shared' | 'rejected';
+
 export interface Exam {
   id: string;
   title: string;
@@ -198,10 +200,15 @@ export interface Exam {
   tags?: string[];
   settings: ExamSettings;
   is_template: boolean;
+  exam_status: ExamStatus; // personal = chỉ GV thấy, pending = chờ duyệt, shared = kho chung
+  submitted_at?: string; // Thời điểm gửi lên kho
+  reviewed_by?: string;
+  review_note?: string;
   created_at: string;
   updated_at: string;
   questions?: ExamQuestion[];
   question_count?: number;
+  author?: Profile; // Joined
 }
 
 export interface ExamSettings {

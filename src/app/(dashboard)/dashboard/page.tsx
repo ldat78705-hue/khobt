@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
-import { BookOpen, FileText, FolderOpen, TrendingUp, Plus, ArrowRight, Clock, Sparkles, CheckCircle, Download, BarChart3, Target } from "lucide-react";
+import { BookOpen, FileText, TrendingUp, Plus, ArrowRight, Clock, Sparkles, CheckCircle, Download, BarChart3, Target } from "lucide-react";
 import Link from "next/link";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { createClient } from "@/lib/supabase/client";
@@ -14,7 +14,7 @@ import type { Question } from "@/types";
 export default function DashboardPage() {
   const [questionCount, setQuestionCount] = useState(0);
   const [examCount, setExamCount] = useState(0);
-  const [folderCount, setFolderCount] = useState(0);
+
   const [recentQuestions, setRecentQuestions] = useState<Question[]>([]);
   const [pendingCount, setPendingCount] = useState(0);
   const [gradeDistribution, setGradeDistribution] = useState<Record<number, number>>({});
@@ -26,7 +26,6 @@ export default function DashboardPage() {
       const qs = demoDb.getQuestions();
       setQuestionCount(qs.length);
       setExamCount(demoDb.getExams().length);
-      setFolderCount(demoDb.getFolders().length);
       setPendingCount(qs.filter(q => q.status === 'pending').length);
       setRecentQuestions(qs.slice(0, 5));
 
@@ -47,14 +46,12 @@ export default function DashboardPage() {
       setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
     } else {
       const supabase = createClient();
-      const [qRes, eRes, fRes] = await Promise.all([
+      const [qRes, eRes] = await Promise.all([
         supabase.from("questions").select("*", { count: "exact", head: false }).order("created_at", { ascending: false }).limit(5),
         supabase.from("exams").select("*", { count: "exact", head: true }),
-        supabase.from("folders").select("*", { count: "exact", head: true }),
       ]);
       setQuestionCount(qRes.count || 0);
       setExamCount(eRes.count || 0);
-      setFolderCount(fRes.count || 0);
       setRecentQuestions(qRes.data || []);
     }
   }, []);
@@ -65,7 +62,6 @@ export default function DashboardPage() {
     { label: "Bài tập", value: questionCount, icon: BookOpen, color: "bg-blue-500", desc: "Trong kho" },
     { label: "Đề thi", value: examCount, icon: FileText, color: "bg-indigo-500", desc: "Đã tạo" },
     { label: "Chờ duyệt", value: pendingCount, icon: CheckCircle, color: "bg-amber-500", desc: "Bài tập" },
-    { label: "Thư mục", value: folderCount, icon: FolderOpen, color: "bg-purple-500", desc: "Phân loại" },
   ];
 
   const quickActions = [
