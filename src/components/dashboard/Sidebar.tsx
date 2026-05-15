@@ -99,11 +99,18 @@ export function Sidebar() {
   const isReviewer = currentRole === 'reviewer';
 
   const handleLogout = async () => {
-    const supabase = createClient();
-    await supabase.auth.signOut();
-    toast.success("Đã đăng xuất");
-    router.push("/login");
-    router.refresh();
+    try {
+      if (!isDemoMode) {
+        await fetch('/api/auth/logout', { method: 'POST' });
+        const supabase = createClient();
+        await supabase.auth.signOut();
+      }
+      toast.success("Đã đăng xuất");
+      router.push("/login");
+      router.refresh();
+    } catch {
+      toast.error("Lỗi khi đăng xuất");
+    }
   };
 
   return (
