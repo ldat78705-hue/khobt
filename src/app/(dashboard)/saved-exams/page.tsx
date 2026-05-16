@@ -18,15 +18,35 @@ export default function SavedExamsPage() {
     setIsLoading(true);
     if (isDemoMode) {
       setExams(demoDb.getSavedExamList(DEMO_USER.id));
+      setIsLoading(false);
+    } else {
+      fetch('/api/saved-exams?full=true')
+        .then(res => res.json())
+        .then(data => { setExams(Array.isArray(data) ? data : []); })
+        .catch(() => {})
+        .finally(() => setIsLoading(false));
     }
-    setIsLoading(false);
   }, []);
 
-  const handleRemoveSaved = (examId: string) => {
+  const handleRemoveSaved = async (examId: string) => {
     if (isDemoMode) {
       demoDb.toggleSavedExam(DEMO_USER.id, examId);
       setExams(prev => prev.filter(e => e.id !== examId));
       toast.success("Đã bỏ lưu đề thi");
+    } else {
+      try {
+        const res = await fetch('/api/saved-exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ exam_id: examId }),
+        });
+        if (res.ok) {
+          setExams(prev => prev.filter(e => e.id !== examId));
+          toast.success("Đã bỏ lưu đề thi");
+        }
+      } catch {
+        toast.error("Không thể bỏ lưu");
+      }
     }
   };
 

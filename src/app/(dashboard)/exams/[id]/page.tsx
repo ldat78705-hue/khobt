@@ -64,6 +64,11 @@ export default function ExamDetailPage() {
           }
         }));
         setExamQuestions(eqs);
+        // Check saved status
+        fetch('/api/saved-exams')
+          .then(r => r.json())
+          .then(d => { if (d.ids) setIsSaved(d.ids.includes(examId)); })
+          .catch(() => {});
       }
     } catch {
       toast.error("Không thể tải đề thi");
@@ -143,11 +148,26 @@ export default function ExamDetailPage() {
     }
   };
 
-  const handleToggleSaved = () => {
+  const handleToggleSaved = async () => {
     if (isDemoMode) {
       const result = demoDb.toggleSavedExam(DEMO_USER.id, examId);
       setIsSaved(result);
       toast.success(result ? "Đã lưu đề thi" : "Đã bỏ lưu");
+    } else {
+      try {
+        const res = await fetch('/api/saved-exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ exam_id: examId }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setIsSaved(data.saved);
+          toast.success(data.saved ? "Đã lưu đề thi" : "Đã bỏ lưu");
+        }
+      } catch {
+        toast.error("Không thể cập nhật");
+      }
     }
   };
 

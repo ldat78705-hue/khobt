@@ -529,3 +529,78 @@ export async function getQuestionStatsByGrade() {
     ORDER BY grade
   `;
 }
+
+// ==========================================
+// SAVED EXAMS
+// ==========================================
+
+export async function getSavedExamIds(userId: string): Promise<string[]> {
+  const sql = getDb();
+  const result = await sql`
+    SELECT exam_id FROM public.saved_exams WHERE user_id = ${userId}
+  `;
+  return result.map((r: any) => r.exam_id);
+}
+
+export async function getSavedExams(userId: string) {
+  const sql = getDb();
+  return await sql`
+    SELECT e.*, u.full_name as author_name
+    FROM public.saved_exams se
+    JOIN public.exams e ON se.exam_id = e.id
+    LEFT JOIN public.users u ON e.user_id = u.id
+    WHERE se.user_id = ${userId}
+    ORDER BY se.created_at DESC
+  `;
+}
+
+export async function toggleSavedExam(userId: string, examId: string): Promise<boolean> {
+  const sql = getDb();
+  const existing = await sql`
+    SELECT id FROM public.saved_exams WHERE user_id = ${userId} AND exam_id = ${examId}
+  `;
+  if (existing.length > 0) {
+    await sql`DELETE FROM public.saved_exams WHERE user_id = ${userId} AND exam_id = ${examId}`;
+    return false; // removed
+  } else {
+    await sql`INSERT INTO public.saved_exams (user_id, exam_id) VALUES (${userId}, ${examId})`;
+    return true; // added
+  }
+}
+
+// ==========================================
+// ACTIVITY / HISTORY
+// ==========================================
+
+export async function getUserActivity(userId: string, limit: number = 30) {
+  const sql = getDb();
+  // Union of recent questions created, exams created, and favorites added
+  return await sql`
+    (
+      SELECT 'create' as type, id, content as title, '/questions/' || id as link, created_at as time
+      FROM public.questions
+      WHERE user_id = ${userId}
+      ORDER BY created_at DESC
+      LIMIT ${Math.ceil(limit / 3)}
+    )
+    UNION ALL
+    (
+      SELECT 'exam_create' as type, id, title, '/exams/' || id as link, created_at as time
+      FROM public.exams
+      WHERE user_id = ${userId}
+      ORDER BY created_at DESC
+      LIMIT ${Math.ceil(limit / 3)}
+    )
+    UNION ALL
+    (
+      SELECT 'favorite' as type, f.id, q.content as title, '/questions/' || q.id as link, f.created_at as time
+      FROM public.favorites f
+      JOIN public.questions q ON f.question_id = q.id
+      WHERE f.user_id = ${userId}
+      ORDER BY f.created_at DESC
+      LIMIT ${Math.ceil(limit / 3)}
+    )
+    ORDER BY time DESC
+    LIMIT ${limit}
+  `;
+}

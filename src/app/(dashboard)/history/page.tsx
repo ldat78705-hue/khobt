@@ -71,6 +71,26 @@ export default function HistoryPage() {
 
       items.sort((a, b) => new Date(b.time).getTime() - new Date(a.time).getTime());
       setActivities(items);
+    } else {
+      // Production: fetch from API
+      fetch('/api/activity')
+        .then(res => res.json())
+        .then((data: any[]) => {
+          if (!Array.isArray(data)) return;
+          const items: ActivityItem[] = data.map((d, i) => ({
+            id: `act-${i}-${d.id}`,
+            type: d.type as ActivityItem['type'],
+            title: d.type === 'create'
+              ? `Tạo bài tập: ${stripLatex(d.title || '').slice(0, 60)}`
+              : d.type === 'exam_create'
+              ? `Tạo đề thi: ${(d.title || '').slice(0, 60)}`
+              : `Yêu thích: ${stripLatex(d.title || '').slice(0, 60)}`,
+            link: d.link,
+            time: d.time,
+          }));
+          setActivities(items);
+        })
+        .catch(() => {});
     }
   }, []);
 
