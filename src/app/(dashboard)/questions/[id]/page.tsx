@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
-import { ArrowLeft, Edit, Copy, Trash2, Heart, Shield, AlertTriangle, Clock, ThumbsUp, Flag, X, Send, BookOpen, Share2 } from "lucide-react";
+import { ArrowLeft, Edit, Copy, Trash2, Heart, Shield, AlertTriangle, Clock, ThumbsUp, Flag, X, Send, BookOpen, Share2, Presentation } from "lucide-react";
+import QuestionPresentation from "@/components/shared/QuestionPresentation";
 import Link from "next/link";
 import { formatDate, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import type { Question } from "@/types";
@@ -28,6 +29,7 @@ export default function QuestionDetailPage() {
   const [showReportModal, setShowReportModal] = useState(false);
   const [reportReason, setReportReason] = useState("");
   const [relatedQuestions, setRelatedQuestions] = useState<Question[]>([]);
+  const [showPresentation, setShowPresentation] = useState(false);
   const { user } = useAuthStore();
 
   const currentUser = user || DEMO_USER;
@@ -326,6 +328,9 @@ export default function QuestionDetailPage() {
               <button onClick={handleClone} className="p-2 rounded-lg hover:bg-indigo-50 text-slate-400 hover:text-indigo-600" title="Nhân bản bài tập">
                 <BookOpen className="w-4 h-4" />
               </button>
+              <button onClick={() => setShowPresentation(true)} className="p-2 rounded-lg hover:bg-purple-50 text-slate-400 hover:text-purple-600" title="Trình chiếu bài tập">
+                <Presentation className="w-4 h-4" />
+              </button>
               <button onClick={handleShare} className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-green-600" title="Chia sẻ">
                 <Share2 className="w-4 h-4" />
               </button>
@@ -528,6 +533,14 @@ export default function QuestionDetailPage() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Question Presentation mode */}
+      {showPresentation && question && (
+        <QuestionPresentation
+          question={question}
+          onClose={() => setShowPresentation(false)}
+        />
       )}
     </>
   );

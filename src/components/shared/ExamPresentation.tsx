@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { MathRenderer } from "@/components/shared/MathRenderer";
 import type { Exam, ExamQuestion, Question } from "@/types";
-import { getDifficultyLabel, getTopicLabel } from "@/lib/utils";
+import { getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 interface ExamPresentationProps {
@@ -240,7 +240,7 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
                 {exam.duration && <span className="px-4 py-2 bg-white/10 rounded-full flex items-center gap-2"><Clock className="w-4 h-4" /> {exam.duration} phút</span>}
                 <span className="px-4 py-2 bg-white/10 rounded-full flex items-center gap-2"><BookOpen className="w-4 h-4" /> {questions.length} câu</span>
               </div>
-              {examType && <p className="text-white/40 text-[0.6em]">{examType}{schoolYear ? ` — Năm học ${schoolYear}` : ""}</p>}
+              {examType && <p className="text-white/40 text-[0.6em]">{getQuestionTypeLabel(examType)}{schoolYear ? ` — Năm học ${schoolYear}` : ""}</p>}
               <p className="text-white/30 text-[0.45em] pt-4 animate-pulse">
                 Nhấn → hoặc Space để bắt đầu
               </p>
