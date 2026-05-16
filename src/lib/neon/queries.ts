@@ -608,3 +608,40 @@ export async function getUserActivity(userId: string, limit: number = 30) {
     LIMIT ${limit}
   `;
 }
+
+// ==========================================
+// LIKES
+// ==========================================
+
+export async function toggleLike(userId: string, questionId: string) {
+  const sql = getRawDb();
+  // Check if already liked
+  const existing = await sql`
+    SELECT id FROM public.likes WHERE user_id = ${userId}::uuid AND question_id = ${questionId}::uuid
+  `;
+  if (existing.length > 0) {
+    await sql`DELETE FROM public.likes WHERE user_id = ${userId}::uuid AND question_id = ${questionId}::uuid`;
+    const countResult = await sql`SELECT COUNT(*)::int as count FROM public.likes WHERE question_id = ${questionId}::uuid`;
+    return { liked: false, count: countResult[0]?.count || 0 };
+  } else {
+    await sql`INSERT INTO public.likes (user_id, question_id) VALUES (${userId}::uuid, ${questionId}::uuid)`;
+    const countResult = await sql`SELECT COUNT(*)::int as count FROM public.likes WHERE question_id = ${questionId}::uuid`;
+    return { liked: true, count: countResult[0]?.count || 0 };
+  }
+}
+
+export async function isLiked(userId: string, questionId: string) {
+  const sql = getRawDb();
+  const result = await sql`
+    SELECT id FROM public.likes WHERE user_id = ${userId}::uuid AND question_id = ${questionId}::uuid
+  `;
+  return result.length > 0;
+}
+
+export async function getLikeCount(questionId: string) {
+  const sql = getRawDb();
+  const result = await sql`
+    SELECT COUNT(*)::int as count FROM public.likes WHERE question_id = ${questionId}::uuid
+  `;
+  return result[0]?.count || 0;
+}

@@ -58,6 +58,11 @@ export default function QuestionDetailPage() {
           .then(r => r.json())
           .then(d => { if (d.ids) setIsFavorite(d.ids.includes(questionId)); })
           .catch(() => {});
+        // Check like status
+        fetch(`/api/likes?question_id=${questionId}`)
+          .then(r => r.json())
+          .then(d => { setIsLiked(d.liked || false); setLikeCount(d.count || 0); })
+          .catch(() => {});
       }
     } catch {
       toast.error("Không thể tải bài tập");
@@ -183,11 +188,24 @@ export default function QuestionDetailPage() {
       setLikeCount(result.count);
       toast.success(result.liked ? "Bài tập hay! 👍" : "Đã bỏ thích");
     } else {
-      // Like toggling — optimistic update
+      // Optimistic update
       const newLiked = !isLiked;
       setIsLiked(newLiked);
       setLikeCount(prev => newLiked ? prev + 1 : Math.max(0, prev - 1));
       toast.success(newLiked ? "Bài tập hay! 👍" : "Đã bỏ thích");
+      // Persist to API
+      try {
+        const res = await fetch('/api/likes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question_id: questionId }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setIsLiked(data.liked);
+          setLikeCount(data.count);
+        }
+      } catch { /* keep optimistic state */ }
     }
   };
 
