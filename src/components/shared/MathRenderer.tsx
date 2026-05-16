@@ -39,43 +39,69 @@ export const MathRenderer = memo(MathRendererInner);
 
 /**
  * Render LaTeX content to HTML string (for use in clipboard, etc.)
+ * 
+ * IMPORTANT: KaTeX generates SVG with newlines inside <path d="..."> attributes.
+ * We must NOT blindly replace \n with <br/> after KaTeX renders, as that corrupts
+ * SVG paths (e.g. \sqrt symbol disappears). Instead, we use a placeholder approach:
+ * 1. Render KaTeX math → store in placeholders
+ * 2. Apply newline→<br/> only on plain text portions
+ * 3. Restore KaTeX HTML from placeholders
  */
 export function renderMathContent(text: string): string {
   if (!text) return '';
 
+  // Placeholder storage for rendered KaTeX HTML
+  const placeholders: string[] = [];
+  const PLACEHOLDER_PREFIX = '\x00KATEX_';
+  const PLACEHOLDER_SUFFIX = '\x00';
+
+  const storePlaceholder = (html: string): string => {
+    const idx = placeholders.length;
+    placeholders.push(html);
+    return `${PLACEHOLDER_PREFIX}${idx}${PLACEHOLDER_SUFFIX}`;
+  };
+
   // First handle block math ($$...$$) - these become centered blocks
   let result = text.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
     try {
-      return `<div class="katex-block">${katex.renderToString(latex.trim(), {
+      const rendered = `<div class="katex-block">${katex.renderToString(latex.trim(), {
         displayMode: true,
         throwOnError: false,
         trust: true,
         strict: false,
       })}</div>`;
+      return storePlaceholder(rendered);
     } catch {
-      return `<div class="katex-error">${latex}</div>`;
+      return storePlaceholder(`<div class="katex-error">${latex}</div>`);
     }
   });
 
   // Then handle inline math ($...$)
   result = result.replace(/\$([^$]+?)\$/g, (_, latex) => {
     try {
-      return katex.renderToString(latex.trim(), {
+      const rendered = katex.renderToString(latex.trim(), {
         displayMode: false,
         throwOnError: false,
         trust: true,
         strict: false,
       });
+      return storePlaceholder(rendered);
     } catch {
-      return `<span class="katex-error">${latex}</span>`;
+      return storePlaceholder(`<span class="katex-error">${latex}</span>`);
     }
   });
 
   // Handle markdown tables: detect lines starting with |
   result = renderMarkdownTables(result);
 
-  // Convert newlines to <br> (preserve line breaks in content)
+  // Convert newlines to <br/> ONLY in plain text (not inside KaTeX HTML)
   result = result.replace(/\n/g, '<br/>');
+
+  // Restore KaTeX HTML from placeholders
+  result = result.replace(
+    new RegExp(`${PLACEHOLDER_PREFIX.replace(/\x00/g, '\\x00')}(\\d+)${PLACEHOLDER_SUFFIX.replace(/\x00/g, '\\x00')}`, 'g'),
+    (_, idx) => placeholders[parseInt(idx)]
+  );
 
   return result;
 }
