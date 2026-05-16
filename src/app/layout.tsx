@@ -26,13 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"
-          crossOrigin="anonymous"
-        />
-      </head>
+      <head />
       <body className="antialiased">
         {children}
         <Toaster

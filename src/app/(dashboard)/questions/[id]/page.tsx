@@ -53,6 +53,11 @@ export default function QuestionDetailPage() {
         if (!res.ok) throw new Error('Không tải được');
         const data = await res.json();
         setQuestion(data);
+        // Check favorite status
+        fetch('/api/favorites')
+          .then(r => r.json())
+          .then(d => { if (d.ids) setIsFavorite(d.ids.includes(questionId)); })
+          .catch(() => {});
       }
     } catch {
       toast.error("Không thể tải bài tập");
@@ -79,16 +84,19 @@ export default function QuestionDetailPage() {
       toast.success(result ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
     } else {
       try {
-        const res = await fetch('/api/questions', {
-          method: 'PATCH',
+        const res = await fetch('/api/favorites', {
+          method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: questionId, toggle_favorite: true }),
+          body: JSON.stringify({ question_id: questionId }),
         });
         if (res.ok) {
-          setIsFavorite(!isFavorite);
-          toast.success(!isFavorite ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+          const data = await res.json();
+          setIsFavorite(data.favorited);
+          toast.success(data.favorited ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
         }
-      } catch { /* ignore */ }
+      } catch {
+        toast.error("Không thể cập nhật yêu thích");
+      }
     }
   };
 

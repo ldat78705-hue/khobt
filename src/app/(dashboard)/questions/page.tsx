@@ -102,14 +102,37 @@ export default function QuestionsPage() {
     if (isDemoMode) {
       const favs = demoDb.getFavoriteQuestions(DEMO_USER.id);
       setFavoriteIds(favs.map(q => q.id));
+    } else {
+      fetch('/api/favorites')
+        .then(res => res.json())
+        .then(data => { if (data.ids) setFavoriteIds(data.ids); })
+        .catch(() => {});
     }
   }, []);
 
-  const handleToggleFavorite = (questionId: string) => {
+  const handleToggleFavorite = async (questionId: string) => {
     if (isDemoMode) {
       const result = demoDb.toggleFavorite(DEMO_USER.id, questionId);
       setFavoriteIds(prev => result ? [...prev, questionId] : prev.filter(id => id !== questionId));
       toast.success(result ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+    } else {
+      try {
+        const res = await fetch('/api/favorites', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question_id: questionId }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setFavoriteIds(prev => data.favorited
+            ? [...prev, questionId]
+            : prev.filter(id => id !== questionId)
+          );
+          toast.success(data.favorited ? "Đã thêm vào yêu thích" : "Đã bỏ yêu thích");
+        }
+      } catch {
+        toast.error("Không thể cập nhật yêu thích");
+      }
     }
   };
 

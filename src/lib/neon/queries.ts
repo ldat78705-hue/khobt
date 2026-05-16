@@ -422,12 +422,32 @@ export async function toggleFavorite(userId: string, questionId: string) {
   return true;
 }
 
+export async function getFavoriteIds(userId: string): Promise<string[]> {
+  const sql = getDb();
+  const result = await sql`
+    SELECT question_id FROM public.favorites WHERE user_id = ${userId}
+  `;
+  return result.map((r: any) => r.question_id);
+}
+
 export async function getFavorites(userId: string) {
   const sql = getDb();
   return await sql`
     SELECT q.*, f.created_at as favorited_at
     FROM public.favorites f
     JOIN public.questions q ON f.question_id = q.id
+    WHERE f.user_id = ${userId}
+    ORDER BY f.created_at DESC
+  ` as Question[];
+}
+
+export async function getFavoriteQuestions(userId: string) {
+  const sql = getDb();
+  return await sql`
+    SELECT q.*, u.full_name as author_name
+    FROM public.favorites f
+    JOIN public.questions q ON f.question_id = q.id
+    LEFT JOIN public.users u ON q.user_id = u.id
     WHERE f.user_id = ${userId}
     ORDER BY f.created_at DESC
   ` as Question[];

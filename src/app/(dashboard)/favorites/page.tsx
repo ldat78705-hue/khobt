@@ -26,16 +26,37 @@ export default function FavoritesPage() {
     setIsLoading(true);
     if (isDemoMode) {
       setQuestions(demoDb.getFavoriteQuestions(DEMO_USER.id));
+      setIsLoading(false);
+    } else {
+      fetch('/api/favorites?full=true')
+        .then(res => res.json())
+        .then(data => { setQuestions(Array.isArray(data) ? data : []); })
+        .catch(() => {})
+        .finally(() => setIsLoading(false));
     }
-    setIsLoading(false);
   }, []);
 
-  const handleRemoveFavorite = (questionId: string) => {
+  const handleRemoveFavorite = async (questionId: string) => {
     if (isDemoMode) {
       demoDb.toggleFavorite(DEMO_USER.id, questionId);
       setQuestions(prev => prev.filter(q => q.id !== questionId));
       setSelectedIds(prev => prev.filter(id => id !== questionId));
       toast.success("Đã bỏ yêu thích");
+    } else {
+      try {
+        const res = await fetch('/api/favorites', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ question_id: questionId }),
+        });
+        if (res.ok) {
+          setQuestions(prev => prev.filter(q => q.id !== questionId));
+          setSelectedIds(prev => prev.filter(id => id !== questionId));
+          toast.success("Đã bỏ yêu thích");
+        }
+      } catch {
+        toast.error("Không thể bỏ yêu thích");
+      }
     }
   };
 
