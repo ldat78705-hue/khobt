@@ -377,7 +377,7 @@ export default function QuickExportPage() {
                     </button>
                   </div>
                 </div>
-                <div className="bg-white shadow-2xl rounded-lg print-preview" style={{ padding: '20mm', minHeight: '297mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000' }}>
+                <div className="bg-white shadow-2xl rounded-lg print-preview print-page" style={{ padding: '20mm', fontFamily: 'Times New Roman, serif', fontSize: '14px', lineHeight: '1.8', color: '#000' }}>
                   {exportOptions.title && (
                     <div style={{ textAlign: 'center', marginBottom: '16px' }}>
                       <p style={{ fontSize: '17px', fontWeight: 'bold', margin: 0 }}>{exportOptions.title}</p>

@@ -317,10 +317,9 @@ export default function WorksheetPage() {
                 id="worksheet-print"
                 contentEditable
                 suppressContentEditableWarning
-                className="worksheet-paper bg-white shadow-lg"
+                className="worksheet-paper print-page bg-white shadow-lg"
                 style={{
                   width: '210mm',
-                  minHeight: '297mm',
                   padding: '15mm 20mm',
                   fontFamily: '"Times New Roman", serif',
                   fontSize: `${config.fontSize}pt`,
