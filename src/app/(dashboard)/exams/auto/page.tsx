@@ -40,9 +40,9 @@ export default function AutoExamPage() {
 
   const matrixTotal = matrix.nhan_biet + matrix.thong_hieu + matrix.van_dung + matrix.van_dung_cao;
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     setIsGenerating(true);
-    setTimeout(() => {
+    try {
       if (isDemoMode) {
         let pool = demoDb.getQuestions({ grade }).filter(q => q.status === 'approved');
         if (topics.length > 0) pool = pool.filter(q => topics.includes(q.topic));
@@ -50,7 +50,6 @@ export default function AutoExamPage() {
         let result: Question[] = [];
 
         if (useMatrix && matrixTotal > 0) {
-          // Matrix-based generation
           const levels: Difficulty[] = ['nhan_biet', 'thong_hieu', 'van_dung', 'van_dung_cao'];
           levels.forEach(level => {
             const ratio = matrix[level] / matrixTotal;
@@ -59,24 +58,57 @@ export default function AutoExamPage() {
             const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
             result.push(...shuffled.slice(0, count));
           });
-          // Trim or fill to exact count
           result = result.slice(0, questionCount);
         } else {
-          // Simple random
           if (difficulties.length > 0) pool = pool.filter(q => difficulties.includes(q.difficulty));
           const shuffled = [...pool].sort(() => Math.random() - 0.5);
           result = shuffled.slice(0, Math.min(questionCount, shuffled.length));
         }
 
         setGeneratedQuestions(result);
+      } else {
+        // Production: fetch from API
+        const params = new URLSearchParams();
+        params.set('grade', String(grade));
+        params.set('status', 'approved');
+        params.set('limit', '200');
+        if (topics.length > 0) params.set('topic', topics[0]);
+
+        const res = await fetch(`/api/questions?${params}`);
+        if (res.ok) {
+          const data = await res.json();
+          let pool: Question[] = data.data || data || [];
+          if (topics.length > 1) pool = pool.filter(q => topics.includes(q.topic));
+
+          let result: Question[] = [];
+          if (useMatrix && matrixTotal > 0) {
+            const levels: Difficulty[] = ['nhan_biet', 'thong_hieu', 'van_dung', 'van_dung_cao'];
+            levels.forEach(level => {
+              const ratio = matrix[level] / matrixTotal;
+              const count = Math.round(questionCount * ratio);
+              const levelPool = pool.filter(q => q.difficulty === level);
+              const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
+              result.push(...shuffled.slice(0, count));
+            });
+            result = result.slice(0, questionCount);
+          } else {
+            if (difficulties.length > 0) pool = pool.filter(q => difficulties.includes(q.difficulty));
+            const shuffled = [...pool].sort(() => Math.random() - 0.5);
+            result = shuffled.slice(0, Math.min(questionCount, shuffled.length));
+          }
+          setGeneratedQuestions(result);
+        }
       }
-      setIsGenerating(false);
       setStep('preview');
       toast.success("Đã tạo đề thi tự động!");
-    }, 800);
+    } catch {
+      toast.error("Không thể tạo đề thi");
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
-  const handleSaveExam = () => {
+  const handleSaveExam = async () => {
     if (!title.trim()) { toast.error("Vui lòng nhập tên đề thi"); return; }
     if (isDemoMode) {
       const exam = demoDb.createExam({
@@ -88,6 +120,34 @@ export default function AutoExamPage() {
       });
       toast.success("Đã lưu đề thi!");
       router.push(`/exams/${exam.id}`);
+    } else {
+      try {
+        // Create exam
+        const res = await fetch('/api/exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title, grade, duration, question_count: generatedQuestions.length,
+            description: "Đề thi tạo tự động",
+          }),
+        });
+        if (!res.ok) throw new Error('Lỗi tạo đề');
+        const exam = await res.json();
+
+        // Add questions to exam
+        for (const q of generatedQuestions) {
+          await fetch('/api/exam-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ exam_id: exam.id, question_id: q.id }),
+          });
+        }
+
+        toast.success("Đã lưu đề thi!");
+        router.push(`/exams/${exam.id}`);
+      } catch {
+        toast.error("Không thể lưu đề thi");
+      }
     }
   };
 

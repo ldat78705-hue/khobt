@@ -18,34 +18,77 @@ export default function StatsPage() {
   });
 
   useEffect(() => {
-    if (isDemoMode) {
-      const qs = demoDb.getQuestions({});
-      setQuestions(qs);
-      const exams = demoDb.getExams();
-      const reports = demoDb.getReports();
+    const loadStats = async () => {
+      if (isDemoMode) {
+        const qs = demoDb.getQuestions({});
+        setQuestions(qs);
+        const exams = demoDb.getExams();
+        const reports = demoDb.getReports();
 
-      const byGrade: Record<number, number> = {};
-      const byTopic: Record<string, number> = {};
-      const byDifficulty: Record<string, number> = {};
+        const byGrade: Record<number, number> = {};
+        const byTopic: Record<string, number> = {};
+        const byDifficulty: Record<string, number> = {};
 
-      qs.forEach(q => {
-        byGrade[q.grade] = (byGrade[q.grade] || 0) + 1;
-        byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
-        byDifficulty[q.difficulty] = (byDifficulty[q.difficulty] || 0) + 1;
-      });
+        qs.forEach(q => {
+          byGrade[q.grade] = (byGrade[q.grade] || 0) + 1;
+          byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
+          byDifficulty[q.difficulty] = (byDifficulty[q.difficulty] || 0) + 1;
+        });
 
-      setStats({
-        total: qs.length,
-        approved: qs.filter(q => q.status === 'approved').length,
-        pending: qs.filter(q => q.status === 'pending').length,
-        rejected: qs.filter(q => q.status === 'rejected').length,
-        draft: qs.filter(q => q.status === 'draft').length,
-        byGrade, byTopic, byDifficulty,
-        totalLikes: 0,
-        totalReports: reports.length,
-        totalExams: exams.length,
-      });
-    }
+        setStats({
+          total: qs.length,
+          approved: qs.filter(q => q.status === 'approved').length,
+          pending: qs.filter(q => q.status === 'pending').length,
+          rejected: qs.filter(q => q.status === 'rejected').length,
+          draft: qs.filter(q => q.status === 'draft').length,
+          byGrade, byTopic, byDifficulty,
+          totalLikes: 0,
+          totalReports: reports.length,
+          totalExams: exams.length,
+        });
+      } else {
+        try {
+          const [qRes, eRes] = await Promise.all([
+            fetch('/api/questions?limit=1000'),
+            fetch('/api/exams?limit=200'),
+          ]);
+          let qs: Question[] = [];
+          let examCount = 0;
+          if (qRes.ok) {
+            const data = await qRes.json();
+            qs = data.data || data || [];
+            setQuestions(qs);
+          }
+          if (eRes.ok) {
+            const data = await eRes.json();
+            examCount = Array.isArray(data) ? data.length : 0;
+          }
+
+          const byGrade: Record<number, number> = {};
+          const byTopic: Record<string, number> = {};
+          const byDifficulty: Record<string, number> = {};
+
+          qs.forEach(q => {
+            byGrade[q.grade] = (byGrade[q.grade] || 0) + 1;
+            byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
+            byDifficulty[q.difficulty] = (byDifficulty[q.difficulty] || 0) + 1;
+          });
+
+          setStats({
+            total: qs.length,
+            approved: qs.filter(q => q.status === 'approved').length,
+            pending: qs.filter(q => q.status === 'pending').length,
+            rejected: qs.filter(q => q.status === 'rejected').length,
+            draft: qs.filter(q => q.status === 'draft').length,
+            byGrade, byTopic, byDifficulty,
+            totalLikes: 0,
+            totalReports: 0,
+            totalExams: examCount,
+          });
+        } catch { /* ignore */ }
+      }
+    };
+    loadStats();
   }, []);
 
   const statCards = [

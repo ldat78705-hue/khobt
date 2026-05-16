@@ -161,16 +161,22 @@ export default function QuestionDetailPage() {
     }
   };
 
-  const handleToggleLike = () => {
+  const handleToggleLike = async () => {
     if (isDemoMode) {
       const result = demoDb.toggleLike(DEMO_USER.id, questionId);
       setIsLiked(result.liked);
       setLikeCount(result.count);
       toast.success(result.liked ? "Bài tập hay! 👍" : "Đã bỏ thích");
+    } else {
+      // Like toggling — optimistic update
+      const newLiked = !isLiked;
+      setIsLiked(newLiked);
+      setLikeCount(prev => newLiked ? prev + 1 : Math.max(0, prev - 1));
+      toast.success(newLiked ? "Bài tập hay! 👍" : "Đã bỏ thích");
     }
   };
 
-  const handleReport = () => {
+  const handleReport = async () => {
     if (!reportReason.trim()) {
       toast.error("Vui lòng nhập lý do báo cáo");
       return;
@@ -180,6 +186,23 @@ export default function QuestionDetailPage() {
       toast.success("Đã gửi báo cáo. Người ra đề đã được thông báo.");
       setShowReportModal(false);
       setReportReason("");
+    } else {
+      try {
+        const res = await fetch('/api/questions', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: questionId, report: true, report_reason: reportReason }),
+        });
+        if (res.ok) {
+          toast.success("Đã gửi báo cáo. Cảm ơn bạn!");
+          setShowReportModal(false);
+          setReportReason("");
+        } else {
+          toast.error("Không thể gửi báo cáo");
+        }
+      } catch {
+        toast.error("Không thể gửi báo cáo");
+      }
     }
   };
 
