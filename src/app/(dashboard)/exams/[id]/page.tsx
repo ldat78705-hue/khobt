@@ -174,7 +174,7 @@ export default function ExamDetailPage() {
   const totalPoints = examQuestions.reduce((s, eq) => s + eq.points, 0);
 
   /** Shuffle exam: create new exam with randomized question order + shuffled MCQ options */
-  const handleShuffleExam = () => {
+  const handleShuffleExam = async () => {
     if (!exam || examQuestions.length === 0) return;
     if (isDemoMode) {
       // Shuffle question order
@@ -216,6 +216,45 @@ export default function ExamDetailPage() {
       });
       toast.success('Đã tạo đề trộn!');
       router.push(`/exams/${newExam.id}`);
+    } else {
+      try {
+        // Create shuffled exam via API
+        const shuffleCode = Math.floor(100 + Math.random() * 900);
+        const res = await fetch('/api/exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: `${exam.title} (Mã đề ${shuffleCode})`,
+            description: `Trộn từ: ${exam.title}`,
+            grade: exam.grade, duration: exam.duration,
+            settings: exam.settings,
+            tags: [...(exam.tags || []), 'trộn đề'],
+          }),
+        });
+        if (!res.ok) throw new Error('Lỗi tạo đề trộn');
+        const newExam = await res.json();
+
+        // Add shuffled questions
+        const shuffled = [...examQuestions].sort(() => Math.random() - 0.5);
+        for (let i = 0; i < shuffled.length; i++) {
+          const eq = shuffled[i];
+          await fetch('/api/exam-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              exam_id: newExam.id,
+              question_id: eq.question?.id || eq.question_id,
+              sort_order: i,
+              points: eq.points,
+            }),
+          });
+        }
+
+        toast.success('Đã tạo đề trộn!');
+        router.push(`/exams/${newExam.id}`);
+      } catch {
+        toast.error('Không thể tạo đề trộn');
+      }
     }
   };
 

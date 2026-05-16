@@ -103,9 +103,41 @@ export default function ExamsPage() {
           demoDb.updateExamQuestionPoints(newEq.id, eq.points);
         });
       } else {
-        // TODO: Add clone API
-        toast.info("Tính năng clone đang phát triển");
-        return;
+        // Create cloned exam via API
+        const res = await fetch('/api/exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: `${exam.title} (bản sao)`,
+            description: exam.description,
+            grade: exam.grade,
+            duration: exam.duration,
+            settings: exam.settings,
+            tags: exam.tags,
+            exam_status: 'personal',
+          }),
+        });
+        if (!res.ok) throw new Error('Lỗi tạo bản sao');
+        const cloned = await res.json();
+
+        // Copy exam questions
+        const origRes = await fetch(`/api/exams?id=${exam.id}`);
+        if (origRes.ok) {
+          const origData = await origRes.json();
+          const origQuestions = origData.questions || [];
+          for (const eq of origQuestions) {
+            await fetch('/api/exam-questions', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                exam_id: cloned.id,
+                question_id: eq.question_id,
+                sort_order: eq.sort_order,
+                points: eq.points,
+              }),
+            });
+          }
+        }
       }
       toast.success("Đã clone đề thi vào kho cá nhân!");
       if (activeTab === 'personal') fetchExams();
@@ -119,6 +151,13 @@ export default function ExamsPage() {
     try {
       if (isDemoMode) {
         demoDb.submitExamToShared(examId);
+      } else {
+        const res = await fetch('/api/exams', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id: examId, exam_status: 'pending' }),
+        });
+        if (!res.ok) throw new Error('Lỗi gửi đề');
       }
       toast.success("Đã gửi đề lên kho chung! Vui lòng chờ duyệt.");
       fetchExams();
