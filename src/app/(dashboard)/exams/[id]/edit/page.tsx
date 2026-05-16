@@ -5,7 +5,7 @@ import { useParams, useRouter } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
 import {
   Plus, Search, ArrowLeft, Trash2, GripVertical,
-  BookOpen, Check, Loader2, X, ChevronUp, ChevronDown, PenLine, FileText
+  BookOpen, Check, Loader2, X, ChevronUp, ChevronDown, PenLine, FileText, Edit, Save
 } from "lucide-react";
 import Link from "next/link";
 import { cn, getDifficultyLabel, getTopicLabel, getDifficultyColor, getQuestionTypeLabel } from "@/lib/utils";
@@ -53,6 +53,66 @@ export default function EditExamPage() {
   const [pickerTab, setPickerTab] = useState<TabMode>('from_bank');
   const [inlineQ, setInlineQ] = useState<InlineQuestion>({ ...EMPTY_INLINE });
   const [isAdding, setIsAdding] = useState(false);
+
+  // Inline edit for existing questions
+  const [editingId, setEditingId] = useState<string | null>(null);
+  const [editContent, setEditContent] = useState({ content: '', answer: '', solution: '' });
+  const [isSaving, setIsSaving] = useState(false);
+
+  const startEdit = (eq: ExamQuestion & { question: Question }) => {
+    setEditingId(eq.id);
+    setEditContent({
+      content: eq.question.content || '',
+      answer: eq.question.answer || '',
+      solution: eq.question.solution || '',
+    });
+  };
+
+  const cancelEdit = () => {
+    setEditingId(null);
+    setEditContent({ content: '', answer: '', solution: '' });
+  };
+
+  const saveEdit = async (eq: ExamQuestion & { question: Question }) => {
+    if (!editContent.content.trim()) { toast.error("Nội dung không được trống"); return; }
+    setIsSaving(true);
+    try {
+      if (isDemoMode) {
+        // Update in demo DB
+        const questions = demoDb.getQuestions({});
+        const found = questions.find(q => q.id === eq.question_id);
+        if (found) {
+          Object.assign(found, {
+            content: editContent.content,
+            answer: editContent.answer,
+            solution: editContent.solution,
+          });
+        }
+      } else {
+        const res = await fetch('/api/questions', {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: eq.question_id,
+            content: editContent.content,
+            answer: editContent.answer,
+            solution: editContent.solution,
+          }),
+        });
+        if (!res.ok) throw new Error('Lỗi lưu');
+      }
+      // Update local state
+      setExamQuestions(prev => prev.map(e =>
+        e.id === eq.id ? { ...e, question: { ...e.question, content: editContent.content, answer: editContent.answer, solution: editContent.solution } } : e
+      ));
+      toast.success("Đã lưu chỉnh sửa!");
+      setEditingId(null);
+    } catch {
+      toast.error("Không thể lưu");
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   const addedQuestionIds = new Set(examQuestions.map((eq) => eq.question_id));
 
@@ -262,17 +322,81 @@ export default function EditExamPage() {
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <div className="text-sm text-slate-800 line-clamp-2"><QuestionContent content={q.content} images={q.images} /></div>
-                      <div className="flex items-center gap-2 mt-2">
-                        <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
-                        <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-500 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
-                      </div>
+                      {editingId === eq.id ? (
+                        /* Inline edit mode */
+                        <div className="space-y-2">
+                          <div>
+                            <label className="block text-xs font-medium text-slate-500 mb-1">Nội dung câu hỏi</label>
+                            <textarea
+                              value={editContent.content}
+                              onChange={e => setEditContent(prev => ({ ...prev, content: e.target.value }))}
+                              rows={4}
+                              className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 resize-y"
+                              placeholder="Nhập nội dung... Hỗ trợ LaTeX: $x^2$"
+                            />
+                          </div>
+                          <div className="grid grid-cols-2 gap-2">
+                            <div>
+                              <label className="block text-xs font-medium text-slate-500 mb-1">Đáp án</label>
+                              <textarea
+                                value={editContent.answer}
+                                onChange={e => setEditContent(prev => ({ ...prev, answer: e.target.value }))}
+                                rows={2}
+                                className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500/20 resize-y"
+                                placeholder="Đáp án..."
+                              />
+                            </div>
+                            <div>
+                              <label className="block text-xs font-medium text-slate-500 mb-1">Lời giải</label>
+                              <textarea
+                                value={editContent.solution}
+                                onChange={e => setEditContent(prev => ({ ...prev, solution: e.target.value }))}
+                                rows={2}
+                                className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500/20 resize-y"
+                                placeholder="Lời giải chi tiết..."
+                              />
+                            </div>
+                          </div>
+                          <div className="flex items-center gap-2 pt-1">
+                            <button
+                              onClick={() => saveEdit(eq)}
+                              disabled={isSaving}
+                              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-green-600 rounded-lg hover:bg-green-700 disabled:opacity-50"
+                            >
+                              {isSaving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Save className="w-3.5 h-3.5" />}
+                              Lưu
+                            </button>
+                            <button
+                              onClick={cancelEdit}
+                              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-slate-600 bg-slate-100 rounded-lg hover:bg-slate-200"
+                            >
+                              <X className="w-3.5 h-3.5" /> Hủy
+                            </button>
+                          </div>
+                        </div>
+                      ) : (
+                        /* View mode */
+                        <>
+                          <div className="text-sm text-slate-800 line-clamp-2"><QuestionContent content={q.content} images={q.images} /></div>
+                          <div className="flex items-center gap-2 mt-2">
+                            <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
+                            <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-500 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
+                          </div>
+                        </>
+                      )}
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="flex items-center gap-1">
                         <input type="number" value={eq.points} onChange={(e) => updatePoints(eq.id, Number(e.target.value))} step={0.25} min={0} className="w-16 px-2 py-1 border border-slate-200 rounded-lg text-sm text-center focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500" />
                         <span className="text-xs text-slate-400">đ</span>
                       </div>
+                      <button
+                        onClick={() => editingId === eq.id ? cancelEdit() : startEdit(eq)}
+                        className={cn("p-2 rounded-lg transition-colors", editingId === eq.id ? "bg-blue-50 text-blue-600" : "hover:bg-blue-50 text-slate-400 hover:text-blue-600")}
+                        title="Sửa nội dung"
+                      >
+                        <Edit className="w-4 h-4" />
+                      </button>
                       <button onClick={() => removeQuestion(eq.id)} className="p-2 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600 transition-colors"><Trash2 className="w-4 h-4" /></button>
                     </div>
                   </div>
