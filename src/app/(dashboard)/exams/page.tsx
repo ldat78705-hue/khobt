@@ -17,7 +17,7 @@ import { useAuthStore } from "@/stores/auth-store";
 const EXAM_STATUS_CONFIG: Record<ExamStatus, { label: string; color: string; icon: string }> = {
   personal: { label: 'Cá nhân', color: 'bg-slate-100 text-slate-600 border-slate-200', icon: '🔒' },
   pending: { label: 'Chờ duyệt', color: 'bg-yellow-100 text-yellow-700 border-yellow-200', icon: '⏳' },
-  shared: { label: 'Kho chung', color: 'bg-green-100 text-green-700 border-green-200', icon: '🌐' },
+  approved: { label: 'Kho chung', color: 'bg-green-100 text-green-700 border-green-200', icon: '🌐' },
   rejected: { label: 'Từ chối', color: 'bg-red-100 text-red-700 border-red-200', icon: '❌' },
 };
 

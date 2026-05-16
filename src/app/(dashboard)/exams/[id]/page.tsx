@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
 import {
   Download, Copy, FileText, Clock, BookOpen, ArrowLeft,
-  Clipboard, FileDown, Eye, EyeOff, Loader2, Printer, Edit, X, Bookmark, Shuffle
+  Clipboard, FileDown, Eye, EyeOff, Loader2, Printer, Edit, X, Bookmark, Shuffle, Presentation
 } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -18,6 +18,7 @@ import { copyToClipboard } from "@/lib/export/clipboard";
 import { QuestionContent, MathRenderer, CloudinaryImage } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { cn } from "@/lib/utils";
+import ExamPresentation from "@/components/shared/ExamPresentation";
 
 export default function ExamDetailPage() {
   const params = useParams();
@@ -31,6 +32,7 @@ export default function ExamDetailPage() {
   const [isExporting, setIsExporting] = useState(false);
   const [showPrintPreview, setShowPrintPreview] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
+  const [showPresentation, setShowPresentation] = useState(false);
 
   const fetchExam = useCallback(async () => {
     setIsLoading(true);
@@ -301,6 +303,13 @@ export default function ExamDetailPage() {
             <Link href={`/exams/${examId}/edit`} className="flex items-center gap-2 px-3 py-2 text-sm text-slate-600 bg-slate-100 rounded-xl hover:bg-slate-200 transition-colors font-medium">
               <Edit className="w-4 h-4" /> Sửa đề
             </Link>
+            <button
+              onClick={() => setShowPresentation(true)}
+              className="flex items-center gap-2 px-3 py-2 text-sm text-amber-700 bg-amber-50 rounded-xl hover:bg-amber-100 transition-colors font-medium"
+              title="Trình chiếu đề thi trên máy chiếu cho học sinh"
+            >
+              <Presentation className="w-4 h-4" /> Trình chiếu
+            </button>
             <button
               onClick={handleShuffleExam}
               className="flex items-center gap-2 px-3 py-2 text-sm text-purple-600 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors font-medium"
@@ -615,6 +624,15 @@ export default function ExamDetailPage() {
           </div>
         )}
       </div>
+
+      {/* Presentation mode */}
+      {showPresentation && exam && (
+        <ExamPresentation
+          exam={exam}
+          questions={examQuestions}
+          onClose={() => setShowPresentation(false)}
+        />
+      )}
     </>
   );
 }

@@ -760,21 +760,21 @@ const SAMPLE_EXAMS: Exam[] = [
   {
     id: 'exam1', title: 'Đề kiểm tra giữa kỳ I - Toán 9', description: 'Đề kiểm tra 90 phút, đầy đủ tự luận và trắc nghiệm',
     grade: 9, duration: 90, user_id: 'demo-user-001', is_template: true, question_count: 4,
-    exam_status: 'shared',
+    exam_status: 'approved',
     settings: { school_name: 'THCS Nguyễn Du', exam_type: 'Kiểm tra giữa kỳ', school_year: '2024-2025', subject: 'Toán 9' },
     tags: ['giữa kỳ', 'toán 9'], created_at: '2024-10-20T08:00:00Z', updated_at: '2024-10-20T08:00:00Z',
   },
   {
     id: 'exam2', title: 'Đề ôn tập cuối kỳ - Toán 8', description: 'Đề ôn tập tổng hợp kiến thức kỳ I',
     grade: 8, duration: 60, user_id: 'demo-user-001', is_template: true, question_count: 3,
-    exam_status: 'shared',
+    exam_status: 'approved',
     settings: { school_name: 'THCS Lê Hồng Phong', exam_type: 'Ôn tập cuối kỳ', school_year: '2024-2025' },
     tags: ['cuối kỳ', 'toán 8'], created_at: '2024-10-21T08:00:00Z', updated_at: '2024-10-21T08:00:00Z',
   },
   {
     id: 'exam3', title: 'Bộ đề thi vào lớp 10 - Đề 1', description: 'Đề thi thử vào 10 theo cấu trúc mới',
     grade: 9, duration: 120, user_id: 'demo-user-001', is_template: true, question_count: 5,
-    exam_status: 'shared',
+    exam_status: 'approved',
     settings: { school_name: 'Sở GD&ĐT Hà Nội', exam_type: 'Thi vào 10', school_year: '2024-2025', subject: 'Toán' },
     tags: ['thi vào 10', 'đề thi thử'], created_at: '2024-10-22T08:00:00Z', updated_at: '2024-10-22T08:00:00Z',
   },
@@ -1104,7 +1104,7 @@ export const demoDb = {
     if (idx === -1) return null;
     store.exams[idx] = {
       ...store.exams[idx],
-      exam_status: action === 'approve' ? 'shared' : 'rejected',
+      exam_status: action === 'approve' ? 'approved' : 'rejected',
       reviewed_by: DEMO_USER.id,
       review_note: note || (action === 'approve' ? 'Đã duyệt' : 'Không đạt yêu cầu'),
       updated_at: new Date().toISOString(),
@@ -1126,7 +1126,7 @@ export const demoDb = {
 
   /** Lấy đề kho chung (đã duyệt) */
   getSharedExams(filter?: { grade?: number; search?: string }): Exam[] {
-    let data = loadData().exams.filter(e => e.exam_status === 'shared');
+    let data = loadData().exams.filter(e => e.exam_status === 'approved');
     if (filter?.grade) data = data.filter(e => e.grade === Number(filter.grade));
     if (filter?.search) data = data.filter(e => e.title.toLowerCase().includes(filter.search!.toLowerCase()));
     return data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
@@ -1134,7 +1134,7 @@ export const demoDb = {
 
   /** Lấy đề cá nhân của GV */
   getPersonalExams(userId: string, filter?: { grade?: number; search?: string }): Exam[] {
-    let data = loadData().exams.filter(e => e.user_id === userId && e.exam_status !== 'shared');
+    let data = loadData().exams.filter(e => e.user_id === userId && e.exam_status !== 'approved');
     if (filter?.grade) data = data.filter(e => e.grade === Number(filter.grade));
     if (filter?.search) data = data.filter(e => e.title.toLowerCase().includes(filter.search!.toLowerCase()));
     return data.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
