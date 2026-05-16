@@ -351,14 +351,14 @@ export async function getSharedExams(filters?: {
   limit?: number;
 }) {
   const sql = getRawDb();
-  const { grade, status, search, limit = 200 } = filters || {};
+  const { grade, status = 'approved', search, limit = 200 } = filters || {};
   const result = await sql`
     SELECT e.*, u.full_name as author_name,
       (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
     FROM public.exams e
     LEFT JOIN public.users u ON e.user_id = u.id
-    WHERE (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
-      AND (${status ?? null}::text IS NULL OR e.exam_status = ${status ?? null})
+    WHERE e.exam_status = ${status}
+      AND (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
       AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
     ORDER BY e.created_at DESC
     LIMIT ${limit}

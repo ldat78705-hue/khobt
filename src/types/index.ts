@@ -17,6 +17,7 @@ export interface Profile {
   email: string;
   role: UserRole;
   is_active: boolean;
+  is_approved?: boolean;
   avatar_url?: string;
   permissions: UserPermissions;
   created_at: string;
@@ -187,7 +188,7 @@ export interface QuestionReport {
 }
 
 // Exam types
-export type ExamStatus = 'personal' | 'pending' | 'shared' | 'rejected';
+export type ExamStatus = 'personal' | 'pending' | 'approved' | 'rejected';
 
 export interface Exam {
   id: string;
@@ -200,7 +201,7 @@ export interface Exam {
   tags?: string[];
   settings: ExamSettings;
   is_template: boolean;
-  exam_status: ExamStatus; // personal = chỉ GV thấy, pending = chờ duyệt, shared = kho chung
+  exam_status: ExamStatus; // personal = chỉ GV thấy, pending = chờ duyệt, approved = kho chung, rejected = từ chối
   submitted_at?: string; // Thời điểm gửi lên kho
   reviewed_by?: string;
   review_note?: string;
