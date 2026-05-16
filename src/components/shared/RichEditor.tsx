@@ -331,7 +331,7 @@ export default function RichEditor({
               <button type="button" onClick={() => insertText('*', '*')} className="p-1.5 rounded hover:bg-slate-200 text-slate-500 hover:text-slate-700" title="Italic">
                 <Italic className="w-4 h-4" />
               </button>
-              <button type="button" onClick={() => insertAtCursor('\\sum')} className="p-1.5 rounded hover:bg-slate-200 text-slate-500 hover:text-slate-700 font-serif text-sm" title="Sigma">
+              <button type="button" onClick={() => insertAtCursor('\sum')} className="p-1.5 rounded hover:bg-slate-200 text-slate-500 hover:text-slate-700 font-serif text-sm" title="Sigma">
                 Σ
               </button>
               <button type="button" onClick={() => insertText('\n- ', '')} className="p-1.5 rounded hover:bg-slate-200 text-slate-500 hover:text-slate-700" title="List">
