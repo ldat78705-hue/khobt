@@ -99,22 +99,41 @@ export async function PATCH(req: NextRequest) {
   const provider = getDatabaseProvider();
   if (provider === 'neon') {
     const user = await getCurrentUser();
-    if (!user || (user.role !== 'admin' && user.role !== 'reviewer')) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     
     try {
-      const { id, status, review_note } = await req.json();
-      if (!id || !status) return NextResponse.json({ error: 'ID and status required' }, { status: 400 });
-      
-      await neonQueries.updateExam(id, {
-        exam_status: status,
-        reviewed_by: user.id,
-        reviewed_at: new Date().toISOString(),
-        review_note: review_note || null,
-      });
-      
-      return NextResponse.json({ success: true });
+      const body = await req.json();
+      const { id } = body;
+      if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
+
+      // Owner submitting to shared (exam_status change)
+      if (body.exam_status) {
+        const exam = await neonQueries.getExamById(id);
+        if (!exam) return NextResponse.json({ error: 'Not found' }, { status: 404 });
+        // Only owner or admin can change exam_status
+        if (exam.user_id !== user.id && user.role !== 'admin') {
+          return NextResponse.json({ error: 'Permission denied' }, { status: 403 });
+        }
+        await neonQueries.updateExam(id, { exam_status: body.exam_status });
+        return NextResponse.json({ success: true });
+      }
+
+      // Admin/reviewer reviewing exam (status change)
+      const status = body.status;
+      if (status) {
+        if (user.role !== 'admin' && user.role !== 'reviewer') {
+          return NextResponse.json({ error: 'Permission denied' }, { status: 403 });
+        }
+        await neonQueries.updateExam(id, {
+          exam_status: status,
+          reviewed_by: user.id,
+          reviewed_at: new Date().toISOString(),
+          review_note: body.review_note || null,
+        });
+        return NextResponse.json({ success: true });
+      }
+
+      return NextResponse.json({ error: 'No valid fields to update' }, { status: 400 });
     } catch (err: any) {
       return NextResponse.json({ error: err.message }, { status: 500 });
     }

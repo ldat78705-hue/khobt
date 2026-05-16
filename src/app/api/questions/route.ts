@@ -39,6 +39,7 @@ export async function GET(req: NextRequest) {
     difficulty: searchParams.get('difficulty') || undefined,
     status: searchParams.get('status') || undefined,
     search: searchParams.get('search') || undefined,
+    question_type: searchParams.get('question_type') || undefined,
     limit: searchParams.get('limit') ? parseInt(searchParams.get('limit')!) : 30,
     offset: searchParams.get('offset') ? parseInt(searchParams.get('offset')!) : 0,
   };
@@ -53,6 +54,7 @@ export async function GET(req: NextRequest) {
           difficulty: filters.difficulty,
           status: filters.status,
           search: filters.search,
+          question_type: filters.question_type,
         }),
       ]);
       return NextResponse.json({ data: questions, total: totalResult, limit: filters.limit, offset: filters.offset });

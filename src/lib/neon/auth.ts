@@ -75,7 +75,7 @@ export async function login(email: string, password: string) {
   const sql = getDb();
 
   const result = await sql`
-    SELECT id, email, password_hash, full_name, role, is_active, permissions, avatar_url
+    SELECT id, email, password_hash, full_name, role, is_active, is_approved, permissions, avatar_url
     FROM public.users
     WHERE email = ${email}
   `;

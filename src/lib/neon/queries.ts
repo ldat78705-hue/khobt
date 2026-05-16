@@ -25,11 +25,12 @@ export async function getQuestions(filters?: {
   status?: string;
   userId?: string;
   search?: string;
+  question_type?: string;
   limit?: number;
   offset?: number;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, userId, search, limit = 30, offset = 0 } = filters || {};
+  const { grade, topic, difficulty, status, userId, search, question_type, limit = 30, offset = 0 } = filters || {};
 
   const result = await sql`
     SELECT q.*, u.full_name as author_name, c.name as category_name
@@ -41,6 +42,7 @@ export async function getQuestions(filters?: {
       AND (${topic ?? null}::text IS NULL OR q.topic = ${topic ?? null})
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
+      AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})
       AND (${userId ?? null}::uuid IS NULL OR q.user_id = ${userId ?? null}::uuid)
       AND (
         ${search ?? null}::text IS NULL
@@ -60,9 +62,10 @@ export async function getQuestionCount(filters?: {
   difficulty?: string;
   status?: string;
   search?: string;
+  question_type?: string;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, search } = filters || {};
+  const { grade, topic, difficulty, status, search, question_type } = filters || {};
   const result = await sql`
     SELECT COUNT(*)::int as count FROM public.questions q
     WHERE
@@ -70,6 +73,7 @@ export async function getQuestionCount(filters?: {
       AND (${topic ?? null}::text IS NULL OR q.topic = ${topic ?? null})
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
+      AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})
       AND (
         ${search ?? null}::text IS NULL
         OR q.question_code ILIKE ${'%' + (search || '') + '%'}
