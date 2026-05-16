@@ -38,49 +38,49 @@ interface LatexItem {
 const LATEX_TABS = [
   {
     key: 'basic', label: 'Cơ bản', items: [
-      { label: 'a/b', template: '\\frac{@1}{@2}', placeholders: ['Tử số', 'Mẫu số'], desc: 'Phân số' },
-      { label: '√', template: '\\sqrt{@1}', placeholders: ['Biểu thức trong căn'], desc: 'Căn bậc 2' },
-      { label: 'ⁿ√', template: '\\sqrt[@1]{@2}', placeholders: ['Bậc (n)', 'Biểu thức trong căn'], desc: 'Căn bậc n' },
+      { label: 'a/b', template: '\frac{@1}{@2}', placeholders: ['Tử số', 'Mẫu số'], desc: 'Phân số' },
+      { label: '√', template: '\sqrt{@1}', placeholders: ['Biểu thức trong căn'], desc: 'Căn bậc 2' },
+      { label: 'ⁿ√', template: '\sqrt[@1]{@2}', placeholders: ['Bậc (n)', 'Biểu thức trong căn'], desc: 'Căn bậc n' },
       { label: 'x²', template: '{@1}^{@2}', placeholders: ['Cơ số', 'Số mũ'], desc: 'Lũy thừa' },
       { label: 'xₙ', template: '{@1}_{@2}', placeholders: ['Biến', 'Chỉ số'], desc: 'Chỉ số dưới' },
-      { label: '±', latex: '\\pm' },
-      { label: '×', latex: '\\times' },
-      { label: '÷', latex: '\\div' },
+      { label: '±', latex: '\pm' },
+      { label: '×', latex: '\times' },
+      { label: '÷', latex: '\div' },
     ] as LatexItem[]
   },
   {
     key: 'compare', label: 'Ký hiệu', items: [
-      { label: '≤', latex: '\\leq' },
-      { label: '≥', latex: '\\geq' },
-      { label: '≠', latex: '\\neq' },
-      { label: '≈', latex: '\\approx' },
-      { label: '∞', latex: '\\infty' },
-      { label: '∈', latex: '\\in' },
-      { label: '∀', latex: '\\forall' },
-      { label: '∃', latex: '\\exists' },
-      { label: '→', latex: '\\Rightarrow' },
-      { label: '↔', latex: '\\Leftrightarrow' },
+      { label: '≤', latex: '\leq' },
+      { label: '≥', latex: '\geq' },
+      { label: '≠', latex: '\neq' },
+      { label: '≈', latex: '\approx' },
+      { label: '∞', latex: '\infty' },
+      { label: '∈', latex: '\in' },
+      { label: '∀', latex: '\forall' },
+      { label: '∃', latex: '\exists' },
+      { label: '→', latex: '\Rightarrow' },
+      { label: '↔', latex: '\Leftrightarrow' },
     ] as LatexItem[]
   },
   {
     key: 'geo', label: 'Hình học', items: [
-      { label: '∠', latex: '\\angle' },
-      { label: '△', latex: '\\triangle' },
-      { label: '⊥', latex: '\\perp' },
-      { label: '∥', latex: '\\parallel' },
-      { label: '⃗', template: '\\overrightarrow{@1}', placeholders: ['Tên vector (VD: AB)'], desc: 'Vector' },
+      { label: '∠', latex: '\angle' },
+      { label: '△', latex: '\triangle' },
+      { label: '⊥', latex: '\perp' },
+      { label: '∥', latex: '\parallel' },
+      { label: '⃗', template: '\overrightarrow{@1}', placeholders: ['Tên vector (VD: AB)'], desc: 'Vector' },
       { label: '○', latex: '(O;R)' },
-      { label: '≅', latex: '\\cong' },
-      { label: '∼', latex: '\\sim' },
+      { label: '≅', latex: '\cong' },
+      { label: '∼', latex: '\sim' },
     ] as LatexItem[]
   },
   {
     key: 'struct', label: 'Cấu trúc', items: [
-      { label: 'Hệ PT', template: '\\begin{cases} @1 \\\\\\\\ @2 \\end{cases}', placeholders: ['Phương trình 1', 'Phương trình 2'], desc: 'Hệ phương trình' },
-      { label: 'Tổng', template: '\\sum_{@1}^{@2}', placeholders: ['Bắt đầu (VD: i=1)', 'Kết thúc (VD: n)'], desc: 'Tổng sigma' },
-      { label: 'Tích phân', template: '\\int_{@1}^{@2}', placeholders: ['Cận dưới', 'Cận trên'], desc: 'Tích phân' },
-      { label: 'Giới hạn', template: '\\lim_{@1}', placeholders: ['Điều kiện (VD: x \\to \\infty)'], desc: 'Giới hạn' },
-      { label: 'Ma trận', template: '\\begin{pmatrix} @1 & @2 \\\\\\\\ @3 & @4 \\end{pmatrix}', placeholders: ['a', 'b', 'c', 'd'], desc: 'Ma trận 2×2' },
+      { label: 'Hệ PT', template: '\begin{cases} @1 \\ @2 \end{cases}', placeholders: ['Phương trình 1', 'Phương trình 2'], desc: 'Hệ phương trình' },
+      { label: 'Tổng', template: '\sum_{@1}^{@2}', placeholders: ['Bắt đầu (VD: i=1)', 'Kết thúc (VD: n)'], desc: 'Tổng sigma' },
+      { label: 'Tích phân', template: '\int_{@1}^{@2}', placeholders: ['Cận dưới', 'Cận trên'], desc: 'Tích phân' },
+      { label: 'Giới hạn', template: '\lim_{@1}', placeholders: ['Điều kiện (VD: x \to \infty)'], desc: 'Giới hạn' },
+      { label: 'Ma trận', template: '\begin{pmatrix} @1 & @2 \\ @3 & @4 \end{pmatrix}', placeholders: ['a', 'b', 'c', 'd'], desc: 'Ma trận 2×2' },
     ] as LatexItem[]
   },
 ];
