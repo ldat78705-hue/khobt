@@ -26,19 +26,27 @@ interface RichEditorProps {
   maxImages?: number;
 }
 
+interface LatexItem {
+  label: string;
+  latex?: string;
+  template?: string;
+  placeholders?: string[];
+  desc?: string;
+}
+
 /** Tabs for LaTeX toolbar */
 const LATEX_TABS = [
   {
     key: 'basic', label: 'Cơ bản', items: [
-      { label: 'a/b', latex: '\\frac{a}{b}' },
-      { label: '√', latex: '\\sqrt{x}' },
-      { label: 'ⁿ√', latex: '\\sqrt[n]{x}' },
-      { label: 'x²', latex: 'x^{2}' },
-      { label: 'xₙ', latex: 'x_{n}' },
+      { label: 'a/b', template: '\\frac{@1}{@2}', placeholders: ['Tử số', 'Mẫu số'], desc: 'Phân số' },
+      { label: '√', template: '\\sqrt{@1}', placeholders: ['Biểu thức trong căn'], desc: 'Căn bậc 2' },
+      { label: 'ⁿ√', template: '\\sqrt[@1]{@2}', placeholders: ['Bậc (n)', 'Biểu thức trong căn'], desc: 'Căn bậc n' },
+      { label: 'x²', template: '{@1}^{@2}', placeholders: ['Cơ số', 'Số mũ'], desc: 'Lũy thừa' },
+      { label: 'xₙ', template: '{@1}_{@2}', placeholders: ['Biến', 'Chỉ số'], desc: 'Chỉ số dưới' },
       { label: '±', latex: '\\pm' },
       { label: '×', latex: '\\times' },
       { label: '÷', latex: '\\div' },
-    ]
+    ] as LatexItem[]
   },
   {
     key: 'compare', label: 'Ký hiệu', items: [
@@ -52,7 +60,7 @@ const LATEX_TABS = [
       { label: '∃', latex: '\\exists' },
       { label: '→', latex: '\\Rightarrow' },
       { label: '↔', latex: '\\Leftrightarrow' },
-    ]
+    ] as LatexItem[]
   },
   {
     key: 'geo', label: 'Hình học', items: [
@@ -60,20 +68,20 @@ const LATEX_TABS = [
       { label: '△', latex: '\\triangle' },
       { label: '⊥', latex: '\\perp' },
       { label: '∥', latex: '\\parallel' },
-      { label: '⃗', latex: '\\overrightarrow{AB}' },
+      { label: '⃗', template: '\\overrightarrow{@1}', placeholders: ['Tên vector (VD: AB)'], desc: 'Vector' },
       { label: '○', latex: '(O;R)' },
       { label: '≅', latex: '\\cong' },
       { label: '∼', latex: '\\sim' },
-    ]
+    ] as LatexItem[]
   },
   {
     key: 'struct', label: 'Cấu trúc', items: [
-      { label: 'Hệ PT', latex: '\\begin{cases} x + y = 1 \\\\\\\\ x - y = 2 \\end{cases}' },
-      { label: 'Tổng', latex: '\\sum_{i=1}^{n}' },
-      { label: 'Tích phân', latex: '\\int_{a}^{b}' },
-      { label: 'Giới hạn', latex: '\\lim_{x \\to \\infty}' },
-      { label: 'Ma trận', latex: '\\begin{pmatrix} a & b \\\\\\\\ c & d \\end{pmatrix}' },
-    ]
+      { label: 'Hệ PT', template: '\\begin{cases} @1 \\\\\\\\ @2 \\end{cases}', placeholders: ['Phương trình 1', 'Phương trình 2'], desc: 'Hệ phương trình' },
+      { label: 'Tổng', template: '\\sum_{@1}^{@2}', placeholders: ['Bắt đầu (VD: i=1)', 'Kết thúc (VD: n)'], desc: 'Tổng sigma' },
+      { label: 'Tích phân', template: '\\int_{@1}^{@2}', placeholders: ['Cận dưới', 'Cận trên'], desc: 'Tích phân' },
+      { label: 'Giới hạn', template: '\\lim_{@1}', placeholders: ['Điều kiện (VD: x \\to \\infty)'], desc: 'Giới hạn' },
+      { label: 'Ma trận', template: '\\begin{pmatrix} @1 & @2 \\\\\\\\ @3 & @4 \\end{pmatrix}', placeholders: ['a', 'b', 'c', 'd'], desc: 'Ma trận 2×2' },
+    ] as LatexItem[]
   },
 ];
 
@@ -95,8 +103,40 @@ export default function RichEditor({
   const [showPreview, setShowPreview] = useState(true);
   const [zoomImage, setZoomImage] = useState<string | null>(null);
   const [imageSize, setImageSize] = useState('medium');
+  const [popupItem, setPopupItem] = useState<LatexItem | null>(null);
+  const [popupInputs, setPopupInputs] = useState<string[]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  /** Build LaTeX from template + inputs */
+  const buildLatex = (item: LatexItem, inputs: string[]): string => {
+    if (!item.template) return item.latex || '';
+    let result = item.template;
+    inputs.forEach((val, i) => {
+      result = result.replace(`@${i + 1}`, val || '?');
+    });
+    return result;
+  };
+
+  /** Handle clicking a LaTeX toolbar button */
+  const handleLatexClick = (item: LatexItem) => {
+    if (item.template && item.placeholders) {
+      // Complex item: open popup
+      setPopupItem(item);
+      setPopupInputs(item.placeholders.map(() => ''));
+    } else if (item.latex) {
+      // Simple item: insert directly
+      insertAtCursor(item.latex);
+    }
+  };
+
+  const handlePopupInsert = () => {
+    if (!popupItem) return;
+    const latex = buildLatex(popupItem, popupInputs);
+    insertAtCursor(latex);
+    setPopupItem(null);
+    setPopupInputs([]);
+  };
 
   /** Insert text at cursor position in textarea */
   const insertAtCursorRaw = useCallback((text: string) => {
@@ -356,13 +396,18 @@ export default function RichEditor({
 
             {/* LaTeX buttons */}
             <div className="flex items-center gap-1 px-2 py-1.5 flex-wrap">
-              {activeTabItems.map((item, i) => (
+              {activeTabItems.map((item: LatexItem, i: number) => (
                 <button
                   key={i}
                   type="button"
-                  onClick={() => insertAtCursor(item.latex)}
-                  className="px-2.5 py-1 text-xs font-mono bg-slate-50 border border-slate-200 rounded-md hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition-colors"
-                  title={item.latex}
+                  onClick={() => handleLatexClick(item)}
+                  className={cn(
+                    "px-2.5 py-1 text-xs font-mono border rounded-md transition-colors",
+                    item.template
+                      ? "bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100 hover:border-blue-400"
+                      : "bg-slate-50 border-slate-200 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600"
+                  )}
+                  title={item.desc || item.latex || item.label}
                 >
                   {item.label}
                 </button>
@@ -419,6 +464,67 @@ export default function RichEditor({
           </div>
         </div>
       </div>
+
+      {/* LaTeX input popup */}
+      {popupItem && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm" onClick={() => setPopupItem(null)}>
+          <div className="bg-white rounded-2xl shadow-2xl w-[420px] overflow-hidden animate-scale-in" onClick={e => e.stopPropagation()}>
+            <div className="px-5 py-4 border-b border-slate-100 bg-gradient-to-r from-blue-50 to-indigo-50">
+              <h3 className="text-sm font-bold text-slate-800">{popupItem.desc || popupItem.label}</h3>
+              <p className="text-xs text-slate-500 mt-0.5">Nhập biểu thức rồi nhấn &quot;Chèn&quot;</p>
+            </div>
+            <div className="p-5 space-y-3">
+              {popupItem.placeholders?.map((ph, i) => (
+                <div key={i}>
+                  <label className="block text-xs font-medium text-slate-600 mb-1">{ph}</label>
+                  <input
+                    type="text"
+                    value={popupInputs[i] || ''}
+                    onChange={e => {
+                      const next = [...popupInputs];
+                      next[i] = e.target.value;
+                      setPopupInputs(next);
+                    }}
+                    onKeyDown={e => { if (e.key === 'Enter') handlePopupInsert(); }}
+                    placeholder={ph}
+                    autoFocus={i === 0}
+                    className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm font-mono focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                  />
+                </div>
+              ))}
+
+              {/* Live preview */}
+              <div className="mt-3 p-3 bg-slate-50 rounded-lg border border-slate-200 min-h-[48px] flex items-center justify-center">
+                <MathRenderer
+                  content={`$${buildLatex(popupItem, popupInputs)}$`}
+                  className="text-lg"
+                />
+              </div>
+
+              {/* Code preview */}
+              <div className="text-[11px] font-mono text-slate-400 bg-slate-50 px-3 py-1.5 rounded border border-slate-100 break-all">
+                ${buildLatex(popupItem, popupInputs)}$
+              </div>
+            </div>
+            <div className="px-5 py-3 border-t border-slate-100 flex items-center gap-2 justify-end bg-slate-50/50">
+              <button
+                type="button"
+                onClick={() => setPopupItem(null)}
+                className="px-4 py-2 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50"
+              >
+                Hủy
+              </button>
+              <button
+                type="button"
+                onClick={handlePopupInsert}
+                className="px-4 py-2 text-xs font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 shadow-sm"
+              >
+                Chèn công thức
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Image zoom modal */}
       {zoomImage && (

@@ -69,38 +69,66 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
     }
   }, [showNotifications]);
 
-  // Search logic
+  // Search logic (debounced for production API calls)
   useEffect(() => {
     if (!searchQuery.trim()) { setSearchResults([]); return; }
     const query = searchQuery.toLowerCase();
-    const results: { type: string; title: string; href: string }[] = [];
 
-    if (isDemoMode) {
-      const questions = demoDb.getQuestions({ search: query });
-      questions.slice(0, 5).forEach(q => {
-        results.push({ type: "bài tập", title: stripLatex(q.content).substring(0, 80) + (q.content.length > 80 ? "..." : ""), href: `/questions/${q.id}` });
+    const timer = setTimeout(async () => {
+      const results: { type: string; title: string; href: string }[] = [];
+
+      if (isDemoMode) {
+        const questions = demoDb.getQuestions({ search: query });
+        questions.slice(0, 5).forEach(q => {
+          results.push({ type: "bài tập", title: stripLatex(q.content).substring(0, 80) + (q.content.length > 80 ? "..." : ""), href: `/questions/${q.id}` });
+        });
+        const exams = demoDb.getExams().filter(e => e.title.toLowerCase().includes(query));
+        exams.slice(0, 3).forEach(e => {
+          results.push({ type: "đề thi", title: e.title, href: `/exams/${e.id}` });
+        });
+      } else {
+        // Production: search via API
+        try {
+          const [qRes, eRes] = await Promise.all([
+            fetch(`/api/questions?search=${encodeURIComponent(query)}&limit=5`),
+            fetch(`/api/exams?search=${encodeURIComponent(query)}`),
+          ]);
+          if (qRes.ok) {
+            const qData = await qRes.json();
+            const qList = qData.data || qData || [];
+            (Array.isArray(qList) ? qList : []).slice(0, 5).forEach((q: any) => {
+              results.push({ type: "bài tập", title: stripLatex(q.content).substring(0, 80), href: `/questions/${q.id}` });
+            });
+          }
+          if (eRes.ok) {
+            const eData = await eRes.json();
+            const eList = Array.isArray(eData) ? eData : [];
+            eList.slice(0, 3).forEach((e: any) => {
+              results.push({ type: "đề thi", title: e.title, href: `/exams/${e.id}` });
+            });
+          }
+        } catch { /* ignore search errors */ }
+      }
+
+      // Static navigation results
+      const pages = [
+        { title: "Kho bài tập", href: "/questions" },
+        { title: "Thêm bài tập mới", href: "/questions/new" },
+        { title: "Kho đề thi", href: "/exams" },
+        { title: "Tạo đề thi mới", href: "/exams/new" },
+        { title: "Duyệt bài tập", href: "/admin/review" },
+        { title: "Duyệt đề thi", href: "/admin/review-exams" },
+        { title: "Quản lý danh mục", href: "/admin/categories" },
+        { title: "Quản lý người dùng", href: "/admin/users" },
+        { title: "Cài đặt", href: "/admin/settings" },
+      ];
+      pages.filter(p => p.title.toLowerCase().includes(query)).forEach(p => {
+        results.push({ type: "trang", ...p });
       });
-      const exams = demoDb.getExams().filter(e => e.title.toLowerCase().includes(query));
-      exams.slice(0, 3).forEach(e => {
-        results.push({ type: "đề thi", title: e.title, href: `/exams/${e.id}` });
-      });
-    }
-    // Static navigation results
-    const pages = [
-      { title: "Kho bài tập", href: "/questions" },
-      { title: "Thêm bài tập mới", href: "/questions/new" },
-      { title: "Kho đề thi", href: "/exams" },
-      { title: "Tạo đề thi mới", href: "/exams/new" },
-      { title: "Duyệt bài tập", href: "/admin/review" },
-      { title: "Duyệt đề thi", href: "/admin/review-exams" },
-      { title: "Quản lý danh mục", href: "/admin/categories" },
-      { title: "Quản lý người dùng", href: "/admin/users" },
-      { title: "Cài đặt", href: "/admin/settings" },
-    ];
-    pages.filter(p => p.title.toLowerCase().includes(query)).forEach(p => {
-      results.push({ type: "trang", ...p });
-    });
-    setSearchResults(results.slice(0, 8));
+      setSearchResults(results.slice(0, 8));
+    }, isDemoMode ? 0 : 300);
+
+    return () => clearTimeout(timer);
   }, [searchQuery]);
 
   const handleLogout = async () => {
