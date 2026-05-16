@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, FileText, Settings,
   Users, ChevronLeft, ChevronRight, GraduationCap, Plus,
   LogOut, FolderTree, CheckCircle, Heart, Bookmark, Sparkles,
-  BarChart3, Clock, Download, ClipboardList, Wrench
+  BarChart3, Clock, Download, ClipboardList, Wrench, Upload
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
@@ -27,6 +27,7 @@ const mainItems = [
 const toolItems = [
   { href: "/exams/auto", icon: Sparkles, label: "Tạo đề tự động" },
   { href: "/worksheets", icon: ClipboardList, label: "Phiếu bài tập" },
+  { href: "/questions/import", icon: Upload, label: "Import Word" },
   { href: "/questions/export", icon: Download, label: "Xuất bài tập" },
 ];
 
