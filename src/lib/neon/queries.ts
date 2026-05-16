@@ -276,14 +276,15 @@ export async function getExamQuestions(examId: string) {
   ` as (ExamQuestion & Question)[];
 }
 
-export async function createExam(data: Partial<Exam>) {
+export async function createExam(data: Partial<Exam> & Record<string, any>) {
   const sql = getDb();
   const result = await sql`
-    INSERT INTO public.exams (title, description, grade, duration, folder_id, user_id, tags, settings)
+    INSERT INTO public.exams (title, description, grade, duration, folder_id, user_id, tags, settings, exam_status, question_count)
     VALUES (
       ${data.title || ''}, ${data.description || null}, ${data.grade || 9},
       ${data.duration || null}, ${data.folder_id || null}, ${data.user_id || ''},
-      ${data.tags || []}, ${JSON.stringify(data.settings || {})}
+      ${data.tags || []}, ${JSON.stringify(data.settings || {})},
+      ${data.exam_status || 'personal'}, ${data.question_count || 0}
     )
     RETURNING *
   `;
@@ -341,28 +342,7 @@ export async function updateExamQuestionOrder(id: string, sortOrder: number) {
 }
 
 
-export async function getPersonalExams(userId: string, filters?: {
-  grade?: number;
-  status?: string;
-  search?: string;
-  limit?: number;
-}) {
-  const sql = getRawDb();
-  const { grade, status, search, limit = 200 } = filters || {};
-  const result = await sql`
-    SELECT e.*, u.full_name as author_name,
-      (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
-    FROM public.exams e
-    LEFT JOIN public.users u ON e.user_id = u.id
-    WHERE e.user_id = ${userId}
-      AND (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
-      AND (${status ?? null}::text IS NULL OR e.exam_status = ${status ?? null})
-      AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
-    ORDER BY e.created_at DESC
-    LIMIT ${limit}
-  `;
-  return result as unknown as Exam[];
-}
+
 
 export async function getSharedExams(filters?: {
   grade?: number;
@@ -379,6 +359,28 @@ export async function getSharedExams(filters?: {
     LEFT JOIN public.users u ON e.user_id = u.id
     WHERE (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
       AND (${status ?? null}::text IS NULL OR e.exam_status = ${status ?? null})
+      AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
+    ORDER BY e.created_at DESC
+    LIMIT ${limit}
+  `;
+  return result as unknown as Exam[];
+}
+
+export async function getPersonalExams(userId: string, filters?: {
+  grade?: number;
+  status?: string;
+  search?: string;
+  limit?: number;
+}) {
+  const sql = getRawDb();
+  const { grade, search, limit = 200 } = filters || {};
+  const result = await sql`
+    SELECT e.*, u.full_name as author_name,
+      (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
+    FROM public.exams e
+    LEFT JOIN public.users u ON e.user_id = u.id
+    WHERE e.user_id = ${userId}::uuid
+      AND (${grade ?? null}::int IS NULL OR e.grade = ${grade ?? null})
       AND (${search ?? null}::text IS NULL OR e.title ILIKE ${'%' + (search || '') + '%'})
     ORDER BY e.created_at DESC
     LIMIT ${limit}
@@ -458,6 +460,45 @@ export async function getFavoriteQuestions(userId: string) {
 }
 
 // ==========================================
+// SAVED EXAMS
+// ==========================================
+
+export async function getSavedExams(userId: string) {
+  const sql = getRawDb();
+  return await sql`
+    SELECT e.*, u.full_name as author_name,
+      (SELECT COUNT(*) FROM public.exam_questions eq WHERE eq.exam_id = e.id) as question_count
+    FROM public.saved_exams se
+    JOIN public.exams e ON se.exam_id = e.id
+    LEFT JOIN public.users u ON e.user_id = u.id
+    WHERE se.user_id = ${userId}::uuid
+    ORDER BY se.created_at DESC
+  `;
+}
+
+export async function getSavedExamIds(userId: string) {
+  const sql = getRawDb();
+  const result = await sql`
+    SELECT exam_id FROM public.saved_exams WHERE user_id = ${userId}::uuid
+  `;
+  return result.map(r => r.exam_id as string);
+}
+
+export async function toggleSavedExam(userId: string, examId: string) {
+  const sql = getRawDb();
+  const existing = await sql`
+    SELECT id FROM public.saved_exams WHERE user_id = ${userId}::uuid AND exam_id = ${examId}::uuid
+  `;
+  if (existing.length > 0) {
+    await sql`DELETE FROM public.saved_exams WHERE user_id = ${userId}::uuid AND exam_id = ${examId}::uuid`;
+    return false;
+  } else {
+    await sql`INSERT INTO public.saved_exams (user_id, exam_id) VALUES (${userId}::uuid, ${examId}::uuid)`;
+    return true;
+  }
+}
+
+// ==========================================
 // USERS (Admin)
 // ==========================================
 
@@ -534,43 +575,6 @@ export async function getQuestionStatsByGrade() {
   `;
 }
 
-// ==========================================
-// SAVED EXAMS
-// ==========================================
-
-export async function getSavedExamIds(userId: string): Promise<string[]> {
-  const sql = getDb();
-  const result = await sql`
-    SELECT exam_id FROM public.saved_exams WHERE user_id = ${userId}
-  `;
-  return result.map((r: any) => r.exam_id);
-}
-
-export async function getSavedExams(userId: string) {
-  const sql = getDb();
-  return await sql`
-    SELECT e.*, u.full_name as author_name
-    FROM public.saved_exams se
-    JOIN public.exams e ON se.exam_id = e.id
-    LEFT JOIN public.users u ON e.user_id = u.id
-    WHERE se.user_id = ${userId}
-    ORDER BY se.created_at DESC
-  `;
-}
-
-export async function toggleSavedExam(userId: string, examId: string): Promise<boolean> {
-  const sql = getDb();
-  const existing = await sql`
-    SELECT id FROM public.saved_exams WHERE user_id = ${userId} AND exam_id = ${examId}
-  `;
-  if (existing.length > 0) {
-    await sql`DELETE FROM public.saved_exams WHERE user_id = ${userId} AND exam_id = ${examId}`;
-    return false; // removed
-  } else {
-    await sql`INSERT INTO public.saved_exams (user_id, exam_id) VALUES (${userId}, ${examId})`;
-    return true; // added
-  }
-}
 
 // ==========================================
 // ACTIVITY / HISTORY
@@ -644,4 +648,39 @@ export async function getLikeCount(questionId: string) {
     SELECT COUNT(*)::int as count FROM public.likes WHERE question_id = ${questionId}::uuid
   `;
   return result[0]?.count || 0;
+}
+
+// ==========================================
+// REPORTS
+// ==========================================
+
+export async function createReport(userId: string, questionId: string, reason: string) {
+  const sql = getRawDb();
+  const result = await sql`
+    INSERT INTO public.reports (user_id, question_id, reason)
+    VALUES (${userId}::uuid, ${questionId}::uuid, ${reason})
+    RETURNING *
+  `;
+  return result[0];
+}
+
+export async function getReports(status?: string) {
+  const sql = getRawDb();
+  if (status) {
+    return await sql`
+      SELECT r.*, q.content as question_content, q.question_code, u.full_name as reporter_name
+      FROM public.reports r
+      JOIN public.questions q ON r.question_id = q.id
+      JOIN public.users u ON r.user_id = u.id
+      WHERE r.status = ${status}
+      ORDER BY r.created_at DESC
+    `;
+  }
+  return await sql`
+    SELECT r.*, q.content as question_content, q.question_code, u.full_name as reporter_name
+    FROM public.reports r
+    JOIN public.questions q ON r.question_id = q.id
+    JOIN public.users u ON r.user_id = u.id
+    ORDER BY r.created_at DESC
+  `;
 }

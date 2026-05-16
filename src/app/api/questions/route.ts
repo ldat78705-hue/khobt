@@ -117,8 +117,14 @@ export async function PATCH(req: NextRequest) {
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     
     try {
-      const { id, ...updates } = await req.json();
+      const { id, report, report_reason, ...updates } = await req.json();
       if (!id) return NextResponse.json({ error: 'ID required' }, { status: 400 });
+
+      // Handle report separately
+      if (report && report_reason) {
+        await neonQueries.createReport(user.id, id, report_reason);
+        return NextResponse.json({ success: true, message: 'Report created' });
+      }
       
       // If updating status, check permissions
       if (updates.status && updates.status !== 'draft') {
