@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { extractDocxContent } from '@/lib/omml-to-latex';
 import mammoth from 'mammoth';
+import AdmZip from 'adm-zip';
 
 /**
  * POST /api/import-word
- * Upload a .docx file, parse its content preserving LaTeX $...$,
- * and split into individual questions.
+ * Upload a .docx file, parse its content:
+ * - OMML equations → LaTeX $...$
+ * - MathType OLE → preserved as inline images
+ * - Plain text preserved
  */
 export async function POST(req: NextRequest) {
   try {
@@ -21,12 +25,41 @@ export async function POST(req: NextRequest) {
 
     const buffer = Buffer.from(await file.arrayBuffer());
 
-    // Use mammoth to extract raw text (preserving $...$ LaTeX)
-    const result = await mammoth.extractRawText({ buffer });
-    const rawText = result.value;
+    // Detect what math format the file uses
+    const zip = new AdmZip(buffer);
+    const documentXml = zip.readAsText('word/document.xml');
+    const hasOmml = documentXml.includes('<m:oMath');
+    const hasOle = documentXml.includes('w:object');
 
-    // Also get messages for debugging
-    const messages = result.messages.map((m: any) => m.message);
+    let rawText: string;
+
+    if (hasOmml && !hasOle) {
+      // Pure OMML → use our XML parser for accurate LaTeX
+      rawText = extractDocxContent(documentXml);
+    } else if (hasOmml && hasOle) {
+      // Mixed: try OMML parser first, fall back to mammoth if too short
+      const ommlText = extractDocxContent(documentXml);
+      const mammothResult = await mammoth.extractRawText({ buffer: buffer as any });
+      rawText = ommlText.length >= mammothResult.value.length * 0.7 
+        ? ommlText 
+        : mammothResult.value;
+    } else {
+      // OLE-only or no math → mammoth HTML to preserve equation images
+      // Extract with mammoth HTML to get equation images
+      const convertImageHandler = (mammoth as any).images.inline(async (element: any) => {
+        // Convert all images (including MathType WMF) to data URI
+        const imageBuffer = await element.read();
+        const base64 = imageBuffer.toString('base64');
+        const contentType = element.contentType || 'image/png';
+        return { src: `data:${contentType};base64,${base64}` };
+      });
+      const htmlResult = await (mammoth as any).convertToHtml({ 
+        buffer: buffer,
+      }, { convertImage: convertImageHandler });
+      
+      // Convert HTML to text + inline math images
+      rawText = htmlToTextWithMathImages(htmlResult.value);
+    }
 
     // Parse the text into questions
     const questions = parseQuestionsFromText(rawText);
@@ -34,10 +67,11 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       success: true,
       fileName: file.name,
-      rawText: rawText.substring(0, 500), // preview first 500 chars
+      rawText: rawText.substring(0, 500),
       totalChars: rawText.length,
       questions,
-      parseMessages: messages.slice(0, 5),
+      mathFormat: hasOmml ? (hasOle ? 'omml+ole' : 'omml') : (hasOle ? 'ole' : 'none'),
+      parseMessages: [],
     });
   } catch (err: any) {
     console.error('Import Word error:', err);
@@ -46,20 +80,68 @@ export async function POST(req: NextRequest) {
 }
 
 /**
+ * Convert mammoth HTML output to plain text while preserving 
+ * MathType equation images as inline markdown images.
+ */
+function htmlToTextWithMathImages(html: string): string {
+  let result = html;
+  
+  // Remove MathType anchor tags
+  result = result.replace(/<a[^>]*id="MTBlankEqn"[^>]*>\s*<\/a>/g, '');
+  
+  // Convert MathType equation images to inline markdown
+  // These are WMF/EMF images that represent math equations
+  result = result.replace(/<img\s+src="(data:image\/[^"]+)"[^>]*\/?>/g, (_, src) => {
+    // Keep the image as inline markdown for math equations
+    return `![eq](${src})`;
+  });
+  
+  // Convert HTML tables to text
+  result = result.replace(/<table[^>]*>([\s\S]*?)<\/table>/g, (_, tableContent) => {
+    // Simple table → text conversion
+    const rows: string[] = [];
+    const rowRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/g;
+    let rowMatch;
+    while ((rowMatch = rowRegex.exec(tableContent)) !== null) {
+      const cells: string[] = [];
+      const cellRegex = /<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/g;
+      let cellMatch;
+      while ((cellMatch = cellRegex.exec(rowMatch[1])) !== null) {
+        cells.push(stripHtml(cellMatch[1]).trim());
+      }
+      rows.push(cells.join('\t'));
+    }
+    return rows.join('\n');
+  });
+  
+  // Convert paragraphs to newlines
+  result = result.replace(/<\/p>/g, '\n');
+  result = result.replace(/<p[^>]*>/g, '');
+  
+  // Convert line breaks
+  result = result.replace(/<br\s*\/?>/g, '\n');
+  
+  // Remove remaining HTML tags (but preserve content)
+  result = stripHtml(result);
+  
+  // Clean up excessive whitespace
+  result = result.replace(/\n{3,}/g, '\n\n');
+  result = result.trim();
+  
+  return result;
+}
+
+function stripHtml(html: string): string {
+  return html.replace(/<[^>]+>/g, '');
+}
+
+/**
  * Parse raw text into structured questions.
- * Detects patterns like:
- * - "Câu 1.", "Câu 1:", "Câu 1 (2 điểm)"
- * - "Bài 1.", "Bài 1:", "Bài 1 (2 điểm)"
- * 
- * Preserves LaTeX $...$ notation.
  */
 function parseQuestionsFromText(text: string): ParsedQuestion[] {
   const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   
-  // Pattern to detect question headers
-  // Matches: Câu 1., Câu 1:, Câu 1 (2đ), Bài 1., Bài 1:, etc.
   const questionPattern = /^(Câu|Bài|Câu hỏi|Question)\s*(\d+)\s*[.:)]\s*(.*)/i;
-  // Also match: "1.", "1)", "1:" at the start (numbered list)
   const numberedPattern = /^(\d+)\s*[.):\s]\s*(.*)/;
   
   const questions: ParsedQuestion[] = [];
@@ -72,7 +154,6 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
     const matchN = !matchQ ? numberedPattern.exec(line) : null;
     
     if (matchQ) {
-      // Save previous question
       if (currentQuestion && currentQuestion.content.trim()) {
         questions.push(finalizeQuestion(currentQuestion));
       }
@@ -81,7 +162,6 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
       const num = parseInt(matchQ[2]);
       const rest = matchQ[3]?.trim() || '';
       
-      // Extract points if present: (2 điểm), (2đ), (2.0 điểm)
       const pointsMatch = rest.match(/\((\d+(?:[.,]\d+)?)\s*(?:điểm|đ|điểm\))/i);
       const points = pointsMatch ? parseFloat(pointsMatch[1].replace(',', '.')) : 1;
       const contentAfterPoints = pointsMatch 
@@ -99,10 +179,8 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
         question_type: 'tu_luan',
       };
     } else if (matchN && !currentQuestion && !collectingHeader) {
-      // Numbered pattern only valid after we've seen at least one proper question header
-      // or if this looks like a numbered question list
+      // skip
     } else if (matchN && questions.length === 0 && !currentQuestion) {
-      // First numbered item - could be a question list starting with "1."
       collectingHeader = false;
       const num = parseInt(matchN[1]);
       if (num === 1) {
@@ -120,7 +198,6 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
         headerInfo += line + '\n';
       }
     } else if (matchN && currentQuestion && parseInt(matchN[1]) === currentQuestion.number + 1) {
-      // Next numbered question
       if (currentQuestion.content.trim()) {
         questions.push(finalizeQuestion(currentQuestion));
       }
@@ -136,7 +213,6 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
         question_type: 'tu_luan',
       };
     } else if (currentQuestion) {
-      // Check for answer/solution markers
       const lowerLine = line.toLowerCase();
       if (lowerLine.startsWith('đáp án:') || lowerLine.startsWith('đáp án ') || lowerLine === 'đáp án') {
         currentQuestion.answer += line.replace(/^đáp án[:\s]*/i, '').trim() + '\n';
@@ -144,7 +220,6 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
                  lowerLine.startsWith('hướng dẫn:') || lowerLine.startsWith('giải:') || lowerLine === 'giải') {
         currentQuestion.solution += line.replace(/^(lời giải|hướng dẫn|giải)[:\s]*/i, '').trim() + '\n';
       } else {
-        // Append to content (or solution if we already started collecting solution)
         if (currentQuestion.solution) {
           currentQuestion.solution += line + '\n';
         } else if (currentQuestion.answer && !currentQuestion.content.includes(line)) {
@@ -154,17 +229,14 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
         }
       }
     } else {
-      // Header area (before first question)
       headerInfo += line + '\n';
     }
   }
   
-  // Push last question
   if (currentQuestion && currentQuestion.content.trim()) {
     questions.push(finalizeQuestion(currentQuestion));
   }
   
-  // If no structured questions found, treat the whole text as one question
   if (questions.length === 0 && text.trim().length > 10) {
     questions.push({
       number: 1,
@@ -187,23 +259,15 @@ function finalizeQuestion(q: ParsedQuestion): ParsedQuestion {
     content: q.content.trim(),
     answer: q.answer.trim(),
     solution: q.solution.trim(),
-    // Auto-detect question type
     question_type: detectQuestionType(q.content),
   };
 }
 
 function detectQuestionType(content: string): string {
-  const lower = content.toLowerCase();
-  // Check for MCQ patterns: Must have at least 3 of A. B. C. D. on separate lines (uppercase only)
-  // This avoids false positives from sub-question labels like a), b), c)
   const mcqLines = content.split('\n').filter(line => /^\s*[A-D]\s*[.)]\s+\S/.test(line));
-  if (mcqLines.length >= 3) {
-    return 'trac_nghiem';
-  }
-  // Check for True/False
-  if (lower.includes('đúng hay sai') || lower.includes('đúng/sai') || lower.includes('đúng sai')) {
-    return 'dung_sai';
-  }
+  if (mcqLines.length >= 3) return 'trac_nghiem';
+  const lower = content.toLowerCase();
+  if (lower.includes('đúng hay sai') || lower.includes('đúng/sai') || lower.includes('đúng sai')) return 'dung_sai';
   return 'tu_luan';
 }
 

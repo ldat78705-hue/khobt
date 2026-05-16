@@ -91,6 +91,11 @@ export function renderMathContent(text: string): string {
     }
   });
 
+  // Handle inline equation images: ![eq](data:image/...) from MathType OLE
+  result = result.replace(/!\[eq\]\((data:image\/[^)]+)\)/g, (_, src) => {
+    return storePlaceholder(`<img src="${src}" alt="equation" class="inline-block align-middle h-[1.4em] mx-0.5" style="vertical-align:middle;height:1.4em;display:inline-block" />`);
+  });
+
   // Handle markdown tables: detect lines starting with |
   result = renderMarkdownTables(result);
 
