@@ -68,11 +68,26 @@ export default function QuestionDetailPage() {
 
   // Fetch related questions
   useEffect(() => {
-    if (!question || !isDemoMode) return;
-    const related = demoDb.getQuestions({ topic: question.topic, difficulty: question.difficulty })
-      .filter(q => q.id !== question.id)
-      .slice(0, 4);
-    setRelatedQuestions(related);
+    if (!question) return;
+    if (isDemoMode) {
+      const related = demoDb.getQuestions({ topic: question.topic, difficulty: question.difficulty })
+        .filter(q => q.id !== question.id)
+        .slice(0, 4);
+      setRelatedQuestions(related);
+    } else {
+      const params = new URLSearchParams();
+      params.set('topic', question.topic);
+      params.set('grade', String(question.grade));
+      params.set('status', 'approved');
+      params.set('limit', '5');
+      fetch(`/api/questions?${params}`)
+        .then(r => r.json())
+        .then(data => {
+          const list = data.data || data || [];
+          setRelatedQuestions(list.filter((q: any) => q.id !== question.id).slice(0, 4));
+        })
+        .catch(() => {});
+    }
   }, [question]);
 
   useEffect(() => { fetchQuestion(); }, [fetchQuestion]);

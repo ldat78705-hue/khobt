@@ -85,6 +85,31 @@ export default function FavoritesPage() {
         }
         toast.success(`Đã tạo đề thi từ ${ids.length} bài yêu thích!`);
         router.push(`/exams/${exam.id}/edit`);
+      } else {
+        const selectedQs = questions.filter(q => ids.includes(q.id));
+        const grade = selectedQs[0]?.grade || 9;
+        const res = await fetch('/api/exams', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            title: `Đề từ yêu thích (${ids.length} câu)`,
+            grade,
+            duration: Math.max(45, ids.length * 10),
+            question_count: ids.length,
+            settings: { subject: `Toán ${grade}` },
+          }),
+        });
+        if (!res.ok) throw new Error('Lỗi tạo đề');
+        const exam = await res.json();
+        for (let i = 0; i < ids.length; i++) {
+          await fetch('/api/exam-questions', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ exam_id: exam.id, question_id: ids[i], sort_order: i }),
+          });
+        }
+        toast.success(`Đã tạo đề thi từ ${ids.length} bài yêu thích!`);
+        router.push(`/exams/${exam.id}/edit`);
       }
     } catch {
       toast.error("Không thể tạo đề thi");
