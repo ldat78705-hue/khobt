@@ -4,7 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   Upload, FileText, Trash2, Edit, Check, X, ChevronDown, ChevronUp,
-  Loader2, Plus, Sparkles, BookOpen, AlertTriangle, CheckCircle, Eye
+  Loader2, Plus, Sparkles, BookOpen, AlertTriangle, CheckCircle, Eye, Download
 } from "lucide-react";
 import { cn, getDifficultyLabel, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
 import { GRADES, TOPICS, DIFFICULTIES, QUESTION_TYPES } from "@/types";
@@ -249,15 +249,26 @@ export default function ImportWordPage() {
         {step === 'upload' ? (
           <>
             {/* Instructions */}
-            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white">
+            <div className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white relative overflow-hidden">
               <div className="flex items-center gap-3 mb-3">
                 <Upload className="w-6 h-6" />
                 <h2 className="text-lg font-bold">Import bài tập từ file Word</h2>
               </div>
-              <div className="text-blue-100 text-sm space-y-1">
-                <p>📝 <strong>Bước 1:</strong> Dùng tool Python chuyển MathType → LaTeX (nếu cần)</p>
-                <p>📤 <strong>Bước 2:</strong> Upload file .docx lên đây</p>
-                <p>✅ <strong>Bước 3:</strong> Review từng câu, chỉnh sửa → Import vào kho</p>
+              <div className="text-blue-100 text-sm space-y-2">
+                <p>📝 <strong>Bước 1:</strong> (Chỉ làm 1 lần) Cài đặt Tool xử lý MathType tự động vào máy tính của thầy cô.</p>
+                <div className="pt-1 pb-2">
+                  <a href="/TienIchMathType.exe" download className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-sm text-sm">
+                    <Download className="w-4 h-4" />
+                    Tải Tool Hỗ Trợ MathType (.exe)
+                  </a>
+                </div>
+                <p>⚙️ <strong>Bước 2:</strong> Mở Tool vừa tải, bấm nút <strong>"Tự động chạy cùng máy tính"</strong> rồi có thể tắt đi.</p>
+                <p>📤 <strong>Bước 3:</strong> Kéo thả file .docx vào khung bên dưới, hệ thống sẽ tự động bắt tay với máy tính để chuyển đổi MathType siêu tốc!</p>
+              </div>
+              
+              {/* Decorative background element */}
+              <div className="absolute -right-10 -bottom-10 opacity-10">
+                <Sparkles className="w-40 h-40" />
               </div>
             </div>
 
@@ -306,7 +317,7 @@ export default function ImportWordPage() {
                     <Upload className="w-8 h-8 text-blue-500" />
                   </div>
                   <p className="text-slate-700 font-semibold">Kéo thả file .docx vào đây hoặc click để chọn</p>
-                  <p className="text-sm text-slate-400">File Word đã convert LaTeX (MathType → $...$)</p>
+                  <p className="text-slate-400 font-medium mt-1">(Tự động nhận diện và xử lý MathType / Word Equation)</p>
                 </div>
               )}
             </div>
