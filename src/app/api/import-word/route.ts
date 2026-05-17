@@ -79,26 +79,66 @@ export async function POST(req: NextRequest) {
   }
 }
 
+async function uploadBase64ToCloudinary(base64: string): Promise<string> {
+  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const uploadPreset = process.env.CLOUDINARY_UPLOAD_PRESET || 'khodetoan_unsigned';
+  
+  if (!cloudName) {
+    throw new Error('Cloudinary is not configured');
+  }
+
+  const formData = new FormData();
+  formData.append('file', base64);
+  formData.append('upload_preset', uploadPreset);
+
+  const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!res.ok) {
+    throw new Error('Failed to upload to Cloudinary');
+  }
+
+  const data = await res.json();
+  return data.secure_url;
+}
+
 /**
  * Convert mammoth HTML output to plain text while marking
  * MathType equation positions with placeholders.
  * WMF/EMF images can't be displayed in browsers, so we mark them.
  */
-function htmlToTextWithMathImages(html: string): string {
+async function htmlToTextWithMathImages(html: string): Promise<string> {
   let result = html;
   
   // Remove MathType anchor tags
   result = result.replace(/<a[^>]*id="MTBlankEqn"[^>]*>\s*<\/a>/g, '');
   
-  // Handle images: WMF/EMF → placeholder, PNG/JPG → keep
-  result = result.replace(/<img\s+src="(data:image\/([^;]+);[^"]+)"[^>]*\/?>/g, (_, src, type) => {
+  // Handle images: WMF/EMF → placeholder, PNG/JPG → upload to Cloudinary
+  const imageRegex = /<img\s+src="(data:image\/([^;]+);[^"]+)"[^>]*\/?>/g;
+  const matches = [...result.matchAll(imageRegex)];
+  
+  for (const match of matches) {
+    const fullTag = match[0];
+    const src = match[1];
+    const type = match[2];
+    
     if (type === 'x-wmf' || type === 'x-emf' || type === 'wmf' || type === 'emf') {
       // MathType equation → placeholder
-      return '📐';
+      result = result.replace(fullTag, '📐');
+    } else {
+      // Normal image → upload and convert to markdown
+      try {
+        const url = await uploadBase64ToCloudinary(src);
+        result = result.replace(fullTag, `![hình](${url})`);
+      } catch (err) {
+        console.error('Cloudinary upload failed:', err);
+        // Fallback to base64 if upload fails
+        result = result.replace(fullTag, `![hình](${src})`);
+      }
     }
-    // Normal image → inline markdown
-    return `![hình](${src})`;
-  });
+  }
   
   // Convert HTML tables to text
   result = result.replace(/<table[^>]*>([\s\S]*?)<\/table>/g, (_, tableContent) => {
