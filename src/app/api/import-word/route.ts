@@ -80,24 +80,27 @@ export async function POST(req: NextRequest) {
 }
 
 async function uploadBase64ToCloudinary(base64: string): Promise<string> {
-  const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+  const cloudName = process.env.CLOUDINARY_CLOUD_NAME || process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
   const uploadPreset = process.env.CLOUDINARY_UPLOAD_PRESET || 'khodetoan_unsigned';
   
   if (!cloudName) {
     throw new Error('Cloudinary is not configured');
   }
 
-  const formData = new FormData();
-  formData.append('file', base64);
-  formData.append('upload_preset', uploadPreset);
-
+  // Use JSON instead of FormData to prevent Next.js edge runtime issues with large strings
   const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
     method: 'POST',
-    body: formData,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      file: base64,
+      upload_preset: uploadPreset
+    }),
   });
 
   if (!res.ok) {
-    throw new Error('Failed to upload to Cloudinary');
+    const errorText = await res.text();
+    console.error('Cloudinary API error:', errorText);
+    throw new Error(`Failed to upload to Cloudinary: ${errorText}`);
   }
 
   const data = await res.json();
@@ -119,25 +122,28 @@ async function htmlToTextWithMathImages(html: string): Promise<string> {
   const imageRegex = /<img\s+src="(data:image\/([^;]+);[^"]+)"[^>]*\/?>/g;
   const matches = [...result.matchAll(imageRegex)];
   
-  for (const match of matches) {
+  // Extract images and upload in parallel to prevent Vercel timeout
+  const replacements = await Promise.all(matches.map(async (match) => {
     const fullTag = match[0];
     const src = match[1];
     const type = match[2];
     
     if (type === 'x-wmf' || type === 'x-emf' || type === 'wmf' || type === 'emf') {
-      // MathType equation → placeholder
-      result = result.replace(fullTag, '📐');
+      return { fullTag, replacement: '📐' };
     } else {
-      // Normal image → upload and convert to markdown
       try {
         const url = await uploadBase64ToCloudinary(src);
-        result = result.replace(fullTag, `![hình](${url})`);
+        return { fullTag, replacement: `![hình](${url})` };
       } catch (err) {
         console.error('Cloudinary upload failed:', err);
-        // Fallback to base64 if upload fails
-        result = result.replace(fullTag, `![hình](${src})`);
+        return { fullTag, replacement: `![hình](${src})` };
       }
     }
+  }));
+  
+  // Apply all replacements
+  for (const { fullTag, replacement } of replacements) {
+    result = result.replace(fullTag, replacement);
   }
   
   // Convert HTML tables to text
