@@ -44,20 +44,12 @@ export async function POST(req: NextRequest) {
         ? ommlText 
         : mammothResult.value;
     } else {
-      // OLE-only or no math → mammoth HTML to preserve equation images
-      // Extract with mammoth HTML to get equation images
-      const convertImageHandler = (mammoth as any).images.inline(async (element: any) => {
-        // Convert all images (including MathType WMF) to data URI
-        const imageBuffer = await element.read();
-        const base64 = imageBuffer.toString('base64');
-        const contentType = element.contentType || 'image/png';
-        return { src: `data:${contentType};base64,${base64}` };
-      });
-      const htmlResult = await (mammoth as any).convertToHtml({ 
-        buffer: buffer,
-      }, { convertImage: convertImageHandler });
+      // OLE-only or no math → use mammoth HTML
+      // MathType equations are stored as WMF/EMF images which browsers can't render
+      // We extract them as placeholders so users can see where equations belong
+      const htmlResult = await (mammoth as any).convertToHtml({ buffer });
       
-      // Convert HTML to text + inline math images
+      // Convert HTML to text, marking equation positions
       rawText = htmlToTextWithMathImages(htmlResult.value);
     }
 
@@ -80,8 +72,9 @@ export async function POST(req: NextRequest) {
 }
 
 /**
- * Convert mammoth HTML output to plain text while preserving 
- * MathType equation images as inline markdown images.
+ * Convert mammoth HTML output to plain text while marking
+ * MathType equation positions with placeholders.
+ * WMF/EMF images can't be displayed in browsers, so we mark them.
  */
 function htmlToTextWithMathImages(html: string): string {
   let result = html;
@@ -89,11 +82,14 @@ function htmlToTextWithMathImages(html: string): string {
   // Remove MathType anchor tags
   result = result.replace(/<a[^>]*id="MTBlankEqn"[^>]*>\s*<\/a>/g, '');
   
-  // Convert MathType equation images to inline markdown
-  // These are WMF/EMF images that represent math equations
-  result = result.replace(/<img\s+src="(data:image\/[^"]+)"[^>]*\/?>/g, (_, src) => {
-    // Keep the image as inline markdown for math equations
-    return `![eq](${src})`;
+  // Handle images: WMF/EMF → placeholder, PNG/JPG → keep
+  result = result.replace(/<img\s+src="(data:image\/([^;]+);[^"]+)"[^>]*\/?>/g, (_, src, type) => {
+    if (type === 'x-wmf' || type === 'x-emf' || type === 'wmf' || type === 'emf') {
+      // MathType equation → placeholder
+      return '📐';
+    }
+    // Normal image → inline markdown
+    return `![hình](${src})`;
   });
   
   // Convert HTML tables to text
