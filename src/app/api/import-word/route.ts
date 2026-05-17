@@ -87,14 +87,13 @@ async function uploadBase64ToCloudinary(base64: string): Promise<string> {
     throw new Error('Cloudinary is not configured');
   }
 
-  // Use JSON instead of FormData to prevent Next.js edge runtime issues with large strings
+  const formData = new FormData();
+  formData.append('file', base64);
+  formData.append('upload_preset', uploadPreset);
+
   const res = await fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      file: base64,
-      upload_preset: uploadPreset
-    }),
+    body: formData,
   });
 
   if (!res.ok) {
