@@ -160,17 +160,20 @@ function stripHtml(html: string): string {
 function parseQuestionsFromText(text: string): ParsedQuestion[] {
   const lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
   
-  const questionPattern = /^(Câu|Bài|Câu hỏi|Question)\s*(\d+)\s*[.:)]\s*(.*)/i;
+  const questionPattern = /^(Câu|Bài|Câu hỏi|Question)\s*([0-9]+|[IVXLCDM]+)(?:[.:)])?\s*(.*)/i;
   const numberedPattern = /^(\d+)\s*[.):\s]\s*(.*)/;
+  
+  const hasQuestionKeyword = lines.some(l => questionPattern.test(l));
   
   const questions: ParsedQuestion[] = [];
   let currentQuestion: ParsedQuestion | null = null;
   let headerInfo = '';
   let collectingHeader = true;
+  let questionCounter = 1;
   
   for (const line of lines) {
     const matchQ = questionPattern.exec(line);
-    const matchN = !matchQ ? numberedPattern.exec(line) : null;
+    const matchN = (!hasQuestionKeyword && !matchQ) ? numberedPattern.exec(line) : null;
     
     if (matchQ) {
       if (currentQuestion && currentQuestion.content.trim()) {
@@ -178,7 +181,12 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
       }
       
       collectingHeader = false;
-      const num = parseInt(matchQ[2]);
+      let num = parseInt(matchQ[2]);
+      if (isNaN(num)) {
+        num = questionCounter;
+      }
+      questionCounter = num + 1;
+      
       const rest = matchQ[3]?.trim() || '';
       
       const pointsMatch = rest.match(/\((\d+(?:[.,]\d+)?)\s*(?:điểm|đ|điểm\))/i);
@@ -213,6 +221,7 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
           topic: 'khac',
           question_type: 'tu_luan',
         };
+        questionCounter = num + 1;
       } else {
         headerInfo += line + '\n';
       }
@@ -231,6 +240,7 @@ function parseQuestionsFromText(text: string): ParsedQuestion[] {
         topic: 'khac',
         question_type: 'tu_luan',
       };
+      questionCounter = num + 1;
     } else if (currentQuestion) {
       const lowerLine = line.toLowerCase();
       if (lowerLine.startsWith('đáp án:') || lowerLine.startsWith('đáp án ') || lowerLine === 'đáp án') {
