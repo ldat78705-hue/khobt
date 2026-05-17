@@ -102,8 +102,7 @@ function htmlToTextWithMathImages(html: string): string {
   
   // Convert HTML tables to text
   result = result.replace(/<table[^>]*>([\s\S]*?)<\/table>/g, (_, tableContent) => {
-    // Simple table → text conversion
-    const rows: string[] = [];
+    const rows: string[][] = [];
     const rowRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/g;
     let rowMatch;
     while ((rowMatch = rowRegex.exec(tableContent)) !== null) {
@@ -113,9 +112,25 @@ function htmlToTextWithMathImages(html: string): string {
       while ((cellMatch = cellRegex.exec(rowMatch[1])) !== null) {
         cells.push(stripHtml(cellMatch[1]).trim());
       }
-      rows.push(cells.join('\t'));
+      rows.push(cells);
     }
-    return rows.join('\n');
+    
+    if (rows.length === 0) return '';
+    
+    // Convert to markdown table format: | cell | cell |
+    const maxCols = Math.max(...rows.map(r => r.length));
+    const mdRows = rows.map(r => {
+      while (r.length < maxCols) r.push(''); // pad missing cells
+      return '| ' + r.join(' | ') + ' |';
+    });
+    
+    // Add header separator line (e.g. |---|---|)
+    const sepRow = '|' + Array(maxCols).fill('---').join('|') + '|';
+    // Insert after first row
+    mdRows.splice(1, 0, sepRow);
+    
+    // Add newlines around the table so it is parsed as a distinct block
+    return '\n\n' + mdRows.join('\n') + '\n\n';
   });
   
   // Convert paragraphs to newlines
