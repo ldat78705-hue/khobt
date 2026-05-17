@@ -60,7 +60,42 @@ export default function ImportWordPage() {
 
     try {
       const formData = new FormData();
-      formData.append('file', file);
+      
+      let fileToUpload = file;
+      
+      // Auto MathType Conversion via Local Bridge
+      try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 1000);
+        const pingRes = await fetch('http://localhost:8989/ping', { signal: controller.signal }).catch(() => null);
+        clearTimeout(timeoutId);
+        
+        if (pingRes && pingRes.ok) {
+          toast.loading("Tool cục bộ đang tự động xử lý MathType... (Vui lòng không thao tác chuột)", { id: "local-convert" });
+          const localFormData = new FormData();
+          localFormData.append('file', file);
+          
+          const convertRes = await fetch('http://localhost:8989/convert', {
+            method: 'POST',
+            body: localFormData
+          });
+          
+          if (convertRes.ok) {
+            const blob = await convertRes.blob();
+            fileToUpload = new File([blob], `converted_${file.name}`, { type: file.type });
+            toast.success("Đã xử lý xong MathType qua Tool cục bộ!", { id: "local-convert" });
+          } else {
+            toast.error("Tool cục bộ gặp lỗi khi chuyển đổi. Sẽ import file gốc.", { id: "local-convert" });
+          }
+        } else {
+          // Tool not running
+          toast.info("Mẹo: Mở phần mềm 'Tiện Ích Chuyển Đổi' trên máy tính để tự động xử lý MathType (nếu có).", { duration: 5000 });
+        }
+      } catch (err) {
+        console.log("Local tool not detected", err);
+      }
+
+      formData.append('file', fileToUpload);
 
       const res = await fetch('/api/import-word', {
         method: 'POST',
