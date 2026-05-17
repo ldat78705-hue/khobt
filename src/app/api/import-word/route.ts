@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
       const htmlResult = await (mammoth as any).convertToHtml({ buffer });
       
       // Convert HTML to text, marking equation positions
-      rawText = htmlToTextWithMathImages(htmlResult.value);
+      rawText = await htmlToTextWithMathImages(htmlResult.value);
     }
 
     // Clean up scattered $ signs from MathType conversion fragments
