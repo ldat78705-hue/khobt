@@ -255,14 +255,14 @@ export default function ImportWordPage() {
                 <h2 className="text-lg font-bold">Import bài tập từ file Word</h2>
               </div>
               <div className="text-blue-100 text-sm space-y-2">
-                <p>📝 <strong>Bước 1:</strong> (Chỉ làm 1 lần) Cài đặt Tool xử lý MathType tự động vào máy tính của thầy cô.</p>
+                <p>📝 <strong>Bước 1:</strong> (Chỉ làm 1 lần) Cài đặt Tool kết nối MathType chạy ngầm siêu nhẹ.</p>
                 <div className="pt-1 pb-2">
-                  <a href="/TienIchMathType.exe" download className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-sm text-sm">
+                  <a href="/ToolMathTypeTuDong.exe" download className="inline-flex items-center gap-2 px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors shadow-sm text-sm">
                     <Download className="w-4 h-4" />
-                    Tải Tool Hỗ Trợ MathType (.exe)
+                    Tải Tool Cầu Nối MathType Tự Động (.exe)
                   </a>
                 </div>
-                <p>⚙️ <strong>Bước 2:</strong> Mở Tool vừa tải, bấm nút <strong>"Tự động chạy cùng máy tính"</strong> rồi có thể tắt đi.</p>
+                <p>⚙️ <strong>Bước 2:</strong> Nhấn đúp để mở Tool vừa tải (Phần mềm sẽ tự chạy ngầm và tự động khởi động cùng Windows).</p>
                 <p>📤 <strong>Bước 3:</strong> Kéo thả file .docx vào khung bên dưới, hệ thống sẽ tự động bắt tay với máy tính để chuyển đổi MathType siêu tốc!</p>
               </div>
               
