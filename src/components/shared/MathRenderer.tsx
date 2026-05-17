@@ -50,10 +50,13 @@ export const MathRenderer = memo(MathRendererInner);
 export function renderMathContent(text: string): string {
   if (!text) return '';
 
+  // Clean up scattered $ signs (e.g. from broken MathType imports)
+  text = text.replace(/\$\s*\$/g, ' ');
+
   // Placeholder storage for rendered KaTeX HTML
   const placeholders: string[] = [];
-  const PLACEHOLDER_PREFIX = '\x00KATEX_';
-  const PLACEHOLDER_SUFFIX = '\x00';
+  const PLACEHOLDER_PREFIX = '__KATEX_PLACEHOLDER_';
+  const PLACEHOLDER_SUFFIX = '__';
 
   const storePlaceholder = (html: string): string => {
     const idx = placeholders.length;
@@ -104,7 +107,7 @@ export function renderMathContent(text: string): string {
 
   // Restore KaTeX HTML from placeholders
   result = result.replace(
-    new RegExp(`${PLACEHOLDER_PREFIX.replace(/\x00/g, '\\x00')}(\\d+)${PLACEHOLDER_SUFFIX.replace(/\x00/g, '\\x00')}`, 'g'),
+    new RegExp(`${PLACEHOLDER_PREFIX}(\\d+)${PLACEHOLDER_SUFFIX}`, 'g'),
     (_, idx) => placeholders[parseInt(idx)]
   );
 

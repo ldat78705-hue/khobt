@@ -53,6 +53,9 @@ export async function POST(req: NextRequest) {
       rawText = htmlToTextWithMathImages(htmlResult.value);
     }
 
+    // Clean up scattered $ signs from MathType conversion fragments
+    rawText = rawText.replace(/\$\s*\$/g, ' ');
+
     // Parse the text into questions
     const questions = parseQuestionsFromText(rawText);
 
