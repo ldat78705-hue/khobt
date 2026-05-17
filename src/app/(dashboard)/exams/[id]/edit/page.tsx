@@ -373,11 +373,23 @@ export default function EditExamPage() {
                               <X className="w-3.5 h-3.5" /> Hủy
                             </button>
                           </div>
+                          {/* Xem trước */}
+                          <div className="mt-3 p-3 bg-slate-50 border border-slate-200 rounded-xl">
+                            <p className="text-xs font-medium text-slate-500 mb-2">Xem trước hiển thị:</p>
+                            <div className="text-sm text-slate-800">
+                              <QuestionContent content={editContent.content} images={q.images} />
+                            </div>
+                            {editContent.answer && (
+                              <div className="mt-2 p-2 bg-blue-50 rounded-lg text-sm text-blue-700">
+                                <strong>Đáp án:</strong> <QuestionContent content={editContent.answer} />
+                              </div>
+                            )}
+                          </div>
                         </div>
                       ) : (
                         /* View mode */
                         <>
-                          <div className="text-sm text-slate-800 line-clamp-2"><QuestionContent content={q.content} images={q.images} /></div>
+                          <div className="text-sm text-slate-800"><QuestionContent content={q.content} images={q.images} /></div>
                           <div className="flex items-center gap-2 mt-2">
                             <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
                             <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-500 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
