@@ -56,6 +56,11 @@ export async function POST(req: NextRequest) {
     // Clean up scattered $ signs from MathType conversion fragments
     rawText = rawText.replace(/\$\s*\$/g, ' ');
 
+    // Chuẩn hóa các ký tự đặc biệt hay gặp từ Word có thể làm KaTeX lỗi
+    rawText = rawText.replace(/–/g, '-').replace(/—/g, '-');
+    rawText = rawText.replace(/\u00A0/g, ' ');
+    rawText = rawText.replace(/[‘’]/g, "'").replace(/[“”]/g, '"');
+
     // Parse the text into questions
     const questions = parseQuestionsFromText(rawText);
 
