@@ -395,6 +395,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['số nguyên tố cùng nhau', 'chứng minh chia hết'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
     created_at: '2024-12-31T08:45:00Z', updated_at: '2024-12-31T08:45:00Z',
   },
+  // === BỔ SUNG CÁC BÀI TOÁN HÌNH HỌC PHẲNG (TỪ FILE TÀI LIỆU CỦA GV) ===
+  {
+    id: 'kntt-6-hinh-01', question_code: 'BT066', content: 'Sân nhà bạn Khôi có dạng hình chữ nhật với chiều dài $12$m, chiều rộng bằng một nửa chiều dài.\n\na) Tính diện tích sân nhà bạn Khôi.\nb) Bố Khôi mua loại gạch lát nền hình chữ nhật có chiều dài $40$cm, chiều rộng $30$cm để lát sân. Hỏi cần dùng bao nhiêu viên gạch để lát kín sân nhà Khôi? (Biết phần mạch vữa là không đáng kể).\nc) Gạch không bán lẻ mà chỉ bán nguyên thùng. Biết rằng mỗi thùng có $10$ viên gạch. Hỏi bố Khôi cần mua ít nhất bao nhiêu thùng gạch để lát đủ sân?',
+    answer: 'a) $72\\text{m}^2$; b) $600$ viên gạch; c) $60$ thùng gạch',
+    solution: 'a) Chiều rộng sân nhà Khôi là: $12 : 2 = 6$ (m).\nDiện tích sân nhà Khôi là: $S = 12 \\cdot 6 = 72 \\ (\\text{m}^2)$.\n\nb) Diện tích 1 viên gạch lát nền là:\n$40 \\cdot 30 = 1200 \\ (\\text{cm}^2)$.\nĐổi $72 \\text{m}^2 = 720\\,000 \\text{cm}^2$.\nSố viên gạch cần dùng để lát kín sân là:\n$720\\,000 : 1200 = 600$ (viên gạch).\n\nc) Số thùng gạch cần mua là:\n$600 : 10 = 60$ (thùng gạch).',
+    grade: 6, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hình chữ nhật', 'diện tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
+    created_at: '2024-12-31T09:00:00Z', updated_at: '2024-12-31T09:00:00Z',
+  },
+  {
+    id: 'kntt-6-hinh-02', question_code: 'BT067', content: '[Cần chèn hình vẽ tại đây]\n\nMột con đường hình bình hành EBGF cắt ngang qua một đám đất hình chữ nhật ABCD với các dữ liệu được cho trên hình vẽ. Biết $AB = 50$m, $BC = 30$m, chiều rộng con đường (cạnh $BG$) bằng $4$m.\n\nHãy tính diện tích phần con đường EBGF và tổng diện tích phần còn lại của đám đất.',
+    answer: 'Diện tích con đường: $120\\text{m}^2$; Diện tích phần còn lại: $1380\\text{m}^2$',
+    solution: 'Dựa vào hình vẽ, con đường EBGF có dạng hình bình hành với cạnh đáy $BG = 4$m và chiều cao tương ứng với cạnh đáy này chính là chiều rộng của hình chữ nhật $BC = 30$m.\nDiện tích con đường hình bình hành EBGF là:\n$S_1 = 4 \\cdot 30 = 120 \\ (\\text{m}^2)$.\n\nDiện tích toàn bộ đám đất hình chữ nhật ABCD là:\n$S = 50 \\cdot 30 = 1500 \\ (\\text{m}^2)$.\n\nDiện tích phần còn lại của đám đất là:\n$S_2 = 1500 - 120 = 1380 \\ (\\text{m}^2)$.',
+    grade: 6, topic: 'hinh_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['hình chữ nhật', 'hình bình hành', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
+    created_at: '2024-12-31T09:15:00Z', updated_at: '2024-12-31T09:15:00Z',
+  },
+  {
+    id: 'kntt-6-hinh-03', question_code: 'BT068', content: 'Một mảnh vườn hình thoi có tổng độ dài hai đường chéo bằng $42$m. Biết đường chéo thứ nhất dài hơn đường chéo thứ hai là $6$m.\n\na) Tìm độ dài mỗi đường chéo của mảnh vườn.\nb) Tính diện tích của mảnh vườn hình thoi đó.',
+    answer: 'a) $24$m và $18$m; b) $216\\text{m}^2$',
+    solution: 'a) Áp dụng bài toán tìm hai số khi biết tổng và hiệu:\nĐộ dài đường chéo thứ nhất (đường chéo lớn) là:\n$(42 + 6) : 2 = 24$ (m).\nĐộ dài đường chéo thứ hai (đường chéo nhỏ) là:\n$24 - 6 = 18$ (m).\n\nb) Diện tích mảnh vườn hình thoi là:\n$S = \\frac{1}{2} \\cdot 24 \\cdot 18 = 216 \\ (\\text{m}^2)$.',
+    grade: 6, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hình thoi', 'diện tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
+    created_at: '2024-12-31T09:30:00Z', updated_at: '2024-12-31T09:30:00Z',
+  },
   {
     id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
     answer: 'b) $99{,}6$g\nc) $70\\%$',
