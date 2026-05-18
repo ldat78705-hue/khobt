@@ -566,13 +566,30 @@ export const SAMPLE_QUESTIONS: Question[] = [
     created_at: '2024-12-04T08:00:00Z', updated_at: '2024-12-04T08:00:00Z',
   },
   {
-    id: 'q7-05', question_code: 'BT041', content: 'Ba công nhân làm chung một công việc trong $4$ giờ. Nếu làm riêng, người thứ nhất hoàn thành trong $12$ giờ, người thứ hai trong $8$ giờ. Hỏi người thứ ba làm riêng trong bao lâu?',
     answer: '$24$ giờ',
-    solution: 'Năng suất cả 3: $\\frac{1}{4}$ công việc/giờ.\nNgười 1: $\\frac{1}{12}$, Người 2: $\\frac{1}{8}$.\nNgười 3: $\\frac{1}{4} - \\frac{1}{12} - \\frac{1}{8} = \\frac{6-2-3}{24} = \\frac{1}{24}$.\nVậy người 3 làm riêng trong $24$ giờ.',
-    grade: 7, topic: 'phan_so', difficulty: 'van_dung_cao', question_type: 'tu_luan',
-    tags: ['toán công việc', 'phân số'], user_id: 'demo-user-001', is_public: true, status: 'approved',
+    solution: 'Trong 1 giờ, cả ba người làm được $\\frac{1}{4}$ công việc.\nTrong 1 giờ, người thứ nhất làm được $\\frac{1}{12}$ công việc.\nTrong 1 giờ, người thứ hai làm được $\\frac{1}{8}$ công việc.\nTrong 1 giờ, người thứ ba làm được: $\\frac{1}{4} - \\left( \\frac{1}{12} + \\frac{1}{8} \\right) = \\frac{1}{4} - \\frac{5}{24} = \\frac{1}{24}$ công việc.\nVậy người thứ ba làm riêng sẽ hoàn thành trong $24$ giờ.',
+    grade: 7, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['phân số', 'bài toán công việc chung'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-12-05T08:00:00Z', updated_at: '2024-12-05T08:00:00Z',
   },
+  // === TOÁN THỰC TẾ TẬP HỢP (TRÍCH XUẤT TỪ FILE TÀI LIỆU CỦA GV) ===
+  {
+    id: 'kntt-6-venn-01', question_code: 'BT062', content: 'Một lớp học có $50$ học sinh, trong đó có $15$ học sinh giỏi Toán; $20$ học sinh giỏi Văn và có $12$ học sinh vừa giỏi Toán vừa giỏi Văn.\n\na) Hỏi có bao nhiêu học sinh giỏi Toán hoặc giỏi Văn?\nb) Có bao nhiêu học sinh của lớp không giỏi Toán và cũng không giỏi Văn?',
+    answer: 'a) $23$ học sinh\nb) $27$ học sinh',
+    solution: 'Áp dụng biểu đồ Ven hoặc công thức tập hợp:\na) Số học sinh giỏi Toán hoặc giỏi Văn là tổng số học sinh giỏi Toán và giỏi Văn trừ đi số học sinh giỏi cả hai môn (vì đã được tính 2 lần):\n$15 + 20 - 12 = 23$ (học sinh).\n\nb) Số học sinh không giỏi Toán và cũng không giỏi Văn bằng tổng số học sinh cả lớp trừ đi số học sinh giỏi ít nhất 1 trong 2 môn:\n$50 - 23 = 27$ (học sinh).',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['tập hợp', 'biểu đồ ven', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-30T08:00:00Z', updated_at: '2024-12-30T08:00:00Z',
+  },
+  {
+    id: 'kntt-6-venn-02', question_code: 'BT063', content: 'Một lớp có $45$ học sinh, trong đó mỗi học sinh đều giỏi ít nhất một trong hai môn Toán hoặc Văn. Biết rằng có $30$ học sinh giỏi Toán, $25$ học sinh giỏi Văn. Hỏi lớp đó có bao nhiêu học sinh giỏi cả Toán lẫn Văn?',
+    answer: '$10$ học sinh',
+    solution: 'Vì mỗi học sinh đều giỏi ít nhất một trong hai môn nên tổng số học sinh của lớp chính là số học sinh giỏi Toán hoặc Văn.\nNếu cộng số học sinh giỏi Toán và số học sinh giỏi Văn, ta được:\n$30 + 25 = 55$ (học sinh)\nPhần dôi ra so với tổng số học sinh cả lớp chính là số học sinh được tính 2 lần (nghĩa là giỏi cả 2 môn).\nSố học sinh giỏi cả Toán lẫn Văn là:\n$55 - 45 = 10$ (học sinh).\nĐáp số: $10$ học sinh.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tập hợp', 'biểu đồ ven', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T08:00:00Z', updated_at: '2024-12-31T08:00:00Z',
+  },
+
   {
     id: 'q7-06', question_code: 'BT042', content: 'Chia số $120$ thành ba phần tỉ lệ với $2; 3; 5$. Tìm mỗi phần.',
     answer: '$24; 36; 60$',
