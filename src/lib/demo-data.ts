@@ -252,6 +252,51 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['góc', 'đường trung trực'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
     created_at: '2024-11-18T08:00:00Z', updated_at: '2024-11-18T08:00:00Z',
   },
+  // === TOÁN KẾT NỐI TRI THỨC - CẬP NHẬT MỚI ===
+  {
+    id: 'kntt-6-01', question_code: 'BT037', content: 'Trong đợt quyên góp sách ủng hộ vùng lũ, lớp 6A thu được số sách nằm trong khoảng từ $150$ đến $200$ cuốn. Khi xếp thành từng bó $10$ cuốn, $12$ cuốn hay $15$ cuốn đều vừa đủ không thừa cuốn nào. Hỏi lớp 6A quyên góp được chính xác bao nhiêu cuốn sách?',
+    answer: '$180$ cuốn',
+    solution: 'Gọi số sách là $x$ ($150 \\leq x \\leq 200$).\nTheo đề bài: $x \\vdots 10, x \\vdots 12, x \\vdots 15 \\Rightarrow x \\in \\text{BC}(10, 12, 15)$.\nTa có: $10 = 2 \\cdot 5$; $12 = 2^2 \\cdot 3$; $15 = 3 \\cdot 5$.\n$\\text{BCNN}(10, 12, 15) = 2^2 \\cdot 3 \\cdot 5 = 60$.\n$\\Rightarrow x \\in \\{60, 120, 180, 240, \\dots\\}$.\nVì $150 \\leq x \\leq 200$ nên $x = 180$.\nVậy lớp 6A quyên góp được $180$ cuốn sách.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['toán thực tế', 'bội chung', 'bội chung nhỏ nhất'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-01T08:00:00Z', updated_at: '2024-12-01T08:00:00Z',
+  },
+  {
+    id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
+    answer: 'b) $99{,}6$g\nc) $70\\%$',
+    solution: 'a) Bảng tần số:\n| Khối lượng ($x$) | 98 | 99 | 100 | 102 |\n|---|---|---|---|---|\n| Tần số ($n$) | 10 | 15 | 20 | 5 |\n\nb) $\\bar{x} = \\frac{98 \\cdot 10 + 99 \\cdot 15 + 100 \\cdot 20 + 102 \\cdot 5}{50} = \\frac{4975}{50} = 99{,}5$ (gam).\n\nc) Các gói kẹo đạt chuẩn có khối lượng $99$g và $100$g.\nTổng số lượng đạt chuẩn = $15 + 20 = 35$ gói.\nTỷ lệ phần trăm = $\\frac{35}{50} \\cdot 100\\% = 70\\%$.',
+    grade: 7, topic: 'thong_ke', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['kết nối tri thức', 'toán thực tế', 'thống kê'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-02T08:00:00Z', updated_at: '2024-12-02T08:00:00Z',
+  },
+  {
+    id: 'kntt-8-01', question_code: 'BT039', content: 'Để đo khoảng cách giữa hai điểm $A$ và $B$ (trong đó $B$ là một cái cây bên kia sông), một nhóm học sinh đã thực hiện các bước sau: Chọn điểm $C$ sao cho $AC \\perp AB$, lấy điểm $D$ trên $AC$. Từ $D$ kẻ đường vuông góc với $AC$ cắt $BC$ tại $E$. Biết $AC = 30$m, $CD = 10$m, $DE = 15$m.\n\nHãy tính khoảng cách $AB$ qua sông.',
+    answer: '$AB = 30$ m',
+    solution: 'Vì $AB \\perp AC$ và $DE \\perp AC$ nên $DE \\parallel AB$.\nTheo hệ quả của định lí Thalès trong $\\triangle ABC$ với $DE \\parallel AB$:\n$\\frac{CD}{CA} = \\frac{DE}{AB}$\n$\\Rightarrow \\frac{10}{30} = \\frac{15}{AB}$\n$\\Rightarrow AB = \\frac{15 \\cdot 30}{10} = 45$ m.\n(*Lưu ý: Đoạn $CD$ tính từ $C$ đến $D$*)',
+    grade: 8, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['định lí thalès', 'toán thực tế', 'kết nối tri thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8-3',
+    created_at: '2024-12-03T08:00:00Z', updated_at: '2024-12-03T08:00:00Z',
+  },
+  {
+    id: 'kntt-9-01', question_code: 'BT040', content: 'Một siêu thị điện máy giảm giá sốc hai mặt hàng là Tivi và Tủ lạnh nhân dịp cuối năm. Biết rằng giá niêm yết của $1$ Tivi và $1$ Tủ lạnh tổng cộng là $25$ triệu đồng. Sau khi Tivi giảm giá $15\\%$ và Tủ lạnh giảm giá $10\\%$ so với giá niêm yết, một khách hàng mua $1$ Tivi và $1$ Tủ lạnh phải thanh toán tổng cộng $22$ triệu đồng.\n\nHỏi giá niêm yết ban đầu của mỗi mặt hàng là bao nhiêu?',
+    answer: 'Tivi: $10$ triệu, Tủ lạnh: $15$ triệu',
+    solution: 'Gọi giá niêm yết của Tivi là $x$ (triệu đồng), Tủ lạnh là $y$ (triệu đồng) ($x, y > 0$).\nTheo đề bài ta có hệ phương trình:\n$\\begin{cases} x + y = 25 \\\\ 0.85x + 0.90y = 22 \\end{cases}$\nTừ phương trình 1: $y = 25 - x$\nThay vào phương trình 2:\n$0.85x + 0.90(25 - x) = 22$\n$0.85x + 22.5 - 0.90x = 22$\n$-0.05x = -0.5 \\Rightarrow x = 10$\n$\\Rightarrow y = 25 - 10 = 15$\nVậy giá niêm yết của Tivi là 10 triệu đồng, Tủ lạnh là 15 triệu đồng.',
+    grade: 9, topic: 'he_phuong_trinh', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['hệ phương trình', 'toán thực tế', 'kết nối tri thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-2',
+    created_at: '2024-12-04T08:00:00Z', updated_at: '2024-12-04T08:00:00Z',
+  },
+  {
+    id: 'kntt-9-02', question_code: 'BT041', content: 'Khẳng định nào sau đây là SAI khi nói về hàm số $y = ax^2 \\ (a \\neq 0)$?',
+    options: [
+      {key:'A',value:'Nếu $a > 0$ thì hàm số đồng biến khi $x > 0$ và nghịch biến khi $x < 0$.'},
+      {key:'B',value:'Nếu $a < 0$ thì hàm số đạt giá trị lớn nhất bằng $0$ khi $x = 0$.'},
+      {key:'C',value:'Đồ thị hàm số là một Parabol đi qua gốc tọa độ và nhận trục hoành làm trục đối xứng.'},
+      {key:'D',value:'Giá trị của hàm số luôn cùng dấu với hệ số $a$ (khi $x \\neq 0$).'}
+    ],
+    correct_answer: 'C', answer: 'C', grade: 9, topic: 'ham_so', difficulty: 'thong_hieu', question_type: 'trac_nghiem',
+    tags: ['hàm số', 'parabol'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9-3',
+    created_at: '2024-12-05T08:00:00Z', updated_at: '2024-12-05T08:00:00Z',
+  },
   // === LỚP 7 ===
   {
     id: 'q10', question_code: 'BT010', content: 'Cho $\\triangle ABC$ có $AB = 5$cm, $AC = 12$cm, $BC = 13$cm. Chứng minh $\\triangle ABC$ vuông.',
