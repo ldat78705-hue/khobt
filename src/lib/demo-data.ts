@@ -628,6 +628,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['đại lượng tỉ lệ nghịch', 'diện tích tam giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
     created_at: '2024-12-31T15:30:00Z', updated_at: '2024-12-31T15:30:00Z',
   },
+  // === BÀI TẬP THỐNG KÊ LỚP 7 (TỪ PHIẾU BÀI TẬP B10 & B11) ===
+  {
+    id: 'kntt-7-tk-01', question_code: 'BT087', content: 'Một chuyên gia đưa ra nguyên tắc chi tiêu tài chính hiệu quả trong gia đình theo quy tắc "50-30-20" được mô tả trên một biểu đồ hình quạt tròn như sau:\n- $50\\%$ cho chi tiêu thiết yếu (tiền ăn uống, thuê nhà, đi lại,...)\n- $30\\%$ cho các khoản tài chính (chi tiêu cá nhân, du lịch, mua sắm,...)\n- $20\\%$ cho tiết kiệm (quỹ dự phòng, tiết kiệm mua xe,...)\n\nGiả sử tổng thu nhập trong tháng của một gia đình là $25$ triệu đồng. Dựa vào tỉ lệ phần trăm trên, hãy tính số tiền cụ thể gia đình đó phân bổ cho từng khoản mục.',
+    answer: 'Thiết yếu: $12{,}5$ triệu; Cá nhân: $7{,}5$ triệu; Tiết kiệm: $5$ triệu',
+    solution: 'Số tiền gia đình chi cho nhu cầu thiết yếu là:\n$25 \\cdot 50\\% = 25 \\cdot \\frac{50}{100} = 12{,}5$ (triệu đồng).\n\nSố tiền gia đình chi cho các khoản tài chính (cá nhân) là:\n$25 \\cdot 30\\% = 25 \\cdot \\frac{30}{100} = 7{,}5$ (triệu đồng).\n\nSố tiền gia đình dành cho tiết kiệm dự phòng là:\n$25 \\cdot 20\\% = 25 \\cdot \\frac{20}{100} = 5$ (triệu đồng).\n*(Có thể tính bằng cách lấy tổng thu nhập trừ đi 2 khoản mục trên: $25 - 12{,}5 - 7{,}5 = 5$ triệu đồng).*',
+    grade: 7, topic: 'thong_ke', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['thống kê', 'biểu đồ quạt tròn', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T16:00:00Z', updated_at: '2024-12-31T16:00:00Z',
+  },
+  {
+    id: 'kntt-7-tk-02', question_code: 'BT088', content: 'Trong năm 2020, tổng lượng phát thải khí nhà kính từ các hoạt động kinh tế của một quốc gia A là $466$ triệu tấn khí Cacbonic. Một biểu đồ hình quạt tròn biểu diễn tỉ lệ phát thải ở $3$ lĩnh vực: Nông nghiệp chiếm $35\\%$, Chất thải chiếm $10\\%$, và phần còn lại thuộc về lĩnh vực Năng lượng.\n\na) Hãy tính tỉ lệ phần trăm lượng khí thải từ lĩnh vực Năng lượng.\nb) Lĩnh vực nào chiếm tỉ lệ tạo ra khí nhà kính lớn nhất? Hãy tính khối lượng khí thải thực tế của lĩnh vực đó.',
+    answer: 'a) $55\\%$; b) Năng lượng lớn nhất, đạt $256{,}3$ triệu tấn',
+    solution: 'a) Coi tổng lượng khí thải của cả ba lĩnh vực là $100\\%$.\nTỉ lệ phần trăm lượng phát thải của lĩnh vực Năng lượng là:\n$100\\% - (35\\% + 10\\%) = 100\\% - 45\\% = 55\\%$.\n\nb) So sánh ba tỉ lệ: $55\\% > 35\\% > 10\\%$.\nVậy lĩnh vực Năng lượng chiếm tỉ lệ tạo ra khí nhà kính lớn nhất ($55\\%$).\n\nKhối lượng khí thải thực tế sinh ra từ lĩnh vực Năng lượng là:\n$466 \\cdot 55\\% = 466 \\cdot 0{,}55 = 256{,}3$ (triệu tấn).',
+    grade: 7, topic: 'thong_ke', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['thống kê', 'phân tích số liệu', 'bài toán môi trường'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T16:15:00Z', updated_at: '2024-12-31T16:15:00Z',
+  },
+  {
+    id: 'kntt-7-tk-03', question_code: 'BT089', content: 'Kết quả xếp loại học tập cuối học kì I của $200$ học sinh khối 7 tại trường THCS X được thống kê bằng bảng sau:\n\n| Xếp loại | Tốt | Khá | Đạt | Chưa Đạt |\n|---|---|---|---|---|\n| Tỉ lệ (\\%) | 25\\% | 45\\% | 25\\% | 5\\% |\n\nBan giám hiệu nhà trường cần trao thưởng cho các học sinh đạt danh hiệu Tốt và Khá. Hỏi nhà trường cần chuẩn bị tổng cộng bao nhiêu phần quà?',
+    answer: '$140$ phần quà',
+    solution: 'Phương pháp 1: Tính riêng từng loại.\nSố học sinh xếp loại Tốt là: $200 \\cdot 25\\% = 50$ (học sinh).\nSố học sinh xếp loại Khá là: $200 \\cdot 45\\% = 90$ (học sinh).\nTổng số học sinh được trao thưởng (Tốt và Khá) là: $50 + 90 = 140$ (học sinh).\n\nPhương pháp 2: Tính gộp tỉ lệ.\nTổng tỉ lệ học sinh đạt loại Tốt và Khá là: $25\\% + 45\\% = 70\\%$.\nSố học sinh cần trao phần quà là: $200 \\cdot 70\\% = 140$ (học sinh).\n\nVậy nhà trường cần chuẩn bị tổng cộng $140$ phần quà.',
+    grade: 7, topic: 'thong_ke', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['thống kê', 'bảng số liệu'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T16:30:00Z', updated_at: '2024-12-31T16:30:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
