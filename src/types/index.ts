@@ -88,14 +88,20 @@ export type Topic =
   | 'so_hoc'
   | 'phan_so'
   | 'so_thap_phan'
+  | 'ti_so_phan_tram'
   | 'do_luong'
   | 'ti_le'
+  | 'chuyen_dong'
   | 'hinh_hoc'
+  | 'hinh_khong_gian'
   | 'bieu_thuc'
   | 'phuong_trinh'
   | 'ham_so'
   | 'tam_giac'
+  | 'da_giac_deu'
   | 'duong_tron'
+  | 'luong_giac'
+  | 'phep_bien_hinh'
   | 'thong_ke'
   | 'xac_suat'
   | 'he_phuong_trinh'
@@ -296,31 +302,37 @@ export const TOPICS: { value: Topic; label: string }[] = [
   { value: 'so_hoc', label: 'Số học' },
   { value: 'phan_so', label: 'Phân số' },
   { value: 'so_thap_phan', label: 'Số thập phân' },
+  { value: 'ti_so_phan_tram', label: 'Tỉ số phần trăm' },
   { value: 'do_luong', label: 'Đo lường' },
   { value: 'ti_le', label: 'Tỉ lệ' },
-  { value: 'hinh_hoc', label: 'Hình học' },
+  { value: 'chuyen_dong', label: 'Toán chuyển động' },
+  { value: 'hinh_hoc', label: 'Hình học phẳng' },
+  { value: 'hinh_khong_gian', label: 'Hình học không gian' },
   { value: 'bieu_thuc', label: 'Biểu thức' },
+  { value: 'da_thuc', label: 'Đa thức' },
   { value: 'phuong_trinh', label: 'Phương trình' },
-  { value: 'ham_so', label: 'Hàm số' },
-  { value: 'tam_giac', label: 'Tam giác' },
-  { value: 'duong_tron', label: 'Đường tròn' },
-  { value: 'thong_ke', label: 'Thống kê' },
-  { value: 'xac_suat', label: 'Xác suất' },
   { value: 'he_phuong_trinh', label: 'Hệ phương trình' },
   { value: 'bat_phuong_trinh', label: 'Bất phương trình' },
   { value: 'can_thuc', label: 'Căn thức' },
-  { value: 'da_thuc', label: 'Đa thức' },
+  { value: 'ham_so', label: 'Hàm số' },
+  { value: 'tam_giac', label: 'Tam giác' },
+  { value: 'da_giac_deu', label: 'Đa giác đều' },
+  { value: 'duong_tron', label: 'Đường tròn' },
+  { value: 'luong_giac', label: 'Lượng giác' },
+  { value: 'phep_bien_hinh', label: 'Phép biến hình' },
+  { value: 'thong_ke', label: 'Thống kê' },
+  { value: 'xac_suat', label: 'Xác suất' },
   { value: 'khac', label: 'Khác' },
 ];
 
 /** Chuyên đề theo từng lớp */
 export const TOPICS_BY_GRADE: Record<Grade, Topic[]> = {
-  4: ['so_hoc', 'phan_so', 'so_thap_phan', 'do_luong', 'hinh_hoc', 'thong_ke', 'khac'],
-  5: ['so_hoc', 'phan_so', 'so_thap_phan', 'do_luong', 'ti_le', 'hinh_hoc', 'thong_ke', 'khac'],
-  6: ['so_hoc', 'phan_so', 'so_thap_phan', 'hinh_hoc', 'bieu_thuc', 'thong_ke', 'xac_suat', 'khac'],
-  7: ['so_hoc', 'ti_le', 'bieu_thuc', 'da_thuc', 'tam_giac', 'hinh_hoc', 'thong_ke', 'xac_suat', 'khac'],
-  8: ['da_thuc', 'phuong_trinh', 'bieu_thuc', 'bat_phuong_trinh', 'tam_giac', 'hinh_hoc', 'thong_ke', 'xac_suat', 'khac'],
-  9: ['can_thuc', 'phuong_trinh', 'he_phuong_trinh', 'bat_phuong_trinh', 'ham_so', 'tam_giac', 'duong_tron', 'hinh_hoc', 'thong_ke', 'xac_suat', 'khac'],
+  4: ['so_hoc', 'phan_so', 'do_luong', 'hinh_hoc', 'thong_ke', 'khac'],
+  5: ['so_hoc', 'phan_so', 'so_thap_phan', 'ti_so_phan_tram', 'do_luong', 'ti_le', 'chuyen_dong', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'khac'],
+  6: ['so_hoc', 'phan_so', 'so_thap_phan', 'ti_so_phan_tram', 'hinh_hoc', 'hinh_khong_gian', 'bieu_thuc', 'thong_ke', 'xac_suat', 'khac'],
+  7: ['so_hoc', 'ti_le', 'bieu_thuc', 'da_thuc', 'tam_giac', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
+  8: ['da_thuc', 'phuong_trinh', 'bieu_thuc', 'ham_so', 'tam_giac', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
+  9: ['can_thuc', 'phuong_trinh', 'he_phuong_trinh', 'bat_phuong_trinh', 'ham_so', 'luong_giac', 'tam_giac', 'da_giac_deu', 'duong_tron', 'phep_bien_hinh', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
 };
 
 /** Lấy danh sách topic phù hợp cho một lớp cụ thể */

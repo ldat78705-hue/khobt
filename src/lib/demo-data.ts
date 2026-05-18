@@ -776,6 +776,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['hình chóp tứ giác đều', 'thể tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
     created_at: '2024-12-31T21:00:00Z', updated_at: '2024-12-31T21:00:00Z',
   },
+  // === BÀI TẬP TOÁN LỚP 9 - SGK KNTT (BIÊN SOẠN CHUYÊN GIA) ===
+  {
+    id: 'kntt-9-hpt-01', question_code: 'BT105', content: 'Giải hệ phương trình sau bằng phương pháp cộng đại số hoặc phương pháp thế:\n$\\begin{cases} 3x - 2y = 11 \\\\ 4x + 3y = 9 \\end{cases}$',
+    answer: '$(x; y) = (3; -1)$',
+    solution: 'Giải hệ phương trình bằng phương pháp cộng đại số:\nNhân cả hai vế của phương trình thứ nhất với $3$, phương trình thứ hai với $2$, ta được hệ mới:\n$\\begin{cases} 9x - 6y = 33 \\\\ 8x + 6y = 18 \\end{cases}$\n\nCộng vế theo vế hai phương trình trên, ta có:\n$(9x + 8x) + (-6y + 6y) = 33 + 18$\n$\\Leftrightarrow 17x = 51$\n$\\Leftrightarrow x = 3$\n\nThay $x = 3$ vào phương trình thứ nhất ban đầu ($3x - 2y = 11$):\n$3(3) - 2y = 11$\n$\\Leftrightarrow 9 - 2y = 11$\n$\\Leftrightarrow 2y = -2 \\Leftrightarrow y = -1$\n\nVậy hệ phương trình có nghiệm duy nhất là $(x; y) = (3; -1)$.',
+    grade: 9, topic: 'he_phuong_trinh', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['hệ phương trình bậc nhất hai ẩn', 'phương pháp cộng đại số'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
+    created_at: '2024-12-31T21:15:00Z', updated_at: '2024-12-31T21:15:00Z',
+  },
+  {
+    id: 'kntt-9-lg-01', question_code: 'BT106', content: 'Một chiếc thang dài $3{,}5$m được đặt tựa vào một bức tường. Biết góc tạo bởi chiếc thang và mặt đất là $65^\\circ$.\n\na) Tính khoảng cách từ chân thang đến chân tường.\nb) Chiếc thang có thể chạm tới độ cao bao nhiêu trên bức tường? (Làm tròn kết quả đến chữ số thập phân thứ hai).',
+    answer: 'a) $1{,}48$m; b) $3{,}17$m',
+    solution: 'Gọi chiều dài chiếc thang là cạnh huyền của tam giác vuông $ABC$ (vuông tại $A$, $A$ là chân tường), với $B$ là điểm thang chạm tường, $C$ là chân thang.\nTa có cạnh huyền $BC = 3{,}5$m, góc tạo bởi thang và mặt đất là $\\widehat{C} = 65^\\circ$.\n\na) Khoảng cách từ chân thang đến chân tường là cạnh kề $AC$:\nÁp dụng tỉ số lượng giác của góc nhọn:\n$\\cos C = \\frac{AC}{BC} \\Rightarrow AC = BC \\cdot \\cos 65^\\circ = 3{,}5 \\cdot \\cos 65^\\circ \\approx 3{,}5 \\cdot 0{,}4226 \\approx 1{,}48$ (m).\nVậy chân thang cách chân tường khoảng $1{,}48$m.\n\nb) Độ cao chiếc thang chạm tới tường là cạnh đối $AB$:\nÁp dụng tỉ số lượng giác:\n$\\sin C = \\frac{AB}{BC} \\Rightarrow AB = BC \\cdot \\sin 65^\\circ = 3{,}5 \\cdot \\sin 65^\\circ \\approx 3{,}5 \\cdot 0{,}9063 \\approx 3{,}17$ (m).\nVậy chiếc thang chạm tới độ cao khoảng $3{,}17$m trên tường.',
+    grade: 9, topic: 'luong_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tỉ số lượng giác', 'tam giác vuông', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
+    created_at: '2024-12-31T21:30:00Z', updated_at: '2024-12-31T21:30:00Z',
+  },
+  {
+    id: 'kntt-9-dt-01', question_code: 'BT107', content: 'Từ một điểm $A$ nằm ngoài đường tròn tâm $O$, bán kính $R = 5$cm, kẻ tiếp tuyến $AB$ với đường tròn ($B$ là tiếp điểm). Biết khoảng cách từ điểm $A$ đến tâm $O$ là $13$cm.\n\na) Tính độ dài đoạn tiếp tuyến $AB$.\nb) Qua $O$ kẻ đường thẳng vuông góc với $OA$, cắt tia $AB$ tại điểm $C$. Tính độ dài đoạn thẳng $AC$.',
+    answer: 'a) $AB = 12$cm; b) $AC = \\frac{169}{12}$ cm',
+    solution: 'a) Tính độ dài $AB$:\nVì $AB$ là tiếp tuyến của $(O)$ tại điểm $B$, nên $OB \\perp AB$ tại $B$.\nXét tam giác $ABO$ vuông tại $B$, áp dụng định lý Pythagore:\n$OA^2 = OB^2 + AB^2 \\Rightarrow 13^2 = 5^2 + AB^2 \\Rightarrow 169 = 25 + AB^2$\n$\\Rightarrow AB^2 = 144 \\Rightarrow AB = 12$ (cm).\n\nb) Tính độ dài $AC$:\nKẻ $OC \\perp OA$ (giả thiết).\nTrong tam giác vuông $OAC$ (vuông tại $O$), có $OB$ là đường cao hạ từ đỉnh góc vuông $O$ xuống cạnh huyền $AC$ (vì $OB \\perp AC$ tại $B$).\nÁp dụng hệ thức lượng trong tam giác vuông $OAC$:\n$OA^2 = AB \\cdot AC$\n$\\Rightarrow AC = \\frac{OA^2}{AB} = \\frac{13^2}{12} = \\frac{169}{12} \\approx 14{,}08$ (cm).\nVậy độ dài $AC$ là $\\frac{169}{12}$ cm.',
+    grade: 9, topic: 'duong_tron', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['tiếp tuyến đường tròn', 'hệ thức lượng', 'định lý pythagore'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
+    created_at: '2024-12-31T21:45:00Z', updated_at: '2024-12-31T21:45:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
