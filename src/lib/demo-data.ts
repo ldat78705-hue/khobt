@@ -678,6 +678,30 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['quan hệ cạnh và góc', 'góc ngoài tam giác', 'hình học'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
     created_at: '2024-12-31T17:30:00Z', updated_at: '2024-12-31T17:30:00Z',
   },
+  {
+    id: 'kntt-7-hh-04', question_code: 'BT093', content: 'Cho tam giác $ABC$ cân tại $A$, có $\\widehat{A} = 40^\\circ$. Tia phân giác của $\\widehat{B}$ cắt cạnh $AC$ tại $D$. Hãy tính số đo của $\\widehat{BDC}$.',
+    answer: '$75^\\circ$',
+    solution: 'Vì tam giác $ABC$ cân tại $A$ nên ta có:\n$\\widehat{B} = \\widehat{C} = \\frac{180^\\circ - \\widehat{A}}{2} = \\frac{180^\\circ - 40^\\circ}{2} = \\frac{140^\\circ}{2} = 70^\\circ$.\nVì $BD$ là tia phân giác của $\\widehat{B}$ nên:\n$\\widehat{ABD} = \\widehat{DBC} = \\frac{70^\\circ}{2} = 35^\\circ$.\nCách 1: Áp dụng định lý tổng ba góc trong $\\triangle BDC$:\n$\\widehat{BDC} = 180^\\circ - (\\widehat{DBC} + \\widehat{C}) = 180^\\circ - (35^\\circ + 70^\\circ) = 180^\\circ - 105^\\circ = 75^\\circ$.\nCách 2: Áp dụng tính chất góc ngoài của tam giác $\\triangle ABD$:\n$\\widehat{BDC}$ là góc ngoài tại đỉnh $D$ của $\\triangle ABD$, do đó:\n$\\widehat{BDC} = \\widehat{A} + \\widehat{ABD} = 40^\\circ + 35^\\circ = 75^\\circ$.',
+    grade: 7, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tam giác cân', 'tổng ba góc', 'tia phân giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T18:00:00Z', updated_at: '2024-12-31T18:00:00Z',
+  },
+  {
+    id: 'kntt-7-hh-05', question_code: 'BT094', content: 'Cho tam giác $ABC$ cân tại $A$. Các tia phân giác của $\\widehat{B}$ và $\\widehat{C}$ cắt các cạnh $AC$ và $AB$ lần lượt tại $D$ và $E$. Chứng minh rằng $DE \\parallel BC$.',
+    answer: 'Sử dụng tính chất tam giác cân và góc đồng vị',
+    solution: 'Vì $\\triangle ABC$ cân tại $A$ nên $AB = AC$ và $\\widehat{ABC} = \\widehat{ACB}$.\nDo $BD$ và $CE$ là các tia phân giác của $\\widehat{B}$ và $\\widehat{C}$, nên ta có:\n$\\widehat{ABD} = \\frac{1}{2}\\widehat{ABC}$ và $\\widehat{ACE} = \\frac{1}{2}\\widehat{ACB}$.\nSuy ra $\\widehat{ABD} = \\widehat{ACE}$.\nXét $\\triangle ABD$ và $\\triangle ACE$, ta có:\n$\\widehat{A}$ là góc chung\n$AB = AC$ (chứng minh trên)\n$\\widehat{ABD} = \\widehat{ACE}$ (chứng minh trên)\nDo đó, $\\triangle ABD = \\triangle ACE$ (g.c.g).\nSuy ra $AD = AE$ (hai cạnh tương ứng).\nVậy $\\triangle ADE$ cân tại $A$.\nTrong $\\triangle ADE$ cân tại $A$, ta có: $\\widehat{ADE} = \\frac{180^\\circ - \\widehat{A}}{2}$.\nTrong $\\triangle ABC$ cân tại $A$, ta cũng có: $\\widehat{ABC} = \\frac{180^\\circ - \\widehat{A}}{2}$.\nTừ đó suy ra $\\widehat{ADE} = \\widehat{ABC}$.\nMà hai góc này ở vị trí đồng vị, do đó $DE \\parallel BC$.',
+    grade: 7, topic: 'tam_giac', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['tam giác cân', 'chứng minh song song', 'hai tam giác bằng nhau'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T18:15:00Z', updated_at: '2024-12-31T18:15:00Z',
+  },
+  {
+    id: 'kntt-7-hh-06', question_code: 'BT095', content: 'Cho đoạn thẳng $AB = 8$cm. Đường trung trực $d$ của đoạn thẳng $AB$ cắt $AB$ tại điểm $M$. Trên đường thẳng $d$, lấy một điểm $C$ sao cho $MC = 3$cm. Tính độ dài các đoạn thẳng $CA$ và $CB$.',
+    answer: '$CA = CB = 5$cm',
+    solution: 'Vì đường thẳng $d$ là đường trung trực của đoạn thẳng $AB$ nên $d \\perp AB$ tại $M$ và $M$ là trung điểm của $AB$.\nDo $M$ là trung điểm của $AB$ nên $MA = MB = \\frac{AB}{2} = \\frac{8}{2} = 4$ (cm).\nVì điểm $C$ nằm trên đường trung trực $d$ của $AB$ nên $C$ cách đều hai đầu mút $A$ và $B$. Suy ra $CA = CB$.\nXét tam giác $CMA$ vuông tại $M$, áp dụng định lý Pythagore ta có:\n$CA^2 = CM^2 + MA^2$\n$CA^2 = 3^2 + 4^2 = 9 + 16 = 25$.\nSuy ra $CA = \\sqrt{25} = 5$ (cm).\nVậy $CA = CB = 5$cm.',
+    grade: 7, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['đường trung trực', 'định lý pythagore', 'tam giác vuông'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T18:30:00Z', updated_at: '2024-12-31T18:30:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
