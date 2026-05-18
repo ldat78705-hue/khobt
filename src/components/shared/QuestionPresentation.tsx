@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import {
-  X, Maximize2, Minimize2, Eye, EyeOff, ZoomIn, ZoomOut,
-  RotateCcw, BookOpen, CheckCircle
+  X, Maximize2, Minimize2, ZoomIn, ZoomOut,
+  RotateCcw, BookOpen, CheckCircle, ChevronLeft, ChevronRight, HelpCircle
 } from "lucide-react";
 import { MathRenderer } from "@/components/shared/MathRenderer";
 import type { Question } from "@/types";
@@ -16,10 +16,15 @@ interface QuestionPresentationProps {
 }
 
 export default function QuestionPresentation({ question, onClose }: QuestionPresentationProps) {
-  const [showAnswer, setShowAnswer] = useState(false);
-  const [fontSize, setFontSize] = useState(30); // px
+  const [fontSize, setFontSize] = useState(32); // px
   const [isFullscreen, setIsFullscreen] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  const q = question;
+  const parts = ['question'];
+  if (q.answer || (q.question_type === 'trac_nghiem' && q.options)) parts.push('answer');
+  if (q.solution) parts.push('solution');
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -33,11 +38,16 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
             onClose();
           }
           break;
-        case "a":
-        case "A":
+        case "ArrowRight":
         case " ":
+        case "Enter":
           e.preventDefault();
-          setShowAnswer((prev) => !prev);
+          setSlideIndex((s) => Math.min(parts.length - 1, s + 1));
+          break;
+        case "ArrowLeft":
+        case "Backspace":
+          e.preventDefault();
+          setSlideIndex((s) => Math.max(0, s - 1));
           break;
         case "f":
         case "F":
@@ -57,7 +67,7 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isFullscreen, onClose]);
+  }, [isFullscreen, onClose, parts.length]);
 
   // Fullscreen
   const toggleFullscreen = useCallback(() => {
@@ -74,7 +84,7 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
     return () => document.removeEventListener("fullscreenchange", handler);
   }, []);
 
-  const q = question;
+  const activePart = parts[slideIndex];
 
   return (
     <div
@@ -105,14 +115,25 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
           <button onClick={() => setFontSize((s) => Math.min(56, s + 2))} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" title="Phóng to chữ (+)">
             <ZoomIn className="w-4 h-4" />
           </button>
-          <div className="w-px h-5 bg-white/20 mx-1" />
-          {/* Show answer */}
+          {/* Navigation */}
           <button
-            onClick={() => setShowAnswer((prev) => !prev)}
-            className={cn("p-1.5 rounded-lg transition-colors", showAnswer ? "bg-green-500/30 text-green-300" : "hover:bg-white/10")}
-            title="Hiện/ẩn đáp án (A hoặc Space)"
+            onClick={() => setSlideIndex(s => Math.max(0, s - 1))}
+            disabled={slideIndex === 0}
+            className={cn("p-1.5 rounded-lg transition-colors", slideIndex === 0 ? "opacity-30 cursor-not-allowed" : "hover:bg-white/10 text-white/80 hover:text-white")}
+            title="Trang trước (Mũi tên trái)"
           >
-            {showAnswer ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <span className="text-xs font-mono w-12 text-center text-white/60">
+            {slideIndex + 1} / {parts.length}
+          </span>
+          <button
+            onClick={() => setSlideIndex(s => Math.min(parts.length - 1, s + 1))}
+            disabled={slideIndex === parts.length - 1}
+            className={cn("p-1.5 rounded-lg transition-colors", slideIndex === parts.length - 1 ? "opacity-30 cursor-not-allowed" : "hover:bg-white/10 text-white/80 hover:text-white")}
+            title="Trang sau (Mũi tên phải, Space)"
+          >
+            <ChevronRight className="w-5 h-5" />
           </button>
           <div className="w-px h-5 bg-white/20 mx-1" />
           {/* Fullscreen */}
@@ -120,7 +141,7 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           {/* Reset */}
-          <button onClick={() => { setFontSize(30); setShowAnswer(false); }} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" title="Đặt lại">
+          <button onClick={() => { setFontSize(32); setSlideIndex(0); }} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" title="Đặt lại">
             <RotateCcw className="w-4 h-4" />
           </button>
           {/* Close */}
@@ -132,88 +153,110 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
 
       {/* Main content area */}
       <div className="flex-1 flex items-center justify-center px-8 py-6 overflow-auto">
-        <div className="w-full max-w-[1200px] mx-auto text-white animate-fadeIn">
-          {/* Question content */}
-          <div className="bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl">
-            <div className="text-white/95 leading-relaxed presentation-math">
-              <MathRenderer content={q.content} className="leading-relaxed" />
-            </div>
-
-            {/* MCQ options */}
-            {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 && (
-              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
-                {q.options.map((opt) => {
-                  const isCorrect = showAnswer && opt.key === q.correct_answer;
-                  return (
+        <div className="w-full max-w-[1400px] mx-auto text-white">
+          {/* Question Slide */}
+          {activePart === 'question' && (
+            <div className="bg-white/[0.07] backdrop-blur-sm rounded-3xl p-10 border border-white/10 shadow-2xl animate-fadeIn">
+              <div className="flex items-center gap-3 mb-6 text-blue-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                <HelpCircle className="w-5 h-5" /> Nội dung bài tập
+              </div>
+              <div className="text-white/95 leading-relaxed presentation-math">
+                <MathRenderer content={q.content} className="leading-relaxed" />
+              </div>
+              
+              {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 && (
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {q.options.map((opt) => (
                     <div
                       key={opt.key}
-                      className={cn(
-                        "flex items-start gap-3 px-5 py-3 rounded-xl border transition-all text-[0.85em]",
-                        isCorrect
-                          ? "bg-green-500/20 border-green-400/50 text-green-200"
-                          : "bg-white/5 border-white/10 text-white/80"
-                      )}
+                      className="flex items-start gap-4 px-6 py-4 rounded-2xl border bg-white/5 border-white/10 text-white/80 text-[0.85em]"
                     >
-                      <span className={cn(
-                        "flex-shrink-0 w-[1.3em] h-[1.3em] rounded-lg flex items-center justify-center font-bold text-[0.7em]",
-                        isCorrect ? "bg-green-500 text-white" : "bg-white/15 text-white/70"
-                      )}>
+                      <span className="flex-shrink-0 w-[1.5em] h-[1.5em] rounded-xl flex items-center justify-center font-bold text-[0.8em] bg-white/15 text-white/70">
                         {opt.key}
                       </span>
                       <div className="flex-1 presentation-math">
                         <MathRenderer content={opt.value} />
                       </div>
-                      {isCorrect && <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />}
                     </div>
-                  );
-                })}
-              </div>
-            )}
+                  ))}
+                </div>
+              )}
 
-            {/* Images */}
-            {q.images && q.images.length > 0 && (
-              <div className="mt-6 flex flex-wrap gap-4 justify-center">
-                {q.images.map((img, i) => (
-                  <img key={i} src={img} alt="" className="max-h-[300px] rounded-xl border border-white/20 shadow-lg" />
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Answer (toggled) */}
-          {showAnswer && q.answer && (
-            <div className="mt-4 bg-green-500/10 backdrop-blur-sm rounded-2xl p-6 border border-green-400/20 animate-fadeIn">
-              <div className="flex items-center gap-2 mb-3 text-green-300 text-[0.6em] font-semibold">
-                <CheckCircle className="w-4 h-4" /> Đáp án
-              </div>
-              <div className="text-green-200/90 presentation-math text-[0.85em]">
-                <MathRenderer content={q.answer} />
-              </div>
-              {/* Answer images */}
-              {q.answer_images && q.answer_images.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-4 justify-center">
-                  {q.answer_images.map((img, i) => (
-                    <img key={i} src={img} alt="" className="max-h-[250px] rounded-xl border border-green-400/30 shadow-lg" />
+              {q.images && q.images.length > 0 && (
+                <div className="mt-8 flex flex-wrap gap-6 justify-center">
+                  {q.images.map((img, i) => (
+                    <img key={i} src={img} alt="" className="max-h-[400px] rounded-2xl border border-white/20 shadow-xl" />
                   ))}
                 </div>
               )}
             </div>
           )}
 
-          {/* Solution (toggled) */}
-          {showAnswer && q.solution && (
-            <div className="mt-3 bg-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 animate-fadeIn">
-              <div className="flex items-center gap-2 mb-3 text-blue-300 text-[0.6em] font-semibold">
-                <BookOpen className="w-4 h-4" /> Lời giải
+          {/* Answer Slide */}
+          {activePart === 'answer' && (
+            <div className="bg-green-500/10 backdrop-blur-sm rounded-3xl p-10 border border-green-400/20 shadow-2xl animate-fadeIn">
+              <div className="flex items-center gap-3 mb-6 text-green-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                <CheckCircle className="w-5 h-5" /> Đáp án
               </div>
-              <div className="text-blue-200/90 presentation-math text-[0.85em]">
-                <MathRenderer content={q.solution} />
+              
+              {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {q.options.map((opt) => {
+                    const isCorrect = opt.key === q.correct_answer;
+                    return (
+                      <div
+                        key={opt.key}
+                        className={cn(
+                          "flex items-start gap-4 px-6 py-4 rounded-2xl border transition-all text-[0.85em]",
+                          isCorrect
+                            ? "bg-green-500/20 border-green-400/50 text-green-200 ring-2 ring-green-400/30"
+                            : "bg-white/5 border-white/10 text-white/40 opacity-50"
+                        )}
+                      >
+                        <span className={cn(
+                          "flex-shrink-0 w-[1.5em] h-[1.5em] rounded-xl flex items-center justify-center font-bold text-[0.8em]",
+                          isCorrect ? "bg-green-500 text-white" : "bg-white/15 text-white/50"
+                        )}>
+                          {opt.key}
+                        </span>
+                        <div className="flex-1 presentation-math">
+                          <MathRenderer content={opt.value} />
+                        </div>
+                        {isCorrect && <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-0.5" />}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-green-100 leading-relaxed presentation-math text-[0.9em]">
+                  {q.answer ? <MathRenderer content={q.answer} /> : <span className="opacity-50 italic">Không có nội dung đáp án.</span>}
+                </div>
+              )}
+
+              {q.answer_images && q.answer_images.length > 0 && (
+                <div className="mt-8 flex flex-wrap gap-6 justify-center">
+                  {q.answer_images.map((img, i) => (
+                    <img key={i} src={img} alt="" className="max-h-[400px] rounded-2xl border border-green-400/30 shadow-xl" />
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Solution Slide */}
+          {activePart === 'solution' && (
+            <div className="bg-blue-500/10 backdrop-blur-sm rounded-3xl p-10 border border-blue-400/20 shadow-2xl animate-fadeIn">
+              <div className="flex items-center gap-3 mb-6 text-blue-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                <BookOpen className="w-5 h-5" /> Lời giải chi tiết
               </div>
-              {/* Solution images */}
+              <div className="text-blue-100 leading-relaxed presentation-math text-[0.9em]">
+                {q.solution ? <MathRenderer content={q.solution} /> : <span className="opacity-50 italic">Không có lời giải chi tiết.</span>}
+              </div>
+              
               {q.solution_images && q.solution_images.length > 0 && (
-                <div className="mt-4 flex flex-wrap gap-4 justify-center">
+                <div className="mt-8 flex flex-wrap gap-6 justify-center">
                   {q.solution_images.map((img, i) => (
-                    <img key={i} src={img} alt="" className="max-h-[250px] rounded-xl border border-blue-400/30 shadow-lg" />
+                    <img key={i} src={img} alt="" className="max-h-[400px] rounded-2xl border border-blue-400/30 shadow-xl" />
                   ))}
                 </div>
               )}
@@ -224,7 +267,7 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
 
       {/* Bottom hint bar */}
       <div className="flex items-center justify-center px-6 py-2 bg-black/20 text-white/30 text-xs flex-shrink-0 gap-6">
-        <span>Space / A — Hiện đáp án</span>
+        <span>Mũi tên trái/phải hoặc Space — Chuyển trang</span>
         <span>F — Toàn màn hình</span>
         <span>+/- — Cỡ chữ</span>
         <span>Esc — Đóng</span>

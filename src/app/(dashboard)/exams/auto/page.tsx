@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { Sparkles, Shuffle, Settings2, FileText, ArrowRight, BookOpen, Loader2 } from "lucide-react";
-import { GRADES, TOPICS, DIFFICULTIES } from "@/types";
-import type { Grade, Topic, Difficulty, Question } from "@/types";
+import { GRADES, DIFFICULTIES } from "@/types";
+import type { Grade, Topic, Difficulty, Question, Category } from "@/types";
 import { cn, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel } from "@/lib/utils";
-import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
+import { isDemoMode, demoDb, DEMO_USER, CATEGORIES } from "@/lib/demo-data";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { QuestionContent } from "@/components/shared/MathRenderer";
@@ -16,7 +16,10 @@ export default function AutoExamPage() {
   const [step, setStep] = useState<'config' | 'preview'>('config');
   const [title, setTitle] = useState("");
   const [grade, setGrade] = useState<Grade>(9);
-  const [topics, setTopics] = useState<Topic[]>([]);
+  const [topics, setTopics] = useState<string[]>([]); // category IDs
+  const [topicRatios, setTopicRatios] = useState<Record<string, number>>({});
+  const [categories, setCategories] = useState<Category[]>([]);
+  
   const [difficulties, setDifficulties] = useState<Difficulty[]>([]);
   const [questionCount, setQuestionCount] = useState(10);
   const [duration, setDuration] = useState(90);
@@ -26,9 +29,41 @@ export default function AutoExamPage() {
   const [useMatrix, setUseMatrix] = useState(false);
   const [matrix, setMatrix] = useState({ nhan_biet: 20, thong_hieu: 30, van_dung: 30, van_dung_cao: 20 });
 
-  const toggleTopic = (t: Topic) => {
-    setTopics(prev => prev.includes(t) ? prev.filter(x => x !== t) : [...prev, t]);
+  useEffect(() => {
+    if (isDemoMode) {
+      setCategories(CATEGORIES);
+    } else {
+      fetch('/api/categories')
+        .then(res => res.json())
+        .then(data => {
+          if (Array.isArray(data)) {
+            setCategories(data);
+          }
+        })
+        .catch(() => {});
+    }
+  }, []);
+
+  const toggleTopic = (catId: string) => {
+    setTopics(prev => {
+      if (prev.includes(catId)) {
+        const next = prev.filter(x => x !== catId);
+        const newRatios = { ...topicRatios };
+        delete newRatios[catId];
+        setTopicRatios(newRatios);
+        return next;
+      } else {
+        setTopicRatios(r => ({ ...r, [catId]: 10 }));
+        return [...prev, catId];
+      }
+    });
   };
+
+  const updateTopicRatio = (catId: string, value: number) => {
+    setTopicRatios(prev => ({ ...prev, [catId]: value }));
+  };
+
+  const topicRatioTotal = Object.values(topicRatios).reduce((a, b) => a + b, 0);
 
   const toggleDifficulty = (d: Difficulty) => {
     setDifficulties(prev => prev.includes(d) ? prev.filter(x => x !== d) : [...prev, d]);
@@ -43,12 +78,65 @@ export default function AutoExamPage() {
   const handleGenerate = async () => {
     setIsGenerating(true);
     try {
+      let pool: Question[] = [];
+
       if (isDemoMode) {
-        let pool = demoDb.getQuestions({ grade }).filter(q => q.status === 'approved');
-        if (topics.length > 0) pool = pool.filter(q => topics.includes(q.topic));
+        pool = demoDb.getQuestions({ grade }).filter(q => q.status === 'approved');
+      } else {
+        const params = new URLSearchParams();
+        params.set('grade', String(grade));
+        params.set('status', 'approved');
+        params.set('limit', '500'); // Fetch enough to cover matrix
+        const res = await fetch(`/api/questions?${params}`);
+        if (res.ok) {
+          const data = await res.json();
+          pool = data.data || data || [];
+        }
+      }
 
-        let result: Question[] = [];
+      let result: Question[] = [];
 
+      if (topics.length > 0 && topicRatioTotal > 0) {
+        // Distribute questions by selected topics based on their ratio
+        topics.forEach(catId => {
+          const ratio = topicRatios[catId] / topicRatioTotal;
+          let targetCount = Math.round(questionCount * ratio);
+          
+          let catPool = pool.filter(q => q.topic === catId);
+          const cat = categories.find(c => c.id === catId);
+          if (cat) {
+            catPool = pool.filter(q => q.topic === cat.slug || q.topic === catId || (q as any).category_id === catId);
+          }
+          
+          if (useMatrix && matrixTotal > 0) {
+            const levels: Difficulty[] = ['nhan_biet', 'thong_hieu', 'van_dung', 'van_dung_cao'];
+            levels.forEach(level => {
+              const diffRatio = matrix[level] / matrixTotal;
+              const levelCount = Math.round(targetCount * diffRatio);
+              const levelPool = catPool.filter(q => q.difficulty === level);
+              const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
+              result.push(...shuffled.slice(0, levelCount));
+            });
+          } else {
+            if (difficulties.length > 0) catPool = catPool.filter(q => difficulties.includes(q.difficulty));
+            const shuffled = [...catPool].sort(() => Math.random() - 0.5);
+            result.push(...shuffled.slice(0, targetCount));
+          }
+        });
+        
+        // Trim if excess due to rounding
+        result = result.slice(0, questionCount);
+        // Shuffle final result slightly so topics are mixed
+        result.sort(() => Math.random() - 0.5);
+      } else {
+        // Fallback if no specific topic ratios used
+        if (topics.length > 0) {
+          pool = pool.filter(q => {
+            const cat = categories.find(c => c.id === topics[0]);
+            return topics.includes(q.topic) || (cat && q.topic === cat.slug) || topics.includes((q as any).category_id);
+          });
+        }
+        
         if (useMatrix && matrixTotal > 0) {
           const levels: Difficulty[] = ['nhan_biet', 'thong_hieu', 'van_dung', 'van_dung_cao'];
           levels.forEach(level => {
@@ -64,41 +152,9 @@ export default function AutoExamPage() {
           const shuffled = [...pool].sort(() => Math.random() - 0.5);
           result = shuffled.slice(0, Math.min(questionCount, shuffled.length));
         }
-
-        setGeneratedQuestions(result);
-      } else {
-        // Production: fetch from API
-        const params = new URLSearchParams();
-        params.set('grade', String(grade));
-        params.set('status', 'approved');
-        params.set('limit', '200');
-        if (topics.length > 0) params.set('topic', topics[0]);
-
-        const res = await fetch(`/api/questions?${params}`);
-        if (res.ok) {
-          const data = await res.json();
-          let pool: Question[] = data.data || data || [];
-          if (topics.length > 1) pool = pool.filter(q => topics.includes(q.topic));
-
-          let result: Question[] = [];
-          if (useMatrix && matrixTotal > 0) {
-            const levels: Difficulty[] = ['nhan_biet', 'thong_hieu', 'van_dung', 'van_dung_cao'];
-            levels.forEach(level => {
-              const ratio = matrix[level] / matrixTotal;
-              const count = Math.round(questionCount * ratio);
-              const levelPool = pool.filter(q => q.difficulty === level);
-              const shuffled = [...levelPool].sort(() => Math.random() - 0.5);
-              result.push(...shuffled.slice(0, count));
-            });
-            result = result.slice(0, questionCount);
-          } else {
-            if (difficulties.length > 0) pool = pool.filter(q => difficulties.includes(q.difficulty));
-            const shuffled = [...pool].sort(() => Math.random() - 0.5);
-            result = shuffled.slice(0, Math.min(questionCount, shuffled.length));
-          }
-          setGeneratedQuestions(result);
-        }
       }
+
+      setGeneratedQuestions(result);
       setStep('preview');
       toast.success("Đã tạo đề thi tự động!");
     } catch {
@@ -205,22 +261,51 @@ export default function AutoExamPage() {
                 </div>
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-2">Chuyên đề (bỏ trống = tất cả)</label>
-                <div className="flex flex-wrap gap-2">
-                  {TOPICS.map(t => (
+              <div className="border border-slate-200 rounded-xl p-4">
+                <label className="block text-sm font-semibold text-slate-700 mb-3">📚 Chuyên đề thực tế</label>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {categories.filter(c => c.grade === grade && c.parent_id !== null).map(c => (
                     <button
-                      key={t.value}
-                      onClick={() => toggleTopic(t.value)}
+                      key={c.id}
+                      onClick={() => toggleTopic(c.id)}
                       className={cn(
                         "px-3 py-1.5 text-xs font-medium rounded-lg border transition-all",
-                        topics.includes(t.value) ? "border-blue-400 bg-blue-50 text-blue-700" : "border-slate-200 text-slate-500 hover:border-blue-300"
+                        topics.includes(c.id) ? "border-blue-400 bg-blue-50 text-blue-700" : "border-slate-200 text-slate-500 hover:border-blue-300"
                       )}
                     >
-                      {t.label}
+                      {c.name}
                     </button>
                   ))}
+                  {categories.filter(c => c.grade === grade && c.parent_id !== null).length === 0 && (
+                    <span className="text-xs text-slate-500 italic">Không có chuyên đề nào cho lớp {grade}.</span>
+                  )}
                 </div>
+                
+                {topics.length > 0 && (
+                  <div className="space-y-3 mt-4 pt-4 border-t border-slate-100">
+                    <p className="text-xs text-slate-500 font-medium mb-2">Tỉ lệ phân bổ số câu theo chuyên đề đã chọn:</p>
+                    {topics.map(catId => {
+                      const cat = categories.find(c => c.id === catId);
+                      if (!cat) return null;
+                      return (
+                        <div key={catId} className="flex items-center gap-3">
+                          <span className="text-xs font-medium text-slate-600 w-28 truncate" title={cat.name}>{cat.name}</span>
+                          <input
+                            type="range"
+                            min={0} max={100} step={5}
+                            value={topicRatios[catId] || 0}
+                            onChange={e => updateTopicRatio(catId, Number(e.target.value))}
+                            className="flex-1 h-2 rounded-lg appearance-none cursor-pointer accent-blue-500"
+                          />
+                          <span className="text-xs font-bold text-slate-700 w-10 text-right">{topicRatios[catId]}%</span>
+                          <span className="text-xs text-slate-400 w-14 text-right">
+                            ~{Math.round(questionCount * (topicRatios[catId] / (topicRatioTotal || 1)))} câu
+                          </span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
 
               <div>

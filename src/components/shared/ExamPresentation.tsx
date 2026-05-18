@@ -21,39 +21,43 @@ type SlideType = "cover" | "question" | "end";
 
 export default function ExamPresentation({ exam, questions, onClose }: ExamPresentationProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showAnswer, setShowAnswer] = useState(false);
   const [fontSize, setFontSize] = useState(28); // px
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [autoPlay, setAutoPlay] = useState(false);
   const [autoPlayInterval, setAutoPlayInterval] = useState(30); // seconds
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const totalSlides = questions.length + 2; // cover + questions + end
+  type SlideData = 
+    | { type: 'cover' }
+    | { type: 'question', qIndex: number, part: 'question' | 'answer' | 'solution' }
+    | { type: 'end' };
 
-  const getSlideType = (index: number): SlideType => {
-    if (index === 0) return "cover";
-    if (index === totalSlides - 1) return "end";
-    return "question";
-  };
+  const slides: SlideData[] = [{ type: 'cover' }];
+  questions.forEach((eq, index) => {
+    const q = eq.question;
+    slides.push({ type: 'question', qIndex: index, part: 'question' });
+    if (q.answer || (q.question_type === 'trac_nghiem' && q.options && q.options.length > 0)) {
+      slides.push({ type: 'question', qIndex: index, part: 'answer' });
+    }
+    if (q.solution) {
+      slides.push({ type: 'question', qIndex: index, part: 'solution' });
+    }
+  });
+  slides.push({ type: 'end' });
 
-  const getQuestion = (slideIndex: number) => {
-    if (slideIndex < 1 || slideIndex > questions.length) return null;
-    return questions[slideIndex - 1];
-  };
+  const totalSlides = slides.length;
+  const currentSlideData = slides[currentSlide];
 
   // Navigation
   const goNext = useCallback(() => {
-    setShowAnswer(false);
     setCurrentSlide((prev) => Math.min(prev + 1, totalSlides - 1));
   }, [totalSlides]);
 
   const goPrev = useCallback(() => {
-    setShowAnswer(false);
     setCurrentSlide((prev) => Math.max(prev - 1, 0));
   }, []);
 
   const goToSlide = useCallback((index: number) => {
-    setShowAnswer(false);
     setCurrentSlide(index);
   }, []);
 
@@ -81,11 +85,6 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
           } else {
             onClose();
           }
-          break;
-        case "a":
-        case "A":
-          e.preventDefault();
-          setShowAnswer((prev) => !prev);
           break;
         case "f":
         case "F":
@@ -130,15 +129,15 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
           setAutoPlay(false);
           return prev;
         }
-        setShowAnswer(false);
         return prev + 1;
       });
     }, autoPlayInterval * 1000);
     return () => clearInterval(timer);
   }, [autoPlay, autoPlayInterval, totalSlides]);
 
-  const slideType = getSlideType(currentSlide);
-  const currentQuestion = getQuestion(currentSlide);
+  const slideType = currentSlideData.type;
+  const currentQuestion = currentSlideData.type === 'question' ? questions[currentSlideData.qIndex] : null;
+  const activePart = currentSlideData.type === 'question' ? currentSlideData.part : null;
 
   const settings = exam.settings || {};
   const schoolName = settings.schoolName || settings.school_name || "";
@@ -176,15 +175,6 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
             <ZoomIn className="w-4 h-4" />
           </button>
           <div className="w-px h-5 bg-white/20 mx-1" />
-          {/* Show answer */}
-          <button
-            onClick={() => setShowAnswer((prev) => !prev)}
-            className={cn("p-1.5 rounded-lg transition-colors", showAnswer ? "bg-green-500/30 text-green-300" : "hover:bg-white/10")}
-            title="Hiện/ẩn đáp án (A)"
-          >
-            {showAnswer ? <Eye className="w-4 h-4" /> : <EyeOff className="w-4 h-4" />}
-          </button>
-          <div className="w-px h-5 bg-white/20 mx-1" />
           {/* Auto play */}
           <button
             onClick={() => setAutoPlay((prev) => !prev)}
@@ -213,7 +203,7 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
             {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
           </button>
           {/* Reset */}
-          <button onClick={() => { goToSlide(0); setFontSize(28); setShowAnswer(false); }} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" title="Về đầu">
+          <button onClick={() => { goToSlide(0); setFontSize(28); }} className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" title="Về đầu">
             <RotateCcw className="w-4 h-4" />
           </button>
           {/* Close */}
@@ -250,7 +240,7 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
           {/* ============ QUESTION SLIDE ============ */}
           {slideType === "question" && currentQuestion && (() => {
             const q = currentQuestion.question;
-            const qIndex = currentSlide - 1;
+            const qIndex = currentSlideData.type === 'question' ? currentSlideData.qIndex : 0;
             return (
               <div className="text-white animate-fadeIn">
                 {/* Question header */}
@@ -268,73 +258,94 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
                   </div>
                 </div>
 
-                {/* Question content */}
-                <div className="bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl">
-                  <div className="text-white/95 leading-relaxed presentation-math">
-                    <MathRenderer content={q.content} className="leading-relaxed" />
-                  </div>
+                {activePart === 'question' && (
+                  <div className="bg-white/[0.07] backdrop-blur-sm rounded-2xl p-8 border border-white/10 shadow-2xl animate-fadeIn">
+                    <div className="flex items-center gap-3 mb-6 text-blue-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                      <BookOpen className="w-5 h-5" /> Nội dung bài tập
+                    </div>
+                    <div className="text-white/95 leading-relaxed presentation-math">
+                      <MathRenderer content={q.content} className="leading-relaxed" />
+                    </div>
 
-                  {/* MCQ options */}
-                  {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 && (
-                    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {q.options.map((opt) => {
-                        const isCorrect = showAnswer && opt.key === q.correct_answer;
-                        return (
+                    {/* MCQ options */}
+                    {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 && (
+                      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {q.options.map((opt) => (
                           <div
                             key={opt.key}
-                            className={cn(
-                              "flex items-start gap-3 px-5 py-3 rounded-xl border transition-all text-[0.85em]",
-                              isCorrect
-                                ? "bg-green-500/20 border-green-400/50 text-green-200"
-                                : "bg-white/5 border-white/10 text-white/80"
-                            )}
+                            className="flex items-start gap-3 px-5 py-3 rounded-xl border bg-white/5 border-white/10 text-white/80 transition-all text-[0.85em]"
                           >
-                            <span className={cn(
-                              "flex-shrink-0 w-[1.3em] h-[1.3em] rounded-lg flex items-center justify-center font-bold text-[0.7em]",
-                              isCorrect ? "bg-green-500 text-white" : "bg-white/15 text-white/70"
-                            )}>
+                            <span className="flex-shrink-0 w-[1.3em] h-[1.3em] rounded-lg flex items-center justify-center font-bold text-[0.7em] bg-white/15 text-white/70">
                               {opt.key}
                             </span>
                             <div className="flex-1 presentation-math">
                               <MathRenderer content={opt.value} />
                             </div>
-                            {isCorrect && <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />}
                           </div>
-                        );
-                      })}
-                    </div>
-                  )}
+                        ))}
+                      </div>
+                    )}
 
-                  {/* Images */}
-                  {q.images && q.images.length > 0 && (
-                    <div className="mt-6 flex flex-wrap gap-4 justify-center">
-                      {q.images.map((img, i) => (
-                        <img key={i} src={img} alt="" className="max-h-[300px] rounded-xl border border-white/20 shadow-lg" />
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                {/* Answer (toggled) */}
-                {showAnswer && q.answer && q.question_type !== "trac_nghiem" && (
-                  <div className="mt-4 bg-green-500/10 backdrop-blur-sm rounded-2xl p-6 border border-green-400/20 animate-fadeIn">
-                    <div className="flex items-center gap-2 mb-3 text-green-300 text-[0.6em] font-semibold">
-                      <CheckCircle className="w-4 h-4" /> Đáp án
-                    </div>
-                    <div className="text-green-200/90 presentation-math text-[0.85em]">
-                      <MathRenderer content={q.answer} />
-                    </div>
+                    {/* Images */}
+                    {q.images && q.images.length > 0 && (
+                      <div className="mt-6 flex flex-wrap gap-4 justify-center">
+                        {q.images.map((img, i) => (
+                          <img key={i} src={img} alt="" className="max-h-[300px] rounded-xl border border-white/20 shadow-lg" />
+                        ))}
+                      </div>
+                    )}
                   </div>
                 )}
 
-                {/* Solution (toggled) */}
-                {showAnswer && q.solution && (
-                  <div className="mt-3 bg-blue-500/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/20 animate-fadeIn">
-                    <div className="flex items-center gap-2 mb-3 text-blue-300 text-[0.6em] font-semibold">
-                      <BookOpen className="w-4 h-4" /> Lời giải
+                {activePart === 'answer' && (
+                  <div className="bg-green-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-400/20 shadow-2xl animate-fadeIn">
+                    <div className="flex items-center gap-3 mb-6 text-green-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                      <CheckCircle className="w-5 h-5" /> Đáp án
+                    </div>
+                    
+                    {q.question_type === "trac_nghiem" && q.options && q.options.length > 0 ? (
+                      <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3">
+                        {q.options.map((opt) => {
+                          const isCorrect = opt.key === q.correct_answer;
+                          return (
+                            <div
+                              key={opt.key}
+                              className={cn(
+                                "flex items-start gap-3 px-5 py-3 rounded-xl border transition-all text-[0.85em]",
+                                isCorrect
+                                  ? "bg-green-500/20 border-green-400/50 text-green-200 ring-2 ring-green-400/30"
+                                  : "bg-white/5 border-white/10 text-white/40 opacity-50"
+                              )}
+                            >
+                              <span className={cn(
+                                "flex-shrink-0 w-[1.3em] h-[1.3em] rounded-lg flex items-center justify-center font-bold text-[0.7em]",
+                                isCorrect ? "bg-green-500 text-white" : "bg-white/15 text-white/50"
+                              )}>
+                                {opt.key}
+                              </span>
+                              <div className="flex-1 presentation-math">
+                                <MathRenderer content={opt.value} />
+                              </div>
+                              {isCorrect && <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    ) : (
+                      <div className="text-green-200/90 presentation-math text-[0.85em]">
+                        {q.answer ? <MathRenderer content={q.answer} /> : <span className="opacity-50 italic">Không có nội dung đáp án.</span>}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {activePart === 'solution' && (
+                  <div className="bg-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-400/20 shadow-2xl animate-fadeIn">
+                    <div className="flex items-center gap-3 mb-6 text-blue-300 text-[0.6em] font-semibold uppercase tracking-wider">
+                      <BookOpen className="w-5 h-5" /> Lời giải chi tiết
                     </div>
                     <div className="text-blue-200/90 presentation-math text-[0.85em]">
-                      <MathRenderer content={q.solution} />
+                      {q.solution ? <MathRenderer content={q.solution} /> : <span className="opacity-50 italic">Không có lời giải chi tiết.</span>}
                     </div>
                   </div>
                 )}
@@ -396,7 +407,7 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
                     ? "w-3 h-3 bg-white/20 hover:bg-white/40"
                     : "w-3 h-3 bg-white/15 hover:bg-white/30"
               )}
-              title={i === 0 ? "Trang bìa" : i === totalSlides - 1 ? "Kết thúc" : `Câu ${i}`}
+              title={slides[i].type === 'cover' ? "Trang bìa" : slides[i].type === 'end' ? "Kết thúc" : `Câu ${slides[i].qIndex + 1} (${slides[i].part})`}
             />
           ))}
         </div>
