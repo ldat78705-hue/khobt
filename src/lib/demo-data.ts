@@ -378,6 +378,23 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['toán thực tế', 'bội chung', 'bội chung nhỏ nhất'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
     created_at: '2024-12-01T08:00:00Z', updated_at: '2024-12-01T08:00:00Z',
   },
+  // === BỔ SUNG CÁC BÀI TOÁN TỪ FILE TÀI LIỆU ƯC-BC CỦA GV ===
+  {
+    id: 'kntt-6-ucln-01', question_code: 'BT064', content: 'Bệnh viện A đã huy động $45$ bác sĩ và $105$ y tá để chia thành các tổ y tế dự phòng phòng chống dịch. Việc chia tổ cần đảm bảo sao cho số bác sĩ được chia đều vào các tổ và số y tá cũng được chia đều. Hỏi có thể chia số bác sĩ và y tá đó nhiều nhất thành mấy tổ công tác? Khi đó, mỗi tổ công tác có bao nhiêu bác sĩ và bao nhiêu y tá?',
+    answer: 'Chia nhiều nhất $15$ tổ. Mỗi tổ $3$ bác sĩ, $7$ y tá.',
+    solution: 'Gọi số tổ chia được nhiều nhất là $x$ ($x \\in \\mathbb{N}^*$).\nĐể chia đều bác sĩ và y tá vào số tổ nhiều nhất thì $x$ chính là Ước chung lớn nhất của $45$ và $105$.\nPhân tích ra thừa số nguyên tố:\n$45 = 3^2 \\cdot 5$\n$105 = 3 \\cdot 5 \\cdot 7$\n$\\Rightarrow x = \\text{ƯCLN}(45, 105) = 3 \\cdot 5 = 15$.\nVậy có thể chia nhiều nhất $15$ tổ công tác.\nMỗi tổ có:\nSố bác sĩ: $45 : 15 = 3$ (người)\nSố y tá: $105 : 15 = 7$ (người).',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['ước chung lớn nhất', 'bài toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T08:30:00Z', updated_at: '2024-12-31T08:30:00Z',
+  },
+  {
+    id: 'kntt-6-ucnc-02', question_code: 'BT065', content: 'Chứng minh rằng với mọi số tự nhiên $n \\in \\mathbb{N}$, hai số $n$ và $n+1$ là hai số nguyên tố cùng nhau.',
+    answer: 'Chứng minh bằng phản chứng hoặc dùng tính chất Ước chung',
+    solution: 'Gọi $d$ là Ước chung lớn nhất của $n$ và $n+1$, ta kí hiệu $d = \\text{ƯCLN}(n, n+1)$ ($d \\in \\mathbb{N}^*$).\nKhi đó ta có: $n \\vdots d$ và $(n+1) \\vdots d$.\nTheo tính chất chia hết của một hiệu, ta suy ra:\n$[(n+1) - n] \\vdots d$\n$\\Rightarrow 1 \\vdots d$\nVì $d \\in \\mathbb{N}^*$ nên $d$ chỉ có thể bằng $1$.\nVậy $\\text{ƯCLN}(n, n+1) = 1$. Suy ra hai số tự nhiên liên tiếp $n$ và $n+1$ luôn là hai số nguyên tố cùng nhau với mọi $n$.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['số nguyên tố cùng nhau', 'chứng minh chia hết'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T08:45:00Z', updated_at: '2024-12-31T08:45:00Z',
+  },
   {
     id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
     answer: 'b) $99{,}6$g\nc) $70\\%$',
