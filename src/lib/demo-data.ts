@@ -604,6 +604,30 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tỉ lệ thức', 'góc trong tam giác', 'hình học'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
     created_at: '2024-12-31T14:30:00Z', updated_at: '2024-12-31T14:30:00Z',
   },
+  {
+    id: 'kntt-7-tln-01', question_code: 'BT084', content: 'Chia số $235$ thành $3$ phần tỉ lệ nghịch với $3; 4$ và $5$. Tìm ba phần đó.',
+    answer: '$100; 75; 60$',
+    solution: 'Gọi ba phần cần tìm lần lượt là $x, y, z$ ($x, y, z > 0$). Theo đề bài ta có $x + y + z = 235$.\nVì $x, y, z$ tỉ lệ nghịch với $3; 4; 5$ nên ta có:\n$3x = 4y = 5z \\Rightarrow \\frac{x}{\\frac{1}{3}} = \\frac{y}{\\frac{1}{4}} = \\frac{z}{\\frac{1}{5}}$.\nÁp dụng tính chất dãy tỉ số bằng nhau, ta có:\n$\\frac{x}{\\frac{1}{3}} = \\frac{y}{\\frac{1}{4}} = \\frac{z}{\\frac{1}{5}} = \\frac{x + y + z}{\\frac{1}{3} + \\frac{1}{4} + \\frac{1}{5}} = \\frac{235}{\\frac{47}{60}} = 235 \\cdot \\frac{60}{47} = 300$.\nSuy ra:\n$x = 300 \\cdot \\frac{1}{3} = 100$\n$y = 300 \\cdot \\frac{1}{4} = 75$\n$z = 300 \\cdot \\frac{1}{5} = 60$\nVậy ba phần cần tìm là $100, 75$ và $60$.',
+    grade: 7, topic: 'dai_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['đại lượng tỉ lệ nghịch', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T15:00:00Z', updated_at: '2024-12-31T15:00:00Z',
+  },
+  {
+    id: 'kntt-7-tln-02', question_code: 'BT085', content: 'Hai xe lửa đi từ $A$ đến $B$ mất lần lượt $2$ giờ $48$ phút và $4$ giờ $40$ phút. Tính khoảng cách $AB$, biết rằng vận tốc xe thứ nhất lớn hơn vận tốc xe thứ hai là $26$ km/h.',
+    answer: '$182$ km',
+    solution: 'Đổi $2$ giờ $48$ phút $= 2{,}8$ giờ; $4$ giờ $40$ phút $= \\frac{14}{3}$ giờ.\nGọi vận tốc của xe thứ nhất và xe thứ hai lần lượt là $v_1$ và $v_2$ (km/h) ($v_1 > v_2 > 0$).\nVì vận tốc xe thứ nhất lớn hơn xe thứ hai là $26$ km/h nên $v_1 - v_2 = 26$.\nVì khoảng cách $AB$ không đổi, nên vận tốc và thời gian là hai đại lượng tỉ lệ nghịch.\nTa có: $v_1 \\cdot 2{,}8 = v_2 \\cdot \\frac{14}{3} \\Rightarrow \\frac{v_1}{\\frac{14}{3}} = \\frac{v_2}{2{,}8}$.\nÁp dụng tính chất dãy tỉ số bằng nhau:\n$\\frac{v_1}{\\frac{14}{3}} = \\frac{v_2}{2{,}8} = \\frac{v_1 - v_2}{\\frac{14}{3} - 2{,}8} = \\frac{26}{\\frac{28}{15}} = 26 \\cdot \\frac{15}{28} = \\frac{195}{14}$.\nSuy ra: $v_1 = \\frac{195}{14} \\cdot \\frac{14}{3} = 65$ (km/h).\nKhoảng cách $AB$ là: $v_1 \\cdot t_1 = 65 \\cdot 2{,}8 = 182$ (km).',
+    grade: 7, topic: 'dai_so', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['đại lượng tỉ lệ nghịch', 'toán chuyển động'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T15:15:00Z', updated_at: '2024-12-31T15:15:00Z',
+  },
+  {
+    id: 'kntt-7-tln-03', question_code: 'BT086', content: 'Tìm độ dài ba cạnh của một tam giác biết chu vi của nó bằng $60$cm và ba chiều cao tương ứng tỉ lệ nghịch với $3; 4$ và $5$.',
+    answer: '$15$cm, $20$cm và $25$cm',
+    solution: 'Gọi độ dài ba cạnh của tam giác lần lượt là $a, b, c$ (cm) và chiều cao tương ứng là $h_a, h_b, h_c$ ($a, b, c, h_a, h_b, h_c > 0$).\nChu vi tam giác là $60$cm nên $a + b + c = 60$.\nDiện tích tam giác $S = \\frac{1}{2}a \\cdot h_a = \\frac{1}{2}b \\cdot h_b = \\frac{1}{2}c \\cdot h_c \\Rightarrow a \\cdot h_a = b \\cdot h_b = c \\cdot h_c$.\nBa chiều cao tỉ lệ nghịch với $3; 4; 5$ nên ta có $3 \\cdot h_a = 4 \\cdot h_b = 5 \\cdot h_c$.\nTừ đó suy ra $\\frac{a}{3} = \\frac{b}{4} = \\frac{c}{5}$.\nÁp dụng tính chất dãy tỉ số bằng nhau:\n$\\frac{a}{3} = \\frac{b}{4} = \\frac{c}{5} = \\frac{a + b + c}{3 + 4 + 5} = \\frac{60}{12} = 5$.\nSuy ra:\n$a = 5 \\cdot 3 = 15$ (cm)\n$b = 5 \\cdot 4 = 20$ (cm)\n$c = 5 \\cdot 5 = 25$ (cm)\nVậy độ dài ba cạnh của tam giác là $15$cm, $20$cm và $25$cm.',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['đại lượng tỉ lệ nghịch', 'diện tích tam giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T15:30:00Z', updated_at: '2024-12-31T15:30:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
