@@ -369,7 +369,7 @@ export default function AdminCategoriesPage() {
 /** Recursive category row with expand/collapse for children */
 function CategoryRow({
   cat, categories, getChildren, expandedIds, toggleExpand,
-  handleEdit, handleDelete, toggleActive, depth,
+  handleEdit, handleDelete, toggleActive, handleMove, depth,
 }: {
   cat: Category;
   categories: Category[];
