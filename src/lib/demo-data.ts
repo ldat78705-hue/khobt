@@ -801,6 +801,47 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tiếp tuyến đường tròn', 'hệ thức lượng', 'định lý pythagore'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
     created_at: '2024-12-31T21:45:00Z', updated_at: '2024-12-31T21:45:00Z',
   },
+  // === BỔ SUNG CÁC DẠNG BÀI CHUYÊN SÂU LỚP 7, 8, 9 (CHUYÊN GIA BIÊN SOẠN) ===
+  {
+    id: 'kntt-7-ct-01', question_code: 'BT108', content: 'Tính giá trị của biểu thức sau (vận dụng căn bậc hai số học và giá trị tuyệt đối):\n$A = \\sqrt{64} - \\sqrt{25} + \\left| -\\frac{2}{3} \\right| \\cdot \\sqrt{81}$',
+    answer: '$A = 9$',
+    solution: 'Thực hiện phép tính theo thứ tự: khai căn và tính giá trị tuyệt đối trước, sau đó nhân chia, cuối cùng là cộng trừ.\nTa có:\n$\\sqrt{64} = 8$\n$\\sqrt{25} = 5$\n$\\sqrt{81} = 9$\n$\\left| -\\frac{2}{3} \\right| = \\frac{2}{3}$\n\nThay các kết quả vào biểu thức $A$, ta được:\n$A = 8 - 5 + \\frac{2}{3} \\cdot 9$\n$A = 3 + 6$\n$A = 9$.\nVậy giá trị của biểu thức là $A = 9$.',
+    grade: 7, topic: 'can_thuc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['căn bậc hai số học', 'giá trị tuyệt đối', 'tính toán'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T22:00:00Z', updated_at: '2024-12-31T22:00:00Z',
+  },
+  {
+    id: 'kntt-8-dt-03', question_code: 'BT109', content: 'Phân tích đa thức sau thành nhân tử:\n$P = x^2 - 4x + 4 - y^2$',
+    answer: '$P = (x - 2 - y)(x - 2 + y)$',
+    solution: 'Quan sát đa thức $P = x^2 - 4x + 4 - y^2$, ta thấy ba hạng tử đầu tiên tạo thành hằng đẳng thức bình phương của một hiệu.\nTa nhóm các hạng tử như sau:\n$P = (x^2 - 4x + 4) - y^2$\n$P = (x - 2)^2 - y^2$\n\nTiếp tục sử dụng hằng đẳng thức hiệu hai bình phương $A^2 - B^2 = (A - B)(A + B)$:\n$P = (x - 2 - y)(x - 2 + y)$.\n\nVậy đa thức đã được phân tích thành nhân tử thành công.',
+    grade: 8, topic: 'da_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['phân tích đa thức thành nhân tử', 'hằng đẳng thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T22:10:00Z', updated_at: '2024-12-31T22:10:00Z',
+  },
+  {
+    id: 'kntt-8-xs-01', question_code: 'BT110', content: 'Một hộp kín chứa $20$ viên bi được đánh số từ $1$ đến $20$. Rút ngẫu nhiên một viên bi từ trong hộp.\na) Hãy liệt kê các kết quả thuận lợi cho biến cố $A$: "Viên bi rút ra mang số là một số nguyên tố".\nb) Tính xác suất của biến cố $A$.',
+    answer: 'a) $2, 3, 5, 7, 11, 13, 17, 19$; b) Xác suất là $\\frac{2}{5}$',
+    solution: 'a) Không gian mẫu (các kết quả có thể xảy ra) là tập hợp các số từ $1$ đến $20$. Số lượng kết quả có thể là $n = 20$.\nCác số nguyên tố từ $1$ đến $20$ bao gồm: $2, 3, 5, 7, 11, 13, 17, 19$.\nVậy các kết quả thuận lợi cho biến cố $A$ là tập hợp $\\{2; 3; 5; 7; 11; 13; 17; 19\\}$.\n\nb) Số lượng kết quả thuận lợi cho biến cố $A$ là $m = 8$.\nXác suất của biến cố $A$ được tính theo công thức:\n$P(A) = \\frac{m}{n} = \\frac{8}{20} = \\frac{2}{5}$.\n\nVậy xác suất để rút được viên bi mang số nguyên tố là $\\frac{2}{5}$ (hoặc $0{,}4$).',
+    grade: 8, topic: 'xac_suat', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['xác suất biến cố', 'số nguyên tố'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T22:20:00Z', updated_at: '2024-12-31T22:20:00Z',
+  },
+  {
+    id: 'kntt-9-bpt-01', question_code: 'BT111', content: 'Giải bất phương trình sau:\n$\\frac{2x - 3}{4} \\le \\frac{x + 1}{3} - 1$',
+    answer: '$x \\le \\frac{1}{2}$',
+    solution: 'Tìm mẫu thức chung của $4$ và $3$ là $12$. Quy đồng mẫu hai vế của bất phương trình:\n$\\frac{3(2x - 3)}{12} \\le \\frac{4(x + 1)}{12} - \\frac{12}{12}$\n\nKhử mẫu (do $12 > 0$ nên chiều bất phương trình giữ nguyên):\n$3(2x - 3) \\le 4(x + 1) - 12$\n\nThực hiện phép nhân phân phối:\n$6x - 9 \\le 4x + 4 - 12$\n$\\Leftrightarrow 6x - 9 \\le 4x - 8$\n\nChuyển vế, thu gọn:\n$6x - 4x \\le -8 + 9$\n$\\Leftrightarrow 2x \\le 1$\n$\\Leftrightarrow x \\le \\frac{1}{2}$\n\nVậy tập nghiệm của bất phương trình là $S = \\left\\{ x \\in \\mathbb{R} \\mid x \\le \\frac{1}{2} \\right\\}$.',
+    grade: 9, topic: 'bat_phuong_trinh', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['bất phương trình bậc nhất một ẩn', 'quy đồng mẫu'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
+    created_at: '2024-12-31T22:30:00Z', updated_at: '2024-12-31T22:30:00Z',
+  },
+  {
+    id: 'kntt-9-hs-02', question_code: 'BT112', content: 'Trong mặt phẳng tọa độ $Oxy$, cho parabol $(P): y = x^2$ và đường thẳng $(d): y = 2x + 3$.\na) Giải phương trình hoành độ giao điểm của $(P)$ và $(d)$.\nb) Tìm tọa độ các giao điểm của $(P)$ và $(d)$.',
+    answer: 'Giao điểm là $A(-1; 1)$ và $B(3; 9)$',
+    solution: 'a) Xét phương trình hoành độ giao điểm của $(P)$ và $(d)$:\n$x^2 = 2x + 3$\n$\\Leftrightarrow x^2 - 2x - 3 = 0$\nĐây là phương trình bậc hai một ẩn $x$. \nTa thấy hệ số $a - b + c = 1 - (-2) + (-3) = 1 + 2 - 3 = 0$.\nTheo định lí Viète, phương trình có hai nghiệm phân biệt:\n$x_1 = -1$\n$x_2 = -\\frac{c}{a} = -\\frac{-3}{1} = 3$.\n\nb) Tìm tung độ tương ứng:\n- Với $x_1 = -1$, thay vào phương trình $(P)$ ta được $y_1 = (-1)^2 = 1$. Suy ra giao điểm thứ nhất là $A(-1; 1)$.\n- Với $x_2 = 3$, thay vào phương trình $(P)$ ta được $y_2 = 3^2 = 9$. Suy ra giao điểm thứ hai là $B(3; 9)$.\n\nVậy parabol $(P)$ và đường thẳng $(d)$ cắt nhau tại hai điểm có tọa độ là $A(-1; 1)$ và $B(3; 9)$.',
+    grade: 9, topic: 'ham_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['parabol', 'sự tương giao', 'định lí viète'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-9',
+    created_at: '2024-12-31T22:45:00Z', updated_at: '2024-12-31T22:45:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
