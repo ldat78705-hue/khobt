@@ -756,6 +756,7 @@ export const SAMPLE_QUESTIONS: Question[] = [
     created_at: '2024-12-04T08:00:00Z', updated_at: '2024-12-04T08:00:00Z',
   },
   {
+    id: 'q7-05', question_code: 'BT042', content: 'Ba người cùng làm một công việc thì hoàn thành trong $4$ giờ. Nếu làm riêng, người thứ nhất hoàn thành trong $12$ giờ, người thứ hai hoàn thành trong $8$ giờ. Hỏi nếu làm riêng thì người thứ ba hoàn thành công việc đó trong bao lâu?',
     answer: '$24$ giờ',
     solution: 'Trong 1 giờ, cả ba người làm được $\\frac{1}{4}$ công việc.\nTrong 1 giờ, người thứ nhất làm được $\\frac{1}{12}$ công việc.\nTrong 1 giờ, người thứ hai làm được $\\frac{1}{8}$ công việc.\nTrong 1 giờ, người thứ ba làm được: $\\frac{1}{4} - \\left( \\frac{1}{12} + \\frac{1}{8} \\right) = \\frac{1}{4} - \\frac{5}{24} = \\frac{1}{24}$ công việc.\nVậy người thứ ba làm riêng sẽ hoàn thành trong $24$ giờ.',
     grade: 7, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
