@@ -469,6 +469,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['xác suất thực nghiệm', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-6',
     created_at: '2024-12-31T11:15:00Z', updated_at: '2024-12-31T11:15:00Z',
   },
+  // === BỔ SUNG CÁC BÀI TOÁN NÂNG CAO LUỸ THỪA VÀ ĐỐI XỨNG ===
+  {
+    id: 'kntt-6-lt-01', question_code: 'BT075', content: 'Tìm chữ số tận cùng của các luỹ thừa sau:\n\na) $7^{2024}$\nb) $3^{2023}$',
+    answer: 'a) Chữ số tận cùng là $1$; b) Chữ số tận cùng là $7$',
+    solution: 'a) Tìm chữ số tận cùng của $7^{2024}$:\nTa thấy các luỹ thừa của $7$ có chữ số tận cùng lặp lại theo chu kì $4$: $7, 9, 3, 1$.\nTa có: $2024 = 4 \\cdot 506$ (chia hết cho $4$).\nDo đó, chữ số tận cùng của $7^{2024}$ cũng giống như chữ số tận cùng của $7^4$, tức là số $1$.\n\nb) Tìm chữ số tận cùng của $3^{2023}$:\nCác luỹ thừa của $3$ có chữ số tận cùng lặp lại theo chu kì $4$: $3, 9, 7, 1$.\nTa có: $2023 = 4 \\cdot 505 + 3$ (chia cho $4$ dư $3$).\nDo đó, chữ số tận cùng của $3^{2023}$ cũng giống như chữ số tận cùng của $3^3$, tức là số $7$.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['lũy thừa', 'chữ số tận cùng', 'học sinh giỏi'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T11:30:00Z', updated_at: '2024-12-31T11:30:00Z',
+  },
+  {
+    id: 'kntt-6-ch-01', question_code: 'BT076', content: 'Cho tổng $S = 2 + 2^2 + 2^3 + 2^4 + \\dots + 2^{60}$. Chứng tỏ rằng $S$ chia hết cho $3$, cho $7$ và cho $15$.',
+    answer: 'Sử dụng phương pháp nhóm các số hạng',
+    solution: '*) Chứng minh $S$ chia hết cho $3$:\nNhóm 2 số hạng liên tiếp với nhau: $S = (2 + 2^2) + (2^3 + 2^4) + \\dots + (2^{59} + 2^{60})$\n$S = 2(1 + 2) + 2^3(1 + 2) + \\dots + 2^{59}(1 + 2)$\n$S = 2 \\cdot 3 + 2^3 \\cdot 3 + \\dots + 2^{59} \\cdot 3$\n$S = 3(2 + 2^3 + \\dots + 2^{59})$ $\\vdots$ $3$.\n\n*) Chứng minh $S$ chia hết cho $7$:\nNhóm 3 số hạng liên tiếp: $S = (2 + 2^2 + 2^3) + \\dots + (2^{58} + 2^{59} + 2^{60})$\n$S = 2(1 + 2 + 4) + \\dots + 2^{58}(1 + 2 + 4)$\n$S = 2 \\cdot 7 + \\dots + 2^{58} \\cdot 7$ $\\vdots$ $7$.\n\n*) Chứng minh $S$ chia hết cho $15$:\nNhóm 4 số hạng liên tiếp: $S = (2 + 2^2 + 2^3 + 2^4) + \\dots$\n$S = 2(1 + 2 + 4 + 8) + \\dots = 2 \\cdot 15 + \\dots$ $\\vdots$ $15$.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['chia hết', 'lũy thừa', 'học sinh giỏi'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T11:45:00Z', updated_at: '2024-12-31T11:45:00Z',
+  },
+  {
+    id: 'kntt-6-dx-01', question_code: 'BT077', content: 'Cho hình thoi $ABCD$ có cạnh bằng $5$cm và có tâm đối xứng $O$. Biết khoảng cách từ tâm $O$ đến các đỉnh $A$ và $B$ lần lượt là $OA = 3$cm, $OB = 4$cm.\n\na) Tính diện tích hình thoi $ABCD$.\nb) Dựa vào tính chất tâm đối xứng, hãy so sánh chu vi và diện tích của hai tam giác $OAB$ và tam giác $OCD$.',
+    answer: 'a) $24\\text{cm}^2$; b) Chu vi và diện tích bằng nhau',
+    solution: 'a) Tâm đối xứng $O$ của hình thoi chính là giao điểm của hai đường chéo $AC$ và $BD$.\nDo đó, $OA = OC = 3$cm $\\Rightarrow AC = 6$cm.\n$OB = OD = 4$cm $\\Rightarrow BD = 8$cm.\nDiện tích hình thoi $ABCD$ là: $S = \\frac{1}{2} \\cdot AC \\cdot BD = \\frac{1}{2} \\cdot 6 \\cdot 8 = 24 \\ (\\text{cm}^2)$.\n\nb) Vì $O$ là tâm đối xứng của hình thoi $ABCD$, nên qua tâm đối xứng $O$:\nĐiểm $A$ đối xứng với điểm $C$.\nĐiểm $B$ đối xứng với điểm $D$.\nSuy ra tam giác $OCD$ chính là hình đối xứng của tam giác $OAB$ qua tâm $O$.\nDo hai hình đối xứng qua tâm luôn bằng nhau nên chu vi và diện tích của tam giác $OAB$ bằng chu vi và diện tích của tam giác $OCD$.',
+    grade: 6, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tâm đối xứng', 'hình thoi', 'diện tích'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
+    created_at: '2024-12-31T12:00:00Z', updated_at: '2024-12-31T12:00:00Z',
+  },
   {
     id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
     answer: 'b) $99{,}6$g\nc) $70\\%$',
