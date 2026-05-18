@@ -653,6 +653,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['thống kê', 'bảng số liệu'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
     created_at: '2024-12-31T16:30:00Z', updated_at: '2024-12-31T16:30:00Z',
   },
+  // === BÀI TẬP HÌNH HỌC LỚP 7 (HÌNH HỘP CHỮ NHẬT VÀ TAM GIÁC) ===
+  {
+    id: 'kntt-7-hh-01', question_code: 'BT090', content: 'Một bể chứa nước hình hộp chữ nhật có chiều dài $2$m, chiều rộng $1{,}5$m, chiều cao $1{,}2$m. Một máy bơm bơm nước vào bể mỗi phút bơm được $20$ lít nước. Sau khi bơm được $45$ phút, người ta tắt máy. Hỏi lúc đó nước đã đầy bể hay chưa? Biết rằng lúc đầu trong bể đã có sẵn $50$ lít nước.',
+    answer: 'Nước chưa đầy bể (chỉ mới có $950$ lít so với $3600$ lít)',
+    solution: 'Thể tích của bể chứa nước hình hộp chữ nhật là:\n$V = 2 \\cdot 1{,}5 \\cdot 1{,}2 = 3{,}6$ ($\\text{m}^3$).\nĐổi $3{,}6\\text{m}^3 = 3600\\text{dm}^3 = 3600$ lít.\nVậy bể có khả năng chứa tối đa $3600$ lít nước.\n\nSố nước máy bơm bơm được trong $45$ phút là:\n$20 \\cdot 45 = 900$ (lít).\n\nTổng lượng nước có trong bể sau khi bơm xong là:\n$900 + 50 = 950$ (lít).\n\nVì $950$ lít $< 3600$ lít nên nước chưa đầy bể.',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hình hộp chữ nhật', 'thể tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T17:00:00Z', updated_at: '2024-12-31T17:00:00Z',
+  },
+  {
+    id: 'kntt-7-hh-02', question_code: 'BT091', content: 'Một phòng học hình hộp chữ nhật có chiều dài $8$m, chiều rộng $6$m, chiều cao $3{,}5$m. Người ta định quét sơn phía trong tường và cả trần nhà. Hỏi số tiền sơn phải trả là bao nhiêu? Biết rằng phòng học đó có hai cửa ra vào kích thước $1{,}5$m $\\times$ $2$m và bốn cửa sổ kích thước $1{,}2$m $\\times$ $1{,}5$m, giá tiền công quét sơn là $20\\,000$ đồng/m$^2$.',
+    answer: '$2\\,656\\,000$ đồng',
+    solution: 'Diện tích xung quanh của phòng học là:\n$S_{xq} = 2 \\cdot 3{,}5 \\cdot (8 + 6) = 7 \\cdot 14 = 98$ ($\\text{m}^2$).\nDiện tích trần nhà là:\n$S_{\\text{trần}} = 8 \\cdot 6 = 48$ ($\\text{m}^2$).\nTổng diện tích $4$ bức tường và trần nhà là:\n$98 + 48 = 146$ ($\\text{m}^2$).\n\nDiện tích của $2$ cửa ra vào là:\n$2 \\cdot (1{,}5 \\cdot 2) = 6$ ($\\text{m}^2$).\nDiện tích của $4$ cửa sổ là:\n$4 \\cdot (1{,}2 \\cdot 1{,}5) = 7{,}2$ ($\\text{m}^2$).\n\nDiện tích thực tế cần quét sơn là:\n$146 - 6 - 7{,}2 = 132{,}8$ ($\\text{m}^2$).\n\nSố tiền phải trả để quét sơn là:\n$132{,}8 \\cdot 20\\,000 = 2\\,656\\,000$ (đồng).',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['hình hộp chữ nhật', 'diện tích xung quanh', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T17:15:00Z', updated_at: '2024-12-31T17:15:00Z',
+  },
+  {
+    id: 'kntt-7-hh-03', question_code: 'BT092', content: 'Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $AB = 3$cm, $AC = 4$cm và $BC = 5$cm. Hãy so sánh các góc ngoài của tam giác đó.',
+    answer: 'Góc ngoài tại đỉnh $A$ nhỏ nhất, lớn nhất là góc ngoài tại đỉnh $C$',
+    solution: 'Trong tam giác $ABC$, ta có độ dài các cạnh: $BC = 5$cm, $AC = 4$cm, $AB = 3$cm.\nVì $BC > AC > AB$ nên theo định lý quan hệ giữa cạnh và góc đối diện trong tam giác, ta suy ra thứ tự các góc trong là:\n$\\widehat{A} > \\widehat{B} > \\widehat{C}$ (góc đối diện với cạnh lớn hơn thì lớn hơn).\n\nTa biết rằng tổng của góc trong và góc ngoài kề bù tại một đỉnh luôn bằng $180^\\circ$.\nDo đó, góc trong càng lớn thì góc ngoài tương ứng càng nhỏ.\nVì $\\widehat{A} > \\widehat{B} > \\widehat{C}$ nên ta suy ra:\nGóc ngoài tại đỉnh $A$ $<$ Góc ngoài tại đỉnh $B$ $<$ Góc ngoài tại đỉnh $C$.',
+    grade: 7, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['quan hệ cạnh và góc', 'góc ngoài tam giác', 'hình học'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T17:30:00Z', updated_at: '2024-12-31T17:30:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
