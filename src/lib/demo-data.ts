@@ -752,6 +752,30 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tam giác đồng dạng', 'toán thực tế', 'định lý pythagore'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
     created_at: '2024-12-31T20:15:00Z', updated_at: '2024-12-31T20:15:00Z',
   },
+  {
+    id: 'kntt-8-hs-01', question_code: 'BT102', content: 'Cho hàm số bậc nhất $y = (m - 1)x + 3$ (với $m \\neq 1$) có đồ thị là đường thẳng $(d)$.\n\na) Tìm giá trị của $m$ để đường thẳng $(d)$ song song với đường thẳng $y = 2x - 1$.\nb) Với $m$ tìm được ở câu a, hãy vẽ đồ thị hàm số và tính góc tạo bởi đường thẳng đó với trục $Ox$.',
+    answer: 'a) $m = 3$; b) Góc tạo bởi đồ thị và trục $Ox$ xấp xỉ $63^\\circ 26\'$',
+    solution: 'a) Để đường thẳng $(d): y = (m - 1)x + 3$ song song với đường thẳng $y = 2x - 1$, ta phải có:\n$a = a\' \\Leftrightarrow m - 1 = 2$\nvà $b \\neq b\' \\Leftrightarrow 3 \\neq -1$ (luôn đúng).\nVậy $m = 3$ (thỏa mãn điều kiện $m \\neq 1$).\n\nb) Với $m = 3$, hàm số trở thành $y = 2x + 3$.\n- Đồ thị cắt trục $Oy$ tại điểm $A(0; 3)$.\n- Đồ thị cắt trục $Ox$ tại điểm $B\\left(-\\frac{3}{2}; 0\\right)$.\nĐường thẳng đi qua hai điểm $A$ và $B$ chính là đồ thị hàm số $y = 2x + 3$.\nGọi $\\alpha$ là góc tạo bởi đường thẳng $y = 2x + 3$ và trục $Ox$.\nTrong tam giác vuông $OAB$ vuông tại $O$, ta có:\n$\\tan \\alpha = \\frac{OA}{OB} = \\frac{3}{|-1{,}5|} = 2$.\nSuy ra $\\alpha \\approx 63^\\circ 26\'$.',
+    grade: 8, topic: 'ham_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hàm số bậc nhất', 'đường thẳng song song', 'hệ số góc'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T20:30:00Z', updated_at: '2024-12-31T20:30:00Z',
+  },
+  {
+    id: 'kntt-8-pt-02', question_code: 'BT103', content: 'Giải bài toán bằng cách lập phương trình:\nMột ô tô đi từ A đến B với vận tốc $40$ km/h. Khi từ B trở về A, ô tô đó đi với vận tốc $50$ km/h nên thời gian về ít hơn thời gian đi là $30$ phút. Tính quãng đường AB.',
+    answer: '$100$ km',
+    solution: 'Đổi $30$ phút = $0{,}5$ giờ.\nGọi độ dài quãng đường AB là $x$ (km) ($x > 0$).\nThời gian ô tô đi từ A đến B với vận tốc $40$ km/h là: $\\frac{x}{40}$ (giờ).\nThời gian ô tô đi từ B về A với vận tốc $50$ km/h là: $\\frac{x}{50}$ (giờ).\n\nVì thời gian về ít hơn thời gian đi là $0{,}5$ giờ nên ta có phương trình:\n$\\frac{x}{40} - \\frac{x}{50} = 0{,}5$\n$\\Leftrightarrow \\frac{5x}{200} - \\frac{4x}{200} = \\frac{100}{200}$\n$\\Leftrightarrow 5x - 4x = 100$\n$\\Leftrightarrow x = 100$ (thỏa mãn điều kiện $x > 0$).\n\nVậy quãng đường AB dài $100$ km.',
+    grade: 8, topic: 'phuong_trinh', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['giải bài toán bằng cách lập phương trình', 'toán chuyển động'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T20:45:00Z', updated_at: '2024-12-31T20:45:00Z',
+  },
+  {
+    id: 'kntt-8-hh-04', question_code: 'BT104', content: 'Kim tự tháp Khufu (Cheops) ở Ai Cập là một trong bảy kỳ quan của thế giới cổ đại. Nó có dạng hình chóp tứ giác đều với đáy là hình vuông. Biết cạnh đáy của kim tự tháp dài khoảng $230$ mét, và chiều cao ban đầu của nó (từ đỉnh hạ vuông góc xuống tâm mặt đáy) là khoảng $146$ mét.\n\na) Hãy tính thể tích không gian bên trong của Kim tự tháp.\nb) Giả sử các nhà khảo cổ muốn phủ một lớp bạt bảo vệ toàn bộ $4$ mặt bên của Kim tự tháp. Hãy tính diện tích lớp bạt tối thiểu cần dùng (bỏ qua các mép gấp).',
+    answer: 'a) Thể tích $\\approx 2\\,574\\,466{,}67 \\text{ m}^3$; b) Diện tích xung quanh $\\approx 85\\,744 \\text{ m}^2$',
+    solution: 'a) Tính thể tích Kim tự tháp:\nĐáy là hình vuông có cạnh $a = 230$m. Diện tích mặt đáy là:\n$S_d = 230^2 = 52\\,900$ ($\\text{m}^2$).\nThể tích khối chóp tứ giác đều là:\n$V = \\frac{1}{3} S_d \\cdot h = \\frac{1}{3} \\cdot 52\\,900 \\cdot 146 = 2\\,574\\,466{,}67$ ($\\text{m}^3$).\n\nb) Tính diện tích xung quanh (diện tích 4 mặt bên):\nGọi $h_d$ là trung đoạn của hình chóp (chiều cao của một mặt bên).\nKhoảng cách từ tâm đáy đến một cạnh đáy là $\\frac{a}{2} = \\frac{230}{2} = 115$ (m).\nÁp dụng định lý Pythagore trong tam giác vuông tạo bởi đường cao hình chóp, khoảng cách từ tâm đến cạnh đáy và trung đoạn:\n$h_d^2 = h^2 + \\left(\\frac{a}{2}\\right)^2 = 146^2 + 115^2 = 21\\,316 + 13\\,225 = 34\\,541$.\n$\\Rightarrow h_d = \\sqrt{34\\,541} \\approx 185{,}85$ (m).\n\nChu vi đáy là $p = 4 \\cdot 230 = 920$ (m). Nửa chu vi đáy $p\' = 460$ (m).\nDiện tích xung quanh là:\n$S_{xq} = p\' \\cdot h_d = 460 \\cdot 185{,}85 \\approx 85\\,491$ ($\\text{m}^2$).\n*(Nếu dùng nguyên số căn thì $S_{xq} = 460 \\cdot \\sqrt{34541} \\approx 85\\,487{,}6$ $\\text{m}^2$).*\nVậy diện tích bạt tối thiểu cần chuẩn bị là khoảng $85\\,488$ $\\text{m}^2$.',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['hình chóp tứ giác đều', 'thể tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T21:00:00Z', updated_at: '2024-12-31T21:00:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
