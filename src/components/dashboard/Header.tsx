@@ -39,11 +39,13 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
         setShowSearch(true);
+        setTimeout(() => document.getElementById("header-search-input")?.focus(), 10);
       }
       if (e.key === "Escape") {
         setShowSearch(false);
         setShowUserMenu(false);
         setShowNotifications(false);
+        document.getElementById("header-search-input")?.blur();
       }
     };
     document.addEventListener("keydown", handleKeyDown);
@@ -164,19 +166,69 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
         </div>
 
         <div className="flex items-center gap-3">
-          {/* Search trigger */}
-          <button
-            onClick={() => setShowSearch(true)}
-            className="relative hidden md:flex items-center gap-2 w-64 pl-9 pr-4 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 hover:bg-white hover:border-slate-300 text-slate-400 cursor-pointer transition-all"
-          >
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
-            Tìm kiếm...
-            <kbd className="ml-auto px-1.5 py-0.5 text-[10px] font-medium bg-slate-200 text-slate-500 rounded">Ctrl+K</kbd>
-          </button>
+          {/* Inline Search */}
+          <div className="relative hidden md:block" ref={searchRef}>
+            <div className="relative flex items-center">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+              <input
+                id="header-search-input"
+                type="text"
+                value={searchQuery}
+                onChange={e => {
+                  setSearchQuery(e.target.value);
+                  setShowSearch(true);
+                }}
+                onFocus={() => setShowSearch(true)}
+                placeholder="Tìm kiếm..."
+                className="w-64 lg:w-80 pl-9 pr-12 py-2 border border-slate-200 rounded-lg text-sm bg-slate-50 hover:bg-white focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+              />
+              {!searchQuery && (
+                <kbd className="absolute right-2 top-1/2 -translate-y-1/2 px-1.5 py-0.5 text-[10px] font-medium bg-slate-200 text-slate-500 rounded pointer-events-none">Ctrl+K</kbd>
+              )}
+              {searchQuery && (
+                <button 
+                  onClick={() => { setSearchQuery(""); setShowSearch(false); }}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-md hover:bg-slate-100 text-slate-400"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            {/* Search Dropdown */}
+            {showSearch && searchQuery && (
+              <div className="absolute top-full left-0 mt-2 w-full bg-white rounded-xl border border-slate-200 shadow-lg overflow-hidden animate-fade-in z-50">
+                {searchResults.length > 0 ? (
+                  <div className="max-h-80 overflow-y-auto py-2">
+                    {searchResults.map((r, i) => (
+                      <Link
+                        key={i}
+                        href={r.href}
+                        onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors"
+                      >
+                        {r.type === "bài tập" ? <BookOpen className="w-4 h-4 text-blue-500 flex-shrink-0" /> :
+                         r.type === "đề thi" ? <FileText className="w-4 h-4 text-indigo-500 flex-shrink-0" /> :
+                         <Search className="w-4 h-4 text-slate-400 flex-shrink-0" />}
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm text-slate-700 truncate">{r.title}</p>
+                          <p className="text-xs text-slate-400 capitalize">{r.type}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="p-4 text-center">
+                    <p className="text-sm text-slate-400">Không tìm thấy kết quả cho &ldquo;{searchQuery}&rdquo;</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
 
           {/* Mobile search */}
           <button
-            onClick={() => setShowSearch(true)}
+            onClick={() => { setShowSearch(true); setTimeout(() => document.getElementById("header-search-input")?.focus(), 10); }}
             className="md:hidden w-9 h-9 rounded-lg border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors"
           >
             <Search className="w-4 h-4 text-slate-500" />
@@ -295,53 +347,48 @@ export function Header({ title, subtitle, actions }: HeaderProps) {
         </div>
       </header>
 
-      {/* Search modal */}
+      {/* Mobile Search Modal (simplified) */}
       {showSearch && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-[15vh]">
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setShowSearch(false)} />
-          <div ref={searchRef} className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden animate-fade-in">
-            <div className="flex items-center gap-3 px-4 py-3 border-b border-slate-100">
-              <Search className="w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                autoFocus
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                placeholder="Tìm bài tập, đề thi, hoặc trang..."
-                className="flex-1 text-sm outline-none placeholder:text-slate-400"
-              />
-              <button onClick={() => setShowSearch(false)} className="p-1 rounded-lg hover:bg-slate-100">
-                <X className="w-4 h-4 text-slate-400" />
-              </button>
-            </div>
-
-            {searchResults.length > 0 ? (
-              <div className="max-h-80 overflow-y-auto py-2">
+        <div className="md:hidden fixed inset-0 z-50 flex flex-col bg-slate-50 animate-fade-in">
+          <div className="flex items-center gap-3 px-4 py-3 bg-white border-b border-slate-200">
+            <Search className="w-5 h-5 text-slate-400" />
+            <input
+              id="mobile-search-input"
+              type="text"
+              autoFocus
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              placeholder="Tìm bài tập, đề thi..."
+              className="flex-1 text-base outline-none bg-transparent"
+            />
+            <button onClick={() => setShowSearch(false)} className="p-2 rounded-full hover:bg-slate-100">
+              <X className="w-5 h-5 text-slate-400" />
+            </button>
+          </div>
+          <div className="flex-1 overflow-y-auto">
+            {searchQuery && searchResults.length > 0 ? (
+              <div className="bg-white">
                 {searchResults.map((r, i) => (
                   <Link
                     key={i}
                     href={r.href}
                     onClick={() => { setShowSearch(false); setSearchQuery(""); }}
-                    className="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 border-b border-slate-50 hover:bg-slate-50 transition-colors"
                   >
-                    {r.type === "bài tập" ? <BookOpen className="w-4 h-4 text-blue-500 flex-shrink-0" /> :
-                     r.type === "đề thi" ? <FileText className="w-4 h-4 text-indigo-500 flex-shrink-0" /> :
-                     <Search className="w-4 h-4 text-slate-400 flex-shrink-0" />}
+                    {r.type === "bài tập" ? <BookOpen className="w-5 h-5 text-blue-500 flex-shrink-0" /> :
+                     r.type === "đề thi" ? <FileText className="w-5 h-5 text-indigo-500 flex-shrink-0" /> :
+                     <Search className="w-5 h-5 text-slate-400 flex-shrink-0" />}
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm text-slate-700 truncate">{r.title}</p>
-                      <p className="text-xs text-slate-400 capitalize">{r.type}</p>
+                      <p className="text-sm font-medium text-slate-700 truncate">{r.title}</p>
+                      <p className="text-xs text-slate-400 capitalize mt-0.5">{r.type}</p>
                     </div>
                   </Link>
                 ))}
               </div>
             ) : searchQuery ? (
-              <div className="p-8 text-center">
-                <p className="text-sm text-slate-400">Không tìm thấy kết quả cho &ldquo;{searchQuery}&rdquo;</p>
-              </div>
+              <div className="p-8 text-center text-slate-400 text-sm">Không tìm thấy kết quả cho &ldquo;{searchQuery}&rdquo;</div>
             ) : (
-              <div className="p-6 text-center">
-                <p className="text-sm text-slate-400">Nhập để tìm kiếm bài tập, đề thi, hoặc trang</p>
-              </div>
+              <div className="p-8 text-center text-slate-400 text-sm">Nhập để tìm kiếm</div>
             )}
           </div>
         </div>
