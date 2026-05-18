@@ -330,7 +330,7 @@ export const TOPICS_BY_GRADE: Record<Grade, Topic[]> = {
   4: ['so_hoc', 'phan_so', 'do_luong', 'hinh_hoc', 'thong_ke', 'khac'],
   5: ['so_hoc', 'phan_so', 'so_thap_phan', 'ti_so_phan_tram', 'do_luong', 'ti_le', 'chuyen_dong', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'khac'],
   6: ['so_hoc', 'phan_so', 'so_thap_phan', 'ti_so_phan_tram', 'hinh_hoc', 'hinh_khong_gian', 'bieu_thuc', 'thong_ke', 'xac_suat', 'khac'],
-  7: ['so_hoc', 'ti_le', 'bieu_thuc', 'da_thuc', 'tam_giac', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
+  7: ['so_hoc', 'phan_so', 'so_thap_phan', 'can_thuc', 'ti_le', 'bieu_thuc', 'da_thuc', 'tam_giac', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
   8: ['da_thuc', 'phuong_trinh', 'bieu_thuc', 'ham_so', 'tam_giac', 'hinh_hoc', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
   9: ['can_thuc', 'phuong_trinh', 'he_phuong_trinh', 'bat_phuong_trinh', 'ham_so', 'luong_giac', 'tam_giac', 'da_giac_deu', 'duong_tron', 'phep_bien_hinh', 'hinh_khong_gian', 'thong_ke', 'xac_suat', 'khac'],
 };
