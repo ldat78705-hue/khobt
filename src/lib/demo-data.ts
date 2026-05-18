@@ -438,6 +438,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tỉ lệ thuận'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-10-12T08:00:00Z', updated_at: '2024-10-12T08:00:00Z',
   },
+  // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
+  {
+    id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
+    answer: '$\\frac{-12}{7}$',
+    solution: 'Nhóm các số hạng có cùng mẫu số:\n$A = \\left( \\frac{5}{13} + \\frac{8}{13} \\right) + \\left( \\frac{-20}{41} + \\frac{-21}{41} \\right) + \\left( -\\frac{5}{7} \\right)$\n$A = \\frac{13}{13} + \\frac{-41}{41} + \\left( -\\frac{5}{7} \\right)$\n$A = 1 + (-1) - \\frac{5}{7}$\n$A = -\\frac{5}{7}$',
+    grade: 7, topic: 'so_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['số hữu tỉ', 'cộng trừ số hữu tỉ', 'kết nối tri thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-24T08:00:00Z', updated_at: '2024-12-24T08:00:00Z',
+  },
+  {
+    id: 'kntt-7-bai09-01', question_code: 'BT057', content: 'Cho hình vẽ biết $xx\' \\parallel yy\'$ và đường thẳng $c$ cắt $xx\', yy\'$ lần lượt tại $A$ và $B$. Biết góc $\\widehat{xAB} = 110°$. Tính số đo góc đồng vị và góc so le trong của $\\widehat{xAB}$ tại đỉnh $B$.',
+    answer: 'Góc đồng vị = $110°$; Góc so le trong = $110°$',
+    solution: 'Vì $xx\' \\parallel yy\'$ nên các góc đồng vị bằng nhau, các góc so le trong bằng nhau.\n- Góc đồng vị với $\\widehat{xAB}$ là $\\widehat{yBC\'} = 110°$ (với $C\'$ thuộc đường thẳng $c$).\n- Góc so le trong với $\\widehat{xAB}$ là $\\widehat{ABy\'} = 110°$.\n(Học sinh tự vẽ hình minh họa và điền tên tia để xác định chính xác góc)',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['hai đường thẳng song song', 'góc đồng vị', 'góc so le trong'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-25T08:00:00Z', updated_at: '2024-12-25T08:00:00Z',
+  },
+  {
+    id: 'kntt-7-bai25-01', question_code: 'BT058', content: 'Cho hai đa thức một biến:\n$P(x) = 3x^3 - 4x^2 + 5x - 2$\n$Q(x) = -3x^3 + 2x^2 - x + 5$\n\na) Tính $A(x) = P(x) + Q(x)$.\nb) Tìm bậc của đa thức $A(x)$.\nc) Tính giá trị của $A(x)$ tại $x = -1$.',
+    answer: 'a) $A(x) = -2x^2 + 4x + 3$; b) Bậc 2; c) $A(-1) = -3$',
+    solution: 'a) $A(x) = (3x^3 - 3x^3) + (-4x^2 + 2x^2) + (5x - x) + (-2 + 5)$\n$A(x) = -2x^2 + 4x + 3$\n\nb) Đa thức $A(x)$ có hạng tử bậc cao nhất là $-2x^2$ nên bậc của đa thức là $2$.\n\nc) Thay $x = -1$ vào $A(x)$:\n$A(-1) = -2(-1)^2 + 4(-1) + 3 = -2 - 4 + 3 = -3$.',
+    grade: 7, topic: 'da_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['đa thức một biến', 'cộng trừ đa thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-26T08:00:00Z', updated_at: '2024-12-26T08:00:00Z',
+  },
   // === LỚP 8 ===
   {
     id: 'q13', question_code: 'BT013', content: 'Phân tích đa thức thành nhân tử:\n\na) $x^2 - 4x + 4$\nb) $x^3 - 8$\nc) $x^2 + 2xy + y^2 - 9$',
@@ -469,6 +494,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     correct_answer: 'D', answer: 'D', grade: 8, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'trac_nghiem',
     tags: ['tứ giác đặc biệt'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-10-16T08:00:00Z', updated_at: '2024-10-16T08:00:00Z',
+  },
+  // === TOÁN LỚP 8 - SGK KẾT NỐI TRI THỨC ===
+  {
+    id: 'kntt-8-bai15-01', question_code: 'BT059', content: 'Lúc 7 giờ sáng, một xe máy đi từ A đến B với vận tốc $40$ km/h. Sau đó 30 phút, một ô tô cũng xuất phát từ A đuổi theo xe máy với vận tốc $60$ km/h. Hỏi ô tô đuổi kịp xe máy lúc mấy giờ?',
+    answer: 'Lúc 8 giờ 30 phút',
+    solution: 'Đổi 30 phút = $\\frac{1}{2}$ giờ.\nGọi thời gian từ lúc ô tô xuất phát đến khi đuổi kịp xe máy là $x$ (giờ, $x > 0$).\nQuãng đường ô tô đi được là: $60x$ (km).\nThời gian xe máy đi cho đến khi bị đuổi kịp là: $x + \\frac{1}{2}$ (giờ).\nQuãng đường xe máy đi được là: $40\\left(x + \\frac{1}{2}\\right)$ (km).\nVì ô tô đuổi kịp xe máy nên hai xe đi được quãng đường bằng nhau:\n$60x = 40\\left(x + \\frac{1}{2}\\right)$\n$60x = 40x + 20 \\Rightarrow 20x = 20 \\Rightarrow x = 1$ (thỏa mãn).\nVậy ô tô đuổi kịp xe máy sau 1 giờ kể từ lúc ô tô xuất phát (tức là $7h30 + 1h = 8h30$).',
+    grade: 8, topic: 'phuong_trinh', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['giải toán bằng cách lập phương trình', 'toán chuyển động'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-27T08:00:00Z', updated_at: '2024-12-27T08:00:00Z',
+  },
+  {
+    id: 'kntt-8-bai20-01', question_code: 'BT060', content: 'Cho tam giác $ABC$ có trung tuyến $AM$. Gọi $I$ là trung điểm của $AM$, $D$ là giao điểm của $BI$ và $AC$. Tính tỉ số $\\frac{AD}{DC}$.',
+    answer: '$\\frac{AD}{DC} = \\frac{1}{2}$',
+    solution: 'Kẻ $ME \\parallel BD$ ($E \\in AC$).\nTrong $\\triangle BEC$ có $M$ là trung điểm của $BC$ và $ME \\parallel BD \\Rightarrow E$ là trung điểm của $DC$ $\\Rightarrow DE = EC$.\nTrong $\\triangle AME$ có $I$ là trung điểm của $AM$ và $ID \\parallel ME$ (vì $D \\in BI$) $\\Rightarrow D$ là trung điểm của $AE$ $\\Rightarrow AD = DE$.\nDo đó: $AD = DE = EC$.\nVậy $DC = DE + EC = 2AD$, suy ra $\\frac{AD}{DC} = \\frac{1}{2}$.',
+    grade: 8, topic: 'tam_giac', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['đường trung bình', 'tam giác', 'định lí thalès'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-28T08:00:00Z', updated_at: '2024-12-28T08:00:00Z',
+  },
+  {
+    id: 'kntt-8-bai33-01', question_code: 'BT061', content: 'Một túi chứa $5$ viên bi đỏ, $3$ viên bi xanh và $2$ viên bi vàng (các viên bi có cùng kích thước và khối lượng). Lấy ngẫu nhiên một viên bi từ túi. Tính xác suất của biến cố: "Viên bi lấy ra KHÔNG phải là màu đỏ".',
+    answer: '$\\frac{1}{2}$',
+    solution: 'Tổng số viên bi trong túi là: $5 + 3 + 2 = 10$ (viên bi).\nSố viên bi không phải màu đỏ (xanh hoặc vàng) là: $3 + 2 = 5$ (viên bi).\nXác suất lấy được viên bi không phải màu đỏ là: $P = \\frac{5}{10} = \\frac{1}{2}$.',
+    grade: 8, topic: 'xac_suat', difficulty: 'nhan_biet', question_type: 'tu_luan',
+    tags: ['xác suất', 'biến cố đối'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-29T08:00:00Z', updated_at: '2024-12-29T08:00:00Z',
   },
   // Thêm 1 bài draft
   {
