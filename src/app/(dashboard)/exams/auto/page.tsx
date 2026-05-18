@@ -45,18 +45,17 @@ export default function AutoExamPage() {
   }, []);
 
   const toggleTopic = (catId: string) => {
-    setTopics(prev => {
-      if (prev.includes(catId)) {
-        const next = prev.filter(x => x !== catId);
-        const newRatios = { ...topicRatios };
-        delete newRatios[catId];
-        setTopicRatios(newRatios);
+    if (topics.includes(catId)) {
+      setTopics(prev => prev.filter(x => x !== catId));
+      setTopicRatios(prev => {
+        const next = { ...prev };
+        delete next[catId];
         return next;
-      } else {
-        setTopicRatios(r => ({ ...r, [catId]: 10 }));
-        return [...prev, catId];
-      }
-    });
+      });
+    } else {
+      setTopics(prev => [...prev, catId]);
+      setTopicRatios(prev => ({ ...prev, [catId]: 10 }));
+    }
   };
 
   const updateTopicRatio = (catId: string, value: number) => {
