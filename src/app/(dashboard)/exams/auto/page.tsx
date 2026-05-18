@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { Sparkles, Shuffle, Settings2, FileText, ArrowRight, BookOpen, Loader2 } from "lucide-react";
 import { GRADES, DIFFICULTIES } from "@/types";
