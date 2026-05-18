@@ -579,6 +579,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tỉ lệ thuận'], user_id: 'demo-user-001', is_public: true, status: 'approved',
     created_at: '2024-10-12T08:00:00Z', updated_at: '2024-10-12T08:00:00Z',
   },
+  // === BỔ SUNG CÁC BÀI TOÁN TỪ FILE TÀI LIỆU LỚP 7 CỦA GV ===
+  {
+    id: 'kntt-7-tl-01', question_code: 'BT081', content: 'Hai lớp 7A và 7B đi lao động trồng cây. Biết rằng tỉ số giữa số cây trồng được của lớp 7A và lớp 7B là $\\frac{4}{5}$ và lớp 7B trồng nhiều hơn lớp 7A là $20$ cây. Tính số cây mỗi lớp đã trồng.',
+    answer: 'Lớp 7A trồng $80$ cây, Lớp 7B trồng $100$ cây',
+    solution: 'Gọi số cây lớp 7A và lớp 7B trồng được lần lượt là $x$ và $y$ ($x, y \\in \\mathbb{N}^*$).\nTheo đề bài, tỉ số số cây của lớp 7A và 7B là $\\frac{4}{5}$, ta có: $\\frac{x}{y} = \\frac{4}{5} \\Rightarrow \\frac{x}{4} = \\frac{y}{5}$.\nLớp 7B trồng nhiều hơn 7A là $20$ cây, ta có: $y - x = 20$.\nÁp dụng tính chất của dãy tỉ số bằng nhau:\n$\\frac{x}{4} = \\frac{y}{5} = \\frac{y - x}{5 - 4} = \\frac{20}{1} = 20$.\nSuy ra:\n$x = 20 \\cdot 4 = 80$ (cây)\n$y = 20 \\cdot 5 = 100$ (cây)\nVậy lớp 7A trồng được $80$ cây, lớp 7B trồng được $100$ cây.',
+    grade: 7, topic: 'dai_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tỉ lệ thức', 'dãy tỉ số bằng nhau', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T14:00:00Z', updated_at: '2024-12-31T14:00:00Z',
+  },
+  {
+    id: 'kntt-7-tl-02', question_code: 'BT082', content: 'Đồng bạch là một loại hợp kim gồm niken, kẽm và đồng. Khối lượng của ba chất này trong hợp kim lần lượt tỉ lệ với các số $3; 4; 13$. Hỏi cần bao nhiêu kilôgam niken, kẽm và đồng để sản xuất được $150$kg đồng bạch?',
+    answer: 'Niken: $22{,}5$kg; Kẽm: $30$kg; Đồng: $97{,}5$kg',
+    solution: 'Gọi khối lượng niken, kẽm, đồng cần dùng lần lượt là $x, y, z$ (kg) ($x, y, z > 0$).\nVì khối lượng của ba chất lần lượt tỉ lệ với $3; 4; 13$ nên ta có:\n$\\frac{x}{3} = \\frac{y}{4} = \\frac{z}{13}$.\nTổng khối lượng hợp kim là $150$kg, do đó $x + y + z = 150$.\nÁp dụng tính chất của dãy tỉ số bằng nhau:\n$\\frac{x}{3} = \\frac{y}{4} = \\frac{z}{13} = \\frac{x + y + z}{3 + 4 + 13} = \\frac{150}{20} = 7{,}5$.\nSuy ra:\n$x = 7{,}5 \\cdot 3 = 22{,}5$ (kg)\n$y = 7{,}5 \\cdot 4 = 30$ (kg)\n$z = 7{,}5 \\cdot 13 = 97{,}5$ (kg)\nVậy cần $22{,}5$kg niken, $30$kg kẽm và $97{,}5$kg đồng.',
+    grade: 7, topic: 'dai_so', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['đại lượng tỉ lệ thuận', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T14:15:00Z', updated_at: '2024-12-31T14:15:00Z',
+  },
+  {
+    id: 'kntt-7-tl-03', question_code: 'BT083', content: 'Cho tam giác $ABC$ có số đo các góc $\\widehat{A}, \\widehat{B}, \\widehat{C}$ lần lượt tỉ lệ với $1; 2; 3$. Tính số đo các góc của tam giác $ABC$.',
+    answer: '$\\widehat{A} = 30^\\circ$, $\\widehat{B} = 60^\\circ$, $\\widehat{C} = 90^\\circ$',
+    solution: 'Gọi số đo các góc $\\widehat{A}, \\widehat{B}, \\widehat{C}$ của tam giác $ABC$ lần lượt là $A, B, C$ (độ) ($A, B, C > 0$).\nVì số đo các góc tỉ lệ với $1; 2; 3$ nên ta có:\n$\\frac{A}{1} = \\frac{B}{2} = \\frac{C}{3}$.\nTheo định lý tổng ba góc của một tam giác, ta có: $A + B + C = 180^\\circ$.\nÁp dụng tính chất của dãy tỉ số bằng nhau:\n$\\frac{A}{1} = \\frac{B}{2} = \\frac{C}{3} = \\frac{A + B + C}{1 + 2 + 3} = \\frac{180^\\circ}{6} = 30^\\circ$.\nSuy ra:\n$A = 30^\\circ \\cdot 1 = 30^\\circ$\n$B = 30^\\circ \\cdot 2 = 60^\\circ$\n$C = 30^\\circ \\cdot 3 = 90^\\circ$\nVậy tam giác $ABC$ là tam giác vuông tại $C$, với các góc là $30^\\circ, 60^\\circ, 90^\\circ$.',
+    grade: 7, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tỉ lệ thức', 'góc trong tam giác', 'hình học'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
+    created_at: '2024-12-31T14:30:00Z', updated_at: '2024-12-31T14:30:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
