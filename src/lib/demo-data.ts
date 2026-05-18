@@ -702,6 +702,56 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['đường trung trực', 'định lý pythagore', 'tam giác vuông'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-7',
     created_at: '2024-12-31T18:30:00Z', updated_at: '2024-12-31T18:30:00Z',
   },
+  // === BÀI TẬP TOÁN LỚP 8 - HẰNG ĐẲNG THỨC & ĐA THỨC (BIÊN SOẠN CHUYÊN GIA) ===
+  {
+    id: 'kntt-8-hdt-01', question_code: 'BT096', content: 'Rút gọn rồi tính giá trị của biểu thức sau tại $x = 99$:\n$A = (x + 1)(x^2 - x + 1) - (x - 1)(x^2 + x + 1)$',
+    answer: '$A = 2$ (Giá trị biểu thức không phụ thuộc vào $x$)',
+    solution: 'Áp dụng hằng đẳng thức tổng hai lập phương và hiệu hai lập phương:\n$(x + 1)(x^2 - x + 1) = x^3 + 1^3 = x^3 + 1$\n$(x - 1)(x^2 + x + 1) = x^3 - 1^3 = x^3 - 1$\n\nThay vào biểu thức $A$, ta có:\n$A = (x^3 + 1) - (x^3 - 1)$\n$A = x^3 + 1 - x^3 + 1$\n$A = 2$\n\nVì sau khi rút gọn, $A = 2$ là một hằng số không chứa biến $x$, nên tại $x = 99$, giá trị của biểu thức $A$ vẫn bằng $2$.',
+    grade: 8, topic: 'da_thuc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hằng đẳng thức', 'rút gọn biểu thức', 'đa thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T19:00:00Z', updated_at: '2024-12-31T19:00:00Z',
+  },
+  {
+    id: 'kntt-8-hdt-02', question_code: 'BT097', content: 'Chứng minh rằng biểu thức sau luôn nhận giá trị dương với mọi số thực $x$ và $y$:\n$B = x^2 + 4y^2 - 4xy + 2x - 4y + 3$',
+    answer: 'Chứng minh $B = (x - 2y + 1)^2 + 2 > 0$',
+    solution: 'Ta phân tích biểu thức $B$ thành các bình phương:\n$B = x^2 + 4y^2 - 4xy + 2x - 4y + 3$\nNhóm các hạng tử có liên quan:\n$B = (x^2 - 4xy + 4y^2) + (2x - 4y) + 3$\n$B = (x - 2y)^2 + 2(x - 2y) + 3$\nTiếp tục tách số $3$ thành $1 + 2$ để tạo hằng đẳng thức:\n$B = \\left[ (x - 2y)^2 + 2(x - 2y) \\cdot 1 + 1^2 \\right] + 2$\n$B = (x - 2y + 1)^2 + 2$\n\nTa có: $(x - 2y + 1)^2 \\ge 0$ với mọi $x, y \\in \\mathbb{R}$.\nSuy ra: $(x - 2y + 1)^2 + 2 \\ge 2 > 0$ với mọi $x, y \\in \\mathbb{R}$.\nVậy biểu thức $B$ luôn nhận giá trị dương.',
+    grade: 8, topic: 'da_thuc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['hằng đẳng thức', 'chứng minh bất đẳng thức', 'đa thức'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T19:15:00Z', updated_at: '2024-12-31T19:15:00Z',
+  },
+  {
+    id: 'kntt-8-pt-01', question_code: 'BT098', content: 'Cho phân thức đại số:\n$P = \\frac{x^2 - 4}{x^2 + 2x}$\n\na) Tìm điều kiện xác định của phân thức $P$.\nb) Rút gọn phân thức $P$.\nc) Tìm giá trị nguyên của $x$ để $P$ nhận giá trị nguyên.',
+    answer: 'a) $x \\neq 0$ và $x \\neq -2$; b) $P = \\frac{x - 2}{x}$; c) $x \\in \\{-1; 1; 2\\}$',
+    solution: 'a) Điều kiện xác định:\nMẫu thức $x^2 + 2x \\neq 0 \\Leftrightarrow x(x + 2) \\neq 0$\n$\\Leftrightarrow x \\neq 0$ và $x + 2 \\neq 0 \\Leftrightarrow x \\neq 0$ và $x \\neq -2$.\nVậy ĐKXĐ: $x \\neq 0$ và $x \\neq -2$.\n\nb) Rút gọn:\n$P = \\frac{x^2 - 4}{x^2 + 2x} = \\frac{x^2 - 2^2}{x(x + 2)} = \\frac{(x - 2)(x + 2)}{x(x + 2)} = \\frac{x - 2}{x}$.\n\nc) Tìm $x \\in \\mathbb{Z}$ để $P \\in \\mathbb{Z}$:\nTa có $P = \\frac{x - 2}{x} = \\frac{x}{x} - \\frac{2}{x} = 1 - \\frac{2}{x}$.\nĐể $P$ nhận giá trị nguyên thì $\\frac{2}{x}$ phải là số nguyên, tức là $x$ phải là ước của $2$.\nƯớc của $2$ là: $\\text{Ư}(2) = \\{-2; -1; 1; 2\\}$.\nĐối chiếu với điều kiện xác định ($x \\neq 0$ và $x \\neq -2$), ta loại giá trị $x = -2$.\nVậy $x \\in \\{-1; 1; 2\\}$ thì $P$ nhận giá trị nguyên.',
+    grade: 8, topic: 'bieu_thuc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['phân thức đại số', 'rút gọn', 'giá trị nguyên'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T19:30:00Z', updated_at: '2024-12-31T19:30:00Z',
+  },
+  // === BÀI TẬP HÌNH HỌC LỚP 8 - TỨ GIÁC & ĐỊNH LÝ THALÈS (BIÊN SOẠN CHUYÊN GIA) ===
+  {
+    id: 'kntt-8-hh-01', question_code: 'BT099', content: 'Cho hình bình hành $ABCD$. Gọi $E, F$ lần lượt là trung điểm của các cạnh $AB$ và $CD$. Chứng minh rằng tứ giác $DEBF$ là hình bình hành.',
+    answer: 'Chứng minh dựa vào dấu hiệu cặp cạnh đối song song và bằng nhau',
+    solution: 'Vì $ABCD$ là hình bình hành nên ta có:\n$AB \\parallel CD$ và $AB = CD$.\n\nVì $E$ là trung điểm của $AB$ nên $EB = \\frac{1}{2}AB$.\nVì $F$ là trung điểm của $CD$ nên $DF = \\frac{1}{2}CD$.\nMà $AB = CD$ (chứng minh trên), suy ra $EB = DF$.\n\nMặt khác, vì $AB \\parallel CD$ (do $ABCD$ là hình bình hành) nên $EB \\parallel DF$.\n\nXét tứ giác $DEBF$, ta có:\n$EB \\parallel DF$ (chứng minh trên)\n$EB = DF$ (chứng minh trên)\nVậy tứ giác $DEBF$ là hình bình hành (theo dấu hiệu nhận biết tứ giác có một cặp cạnh đối vừa song song vừa bằng nhau).',
+    grade: 8, topic: 'hinh_hoc', difficulty: 'thong_hieu', question_type: 'tu_luan',
+    tags: ['hình bình hành', 'tứ giác', 'chứng minh'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T19:45:00Z', updated_at: '2024-12-31T19:45:00Z',
+  },
+  {
+    id: 'kntt-8-hh-02', question_code: 'BT100', content: 'Cho tam giác $ABC$ có cạnh $AB = 6$cm, $AC = 9$cm. Trên cạnh $AB$ lấy điểm $M$ sao cho $AM = 2$cm, trên cạnh $AC$ lấy điểm $N$ sao cho $AN = 3$cm.\n\na) Chứng minh rằng $MN \\parallel BC$.\nb) Tính độ dài đoạn thẳng $MN$, biết $BC = 12$cm.',
+    answer: 'a) Sử dụng định lý Thalès đảo; b) $MN = 4$cm',
+    solution: 'a) Xét tỉ số các đoạn thẳng trên hai cạnh $AB$ và $AC$:\nTa có: $\\frac{AM}{AB} = \\frac{2}{6} = \\frac{1}{3}$.\nVà $\\frac{AN}{AC} = \\frac{3}{9} = \\frac{1}{3}$.\nSuy ra: $\\frac{AM}{AB} = \\frac{AN}{AC}$.\nTheo định lý Thalès đảo trong tam giác $ABC$, ta kết luận $MN \\parallel BC$.\n\nb) Vì $MN \\parallel BC$ nên theo hệ quả của định lý Thalès, ta có:\n$\\frac{MN}{BC} = \\frac{AM}{AB}$\n$\\Rightarrow \\frac{MN}{12} = \\frac{1}{3}$\n$\\Rightarrow MN = 12 \\cdot \\frac{1}{3} = 4$ (cm).\nVậy độ dài đoạn thẳng $MN$ là $4$cm.',
+    grade: 8, topic: 'tam_giac', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['định lý thalès', 'đoạn thẳng tỉ lệ', 'tam giác'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T20:00:00Z', updated_at: '2024-12-31T20:00:00Z',
+  },
+  {
+    id: 'kntt-8-hh-03', question_code: 'BT101', content: 'Để đo khoảng cách từ điểm $A$ đến điểm $B$ bên kia bờ sông (không thể đo trực tiếp), người ta xác định điểm $C$ trên bờ cùng phía với $A$ sao cho $AC = 10$m. Kẻ $CH \\perp AB$ tại $H$. Người ta đo được $AH = 6$m. Biết rằng góc $\\widehat{ACB} = 90^\\circ$. Hãy tính khoảng cách $AB$ qua sông.',
+    answer: 'Khoảng cách $AB$ là $\\frac{50}{3}$ m (khoảng $16{,}67$ m)',
+    solution: 'Xét tam giác $AHC$ vuông tại $H$, áp dụng định lý Pythagore ta tính được $CH$:\n$CH^2 = AC^2 - AH^2 = 10^2 - 6^2 = 100 - 36 = 64$\nSuy ra $CH = 8$ (m).\n\nXét $\\triangle AHC$ vuông tại $H$ và $\\triangle ACB$ vuông tại $C$, ta có:\n$\\widehat{A}$ là góc chung.\nDo đó, $\\triangle AHC \\sim \\triangle ACB$ (g.g).\nTừ sự đồng dạng này, ta thiết lập tỉ số đồng dạng:\n$\\frac{AH}{AC} = \\frac{AC}{AB}$\n$\\Rightarrow AB = \\frac{AC^2}{AH} = \\frac{10^2}{6} = \\frac{100}{6} = \\frac{50}{3}$ (m).\n\nVậy khoảng cách $AB$ qua sông là $\\frac{50}{3}$ mét (xấp xỉ $16{,}67$ m).',
+    grade: 8, topic: 'tam_giac', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['tam giác đồng dạng', 'toán thực tế', 'định lý pythagore'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-8',
+    created_at: '2024-12-31T20:15:00Z', updated_at: '2024-12-31T20:15:00Z',
+  },
   // === TOÁN LỚP 7 - SGK KẾT NỐI TRI THỨC ===
   {
     id: 'kntt-7-bai02-01', question_code: 'BT056', content: 'Thực hiện phép tính (tính hợp lý nếu có thể):\n$A = \\frac{5}{13} + \\left( -\\frac{5}{7} \\right) + \\frac{-20}{41} + \\frac{8}{13} + \\frac{-21}{41}$',
