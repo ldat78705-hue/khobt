@@ -494,6 +494,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['tâm đối xứng', 'hình thoi', 'diện tích'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
     created_at: '2024-12-31T12:00:00Z', updated_at: '2024-12-31T12:00:00Z',
   },
+  // === BỔ SUNG BÀI TẬP RÈN LUYỆN (TỰ SINH TƯƠNG TỰ TÀI LIỆU) ===
+  {
+    id: 'kntt-6-dhch-01', question_code: 'BT078', content: 'Tìm các chữ số $x, y$ để số $\\overline{5x7y}$ đồng thời chia hết cho $2, 3, 5$ và $9$.',
+    answer: '$x = 6; y = 0$',
+    solution: 'Để số $\\overline{5x7y}$ chia hết cho cả $2$ và $5$ thì chữ số tận cùng $y$ bắt buộc phải bằng $0$.\nThay $y = 0$, ta được số $\\overline{5x70}$.\nĐể số $\\overline{5x70}$ chia hết cho $9$ (khi đó sẽ chia hết cho $3$) thì tổng các chữ số phải chia hết cho $9$.\nTa có: $(5 + x + 7 + 0)$ $\\vdots$ $9 \\Rightarrow (12 + x)$ $\\vdots$ $9$.\nVì $x$ là chữ số nên $0 \\le x \\le 9 \\Rightarrow 12 \\le 12 + x \\le 21$.\nTrong khoảng từ $12$ đến $21$, chỉ có số $18$ là chia hết cho $9$.\nSuy ra: $12 + x = 18 \\Rightarrow x = 6$.\nVậy $x = 6; y = 0$, ta được số $5670$.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['dấu hiệu chia hết', 'tìm chữ số'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T13:00:00Z', updated_at: '2024-12-31T13:00:00Z',
+  },
+  {
+    id: 'kntt-6-hinh-04', question_code: 'BT079', content: 'Một bác nông dân có một khu vườn hình thang với đáy bé dài $20$m, đáy lớn dài gấp rưỡi đáy bé. Chiều cao của hình thang bằng độ dài đáy bé.\n\na) Tính diện tích khu vườn.\nb) Bác nông dân dự định trồng hoa hồng trên khu vườn này, biết cứ $2\\text{m}^2$ sẽ trồng được $5$ khóm hoa. Hỏi bác có thể trồng tối đa bao nhiêu khóm hoa trên khu vườn đó?',
+    answer: 'a) $500\\text{m}^2$; b) $1250$ khóm hoa',
+    solution: 'a) Độ dài đáy lớn của khu vườn hình thang là: $20 \\cdot 1{,}5 = 30$ (m).\nChiều cao của khu vườn hình thang là: $20$ (m).\nDiện tích khu vườn hình thang là:\n$S = \\frac{(20 + 30) \\cdot 20}{2} = \\frac{50 \\cdot 20}{2} = 500 \\ (\\text{m}^2)$.\n\nb) Số khóm hoa bác nông dân có thể trồng được là:\n$(500 : 2) \\cdot 5 = 250 \\cdot 5 = 1250$ (khóm hoa).',
+    grade: 6, topic: 'hinh_hoc', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['hình thang', 'diện tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
+    created_at: '2024-12-31T13:15:00Z', updated_at: '2024-12-31T13:15:00Z',
+  },
+  {
+    id: 'kntt-6-ucln-02', question_code: 'BT080', content: 'Học sinh khối 6 của một trường THCS có số lượng trong khoảng từ $300$ đến $400$ em. Trong buổi chào cờ, nếu xếp hàng $12$, hàng $15$ hoặc hàng $18$ thì đều dư $5$ em. Hỏi khối 6 của trường đó có chính xác bao nhiêu học sinh?',
+    answer: '$365$ học sinh',
+    solution: 'Gọi số học sinh khối 6 là $x$ ($x \\in \\mathbb{N}^*$, $300 \\le x \\le 400$).\nVì khi xếp hàng $12, 15, 18$ đều dư $5$ nên $(x - 5)$ sẽ chia hết cho cả $12, 15$ và $18$.\nSuy ra $(x - 5) \\in \\text{BC}(12, 15, 18)$.\nTa có:\n$12 = 2^2 \\cdot 3$\n$15 = 3 \\cdot 5$\n$18 = 2 \\cdot 3^2$\n$\\Rightarrow \\text{BCNN}(12, 15, 18) = 2^2 \\cdot 3^2 \\cdot 5 = 4 \\cdot 9 \\cdot 5 = 180$.\n$\\Rightarrow (x - 5) \\in \\{180; 360; 540; \\dots\\}$\n$\\Rightarrow x \\in \\{185; 365; 545; \\dots\\}$.\nVì $300 \\le x \\le 400$ nên $x = 365$.\nVậy khối 6 của trường đó có $365$ học sinh.',
+    grade: 6, topic: 'so_hoc', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['bội chung nhỏ nhất', 'bài toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-1',
+    created_at: '2024-12-31T13:30:00Z', updated_at: '2024-12-31T13:30:00Z',
+  },
   {
     id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
     answer: 'b) $99{,}6$g\nc) $70\\%$',
