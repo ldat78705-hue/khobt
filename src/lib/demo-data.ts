@@ -420,6 +420,31 @@ export const SAMPLE_QUESTIONS: Question[] = [
     tags: ['hình thoi', 'diện tích', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-4',
     created_at: '2024-12-31T09:30:00Z', updated_at: '2024-12-31T09:30:00Z',
   },
+  // === BỔ SUNG CÁC BÀI TOÁN PHÂN SỐ VÀ THỐNG KÊ (HỌC KÌ 2 - LỚP 6) ===
+  {
+    id: 'kntt-6-ps-01', question_code: 'BT069', content: 'Một người mang cam đi chợ bán. Người thứ nhất mua $\\frac{1}{2}$ số cam và $1$ quả. Người thứ hai mua $\\frac{1}{2}$ số cam còn lại và $1$ quả. Người thứ ba mua $\\frac{1}{2}$ số cam còn lại và $1$ quả thì vừa hết. Tính tổng số cam người đó mang đi bán.',
+    answer: '$14$ quả cam',
+    solution: 'Giải bài toán bằng phương pháp tính ngược từ cuối:\n- Sau khi người thứ hai mua, số cam còn lại là số cam người thứ ba mua. Người thứ ba mua $\\frac{1}{2}$ số cam còn lại và $1$ quả thì vừa hết. Vậy $\\frac{1}{2}$ số cam còn lại là $1$ quả $\\Rightarrow$ Trước khi người thứ ba mua, có $1 \\cdot 2 = 2$ (quả).\n- Trước khi người thứ hai mua, người này mua $\\frac{1}{2}$ số cam hiện có và $1$ quả, còn lại $2$ quả. Vậy $\\frac{1}{2}$ số cam khi đó là $2 + 1 = 3$ (quả) $\\Rightarrow$ Trước khi người thứ hai mua có $3 \\cdot 2 = 6$ (quả).\n- Người thứ nhất mua $\\frac{1}{2}$ số cam ban đầu và $1$ quả, còn lại $6$ quả. Vậy $\\frac{1}{2}$ số cam ban đầu là $6 + 1 = 7$ (quả) $\\Rightarrow$ Tổng số cam mang đi bán là $7 \\cdot 2 = 14$ (quả).',
+    grade: 6, topic: 'phan_so', difficulty: 'van_dung_cao', question_type: 'tu_luan',
+    tags: ['phân số', 'tính ngược từ cuối', 'học sinh giỏi'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-3',
+    created_at: '2024-12-31T10:00:00Z', updated_at: '2024-12-31T10:00:00Z',
+  },
+  {
+    id: 'kntt-6-ps-02', question_code: 'BT070', content: 'Trong tháng vừa rồi, mẹ bạn Trân dự định dùng $2$ triệu đồng để chi trả các khoản tiền điện, tiền nước và truyền hình cáp. Biết tiền điện chiếm $70\\%$ tổng số tiền, tiền nước chiếm $\\frac{1}{3}$ số tiền còn lại.\n\na) Tính số tiền điện và tiền nước mẹ Trân phải trả.\nb) Với tổng số tiền dự định ban đầu, mẹ bạn Trân có đủ trả tiền truyền hình cáp là $100\\,000$ đồng không? Vì sao?',
+    answer: 'a) Tiền điện: $1\\,400\\,000$đ; Tiền nước: $200\\,000$đ. b) Đủ trả, vì còn dư $400\\,000$đ.',
+    solution: 'a) Số tiền điện phải trả là:\n$2\\,000\\,000 \\cdot 70\\% = 1\\,400\\,000$ (đồng).\nSố tiền còn lại sau khi trả tiền điện là:\n$2\\,000\\,000 - 1\\,400\\,000 = 600\\,000$ (đồng).\nSố tiền nước phải trả là:\n$600\\,000 \\cdot \\frac{1}{3} = 200\\,000$ (đồng).\n\nb) Tổng số tiền mẹ Trân còn lại sau khi trả tiền điện và nước là:\n$600\\,000 - 200\\,000 = 400\\,000$ (đồng).\nVì $400\\,000$ đồng $> 100\\,000$ đồng, nên mẹ bạn Trân hoàn toàn đủ tiền để trả cước truyền hình cáp.',
+    grade: 6, topic: 'phan_so', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['tỉ số phần trăm', 'phân số', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-3',
+    created_at: '2024-12-31T10:15:00Z', updated_at: '2024-12-31T10:15:00Z',
+  },
+  {
+    id: 'kntt-6-tk-01', question_code: 'BT071', content: '[Cần chèn hình vẽ tại đây]\n\nĐọc biểu đồ cột kép diễn tả số lượng Điện thoại và Tivi của một cửa hàng bán được trong 5 tháng đầu năm (tháng 1, 2, 3, 4, 5). Biết rằng tổng số điện thoại bán được trong 5 tháng là $450$ chiếc và tổng số tivi là $320$ chiếc.\n\nNếu trung bình mỗi chiếc điện thoại bán ra cửa hàng được lãi $1\\,500\\,000$ đồng và một chiếc tivi bán ra được lãi $2\\,000\\,000$ đồng. Hỏi sau năm tháng đầu năm, cửa hàng trên thu được tổng số tiền lãi là bao nhiêu?',
+    answer: '$1\\,315\\,000\\,000$ đồng',
+    solution: 'Dựa vào dữ kiện bài toán:\nTổng tiền lãi từ việc bán điện thoại là:\n$450 \\cdot 1\\,500\\,000 = 675\\,000\\,000$ (đồng).\n\nTổng tiền lãi từ việc bán Tivi là:\n$320 \\cdot 2\\,000\\,000 = 640\\,000\\,000$ (đồng).\n\nTổng số tiền lãi cửa hàng thu được sau năm tháng là:\n$675\\,000\\,000 + 640\\,000\\,000 = 1\\,315\\,000\\,000$ (đồng).',
+    grade: 6, topic: 'thong_ke', difficulty: 'van_dung', question_type: 'tu_luan',
+    tags: ['thống kê', 'biểu đồ cột kép', 'toán thực tế'], user_id: 'demo-user-001', is_public: true, status: 'approved', category_id: 'cat-6-5',
+    created_at: '2024-12-31T10:30:00Z', updated_at: '2024-12-31T10:30:00Z',
+  },
   {
     id: 'kntt-7-01', question_code: 'BT038', content: 'Một công ty sản xuất kẹo kiểm tra khối lượng của 50 gói kẹo (đơn vị: gam). Kết quả cho thấy: có $10$ gói nặng $98$g, $15$ gói nặng $99$g, $20$ gói nặng $100$g và $5$ gói nặng $102$g.\n\na) Lập bảng tần số.\nb) Tính khối lượng trung bình của mỗi gói kẹo (làm tròn đến chữ số thập phân thứ nhất).\nc) Nếu quy định khối lượng gói kẹo đạt chuẩn là từ $99$g đến $101$g thì tỷ lệ gói kẹo đạt chuẩn trong lô hàng này là bao nhiêu phần trăm?',
     answer: 'b) $99{,}6$g\nc) $70\\%$',
