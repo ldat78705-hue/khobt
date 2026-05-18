@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
-import { Plus, Trash2, Edit, GripVertical, FolderTree, Save, X, Loader2, ChevronDown, ChevronRight } from "lucide-react";
+import { Plus, Trash2, Edit, GripVertical, FolderTree, Save, X, Loader2, ChevronDown, ChevronRight, ArrowUp, ArrowDown } from "lucide-react";
 import { cn, formatDate } from "@/lib/utils";
 import type { Category } from "@/types";
 import { GRADES, type Grade } from "@/types";
@@ -148,6 +148,39 @@ export default function AdminCategoriesPage() {
     });
   };
 
+  const handleMove = async (cat: Category, direction: 'up' | 'down') => {
+    const siblings = categories
+      .filter(c => c.parent_id === cat.parent_id && c.grade === cat.grade)
+      .sort((a, b) => a.sort_order - b.sort_order);
+    
+    const currentIndex = siblings.findIndex(c => c.id === cat.id);
+    if (currentIndex === -1) return;
+    
+    let swapCat = null;
+    if (direction === 'up' && currentIndex > 0) swapCat = siblings[currentIndex - 1];
+    else if (direction === 'down' && currentIndex < siblings.length - 1) swapCat = siblings[currentIndex + 1];
+    
+    if (swapCat) {
+      const s1 = swapCat.sort_order;
+      const s2 = cat.sort_order;
+      
+      try {
+        if (isDemoMode) {
+          demoDb.updateCategory(cat.id, { sort_order: s1 });
+          demoDb.updateCategory(swapCat.id, { sort_order: s2 });
+        } else {
+          await Promise.all([
+            fetch('/api/categories', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: cat.id, sort_order: s1 }) }),
+            fetch('/api/categories', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: swapCat.id, sort_order: s2 }) })
+          ]);
+        }
+        fetchCategories();
+      } catch {
+        toast.error("Không thể thay đổi thứ tự");
+      }
+    }
+  };
+
   // Filter and group
   const filteredCategories = filterGrade === "all"
     ? categories
@@ -276,7 +309,7 @@ export default function AdminCategoriesPage() {
                   </div>
                   <div className="divide-y divide-slate-100">
                     {g.roots.map(cat => (
-                      <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} depth={0} />
+                      <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} handleMove={handleMove} depth={0} />
                     ))}
                   </div>
                 </div>
@@ -292,7 +325,7 @@ export default function AdminCategoriesPage() {
                   </div>
                   <div className="divide-y divide-slate-100">
                     {noGradeRoots.map(cat => (
-                      <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} depth={0} />
+                      <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} handleMove={handleMove} depth={0} />
                     ))}
                   </div>
                 </div>
@@ -321,7 +354,7 @@ export default function AdminCategoriesPage() {
               ) : (
                 <div className="divide-y divide-slate-100">
                   {rootCategories.map(cat => (
-                    <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} depth={0} />
+                    <CategoryRow key={cat.id} cat={cat} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} handleMove={handleMove} depth={0} />
                   ))}
                 </div>
               )}
@@ -346,6 +379,7 @@ function CategoryRow({
   handleEdit: (cat: Category) => void;
   handleDelete: (id: string) => void;
   toggleActive: (id: string, isActive: boolean) => void;
+  handleMove: (cat: Category, direction: 'up' | 'down') => void;
   depth: number;
 }) {
   const children = getChildren(cat.id);
@@ -378,12 +412,20 @@ function CategoryRow({
             {!cat.is_active && (
               <span className="px-2 py-0.5 text-xs font-medium bg-red-100 text-red-600 rounded-full">Ẩn</span>
             )}
+            {cat.question_count !== undefined && (
+              <span className="px-1.5 py-0.5 text-[10px] font-medium bg-slate-100 text-slate-500 rounded border border-slate-200">
+                {cat.question_count} câu hỏi
+              </span>
+            )}
           </div>
           {cat.description && <p className="text-xs text-slate-400 mt-0.5 truncate">{cat.description}</p>}
         </div>
 
         <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-          <button onClick={() => toggleActive(cat.id, cat.is_active)} className={cn("px-2.5 py-1 text-xs font-medium rounded-lg", cat.is_active ? "text-yellow-600 bg-yellow-50 hover:bg-yellow-100" : "text-green-600 bg-green-50 hover:bg-green-100")}>
+          <button onClick={() => handleMove(cat, 'up')} className="p-1.5 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700" title="Lên trên"><ArrowUp className="w-3.5 h-3.5" /></button>
+          <button onClick={() => handleMove(cat, 'down')} className="p-1.5 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700" title="Xuống dưới"><ArrowDown className="w-3.5 h-3.5" /></button>
+          
+          <button onClick={() => toggleActive(cat.id, cat.is_active)} className={cn("px-2.5 py-1 text-xs font-medium rounded-lg ml-2", cat.is_active ? "text-yellow-600 bg-yellow-50 hover:bg-yellow-100" : "text-green-600 bg-green-50 hover:bg-green-100")}>
             {cat.is_active ? "Ẩn" : "Hiện"}
           </button>
           <button onClick={() => handleEdit(cat)} className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600"><Edit className="w-4 h-4" /></button>
@@ -393,7 +435,7 @@ function CategoryRow({
 
       {/* Children */}
       {hasChildren && isExpanded && children.map(child => (
-        <CategoryRow key={child.id} cat={child} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} depth={depth + 1} />
+        <CategoryRow key={child.id} cat={child} categories={categories} getChildren={getChildren} expandedIds={expandedIds} toggleExpand={toggleExpand} handleEdit={handleEdit} handleDelete={handleDelete} toggleActive={toggleActive} handleMove={handleMove} depth={depth + 1} />
       ))}
     </>
   );

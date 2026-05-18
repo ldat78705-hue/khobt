@@ -1,0 +1,179 @@
+
+
+=== D:\khode\tailieu\phieubaitap\Hinhhoc\Hinh hoc\B4 Tong 3 goc trong mot tam giac. Hai tam giac bang nhau. TH bang nhau thu nhat.docx ===
+
+Ngày soạn: …/…./ …..                               				Ngày dạy:…./…../ …
+BUỔI 4 : TỔNG BA GÓC TRONG MỘT TAM GIÁC
+HAI TAM GIÁC BẰNG NHAU. TRƯỜNG HỢP BẰNG NHAU THỨ NHẤT
+Thời gian thực hiện 3 tiết
+Tiết 1:
+I. MỤC TIÊU:
+1. Về kiến thức: 
+- Sử dụng định lí tổng ba góc trong một tam giác bằng để tính toán số đo góc.
+2. Về năng lực: Phát triển cho HS:
+- Năng lực chung:
++ Năng lực tự học: HS hoàn thành các nhiệm vụ được giao ở nhà và hoạt động cá nhân trên lớp.
++ Năng lực giao tiếp và hợp tác: thông qua hoạt động nhóm, HS biết hỗ trợ nhau; trao đổi, thảo luận, thống nhất ý kiến trong nhóm để hoàn thành nhiệm vụ.
++ Năng lực giải quyết vấn đề và sáng tạo:
+- Năng lực đặc thù:
++ Năng lực tư duy và lập luận toán học; năng lực tính toán: thông qua các bài tính toán, vận dụng các kỹ năng để áp dụng tính nhanh, tính nhẩm
++ Năng lực giao tiếp toán học: trao đổi với bạn học về phương pháp giải và báo cáo trước tập thể lớp. 
+- Năng lực sử dụng công cụ và phương tiện học toán: sử dụng được máy tính để kiểm tra kết quả. Năng lực vẽ hình.
+3. Về phẩm chất: bồi dưỡng cho HS các phẩm chất:
+- Chăm chỉ: thực hiện đầy đủ các hoạt động học tập và nhiệm vụ được giao một cách tự giác, tích cực.
+- Trung thực: thật thà, thẳng thắn trong báo cáo kết quả hoạt động cá nhân và hoạt động nhóm, trong đánh giá và tự đánh giá.
+- Trách nhiệm: hoàn thành đầy đủ và có chất lượng các hoạt động học tập.
+II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU:
+1. Giáo viên:  
+- Thước thẳng, máy chiếu.
+- Phiếu bài tập cho HS.
+2. Học sinh: Vở ghi, đồ dùng học tập.
+III. TIẾN TRÌNH DẠY HỌC:
+B. HOẠT ĐỘNG LUYỆN TẬP
+a) Mục tiêu: Vận dụng kiến thức đã học về tổng ba góc trong một tam giác để tính số đo góc chưa biết của tam giác
+b) Nội dung: Các bài tập trong bài học
+c) Sản phẩm: Tìm được lời giải của bài toán
+d) Tổ chức thực hiện:
+Bài tập về nhà: 
+Bài 1. Tính số đo x trong các hình sau
+Bài 2: Cho tam giác  vuông tại . Kẻ . Tìm góc bằng góc 
+Bài 3. Cho  có . 
+a) Tính  của .
+b) Vẽ  là tia phân giác của góc  ( thuộc ). Tính số đo góc .
+Bài 4. Cho tam giác  có , . 
+a) Tam giác  là tam giác gì?
+b) Vẽ tia  nằm giữa hai tia  và  ( thuộc ) Biết , tính số đo .
+Bài 5. Cho tam giác  có điểm  nằm trong tam giác đó. 
+Chứng minh 
+Ngày soạn: …/…./ …..                               				Ngày dạy:…./…../ …
+TIẾT 2 + 3: HAI TAM GIÁC BẰNG NHAU. 
+TRƯỜNG HỢP BẰNG NHAU CẠNH CẠNH CẠNH
+Thời gian thực hiện 2 tiết
+I. MỤC TIÊU:
+1. Về kiến thức: 
+- Nhận biết hai tam giác bằng nhau.
+- Lập luận và chứng minh hình học trong trường hợp đơn giản.
+- Từ hai tam giác bằng nhau suy ra các cạnh, các góc bằng nhau tương ứng của hai tam giác.
+2. Về năng lực: Phát triển cho HS:
+- Năng lực chung:
++ Năng lực tự học: HS hoàn thành các nhiệm vụ được giao ở nhà và hoạt động cá nhân trên lớp.
++ Năng lực giao tiếp và hợp tác: thông qua hoạt động nhóm, HS biết hỗ trợ nhau; trao đổi, thảo luận, thống nhất ý kiến trong nhóm để hoàn thành nhiệm vụ.
++ Năng lực giải quyết vấn đề và sáng tạo:
+- Năng lực đặc thù:
++ Năng lực tư duy và lập luận toán học; năng lực tính toán: thông qua các bài tính toán, vận dụng các kỹ năng để áp dụng tính nhanh, tính nhẩm
++ Năng lực giao tiếp toán học: trao đổi với bạn học về phương pháp giải và báo cáo trước tập thể lớp. 
+- Năng lực sử dụng công cụ và phương tiện học toán: sử dụng được máy tính để kiểm tra kết quả. Năng lực vẽ hình.
+3. Về phẩm chất: bồi dưỡng cho HS các phẩm chất:
+- Chăm chỉ: thực hiện đầy đủ các hoạt động học tập và nhiệm vụ được giao một cách tự giác, tích cực.
+- Trung thực: thật thà, thẳng thắn trong báo cáo kết quả hoạt động cá nhân và hoạt động nhóm, trong đánh giá và tự đánh giá.
+- Trách nhiệm: hoàn thành đầy đủ và có chất lượng các hoạt động học tập.
+II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU:
+1. Giáo viên:  
+- Thước thẳng, máy chiếu.
+- Phiếu bài tập cho HS.
+2. Học sinh: Vở ghi, đồ dùng học tập.
+III. TIẾN TRÌNH DẠY HỌC:
+Tiết 2: Hai tam giác bằng nhau
+B. HOẠT ĐỘNG LUYỆN TẬP
+a) Mục tiêu: Vận dụng kiến thức đã học tam giác bằng nhau.
+ b) Nội dung: Các bài tập trong bài học
+c) Sản phẩm: Tìm được lời giải của bài toán
+d) Tổ chức thực hiện:
+Bài tập về nhà
+Bài 1. Cho . Viết các cặp cạnh bằng nhau, các cặp góc bằng nhau.
+Bài 2. Cho hai tam giác bằng nhau: tam giác  (không có hai góc nào bằng nhau, không có hai cạnh nào bằng nhau) và một tam giác có ba đỉnh là , , . Viết kí hiệu về sự bằng nhau của hai tam giác đó, biết rằng:
+a) , .	b) , .	c) , .
+Bài 3. Cho . Biết , ,  cm. Tính , , .
+Tiết 3: Trường hợp bằng nhau thứ nhất của tam giác.
+a) Mục tiêu: 
+- Chứng minh được hai tam giác bằng nhau theo trường hợp thứ nhất.
+- Vận dụng sự bằng nhau của hai tam giác từ đó giải quyết được những bài toán khác.
+b) Nội dung: Dạng bài tập về hai tam giác bằng nhau.
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+Bài tập về nhà
+Bài 1. Cho tứ giác  có , . Chứng minh:
+a) ;	b)  và .
+Bài 2. Cho tam giác  có ,  là trung điểm cạnh . Chứng minh 
+a) ;	b)  là tia phân giác của ;
+Bài 3. Cho hình vẽ bên. 
+a) Chứng minh .
+b) Chứng minh .
+c) Chứng minh  là tia phân giác .
+Bài 4. Cho hình vẽ bên.
+a) Tìm các cặp tam giác bằng nhau có trong hình.
+b) Chứng minh  là tia phân giác .
+c) AC có là đường trung trực của  không?
+Bài 5. Cho  có .  là một điểm nằm trong tam giác sao cho .  là trung điểm của . 
+Chứng minh rằng:
+a)  là tia phân giác .
+b) Ba điểm thẳng hàng.
+c)  là trung trực của .
+
+=== D:\khode\tailieu\phieubaitap\Hinhhoc\Hinh hoc\B7 Tam giac can. Duong trung truc cua doan thang.docx ===
+
+Ngày soạn: …/…./ …..                               Ngày dạy:…./…../ …
+BUỔI 7:  ÔN TẬP VỀ TAM GIÁC CÂN. 
+ĐƯỜNG TRUNG TRỰC CỦA TAM GIÁC
+Thời gian thực hiện:  3 tiết
+I. MỤC TIÊU:
+1. Về kiến thức: 
+-  Vận dụng kiến thức chứng minh tam giác cân, dùng tính chất của tam giác cân để giải toán.
+- Chứng minh đường trung trực của đoạn thẳng, vận dụng tính chất của đường trung trực để giải toán.
+2. Về năng lực: Phát triển cho HS:
+- Năng lực chung:
++ Năng lực tự học: HS hoàn thành các nhiệm vụ được giao ở nhà và hoạt động cá nhân trên lớp.
++ Năng lực giao tiếp và hợp tác: thông qua hoạt động nhóm, HS biết hỗ trợ nhau; trao đổi, thảo luận, thống nhất ý kiến trong nhóm để hoàn thành nhiệm vụ.
++ Năng lực giải quyết vấn đề và sáng tạo:
+- Năng lực đặc thù:
++ Năng lực tư duy và lập luận toán học; năng lực tính toán: thông qua các bài tính toán, vận dụng các kỹ năng để áp dụng tính nhanh, tính nhẩm
++ Năng lực giao tiếp toán học: trao đổi với bạn học về phương pháp giải và báo cáo trước tập thể lớp. 
+- Năng lực sử dụng công cụ và phương tiện học toán: sử dụng được máy tính để kiểm tra kết quả. Năng lực vẽ hình.
+3. Về phẩm chất: bồi dưỡng cho HS các phẩm chất:
+     - Chăm chỉ: thực hiện đầy đủ các hoạt động học tập và nhiệm vụ được giao một cách tự giác, tích cực.
+     - Trung thực: thật thà, thẳng thắn trong báo cáo kết quả hoạt động cá nhân và hoạt động nhóm, trong đánh giá và tự đánh giá.
+     - Trách nhiệm: hoàn thành đầy đủ và có chất lượng các hoạt động học tập.
+II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU:
+1. Giáo viên:  
+- Thước thẳng, máy chiếu.
+- Phiếu bài tập cho HS.
+2. Học sinh: Vở ghi, đồ dùng học tập.
+III. TIẾN TRÌNH DẠY HỌC:
+Tiết 1: Tam giác cân
+B. HOẠT ĐỘNG LUYỆN TẬP
+a) Mục tiêu: Vận dụng kiến thức về tam giác như tổng ba góc trong tam giác, tính chất tam giác cân, tam giác đều để giải các bài tập
+ b) Nội dung: Các bài tập trong bài học
+c) Sản phẩm: Tìm được lời giải của bài toán
+d) Tổ chức thực hiện:
+Tiết 2: Vận dụng tính chất tam giác cân, tam giác đều để giải toán chứng minh
+a) Mục tiêu: 
+Vận dụng tính chất của tam giác cân, tam giác đều để giải toán.
+b) Nội dung: Dạng bài tập về hai tam giác bằng nhau.
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+Tiết 3: Đường trung trực của tam giác
+a) Mục tiêu: 
+Vận dụng tính chất của đường trung trực của tam giác để giải toán
+b) Nội dung: Dạng bài tập vận dụng tính chất và chứng minh đường trung trực của đoạn thẳng.
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+BTVN: 
+Bài 1: Cho  cân tại A. Tia phân giác của  cắt cạnh  lần lượt ở  và . Chứng minh rằng:
+	a,  cân tại A.
+	b, DE // BC.
+	c, .
+Bài 2: Cho . Tia phân giác  cắt AC ở D, Trên tia đối của tia  lấy điểm E sao cho . Chứng minh rằng: .
+Bài 3: Cho  cân tại A. Tia phân giác của  cắt cạnh AC,  lần lượt ở D và E. Chứng minh rằng:
+	a,  cân tại A.
+	b, 
+	c, .
+Bài 4: Cho  có cạnh , M là trung điểm của BC.
+a, Chứng minh .
+b, Trên tia đối của tia  lấy điểm D sao cho . Chứng minh: .
+c, Trên nửa mặt phẳng bờ AC không chứa điểm B, vẽ , Lấy điểm thuộc  sao cho . Chứng minh 3 điểm  thẳng hàng.
+Bài 5:. Cho tam giác có ,  là điểm nằm giữa  và . Vẽ điểm sao cho  là đường trung trực của , điểm  sao cho  là đường trung trực của .
+a) Chứng minh trung trực của  đi qua .
+b) Chứng minh .
+c) Tính các góc của tam giác .
+d)  cắt lần lượt tại Chứng minh  là phân giác của góc .
+e) Phải cho góc  của tam giác bằng bao nhiêu độ để  là trung điểm của 

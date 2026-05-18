@@ -1866,7 +1866,12 @@ export const demoDb = {
 
   // --- Categories ---
   getCategories(): Category[] {
-    return loadData().categories.sort((a, b) => a.sort_order - b.sort_order);
+    const data = loadData();
+    const categories = data.categories.sort((a, b) => a.sort_order - b.sort_order);
+    return categories.map(c => ({
+      ...c,
+      question_count: data.questions.filter(q => q.category_id === c.id).length
+    }));
   },
 
   createCategory(c: Partial<Category>): Category {

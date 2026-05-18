@@ -180,13 +180,15 @@ export async function getCategories(grade?: number) {
   const sql = getDb();
   if (grade) {
     return await sql`
-      SELECT * FROM public.categories
+      SELECT c.*, (SELECT COUNT(*)::int FROM public.questions q WHERE q.category_id = c.id) as question_count
+      FROM public.categories c
       WHERE is_active = true AND grade = ${grade}
       ORDER BY grade, sort_order
     ` as Category[];
   }
   return await sql`
-    SELECT * FROM public.categories
+    SELECT c.*, (SELECT COUNT(*)::int FROM public.questions q WHERE q.category_id = c.id) as question_count
+    FROM public.categories c
     WHERE is_active = true
     ORDER BY grade, sort_order
   ` as Category[];

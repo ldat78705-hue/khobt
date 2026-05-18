@@ -1,0 +1,100 @@
+
+
+=== D:\khode\tailieu\lop 6\tap2\C7B29 Tinh toan voi so thap phan.docx ===
+
+BÀI 29. TÍNH TOÁN VỚI SỐ THẬP PHÂN
+Dạng 1. Cộng trừ số thập phân
+1. Nối kết quả trên cây với các phép toán tương ứng
+2.  Tính
+a)  = ..............................................................................................
+b)  = ...................................................................................................
+c)  = ..............................................................................................
+d)  = .........................................................................................
+e)  = .......................................................................................
+f)  = ..............................................................................................
+3.  Tính giá trị biểu thức sau:
+a) 
+b) 
+4.  Tính giá trị các biểu thức sau một cách hợp lí:
+a)	
+b)
+c) 
+d)
+e) 
+Dạng 2. Nhân, chia số thập phân.
+5.  Đặt rồi tính
+6.  Tính
+a) 	= ..............................................................................................
+b) = ..............................................................................................
+c) 	= ..............................................................................................
+d) = ..............................................................................................
+7. Tính: 
+a) 	= …………		b) = …………	
+c) = …………			d) = …………		
+e)  = …………		f) = …………
+8.  Tính giá trị biểu thức sau:
+a) 	b) 
+…………………………………….	…………………………………….
+…………………………………….	…………………………………….
+…………………………………….	…………………………………….
+Dạng 3. Toán tìm x
+9. Tìm  biết
+10. Tìm x biết
+a) 			b) 
+c) 				d) 
+Dạng 4. Toán thực tế
+11. Nhiệt độ trung bình năm ở Bắc Cực là C, ở Nam Cực làC. Cho biết nhiệt độ trung bình năm ở nơi nào cao hơn và cao hơn bao nhiêu độ C? 
+12.  Mức tiêu thụ nhiên liệu của một chiếc xe máy là lít trên  kilômét. Giá một lít xăng E5 RON 92-II ngày 20-10-2020 là đồng. Một người đi xe máy đó  trên quãng đường  km thì sẽ hết bao nhiêu tiền xăng?
+13. Tính diện tích một hình chữ nhật STT15047có chiều dài cm và chiều rộng cm.
+14. Tài khoản vay ngân hàng của một chủ xưởng gỗ có số dư tỉ đồng. Sau khi chủ xưởng trả được một nửa khoản vay thì số dư trong tài khoản là bao nhiêu tỉ đồng?
+15. a) Mua  m vải phải trả đồng. Hỏi mua  m vải cùng loại phải trả bao nhiêu tiền?
+b) Mỗi chai nước ngọt chứa và mỗi lít nước ngọt nặng kg.Biết rằng mỗi vỏ chai nặng kg. Hỏi  chai nước ngọt cân nặng bao nhiêu kg?
+Bài tập tự luyện.
+Bài 1.   Thực hiện các phép tính sau:
+a)  				b)  
+c)  			d) 
+Hướng dẫn:  Áp dụng các quy tắc: cộng, trừ  hai số thập phân.
+Bài 2.  Thực hiện các phép tính sau:
+a)  				b)  
+c)  			d)   
+Hướng dẫn:  Áp dụng các quy tắc: nhân, chia hai số thập phân. 
+Bài 3. Thực hiện các phép tính sau:
+a)  		b)  
+c)  			d)  
+e)  				f)  
+g) 		h) 
+Hướng dẫn:  Áp dụng các quy tắc về thứ tự thực hiện trong phép tính. 
+Bài 4.    Tính nhanh:
+a)  		b)  
+c)  	d)   
+Hướng dẫn:  Áp dụng: Quy tắc dấu ngoặc và tính chất kết hợp.
+Bài 5.   Tính bằng cách hợp lí:
+a)  	b)  
+c)  	d)  
+e) 		
+f) 
+Hướng dẫn:  Áp dụng tính chất kết hợp và tính chất phân phối của phép nhân đối với phép cộng. 
+
+=== D:\khode\tailieu\lop 6\tap2\C9B43 Xac suat thuc nghiẹm.docx ===
+
+BÀI 43: XÁC SUẤT THỰC NGHIỆM
+1.   Hùng tập ném bóng vào rổ. Khi thực hiện ném  lần thì có  lần bóng vào rổ.
+a) Lập bảng thống kê;
+b) Tính xác suất thực nghiệm của sự kiện ném bóng vào rổ;
+c) Theo em Hùng có thể tăng xác suất thực nghiệm của sự kiện ném bóng vào rổ không?
+2. a) Nếu tung một đồng xu lần liên tiếp; có  lần xuất hiện mặt  thì xác suất thực nghiệm xuất hiện mặt  bằng bao nhiêu?
+b) Nếu tung một đồng xu  lần liên tiếp; có  lần xuất hiện mặt  thì xác suất thực nghiệm xuất hiện mặt bằng bao nhiêu?
+c) Nếu tung một đồng xu  lần liên tiếp; có  lần xuất hiện mặt  thì xác suất thực nghiệm xuất hiện mặt  bằng bao nhiêu?
+3.  Gieo một xúc xắc  lần liên tiếp, bạn Cường có kết quả như sau:
+a) Hãy kiểm đếm số lần xuất hiện mặt 1 chấm và số lần xuất hiện mặt 6 chấm sau 10 lần gieo. Xác suất thực nghiệm xuất hiện
+b) Tính xác suất thực nghiệm xuất hiện mặt 1 chấm.
+c) Tính xác suất thực nghiệm xuất hiện mặt 6 chấm.  
+4. Số lượng khách hàng đến một cửa hàng mỗi ngày trong quý IV của năm 2020 được ghi lại ở bảng sau:
+Chọn ngẫu nhiên một ngày trong quý .  Tính xác suất thực nghiệm của sự kiện “Trong ngày được chọn có không quá  khách hàng”.
+5. Minh gieo một con xúc xắc  lần và ghi lại số chấm xuất hiện ở mỗi lần gieo được kết quả như sau:
+Xác suất thực nghiệm của sự kiện “Số chấm xuất hiện chia cho  dư ” là
+6. Một chiếc thùng kín có một số quả bóng màu xanh, đỏ, tím, vàng. Trong một trò chơi, người chơi 100 lần và được kết quả như bảng sau:
+Tính xác suất thực nghiệm của các sự kiện:
+a) Lấy được quả bóng màu xanh 
+b. Quả bóng được lấy ra không là màu đỏ.
+7. Trong trò chơi bánh xe quay số. Bánh xe số có  nấc điểm: ; ; ; ; …;   với các vạch chia đều nhau và giả sử rằng khả năng chuyển từ nấc điểm đã có tới các nấc điểm còn lại là như nhau. Trong mỗi lượt chơi có hai người tham gia, mỗi người được quay một lần và điểm của người chơi là điểm quay được. Người nào có số điểm cao hơn sẽ thắng cuộc, hòa nhau sẽ chơi lại lượt khác. Nam và Bình cùng tham gia một lượt chơi. Nam chơi trước và được  điểm. Hãy tính xác suất thực nghiệm của sự kiện Bình thắng cuộc ở lượt chơi này.

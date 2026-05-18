@@ -1,0 +1,115 @@
+BÀI 1. TẬP HỢP
+Dạng 1: Viết một tập hợp cho trước
+1. Viết các tập hợp sau:
+a)  là tập hợp các số tự nhiên nhỏ hơn 	
+b)  là tập hợp các số tự nhiên lẻ nhỏ hơn .
+c)  là tập hợp các số tự nhiên lớn hơn  và nhỏ hơn 
+d)  là tập hợp các số tự nhiên có hai chữ số có chữ số tận cùng là 
+e)  là tập hợp các số tự nhiên chẵn nhỏ hơn 
+2. Viết các tập hợp sau:
+a)  là tập hợp các chữ cái trong từ “ĐOÀN KẾT”	
+b)  là tập hợp các chữ cái trong từ  “HỒ CHÍ MINH”
+c)   là tập hợp các chữ cái trong từ “LÁ LÀNH ĐÙM LÁ RÁCH”	
+d)  là tập hợp các chữ cái trong từ “ANH EM NHƯ THỂ TAY CHÂN”	
+3. Viết các tập hợp sau bằng cách liệt kê các phần tử.
+							Trả lời			
+a) 	 …………………………..…………………..…
+b) 	 …………………………..…………………..…
+c) 	 …………………………..…………………..…
+d) 	 …………………………..…………………..…
+e) 		 …………………………..…………………..…
+f) 		 …………………………..…………………..…
+4. Viết các tập hợp sau bằng hai cách:
+5. Cho hai tập hợp  và . Viết các các tập hợp trong đó mỗi tập hợp gồm: 
+a) Một phần tử thuộc  và một phần tử thuộc ;
+b) Một phần tử thuộc  và hai phần tử thuộc .
+6. Viết các tập hợp sau :
+a) Viết tập hợp các số tự nhiên có hai chữ số mà tổng của các chữ số là 4.
+b) Viết tập hợp các số tự nhiên có hai chữ số mà tổng của các chữ số là .
+c) Viết tập hợp các số tự nhiên có ba chữ số mà tổng của các chữ số là 
+d) Viết tập hợp  các số tự nhiên có hai chữ số mà chữ số hàng chục lớn hơn chữ số hàng đơn vị là  đơn vị.
+e) Viết tập hợp  các số tự nhiên có hai chữ số và tích hai chữ số ấy bằng 
+7. Viết các tập hợp dựa vào biểu đồ Ven.
+a) Nhìn hình vẽ dưới đây, viết các tập hợp , , 
+b) Nhìn hình vẽ dưới đây, viết các tập hợp , , 
+8. a) Cho tập hợp . Viết tập hợp các số có ba chữ số khác nhau lấy từ tập .
+b) Cho tập hợp . Viết tập hợp các số có hai chữ số khác nhau lấy từ tập 
+Trả lời
+a) ………………………………………………………………………………………
+b) ………………………………………………………………………………………
+9. Viết các tập hợp thoả mãn yêu cầu sau:
+a) Viết tập hợp  các số tự nhiên  mà 	
+b) Viết tập hợp  các số tự nhiên  mà 
+c) Viết tập hợp  các số tự nhiên  mà 
+d) Viết tập hợp  các số tự nhiên  mà 
+Trả lời
+Dạng 2: Sử dụng kí hiệu  và 
+10. Điền kí hiệu thích hợp vào ô trống.
+10.1  Cho tập hợp . Hãy điền kí hiệu thích hợp vào ô trống:
+a) ;		b) 		c) 		d) .
+10.2  Cho hai tập hợp  và . Hãy điền kí hiệu thích hợp vào ô trống.
+a) 		b) 		c) 		d) .
+11. Viết tập hợp  các số tự nhiên lẻ nhỏ hơn  và lớn hơn , sau đó điền kí hiệu thích hợp vào ô trống.
+a) 		b) ;		c) 		d) 
+Trả lời
+………………………………………………………………………………………
+Dạng 3: Minh hoạ tập hợp cho trước bằng biểu đồ Ven
+12. Hãy minh hoạ các tập hợp sau bằng biểu đồ Ven.
+a) Minh hoạ tập  hợp  là tập hợp các số tự nhiên chẵn nhỏ hơn  
+b) Minh hoạ tập  hợp  là tập hợp các số tự nhiên lẻ nhỏ hơn  
+c) Minh hoạ tập  hợp   là tập hợp các số tự nhiên lẻ, lớn hơn  và nhỏ hơn 
+Trả lời
+13.  a) Cho hai tập hợp  và . Hãy dùng biểu đồ Ven minh họa hai tập hợp  và 
+b) Cho tập hợp  và . Hãy dùng biểu đồ Ven minh họa hai tập hợp  và 
+Trả lời
+Dạng 4: Tìm số phần tử của một tập hợp
+14. Viết các tập hợp sau bằng cách liệt kê các phần tử và cho biết số phần tử của mỗi tập hợp.
+a. Tập hợp  các số tự nhiên có hai chữ số, trong đó chữ số hàng chục lớn hơn chữ số hàng đơn vị là .
+b. Tập hợp  các số tự nhiên có ba chữ số mà tổng các chữ số bằng .
+Trả lời
+a) Tập hợp  là : ……………………………………………………………….
+Số phần tử của tập hợp  là ………. phần tử.
+b) Tập hợp  là : ……………………………………………………………….
+Số phần tử của tập hợp  là ………. phần tử.
+15. Tính số phần tử của các tập hợp sau:
+a)  là tập hợp các tháng (dương lịch) có 30 ngày.	
+b)  là tập hợp các tháng (dương lịch) có 31 ngày.	
+c)  là tập hợp các năm có tận cùng 4 kể từ năm 1004 đến năm 2022.
+d)  là tập hợp các năm có tận cùng 22 kể từ năm 822 đến năm 2022
+Trả lời
+16. Hãy tính số phần tử của các tập hợp sau:
+a. Tập hợp 	
+b. Tập hợp  các số tự nhiên chẵn có  chữ số.
+c. Tập hợp  các số tự nhiên lẻ có  chữ số.	
+d. Tập hợp  các số 
+Trả lời
+Mẫu: a) Tập hợp  có   phần tử. 
+b) Tập hợp  có …………………………………….…………… phần tử.
+c) Tập hợp  có …………………………………….…………… phần tử.
+d) Tập hợp  có …………………………………….…………… phần tử.
+Dạng 5: Tìm thực tế
+17. Một lớp học có 50 học sinh trong đó có 15 học sinh giỏi Toán; 20 học sinh giỏi Văn và có 12 học sinh vừa giỏi Toán vừa giỏi Văn. Hỏi có bao nhiêu học sinh giỏi toán hoặc văn. Có bao nhiêu học sinh của lớp không giỏi toán và cũng không giỏi văn.
+Trả lời
+………………………………………………………………………………………
+………………………………………………………………………………………
+………………………………………………………………………………………
+18. Một lớp học có 50 HS tham gia diễn văn nghệ, trong đó 20 HS tham gia múa, 17 HS tham gia đóng kịch. 8 HS tham gia cả 2 tiết mục. Hỏi có bao nhiêu học sinh không tham gia tiết mục nào. 
+Trả lời
+………………………………………………………………………………………
+………………………………………………………………………………………
+………………………………………………………………………………………
+19. Một lớp có 45 học sinh, trong đó mỗi học sinh đều giỏi ít nhất một trong hai môn Toán hoặc Văn, biết rằng có 30 học sinh giỏi toán, 25 học sinh giỏi văn. Hỏi lớp đó có bao nhiêu học sinh giỏi cả toán lẫn văn?
+Trả lời
+………………………………………………………………………………………
+………………………………………………………………………………………
+………………………………………………………………………………………
+20. Trong cuộc thi giỏi cấp huyện lớp 6C có 10 bạn được công nhận giỏi toán, 15 bạn được công nhận giỏi văn. Biết rằng lớp 6C có 40 học sinh và có 20 bạn không được công nhận là học sinh giỏi. Tìm số bạn vừa được công nhận giỏi văn vừa được công nhận giỏi văn?
+Trả lời
+………………………………………………………………………………………
+………………………………………………………………………………………
+………………………………………………………………………………………
+21. Một nhóm bạn gồm 20 bạn trong đó có 10 bạn biết nhảy và 15 bạn biết hát, 8 bạn  biết cả hát và nhảy. Hỏi có bao nhiêu bạn không biết cả nhảy lẫn hát?
+Trả lời
+………………………………………………………………………………………
+………………………………………………………………………………………
+………………………………………………………………………………………

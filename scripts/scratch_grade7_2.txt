@@ -1,0 +1,64 @@
+
+
+=== D:\khode\tailieu\phieubaitap\Sovadaiso\So va dai so\B15 Dai luong ti le nghich.docx ===
+
+Ngày soạn: …/…./ …..                               Ngày dạy:…./…../ …
+BUỔI 15: ĐẠI LƯỢNG TỈ LỆ NGHỊCH. MỘT SỐ BÀI TOÁN VỀ ĐẠI LƯỢNG TỈ LỆ NGHỊCH
+Thời gian thực hiện: 3 tiết
+I. MỤC TIÊU:
+1. Về kiến thức: 
+- Củng cố các kiến thức về đại lượng tỉ lệ nghịch
+- Giải được các bài toán liên quan về đại lượng tỉ lệ nghịch,
+- Vận dụng được các kiến thức đã học vào giải bài toán cụ thể, toán thực tế.
+2. Về năng lực: Phát triển cho HS:
+- Năng lực chung:
++ Năng lực tự học: HS hoàn thành các nhiệm vụ được giao ở nhà và hoạt động cá nhân trên lớp.
++ Năng lực giao tiếp và hợp tác: thông qua hoạt động nhóm, HS biết hỗ trợ nhau; trao đổi, thảo luận, thống nhất ý kiến trong nhóm để hoàn thành nhiệm vụ.
++ Năng lực giải quyết vấn đề và sáng tạo:
+- Năng lực đặc thù:
++ Năng lực tư duy và lập luận toán học; năng lực tính toán: thông qua các bài tính toán, vận dụng các kỹ năng để áp dụng tính nhanh, tính nhẩm
++ Năng lực giao tiếp toán học: trao đổi với bạn học về phương pháp giải và báo cáo trước tập thể lớp. 
+- Năng lực sử dụng công cụ và phương tiện học toán: sử dụng được máy tính để kiểm tra kết quả.
+3. Về phẩm chất: bồi dưỡng cho HS các phẩm chất:
+     - Chăm chỉ: thực hiện đầy đủ các hoạt động học tập và nhiệm vụ được giao một cách tự giác, tích cực.
+     - Trung thực: thật thà, thẳng thắn trong báo cáo kết quả hoạt động cá nhân và hoạt động nhóm, trong đánh giá và tự đánh giá.
+     - Trách nhiệm: hoàn thành đầy đủ và có chất lượng các hoạt động học tập.
+II. THIẾT BỊ DẠY HỌC VÀ HỌC LIỆU:
+1. Giáo viên:  
+- Thước thẳng, máy chiếu.
+- Phiếu bài tập cho HS.
+2. Học sinh: Vở ghi, đồ dùng học tập.
+III. TIẾN TRÌNH DẠY HỌC:
+Tiết 1:
+B. HOẠT ĐỘNG LUYỆN TẬP
+a) Mục tiêu: HS làm đc các bài toán về đại lượng tỉ lệ nghịch.
+ b) Nội dung: Các bài toán trong tiết học
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+Tiết 2: 
+Dạng toán : Một số bài toán về đại lượng tỉ lệ nghịch
+a) Mục tiêu: Biết và làm được một số dạng toán về đại lượng tỉ lệ nghịch
+b) Nội dung: Bài tập trong tiết học
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+Tiết 3: Ôn tập các bài toán về đại lượng tỉ lệ nghịch
+a) Mục tiêu: Nhận dạng được các đại lượng tỉ lệ nghịch và giải bài toán liên quan
+b) Nội dung: Các dạng toán trong bài học
+c) Sản phẩm: Tìm được kết quả của các bài toán.
+d) Tổ chức thực hiện:
+HƯỚNG DẪN VỀ NHÀ
+- Yêu cầu HS nắm vững kiến thức đã học trong buổi ôn tập.
+- Ghi nhớ dạng và phương pháp giải các dạng toán đã học. Làm các bài tập sau:
+                                                   BÀI TẬP GIAO VỀ NHÀ
+Bài 1. Cho  và  tỉ lệ nghịch với nhau theo hệ số tỉ lệ 
+a) Hãy biểu diễn  theo .		b)Tính giá trị của  khi 
+Bài 2. Cho biết hai đại lượng  và  tỉ lệ nghịch với nhau và khi thì .
+a. Tìm hệ số tỉ lệ .
+b. Hãy biểu diễn  theo 
+c. Tính giá trị của  khi 
+Bài 3. Một Cano đi xuôi dòng từ A đến B mất 2 giờ 24 phút. Biết rằng vận tốc xuôi dòng của cano là km/h, vận tốc dòng nước là km/h. Hãy tính thời gian cano đi ngược dòng từ B về A.
+Bài 4. Chia số   thành 3 phần tỉ lệ nghịch với . Tìm các số đó?
+Bài 5. Hai xe lửa đi từ A đến B mất 2 giờ 48 phút và 4 giờ 40 phút. Tính khoảng cách AB biết rằng vận tốc xe thứ nhất lớn hơn vận tốc xe thứ hai là  km/h
+Bài 6. Tìm độ dài ba cạnh của một tam giác biết chu vi của nó bằng cm và ba chiều cao tỉ lệ nghịch với  
+Bài 7. Tìm ba số tự nhiên, biết rằng BCNN của chúng là  và ba số này tỉ lệ nghịch với và .
+Bài 8. Ba xí nghiệp nghiệp cùng xây dựng chung một cái cầu hết  triệu đồng. Xí nghiệp I có  xe trở cách cầu  km, xí nghiệp II có  xe ở cách cầu km, xí nghiệp 3 có  xe ở cách cầu km. Hỏi mỗi xí nghiệp phải trả cho việc xây dựng cầu bao nhiêu tiền, biết rằng số tiền phải trả tỉ lệ thuận với số xe và tỉ lệ nghịch với khoảng cách từ xí nghiệp đến cầu?

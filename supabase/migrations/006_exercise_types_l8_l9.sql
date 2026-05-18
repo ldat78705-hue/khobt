@@ -6,7 +6,7 @@
 
 -- Nhân chia đa thức
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#EF4444', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#EF4444', p.id FROM
 (VALUES
   ('Nhân đơn thức với đa thức', 'l8-nhan-don-da', 'Nhân đơn thức, nhân đa thức', 1),
   ('Nhân đa thức với đa thức', 'l8-nhan-da-da', 'Khai triển tích hai đa thức', 2),
@@ -17,7 +17,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Hằng đẳng thức
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#EF4444', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#EF4444', p.id FROM
 (VALUES
   ('Bình phương tổng/hiệu', 'l8-binh-phuong-tong-hieu', '(a±b)² = a² ± 2ab + b²', 1),
   ('Hiệu hai bình phương', 'l8-hieu-binh-phuong', 'a² - b² = (a-b)(a+b)', 2),
@@ -29,7 +29,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Phân tích nhân tử
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#EF4444', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#EF4444', p.id FROM
 (VALUES
   ('Đặt nhân tử chung', 'l8-nhan-tu-chung', 'Đặt thừa số chung ra ngoài', 1),
   ('Dùng hằng đẳng thức', 'l8-dung-hdt', 'Nhận dạng và áp dụng HĐT', 2),
@@ -41,7 +41,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Phân thức đại số
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#F97316', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#F97316', p.id FROM
 (VALUES
   ('Rút gọn phân thức', 'l8-rut-gon-phan-thuc', 'ĐKXĐ và rút gọn', 1),
   ('Cộng trừ phân thức', 'l8-cong-tru-phan-thuc', 'Quy đồng, cộng trừ', 2),
@@ -53,7 +53,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- PT bậc nhất
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#F97316', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#F97316', p.id FROM
 (VALUES
   ('Giải phương trình bậc nhất', 'l8-giai-pt-bac-nhat', 'PT dạng ax + b = 0', 1),
   ('PT đưa về bậc nhất', 'l8-pt-dua-ve-bac-nhat', 'PT tích, PT chứa ngoặc', 2),
@@ -65,7 +65,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- BPT bậc nhất
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#F97316', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#F97316', p.id FROM
 (VALUES
   ('Giải bất phương trình', 'l8-giai-bpt', 'BPT bậc nhất một ẩn', 1),
   ('Biểu diễn tập nghiệm', 'l8-bieu-dien-tap-nghiem', 'Trục số, khoảng, đoạn', 2),
@@ -76,7 +76,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Tứ giác
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Hình thang và hình thang cân', 'l8-hinh-thang', 'Tính chất, chứng minh', 1),
   ('Hình bình hành', 'l8-hinh-binh-hanh', 'Dấu hiệu nhận biết, tính chất', 2),
@@ -89,7 +89,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Diện tích đa giác
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Diện tích tam giác', 'l8-dien-tich-tam-giac', 'Công thức, bài toán diện tích', 1),
   ('Diện tích hình thang', 'l8-dien-tich-hinh-thang', 'Công thức và ứng dụng', 2),
@@ -100,7 +100,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Thalès
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Định lí Thalès trong tam giác', 'l8-thales-tam-giac', 'Đường song song cắt 2 cạnh', 1),
   ('Đường trung bình tam giác', 'l8-duong-trung-binh-tg', 'Tính chất, chứng minh', 2),
@@ -111,7 +111,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Tam giác đồng dạng
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Chứng minh đồng dạng (c-c-c, c-g-c, g-g)', 'l8-cm-dong-dang', '3 trường hợp đồng dạng', 1),
   ('Tính cạnh và góc bằng đồng dạng', 'l8-tinh-canh-dong-dang', 'Tìm cạnh/góc chưa biết', 2),
@@ -122,7 +122,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Thống kê L8
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#10B981', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#10B981', p.id FROM
 (VALUES
   ('Bảng tần số tương đối', 'l8-tan-so-tuong-doi', 'Tần số tương đối, tần suất', 1),
   ('Biểu đồ hình quạt', 'l8-bieu-do-quat', 'Đọc và vẽ biểu đồ quạt', 2)
@@ -132,7 +132,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Xác suất L8
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 8, desc_, sort_order, '#10B981', p.id FROM
+SELECT t.name, t.slug, 8, t.desc_, t.sort_order, '#10B981', p.id FROM
 (VALUES
   ('Xác suất lý thuyết', 'l8-xs-ly-thuyet', 'Tính xác suất bằng công thức', 1),
   ('Quy tắc cộng và nhân', 'l8-quy-tac-cong-nhan', 'Đếm số kết quả thuận lợi', 2)
@@ -144,7 +144,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Căn thức
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#EF4444', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#EF4444', p.id FROM
 (VALUES
   ('Biến đổi đơn giản căn thức', 'l9-bien-doi-can', 'Đưa thừa số ra/vào dấu căn', 1),
   ('Rút gọn biểu thức chứa căn', 'l9-rut-gon-can', 'Rút gọn, tính giá trị', 2),
@@ -156,7 +156,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Hệ phương trình
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#EF4444', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#EF4444', p.id FROM
 (VALUES
   ('Giải HPT bằng phương pháp thế', 'l9-hpt-the', 'Phương pháp thế', 1),
   ('Giải HPT bằng phương pháp cộng', 'l9-hpt-cong', 'Phương pháp cộng đại số', 2),
@@ -167,7 +167,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Hàm số & PT bậc hai
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#F97316', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#F97316', p.id FROM
 (VALUES
   ('Vẽ đồ thị hàm số y = ax²', 'l9-do-thi-ax2', 'Bảng giá trị, vẽ parabol', 1),
   ('Giải phương trình bậc hai', 'l9-giai-pt-bac-2', 'Công thức nghiệm, delta', 2),
@@ -180,7 +180,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Hệ thức lượng
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#F97316', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#F97316', p.id FROM
 (VALUES
   ('Tỉ số lượng giác góc nhọn', 'l9-ti-so-luong-giac', 'sin, cos, tan, cot', 1),
   ('Hệ thức giữa cạnh và góc', 'l9-he-thuc-canh-goc', 'Giải tam giác vuông', 2),
@@ -192,7 +192,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Đường tròn
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Vị trí tương đối đường thẳng và đường tròn', 'l9-vi-tri-dt-dtron', 'Cắt, tiếp xúc, không cắt', 1),
   ('Tiếp tuyến đường tròn', 'l9-tiep-tuyen', 'Tính chất, chứng minh tiếp tuyến', 2),
@@ -206,7 +206,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Hình không gian
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#3B82F6', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#3B82F6', p.id FROM
 (VALUES
   ('Hình trụ: diện tích và thể tích', 'l9-hinh-tru', 'Sxq, Stp, V hình trụ', 1),
   ('Hình nón: diện tích và thể tích', 'l9-hinh-non', 'Sxq, Stp, V hình nón', 2),
@@ -218,7 +218,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Thống kê L9
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#10B981', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#10B981', p.id FROM
 (VALUES
   ('Bảng tần số ghép nhóm', 'l9-bang-ghep-nhom', 'Lập bảng, tính tần suất ghép nhóm', 1),
   ('Trung vị và tứ phân vị', 'l9-trung-vi-tu-phan-vi', 'Tính trung vị, Q1, Q3', 2),
@@ -229,7 +229,7 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- Xác suất L9
 INSERT INTO public.categories (name, slug, grade, description, sort_order, color, parent_id)
-SELECT name, slug, 9, desc_, sort_order, '#10B981', p.id FROM
+SELECT t.name, t.slug, 9, t.desc_, t.sort_order, '#10B981', p.id FROM
 (VALUES
   ('Biến cố giao và hợp', 'l9-bien-co-giao-hop', 'Biến cố kết hợp', 1),
   ('Biến cố đối và phần bù', 'l9-bien-co-doi', 'P(A'') = 1 - P(A)', 2),

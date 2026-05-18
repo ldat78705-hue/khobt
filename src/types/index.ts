@@ -40,6 +40,7 @@ export interface Category {
   created_at: string;
   updated_at: string;
   children?: Category[];
+  question_count?: number;
 }
 
 // Loại đề thi (admin-managed)

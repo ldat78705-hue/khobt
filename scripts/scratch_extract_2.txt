@@ -1,0 +1,99 @@
+=== UCLN ===
+BÀI 11. ƯỚC CHUNG. ƯỚC CHUNG LỚN NHẤT
+Dạng 1:  Viết tập hợp ước chung của hai hay nhiều số. Tìm ước chung.
+1.  Cho các số . Hỏi:
+a) Số  là ước chung của những số nào?
+b) Số  là ước chung của những số nào?
+c) Số  có phải là ước chung của các số đó không?
+2. Viết tập hợp các ước chung của:
+a)  và ;			b) và ;		c)  và .
+3. Viết tập hợp các ước chung sau:
+a) ƯC(12;24;36);		b) ƯC(20;25;50);		c) ƯC
+Dạng 2:  Tìm ƯCLN từ đó tìm tập hợp ƯC của các số đã cho
+4. Tìm ƯCLN của các số sau:
+a)  và ;				b) ;  và .
+5. Tìm ƯCLN của các số sau:
+a) ;  và 				b) và 
+6. Tìm ƯCLN của các số
+a) ƯCLN ………..		b) ƯCLN ………….
+c) ƯCLN  ………..		d) ƯCLN ………..
+7. Tìm số tự nhiên  lớn nhất, biết rằng:
+a) 				b) 
+c) 			d) 
+8. Tìm ƯCLN rồi tìm ước chung của các số sau:
+a) và 					b) và 
+c)  và 				d) và 
+Trả lời
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+9. Tìm các ước chung có hai chữ số của  và .
+10. Tìm số tự nhiên , biết rằng: 
+a) ƯC(70, 84) và 		b) ƯC(64, 48, 88) và 
+c) và 		d) và 
+11. Tìm số tự nhiên , biết rằng chia  cho  thì dư , còn khi chia cho  thì được dư là .
+Trả lời
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+Dạng 3:  Các bài toán thực tế
+12. Bệnh viện A đã huy động  bác sĩ,  y tá và chia thành các tổ công tác về các địa phương trong tỉnh để hỗ trợ y tế dự phòng. Việc chia tổ cần đảm bảo sao cho số các bác sĩ được chia đều vào các tổ và số y tá cũng vậy. Hỏi có thể chia số các bác sĩ, y tá đó nhiều nhất thành mấy tổ công tác? Khi đó, mỗi tổ công tác có bao nhiêu bác sĩ và bao nhiêu y tá?
+Trả lời
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+……………………………………………………………………………………..
+ 13. Một xưởng sản xuất  sản phẩm loại  và sản phẩm loại  được đóng gói vào các thùng riêng biệt. Việc đóng gói cần đảm bảo sao cho số sản phẩm loại  được chia đều vào các thùng và số sản phẩm loại  cũng vậy. Hỏi có thể chia số sản phẩm loại  và  đó nhiều nhất thành mấy thùng? Khi đó mỗi thùng có bao nhiêu sản phẩm loại  và bao nhiêu sản phẩm loại ?
+14. Có  gói kẹo và gói bánh đóng vào các thùng. Biết số kẹo trong mỗi thùng là giống nhau và số bánh cũng vậy. Hỏi có thể chia số kẹo và số bánh đó vào nhiều nhất mấy thùng? Khi đó mỗi thùng chứa bao nhiêu gói kẹo và bao nhiêu gói bánh.
+15. Cô giáo chủ nhiệm muốn chia quyển vở,  bút bi và  gói bánh thành một số phần thưởng như nhau để trao trong dịp sơ kết học kì. Hỏi có thể chia được nhiều nhất bao nhiêu phần thưởng? Khi đó mỗi phần thưởng có bao nhiêu quyển vở, bút bi và gói bánh?
+Dạng 4:  Chứng minh hai hay nhiều số là các số nguyên tố cùng nhau
+Hai số nguyên tố cùng nhau là hai số có ƯCLN = 1
+16. Tìm các cặp số nguyên tố cùng nhau trong các cặp số sau đây:
+17*. Chứng tỏ rằng hai số lẻ liên tiếp là hai số nguyên tố cùng nhau.
+18*. Chứng minh rằng với mọi số tự nhiên, các số sau là các số nguyên tố cùng nhau.
+a) và 					b) và 
+c) và 					d) và 
+19*. Chứng minh rằng với mọi số tự nhiên  thì  và  là nguyên tố cùng nhau.
+Dạng 5. Tìm số tự nhiên khi biết ƯCLN của chúng
+20. Tìm hai số tự nhiên biết rằng và ƯCLN(a, b) = 16.
+21. Tìm hai số biết rằng tổng của chúng bằng   và ƯCLN của chúng bằng 
+22. Tìm hai số biết rằng tổng của chúng bằng  và ƯCLN của chúng bằng 
+=== BCNN ===
+BÀI 12. BỘI CHUNG. BỘI CHUNG NHỎ NHẤT
+Dạng 1:  Viết tập hợp bội chung của hai hay nhiều số. 
+1.  Cho ba số 12; 18; 45. Hỏi:
+a) Số  là bội chung của những số nào?		………………………….
+b) Số  là bội chung của những số nào?		………………….………
+c) Số  có phải là bội chung của cả ba số đó không?	……………
+2. Viết tập hợp các bội chung của:
+a)  và ;			b)  và ;			c) và .
+Dạng 2:  Tìm BCNN của các số cho trước từ đó tìm BC của các số.
+3. Tìm:
+a) BCNN					c) BCNN
+b) BCNN					d) BCNN
+4. Tìm:
+a) BCNN = …………			c) BCNN = …………
+b) BCNN = …………			d) BCNN = …………
+5. Tìm các bội chung của  và  thông qua BCNN.
+6. Tìm số tự nhiên x thỏa mãn ;  và .
+7. Tìm số tự nhiên x thỏa mãn ;  và .
+Dạng 2:  Bài toán đưa đến tìm BCNN của hai hay nhiều số
+8.  Tìm số tự nhiên nhỏ nhất khác  mà    và   
+9. Tìm số tự nhiên  nhỏ nhất, lớn hơn  mà khi chia  cho , cho , cho  đều dư .
+10. Tìm số tự nhiên nhỏ nhất chia cho  dư , chia cho  dư .
+Dạng 3:  Các bài toán thực tế
+11. Học sinh khối 6 của một trường có từ  đến  em. Khi cho xếp hàng  hoặc hoặc đều vừa đủ. Hãy tìm số học sinh ấy.
+12. Một số sách khi xếp thành từng bó  cuốn,  cuốn,  cuốn đều vừa đủ. Tìm tổng số sách biết số sách trong khoảng  đến .
+ 13. Một trường có hơn  học sinh, khi cho xếp hàng 3 hoặc 4 hoặc 5 đều vừa đủ. Tìm số học sinh của trường biết số học sinh này là số có ba chữ số.
+14.  Số học sinh khối 6 của một trường khoảng gần  học sinh. Biết rằng nếu xếp hàng , hàng , hàng  đều thiếu . Tính số học sinh khối 6.
+15. Các cột điện trước đây cách nhau m, nay trồng lại, cách nhau  m. Hỏi sau cột đầu tiên không trồng lại thì cột gần nhất không phải trồng lại là cột thứ mấy?
+ Dạng 3:  Các bài toán nâng cao
+16. Cho bảng :
+a)  Điền vào các ô trống của bảng .
+b)  So sánh tích ƯCLN.BCNN với tích  . 
+17*.  Dùng kết quả ý b bài 16:  ƯCLN.BCNN
+Tìm hai số tự nhiên  và  biết ; ƯCLN
+18*. Tìm hai số tự nhiên  và  biết ; 
+19*. Tìm hai số tự nhiên a và b,  biết rằng  và 
