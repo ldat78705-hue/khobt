@@ -9,7 +9,7 @@ import type { Question, QuestionStatus, Grade } from "@/types";
 
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
-import { MathRenderer, QuestionContent } from "@/components/shared/MathRenderer";
+import { MathRenderer, QuestionContent, CloudinaryImage } from "@/components/shared/MathRenderer";
 import RichEditor from "@/components/shared/RichEditor";
 import { InlineEditor } from "@/components/shared/InlineEditor";
 
@@ -262,6 +262,15 @@ export default function ReviewQuestionsPage() {
                       onChange={setEditedContent}
                       placeholder="Nội dung bài tập (Nhấn vào vùng trống để nhập văn bản, nhấn vào công thức để sửa công thức)"
                     />
+                    {editedImages.length > 0 && (
+                      <div className="flex flex-wrap gap-3 mt-4 pt-4 border-t border-slate-200 border-dashed">
+                        {editedImages.map((img, i) => (
+                          <div key={i} className="relative group">
+                            <CloudinaryImage src={img} alt={`Hình đính kèm ${i+1}`} className="max-w-[200px] border border-slate-200 shadow-sm rounded-lg" />
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <div className="p-4 bg-slate-50 rounded-xl mb-4">
@@ -291,6 +300,11 @@ export default function ReviewQuestionsPage() {
                         onChange={setEditedAnswer}
                         placeholder="Nhập đáp án..."
                       />
+                      {editedAnswerImages.length > 0 && (
+                        <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-blue-200 border-dashed">
+                          {editedAnswerImages.map((img, i) => <CloudinaryImage key={i} src={img} className="max-w-[150px] border border-blue-200 shadow-sm rounded" />)}
+                        </div>
+                      )}
                     </div>
                     <div className="p-3 bg-green-50/50 border border-green-100 rounded-xl">
                       <div className="text-xs font-semibold text-green-700 mb-2">Lời giải (Nhấn vào để sửa trực tiếp)</div>
@@ -299,6 +313,11 @@ export default function ReviewQuestionsPage() {
                         onChange={setEditedSolution}
                         placeholder="Nhập lời giải chi tiết..."
                       />
+                      {editedSolutionImages.length > 0 && (
+                        <div className="flex flex-wrap gap-3 mt-3 pt-3 border-t border-green-200 border-dashed">
+                          {editedSolutionImages.map((img, i) => <CloudinaryImage key={i} src={img} className="max-w-[200px] border border-green-200 shadow-sm rounded" />)}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ) : (

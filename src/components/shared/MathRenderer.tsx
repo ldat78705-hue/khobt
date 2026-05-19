@@ -264,10 +264,15 @@ export function ResizableImage({ src, alt, originalAlt, onResize }: { src: strin
   const [width, setWidth] = useState(startWidth);
   const ref = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    setWidth(startWidth);
+  }, [startWidth]);
+
   const handleMouseUp = () => {
     if (ref.current) {
       const newWidth = Math.round(ref.current.getBoundingClientRect().width);
-      if (Math.abs(newWidth - startWidth) > 5) {
+      if (Math.abs(newWidth - width) > 5) {
+        setWidth(newWidth);
         onResize(newWidth);
       }
     }
