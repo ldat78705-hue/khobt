@@ -41,6 +41,13 @@ export default function QuestionsPage() {
   const [totalCount, setTotalCount] = useState(0);
   const PAGE_SIZE = 30;
 
+  const [categories, setCategories] = useState<any[]>([]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>("");
+
+  useEffect(() => {
+    fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
+  }, []);
+
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
     try {
@@ -60,6 +67,7 @@ export default function QuestionsPage() {
         const params = new URLSearchParams();
         if (selectedGrade) params.append("grade", selectedGrade.toString());
         if (selectedTopic) params.append("topic", selectedTopic);
+        if (selectedCategoryId) params.append("category_id", selectedCategoryId);
         if (selectedDifficulty) params.append("difficulty", selectedDifficulty);
         if (selectedType) params.append("question_type", selectedType);
         if (searchQuery) params.append("search", searchQuery);
@@ -86,7 +94,7 @@ export default function QuestionsPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages, currentPage]);
+  }, [selectedGrade, selectedTopic, selectedCategoryId, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages, currentPage]);
 
   useEffect(() => {
     fetchQuestions();
@@ -95,7 +103,7 @@ export default function QuestionsPage() {
   // Reset to page 1 when filters/search change
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages]);
+  }, [selectedGrade, selectedTopic, selectedCategoryId, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages]);
 
   // Load favorites
   useEffect(() => {
@@ -281,6 +289,7 @@ export default function QuestionsPage() {
   const clearFilters = () => {
     setSelectedGrade("");
     setSelectedTopic("");
+    setSelectedCategoryId("");
     setSelectedDifficulty("");
     setSelectedType("");
     setSelectedStatus("");
@@ -321,7 +330,12 @@ export default function QuestionsPage() {
     }
   };
 
-  const hasFilters = selectedGrade || selectedTopic || selectedDifficulty || selectedType || selectedStatus || filterHasSolution || filterHasImages;
+  const hasFilters = selectedGrade || selectedTopic || selectedCategoryId || selectedDifficulty || selectedType || selectedStatus || filterHasSolution || filterHasImages;
+
+  // Lọc danh mục theo lớp đã chọn
+  const filteredCategories = selectedGrade 
+    ? categories.filter(c => c.grade === Number(selectedGrade) || c.grade === null)
+    : categories;
 
   return (
     <>
@@ -404,10 +418,10 @@ export default function QuestionsPage() {
                 </select>
               </div>
               <div>
-                <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề</label>
-                <select value={selectedTopic} onChange={(e) => setSelectedTopic(e.target.value as Topic | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-                  <option value="">Tất cả</option>
-                  {TOPICS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề (Danh mục)</label>
+                <select value={selectedCategoryId} onChange={(e) => setSelectedCategoryId(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
+                  <option value="">Tất cả danh mục</option>
+                  {filteredCategories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
                 </select>
               </div>
               <div>
@@ -552,8 +566,8 @@ export default function QuestionsPage() {
                       <span className="px-2.5 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">
                         Toán {q.grade}
                       </span>
-                      <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">
-                        {getTopicLabel(q.topic)}
+                      <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full truncate max-w-[200px]" title={(q as any).category_name || getTopicLabel(q.topic)}>
+                        {(q as any).category_name || getTopicLabel(q.topic)}
                       </span>
                       <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>
                         {getDifficultyLabel(q.difficulty)}

@@ -21,6 +21,7 @@ function getRawDb() {
 export async function getQuestions(filters?: {
   grade?: number;
   topic?: string;
+  category_id?: string;
   difficulty?: string;
   status?: string;
   userId?: string;
@@ -30,7 +31,7 @@ export async function getQuestions(filters?: {
   offset?: number;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, userId, search, question_type, limit = 30, offset = 0 } = filters || {};
+  const { grade, topic, category_id, difficulty, status, userId, search, question_type, limit = 30, offset = 0 } = filters || {};
 
   const result = await sql`
     SELECT q.*, u.full_name as author_name, c.name as category_name
@@ -40,6 +41,7 @@ export async function getQuestions(filters?: {
     WHERE
       (${grade ?? null}::int IS NULL OR q.grade = ${grade ?? null})
       AND (${topic ?? null}::text IS NULL OR q.topic = ${topic ?? null})
+      AND (${category_id ?? null}::uuid IS NULL OR q.category_id = ${category_id ?? null}::uuid)
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
       AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})
@@ -59,18 +61,20 @@ export async function getQuestions(filters?: {
 export async function getQuestionCount(filters?: {
   grade?: number;
   topic?: string;
+  category_id?: string;
   difficulty?: string;
   status?: string;
   search?: string;
   question_type?: string;
 }) {
   const sql = getRawDb();
-  const { grade, topic, difficulty, status, search, question_type } = filters || {};
+  const { grade, topic, category_id, difficulty, status, search, question_type } = filters || {};
   const result = await sql`
     SELECT COUNT(*)::int as count FROM public.questions q
     WHERE
       (${grade ?? null}::int IS NULL OR q.grade = ${grade ?? null})
       AND (${topic ?? null}::text IS NULL OR q.topic = ${topic ?? null})
+      AND (${category_id ?? null}::uuid IS NULL OR q.category_id = ${category_id ?? null}::uuid)
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
       AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})

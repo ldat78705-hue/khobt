@@ -1,0 +1,76 @@
+Chương I. ĐA THỨC.
+Bài 1. Đơn thức.
+Bài 2. Đa thức.
+Bài 3. Phép cộng và phép trừ đa thức.
+Luyện tập chung.
+Bài 4. Phép nhân đa thức.
+Bài 5. Phép chia đa thức cho đơn thức.
+Luyện tập chung.
+Bài tập cuối chương 1.
+Chương II. HẰNG ĐẲNG THỨC ĐÁNG NHỚ VÀ ỨNG DỤNG.
+Bài 6. Hiệu hai bình phương. Bình phương của một tổng hay một hiệu.
+Bài 7. Lập phương của một tổng hay một hiệu.
+Bài 8. Tổng và hiệu hai lập hương.
+Luyện tập chung.
+Bài 9. Phân tích đa thức thành nhân tử.
+Luyện tập chung.
+Bài tập cuối chương II.
+Chương III. TỨ GIÁC.
+Bài 10. Tứ giác.
+Bài 11. Hình thang cân.
+Luyện tập chung.
+Bài 12. Hình bình hành.
+Luyện tập chung.
+Bài 13. Hình chữ nhật.
+Bài 14. Hình thoi và hình vuông.
+Luyện tập chung.
+Bài tập cuối chương III.
+CHƯƠNG IV. ĐỊNH LÍ THALES.
+Bài 15. Định lí Thalès trong tam giác.
+Bài 16. Đường trung bình của tam giác.
+Bài 17. Tính chất đường phân giác của tam giác.
+Luyện tập chung.
+Bài tập cuối chương IV.
+Chương V. DỮ LIỆU VÀ BIỂU ĐỒ.
+Bài 18. Thu thập và phân loại dữ liệu.
+Bài 19. Biểu diễn dữ liệu bằng bảng, biểu đồ.
+Bài 20. Phân tích số liệu thống kê dựa vào biểu đó.
+Luyện tập chung.
+Bài tập cuối chương V. 
+Chương VI. PHÂN THỨC ĐẠI SỐ.
+Bài 21. Phần thức đại số.
+Bài 22. Tính chất cơ bản của phân thức đại số.
+Luyện tập chung.
+Bài 23. Phép cộng và phép trừ phân thức đại số.
+Bài 24. Phép nhân và phép chia phân thức đại số.
+Luyện tập chung.
+Bài tập cuối chương VI.
+Chương VII. PHƯƠNG TRÌNH BẬC NHẤT VÀ HÀM SỐ BẬC NHẤT.
+Bài 25. Phương trình bậc nhất một ẩn.
+Bài 26. Giải bài toán bằng cách lập phương trình.
+Luyện tập chung.
+Bài 27. Khái niệm hàm số và đô thị của hàm số.
+Bài 28. Hàm số bậc nhất và đô thị của hàm số bậc nhất.
+Bài 29. Hệ số góc của đường thẳng.
+Luyện tập chung.
+Bài tập cuối chương VII.
+Chương VIII. MỞ ĐẦU VỀ TÍNH XÁC SUẤT CỦA BIẾN CỐ.
+Bài 30. Kết quả có thể và kết quả thuận lợi.
+Bài 31. Cách tính xác suất của biến cố bằng tỉ số.
+Bài 32. Mối liên hệ giữa xác suất thực nghiệm với xác suất và ứng dụng.
+Luyện tập chung.
+Bài tập cuối chương VIII.
+Chương IX. TAM GIÁC ĐỒNG DẠNG.
+Bài 33. Hai tam giác đồng dạng.
+Bài 34. Ba trường hợp đồng dạng của hai tam giác.
+Luyện tập chung.
+Bài 35. Định lí Pythagore và ứng dụng.
+Bài 36. Các trường hợp đồng dạng của hai tam giác vuông.
+Bài 37. Hình đồng dạng.
+Luyện tập chung.
+Bài tập cuối chương IX.
+Chương X. MỘT SỐ HÌNH KHỐI TRONG THỰC TIỄN.
+Bài 38. Hình chóp tam giác đều.
+Bài 39. Hình chóp tứ giác đều.
+Luyện tập chung.
+Bài tập cuối chương X.

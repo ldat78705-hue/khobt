@@ -72,6 +72,8 @@ export function renderMathContent(text: string): string {
   // First handle block math ($$...$$) - these become centered blocks
   let result = text.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
     try {
+      // Escape standalone % inside latex so KaTeX doesn't treat it as a comment
+      latex = latex.replace(/(?<!\\)%/g, '\\%');
       const rendered = `<div class="katex-block">${katex.renderToString(latex.trim(), {
         displayMode: true,
         throwOnError: false,
@@ -87,6 +89,8 @@ export function renderMathContent(text: string): string {
   // Then handle inline math ($...$)
   result = result.replace(/\$([^$]+?)\$/g, (_, latex) => {
     try {
+      // Escape standalone % inside latex so KaTeX doesn't treat it as a comment
+      latex = latex.replace(/(?<!\\)%/g, '\\%');
       const rendered = katex.renderToString(latex.trim(), {
         displayMode: false,
         throwOnError: false,

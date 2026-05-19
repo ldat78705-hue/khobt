@@ -41,6 +41,8 @@ export default function WorksheetPage() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [filterGrade, setFilterGrade] = useState<Grade | "">("");
   const [filterTopic, setFilterTopic] = useState<Topic | "">("");
+  const [filterCategoryId, setFilterCategoryId] = useState<string>("");
+  const [categories, setCategories] = useState<any[]>([]);
   const [filterDifficulty, setFilterDifficulty] = useState<Difficulty | "">("");
   const [searchQuery, setSearchQuery] = useState("");
   const [config, setConfig] = useState<WorksheetConfig>(DEFAULT_CONFIG);
@@ -49,6 +51,10 @@ export default function WorksheetPage() {
   const [editingTitle, setEditingTitle] = useState(false);
   const [showConfig, setShowConfig] = useState(false);
   const printRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
+  }, []);
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
@@ -64,6 +70,7 @@ export default function WorksheetPage() {
         const params = new URLSearchParams();
         if (filterGrade) params.append("grade", filterGrade.toString());
         if (filterTopic) params.append("topic", filterTopic);
+        if (filterCategoryId) params.append("category_id", filterCategoryId);
         if (filterDifficulty) params.append("difficulty", filterDifficulty);
         if (searchQuery) params.append("search", searchQuery);
         params.append("status", "approved");
@@ -82,7 +89,7 @@ export default function WorksheetPage() {
     } finally {
       setIsLoading(false);
     }
-  }, [filterGrade, filterTopic, filterDifficulty, searchQuery]);
+  }, [filterGrade, filterTopic, filterCategoryId, filterDifficulty, searchQuery]);
 
   useEffect(() => { fetchQuestions(); }, [fetchQuestions]);
 
@@ -238,9 +245,9 @@ export default function WorksheetPage() {
                   <option value="">Tất cả lớp</option>
                   {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
                 </select>
-                <select value={filterTopic} onChange={e => setFilterTopic(e.target.value as Topic | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
-                  <option value="">Tất cả chuyên đề</option>
-                  {TOPICS.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+                <select value={filterCategoryId} onChange={e => setFilterCategoryId(e.target.value)} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 max-w-[200px] truncate">
+                  <option value="">Tất cả danh mục</option>
+                  {categories.filter(c => filterGrade ? c.grade === Number(filterGrade) : true).map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                 </select>
                 <select value={filterDifficulty} onChange={e => setFilterDifficulty(e.target.value as Difficulty | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
                   <option value="">Tất cả mức độ</option>
@@ -276,7 +283,7 @@ export default function WorksheetPage() {
                     <QuestionContent content={q.content} images={q.images} className="text-sm text-slate-800 line-clamp-2" />
                     <div className="flex items-center gap-2 mt-2">
                       <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {q.grade}</span>
-                      <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(q.topic)}</span>
+                      <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full truncate max-w-[200px]" title={(q as any).category_name || getTopicLabel(q.topic)}>{(q as any).category_name || getTopicLabel(q.topic)}</span>
                       <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
                     </div>
                   </div>

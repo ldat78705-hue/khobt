@@ -36,6 +36,7 @@ export async function GET(req: NextRequest) {
   const filters = {
     grade: searchParams.get('grade') ? parseInt(searchParams.get('grade')!) : undefined,
     topic: searchParams.get('topic') || undefined,
+    category_id: searchParams.get('category_id') || undefined,
     difficulty: searchParams.get('difficulty') || undefined,
     status: searchParams.get('status') || undefined,
     search: searchParams.get('search') || undefined,
@@ -51,6 +52,7 @@ export async function GET(req: NextRequest) {
         neonQueries.getQuestionCount({
           grade: filters.grade,
           topic: filters.topic,
+          category_id: filters.category_id,
           difficulty: filters.difficulty,
           status: filters.status,
           search: filters.search,
