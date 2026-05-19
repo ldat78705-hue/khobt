@@ -87,6 +87,50 @@ const LATEX_TABS = [
   },
 ];
 
+function ResizableImage({ src, alt, originalAlt, onResize }: { src: string, alt: string, originalAlt: string, onResize: (newWidth: number) => void }) {
+  const sizeMatch = originalAlt.match(/:(.*?)$/);
+  const sizeStr = sizeMatch ? sizeMatch[1] : 'medium';
+  
+  let startWidth = 350;
+  if (sizeStr === 'small') startWidth = 200;
+  else if (sizeStr === 'medium') startWidth = 350;
+  else if (sizeStr === 'large') startWidth = 500;
+  else if (sizeStr === 'full') startWidth = 800;
+  else startWidth = parseInt(sizeStr) || 350;
+
+  const [width, setWidth] = useState(startWidth);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const handleMouseUp = () => {
+    if (ref.current) {
+      const newWidth = Math.round(ref.current.getBoundingClientRect().width);
+      if (Math.abs(newWidth - startWidth) > 5) {
+        onResize(newWidth);
+      }
+    }
+  };
+
+  return (
+    <div 
+      ref={ref}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      className="relative inline-block border-2 border-transparent hover:border-blue-400 group transition-colors my-2"
+      style={{ width: `${width}px`, resize: 'both', overflow: 'hidden', minWidth: '100px', maxWidth: '100%', paddingBottom: '4px', paddingRight: '4px' }}
+      title="Kéo góc dưới cùng bên phải để thay đổi kích thước"
+    >
+      <CloudinaryImage 
+        src={src} 
+        alt={alt} 
+        className="w-full h-auto rounded shadow-sm pointer-events-none" 
+      />
+      <div className="absolute top-1 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
+        {Math.round(width)}px
+      </div>
+    </div>
+  );
+}
+
 /**
  * Rich Editor component with:
  * - LaTeX toolbar (tabs: Cơ bản, Ký hiệu, Hình học, Cấu trúc)
@@ -296,14 +340,18 @@ export default function RichEditor({
           const imgMatch = part.match(/^!\[(.*?)\]\((.*?)\)$/);
           if (imgMatch) {
             const [, alt, src] = imgMatch;
-            // Parse size from alt text like "hình:medium" or "hình:small"
-            const sizeMatch = alt.match(/:(small|medium|large|full)$/);
-            const sizeKey = sizeMatch ? sizeMatch[1] : 'medium';
-            const sizeConfig = IMAGE_SIZES.find(s => s.key === sizeKey) || IMAGE_SIZES[1];
             return (
-              <div key={i} className="my-2">
-                <CloudinaryImage src={src} alt={alt || 'Hình minh họa'} className="border border-slate-200 shadow-sm rounded-lg cursor-pointer" style={{ maxWidth: sizeConfig.width }} />
-              </div>
+              <ResizableImage 
+                key={i} 
+                src={src} 
+                alt={alt || 'Hình minh họa'} 
+                originalAlt={alt}
+                onResize={(newWidth) => {
+                  const baseAlt = alt.replace(/:.*/, '');
+                  const newAlt = `${baseAlt || 'hình'}:${newWidth}`;
+                  onChange(value.replace(`![${alt}](${src})`, `![${newAlt}](${src})`));
+                }} 
+              />
             );
           }
           if (part.trim()) {

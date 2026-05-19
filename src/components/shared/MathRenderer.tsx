@@ -238,7 +238,7 @@ export function QuestionContent({ content, images, className }: {
   images?: string[];
   className?: string;
 }) {
-  const IMAGE_SIZES: Record<string, string> = { small: '200px', medium: '350px', large: '500px', full: '100%' };
+  // IMAGE_SIZES support dynamic parsing below
 
   // Split content by inline image markdown
   const parts = content.split(/(!\[.*?\]\(.*?\))/g);
@@ -252,9 +252,17 @@ export function QuestionContent({ content, images, className }: {
             const imgMatch = part.match(/^!\[(.*?)\]\((.*?)\)$/);
             if (imgMatch) {
               const [, alt, src] = imgMatch;
-              const sizeMatch = alt.match(/:(small|medium|large|full)$/);
-              const sizeKey = sizeMatch ? sizeMatch[1] : 'medium';
-              const maxWidth = IMAGE_SIZES[sizeKey] || '350px';
+              const sizeMatch = alt.match(/:(.*?)$/);
+              const sizeStr = sizeMatch ? sizeMatch[1] : 'medium';
+              let maxWidth = '350px';
+              if (sizeStr === 'small') maxWidth = '200px';
+              else if (sizeStr === 'medium') maxWidth = '350px';
+              else if (sizeStr === 'large') maxWidth = '500px';
+              else if (sizeStr === 'full') maxWidth = '100%';
+              else {
+                const numeric = parseInt(sizeStr);
+                if (!isNaN(numeric)) maxWidth = `${numeric}px`;
+              }
               return (
                 <div key={i} className="my-2">
                   <CloudinaryImage src={src} alt={alt || 'Hình minh họa'} className="border border-slate-200 shadow-sm rounded-lg" style={{ maxWidth }} />
