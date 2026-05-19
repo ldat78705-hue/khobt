@@ -5,6 +5,7 @@ import { Bold, Italic, List, Image as ImageIcon, Eye, EyeOff, X, Loader2, ZoomIn
 import { MathRenderer, CloudinaryImage } from "./MathRenderer";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
+import { InlineEditor } from "./InlineEditor";
 
 const IMAGE_SIZES = [
   { key: 'small', label: 'Nhỏ', width: '200px', desc: '200px' },
@@ -87,49 +88,7 @@ const LATEX_TABS = [
   },
 ];
 
-function ResizableImage({ src, alt, originalAlt, onResize }: { src: string, alt: string, originalAlt: string, onResize: (newWidth: number) => void }) {
-  const sizeMatch = originalAlt.match(/:(.*?)$/);
-  const sizeStr = sizeMatch ? sizeMatch[1] : 'medium';
-  
-  let startWidth = 350;
-  if (sizeStr === 'small') startWidth = 200;
-  else if (sizeStr === 'medium') startWidth = 350;
-  else if (sizeStr === 'large') startWidth = 500;
-  else if (sizeStr === 'full') startWidth = 800;
-  else startWidth = parseInt(sizeStr) || 350;
 
-  const [width, setWidth] = useState(startWidth);
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMouseUp = () => {
-    if (ref.current) {
-      const newWidth = Math.round(ref.current.getBoundingClientRect().width);
-      if (Math.abs(newWidth - startWidth) > 5) {
-        onResize(newWidth);
-      }
-    }
-  };
-
-  return (
-    <div 
-      ref={ref}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-      className="relative inline-block border-2 border-transparent hover:border-blue-400 group transition-colors my-2"
-      style={{ width: `${width}px`, resize: 'both', overflow: 'hidden', minWidth: '100px', maxWidth: '100%', paddingBottom: '4px', paddingRight: '4px' }}
-      title="Kéo góc dưới cùng bên phải để thay đổi kích thước"
-    >
-      <CloudinaryImage 
-        src={src} 
-        alt={alt} 
-        className="w-full h-auto rounded shadow-sm pointer-events-none" 
-      />
-      <div className="absolute top-1 right-2 bg-black/60 text-white text-[10px] px-2 py-0.5 rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity">
-        {Math.round(width)}px
-      </div>
-    </div>
-  );
-}
 
 /**
  * Rich Editor component with:
@@ -332,33 +291,9 @@ export default function RichEditor({
   const renderPreview = () => {
     if (!value.trim()) return <p className="text-sm text-slate-400 italic">Nội dung sẽ hiển thị ở đây...</p>;
 
-    // Split content by image markers
-    const parts = value.split(/(!\[.*?\]\(.*?\))/g);
     return (
-      <div className="text-sm text-slate-800 leading-relaxed space-y-2">
-        {parts.map((part, i) => {
-          const imgMatch = part.match(/^!\[(.*?)\]\((.*?)\)$/);
-          if (imgMatch) {
-            const [, alt, src] = imgMatch;
-            return (
-              <ResizableImage 
-                key={i} 
-                src={src} 
-                alt={alt || 'Hình minh họa'} 
-                originalAlt={alt}
-                onResize={(newWidth) => {
-                  const baseAlt = alt.replace(/:.*/, '');
-                  const newAlt = `${baseAlt || 'hình'}:${newWidth}`;
-                  onChange(value.replace(`![${alt}](${src})`, `![${newAlt}](${src})`));
-                }} 
-              />
-            );
-          }
-          if (part.trim()) {
-            return <MathRenderer key={i} content={part} className="leading-relaxed" />;
-          }
-          return null;
-        })}
+      <div className="hover:ring-1 hover:ring-slate-200 rounded p-1 transition-all">
+        <InlineEditor value={value} onChange={onChange} />
       </div>
     );
   };

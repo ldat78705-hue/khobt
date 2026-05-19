@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MathRenderer } from "./MathRenderer";
+import { MathRenderer, ResizableImage } from "./MathRenderer";
 import { cn } from "@/lib/utils";
 
 export function InlineEditor({ value, onChange, className, placeholder }: { value: string, onChange: (val: string) => void, className?: string, placeholder?: string }) {
@@ -112,6 +112,23 @@ export function InlineEditor({ value, onChange, className, placeholder }: { valu
         }
 
         if (t.type === 'image') {
+          const imgMatch = t.content.match(/^!\[(.*?)\]\((.*?)\)$/);
+          if (imgMatch) {
+            const [, alt, src] = imgMatch;
+            return (
+              <ResizableImage 
+                key={i} 
+                src={src} 
+                alt={alt || 'Hình minh họa'} 
+                originalAlt={alt}
+                onResize={(newWidth) => {
+                  const baseAlt = alt.replace(/:.*/, '');
+                  const newAlt = `${baseAlt || 'hình'}:${newWidth}`;
+                  updateToken(i, `![${newAlt}](${src})`);
+                }} 
+              />
+            );
+          }
           return <span key={i}>{t.content}</span>;
         }
 
