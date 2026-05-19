@@ -10,6 +10,8 @@ import type { Question, QuestionStatus, Grade } from "@/types";
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { MathRenderer, QuestionContent } from "@/components/shared/MathRenderer";
+import RichEditor from "@/components/shared/RichEditor";
+import { InlineEditor } from "@/components/shared/InlineEditor";
 
 export default function ReviewQuestionsPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -20,6 +22,13 @@ export default function ReviewQuestionsPage() {
   const [reviewNote, setReviewNote] = useState("");
   const [isReviewing, setIsReviewing] = useState(false);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
+
+  const [editedContent, setEditedContent] = useState("");
+  const [editedAnswer, setEditedAnswer] = useState("");
+  const [editedSolution, setEditedSolution] = useState("");
+  const [editedImages, setEditedImages] = useState<string[]>([]);
+  const [editedAnswerImages, setEditedAnswerImages] = useState<string[]>([]);
+  const [editedSolutionImages, setEditedSolutionImages] = useState<string[]>([]);
 
   const fetchQuestions = useCallback(async () => {
     setIsLoading(true);
@@ -67,7 +76,17 @@ export default function ReviewQuestionsPage() {
         const res = await fetch('/api/questions', {
           method: 'PATCH',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: questionId, status: newStatus, review_note: reviewNote }),
+          body: JSON.stringify({ 
+            id: questionId, 
+            status: newStatus, 
+            review_note: reviewNote,
+            content: editedContent,
+            answer: editedAnswer,
+            solution: editedSolution,
+            images: editedImages.length > 0 ? editedImages : undefined,
+            answer_images: editedAnswerImages.length > 0 ? editedAnswerImages : undefined,
+            solution_images: editedSolutionImages.length > 0 ? editedSolutionImages : undefined
+          }),
         });
         if (!res.ok) {
           const data = await res.json();
@@ -175,7 +194,16 @@ export default function ReviewQuestionsPage() {
               questions.map(q => (
                 <button
                   key={q.id}
-                  onClick={() => { setSelectedQuestion(q); setReviewNote(""); }}
+                  onClick={() => { 
+                    setSelectedQuestion(q); 
+                    setReviewNote(""); 
+                    setEditedContent(q.content || "");
+                    setEditedAnswer(q.answer || "");
+                    setEditedSolution(q.solution || "");
+                    setEditedImages(q.images || []);
+                    setEditedAnswerImages(q.answer_images || []);
+                    setEditedSolutionImages(q.solution_images || []);
+                  }}
                   className={cn(
                     "w-full bg-white rounded-2xl border p-4 shadow-sm text-left transition-all hover:shadow-md",
                     selectedQuestion?.id === q.id ? "border-blue-300 ring-2 ring-blue-100" : "border-slate-100"
@@ -227,9 +255,19 @@ export default function ReviewQuestionsPage() {
                 </div>
 
                 {/* Content with full LaTeX + images */}
-                <div className="p-4 bg-slate-50 rounded-xl mb-4">
-                  <QuestionContent content={selectedQuestion.content} images={selectedQuestion.images} className="text-sm text-slate-800 leading-relaxed" />
-                </div>
+                {(selectedQuestion.status === 'pending' || selectedQuestion.status === 'draft') ? (
+                  <div className="p-4 bg-slate-50 border border-slate-100 rounded-xl mb-4 hover:border-blue-200 transition-colors">
+                    <InlineEditor
+                      value={editedContent}
+                      onChange={setEditedContent}
+                      placeholder="Nội dung bài tập (Nhấn vào vùng trống để nhập văn bản, nhấn vào công thức để sửa công thức)"
+                    />
+                  </div>
+                ) : (
+                  <div className="p-4 bg-slate-50 rounded-xl mb-4">
+                    <QuestionContent content={selectedQuestion.content} images={selectedQuestion.images} className="text-sm text-slate-800 leading-relaxed" />
+                  </div>
+                )}
 
                 {/* MCQ options */}
                 {selectedQuestion.question_type === "trac_nghiem" && selectedQuestion.options && (
@@ -244,17 +282,40 @@ export default function ReviewQuestionsPage() {
                 )}
 
                 {/* Answer/Solution */}
-                {selectedQuestion.answer && (
-                  <div className="p-3 bg-blue-50 rounded-xl mb-3">
-                    <div className="text-xs font-medium text-blue-600 mb-1">Đáp án</div>
-                    <div className="text-sm text-blue-800"><MathRenderer content={selectedQuestion.answer} /></div>
+                {(selectedQuestion.status === 'pending' || selectedQuestion.status === 'draft') ? (
+                  <div className="space-y-4 mb-4">
+                    <div className="p-3 bg-blue-50/50 border border-blue-100 rounded-xl">
+                      <div className="text-xs font-semibold text-blue-700 mb-2">Đáp án (Nhấn vào để sửa trực tiếp)</div>
+                      <InlineEditor
+                        value={editedAnswer}
+                        onChange={setEditedAnswer}
+                        placeholder="Nhập đáp án..."
+                      />
+                    </div>
+                    <div className="p-3 bg-green-50/50 border border-green-100 rounded-xl">
+                      <div className="text-xs font-semibold text-green-700 mb-2">Lời giải (Nhấn vào để sửa trực tiếp)</div>
+                      <InlineEditor
+                        value={editedSolution}
+                        onChange={setEditedSolution}
+                        placeholder="Nhập lời giải chi tiết..."
+                      />
+                    </div>
                   </div>
-                )}
-                {selectedQuestion.solution && (
-                  <div className="p-3 bg-green-50 rounded-xl mb-4">
-                    <div className="text-xs font-medium text-green-600 mb-1">Lời giải</div>
-                    <div className="text-sm text-green-800"><MathRenderer content={selectedQuestion.solution} /></div>
-                  </div>
+                ) : (
+                  <>
+                    {selectedQuestion.answer && (
+                      <div className="p-3 bg-blue-50 rounded-xl mb-3">
+                        <div className="text-xs font-medium text-blue-600 mb-1">Đáp án</div>
+                        <div className="text-sm text-blue-800"><MathRenderer content={selectedQuestion.answer} /></div>
+                      </div>
+                    )}
+                    {selectedQuestion.solution && (
+                      <div className="p-3 bg-green-50 rounded-xl mb-4">
+                        <div className="text-xs font-medium text-green-600 mb-1">Lời giải</div>
+                        <div className="text-sm text-green-800"><MathRenderer content={selectedQuestion.solution} /></div>
+                      </div>
+                    )}
+                  </>
                 )}
 
                 {/* Review actions */}
