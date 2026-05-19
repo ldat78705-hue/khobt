@@ -51,7 +51,7 @@ async function main() {
       if (successCount % 20 === 0) {
         console.log(`Imported ${successCount} questions...`);
       }
-    } catch (e) {
+    } catch (e: any) {
       console.error("Failed to insert question:", e.message);
     }
   }
