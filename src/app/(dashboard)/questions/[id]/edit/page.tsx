@@ -13,8 +13,11 @@ import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import RichEditor from "@/components/shared/RichEditor";
 import { useAuthStore } from "@/stores/auth-store";
 import { Shield } from "lucide-react";
+import { useGrades } from "@/lib/hooks";
 
 export default function EditQuestionPage() {
+  const activeGrades = useGrades();
+
   const params = useParams();
   const router = useRouter();
   const questionId = params.id as string;
@@ -190,7 +193,7 @@ export default function EditQuestionPage() {
               <div>
                 <label className="block text-sm font-medium text-slate-600 mb-1.5">Lớp *</label>
                 <select value={grade} onChange={(e) => setGrade(Number(e.target.value) as Grade)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-                  {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                  {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                 </select>
               </div>
               <div>

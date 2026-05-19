@@ -12,8 +12,11 @@ import { toast } from "sonner";
 import { QuestionContent } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { cn } from "@/lib/utils";
+import { useGrades } from "@/lib/hooks";
 
 export default function FavoritesPage() {
+  const activeGrades = useGrades();
+
   const router = useRouter();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -174,7 +177,7 @@ export default function FavoritesPage() {
               className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500"
             >
               <option value="">Tất cả lớp</option>
-              {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
             </select>
           </div>
         </div>

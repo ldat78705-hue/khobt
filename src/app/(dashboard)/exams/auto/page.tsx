@@ -10,8 +10,11 @@ import { isDemoMode, demoDb, DEMO_USER, CATEGORIES } from "@/lib/demo-data";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { QuestionContent } from "@/components/shared/MathRenderer";
+import { useGrades } from "@/lib/hooks";
 
 export default function AutoExamPage() {
+  const activeGrades = useGrades();
+
   const router = useRouter();
   const [step, setStep] = useState<'config' | 'preview'>('config');
   const [title, setTitle] = useState("");
@@ -247,7 +250,7 @@ export default function AutoExamPage() {
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">Lớp</label>
                   <select value={grade} onChange={e => setGrade(Number(e.target.value) as Grade)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
-                    {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+                    {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
                   </select>
                 </div>
                 <div>

@@ -19,8 +19,11 @@ import { ImportDialog } from "@/components/shared/ImportDialog";
 import { DEMO_USER } from "@/lib/demo-data";
 import { parseContentToDocxParagraphs, downloadDocx } from "@/lib/export/word";
 import { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } from "docx";
+import { useGrades } from "@/lib/hooks";
 
 export default function QuestionsPage() {
+  const activeGrades = useGrades();
+
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [viewMode, setViewMode] = useState<"list" | "grid">("list");
@@ -437,7 +440,7 @@ export default function QuestionsPage() {
                 <label className="block text-xs font-medium text-slate-500 mb-1">Lớp</label>
                 <select value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value as Grade | "")} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
                   <option value="">Tất cả</option>
-                  {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                  {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                 </select>
               </div>
               <div>

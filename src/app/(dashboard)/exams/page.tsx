@@ -13,6 +13,7 @@ import type { Exam, Grade, ExamStatus } from "@/types";
 import { toast } from "sonner";
 import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { useAuthStore } from "@/stores/auth-store";
+import { useGrades } from "@/lib/hooks";
 
 const EXAM_STATUS_CONFIG: Record<ExamStatus, { label: string; color: string; icon: string }> = {
   personal: { label: 'Cá nhân', color: 'bg-slate-100 text-slate-600 border-slate-200', icon: '🔒' },
@@ -24,6 +25,8 @@ const EXAM_STATUS_CONFIG: Record<ExamStatus, { label: string; color: string; ico
 type TabType = 'personal' | 'shared';
 
 export default function ExamsPage() {
+  const activeGrades = useGrades();
+
   const [exams, setExams] = useState<Exam[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
@@ -295,7 +298,7 @@ export default function ExamsPage() {
             </div>
             <select value={selectedGrade} onChange={(e) => setSelectedGrade(e.target.value as Grade | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
               <option value="">Tất cả lớp</option>
-              {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
             </select>
           </div>
 

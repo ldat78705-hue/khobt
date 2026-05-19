@@ -17,9 +17,12 @@ import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle,
 } from "docx";
 import { downloadDocx, parseContentToDocxParagraphs } from "@/lib/export/word";
+import { useGrades } from "@/lib/hooks";
 
 
 export default function QuickExportPage() {
+  const activeGrades = useGrades();
+
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -258,7 +261,7 @@ export default function QuickExportPage() {
             </div>
             <select value={selectedGrade} onChange={e => setSelectedGrade(e.target.value as Grade | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
               <option value="">Tất cả lớp</option>
-              {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
             </select>
             <select value={selectedTopic} onChange={e => setSelectedTopic(e.target.value)} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 max-w-[180px] truncate">
               <option value="">Tất cả danh mục</option>

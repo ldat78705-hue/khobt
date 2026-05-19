@@ -1,0 +1,47 @@
+PHÒNG GIÁO DỤC VÀ ĐÀO TẠO                 ĐỀ KIỂM TRA HỌC KỲ I
+                 ĐAN PHƯỢNG                                      NĂM HỌC 2018 – 2019
+                                                                                         MÔN: TOÁN 8
+                                                                                     Thời gian: 90 phút
+I. TRẮC NGHIỆM (2 điểm): Học sinh làm trực tiếp vào đề kiểm tra
+(Khoanh tròn chữ cái trước phương án trả lời đúng)
+Câu 1. Kết quả của phép tính $\frac{4x+1}{7{{x}^2}}-\frac{1-3x}{7{{x}^2}}$ bằng:
+
+$\frac{1}{7x}$ 
+$\frac{7x-2}{7{{x}^2}}$ 
+$\frac{7}{x}$ 
+$\frac{1}{x}$ 
+
+Câu 2.  Kết quả của phép tính $\frac{5x+2}{3x{{y}^2}}:\frac{10x+4}{{{x}^2}y}$ là:
+
+$\frac{6y}{{{x}^2}}$ 		          B. $\frac{6y}{x}$ 		     C. $\frac{x}{6y}$ 		          D.$\frac{x}{9{{y}^2}}$ 
+
+Câu 3. Cho ∆ABC vuông tại A có AB = 4cm, BC = 5cm. Diện tích ∆ABC bằng:
+
+6cm2
+10cm2
+12cm2
+20cm2
+
+Câu 4. Hình bình hành ABCD có  $\hat{A} = 2 \hat{B}$. Số đo góc D là:
+
+60°
+120°
+30°
+45°
+
+II. TỰ LUẬN (8 điểm): Học sinh làm bài vào giấy kiểm tra
+Bài 1 (1,5 điểm)
+Phân tích đa thức sau thành nhân tử: 2(x – 3) – y(x – 3)
+Tính nhanh gá trị của biểu thức 552 + 452 + 90.55
+Làm tính chia: (2x2y2 – 12xy3 + 6x2y) : 2xy
+Bài 2 (1,5 điểm)
+Tìm x, biết: 5x(x + 1) – 3(x + 1)(x – 1) = 2x2 + 23
+Thực hiện phép tính: $\frac{2}{x+y}+\frac{1}{x-y}+\frac{-2x}{{{x}^2}-{{y}^2}}$ 
+Bài 3 (1,5 điểm)
+Tìm số a để đa thức: P = 4x2 – 7x + a chia hết cho đa thức Q = x – 1
+Chứng tỏ rằng A = x2 + 2x + 3 > 0 với mọi số thực x
+Bài 4 (3,0 điểm). Cho tam giác ABC vuông tại A, đường cao AH. Gọi D là điểm đối xứng với H qua AB, E là điểm đối xứng với H qua AC. Gọi I là giao điểm của AB và DH, K là giao điểm của AC và EH.
+Tứ giác AIHK là hình gì? Vì sao?
+Chứng minh ba điểm D, E, A thẳng hàng
+Gọi M là trung điểm của BC. Chứng minh AM ⊥ IK
+Bài 5 (0,5 điểm). Tìm giá trị nhỏ nhất của biểu thức: M = $5{{x}^2}+9{{y}^2}-12xy+24x-48y+81$

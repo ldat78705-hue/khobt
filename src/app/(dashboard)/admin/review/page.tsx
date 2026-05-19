@@ -12,8 +12,11 @@ import { isDemoMode, demoDb, DEMO_USER } from "@/lib/demo-data";
 import { MathRenderer, QuestionContent, CloudinaryImage } from "@/components/shared/MathRenderer";
 import RichEditor from "@/components/shared/RichEditor";
 import { InlineEditor } from "@/components/shared/InlineEditor";
+import { useGrades } from "@/lib/hooks";
 
 export default function ReviewQuestionsPage() {
+  const activeGrades = useGrades();
+
   const [questions, setQuestions] = useState<Question[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState<QuestionStatus | ''>('pending');
@@ -164,7 +167,7 @@ export default function ReviewQuestionsPage() {
           <div className="ml-auto">
             <select value={gradeFilter} onChange={e => setGradeFilter(e.target.value as Grade | "")} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500">
               <option value="">Tất cả lớp</option>
-              {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+              {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
             </select>
           </div>
         </div>

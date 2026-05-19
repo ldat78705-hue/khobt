@@ -13,6 +13,7 @@ import { toast } from "sonner";
 import { MathRenderer } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { useRouter } from "next/navigation";
+import { useGrades } from "@/lib/hooks";
 
 interface ParsedQuestion {
   number: number;
@@ -30,6 +31,8 @@ interface ParsedQuestion {
 }
 
 export default function ImportWordPage() {
+  const activeGrades = useGrades();
+
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -359,7 +362,7 @@ export default function ImportWordPage() {
                     onChange={e => setGlobalGrade(Number(e.target.value) as Grade)}
                     className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500"
                   >
-                    {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+                    {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
                   </select>
                 </div>
                 <div>

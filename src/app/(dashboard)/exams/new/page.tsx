@@ -11,6 +11,7 @@ import type { Grade } from "@/types";
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import { cn } from "@/lib/utils";
+import { useGrades } from "@/lib/hooks";
 
 interface ExamTemplate {
   id: string;
@@ -33,6 +34,8 @@ const EXAM_TEMPLATES: ExamTemplate[] = [
 ];
 
 export default function NewExamPage() {
+  const activeGrades = useGrades();
+
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [title, setTitle] = useState("");
@@ -149,7 +152,7 @@ export default function NewExamPage() {
                 <div>
                   <label className="block text-sm font-medium text-slate-600 mb-1.5">Lớp *</label>
                   <select value={grade} onChange={(e) => setGrade(Number(e.target.value) as Grade)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-                    {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                    {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                   </select>
                 </div>
                 <div>

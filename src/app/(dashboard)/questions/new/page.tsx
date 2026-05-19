@@ -11,8 +11,11 @@ import type { Grade, Topic, Difficulty, QuestionType, QuestionOption } from "@/t
 import { toast } from "sonner";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
 import RichEditor from "@/components/shared/RichEditor";
+import { useGrades } from "@/lib/hooks";
 
 export default function NewQuestionPage() {
+  const activeGrades = useGrades();
+
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [content, setContent] = useState("");
@@ -125,7 +128,7 @@ export default function NewQuestionPage() {
               <div>
                 <label className="block text-sm font-medium text-slate-600 mb-1.5">Lớp *</label>
                 <select value={grade} onChange={(e) => setGrade(Number(e.target.value) as Grade)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-                  {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                  {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                 </select>
               </div>
               <div>

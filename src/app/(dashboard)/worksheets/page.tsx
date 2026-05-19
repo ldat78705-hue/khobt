@@ -14,6 +14,7 @@ import { toast } from "sonner";
 import { QuestionContent, MathRenderer } from "@/components/shared/MathRenderer";
 
 import { exportToWord } from "@/lib/export/word";
+import { useGrades } from "@/lib/hooks";
 
 interface WorksheetConfig {
   title: string;
@@ -36,6 +37,8 @@ const DEFAULT_CONFIG: WorksheetConfig = {
 };
 
 export default function WorksheetPage() {
+  const activeGrades = useGrades();
+
   const [step, setStep] = useState<'select' | 'preview'>('select');
   const [questions, setQuestions] = useState<Question[]>([]);
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
@@ -243,7 +246,7 @@ export default function WorksheetPage() {
                 </div>
                 <select value={filterGrade} onChange={e => setFilterGrade(e.target.value as Grade | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
                   <option value="">Tất cả lớp</option>
-                  {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+                  {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
                 </select>
                 <select value={filterCategoryId} onChange={e => setFilterCategoryId(e.target.value)} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 max-w-[200px] truncate">
                   <option value="">Tất cả danh mục</option>

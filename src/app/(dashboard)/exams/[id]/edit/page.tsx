@@ -14,6 +14,7 @@ import type { Exam, ExamQuestion, Question, Grade, Topic, Difficulty } from "@/t
 import { toast } from "sonner";
 import { QuestionContent } from "@/components/shared/MathRenderer";
 import { isDemoMode, demoDb } from "@/lib/demo-data";
+import { useGrades } from "@/lib/hooks";
 
 type TabMode = 'from_bank' | 'manual';
 
@@ -34,6 +35,8 @@ const EMPTY_INLINE: InlineQuestion = {
 };
 
 export default function EditExamPage() {
+  const activeGrades = useGrades();
+
   const params = useParams();
   const router = useRouter();
   const examId = params.id as string;
@@ -449,7 +452,7 @@ export default function EditExamPage() {
                     <div className="flex gap-2">
                       <select value={filterGrade} onChange={(e) => setFilterGrade(e.target.value as Grade | "")} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500">
                         <option value="">Tất cả lớp</option>
-                        {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
+                        {activeGrades.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                       </select>
                       <select value={filterTopic} onChange={(e) => setFilterTopic(e.target.value)} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500 max-w-[150px] truncate">
                         <option value="">Tất cả danh mục</option>
@@ -521,7 +524,7 @@ export default function EditExamPage() {
                     <div>
                       <label className="block text-xs font-medium text-slate-500 mb-1">Lớp</label>
                       <select value={inlineQ.grade} onChange={e => setInlineQ({ ...inlineQ, grade: Number(e.target.value) })} className="w-full px-2 py-2 border border-slate-200 rounded-lg text-xs">
-                        {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
+                        {activeGrades.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
                       </select>
                     </div>
                     <div>
