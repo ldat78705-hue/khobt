@@ -8,7 +8,8 @@ export function InlineEditor({ value, onChange, className, placeholder }: { valu
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
 
   // Phân tích văn bản thành các token: text, inline-math, block-math, image
-  const tokens = [];
+  type Token = { type: 'text' | 'inline-math' | 'block-math' | 'image'; content: string };
+  const tokens: Token[] = [];
   const regex = /(\$\$[\s\S]*?\$\$|\$[^$]+?\$|!\[.*?\]\(.*?\))/g;
   let lastIndex = 0;
   let match;
