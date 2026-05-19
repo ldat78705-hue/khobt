@@ -3,6 +3,8 @@ import { getDatabaseProvider } from '@/lib/neon';
 import * as neonQueries from '@/lib/neon/queries';
 import { getCurrentUser } from '@/lib/neon/auth';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(req: NextRequest) {
   const provider = getDatabaseProvider();
   

@@ -409,9 +409,6 @@ function CategoryRow({
             {hasChildren && (
               <span className="text-[10px] text-slate-400">{children.length} con</span>
             )}
-            {!cat.is_active && (
-              <span className="px-2 py-0.5 text-xs font-medium bg-red-100 text-red-600 rounded-full">Ẩn</span>
-            )}
             {cat.question_count !== undefined && (
               <span className="px-1.5 py-0.5 text-[10px] font-medium bg-slate-100 text-slate-500 rounded border border-slate-200">
                 {cat.question_count} câu hỏi
@@ -425,9 +422,6 @@ function CategoryRow({
           <button onClick={() => handleMove(cat, 'up')} className="p-1.5 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700" title="Lên trên"><ArrowUp className="w-3.5 h-3.5" /></button>
           <button onClick={() => handleMove(cat, 'down')} className="p-1.5 rounded hover:bg-slate-200 text-slate-400 hover:text-slate-700" title="Xuống dưới"><ArrowDown className="w-3.5 h-3.5" /></button>
           
-          <button onClick={() => toggleActive(cat.id, cat.is_active)} className={cn("px-2.5 py-1 text-xs font-medium rounded-lg ml-2", cat.is_active ? "text-yellow-600 bg-yellow-50 hover:bg-yellow-100" : "text-green-600 bg-green-50 hover:bg-green-100")}>
-            {cat.is_active ? "Ẩn" : "Hiện"}
-          </button>
           <button onClick={() => handleEdit(cat)} className="p-2 rounded-lg hover:bg-slate-100 text-slate-400 hover:text-blue-600"><Edit className="w-4 h-4" /></button>
           <button onClick={() => handleDelete(cat.id)} className="p-2 rounded-lg hover:bg-red-50 text-slate-400 hover:text-red-600"><Trash2 className="w-4 h-4" /></button>
         </div>

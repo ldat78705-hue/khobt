@@ -333,9 +333,32 @@ export default function QuestionsPage() {
   const hasFilters = selectedGrade || selectedTopic || selectedCategoryId || selectedDifficulty || selectedType || selectedStatus || filterHasSolution || filterHasImages;
 
   // Lọc danh mục theo lớp đã chọn
-  const filteredCategories = selectedGrade 
+  const rawFilteredCategories = selectedGrade 
     ? categories.filter(c => c.grade === Number(selectedGrade) || c.grade === null)
     : categories;
+
+  // Xây dựng cây hiển thị: Parent -> Children
+  const displayCategories: any[] = [];
+  const parents = rawFilteredCategories.filter(c => !c.parent_id).sort((a, b) => a.sort_order - b.sort_order);
+  
+  for (const p of parents) {
+    displayCategories.push({ ...p, displayName: p.name });
+    const children = rawFilteredCategories
+      .filter(c => c.parent_id === p.id)
+      .sort((a, b) => a.sort_order - b.sort_order);
+    for (const child of children) {
+      displayCategories.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+    }
+  }
+  
+  // Xử lý các node bị mồ côi (có parent_id nhưng parent không tồn tại trong list)
+  const allHandledIds = new Set(displayCategories.map(c => c.id));
+  const orphans = rawFilteredCategories
+    .filter(c => !allHandledIds.has(c.id))
+    .sort((a, b) => a.sort_order - b.sort_order);
+  for (const orphan of orphans) {
+    displayCategories.push({ ...orphan, displayName: orphan.name });
+  }
 
   return (
     <>
@@ -421,7 +444,7 @@ export default function QuestionsPage() {
                 <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề (Danh mục)</label>
                 <select value={selectedCategoryId} onChange={(e) => setSelectedCategoryId(e.target.value)} className="w-full px-3 py-2 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
                   <option value="">Tất cả danh mục</option>
-                  {filteredCategories.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
+                  {displayCategories.map((c) => <option key={c.id} value={c.id}>{c.displayName}</option>)}
                 </select>
               </div>
               <div>

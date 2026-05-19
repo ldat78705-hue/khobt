@@ -247,7 +247,19 @@ export default function WorksheetPage() {
                 </select>
                 <select value={filterCategoryId} onChange={e => setFilterCategoryId(e.target.value)} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 max-w-[200px] truncate">
                   <option value="">Tất cả danh mục</option>
-                  {categories.filter(c => filterGrade ? c.grade === Number(filterGrade) : true).map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
+                  {(() => {
+                    const raw = categories.filter(c => filterGrade ? c.grade === Number(filterGrade) : true);
+                    const display: any[] = [];
+                    const parents = raw.filter(c => !c.parent_id).sort((a,b) => a.sort_order - b.sort_order);
+                    for (const p of parents) {
+                      display.push({ ...p, displayName: p.name });
+                      const children = raw.filter(c => c.parent_id === p.id).sort((a,b) => a.sort_order - b.sort_order);
+                      for (const child of children) display.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+                    }
+                    const handled = new Set(display.map(c => c.id));
+                    for (const orphan of raw.filter(c => !handled.has(c.id))) display.push({ ...orphan, displayName: orphan.name });
+                    return display.map(c => <option key={c.id} value={c.id}>{c.displayName}</option>);
+                  })()}
                 </select>
                 <select value={filterDifficulty} onChange={e => setFilterDifficulty(e.target.value as Difficulty | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
                   <option value="">Tất cả mức độ</option>
