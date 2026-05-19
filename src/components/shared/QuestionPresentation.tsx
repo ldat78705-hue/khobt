@@ -152,8 +152,8 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
       </div>
 
       {/* Main content area */}
-      <div className="flex-1 flex items-center justify-center px-8 py-6 overflow-auto">
-        <div className="w-full max-w-[1400px] mx-auto text-white">
+      <div className="flex-1 overflow-auto px-8 py-6">
+        <div className="min-h-full flex flex-col justify-center max-w-[1400px] mx-auto text-white">
           {/* Question Slide */}
           {activePart === 'question' && (
             <div className="bg-white/[0.07] backdrop-blur-sm rounded-3xl p-10 border border-white/10 shadow-2xl animate-fadeIn">

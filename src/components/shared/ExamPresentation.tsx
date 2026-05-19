@@ -214,8 +214,8 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
       </div>
 
       {/* Main slide area */}
-      <div className="flex-1 flex items-center justify-center px-8 py-6 overflow-hidden">
-        <div className="w-full max-w-[1200px] mx-auto">
+      <div className="flex-1 overflow-auto px-8 py-6">
+        <div className="min-h-full flex flex-col justify-center max-w-[1200px] mx-auto">
           {/* ============ COVER SLIDE ============ */}
           {slideType === "cover" && (
             <div className="text-center text-white space-y-8 animate-fadeIn">

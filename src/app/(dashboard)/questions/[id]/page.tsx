@@ -270,9 +270,9 @@ export default function QuestionDetailPage() {
         title="Chi tiết bài tập"
         actions={
           <div className="flex items-center gap-2">
-            <Link href="/questions" className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 font-medium">
+            <button onClick={() => window.history.length > 2 ? router.back() : router.push('/questions')} className="flex items-center gap-2 text-sm text-slate-500 hover:text-slate-700 font-medium">
               <ArrowLeft className="w-4 h-4" /> Quay lại
-            </Link>
+            </button>
           </div>
         }
       />

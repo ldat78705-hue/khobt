@@ -20,8 +20,10 @@ import { DEMO_USER } from "@/lib/demo-data";
 import { parseContentToDocxParagraphs, downloadDocx } from "@/lib/export/word";
 import { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } from "docx";
 import { useGrades } from "@/lib/hooks";
+import { useRouter } from "next/navigation";
 
 export default function QuestionsPage() {
+  const router = useRouter();
   const activeGrades = useGrades();
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -571,18 +573,21 @@ export default function QuestionsPage() {
             {questions.map((q) => (
               <div
                 key={q.id}
+                onClick={() => router.push(`/questions/${q.id}`)}
                 className={cn(
-                  "bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group",
+                  "bg-white rounded-2xl border border-slate-100 p-5 shadow-sm hover:shadow-md transition-all group cursor-pointer",
                   selectedIds.includes(q.id) && "ring-2 ring-blue-500 border-blue-200"
                 )}
               >
                 <div className="flex items-start gap-3">
-                  <input
-                    type="checkbox"
-                    checked={selectedIds.includes(q.id)}
-                    onChange={() => toggleSelect(q.id)}
-                    className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500"
-                  />
+                  <div onClick={(e) => e.stopPropagation()}>
+                    <input
+                      type="checkbox"
+                      checked={selectedIds.includes(q.id)}
+                      onChange={() => toggleSelect(q.id)}
+                      className="mt-1 w-4 h-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
+                    />
+                  </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-sm text-slate-800 leading-relaxed line-clamp-3">
                       {q.question_code && <span className="inline-block px-1.5 py-0.5 text-[10px] font-bold bg-blue-100 text-blue-700 rounded mr-2 align-middle font-mono">{q.question_code}</span>}
@@ -603,7 +608,7 @@ export default function QuestionsPage() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity" onClick={(e) => e.stopPropagation()}>
                     <button onClick={() => handleToggleFavorite(q.id)} className={cn("p-2 rounded-lg transition-colors", favoriteIds.includes(q.id) ? "text-red-500 bg-red-50" : "text-slate-400 hover:text-red-500 hover:bg-red-50")} title="Yêu thích">
                       <Heart className={cn("w-4 h-4", favoriteIds.includes(q.id) && "fill-current")} />
                     </button>
