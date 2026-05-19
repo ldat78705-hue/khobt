@@ -221,7 +221,7 @@ export default function ReviewQuestionsPage() {
                 {/* Meta */}
                 <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-2.5 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {selectedQuestion.grade}</span>
-                  <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(selectedQuestion.topic)}</span>
+                  <span className="px-2.5 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{(selectedQuestion as any).category_name || getTopicLabel(selectedQuestion.topic)}</span>
                   <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(selectedQuestion.difficulty)}`}>{getDifficultyLabel(selectedQuestion.difficulty)}</span>
                   <span className="px-2.5 py-0.5 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">{getQuestionTypeLabel(selectedQuestion.question_type)}</span>
                 </div>

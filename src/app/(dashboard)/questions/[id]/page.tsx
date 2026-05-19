@@ -296,7 +296,7 @@ export default function QuestionDetailPage() {
                 <span className={`px-2.5 py-0.5 text-xs font-medium rounded-full border ${statusInfo.color}`}>{statusInfo.label}</span>
               )}
               <span className="px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {question.grade}</span>
-              <span className="px-3 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(question.topic)}</span>
+              <span className="px-3 py-1 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{(question as any).category_name || getTopicLabel(question.topic)}</span>
               <span className={`px-3 py-1 text-xs font-medium rounded-full border ${getDifficultyColor(question.difficulty)}`}>{getDifficultyLabel(question.difficulty)}</span>
               <span className="px-3 py-1 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">{getQuestionTypeLabel(question.question_type)}</span>
             </div>

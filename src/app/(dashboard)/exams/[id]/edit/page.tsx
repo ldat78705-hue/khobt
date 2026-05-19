@@ -44,7 +44,8 @@ export default function EditExamPage() {
   const [showQuestionPicker, setShowQuestionPicker] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [filterGrade, setFilterGrade] = useState<Grade | "">("");
-  const [filterTopic, setFilterTopic] = useState<Topic | "">("");
+  const [filterTopic, setFilterTopic] = useState("");
+  const [categories, setCategories] = useState<any[]>([]);
   const [filterDifficulty, setFilterDifficulty] = useState<Difficulty | "">("");
   const [dragIndex, setDragIndex] = useState<number | null>(null);
   const [dragOverIndex, setDragOverIndex] = useState<number | null>(null);
@@ -156,7 +157,7 @@ export default function EditExamPage() {
       } else {
         const params = new URLSearchParams();
         if (filterGrade) params.append('grade', String(filterGrade));
-        if (filterTopic) params.append('topic', filterTopic);
+        if (filterTopic) params.append('category_id', filterTopic);
         if (filterDifficulty) params.append('difficulty', filterDifficulty);
         if (searchQuery) params.append('search', searchQuery);
         params.append('limit', '30');
@@ -172,6 +173,7 @@ export default function EditExamPage() {
   }, [filterGrade, filterTopic, filterDifficulty, searchQuery]);
 
   useEffect(() => { fetchExam(); }, [fetchExam]);
+  useEffect(() => { fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {}); }, []);
   useEffect(() => { if (showQuestionPicker && pickerTab === 'from_bank') fetchAvailableQuestions(); }, [showQuestionPicker, fetchAvailableQuestions, pickerTab]);
 
   const addQuestion = async (questionId: string) => {
@@ -212,7 +214,7 @@ export default function EditExamPage() {
             points: inlineQ.points,
             inline_question: {
               content: inlineQ.content, answer: inlineQ.answer, solution: inlineQ.solution,
-              grade: inlineQ.grade, topic: inlineQ.topic,
+              grade: inlineQ.grade, topic: "so_hoc", category_id: inlineQ.topic || undefined,
               difficulty: inlineQ.difficulty, question_type: inlineQ.question_type,
             },
           }),
@@ -449,9 +451,19 @@ export default function EditExamPage() {
                         <option value="">Tất cả lớp</option>
                         {GRADES.map((g) => <option key={g.value} value={g.value}>{g.label}</option>)}
                       </select>
-                      <select value={filterTopic} onChange={(e) => setFilterTopic(e.target.value as Topic | "")} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500">
-                        <option value="">Tất cả chuyên đề</option>
-                        {TOPICS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                      <select value={filterTopic} onChange={(e) => setFilterTopic(e.target.value)} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500 max-w-[150px] truncate">
+                        <option value="">Tất cả danh mục</option>
+                        {(() => {
+                          const raw = categories.filter(c => filterGrade ? c.grade === Number(filterGrade) : true);
+                          const display: any[] = [];
+                          const parents = raw.filter(c => !c.parent_id).sort((a,b) => a.sort_order - b.sort_order);
+                          for (const p of parents) {
+                            display.push({ ...p, displayName: p.name });
+                            const children = raw.filter(c => c.parent_id === p.id).sort((a,b) => a.sort_order - b.sort_order);
+                            for (const child of children) display.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+                          }
+                          return display.map(c => <option key={c.id} value={c.id}>{c.displayName}</option>);
+                        })()}
                       </select>
                       <select value={filterDifficulty} onChange={(e) => setFilterDifficulty(e.target.value as Difficulty | "")} className="px-3 py-1.5 border border-slate-200 rounded-lg text-xs focus:outline-none focus:border-blue-500">
                         <option value="">Tất cả mức độ</option>
@@ -472,7 +484,7 @@ export default function EditExamPage() {
                               <div className="flex items-center gap-2 mt-2">
                                 <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {q.grade}</span>
                                 <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
-                                <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(q.topic)}</span>
+                                <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{(q as any).category_name || getTopicLabel(q.topic)}</span>
                               </div>
                             </div>
                             <button onClick={() => !isAdded && addQuestion(q.id)} disabled={isAdded}
@@ -514,8 +526,9 @@ export default function EditExamPage() {
                     </div>
                     <div>
                       <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề</label>
-                      <select value={inlineQ.topic} onChange={e => setInlineQ({ ...inlineQ, topic: e.target.value })} className="w-full px-2 py-2 border border-slate-200 rounded-lg text-xs">
-                        {TOPICS.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+                      <select value={inlineQ.topic} onChange={e => setInlineQ({ ...inlineQ, topic: e.target.value })} className="w-full px-2 py-2 border border-slate-200 rounded-lg text-xs truncate">
+                        <option value="">Chọn danh mục</option>
+                        {categories.filter(c => c.grade === inlineQ.grade && c.parent_id !== null).map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                       </select>
                     </div>
                     <div>

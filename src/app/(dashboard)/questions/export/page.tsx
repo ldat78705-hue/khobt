@@ -25,7 +25,8 @@ export default function QuickExportPage() {
   const [selectedIds, setSelectedIds] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedGrade, setSelectedGrade] = useState<Grade | "">("");
-  const [selectedTopic, setSelectedTopic] = useState<Topic | "">("");
+  const [selectedTopic, setSelectedTopic] = useState("");
+  const [categories, setCategories] = useState<any[]>([]);
   const [selectedDifficulty, setSelectedDifficulty] = useState<Difficulty | "">("");
   const [selectedType, setSelectedType] = useState<QuestionType | "">("");
   const [isExporting, setIsExporting] = useState(false);
@@ -51,7 +52,7 @@ export default function QuickExportPage() {
       } else {
         const params = new URLSearchParams();
         if (selectedGrade) params.append("grade", selectedGrade.toString());
-        if (selectedTopic) params.append("topic", selectedTopic);
+        if (selectedTopic) params.append("category_id", selectedTopic);
         if (selectedDifficulty) params.append("difficulty", selectedDifficulty);
         if (selectedType) params.append("question_type", selectedType);
         if (searchQuery) params.append("search", searchQuery);
@@ -74,6 +75,7 @@ export default function QuickExportPage() {
   }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, searchQuery]);
 
   useEffect(() => { fetchQuestions(); }, [fetchQuestions]);
+  useEffect(() => { fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {}); }, []);
 
   const toggleSelect = (id: string) => {
     setSelectedIds(prev => prev.includes(id) ? prev.filter(i => i !== id) : [...prev, id]);
@@ -258,9 +260,19 @@ export default function QuickExportPage() {
               <option value="">Tất cả lớp</option>
               {GRADES.map(g => <option key={g.value} value={g.value}>{g.label}</option>)}
             </select>
-            <select value={selectedTopic} onChange={e => setSelectedTopic(e.target.value as Topic | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
-              <option value="">Tất cả chuyên đề</option>
-              {TOPICS.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+            <select value={selectedTopic} onChange={e => setSelectedTopic(e.target.value)} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 max-w-[180px] truncate">
+              <option value="">Tất cả danh mục</option>
+              {(() => {
+                const raw = categories.filter(c => selectedGrade ? c.grade === Number(selectedGrade) : true);
+                const display: any[] = [];
+                const parents = raw.filter(c => !c.parent_id).sort((a,b) => a.sort_order - b.sort_order);
+                for (const p of parents) {
+                  display.push({ ...p, displayName: p.name });
+                  const children = raw.filter(c => c.parent_id === p.id).sort((a,b) => a.sort_order - b.sort_order);
+                  for (const child of children) display.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+                }
+                return display.map(c => <option key={c.id} value={c.id}>{c.displayName}</option>);
+              })()}
             </select>
             <select value={selectedDifficulty} onChange={e => setSelectedDifficulty(e.target.value as Difficulty | "")} className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500">
               <option value="">Tất cả mức độ</option>
@@ -349,7 +361,7 @@ export default function QuickExportPage() {
                       </div>
                       <div className="flex items-center gap-2 mt-2 flex-wrap">
                         <span className="px-2 py-0.5 text-xs font-medium bg-slate-100 text-slate-600 rounded-full">Toán {q.grade}</span>
-                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(q.topic)}</span>
+                        <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{(q as any).category_name || getTopicLabel(q.topic)}</span>
                         <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
                         <span className="px-2 py-0.5 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
                       </div>

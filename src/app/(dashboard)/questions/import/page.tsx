@@ -567,7 +567,7 @@ export default function ImportWordPage() {
                               {getQuestionTypeLabel(q.question_type as any)}
                             </span>
                             <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">
-                              {getTopicLabel(q.topic as any)}
+                              {(q as any).category_name || getTopicLabel(q.topic as any)}
                             </span>
                             <span className="px-2 py-0.5 text-xs font-medium bg-green-50 text-green-600 rounded-full">
                               {getDifficultyLabel(q.difficulty as any)}

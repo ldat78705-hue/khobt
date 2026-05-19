@@ -31,7 +31,8 @@ export default function StatsPage() {
 
         qs.forEach(q => {
           byGrade[q.grade] = (byGrade[q.grade] || 0) + 1;
-          byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
+          const t = (q as any).category_name || q.topic;
+          byTopic[t] = (byTopic[t] || 0) + 1;
           byDifficulty[q.difficulty] = (byDifficulty[q.difficulty] || 0) + 1;
         });
 
@@ -70,7 +71,8 @@ export default function StatsPage() {
 
           qs.forEach(q => {
             byGrade[q.grade] = (byGrade[q.grade] || 0) + 1;
-            byTopic[q.topic] = (byTopic[q.topic] || 0) + 1;
+            const t = (q as any).category_name || q.topic;
+            byTopic[t] = (byTopic[t] || 0) + 1;
             byDifficulty[q.difficulty] = (byDifficulty[q.difficulty] || 0) + 1;
           });
 

@@ -6,7 +6,7 @@ import {
   LayoutDashboard, BookOpen, FileText, Settings,
   Users, ChevronLeft, ChevronRight, GraduationCap, Plus,
   LogOut, FolderTree, CheckCircle, Heart, Bookmark, Sparkles,
-  BarChart3, Clock, Download, ClipboardList, Wrench, Upload
+  BarChart3, Clock, Download, ClipboardList, Wrench, Upload, Database
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useSidebarStore } from "@/stores/sidebar-store";
@@ -50,6 +50,7 @@ const adminOnlyItems = [
   { href: "/admin/categories", icon: FolderTree, label: "Quản lý danh mục" },
   { href: "/admin/grades", icon: GraduationCap, label: "Lớp & Loại đề" },
   { href: "/admin/users", icon: Users, label: "Quản lý người dùng" },
+  { href: "/admin/backup", icon: Database, label: "Sao lưu dữ liệu" },
   { href: "/admin/settings", icon: Settings, label: "Cài đặt hệ thống" },
 ];
 

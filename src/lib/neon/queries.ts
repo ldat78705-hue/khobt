@@ -272,10 +272,11 @@ export async function getExamById(id: string) {
 export async function getExamQuestions(examId: string) {
   const sql = getDb();
   return await sql`
-    SELECT eq.*, q.content, q.answer, q.solution, q.grade, q.topic,
+    SELECT eq.*, q.content, q.answer, q.solution, q.grade, q.topic, q.category_id, c.name as category_name,
       q.difficulty, q.question_type, q.options, q.correct_answer, q.images, q.tags
     FROM public.exam_questions eq
     JOIN public.questions q ON eq.question_id = q.id
+    LEFT JOIN public.categories c ON q.category_id = c.id
     WHERE eq.exam_id = ${examId}
     ORDER BY eq.sort_order
   ` as (ExamQuestion & Question)[];

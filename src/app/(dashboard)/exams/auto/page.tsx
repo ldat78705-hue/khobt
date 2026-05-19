@@ -418,7 +418,7 @@ export default function AutoExamPage() {
                         <QuestionContent content={q.content} images={q.images} className="text-sm text-slate-800 line-clamp-3" />
                         <div className="flex items-center gap-2 mt-2">
                           <span className={`px-2 py-0.5 text-xs font-medium rounded-full border ${getDifficultyColor(q.difficulty)}`}>{getDifficultyLabel(q.difficulty)}</span>
-                          <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{getTopicLabel(q.topic)}</span>
+                          <span className="px-2 py-0.5 text-xs font-medium bg-blue-50 text-blue-600 rounded-full">{(q as any).category_name || getTopicLabel(q.topic)}</span>
                           <span className="px-2 py-0.5 text-xs font-medium bg-purple-50 text-purple-600 rounded-full">{getQuestionTypeLabel(q.question_type)}</span>
                         </div>
                       </div>

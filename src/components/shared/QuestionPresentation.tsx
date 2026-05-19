@@ -98,7 +98,7 @@ export default function QuestionPresentation({ question, onClose }: QuestionPres
           <BookOpen className="w-5 h-5 text-blue-400" />
           <span className="font-semibold text-white truncate max-w-[500px]">
             {q.question_code && <span className="text-blue-300 font-mono mr-2">{q.question_code}</span>}
-            Bài tập — {getTopicLabel(q.topic)}
+            Bài tập — {(q as any).category_name || getTopicLabel(q.topic)}
           </span>
           <span className="text-white/40">|</span>
           <span className="text-white/60">Toán {q.grade}</span>

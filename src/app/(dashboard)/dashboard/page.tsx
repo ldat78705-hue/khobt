@@ -78,7 +78,8 @@ export default function DashboardPage() {
             allQ.forEach((q: any) => {
               gd[q.grade] = (gd[q.grade] || 0) + 1;
               dd[q.difficulty] = (dd[q.difficulty] || 0) + 1;
-              td[q.topic] = (td[q.topic] || 0) + 1;
+              const t = q.category_name || q.topic;
+              td[t] = (td[t] || 0) + 1;
             });
             setGradeDistribution(gd);
             setDifficultyDistribution(dd);

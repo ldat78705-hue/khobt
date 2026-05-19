@@ -248,9 +248,9 @@ export default function ExamPresentation({ exam, questions, onClose }: ExamPrese
                   <div className="flex-shrink-0 w-[1.8em] h-[1.8em] rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white font-bold flex items-center justify-center text-[0.8em] shadow-lg shadow-blue-500/30">
                     {qIndex + 1}
                   </div>
-                  <div className="flex items-center gap-3 text-[0.5em] text-white/50">
+                  <div className="flex items-center gap-2 mt-4 text-xs font-medium text-white/70">
+                    <span className="px-3 py-1 bg-white/10 rounded-full">{(q as any).category_name || getTopicLabel(q.topic)}</span>
                     <span className="px-3 py-1 bg-white/10 rounded-full">{getDifficultyLabel(q.difficulty)}</span>
-                    <span className="px-3 py-1 bg-white/10 rounded-full">{getTopicLabel(q.topic)}</span>
                     <span className="px-3 py-1 bg-white/10 rounded-full">{currentQuestion.points} đ</span>
                   </div>
                   <div className="ml-auto text-[0.45em] text-white/30">
