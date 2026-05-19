@@ -35,7 +35,7 @@ def parse_docx(file_path):
             
             # Stop parsing when hitting Answer/Solution indicators
             upper = text.upper()
-            if any(keyword in upper for keyword in ["ĐÁP ÁN", "HƯỚNG DẪN CHẤM", "LỜI GIẢI", "ĐÁP SỐ", "HƯỚNG DẪN GIẢI"]):
+            if any(keyword in upper for keyword in ["ĐÁP ÁN", "HƯỚNG DẪN", "LỜI GIẢI", "ĐÁP SỐ", "HẾT"]):
                 break
             
             lines.append(text)
@@ -69,7 +69,16 @@ for f in os.listdir(folder_path):
             q["source_file"] = f
             output_data.append(q)
 
-with open("D:\\khode\\import_50.json", "w", encoding="utf-8") as out_f:
-    json.dump(output_data, out_f, ensure_ascii=False, indent=2)
+# Deduplicate output_data based on content
+unique_data = []
+seen = set()
+for q in output_data:
+    content_clean = re.sub(r'\s+', '', q['content']).lower()
+    if content_clean not in seen:
+        seen.add(content_clean)
+        unique_data.append(q)
 
-print(f"Extracted {len(output_data)} questions.")
+with open("D:\\khode\\import_50.json", "w", encoding="utf-8") as out_f:
+    json.dump(unique_data, out_f, ensure_ascii=False, indent=2)
+
+print(f"Extracted {len(unique_data)} questions.")
