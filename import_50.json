@@ -1,0 +1,1202 @@
+[
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) . Nam thống kê lại độ dài quãng đường (đơn vị: km) mình đi bộ mỗi ngày trong tháng 9 và biểu diễn dưới dạng biểu đồ tần số tương đối ghép nhóm sau:\nTìm nhóm có tần số tương đối ghép nhóm lớn nhất. Xác định  tần số và tần số tương đối ghép nhóm của nhóm đó.\n2) . Một hộp có 20 viên bi với kích thước và khối lượng như nhau. Bạn Ngân viết lên các viên bi đó các số 1, 2, 3, ..., 20; hai viên bi khác nhau thì viết hai số khác nhau. Xét phép thử “Lấy ngẫu nhiên một viên bi trong hộp”. Tính xác suất biến cố: “Số xuất hiện trên viên bi được lấy ra chia 7 dư 1”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{2}{\\sqrt{x}-2}$ và $B=\\frac{3}{\\sqrt{x}-2}+\\frac{\\sqrt{x}+1}{\\sqrt{x}+2}-\\frac{2\\sqrt{x}}{4-x}$ với $x\\ge 0, x\\ne 4$\n1) . Tính giá trị của biểu thức $A$ khi $x=64$\n2) . Chứng minh rằng $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}-2}$\n3) . Cho $P=\\frac{A}{B}$. Tìm các giá trị của $x$ để $P\\ge \\frac{2}{x+2}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm) Cho .\n1) . Nhân dịp ngày Giỗ Tổ Hùng Vương, một siêu thị điện máy đã giảm giá nhiều mặt hàng để kích cầu mua sắm. Giá niêm yết của một chiếc tủ lạnh và một chiếc máy giặt có tổng số tiền là 25,4 triệu đồng. Tuy nhiên, trong dịp này tủ lạnh giảm 40% giá niêm yết và máy giặt giảm 25% giá niêm yết. Vì thế, cô Liên đã mua hai mặt hàng trên với tổng số tiền là 16,77 triệu đồng. Hỏi giá niêm yết của mỗi mặt hàng trên là bao nhiêu?\n2) . Một xí nghiệp sản xuất nước mắm dự định thu mua 120 tấn cá trong một thời gian nhất định, nhờ đổi mới phương pháp thu mua xí nghiệp đã mua vượt mức 6 tấn mỗi tuần. Vì vậy xí nghiệp đã hoàn thành kế hoạch sớm hơn 1 tuần và vượt mức 10 tấn cá. Tính số cá mà xí nghiệp phải mua mỗi tuần theo kế hoạch.\n3) . Cho phương trình: $4{{x}^2}-5x-3=0$ có hai nghiệm là ${{x}_1} , {{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức $S={{x}_1}+{{x}_2};$ $P={{x}_1}{{x}_2};$ $F=\\left( {{x}_1}+1 \\right)\\left( {{x}_2}+1 \\right)-\\left( {{x}_1}-{{x}_2} \\right)^2.$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) . Để làm một mô hình cái bút chì trang trí, người ta dùng một khối gỗ hình trụ và một khối gỗ hình nón có cùng đường kính đáy chồng khít lên nhau. Khối gỗ hình trụ có đường kính đáy là $20cm$, chiều cao là $30cm$. Khối gỗ hình nón có chiều cao là $15cm$. Tính thể tích gỗ cần dùng để làm mô hình này.\n2) . Cho đường tròn $\\left( O \\right)$, dây $CD$ cố định. Gọi $B$ là điểm chính giữa cung nhỏ $CD$, kẻ đường kính $AB$ cắt $CD$ tại $I$. Lấy điểm $H$ bất kỳ trên cung lớn $CD$, $HB$ cắt $CD$ tại $E$. Đường thẳng $AH$ cắt đường thẳng $CD$ tại $P$.\na) . Chứng minh: Tứ giác $PHIB$ nội tiếp.\nb). Chứng minh: $AH.AP=AI.AB$.\nc). Gọi $K$ là giao điểm của đường thẳng $AE$ và $BP$. Kẻ $KM\\bot AB$ cắt $AB$ tại $M$, cắt đường tròn $\\left( O \\right)$ tại $N$ . Chứng minh $N,I,H$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một công ty sản xuất dụng cụ thể thao nhận được một đơn đặt hàng sản xuất $8000$ quả bóng tennis. Công ty này sở hữu một số máy móc, mỗi máy móc có thể sản xuất $30$ quả bóng trong một giờ. Chi phí thiết lập các máy này là $200$ nghìn đồng cho mỗi máy. Khi được thiết lập, hoạt động sản xuất sẽ hoàn toàn diễn ra tự động dưới sự giám sát. Số tiền phải trả cho người giám sát là $192$ nghìn đồng một giờ (người này sẽ giám sát tất cả các máy hoạt động). Số máy móc công ty nên sử dụng là bao nhiêu để chi phí sản xuất là thấp nhất?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) . Nam thống kê lại độ dài quãng đường (đơn vị: km) mình đi bộ mỗi ngày trong tháng 9 và biểu diễn dưới dạng biểu đồ tần số tương đối ghép nhóm sau:\nTìm nhóm có tần số tương đối ghép nhóm lớn nhất. Xác định  tần số và tần số tương đối ghép nhóm của nhóm đó.\n2) . Một hộp có 20 viên bi với kích thước và khối lượng như nhau. Bạn Ngân viết lên các viên bi đó các số 1, 2, 3, ..., 20; hai viên bi khác nhau thì viết hai số khác nhau. Xét phép thử “Lấy ngẫu nhiên một viên bi trong hộp”. Tính xác suất biến cố: “Số xuất hiện trên viên bi được lấy ra chia 7 dư 1”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 10_converted_161851.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Hệ thống đăng kiểm quốc gia ghi nhận 2000 xe ô tô của cùng 1 loại xe tới đăng kiểm. Người ta thu được biểu đồ tần số ghép nhóm về số năm sử dụng tốt mà chưa phải sửa chữa lớn của xe như dưới đây\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm [8; 12)\n2) Bạn An là một thành viên của câu lạc bộ nhảy hiện đại khối 9 trong trường THCS. Để chọn học sinh trong CLB đó tham gia hoạt động văn nghệ chào mừng “Ngày nhà giáo Việt Nam” của trường, các học sinh trong CLB sử dụng hình thức bốc thăm với 20 lá thăm giống hệt nhau lần lượt ghi các số tự nhiên từ 1 tới 20 và được để trong hộp kín. Học sinh lấy được lá thăm ghi số chia hết cho 6 sẽ được tham gia. Bạn An là người được bốc thăm đầu tiên.\nXét phép thử “Bạn An bốc ngẫu nhiên 1 lá thăm” và biến cố B: ”Bạn An được tham gia hoạt động văn nghệ chào mừng Ngày nhà giáo Việt Nam của trường”. Tính xác suất của biến cố B.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}-1}{\\sqrt{x}}$; $B=\\frac{2\\sqrt{x}}{\\sqrt{x}+3}+\\frac{4}{\\sqrt{x}-3}+\\frac{x-4\\sqrt{x}+15}{9-x}$ với $x>0 ; x\\ne 9$\n1) Tính giá trị của biểu thức A khi x = 25.\n2) Chứng minh $B=\\frac{\\sqrt{x}-1}{\\sqrt{x}-3}$.\n3) Cho P = A: B. Tìm x nguyên để $\\left| P \\right|+P=0$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Trong một cuộc thi về “bữa ăn dinh dưỡng”, ban tổ chức yêu cầu để đảm bảo lượng dinh dưỡng hàng ngày thì mỗi gia đình có 4 thành viên cần $900$ đơn vị protein và $400$ đơn vị lipit trong thức ăn hàng ngày. Thực phẩm do ban tổ chức cung cấp bao gồm Thịt bò và Thịt heo. Biết $100$g thịt bò chứa $80$ đơn vị protein và $20$ đơn vị lipit; $100$g thịt heo chứa $60$ đơn vị protein và $40$ đơn vị lipit. Hỏi người nội trợ cần sử dụng bao nhiêu lượng thịt bò và thịt heo để đảm bảo đủ chất dinh dưỡng cho gia đình 4 thành viên.\n2) Hai bến sông A và B cách nhau 90km. Một ca nô đi xuôi dòng từ A đến B rồi ngược dòng từ B về A hết 8 giờ 45 phút. Biết vận tốc dòng nước là 3km/h, tính vận tốc riêng của ca nô.\n3) Cho phương trình ${{x}^2}-(m+1)x-1=0$ có nghiệm $x=1-\\sqrt{2}$. Tính bình phương của hiệu hai nghiệm trong phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n2) Cho đường tròn $(O,R)$ và dây $AB$ cố định (AB không là đường kính). Gọi $N$ là trung điểm của $AB.$ Qua $N,$ kẻ đường kính $CD$ của đường tròn $(O)$ ($C$ thuộc cung nhỏ $AB$). Lấy điểm $M$ bất kỳ trên cung lớn $AB (M\\ne A,M\\ne B)$,$MC$ cắt $AB$ tại $F.$ Hai đường thẳng $DM$ và $AB$ cắt nhau tại $E$.\na)  Chứng minh bốn điểm $M,N,C, E$ cùng thuộc một đường tròn.\nb) Hai đường thẳng $DF$ và $CE$ cắt nhau tại $I$. Chứng minh $KI.KM=KC.KD$ và $NE$ là tia phân giác của$\\widehat{MNI}$\nc) Chứng minh rằng: $\\frac{KC}{KD}=\\frac{CN}{DN}$",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nTìm diện tích lớn nhất của hình chữ nhật $MNPQ$ nội tiếp trong nửa đường tròn $\\left( O \\right)$ bán kính $10cm,$ biết một cạnh của hình chữ nhật nằm dọc trên đường kính của đường tròn (như hình vẽ).\nHẾT\nHƯỚNG DẪN",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Hệ thống đăng kiểm quốc gia ghi nhận 2000 xe ô tô của cùng 1 loại xe tới đăng kiểm. Người ta thu được biểu đồ tần số ghép nhóm về số năm sử dụng tốt mà chưa phải sửa chữa lớn của xe như dưới đây\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm [8; 12)\n2) Bạn An là một thành viên của câu lạc bộ nhảy hiện đại khối 9 trong trường THCS. Để chọn học sinh trong CLB đó tham gia hoạt động văn nghệ chào mừng “Ngày nhà giáo Việt Nam” của trường, các học sinh trong CLB sử dụng hình thức bốc thăm với 20 lá thăm giống hệt nhau lần lượt ghi các số tự nhiên từ 1 tới 20 và được để trong hộp kín. Học sinh lấy được lá thăm ghi số chia hết cho 6 sẽ được tham gia. Bạn An là người được bốc thăm đầu tiên.\nXét phép thử “Bạn An bốc ngẫu nhiên 1 lá thăm” và biến cố B: ”Bạn An được tham gia hoạt động văn nghệ chào mừng Ngày nhà giáo Việt Nam của trường”. Tính xác suất của biến cố B.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 11_converted_162036.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1).  Đo chiều cao (đơn vị là cm) của học sinh lớp 9A cho kết quả như sau;\n156\t\t157\t164\t166\t166\t165\t157\t154\t155\t158\t160\t163\t163\n161\t\t162\t159\t159\t160\t160\t160\t159\t158\t160\t160\t158\t163\n162 \t\t162\t162\t161\t162\t161\t163\t161\t163\t161\t164\t166\t165\n165\nHãy lập bảng tần số ghép nhóm với các nhóm [155; 158), [158; 161), [161; 164), [164;167).\nTính tần số tương đối của nhóm [161; 164)\n2) . Trong túi có 6 quả bóng bàn kích thước và chất liệu như nhau gồm 2 quả màu đỏ, 2 quả màu trắng, 2 quả màu xanh. Không nhìn vào túi mà lấy ra 2 quả bóng. Tính xác suất của biến cố A lấy được ít nhất một quả bóng màu đỏ.",
+    "topic": "khac",
+    "source_file": "Đề số 12_converted_162114.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức ${A = \\frac{ 3 \\sqrt{ x } - 2 } { 1 - \\sqrt{ x } }}$ và $B=\\frac{15\\sqrt{x}-11}{x+2\\sqrt{x}-3}-\\frac{2\\sqrt{x}+3}{\\sqrt{x}+3}$ với  ${x \\geq 0 , x \\neq 1}$\n1) . Tính giá trị của biểu thức $A$ khi $x=16$\n2) . Đặt $P=A+B$. Rút gọn biểu thức $P$\n3) . Tìm x để $3{{P}^2}-2P-1=0$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 12_converted_162114.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một người đi ô tô từ  $A$ đến $B$ cách nhau $100$ km với vận tốc xác định. Khi từ $B$ trở về $A,$ người đó đi theo đường khác dài hơn đường cũ $20$ km nhưng với vận tốc lớn hơn vận tốc lúc đi mỗi giờ $20$ km. Vì vậy thời gian về ít hơn thời gian đi $30$ phút. Tính vận tốc lúc đi.\n2) . Hai người thợ quét sơn một ngôi nhà. Nếu họ cùng làm thì trong 6 ngày xong việc. Nếu người thợ thứ nhất làm một mình trong 5 ngày rồi nghỉ, người thứ hai làm tiếp 4 ngày thì cả hai làm được $\\frac{7}{9}$ công việc. Hỏi nếu làm riêng thì mỗi người thợ phải làm trong bao nhiêu ngày để xong việc.\n3) . Biết phương trình x2 + ax + 5 = 0 có một nghiệm là x = $4 - \\sqrt{11}$. Tính tổng các bình phương hai nghiệm của phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 12_converted_162114.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) . Một bồn nước inox có dạng một hình trụ với chiều cao 1,75 m và bán kính đáy là 5 dm. Trong bồn đang chứa đầy nước, người ta tháo nước ở trong bồn ra cho đến khi mực nước trong bồn còn cao 1m. Hỏi số nước đã tháo ra ngoài là bao nhiêu lít? (Bỏ qua bề dày của bồn nước).\n2) . Cho đường tròn (O) cố định. Từ một điểm A cố định ở bên ngoài đường tròn (O), kẻ các tiếp tuyến AM và AN với đường tròn ( M;N là các tiếp điểm). Đường thẳng đi qua A cắt đường tròn (O) tại hai điểm B và C (B nằm giữa A và C). Gọi I là trung điểm của dây BC.\na) . Chứng minh rằng: AMON là tứ giác nội tiếp.\nb). Gọi K là giao điểm của MN và BC. Chứng minh rằng: AK.AI = AB.AC\nc). Xác định vị trí của cát tuyến ABC để $IM=2IN$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 12_converted_162114.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một cái sân hình vuông ABCD có cạnh là 8 m. Người ta muốn lát gạch màu khác để trang trí lên mảnh sân hình vuông MNPQ nội tiếp trong sân hình vuông ABCD. Tìm vị trí của M, N, P, Q để hình vuông MNPQ có diện tích nhỏ nhất\nHẾT",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 12_converted_162114.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Công ty điện lực thống kê lượng điện tiêu thụ (đơn vị: kWh) cúa một số hộ gia đinh trong một khu vực trong tháng. Dữ liệu được ghi lại như sau:\nLâp bảng tần số ghép nhóm theo các khoảng lương điện tiêu thụ sau: $\\left[ 100;130 \\right)$; $\\left[ 130;160 \\right)$; $\\left[ 160;190 \\right)$;  $\\left[ 190;220 \\right)$.\n2) Một hộp chứa $4$ tấm thẻ cùng loại được đánh số $2 ; 3 ; 5 ; 8$. Bạn Phi và bạn Thanh lần lượt mỗi người lấy ra $1$ tấm thẻ từ hộp (Biết trong mỗi đợt lấy thì bạn Phi lấy tấm thẻ trước và không bỏ tấm thẻ lại vào hộp). Tính xác suất của biến cố sau: $M$: “Tích các số ghi trên $2$ tấm thẻ là số lẻ\".",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}+4}{\\sqrt{x}-1}$ và $B=\\frac{3\\sqrt{x}+1}{x+2\\sqrt{x}-3}-\\frac{2}{\\sqrt{x}+3}$ với $x\\ge 0, x\\ne 1$.\n1) Tính giá trị của biểu thức$A$ tại $x=9$.\n2) Rút gọn biểu thức $B$.\n3) Tìm tất cả các giá trị của  x   để $\\frac{A}{B}=\\frac{x}{4}+5$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Bạn Bình mua một quyển từ điển và một món đồ chơi với tổng giá tiền theo\nniêm yết là $750$nghìn đồng. Vì Bình mua đúng dịp cửa hàng có chương trình khuyến mãi nên khi thanh toán giá quyển từ điển được giảm $20 \\%$giá món đồ chơi được giảm $10 \\% .$Do đó Bình chỉ phải trả $630$nghìn đồng. Hỏi Bình mua mỗi thứ giá bao nhiêu tiền.\n2) Một tổ dự định sản xuất $72$ sản phẩm trong một thời gian đã định. Nhưng thực tế tổ lại được giao $80$ sản phẩm. Mặc dù mỗi giờ tổ đó làm thêm $1$ sản phẩm so với dự kiến nhưng thời gian hoàn thành vẫn chậm hơn dự định $12$ phút. Tính số sản phẩm thực tế tổ đó đã làm được trong một giờ. Biết lúc đầu, mỗi giờ tổ đó dự kiến làm không quá $20$ sản phẩm.\n3) Cho phương trình ${{x}^2}-12x+4=0$ có hai nghiệm dương phân biệt ${{x}_1},{{x}_2}.$ Không giải phương trình, hãy tính giá trị của biểu thức $T=\\frac{x_1^2+x_2^2}{\\sqrt{{{x}_1}}+\\sqrt{{{x}_2}}}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một cái mũ bằng vải của nhà ảo thuật có dạng hình trụ và với kích thước mô phỏng như hình vẽ.\na) Hãy tính tổng diện tích vải cần có để làm nên cái mũ đó (không tính phần viền, mép dán) (làm tròn kết quả đến phần trăm ).\nb) Hãy tính thể tích phần có dạng hình nón của chiếc mũ đó  (làm tròn kết quả đến phần trăm).\n2) Cho (O;R) đường kính AB cố định. Dây CD vuông góc với AB tại H nằm giữa A\nvà O. Lấy điểm F thuộc cung AC nhỏ. BF cắt CD tại I; AF cắt tia DC tại K.\na) Chứng minh rằng tứ giác AHIF là tứ giác nội tiếp.\nb) Chứng minh rằng: HA.HB = HI.HK.\nc) Đường tròn ngoại tiếp $\\Delta$KIF cắt AI tại E. Chứng minh rằng khi H chuyển động trên đoạn OA thì E thuộc một đường tròn cố định .",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)     Công ty vàng bạc đá quý muốn làm một món đồ trang sức có hình hai hình cầu bằng nhau giao nhau như hình vẽ. Khối cầu có bán kính $25cm$khoảng cách giữa hai tâm hình cầu là $40cm$. Giá mạ vàng $1{{m}^2}$ là $4700000$đồng. Nhà sản xuất muốn mạ vàng xung quanh món đồ trang sức đó. Tính số tiền cần dùng để mạ vàng khối trang sức đó.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Công ty điện lực thống kê lượng điện tiêu thụ (đơn vị: kWh) cúa một số hộ gia đinh trong một khu vực trong tháng. Dữ liệu được ghi lại như sau:\nLâp bảng tần số ghép nhóm theo các khoảng lương điện tiêu thụ sau: $\\left[ 100;130 \\right)$; $\\left[ 130;160 \\right)$; Lời $\\left[ 160;190 \\right)$;  $\\left[ 190;220 \\right)$.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 14_converted_162221.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Khảo sát đánh giá của khách hàng về chất lượng một loại dịch vụ mới, số liệu được biểu diễn trong biểu đồ sau:\na) Lập bảng tần số tương đối cho mẫu số liệu.\nb) Vẽ biểu đồ tần số tương đối dạng biểu đồ hình quạt tròn biểu diễn dữ liệu.\n2)  Một hộp có 20 thẻ cùng loại, mỗi thẻ được ghi một trong các số 1; 2; 3; 4; 5; … ; 20, hai thẻ khác nhau thì ghi số khác nhau. Rút ngẫu nhiên một thẻ trong hộp. Tính xác suất của biến cố “Số xuất hiện trên thẻ được rút ra là số có một chữ số”.",
+    "topic": "khac",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}+4}{\\sqrt{x}}$ và $B=\\frac{2}{\\sqrt{x}+2}+\\frac{x+4}{x-4}$ với $x>0, x\\ne 4.$\n1) Tính giá trị của biểu thức $A$ khi $x=9.$\n2) Rút gọn biểu thức $B.$\n3) Cho $P=A. B$. Tìm giá trị của $x$ khi $\\left| P \\right|=P.$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một người gửi 200 triệu vào ngân hàng với lãi suất hàng năm là 5%. Vì bận việc, nên tới ngày nhận lãi năm thứ 2, người đó mới đến ngân hàng nhận lãi. Hỏi người đó đã nhận bao nhiêu tiền lãi (biết lãi suất mỗi năm không đổi)?\n2)  Trong kỳ thi tuyển sinh vào lớp 10 năm học 2023 – 2024, số thí sinh vào trường THPT A bằng  số thí sinh thi vào trường THPT B. Biết rằng tổng số phòng thi của cả hai trường là 80 phòng và mỗi phòng thi có đúng 24 thí sinh. Tính số thí sinh vào mỗi trường.\n3)  Cho phương trình ${{x}^2}-6x-2m+3=0.$ Tìm $m$ để phương trình có hai nghiệm ${{x}_1}, {{x}_2}$ thỏa mãn $x_1^2+x_2^2=20.$",
+    "topic": "phuong_trinh",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1)\na) Một tòa tháp có bóng trên mặt đất dài $53 m.$Biết rằng các tia nắng mặt trời tạo với mặt đất một góc ${{34}^0}.$  Tính chiều cao của tòa tháp (kết quả làm tròn đến chữ số thấp phân thứ nhất).\nb) Một dụng cụ gồm một phần có dạng hình trụ, phần còn lại có dạng hình nón. Các kích thước cho trên hình vẽ. Hãy tính diện tích mặt ngoài của dụng cụ (không tính nắp đậy).\n2) Cho đường tròn $\\left( O \\right)$ đường kính BC. Điểm A thuộc đường tròn thỏa mãn $AB<AC$(A khác B, A khác C). Lấy điểm D trên cạnh AC sao cho $AD=AB.$ Vẽ hình vuông BADE. Tia AE cắt $\\left( O \\right)$ tại F.\na) Tam giác FBC là tam giác gì? Tại sao?\nb) Chứng minh: $\\widehat{FDC}=\\widehat{FCD}$.\nc) Vẽ tia Bx là tiếp tuyến của $\\left( O \\right)$ tại B, Bx cắt CF tại I. Chứng minh ba điểm D, E, I  thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Cho một lớp học có 35 học sinh, các học sinh này tổ chức một số câu lạc bộ môn học. Mỗi học sinh tham gia đúng một câu lạc bộ. Nếu chọn ra 10 học sinh bất kì thì luôn có ít nhất 3 học sinh tham gia cùng một câu lạc bộ. Chứng minh có một câu lạc bộ gồm ít nhất 9 học sinh.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Khảo sát đánh giá của khách hàng về chất lượng một loại dịch vụ mới, số liệu được biểu diễn trong biểu đồ sau:\na) Lập bảng tần số tương đối cho mẫu số liệu.\nb) Vẽ biểu đồ tần số tương đối dạng biểu đồ hình quạt tròn biểu diễn dữ liệu.\n2)  Một hộp có 20 thẻ cùng loại, mỗi thẻ được ghi một trong các số 1; 2; 3; 4; 5; … ; 20, hai thẻ khác nhau thì ghi số khác nhau. Rút ngẫu nhiên một thẻ trong hộp. Tính xác suất của biến cố “Số xuất hiện trên thẻ được rút ra là số có một chữ số”.",
+    "topic": "khac",
+    "source_file": "Đề số 15_converted_162310.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1)  Cân nặng của các bạn học sinh lớp 9A (đơn vị: ki-lo-gam) có kết quả như sau:\nMẫu số liệu thống kê ở trên đã được ghép thành năm nhóm ứng với năm nửa khoảng: $\\left[ 50 ; 55 \\right)$,$\\left[ 55 ; 60 \\right)$,$\\left[ 60 ; 65 \\right)$,$\\left[ 65 ; 70 \\right)$,$\\left[ 70 ; 75 \\right)$. Lập bảng tần số ghép nhóm của mẫu số liệu ghép nhóm ở trên.\n2) Một bình đựng $12$ quả cầu được đánh số từ $1$ đến $12$ có kích thước và khối lượng như nhau. Chọn ngẫu nhiên một quả cầu. Tính xác suất biến cố $A$: “Chọn được quả cầu có số chia hết cho $3$” là bao nhiêu?",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức  và $A=\\frac{\\sqrt{x}-2}{\\sqrt{x}}$; $B=\\frac{2\\sqrt{x}}{\\sqrt{x}+3}+\\frac{\\sqrt{x}}{\\sqrt{x}-3}-\\frac{2x}{x-9}$ với $x>0;x\\ne 9$.\n1)  Tính giá trị của biều thức $A$ khi $x=16$.\n2) Chứng minh $B=\\frac{\\sqrt{x}}{\\sqrt{x}+3}$.\nTìm các giá trị nguyên của $x$ để $P<0$ với $P=A.B$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một xe khách và một xe du lịch khởi hành đồng thời từ $A$ đến $B$. Biết tốc độ của xe du lịch lớn hơn tốc độ xe khách là $20 \\text{km/h}$, do đó xe du lịch đến $B$ trước xe khách $50$ phút. Tính tốc độ của mỗi xe, biết quãng đường $AB$ dài $100 km$.\n2) Hai tổ sản xuất cùng làm chung một công việc thì sau $12$ giờ xong. Nếu tổ một làm một mình trong $2$ giờ, tổ hai làm một mình trong  $7$ giờ thì cả hai làm xong một  nửa công việc. Hỏi mỗi tổ làm một mình trong bao lâu thì xong công việc đó?\n3) Cho phương trình $m{{x}^2}+2\\left( m2 \\right)x+m3=0$ (m là tham số). Khi phương trình có nghiệm, tìm một hệ thức liên hệ giữa hai nghiệm của phương trình đã cho không phụ thuộc vào $m$.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Người ta làm mô hình một chiếc kem có phần trên dạng một nửa hình cầu, phần dưới dạng hình nón với mặt cắt và các kích thước như hình vẽ. Tính thể tích của mô hình đó (lấy $\\pi \\approx 3,14$ và làm tròn đến đơn vị $dm^3$).\n2) Cho đường tròn $\\left( O;R \\right)$ và điểm $M$ nằm ngoài đường tròn. Qua $M$ kẻ hai tiếp tuyến $MA$, $MB$ với đường tròn $\\left( O;R \\right)$( $A$, $B$ là các tiếp điểm). Đoạn thẳng $OM$ cắt đường thẳng $AB$ tại $H$ và cắt đường tròn $\\left( O;R \\right)$ tại điểm $I$.\na) Chứng minh bốn điểm $M$, $A$, $B$, $O$ cùng thuộc một đường tròn.\nb) Kẻ đường kính $AD$ của $\\left( O;R \\right)$. Đoạn thẳng $MD$ cắt đường tròn $\\left( O;R \\right)$ tại điểm $C$ khác $D$Chứng minh $M{{A}^2}=MH.MO=MC.MD$.\nc) Chứng minh $IH.IO=IM.OH$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Người ta cần làm một cái bồn chứa dạng hình trụ có thể tích $1000$lít bằng inox để chứa nước, tính bán kính của hình trụ đó sao cho diện tích toàn phần của bồn chứa đó là nhỏ nhất\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1)  Cân nặng của các bạn học sinh lớp 9A (đơn vị: ki-lo-gam) có kết quả như sau:\nMẫu số liệu thống kê ở trên đã được ghép thành năm nhóm ứng với năm nửa khoảng: $\\left[ 50 ; 55 \\right)$,$\\left[ 55 ; 60 \\right)$,$\\left[ 60 ; 65 \\right)$,$\\left[ 65 ; 70 \\right)$,$\\left[ 70 ; 75 \\right)$. Lập bảng tần số ghép nhóm của mẫu số liệu ghép nhóm ở trên.\n2) Một bình đựng $12$ quả cầu được đánh số từ $1$ đến $12$ có kích thước và khối lượng như nhau. Chọn ngẫu nhiên một quả cầu. Tính xác suất biến cố $A$: “Chọn được quả cầu có số chia hết cho $3$” là bao nhiêu?",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 16_converted_162724.docx"
+  },
+  {
+    "content": "Bài 1. (1,5 điểm)\n1) Phần thưởng trong một chương trình khuyến mãi của một cửa hàng là: ti vi, bàn ghế, tủ lạnh, máy tính, bếp từ, bộ bát đĩa, nồi chiên không dầu, bộ chăn ga, gấu bông. Bác Hân tham gia chương trình được chọn ngẫu nhiên một mặt hàng. Gọi $A$ là biến cố: \"Bác Hân chọn được mặt hàng là đồ điện\". Hỏi $A$là tập con nào của không gian mẫu?\n2) Một đội văn nghệ có bốn bạn, trong đó có hai bạn nữ là Dung và Ánh, hai bạn nam là Minh và Quân. Cô tổng phụ trách chọn ngẫu nhiên hai bạn để hát song ca. Xác định số kết quả thuận lợi của biến cố $B$: “Trong hai bạn được chọn có một bạn là Minh”",
+    "topic": "khac",
+    "source_file": "Đề số 17_converted_162924.docx"
+  },
+  {
+    "content": "Bài 2. \t(1,5 điểm)\nCho biểu thức  $A=\\frac{\\sqrt{x}}{\\sqrt{x}+3}+\\frac{2\\sqrt{x}}{\\sqrt{x}-3}-\\frac{3x+9}{x-9} \\left( x\\ge 0; x\\ne 9 \\right)$\na) Rút gọn biểu thức $A$.\nb) Tìm giá trị của x để $A=\\frac{1}{3}$\nc) Tìm giá trị lớn nhất của $A$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 17_converted_162924.docx"
+  },
+  {
+    "content": "Bài 3. \t(2,5 điểm)\na. Một ôtô tải và xe máy khởi hành cùng một lúc từ $A$ tới $B$ . Xe ô tô đi với vận tốc lớn hơn xe máy là $20$km/h. Do đó ôtô đến $B$ sớm hơn xe máy$25$phút. Tính vận tốc mỗi xe, biết rằng khoảng cách giữa $A$và$B$ là $100 km$.\nb) Hai tổ sản xuất được giao làm $800$ sản phẩm trong một thời gian quy định, nhờ tăng năng suất lao động, tổ một vượt mức $10$%, tổ hai vượt mức $20$% nên cả hai tổ đã làm được $910$ sản phẩm. Tính số sản phẩm phải làm theo kế hoạch của mỗi tổ?\nc) Cho phương trình ${{x}^2}+5x-7=0$ có hai nghiệm là ${{x}_1}; {{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức $A={{x}_1}^2+{{x}_2}^2-2{{x}_1}{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 17_converted_162924.docx"
+  },
+  {
+    "content": "Bài 4. \t(4,0 điểm)\n1. a) Tòa nhà Burj Khalifa (Các tiểu vương quốc Ả Rập thống nhất) được khánh thành ngày $4/1/2010$ là một công trình kiến trúc cao nhất thế giới. Khi tia nắng mặt trời tạo với mặt đất một góc $37{}^\\circ$ thì bóng của tòa nhà trên là  $1098,79 m$. Tính chiều cao của tòa nhà (kết quả cuối cùng được làm tròn đến phần nguyên, các kết quả khác được làm tròn hai chữ số thập phân).\nb) Bạn Toán đi mua giúp bố cây lăn sơn ở cửa hàng nhà\nbác Học. Một cây lăn sơn tường có dạng một khối trụ\nvới bán kính đáy là $5$cm và chiều cao là $23$cm (hình vẽ\nbên). Nhà sản xuất cho biết sau khi lăn $1000$ vòng thì\ncây sơn tường có thể bị hỏng. Hỏi bạn Toán cần mua ít\nnhất mấy cây lăn sơn tưởng biết diện tích tường mà bố bạn\nToán cần sơn là $3100$ (Cho $\\pi = 3,14$)\n2. Cho tam giác $ABC$ nhọn $\\left( AB<AC \\right)$có đường cao $AD$ và đường phân giác trong $AO$\n($D, O$ thuộc cạnh $BC$). Kẻ $OM$ vuông góc với $AB$tại $M$, $ON$ vuông góc với $AC$tại $N$.\na) Chứng minh: Tứ giác $AMON$nội tiếp\nb) Chứng minh $\\widehat{BDM}=\\widehat{ODN}$\nc) $\\operatorname{Sin}\\frac{BAC}{2}\\le \\frac{BC}{AB+AC}$",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 17_converted_162924.docx"
+  },
+  {
+    "content": "Bài 5. \t(0,5 điểm) Một tấn hoa quả được chở tới siêu thị, trong đó táo được đóng theo các thùng gỗ $48$kg/thùng, lê được đóng gói trong các thùng gỗ $20$kg/thùng, mận đựng trong hộp giấy theo $14$kg/hộp còn nho đựng trong các hộp giấy theo $10$kg/hộp. Biết rằng số kg táo được chở tới nhiều gấp đôi số kg lê, còn số kg mận và nho là bằng nhau. Hỏi khối lượng mỗi loại hoa quả đã được vận chuyền tới cửa hàng là bao nhiêu kg ?\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 17_converted_162924.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Cân nặng của các bạn học sinh lớp 9A (đơn vị: ki-lo-gam) có kết quả như sau:\nMẫu số liệu thống kê ở trên đã được ghép thành năm nhóm ứng với năm nửa khoảng: $\\left[ 50 ; 55 \\right)$,$\\left[ 55 ; 60 \\right)$,$\\left[ 60 ; 65 \\right)$,$\\left[ 65 ; 70 \\right)$,$\\left[ 70 ; 75 \\right)$. Lập bảng tần số tương đối ghép nhóm của mẫu số liệu ghép nhóm ở trên.\n2) Một hộp đựng $20$ tấm thẻ như nhau được đánh số từ $1$ đến $20$. Rút ngẫu nhiên một tấm thẻ trong hộp. Tính xác suất của biến cố $A$: “Số ghi trên tấm thẻ là bội của $4$”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}-1}{\\sqrt{x}-3}$ và $B=\\frac{2\\sqrt{x}}{\\sqrt{x}-2}-\\frac{\\sqrt{x}+2}{\\sqrt{x}-3}+\\frac{6\\sqrt{x}-8}{x-5\\sqrt{x}+6}$\nvới $x\\ge 0$, $x\\ne 4$, $x\\ne 9$\n1) Tính giá trị của $A$ khi $x=16$.\n2) Chứng minh $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}-3}$.\n3) Cho $P=A:B$. Tìm $x$ để $P<\\frac{1}{2}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Nhân dịp Khai giảng đầu năm học, bạn Minh được mẹ đưa đi siêu thị điện máy Pico để mua điện thoại, laptop chuẩn bị bước vào cấp 3. Giá niêm yết một chiếc laptop Dell và một chiếc Iphone 12 Pro max có tổng số tiền là 30 triệu đồng. Siêu thị giảm giá nhiều mặt hàng để ưu đãi cho học sinh, sinh viên, chiếc laptop Dell giảm 30% giá bán và giá một chiếc Iphone 12 Pro max giảm 20% giá bán nên mẹ Minh đã mua một chiếc laptop Dell và một chiếc Iphone 12 Pro max trên với tổng số tiền là 22 triệu đồng. Hỏi giá mỗi món đồ trên khi chưa giảm giá là bao nhiêu tiền?\n2) Một cơ sở sản xuất lập kế hoạch làm $600$ sản phẩm trong một thời gian nhất định. Do cải tiến kĩ thuật, năng suất mỗi ngày tăng $10$ sản phẩm. Vì thế không những hoàn thành sớm kế hoạch $1$ ngày, mà còn vượt mức $100$ sản phẩm. Hỏi theo kế hoạch mỗi ngày phải làm bao nhiêu sản phẩm.\n(Giả định rằng số sản phẩm mà tổ đó làm được trong mỗi ngày là bằng nhau).\n3) Biết rằng phương trình bậc hai ${{x}^2}-2x+m=0$ có một nghiệm là $x=\\frac{2}{\\sqrt{3}-1}$. Tính tổng nghịch đảo bình phương hai nghiệm của phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Trái Đất, hành tinh chúng ta đang sống, dạng hình cầu có bán kính là $\\text{6370 km}$.\nBiết rằng $29%$ diện tích bề mặt Trái Đất không bị bao phủ bởi nước bao gồm núi, sa mạc, cao nguyên, đồng bằng và các địa hình khác.\na) Tính diện tích của bề mặt Trái Đất.\nb) Tính diện tích bề mặt mặt Trái Đất bị bao phủ bởi nước.\n(Lấy$\\pi \\approx 3,14$; kết quả làm tròn đến chữ số hàng đơn vị.\n2) Cho hình vuông $ABCD$ có độ dài cạnh bằng $4 cm$. Vẽ đường tròn tâm $O$ đường kính $AD ;$ kẻ $BM$ là tiếp tuyến của đường tròn tâm $O$ ($M$ là tiếp điểm,$M\\ne A$), $BM$ cắt $CD$ tại $K$.\na) Chứng minh $4$ điểm $A, B, M, O$ cùng thuộc một đường tròn.\nb) Chứng minh $OB\\bot OK$ và $BM . MK=\\frac{A{{B}^2}}{4}$.\nc) Đường thẳng $AM$ cắt $CD$ tại$E$. Chứng minh $K$ là trung điểm của đoạn thẳng $ED$ và tính chu vi của tứ giác $ABKD$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một miếng tôn phẳng hình vuông với kích thước $a \\left( cm \\right)$, người ta muốn cắt đi ở bốn góc bốn hình vuông cạnh bằng $x \\left( cm \\right)$để uốn thành một hình hộp chữ nhật không có nắp. Phải cắt như thế nào để hình hộp có thể tích lớn nhất?\nHẾT\nHƯỚNG DẪN",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Cân nặng của các bạn học sinh lớp 9A (đơn vị: ki-lo-gam) có kết quả như sau:\nMẫu số liệu thống kê ở trên đã được ghép thành năm nhóm ứng với năm nửa khoảng: $\\left[ 50 ; 55 \\right)$,$\\left[ 55 ; 60 \\right)$,$\\left[ 60 ; 65 \\right)$,$\\left[ 65 ; 70 \\right)$,$\\left[ 70 ; 75 \\right)$. Lập bảng tần số ghép nhóm của mẫu số liệu ghép nhóm ở trên.\n2) Một hộp đựng $20$ tấm thẻ như nhau được đánh số từ $1$ đến $20$. Rút ngẫu nhiên một tấm thẻ trong hộp. Tính xác suất của biến cố $A$: “Số ghi trên tấm thẻ là bội của $4$”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 18_converted_163328.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Một ngân hàng thống kê số tiền (đơn vị: triệu đồng) mà 80 hộ gia đình vay để phát triển sản xuất. Số liệu được ghi lại trong biểu đồ tần số ghép nhóm ở Hình 1.\nHình 1\nLập bảng tần số tương đối ghép nhóm của mẫu số liệu được ghép nhóm đó.\n2) Một hộp có chứa ba viên bi vàng lần lượt ghi các số 1; 2; 3 và hai viên bi nâu lần lượt ghi các số 4; 5. Các viên bi có kích thước và khối lượng như nhau. Lấy ngẫu nhiên đồng thời hai viên bi trong hộp. Tính xác suất của biến cố: “Hai viên bi được lấy ra khác màu”.",
+    "topic": "khac",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $P=\\frac{3\\sqrt{x}}{\\sqrt{x}+2}+\\frac{\\sqrt{x}}{2-\\sqrt{x}}+\\frac{8\\sqrt{x}}{x-4}$ và $Q=\\frac{1}{\\sqrt{x}+2}$(với $x\\ge 0;x\\ne 4$)\n1) Tính giá trị của biểu thức $Q$ khi $x=9.$\n2) Rút gọn biểu thức $P$.\n3) Biết $M=\\frac{P}{Q}$; Tìm các giá trị của $x$ để $M=18$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu III:  (2,5 điểm)\n1) Trong một thí nghiệm, Bình muốn pha để được $36$ ml dung dịch HCl nồng độ $12%$. Trong phòng thí nghiệm chỉ có sẵn dung dịch HCl nồng độ $8%$ và dung dich HCl nồng độ $20%$. Hỏi Bình cần sử dụng bao nhiêu millilit mỗi loại dung dịch để có được dung dịch mong muốn?\n2) Một ô tô dự định đi từ $A$ đến $B$ cách nhau $120$ km trong một thời gian quy định. Sau khi đi được $1$ giờ thì ô tô bị chặn bởi xe cứu hỏa $10$ phút. Do đó để đến $B$ đúng hạn xe phải tăng vận tốc thêm $6$ km/h. Tính vận tốc lúc đầu của ô tô.\n3) Cho phương trình $-\\sqrt{2}{{x}^2}+2x+3=0$ có $2$ nghiệm phân biệt là ${{x}_1},{{x}_2}$ . Không giải phương trình, hãy tính giá trị của biểu thức $A=\\frac{{{x}_2}+1}{1-{{x}_1}}+\\frac{{{x}_1}+1}{1-{{x}_2}}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu IV:  (4,0 điểm)\n1) Để làm thí nghiệm về sự nổi của các vật thể, Minh chuẩn bị một cái cốc thủy tinh có dạng lòng trong hình trụ có đường kính đáy $6 cm$ và chiều cao là $10 cm$; một quả bóng bàn tiêu chuẩn của các giải đấu quốc tế có dạng hình cầu đường kính $40 mm$. Minh bỏ quả bóng bàn vào trong cốc, rót từ từ $200 c{{m}^3}$ nước và đo được mực nước dâng lên cao $7,2 cm$.\na) Tính thể tích của quả bóng bàn.\nb) Tính tỉ lệ phần trăm thể tích phần nổi của quả bóng bàn trong thí nghiệm trên.\n(Lấy $\\pi \\approx 3,14$ và các kết quả làm tròn đến chữ số thập phân thứ hai)\n2) Cho tam giác $ABC$ có ba góc nhọn nội tiếp đường tròn $\\left( O \\right)$,  kẻ đường cao $BE$ của $\\Delta ABC$. Gọi $H$ và $K$ lần lượt là chân các đường vuông góc kẻ từ $E$ đến $AB$ và $BC$.\na) Chứng minh tứ giác $BHEK$ là tứ giác nội tiếp.\nb) Chứng minh: $BH.BA=BK.BC$.\nc) Kẻ đường cao $CF$ của tam giác $ABC\\left( F\\in AB \\right)$ và $I$ là trung điểm của $EF$. Chứng minh ba điểm $H,I,K$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu V:  (0,5 điểm) Một công ty du lịch dự định tổ chức một tour du lịch xuyên Việt nhân kỉ niệm ngày giải phóng hoàn toàn miền Nam 30 – 4 . Công ty dự định nếu giá tour là $2$ triệu đồng thì sẽ có khoảng$200$ người tham gia. Để thu hút nhiều người tham gia, công ty sẽ quyết định giảm giá và cứ mỗi lần giảm giá $100$ nghìn đồng/1tour thì sẽ có thêm $20$ người tham gia. Hỏi công ty phải giảm giá tour còn bao nhiêu để doanh thu từ tour xuyên Việt đó là lớn nhất.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Một ngân hàng thống kê số tiền (đơn vị: triệu đồng) mà 80 hộ gia đình vay để phát triển sản xuất. Số liệu được ghi lại trong biểu đồ tần số ghép nhóm ở Hình 1.\nHình 1\nLập bảng tần số tương đối ghép nhóm của mẫu số liệu được ghép nhóm đó.\n2) Một hộp có chứa ba viên bi vàng lần lượt ghi các số 1; 2; 3 và hai viên bi nâu lần lượt ghi các số 4; 5. Các viên bi có kích thước và khối lượng như nhau. Lấy ngẫu nhiên đồng thời hai viên bi trong hộp. Tính xác suất của biến cố: “Hai viên bi được lấy ra khác màu”.",
+    "topic": "khac",
+    "source_file": "Đề số 19_converted_163633.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Khảo sát thời gian tập thể dục của một số học sinh lớp $9$ thu được mẫu số liệu ghép nhóm sau:\nTính tần số tương đối của nhóm $\\left[ 40 ; 60 \\right)$? (Làm tròn đến hàng phần mười)\n2) ID12 PBT TOAN 7 TBY STT12Hình dưới đây mô tả một đĩa tròn, cân đối bằng bìa cứng được chia làm tám phần bằng nhau và ghi các số $1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa. Quay đĩa tròn một lần.\nTính xác suất của các biến cố sau:  “Mũi tên chỉ vào hình quạt ghi số là ước của $8$”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 1_converted_155936.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}}{\\sqrt{x}-1}+\\frac{1}{\\sqrt{x}+2}-\\frac{3\\sqrt{x}}{x+\\sqrt{x}-2}$ và $B=\\frac{\\sqrt{x}+3}{\\sqrt{x}+1}$ với $x\\ge 0$; $x\\ne 1$.\n1) Tính giá trị của biểu thức $B$ với $x=25$.\n2) Chứng minh $A=\\frac{\\sqrt{x}+1}{\\sqrt{x}+2}$.\n3) Tìm $x$ để biểu thức $S=A.B$ đạt giá trị lớn nhất.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 1_converted_155936.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Nhân dịp Lễ giỗ tổ Hùng Vương , một siêu thị điện máy đã giảm giá nhiều mặt hàng để kích cầu mua sắm. Giá niêm yết một tủ lạnh và một máy giặt có tổng số tiền là $25,4$triệu đồng nhưng trong dịp này giá một tủ lạnh giảm $40%$ giá bán và giá một máy giặt giảm $25%$ giá bán nên cô Liên đã mua hai món đồ trên với tổng số tiền là $16,77$ triệu đồng. Hỏi giá mỗi món đồ trên khi chưa giảm giá là bao nhiêu tiền ?\n2) Một người đi ô tô từ  $A$ đến $B$ cách nhau $100$ km với vận tốc xác định. Khi từ $B$ trở về $A,$ người đó đi theo đường khác dài hơn đường cũ $20$ km nhưng với vận tốc lớn hơn vận tốc lúc đi mỗi giờ $20$ km. Vì vậy thời gian về ít hơn thời gian đi $30$ phút. Tính vận tốc lúc đi.\n3) Cho phương trình bậc hai ${{x}^2}-6x+c=0$ có hai nghiệm phân biệt là ${{x}_1}=2{{x}_2}$. Tính giá trị biểu thức $S=x_1^3+x_2^3+3{{x}_1}{{x}_2}\\left( {{x}_1}+{{x}_2} \\right)$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 1_converted_155936.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một cái mũ của chú hề với các kích thước cho theo hình vẽ.\na) Tính thể tích của cái mũ.\nb) Tính tổng diện tích giấy làm nên cái mũ (không tính phần hao hụt, kết quả làm tròn đến hàng đơn vị)\n2) Cho tam giác $ABC\\left( AB<AC \\right)$ nội tiếp trong đường tròn tâm $O$ đường kính $BC$, đường thẳng qua $O$ vuông góc với $BC$ cắt $AC$ tại $D$.\na) Chứng minh rằng tứ giác $ABOD$ nội tiếp.\nb) Tiếp tuyến tại điểm $A$ với đường tròn $\\left( O \\right)$ cắt đường thẳng $BC$ tại điểm $P$, sao cho $PB=BO=2cm$. Tính độ dài đoạn $PA$ và số đo góc $APC$.\nc) Chứng minh rằng $\\frac{PB}{PC}=\\frac{A{{B}^2}}{A{{C}^2}}$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 1_converted_155936.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nCắt một miếng giấy hình vuông như hình bên và xếp thành hình một hình chóp tứ giác đều. Biết các cạnh hình vuông bằng ${{20 {cm}}}$, ${{O M=x({cm})}}$. Tìm ${x}$ để hình chóp đều ấy có thể tích lớn nhất.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 1_converted_155936.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nBiểu đồ tần số ghép nhóm dưới đây ghi lại tốc độ (đơn vị: $\\text{km/h}$)của $44$ ô tô khi đi qua một trạm đo tốc độ.\nHãy cho biết số lượng ô tô ở nhóm nào nhiều nhất, tính tần số tương đối ghép nhóm của nhóm đó. ( làm tròn kết quả đến chữ số thập phân thứ nhất)\nMột hộp có $20$ viên bi với kích thước và khối lượng như nhau. Bạn Ngân viết lên các viên bi đó các số $1;2;3;...;20$; hai viên bi khác nhau thì viết hai số khác nhau.\nXét phép thử “Lấy ngẫu nhiên một viên bi trong hộp”.\na) Viết không gian mẫu phép thử đó.\nb) Tính xác suất biến cố: “Số xuất hiện trên viên bi được lấy ra chia $7$ dư $1$”.",
+    "topic": "khac",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}}{x+1}$ và $B=\\frac{x-2}{x+2\\sqrt{x}}-\\frac{1}{\\sqrt{x}}+\\frac{1}{\\sqrt{x}+2}$ với $x>0$.\n1) Tính giá trị của $A$ khi $x=9$.\n2) Chứng minh $B=\\frac{\\sqrt{x}-2}{\\sqrt{x}}$\n3)Tìm giá trị của $x$ để $P=2AB+\\frac{4}{x+1}$ đạt giá trị lớn nhất.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Mai mua hai loại hàng và phải trả tổng cộng $165000$ đồng, trong đó đã tính $15000$ đồng là thuế giá trị gia tăng (viết tắt là VAT). Biết rằng thuế VAT với loại hàng thứ nhất là $12$%; thuế VAT với loại hàng thứ hai là $9$%. Hỏi nếu không kể thuế thì Mai phải trả bao nhiêu tiền cho mỗi loại hàng?\n2) Hưởng ứng phong trào thi đua “Xây dựng trường học thân thiện, học sinh tích cực”,\nlớp $9A$ trường THCS Hoàng Hoa Thám dự định trồng $300$ cây xanh. Đến ngày lao động,\ncó $5$ bạn được Liên Đội triệu tập tham gia chiến dịch an toàn giao thông nên mỗi bạn còn lại\nphải trồng thêm $2$cây mới đảm bảo kế hoạch đặt ra. Hỏi lớp $9A$ có bao nhiêu học sinh?\nCho phương trình ${{x}^2}-4x+3=0$ có $2$ nghiệm là ${{x}_1}, {{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức $A=\\frac{5{{x}_1}-{{x}_2}}{{{x}_1}}-\\frac{{{x}_1}-5{{x}_2}}{{{x}_2}}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một hình nón có chiều cao $h = 16 cm$và bán kính đường tròn đáy $r = 12$cm. Tính độ dài đường sinh và diện tích xung quanh của hình nón đó. (Tính với số  $\\pi \\approx 3,14$và kết quả làm tròn đến chữ sô hàng đơn vị)\n2)  Cho tam giác $ABC$ nhọn nội tiếp đường tròn $(O)$, các đường cao $AD,BE,CF$ cắt nhau tại $H$. Kẻ đường kính $AQ$của đường tròn $(O)$cắt cạnh $BC$ tại $I$.\na) Chứng minh bốn điểm $A,F,H,E$cùng thuộc một đường tròn.\nb) Chứng minh $\\widehat{BAD}=\\widehat{CAQ}$.\nc)Gọi $P$ là giao điểm của $AH$ và $EF$. Chứng minh $\\Delta A E P$ đồng dạng với $\\Delta A B I$ và$PI$ //$HQ$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu V(0,5 điểm) Một gia đình muốn xây một cái bể chứa nước nhỏ ở góc vườn để chủ động tưới rau,bể có dạng hình hộp chữ nhật với mặt  đáy $MNPQ$ là hình vuông  (hình vẽ)\nHãy tìm độ dài cạnh $MN$ của mặt đáy và chiều cao $AM$ của bể sao cho tổng diện tích các mặt làm bể (bao gồm $4$ mặt xung quanh và một mặt đáy) là nhỏ nhất , biết rằng thể tích của bể là $4{{m}^3}$.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nBiểu đồ tần số ghép nhóm dưới đây ghi lại tốc độ (đơn vị: $\\text{km/h}$ ) của $44$ ô tô khi đi qua một trạm đo tốc độ.\nHãy cho biết số lượng ô tô ở nhóm nào nhiều nhất, tính tần số tương đối ghép nhóm của nhóm đó.( làm tròn kết quả đến chữ số thập phân thứ nhất)",
+    "topic": "khac",
+    "source_file": "Đề số 20_converted_163852.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Ban phụ huynh đặt tặng áo phông cho 40 học sinh của lớp 8A. Ban phụ huynh đo chiều cao (đơn vị: centimét) của cả lớp để quyết định chọn các cỡ áo, kết quả cho bởi bảng tần số ghép nhóm như sau:\nXác định tần số ghép nhóm và tìm tần số tương đối ghép nhóm của nhóm $\\left[ 160; 165 \\right)$.\n2) Hình bên mô tả một đĩa tròn bằng bìa cứng được chia làm tám phần bằng nhau và ghi các số $1; 2; 3; \\ldots ; 8$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa. Quay đĩa tròn một lần. Tính xác suất của biến cố A: “Chiếc kim chỉ vào hình quạt ghi số lớn hơn 3”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}+1}{\\sqrt{x}-1}$ và $B=\\frac{x+1}{x-\\sqrt{x}}-\\frac{2}{\\sqrt{x}-1}$ với $x>0;x\\ne 1$\n1) Tính giá trị của biểu thức A tại x = 25.\n2) Rút gọn B.\n3) Cho P = A.B. So sánh giá trị của P với 1.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Để chuẩn bị cho năm học mới, bạn Tuấn đem 20 tờ tiền gồm hai loại 10 000 đồng và 20 000 đồng đến nhà sách mua đồ dùng học tập. Khi thanh toán, đơn hàng của Tuấn có giá 300 000 đồng. Sau khi Tuấn trả tiền cho đơn hàng thì Tuấn còn lại 1 tờ 20 000 đồng. Hỏi lúc đầu Tuấn có bao nhiêu tờ tiền mỗi loại.\n2) Một Ô tô dự định đi từ tỉnh A đến tỉnh B với vận tốc trung bình 40 km/h. Lúc đầu ô tô đi với vận tốc đó, khi còn 60 km nữa thì được nửa quãng đường AB, người lái xe tăng thêm vân tốc 10 km/h trên quãng đường còn lại, do đó Ô tô đến B sớm hơn 1 giờ so với dự định. Tính quãng đường AB.\n3) Biết rằng phương trình bậc hai ${{x}^2}+6x+a=0$có một nghiệm là $x=-3+\\sqrt{14}$. Tìm tổng bình phương hai nghiệm của phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một lọ thủy tinh hình trụ có đường kính đáy là 30 cm, chiều cao 20 cm, đựng đầy nước tinh khiết.\na. Tính thể tích lượng nước tinh khiết được chứa trong lọ. (Lấy $\\pi \\approx 3,14$).\nb. Người ta đổ tất cả lượng  nước trên vào một lọ thứ hai bên trong có đường kính đáy là 40 cm thì lượng nước trong lọ thứ hai cao một nửa chiều cao của lọ. Hỏi chiều cao của lọ thứ hai? (Giả sử độ dày của lọ là không đáng kể).\n2) Cho đường tròn (O) và điểm M ở ngoài đường tròn. Qua M kẻ các tiếp tuyến MA, MB và cát tuyến MPQ (MP < MQ). Gọi I là trung điểm của dây PQ.\na. Chứng minh bốn điểm B, O, I, M cùng thuộc một đường tròn.\nb. Gọi E là giao điểm thứ 2 của đường thẳng BI và đường tròn (O). Chứng minh: $\\widehat{BOM} = \\widehat{BEA}$ và $\\text{AE //PQ}$.\nc.  Gọi K là trung điểm của EA. Chứng minh ba điểm O; I; K thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu I:\n1) Ban phụ huynh đặt tặng áo phông cho 40 học sinh của lớp 8A. Ban phụ huynh đo chiều cao (đơn vị: centimét) của cả lớp để quyết định chọn các cỡ áo, kết quả cho bởi bảng tần số ghép nhóm như sau:\nXác định tần số ghép nhóm và tìm tần số tương đối ghép nhóm của nhóm $\\left[ 160; 165 \\right)$.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 21_converted_163958.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nTình trạng chênh lệch giữa giá vàng Việt Nam với quốc tế kéo dài sẽ khiến cho nền kinh tế nói chung và thị trường vàng nói riêng đều phải gánh thiệt hại. Đối với nền kinh tế, chênh lệch giá vàng quá cao gây ra tình trạng nhập lậu vàng và điều đó sẽ tác động lên tỉ giá chợ đen cũng như gây “chảy máu” ngoại tệ. Dưới đây là biểu đồ chênh lệch giá vàng trong nước và thế giới 6 tháng đầu năm 2022.\na) Trong bảng trên, mức chênh lệch giá vàng lớn nhất là bao nhiêu và vào lúc nào?\nb) Chọn ngẫu nhiên 1 tháng trong 6 tháng đầu năm 2022. Tính xác suất các biến cố sau:\nA:” Tháng được chọn có mức độ chênh lệch không quá 15 triệu”.\nB:” Tháng được chọn có mức độ chênh lệch lớn hơn 16 triệu”.",
+    "topic": "khac",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho  hai biểu thức: $A=\\frac{x-9}{x-3\\sqrt{x}}$ và $B=\\frac{x+3}{x-9}-\\frac{1}{3-\\sqrt{x}}+\\frac{2}{\\sqrt{x}+3}$ với $x>0;x\\ne 9$.\n1) Tính giá trị của $A$ khi $x=16$.\n2) Chứng minh rằng $B=\\frac{\\sqrt{x}}{\\sqrt{x}-3}$\n3) Đặt  $P=A.B$. Tìm các giá trị nguyên của $x$ để $P<1$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Để khuyến khích tiết kiệm nước, giá nước sinh hoạt được tính theo kiểu bậc thang lũy tiến, nghĩa là nếu sử dụng càng nhiều nước sạch thì giá càng tăng lên theo các bậc như sau:\nBậc 1: 10m3 nước đầu tiên giá 6000 đồng/m3\nBậc 2: Từ 10m3 đến 20m3 nước tiếp theo giá 7100 đồng/m3\nBậc 3: Từ 20m3 đến 30m3 nước tiếp theo giá 8600 đồng/m3\nBậc 4: Trên 30m3 nước giá 16000 đồng/m3.\na) Trong tháng 1 vừa qua nhà bạn Trang sử dụng hết 25m3 nước. Hỏi nhà bạn Trang phải trả bao nhiêu tiền nước?\nb) Sang tháng 2 nhà bạn Trang có nhiều việc nên nhu cầu sử dụng nước tăng lên. Do đó số tiền phải trả là 297000 đồng. Hỏi trong tháng 2 nhà bạn Trang dùng hết bao nhiêu mét khối nước?\n2) Hai trường X và Y có 420 học sinh đậu vào lớp 10 đạt tỉ lệ 84%. Riêng trường X tỉ lệ đậu 80%, riêng trường Y tỉ lệ đậu 90%. Tính số học sinh dự thi của mỗi trường.\n3) Cho phương trình $3{{x}^2}-12x-5=0$ có hai nghiệm là ${{x}_1}, {{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức: $T=\\frac{{{x}_1}^2+4{{x}_2}-{{x}_1}{{x}_2}}{4{{x}_1}+{{x}_2}^2+{{x}_1}{{x}_2}}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu IV:    (1.5 điểm)\nMột bồn đựng nước có dạng hình hộp chữ nhật có các kích thước cho trên hình vẽ..\nMột vòi bơm với công suất 120 lít/phút để bơm một lượng nước vào bồn (bồn không chứa nước) lên độ cao cách nắp bồn là 1,5 m thì phải mất khoảng bao nhiêu phút? (làm tròn đến phần nguyên)",
+    "topic": "khac",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu V:    (3 điểm)\nCho tam giác ABC ba góc nhọn nội tiếp (O;R), hai đường cao BE, CF cắt nhau tại H.\nChứng minh tứ giác BFCE nội tiếp và $AO\\bot EF$\nchứng minh : ${{\\sin }^2}\\widehat{BAC} + co{{s}^2}\\widehat{BAC}=1$và $B{{C}^2} = A{{B}^2} + A{{C}^2} -2.AB.AC.cos\\widehat{BAC}$\nGọi S là diện tích tam giác ABC, chứng minh : $S= \\frac{1}{2}AB.AC.\\sin \\widehat{BAC}$. Cho $AB=6; AC=8;BC=2\\sqrt{13}$ tính diện tích tam giác ABC\nHẾT\nHƯỚNG DẪN",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nTình trạng chênh lệch giữa giá vàng Việt Nam với quốc tế kéo dài sẽ khiến cho nền kinh tế nói chung và thị trường vàng nói riêng đều phải gánh thiệt hại. Đối với nền kinh tế, chênh lệch giá vàng quá cao gây ra tình trạng nhập lậu vàng và điều đó sẽ tác động lên tỉ giá chợ đen cũng như gây “chảy máu” ngoại tệ. Dưới đây là biểu đồ chênh lệch giá vàng trong nước và thế giới 6 tháng đầu năm 2022.\na) Trong bảng trên, mức chênh lệch giá vàng lớn nhất là bao nhiêu và vào lúc nào?\nb) Chọn ngẫu nhiên 1 tháng trong 6 tháng đầu năm 2022. Tính xác suất các biến cố sau:\nA:” Tháng được chọn có mức độ chênh lệch không quá 15 triệu”.\nB:” Tháng được chọn có mức độ chênh lệch lớn hơn 16 triệu”.",
+    "topic": "khac",
+    "source_file": "Đề số 22_converted_164117.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi điều tra cân nặng ( đơn vị: kg) của$200$ học sinh khối lớp 4 của một trường tiểu học, người ta có biểu đồ tần số tương đối ghép nhóm dưới đây:\nLập bảng tần số tương đối ghép nhóm cho dữ liệu được biểu diễn trên biểu đồ. Tìm tần số ghép nhóm của nhóm $[38;42)$",
+    "topic": "khac",
+    "source_file": "Đề số 23_converted_164240.docx"
+  },
+  {
+    "content": "Câu II:(1,5 điểm) Cho hai biểu thức: $A=\\frac{2\\sqrt{x}}{\\sqrt{x}-1}$  và  $B=\\frac{x+\\sqrt{x}-2}{x-2\\sqrt{x}+1}+\\frac{1}{1-\\sqrt{x}}$     với $x \\geq 0 ; x \\neq 1$\n1) Tính giá trị của biểu thức A khi x = 25\n2) Chứng minh $B=\\frac{\\sqrt{x}+1}{\\sqrt{x}-1}$\t$$\n3) Đặt $P=A:B$. Tìm tất cả các giá trị của x để $P={{P}^4}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 23_converted_164240.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Năm ngoái, hai xã sản xuất nông nghiệp thu hoạch được 770 tấn thóc. Năm nay, xã A thu hoạch vượt mức 15%, xã B thu hoạch vượt mức 20% so với năm ngoái. Do đó cả hai xã thu hoạch vượt mức 133 tấn thóc so với năm ngoái. Hỏi năm ngoái mỗi xã thu hoạch được bao nhiêu tấn thóc?\n2) Một ca nô đi xuôi dòng từ A đến B cách nhau 40 km sau đó đi ngược dòng từ B về A. Thời gian cả đi xuôi dòng và ngược dòng là 3 giờ 20 phút. Tính vận tốc riêng của ca nô khi nước yên lặng, biết vận tốc của dòng nước là 5km/h.\n3) Biết rằng phương trình ${{x}^2}-5x+a=0$ có hai nghiệm ${{x}_1},{{x}_2}$, biết ${{x}_1}=\\frac{5-\\sqrt{13}}{2}$.\nTính giá trị của biểu thức $x_1^2+x_2^2-2{{x}_1}{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 23_converted_164240.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một viên bi bằng sắt, đặc ruột, hình cầu có đường kính $6 cm$. Người ta sơn màu xanh bề mặt của viên bi đó. Một cái cốc hình trụ đựng đầy nước có chiều cao $10 cm$ và có bán kính đáy là $5 cm$, người ta thả viên bi vào trong cái cốc để nước tràn ra ngoài và nước vẫn đầy đến miệng cốc, sau đó bỏ viên bi ra. (lấy $\\pi \\approx 3,14$)\na) Tính diện tích cần sơn viên bi theo $c{{m}^2}.$\nb) Hỏi thể tích nước còn lại trong cốc bao nhiêu $c{{m}^3}.$ (lượng nước hao hụt khi bỏ viên bi ra khỏi cốc không đáng kể)\n2) Cho tam giác $ABC$ có ba góc nhọn ($AB<AC$) nội tiếp đường tròn $(O)$, các đường cao $BE,CF$cắt nhau ở $H$.\na) Chứng minh bốn điểm $B,F,E,C$cùng thuộc một đường tròn.\nb) Tia $EF$ cắt tia $CB$ tại $M$. Chứng minh : $MF.ME=MB.MC$\nc) Tia $AH$ cắt $BC$ tại $D$. Đường thẳng qua $B$ và song song với $AC$, cắt tia $AD$ tại $P$, cắt đoạn thẳng $AM$ tại $Q$. Chứng minh $FC$ là tia phân giác của góc $EFD$ và $BP=BQ$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 23_converted_164240.docx"
+  },
+  {
+    "content": "Câu V:  (10,5 điểm)\nNgười ta cần lập hàng rào quanh khu vực bảo vệ có dạng hình chữ nhật cho một toà nhà như hình vẽ bên. Hỏi nếu có 80m hàng rào bao quanh 3 mặt như trên thì diện tích tối đa của khu vực bảo vệ là bao nhiêu?\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 23_converted_164240.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) . Biểu đồ bên biểu diễn tỉ lệ đại biểu tham dự hội nghị theo độ tuổi. Biết rằng có 54 đại biểu từ 25 tuổi đến 35 tuổi.\na) Có bao nhiêu đại biểu tham dự hội nghị?\nb) Một người cho rằng có trên $50%$ số đại biểu tham dự hội nghị dưới $45$ tuổi. Nhận định đó đúng hay sai? Tại sao?\n2) . Hình vẽ dưới đây mô tả một đĩa tròn bằng bìa cứng được chia thành $12$ phần bằng nhau và ghi các số $1;2;3;...;12$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa.\nXét phép thử: “Quay đĩa tròn một lần” và biến cố $P:$ “Chiếc kim chỉ vào hình quạt ghi số là số nguyên tố”. Tính xác suất của biến cố $P$.",
+    "topic": "khac",
+    "source_file": "Đề số 24_converted_164541.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm)  Cho hai biểu thức:\n$A=\\frac{\\sqrt{x}+1}{\\sqrt{x}+3}$ và $B=\\frac{2\\sqrt{x}}{\\sqrt{x}+1}-\\frac{\\sqrt{x}+2}{\\sqrt{x}-1}+\\frac{2\\sqrt{x}+4}{x-1}$  \t\t(Với $x\\ge 0;x\\ne 1$)\na) Tính giá trị của $A$ khi $x=4$\nb) Rút gọn $B$\nc) Tìm $x$ để $A.B\\le \\frac{1}{2}$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 24_converted_164541.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) . Một người mua một cái bàn là và một cái quạt điện với tổng số tiền theo giá niêm yết là $850$ nghìn đồng. Khi trả tiền người đó được khuyến mại giảm $20%$ đối với giá tiền bàn là và $10%$ đối với giá tiền quạt điện với giá niêm yết. Vì vậy, người đó phải trả tổng cộng $740$ nghìn đồng. Tính giá tiền của cái bàn là và cái quạt điện theo giá niêm yết\n2) . Một người đi xe đạp từ địa điểm $A$ đến địa điểm $B$ với vận tốc không đổi, hai địa điểm cách nhau $30 km$. Khi đi từ $B$ về $A$, người đó chọn đường khác dễ hơn nhưng dài hơn con đường cũ $6 km$. Vì lúc về, người đó đi với vận tốc lớn hơn vận tốc lúc đi là $3 km/h$ nên thời gian về vẫn ít hơn thời gian đi là $20$ phút. Tính vận tốc lúc đi của người đó.\n3) Biết rằng phương trình bậc hai ${{x}^2}-5x+m=0$ (m là tham số). Tìm m để phương trình có hai nghiệm phân biệt sao cho tổng các bình phương của hai nghiệm bằng $13$.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 24_converted_164541.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) . Người ta đặt một khối nón vào trong một khối lập phương cạnh $1 m$ chứa đầy nước. Biết rằng đỉnh khối nón trùng với tâm một mặt của khối lập phương, đáy khối nón tiếp xúc với các cạnh của mặt đối diện. Tính thể tích lượng nước trong khối bị tràn ra ngoài. (Lấy $\\pi \\approx 3,14,$ kết quả làm tròn đến hai chữ số thập phân)\n2) . Từ điểm M nằm ngoài đường tròn $\\left( O \\right)$, kẻ các tiếp tuyến $MA, MB$ với $\\left( O \\right)$ ($B, C$ là các tiếp điểm). Kẻ đường kính $AC$ của $\\left( O \\right)$. Đoạn thẳng $MC$ cắt $AB$ tại $K$ và cắt đường tròn $\\left( O \\right)$ tại điểm thứ hai $D$. Gọi $I, H$ lần lượt là các giao điểm của $MO$ với $BD, AB.$\na) Chứng minh bốn điểm $M, A, O, B$ cùng thuộc một đường tròn.\nb) Chứng minh $MO$ song song với $BC$ và $I{{M}^2}=ID.IB$.\nc) Gọi $L$ là giao điểm của $IK, HC$. Chứng minh ba điểm $M, B, L$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 24_converted_164541.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Người ta giăng lưới để nuôi riêng một loại cá trên một góc hồ. Biết rằng lưới được giăng theo một đường thẳng từ một vị trí trên bờ ngang đến một vị trí trên bờ dọc và phải đi qua một cái cọc đã cắm sẵn ở vị trí A. Hỏi diện tích nhỏ nhất có thể giăng là bao nhiêu, biết rằng khoảng cách từ cọc đến bờ ngang là 5 m và khoảng cách từ cọc đến bờ dọc là 12 m.\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 24_converted_164541.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Thống kê tuổi thọ của $30$ bóng đèn điện được lắp thử (đơn vị: giờ) được cho trong bảng dưới dây:\nLập bảng tần số và tần số tương đối của mẫu số liệu trên.\nCó người nói: “Có trên $75%$ bóng đèn có tuổi thọ từ $1160$ đến $1180$”. Theo em nhận định đó đúng hay sai?\n2) Bình tung một đồng tiền xu có hai mặt sấp (S) và ngửa (N) liên tiếp ba lần, sau mỗi lần tung Bình đều ghi lại mặt xuất hiện. Tính xác suất của các biến cố A: “Mặt sấp xuất hiện đúng một lần”.",
+    "topic": "khac",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm)  Cho $M=\\frac{\\sqrt{x}+2}{x+2\\sqrt{x}+1}-\\frac{\\sqrt{x}-2}{x-1}$ và $N=\\frac{\\sqrt{x}+1}{\\sqrt{x}}$     Với $x>0; x\\ne 1$.\na) Tính giá trị của $N$ khi $x=25$\nb) Rút gọn $S=M.N$\nc) Tìm $x$ để $S<-1$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Ngày của Cha hay còn gọi là Father’s Day là ngày để con bày tỏ lòng biết ơn và hiếu thảo đối với cha mình. Tương tự như Ngày của Mẹ, ngày của Cha cũng không cố định cụ thể mà được quy ước chọn ngày chủ nhật tuần thứ $3$ của tháng $6$ hàng năm (Theo Vietnamnet.vn).\nNhân dịp lễ “Ngày của Cha –$\\text{19/6/2022}$”, siêu thị A đã giảm giá $18%$ cho mỗi đôi giầy và $20%$ cho mỗi chiếc cà vạt. Bạn Duy đã dùng $834 700$ đồng để mua một đôi giầy và một chiếc cà vạt ở siêu thị $A$ làm quà tặng ba mình. Duy tính nhẩm: cùng ở siêu thị $A$, cùng số lượng, cùng mẫu mã nhưng nếu mua vào ngày $\\text{18/6/2022}$ (ngày mà siêu thị $A$ không có khuyến mại giảm giá các mặt hàng) thì chỉ với số tiền tiết kiệm được là $1 025 000$ đồng bạn ấy không đủ tiền để mua hai món hàng này. Em hãy cho biết, bạn Duy tính nhẩm như vậy có đúng không? Biết rằng, nếu không giảm giá thì tiền mua mỗi đôi giầy gấp $11$ lần tiền mua mỗi chiếc cà vạt.\n2)  Theo kế hoạch, một tổ trong xưởng may phải may xong $8 400$ chiếc khẩu trang trong một thời gian quy định. Do tình hình dịch bệnh Covid-19 diễn biến phức tạp, tổ đã quyết định tăng năng suất nên mỗi ngày tổ đã may được nhiều hơn $102$ chiếc khẩu trang so với số khẩu trang phải may trong một ngày theo kế hoạch. Vì vậy, trước thời gian quy định $4$ ngày, tổ đã may được $6 416$ chiếc khẩu trang. Hỏi số khẩu trang mà tổ phải may mỗi ngày theo kế hoạch là bao nhiêu?\n3) Tìm hai số $x$ và $y$ biết $x+y=13$ và $xy=42$.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Gạch ống là một sản phẩm được tạo hình thành từ đất sét và nước, được kết hợp lại với nhau theo một công thức chung hợp lý mới có thể tạo ra hỗn hợp dẻo quánh, sau đó chúng được đổ vào khuôn, rồi đem phơi hoặc sấy khô và cuối cùng là đưa vào lò nung. Một viên gạch hình hộp chữ nhật có kích thước dài $20cm$, rộng $8cm$. Bên trong có bốn lỗ hình trụ bằng nhau có đường kính $2,5cm$.\nTính thể tích đất sét để làm một viên gạch. (lấy $\\pi \\approx 3,14$)\nTheo toán học, bác Ba muốn xây một ngôi nhà phải mua $10$ thiên gạch, giá một viên là $1 100$ đồng. Nhưng khi thi công, bác Ba phải mua dư $2%$ số gạch cần dùng dự phòng cho hư hao. Tính số tiền bác Ba mua gạch để xây căn nhà, biết $1$ thiên gạch là $1 000$ viên.\n2) Cho đường tròn $\\left( O ; R \\right)$ và dây $MN$ cố định ($MN<2R$). Kẻ đường kính $AB$ vuông góc với dây $MN$ tại $E$ (điểm $A$ thuộc cung nhỏ $MN$). Lấy điểm $C$ thuộc dây $MN$ ($C$ khác $M,N,E$). Đường thẳng $BC$ cắt $\\left( O ; R \\right)$ tại điểm $K$ ($K$ khác $B$).\na. Chứng minh $AKCE$ là tứ giác nội tiếp.\nb. Chứng minh $B{{M}^2}=BK\\cdot BC$.\nc. Gọi $I$ là giao điểm của hai đường thẳng $AK$ và $MN$; $D$ là giao điểm của hai đường thẳng $AC$ và $BI$. Chứng minh điểm $C$ cách đều ba cạnh của $\\Delta DEK$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Công ty sản xuất thùng gỗ muốn thiết kế số lượng lớn thùng đựng hàng hóa bên trong, dạng hình lăng trụ tứ giác đều không nắp với thể tích là $62,5dm$. Để tiết kiệm vật liệu gỗ làm thùng, người ta cần thiết kế thùng sao cho có tổng $S$ diện tích xung quanh và diện tích mặt đáy là nhỏ nhất. Hỏi $S$có giá trị bằng bao nhiêu?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Thống kê tuổi thọ của $30$ bóng đèn điện được lắp thử (đơn vị: giờ) được cho trong bảng dưới dây:\nLập bảng tần số và tần số tương đối của mẫu số liệu trên.\nCó người nói: “Có trên $75%$ bóng đèn có tuổi thọ từ $1160$ đến $1180$”. Theo em nhận định đó đúng hay sai?\n2) Bình tung một đồng tiền xu có hai mặt sấp (S) và ngửa (N) liên tiếp ba lần, sau mỗi lần tung Bình đều ghi lại mặt xuất hiện. Tính xác suất của các biến cố A: “Mặt sấp xuất hiện đúng một lần”.",
+    "topic": "khac",
+    "source_file": "Đề số 25_converted_165017.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Biểu đồ dưới đây biểu diễn kết quả khảo sát thành tích chạy $100 m$ của một số học sinh\n1) Có bao nhiêu học sinh chạy $100 m$ hết ít hơn $13$ giây và tìm tần số tương đối ghép nhóm của nhóm $\\left[ 13;14 \\right)$.\n2) Bạn Long có $n$ tấm thẻ cùng loại được đánh số từ $1$ đến $n$. Bạn Long rút ngẫu nhiên $1$ tấm thẻ. Biết rằng xác suất của biến cố “Lấy được tấm thẻ ghi số có một chữ số” là $0,25$. Hỏi bạn Long có bao nhiêu tấm thẻ?",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{x}{\\sqrt{x}-3}$ và $B=\\frac{2x-3}{x-3\\sqrt{x}}-\\frac{1}{\\sqrt{x}}$ với $x>0,x\\ne 9$.\n1) Tính giá trị của biểu thức $A$ khi $x=16$.\n2) Chứng minh $B=\\frac{2\\sqrt{x}-1}{\\sqrt{x}-3}$.\n3) Tìm tất cả giá trị của $x$ để $A-B<0$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Hai vòi nước cùng chảy vào một cái bể không có nước thì trong 5 giờ sẽ đầy bể. Nếu vòi thứ nhất chảy trong 3 giờ và vòi thứ 2 chảy trong 4 giờ thì được $\\frac{2}{3}$ bể nước. Hỏi nếu mỗi vòi nước chảy một mình thì trong bao lâu mới đầy bể.\n2) Một xí nghiệp theo kế hoạch phải sản xuất 75 sản phẩm trong một số ngày dự kiến. Nhưng khi thực hiện, do cải tiến kĩ thuật nên mỗi ngày xí nghiệp làm vượt mức 5 sản phẩm, vì vậy không những họ đã làm được 80 sản phẩm mà còn hoàn thành trước kế hoạch 1 ngày. Hỏi theo kế hoạch, mỗi ngày xí nghiệp sản xuất bao nhiêu sản phẩm?\n3) Trong mặt phẳng tọa độ $Oxy$, biết rằng parabol $y={{x}^2}$ và đường thẳng $\\left( d \\right):$$y=x-m$ có một hoành độ giao điểm là $x=\\frac{1-\\sqrt{5}}{2}$. Giả sử ${{x}_1};{{x}_2}$ là các hoành độ giao điểm của hai hàm số trên. Không giải phương trình, hãy tính giá trị biểu thức: $\\frac{1}{{{x}_1}}+\\frac{1}{{{x}_2}}-\\frac{2025}{{{x}_1}+{{x}_2}-2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Các viên kẹo mút có dạng hình cầu, bán kính $1,6cm$. Người ta dùng một que nhựa hình trụ tròn dài, bán kính $0,2cm$ cắm vào đến phân nửa viên kẹo để người dùng dễ sử dụng.\na) Tính thể tích phần ống nhựa cắm vào phân nửa viên kẹo.\nb) Tính thể tích thực của viên kẹo sau khi trừ phần ống nhựa cắm vào (kết quả làm tròn đến hàng phần trăm). Biết kẹo không tràn vào phần trong ống nhựa.\n2) Cho tam giác $ABC$ có ba góc nhọn ($AB<AC$), nội tiếp đường tròn $\\left( O \\right)$. Tiếp tuyến\ntại điểm $A$ của đường tròn $\\left( O \\right)$ cắt đường thẳng $BC$ tại điểm $S$. Gọi $I$ là chân đường vuông góc kẻ từ điểm $O$ đến đường thẳng $BC$.\na) Chứng minh tứ giác $SAOI$ là tứ giác nội tiếp.\nb) Gọi $H$ và $D$ lần lượt là chân các đường vuông góc kẻ từ điểm $A$ đến các đường thẳng $SO$ và $SC$. Chứng minh $\\widehat{OAH}=\\widehat{IAD}$.\nc) Vẽ đường cao $CE$ của tam giác $ABC$. Gọi $Q$ là trung điểm của đoạn thẳng $BE$. Đường thẳng $QD$ cắt đường thẳng $AH$ tại điểm $K$. Chứng minh $BQ.BA=BD.BI$",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Cho hình chóp tam giác đều S.ABC có các cạnh bên đều bằng $6 cm$, độ dài cạnh đáy là $x$ $\\left( cm \\right)$. Tìm $x$ để diện tích xung quanh của hình chóp đều đó là lớn nhất.\nHẾT\nĐỀ BÀI",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Biểu đồ dưới đây biểu diễn kết quả khảo sát thành tích chạy $100 m$ của một số học sinh\n1) Có bao nhiêu học sinh chạy $100 m$ hết ít hơn $13$ giây và tìm tần số tương đối ghép nhóm của nhóm $\\left[ 13;14 \\right)$\n2) Bạn Long có $n$ tấm thẻ cùng loại được đánh số từ $1$ đến $n$. Bạn Long rút ngẫu nhiên $1$ tấm thẻ. Biết rằng xác suất của biến cố “Lấy được tấm thẻ ghi số có một chữ số” là $0,25$. Hỏi bạn Long có bao nhiêu tấm thẻ?",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 26_converted_165349.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Cho bảng tần số ghép nhóm sau về tuổi thọ của một số ong mật cái như sau:\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm [40; 50).\n2) Trong một hộp đựng 15 tấm thẻ đánh số từ 1 đến 15 và không có hai tấm thẻ nào đánh số trùng nhau. An rút ngẫu nhiên một tấm thẻ trong hộp. Tính xác suất của biến cố A: “An rút được tấm thẻ đánh số chia hết cho 3 và không vượt quá 10”.",
+    "topic": "khac",
+    "source_file": "Đề số 27_converted_165445.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức M = $\\frac{x+3}{\\sqrt{x}-2}$ và N = $\\frac{\\sqrt{x}-1}{\\sqrt{x}+2}+\\frac{5\\sqrt{x}-2}{x-4}$ với$x>0, x\\ne 4$\n1) Tính giá trị biểu thức của M khi $x$ = 9.\n2) Rút gọn biểu thức N.\n3) Tìm giá trị của $x$ để biểu thức $\\frac{M}{N}$ đạt giá trị nhỏ nhất.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 27_converted_165445.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một cửa hàng thời trang trong một quý đã nhập hàng với tổng số vốn là 800 triệu và bán hết hàng trong quý đó. Cửa hàng gồm 2 loại thời trang nam và thời trang nữ. Biết thời trang nam lãi 15% và thời trang nữ lãi 20%, tổng số tiền lãi của quí đó là 145 triệu đồng. Tính số vốn cửa hàng đã nhập cho mỗi loại thời trang trên.\n2) Một ô tô và một xe máy cùng khởi hành từ A để đi đến B với vận tốc của mỗi xe không đổi trên toàn bộ quãng đường AB dài 120km. Do vận tốc xe ô tô lớn hơn vận tốc xe máy là 10km/h nên xe ô tô đến B sớm hơn xe máy là 36 phút. Tính vận tốc của mỗi xe.\n3) Cho phương trình ${{x}^2}-x-3=0$có hai nghiệm ${{x}_1},{{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức A = $3{{x}_1}x_2^2+{{x}_1}+{{x}_2}(3x_1^2+1)$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 27_converted_165445.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một cốc thủy tinh hình trụ đựng đầy nước có chiều cao bằng 10 cm và thể tích bằng 90 cm3. Người ta thả vào cốc một viên bi sắt hình cầu có bán kính bằng bán kính đáy cốc nước, viên bi sắt ngập toàn bộ trong nước. Tính lượng nước bị tràn ra khỏi cốc?\na) Tính bán kính của viên bi hình cầu đó.\nb) Tính lượng nước bị tràn ra khỏi cốc?\n2) Cho nửa đường tròn (O) đường kính AB. Điểm M nằm trên nửa đường tròn (M ≠ A; B). Tiếp tuyến tại M cắt tiếp tuyến tại A và B của đường tròn (O) lần lượt tại C và D.\nChứng minh rằng: tứ giác ACMO nội tiếp.\nGọi P là giao điểm CD và AB. Chứng minh: PA.PO = PC.PM\nGọi E là giao điểm của AM và BD; F là giao điểm của AC và BM.  Chứng minh: E; F; P thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 27_converted_165445.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Cho một tấm nhôm hình vuông cạnh 12 cm. Người ta cắt ở bốn góc của tấm nhôm đó bốn hình vuông bằng nhau, mỗi hình vuông có cạnh bằng x ( cm), rồi gấp tấm nhôm lại như hình vẽ dưới đây để được một cái hộp không nắp. Tìm x để thể tích của hộp là lớn nhất.\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 27_converted_165445.docx"
+  },
+  {
+    "content": "Câu I: (1,5 điểm)\n1). Bảng sau thống kê số lượt nháy chuột vào quảng cáo ở một trang web vào tháng 12/2022.\nLập bảng tần số tương đối cho mẫu số liệu trên.\n2). Một hộp đựng 10 viên bi được đánh số từ 1 đến 10. Lấy ngẫu nhiên một viên bi từ hộp. Xét biến cố ${N}$: \"Viên bi lấy ra có số ghi trên đó là số nguyên tố\". Tính xác suất của biến cố ${N}$.",
+    "topic": "khac",
+    "source_file": "Đề số 28_converted_165802.docx"
+  },
+  {
+    "content": "Câu II: (1,5 điểm): Cho hai biểu thức: $A=\\frac{\\sqrt{x}}{\\sqrt{x}+2}$ và $B=\\frac{2}{\\sqrt{x}-1}-\\frac{\\sqrt{x}-2}{x-\\sqrt{x}}$ với ${x>0; x\\neq 1}$.\n1). Tính giá trị của biểu thức ${A}$ khi ${x=4}$.\n2). Chứng minh ${B=\\dfrac{\\sqrt{x}+2}{x-\\sqrt{x}}}$.\n3). Xét biểu thức $P=A+\\frac{1}{B}$. Tìm $x$để  $P\\ge 1$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 28_converted_165802.docx"
+  },
+  {
+    "content": "Câu III: (2,5 điểm)\n1). Trên địa bàn thành phố $X$ có $1850$ học sinh lớp $9$ đăng kí dự thi tuyển sinh vào lớp $10$ của hai trường THPT A và B, kết quả có 680 học sinh trúng tuyển. Biết tỉ lệ trúng tuyển của trường A là $30%$ và trường B là $80%$. Hỏi mỗi trường có bao nhiêu có bao nhiêu học sinh lớp $9$ đăng kí dự thi vào lớp $10$.\n2). Sân vận động Quốc gia Mỹ Đình (Quận Nam Từ Liêm – Hà Nội) có mặt sân bóng hình chữ nhật với chiều dài hơn chiều rộng 37m và có diện tích là 7140${m^2}$. Hãy tính chiều dài và chiều rộng của mặt sân bóng đá này.\n3). Tìm tất cả các giá trị của tham số ${m}$ để phương trình ${x^2 - 2mx + 4m - 4 = 0}$ có hai nghiệm ${x_1, x_2}$ thỏa mãn ${x_1^2 + x_2^2 - 8 = 0}$.",
+    "topic": "phuong_trinh",
+    "source_file": "Đề số 28_converted_165802.docx"
+  },
+  {
+    "content": "Câu IV: (4,0 điểm)\n1). Một doanh nghiệp sản xuất vỏ hộp sữa ông thọ dạng hình trụ (như hình minh họa bên dưới), có chiều cao bằng $12 cm$. Biết thể tích của hộp là$192\\pi c{{m}^3}$.\na). Tính bán kính đáy của hình trụ\nb). Tính số tiền mà doanh nghiệp cần chi để sản xuất $10 000$vỏ hộp sữa ông thọ (kể cả hai nắp hộp), biết chi phí để sản xuất vỏ hộp đó là $80 000$ đồng/m2 (làm tròn kết quả đến phần ngàn).\n2). Cho đường tròn ${(O;R)}$ đường kính ${AB}$. Kẻ tiếp tuyến ${Ax}$, lấy ${P}$ trên ${Ax}$ (${AP > R}$). Từ ${P}$ kẻ tiếp tuyến ${PM}$ với ${(O)}$.\na) Chứng minh rằng bốn điểm ${A, P,M,O}$ cùng thuộc 1 đường tròn.\nb) Chứng minh: ${BM //OP}$. Đường thẳng vuông góc với ${AB}$ tại ${O}$ cắt tia ${BM}$ tại ${N}$. Chứng minh tứ giác ${OBNP}$ là hình bình hành.\nc) Giả sử ${AN}$ cắt ${OP}$ tại ${K; PM}$ cắt ${ON}$ tại ${I; PN}$ cắt ${OM}$ tại ${J}$. Chứng minh ${I,J,K}$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 28_converted_165802.docx"
+  },
+  {
+    "content": "Câu V: (0,5 điểm) Cho một tấm nhôm có hình tam giác đều có cạnh bằng $100 cm$. Người ta cắt ở ba góc của tấm nhôm đó ba tam giác như hình vẽ dưới đây để được hình chữ nhật$MNPQ$. Tìm độ dài $MB$để hình chữ nhật $MNPQ$ có diện tích lớn nhất.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 28_converted_165802.docx"
+  },
+  {
+    "content": "Bài 1. (1,5 điểm) Cho hàm số $y=\\frac{{{x}^2}}{2}.$\n1) Vẽ đồ thị $\\left( P \\right)$ của hàm số trên.\n2) Tìm những điểm $M$ thuộc $\\left( P \\right)$ có tung độ và hoành độ bằng nhau.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 2. (1,0 điểm) Cho phương trình $2{{x}^2}-5x+1=0.$\n1) Chứng minh phương trình trên có hai nghiệm phân biệt.\n2) Không giải phương trình, hãy tính giá trị của biểu thức\n$A={{x}_1}\\left( {{x}_1}+2024 \\right)+{{x}_2}\\left( {{x}_2}+2025 \\right)-{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 3. (1,5 điểm) Biên độ nhiệt là khoảng cách chênh lệch giữa nhiệt độ cao nhất và nhiệt độ thấp nhất trong cùng một khoảng thời gian nhất định (một ngày, một tháng, một năm, …) của cùng một vùng địa lí. Biểu đồ cột kép dưới đây biểu diễn nhiệt độ (độ C) các ngày trong một tuần tại Thành phố Hồ Chí Minh.\n1) Trong tuần này, ngày có biên độ nhiệt lớn nhất của thành phố Hồ Chí Minh là thứ mấy?\n2) Chọn ngẫu nhiên một ngày trong tuần, tính xác suất của các biến cố sau:\nA: “Ngày được chọn có nhiệt độ cao nhất không quá 35 độ C”.\nB: “Ngày được chọn có biên độ nhiệt nhỏ hơn 12 độ C”.\n1) Viết biểu thức $S$ biểu diễn theo $x$ diện tích của khu vườn hình chữ nhật sau khi mở rộng.\n2) Biết rằng sau khi mở rộng thì diện tích của khu vườn lớn hơn diện tích ban đầu $1 150 m^2.$ Tìm giá trị của $x$ (làm tròn đến hàng phần mười của mét).\n2) Người ta ép phần ruột màu đỏ của quả dưa hấu trên thì thể tích nước ép thu được bằng 80% thể tích phần ruột. Nước ép dưa hấu sẽ được đựng trong các ly thủy tinh giống nhau, phần lòng trong dạng hình trụ có chiều cao $10 cm$ và đường kính đáy lòng trong là $5 cm.$ Mỗi ly chỉ chứa được $70%$ thể tích. Hỏi để đựng nước ép của quả dưa hấu nói trên thì cần ít nhất bao nhiêu cái ly?\nBiết công thức tính thể tích hình trụ là $V=p{{R}^2}h (R$ là bán kính đáy, $h$là chiều cao); công thức tính thể tích hình cầu là  $V=\\frac{4}{3}p{{R}^3} (R$ là bán kính hình cầu).",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 6. (1,0 điểm) Thép không gỉ Ferritic là họ thép hợp kim có chứa từ 12 đến 27 phần trăm crôm. Một nhà máy luyện thép hiện có sẵn một lượng hợp kim thép chứa $10%$ crôm và một lượng hợp kim thép chứa $30%$ crôm. Giả sử trong quá trình luyện thép các nguyên liệu không bị hao hụt.\n1) Tính khối lượng hợp kim thép mỗi loại từ hai loại thép trên dùng để luyện được 500 tấn thép chứa $16%$ crôm.\n2) Nhà máy dự định luyện ra loại thép không gỉ Ferritic từ 100 tấn thép chứa $10%$ crôm và  $x$ tấn thép chứa $30%$ crôm. Hỏi $x$ nằm trong khoảng nào?",
+    "topic": "khac",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 7. (3,0 điểm) Cho tam giác $ABC$ có ba góc nhọn $\\left( AB <AC \\right).$ Đường tròn tâm $O$ đường kính $BC$ cắt hai cạnh $AB, AC$ lần lượt tại $E$ và $F$ $(E$ khác $B, F$ khác C ). Các đoạn thẳng $BF$ và $CE$ cắt nhau tại $H,$ tia $AH$ cắt $BC$ tại $K.$\n1) Chứng minh bốn điểm $\\widehat{BEC}=\\widehat{BFC}=90{}^\\circ$ từ đó suy ra tứ giác $AEHF$ nội tiếp.\n2) Gọi $D$  là giao điểm của $AH$ và $\\left( O \\right)$ $(D$ nằm giữa $A$ và $H),$ chứng minh $B{{D}^2} =BK\\cdot BC$ và $\\widehat{BDH}=\\widehat{BFD}.$\n3) Trong trường hợp $\\widehat{BAC}=60{}^\\circ$ và $BC=6 cm,$tính độ dài đoạn thẳng $EF$ và bán kính đường tròn ngoại tiếp tam giác $AEF.$\n----------HẾT----------\nCán bộ coi thi không giải thích gì thêm.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 1. (1,5 điểm) Cho hàm số $y=\\frac{{{x}^2}}{2}.$\n1) Vẽ đồ thị $\\left( P \\right)$ của hàm số trên.\n2) Tìm những điểm $M$ thuộc $\\left( P \\right)$ có tung độ và hoành độ bằng nhau.\nHướng dẫn giải\n1) Vẽ đồ thị $\\left( P \\right)$ của hàm số $y=\\frac{{{x}^2}}{2}.$\n2) Điểm có tung độ và hoành độ bằng nhau nên gọi $M\\left( {{x}_0}; {{x}_0} \\right)$ thì ${{x}_0}=\\frac{x_0^2}{2}$\nSuy ra $x_0^2=2{{x}_0}$ hay $x_0^2-2{{x}_0}=0$\n${{x}_0}\\left( {{x}_0}-2 \\right)=0$\n${{x}_0}=0$ hoặc ${{x}_0}-2=0$\nVậy những điểm $M$ thuộc $\\left( P \\right)$ có tung độ và hoành độ bằng nhau là  $M\\left( 0 ; 0 \\right)$ và $M\\left( 2 ; 2 \\right).$",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 2. (1,0 điểm) Cho phương trình $2{{x}^2}-5x+1=0.$\n1) Chứng minh phương trình trên có hai nghiệm phân biệt.\n2) Không giải phương trình, hãy tính giá trị của biểu thức\n$A={{x}_1}\\left( {{x}_1}+2024 \\right)+{{x}_2}\\left( {{x}_2}+2025 \\right)-{{x}_2}$.\nHướng dẫn giải\n1) Phương trình $2{{x}^2}-5x+1=0$ có $a=2 ; b=-5 ; c=1$ nên ta có:\n$\\Delta = \\left( -5 \\right)^2- 4\\cdot 2\\cdot 1= 25- 8= 17> 0$ nên phương trình có hai nghiệm phân biệt.\n2) Áp dụng định lí Viète, ta có: $\\left\\{ \\begin{align} & {{x}_1}+{{x}_2}=\\frac{5}{2} \\ & {{x}_1}{{x}_2}=\\frac{1}{2} \\ \\end{align}$.\nTa có: $A={{x}_1}\\left( {{x}_1}+2024 \\right)+{{x}_2}\\left( {{x}_2}+2025 \\right)-{{x}_2}$\n$=x_1^2+2024{{x}_1}+x_2^2+2025{{x}_2}-{{x}_2}$\n$=x_1^2+2024{{x}_1}+x_2^2+2024{{x}_2}$\n$=\\left( x_1^2+2{{x}_1}{{x}_2}+x_2^2 \\right)-2{{x}_1}{{x}_2}+\\left( 2024{{x}_1}+2024{{x}_2} \\right)$\n$=\\left( {{x}_1}+{{x}_2} \\right)^2-2{{x}_1}{{x}_2}+2024\\left( {{x}_1}+{{x}_2} \\right)$\n$=\\left( \\frac{5}{2} \\right)^2-2\\cdot \\frac{1}{2}+2024\\cdot \\frac{5}{2}$\n$=\\frac{25}{4}-1+5060=\\frac{20 261}{4}$.\nVậy $A=\\frac{20 261}{4}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 3. (1,5 điểm) Biên độ nhiệt là khoảng cách chênh lệch giữa nhiệt độ cao nhất và nhiệt độ thấp nhất trong cùng một khoảng thời gian nhất định (một ngày, một tháng, một năm, …) của cùng một vùng địa lí. Biểu đồ cột kép dưới đây biểu diễn nhiệt độ (độ C) các ngày trong một tuần tại Thành phố Hồ Chí Minh.\n1) Trong tuần này, ngày có biên độ nhiệt lớn nhất của thành phố Hồ Chí Minh là thứ mấy?\n2) Chọn ngẫu nhiên một ngày trong tuần, tính xác suất của các biến cố sau:\nA: “Ngày được chọn có nhiệt độ cao nhất không quá 35 độ C”.\nB: “Ngày được chọn có biên độ nhiệt nhỏ hơn 12 độ C”.\nHướng dẫn giải\n1) Dựa vào biểu đồ cột kép, ta có biên độ nhiệt của các ngày trong tuần là:\nThứ 2: $36-26=10,$ thứ 3: $35-24=11,$ thứ 4: $36-27=9;$ thứ 5: $35-25=10;$\nThứ 6: $37-25=12;$ thứ 7: $36-22=14;$ chủ nhật: $34-23=11.$\nVậy ngày có biên độ nhiệt lớn nhất trong tuần của thành phố Hồ Chí Minh là thứ 7.\n2) Ta có số ngày có nhiệt độ cao không quá 35 độ C là 3 (ngày).\nSuy ra số phần tử của biến cố A là 3.\nXác suất để ngày được chọn có nhiệt độ cao nhất không quá 35 độ C là $\\frac{3}{7}$.\nCó số ngày có biên độ nhiệt nhỏ hơn 12 độ C là 5 (ngày).\nSuy ra số phần tử của biến cố B là 5.\nXác suất để ngày được chọn có biên độ nhiệt nhỏ hơn 12 độ C là $\\frac{5}{7}.$\n1) Viết biểu thức $S$ biểu diễn theo $x$ diện tích của khu vườn hình chữ nhật sau khi mở rộng.\n2) Biết rằng sau khi mở rộng thì diện tích của khu vườn lớn hơn diện tích ban đầu $1 150 m^2.$ Tìm giá trị của $x$ (làm tròn đến hàng phần mười của mét).\nHướng dẫn giải\n1) Viết biểu thức $S$ biểu diễn theo $x$ diện tích của khu vườn hình chữ nhật sau khi mở rộng.\nChiều rộng của khu vườn hình chữ nhật sau khi mở rộng là:\n$30+x+x=30+2x \\left( m \\right)$\nChiều dài của khu vườn hình chữ nhật sau khi mở rộng là:\n$70+x+x=70+2x \\left( m \\right)$\nDiện tích của khu vườn hình chữ nhật sau khi mở rộng là:\n$\\left( 30+2x \\right)\\left( 70+2x \\right) \\left( m^2 \\right)$\nVậy biểu thức $S$ biểu diễn theo $x$ là $S=\\left( 30+2x \\right)\\left( 70+2x \\right)$.\n2) Biết rằng sau khi mở rộng thì diện tích của khu vườn lớn hơn diện tích ban đầu $1 150 m^2.$ Tìm giá trị của $x$ (làm tròn đến hàng phần mười của mét).\nĐKXĐ: $x>0$\nDiện tích của khu vườn ban đầu là: $70\\cdot 30 =2 100 \\left( m^2 \\right)$\nVì sau khi mở rộng thì diện tích của khu vườn lớn hơn diện tích ban đầu $1 150 m^2$ nên phương trình:\n$\\left( 30+2x \\right)\\left( 70+2x \\right)=2 100+1 150=3 250$\n$2100+60x+140x+4{{x}^2}=3 250$\n$4{{x}^2}+200x-1 150=0$\n$2{{x}^2}+100x-575=0$\nTa có ${\\Delta }' =3 650>0$ nên phương trình có hai nghiệm phân biệt:\n${{x}_1}\\approx 5,2 \\left( TM \\right); {{x}_2}\\approx -55,2 \\left( KTM \\right)$\nVậy giá trị của $x$ là khoảng $5,2 m.$\n2) Người ta ép phần ruột màu đỏ của quả dưa hấu trên thì thể tích nước ép thu được bằng 80% thể tích phần ruột. Nước ép dưa hấu sẽ được đựng trong các ly thủy tinh giống nhau, phần lòng trong dạng hình trụ có chiều cao $10 cm$ và đường kính đáy lòng trong là $5 cm.$ Mỗi ly chỉ chứa được $70%$ thể tích. Hỏi để đựng nước ép của quả dưa hấu nói trên thì cần ít nhất bao nhiêu cái ly?\nBiết công thức tính thể tích hình trụ là $V=p{{R}^2}h (R$ là bán kính đáy, $h$là chiều cao); công thức tính thể tích hình cầu là  $V=\\frac{4}{3}p{{R}^3} (R$ là bán kính hình cầu).\nHướng dẫn giải\n1) Bán kính của phần ruột quả dưa hấu là: $\\frac{25-2\\cdot 2}{2}=10,5 \\left( cm \\right).$\nThể tích phần ruột của quả dưa hấu là: $V=\\frac{4}{3}\\pi {{R}^3}=\\frac{4}{3}\\pi \\cdot {{10,5}^3}\\approx 4 849,05 \\left( cm^3 \\right).$\nVậy thể tích phần ruột của quả dưa hấu khoảng $4 849,05 cm^3.$\n2) Thể tích nước ép dưa hấu là: ${{V}_n}= 80%\\cdot 4 849,05= 3 879,24 \\left( cm^3 \\right)$\nThể tích của phần đựng nước ly thuỷ tinh là:\n${{V}_l}=70%\\cdot \\pi {{R}^2}h=70%\\cdot \\pi \\cdot \\left( \\frac{5}{2} \\right)^2\\cdot 10\\approx 137,44 \\left( cm^3 \\right)$\nTa có $\\frac{{{V}_n}}{{{V}_l}}\\approx \\frac{ 3 879,24}{137,44}\\approx 28,22$.\nDo đó cần ít nhất 29 cái ly để đựng hết nước ép của quả dưa hấu.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 6. (1,0 điểm) Thép không gỉ Ferritic là họ thép hợp kim có chứa từ 12 đến 27 phần trăm crôm. Một nhà máy luyện thép hiện có sẵn một lượng hợp kim thép chứa $10%$ crôm và một lượng hợp kim thép chứa $30%$ crôm. Giả sử trong quá trình luyện thép các nguyên liệu không bị hao hụt.\n1) Tính khối lượng hợp kim thép mỗi loại từ hai loại thép trên dùng để luyện được 500 tấn thép chứa $16%$ crôm.\n2) Nhà máy dự định luyện ra loại thép không gỉ Ferritic từ 100 tấn thép chứa $10%$ crôm và  $x$ tấn thép chứa $30%$ crôm. Hỏi $x$ nằm trong khoảng nào?\nHướng dẫn giải\n1) Gọi $a$ là số tấn hợp kim thép chứa $10%$ crom cần dùng $\\left( a>0 \\right).$\nKhi đó, $500a$ là số tấn hợp kim thép 30% cần dùng.\nTa có $a\\cdot 10%+\\left( 500a \\right)\\cdot 30%=500\\cdot 16%$\n$10a+\\left( 500a \\right)\\cdot 30=500\\cdot 16$\n$a+1 5003a=800$\n$2a=700$\n$a=350$ (TMĐK)\nVậy số hợp kim thép chứa $10%$ crom cần dùng là 350 tấn, số hợp kim thép chứa $30%$ cần dùng là 150 tấn.\n2)  Số crôm từ 100 tấn thép chứa $10%$ crôm là $10%\\cdot 100=10$ (tấn)\nSố crôm từ x tấn thép chứa 30% crôm là $0,3x$ (tấn)\nTổng số tấn thép là $100+x$ (tấn)\nPhần trăm crôm có trong tổng số tấn thép nhà máy dự định luyện ra là: $\\frac{10+0,3x}{100+x}\\cdot 100 \\left( % \\right)$\nTheo đầu bài, thép không gỉ Ferritic có chứa từ 12 đến 27 phần trăm crôm, ta có:\n$12\\le \\frac{10+0,3x}{100+x}\\cdot 100\\le 27$\n$1 200+12x\\le 1 000+30x\\le 2 700+27x$\nTừ $\\left( 1 \\right)$ và $\\left( 2 \\right)$ suy ra $\\frac{100}{9}\\le x\\le \\frac{1 700}{3}.$\nVậy $x$ nằm trong khoảng $\\frac{100}{9}$ đến $\\frac{1 700}{3}.$",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Bài 7. (3,0 điểm) Cho tam giác $ABC$ có ba góc nhọn $\\left( AB <AC \\right).$ Đường tròn tâm $O$ đường kính $BC$ cắt hai cạnh $AB, AC$ lần lượt tại $E$ và $F$ $(E$ khác $B, F$ khác C ). Các đoạn thẳng $BF$ và $CE$ cắt nhau tại $H,$ tia $AH$ cắt $BC$ tại $K.$\n1) Chứng minh bốn điểm $\\widehat{BEC}=\\widehat{BFC}=90{}^\\circ$ từ đó suy ra tứ giác $AEHF$ nội tiếp.\n2) Gọi $D$  là giao điểm của $AH$ và $\\left( O \\right)$ $(D$ nằm giữa $A$ và $H),$ chứng minh $B{{D}^2} =BK\\cdot BC$ và $\\widehat{BDH}=\\widehat{BFD}.$\n3) Trong trường hợp $\\widehat{BAC}=60{}^\\circ$ và $BC=6 cm,$tính độ dài đoạn thẳng $EF$ và bán kính đường tròn ngoại tiếp tam giác $AEF.$\nHướng dẫn giải\nVậy $A, E, F, H$ cùng thuộc đường trong đường kính $AH$ hay tứ giác $AEHF$ nội tiếp.\n2) Ta có $\\widehat{BDC}=\\frac{1}{2}s \\overset\\frown{BC}=\\frac{1}{2}\\cdot 180{}^\\circ =90{}^\\circ$ (tính chất góc nội tiếp chắn nửa đường tròn)\nXét BDK và BCD có $\\widehat{CBD}$ chung; $\\widehat{BKD}= \\widehat{BDC} \\left( = 90{}^\\circ \\right)$\nDo đó $\\Delta BDK\\backsim \\Delta BCD \\left( g.g \\right)$\nSuy ra $\\frac{BD}{BC}=\\frac{BK}{BD}$ hay $B{{D}^2}=BK\\cdot BC$.\nDo $\\Delta BDK\\backsim \\Delta BCD \\left( g.g \\right)$ nên $\\widehat{BDH}= \\widehat{BCD}$ (hai góc tương ứng).\nMà $\\widehat{BCD}=\\widehat{BFD}$ (hai góc nội tiếp cùng chắn cung $BD)$\nNên $\\widehat{BDH}=\\widehat{BFD}$ (đpcm)\nDo $\\Delta AFB$ vuông tại $F$ nên $\\widehat{ABF}=90{}^\\circ -\\widehat{BAF}=90{}^\\circ -60{}^\\circ =30{}^\\circ$.\nMà $\\widehat{FBE}=\\frac{1}{2}s \\overset\\frown{EF}=\\frac{1}{2}\\widehat{OEF}$ nên $\\widehat{OEF}=2\\cdot 30{}^\\circ =60{}^\\circ .$\nXét $\\Delta OEF$ cân tại $O$ (do $OE=OF$) có $\\widehat{EOF}=60{}^\\circ$ nên $\\Delta OEF$ là tam giác đều.\nSuy ra $EF=OE=OF=\\frac{1}{2}BC=3 cm.$\nXét $\\Delta ABC$ có đường cao $CE$ và $BF$ cắt nhau tại $H$ nên $H$ là trực tâm.\nSuy ra $AH\\bot BC$\nXét $\\Delta AHF$ và $\\widehat{BHK}$ có $\\widehat{AHF}= \\widehat{BHK}$ (đối đỉnh) và $\\widehat{AFH}= \\widehat{BKH} \\left( = 90{}^\\circ \\right)$\nSuy ra $\\widehat{HAF}=\\widehat{HBK}$ hay $\\widehat{HAF}=\\widehat{FBC}$\nKết hợp $\\widehat{AFH}= \\widehat{BFC} \\left( = 90{}^\\circ \\right)$ suy ra $\\Delta AFH\\backsim \\Delta BFC \\left( g.g \\right)$\nSuy ra $\\frac{AH}{BC}=\\frac{AF}{BF}=\\cot \\widehat{FAB}=\\cot 60{}^\\circ =\\frac{\\sqrt{3}}{3}$ .\nSuy ra $AH=\\frac{\\sqrt{3}}{3}\\cdot BC=\\frac{\\sqrt{3}}{3}\\cdot 6=2\\sqrt{3}.$\nXét tứ giác $AEHF$ nội tiếp đường tròn đường kính $AH$ nên bán kính bằng $\\frac{2\\sqrt{3}}{2}=\\sqrt{3}.$\nVậy $EF=3 cm$ và bán kính đường tròn ngoại tiếp tam giác $AEF$ là $\\sqrt{3}.$\n----------HẾT----------",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 29_converted_170201.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1). Sau khi điều tra mật độ dân số ( đơn vị: người/km2) của 37 tỉnh, thành phố thuộc các vùng Bắc Trung Bộ và Duyên hải miền Trung, Tây Nguyên, Đông Nam Bộ, Đồng bằng sông Cửu Long (không kể Thành phố Hồ Chí Minh) ở năm 2021, người ta có biểu đồ tần số ghép nhóm dưới đây:\na)  Tìm tần số ghép nhóm của nhóm $[ 460;640)$\nb) Tính tần số tương đối ghép nhóm của nhóm $[ 100;280)$\n2).  Hình vẽ dưới đây mô tả một đĩa tròn bằng bìa cứng được chia thành $12$ phần bằng nhau và ghi các số $1;2;3;...;12$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa.\nXét phép thử: “Quay đĩa tròn một lần” và biến cố $A:$ “Chiếc kim chỉ vào hình quạt ghi số là số nguyên tố ”. Tính xác suất của biến cố $A$.",
+    "topic": "khac",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}-3}{\\sqrt{x}+3}$ và $B=\\frac{x-3}{\\sqrt{x}-3}+\\frac{9}{x-3\\sqrt{x}}+\\frac{3}{\\sqrt{x}}$  với $x>0;x\\ne 9.$\n1). Tính giá trị của biểu thức $A$ khi $x=25$.\n2). Rút gọn biểu thức $B$.\n3). Xét biểu thức $P=A\\cdot B$. Chứng minh $P>0$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) . Bác Tuấn vay tổng số tiền là 5 tỉ đồng từ hai ngân hàng Sacombank và Vietcombank đầu tư vào bất động sản. Sau một năm, tổng số tiền lãi  phải trả cho hai ngân hàng trên là 570 triệu đồng. Lãi suất cho vay của ngân hàng Sacombank là 12%/năm và  của Vietcombank là 11%/năm. Tính số tiền bác Tuấn đã vay của mỗi ngân hàng.\n2). Một công nhân dự định làm 72 sản phẩm trong một thời gian đã định. Nhưng thực tế xí nghiệp lại giao 80 sản phẩm. Mặc dù người đó mỗi giờ đã làm thêm một sản phẩm so với dự kiến, nhưng thời gian hoàn thành công việc vẫn chậm so với dự định là 12 phút. Tính số sản phẩm dự kiến làm trong 1 giờ của người đó. Biết mỗi giờ người đó làm không quá 20 sản phẩm.(Giả định rằng số sản phẩm mà công nhân  đó làm được trong mỗi giờ là bằng nhau).\n3).\na). Hãy tìm  một phương trình bậc hai  $a{{x}^2}+bx+c=0$ với các hệ số $a,b,c$ là số nguyên nhận $x=\\frac{\\sqrt{5}-2}{3}$ làm nghiệm.\nb). Tính tổng lập phương hai nghiệm của phương trình vừa tìm được ở câu a)",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu IV:  (4,0 điểm)\n1). Một khối gỗ dạng hình trụ, bán kính đường tròn đáy $r=10\\left( cm \\right),$chiều cao $h=20(cm)$. Người ta khoét rỗng hai nửa hình cầu như hình vẽ.\na.\tTính thể tích của khối gỗ  khi chưa khoét.\nb.\t Hãy tính diện tích bề mặt của khối gỗ còn lại sau khi khoét (diện tích cả ngoài lẫn trong).\n( các kết quả làm tròn đến hàng đơn vị)\n2)  Tứ giác $ABCD$ nội tiếp đường tròn tâm $O$ đường kính $AD.$ Hai đường chéo $AC,BD$ cắt nhau tại $E.$ Từ $E$ kẻ $EF$vuông góc với $AD$ ( $F\\in AD$). Đường thẳng $CF$ cắt đường tròn tại điểm thứ hai là $M.$ Giao điểm của $BD$ và $CF$ là $N.$Chứng minh :\na)\t$CEFD$ là tứ giác nội tiếp.\nb) $FA$  là tia phân giác của $\\widehat{BFM}$ .\nc)\t$BE.DN=EN.BD$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)  Một cửa hàng xăng dầu cần xây một bồn chứa dầu hình trụ bằng thép có thể tích $54\\pi \\left( {{m}^3} \\right)$ và giá mỗi mét vuông thép là 500 ngàn đồng. Hỏi số tiền thấp nhất mà cửa hàng phải trả ? ( kết quả làm tròn đến hàng đơn vị)\n.\nHẾT\nHƯỚNG DẪN",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1). Sau khi điều tra mật độ dân số ( đơn vị: người/km2) của 37 tỉnh, thành phố thuộc các vùng Bắc Trung Bộ và Duyên hải miền Trung, Tây Nguyên, Đông Nam Bộ, Đồng bằng sông Cửu Long (không kể Thành phố Hồ Chí Minh) ở năm 2021, người ta có biểu đồ tần số ghép nhóm dưới đây:\na)  Tìm tần số ghép nhóm của nhóm $[ 460;640)$.\nb) Tính tần số tương đối ghép nhóm của nhóm $[ 100;280)$.( làm tròn đến hàng đơn vị)",
+    "topic": "khac",
+    "source_file": "Đề số 2_converted_160144.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Một cửa hàng sách thống kê số tiền (đơn vị: nghìn đồng) mà $60$ khách hàng mua sách ở cửa hàng đó trong một ngày. Số liệu được ghi lại trong biểu đồ tần số ghép nhóm dưới đây.\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm $\\left[ 40;50 \\right)$\n2) Một hộp có $12$ tấm thẻ cùng loại, mỗi thẻ được ghi một trong các số $1;2;3;...;12$; hai thẻ khác nhau thì ghi hai số khác nhau. Xét phép thử “Rút ngẫu nhiên một thẻ trong hộp” và biến cố $M$: “Thẻ được rút ra ghi số chia hết cho $3$”. Tính xác suất của biến cố $M$?",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 30_converted_170503.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{3}{\\sqrt{x}-2}-\\frac{\\sqrt{x}+10}{x-4}$ và $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}-2}$ với $x\\ge 0;x\\ne 4$\n1) Tính giá trị của $B$ tại $x=9$\n2) Rút gọn $A$\n3) Đặt $P=A.B$. Tìm số nguyên tố $x$ để $P\\le -1$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 30_converted_170503.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Bình muốn tạo ra $500$ $gam$ dung dịch $HCl$ $16%$ từ hai loại dung dịch $HCl$ $10%$ và HCl $25%$. Hỏi Bình cần dùng bao nhiêu $gam$ cho mỗi loại dung dịch đó?\n2) Một nhóm bạn trẻ cùng tham gia khởi nghiệp và dự định góp vốn là $180$ triệu đồng, số tiền góp mỗi người là như nhau. Nếu có thêm $3$ người tham gia cùng thì số tiền mỗi người góp giảm đi $3$ triệu đồng. Hỏi ban đầu nhóm bạn trẻ đó có bao nhiêu người?\n3) Cho phương trình: ${{x}^2}-2x+m-1=0 (1)$ với $m$ là tham số. Tìm tất cả các giá trị của $m$ để phương trình có hai nghiệm phân biệt thỏa mãn: ${{x}_1}{{x}_2}-1=\\frac{1}{{{x}_1}}+\\frac{1}{{{x}_2}}$",
+    "topic": "phuong_trinh",
+    "source_file": "Đề số 30_converted_170503.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n2) Cho đường tròn $(O;R)$ và dây $BC$ cố định không đi qua tâm. Gọi $A$ là một điểm bất kì trên cung lớn $BC$ sao cho tam giác $ABC$ nhọn $(AB<AC)$. Kẻ các đường cao $AD,BE$ của tam giác $ABC$.\na) Chứng minh: Bốn điểm $A,E,D,B$ cùng nằm trên một đường tròn.\nb) Kẻ đường kính $AK$ của đường tròn tâm $O$. Gọi F là hình chiếu của điểm $B$ trên $AK$. Chứng minh rằng: $AB.AC=AK.AD$và $DF\\bot AC$\nc) Gọi $M$ là trung điểm của $BC$. Chứng minh: ba điểm $E;F;M$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 30_converted_170503.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Cho một tấm nhôm hình tam giác đều có cạnh bằng $20(cm)$. Người ta cắt ở ba góc của tấm nhôm đó ba tam giác như hình vẽ dưới đây để được hình chữ nhật $MNPQ$. Tìm độ dài đoạn $MB$ để hình chữ nhật $MNPQ$ có diện tích lớn nhất?\nHẾT",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 30_converted_170503.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Viết ngẫu nhiên một số tự nhiên có hai chữ số.\na) Viết tập hợp  $\\Omega$ tất cả các kết quả có thể xảy ra đối với số tự nhiên được viết ra .\nb) Xác định kết quả thuận lợi cho biến cố $B:$ “Số tự nhiên được viết ra chia hết cho $11$”.\nc) Xác định kết quả thuận lợi cho biến cố $C$: “Số tự nhiên được viết ra chia cho $10$ dư $6$”.",
+    "topic": "khac",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}+4}{\\sqrt{x}-1}$ và $B=\\frac{3\\sqrt{x}+1}{x+2\\sqrt{x}-3}-\\frac{2}{\\sqrt{x}+3}$ với $x\\ge 0,x\\ne 1$\na) Tính giá trị của biểu thức $A$ khi $x=9$.\nb) Chứng minh $B=\\frac{1}{\\sqrt{x}-1}$.\nc) Tìm tất cả giá trị của $x$ để $\\frac{A}{B}\\ge \\frac{x}{4}+5$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1). Có hai loại dung dịch acid cùng loại có nồng độ acid lần lượt là$10%$ và $20%$, trộn hai dung dịch acid đó để được $0,5$$kg$dung dịch có nồng độ acid là  $16%$. Tính cần dùng bao nhiêu $gam$mỗi loại dung dịch acid nói trên.\n2) . Xe máy thứ nhất đi quãng đường từ Hà Nội về Nam Định hết $3$ giờ $20$ phút. Xe máy thứ hai đi hết $3$ giờ $40$ phút. Mỗi giờ xe máy thứ nhất đi nhanh hơn xe thứ hai là $3 km$. Tính vận tốc của mỗi xe máy và quãng đường từ Hà Nội về Nam Định.\n3). Cho phương trình $3{{x}^2}-6x+2=0$ có hai nghiệm là ${{x}_1}$,${{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức $A=x_1^2+x_2^2-{{x}_1}{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm) Đề.\n1) .Vườn nhà bạn Minh có trồng loại dưa hấu hình vuông. Trong hình dưới là quả dưa hấu hình vuông có cạnh dài $18$cm.\na) Tính thể tích của quả dưa hấu hình vuông.\nb) Minh muốn cắt quả dưa hấu thành những hình vuông nhỏ có cạnh $5$cm để bày ra đĩa và\ndự định mỗi đĩa bày $12$ miếng dưa. Hỏi Minh có thể bày được mấy đĩa? ( Làm tròn đến\nhàng đơn vị).\n2) .Cho tam giác $ABC$ nhọn với$AB>AC$. Các đường cao $BM, CN$ cắt nhau tại $H$.\na/  Chứng minh tứ giác $AMHN$ nội tiếp\nb/ Gọi $D$ là giao điểm của $AH$ và $BC$. Chứng minh $DA$ phân giác của $\\widehat{MDN}$\nc/ Đường thẳng qua $D$ và song song với $MN$ cắt $AB, CN$ lần lượt tại $I, J$. Chứng minh $D$ là\ntrung điểm $IJ$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một bồn hình trụ đang chứa dầu, được đặt nằm ngang, có chiều dài bồn là $5 m$, có bán kính đáy $1 m$, với nắp bồn đặt trên mặt nằm ngang của mặt trụ. Người ta đã rút dầu trong bồn tương ứng với $0,5 m$ của đường kính đáy. Tính thể tích gần đúng nhất của khối dầu còn lại trong bồn (lấy $\\pi \\approx 3,14$, kết quả làm tròn đến chữ số thập phân thứ hai, theo đơn vị $m^3$) .\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Viết ngẫu nhiên một số tự nhiên có hai chữ số.\na) Viết tập hợp  $\\Omega$ tất cả các kết quả có thể xảy ra đối với số tự nhiên được viết ra\nb) Xác định kết quả thuận lợi cho biến cố $B:$ “Số tự nhiên được viết ra chia hết cho $11$”\nc) Xác định kết quả thuận lợi cho biến cố $C$: “Số tự nhiên được viết ra chia cho $10$ dư $6$”",
+    "topic": "khac",
+    "source_file": "Đề số 31_converted_170906.docx"
+  },
+  {
+    "content": "Câu I: (1,5 điểm)\n. Cho bảng tần số tương đối ghép nhóm sau về tuổi thọ của một loại điện thoại.\nTìm giá trị đại diện cho nhóm $\\left[ 3;3,5 \\right)$và cho biết tần số tương đối của chúng của nhóm $\\left[ 3;3,5 \\right)$.\n2)  Bạn Bình gieo một đồng xu cân đối và bạn Cường rút ngẫu nhiên một tấm thẻ từ trong hộp chứa $7$ tấm thẻ ghi các số $1;2;3;4;5;6;7$. Tính xác suất của biến cố $A$ sau:\n“Rút được tấm thẻ ghi số $6$ hoặc đồng xu xuất hiện mặt $N$”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 32_converted_171235.docx"
+  },
+  {
+    "content": "Câu II: (1,5 điểm) Cho biểu thức $B=\\left( \\frac{\\sqrt{x}}{2+\\sqrt{x}}+\\frac{x+4}{4-x} \\right):\\frac{x}{x-2\\sqrt{x}}$ (với $x>0, x\\ne 4$).\n1) . Rút gọn biểu thức $B$.\n2) . Tính giá trị của $B$với $x=\\frac{1}{4}$.\n3). Tìm tất cả các giá trị nguyên của $x$để $B<-\\sqrt{x}$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 32_converted_171235.docx"
+  },
+  {
+    "content": "Câu III:  (2,5 điểm)\n1) Bác Dũng có số tiền nhàn dỗi là $700$ triệu đồng. Bác Dũng quyết định gửi một số tiền (triệu đồng) cho gói tiết kiệm ngắn hạn với lãi suất $0,5%$/tháng, phần còn lại gửi cho gói tiết kiệm trung hạn với lãi suất $0,8%$/tháng. Sau mỗi tháng bác đều rút toàn bộ số tiền lãi của cả hai gói và được $4,7$ triệu đồng. Tính số tiền gửi mỗi gói?.\n2) Một người đi siêu thị nếu mua $1$ cái áo và $1$ đôi giày theo giá niêm yết hết $800 000$đồng. Nhưng gặp đợt khuyến mãi $1$ cái áo giảm $5%$ và $1$ đôi giày giảm $10%$ nên người đó chỉ phải trả $735000$ đồng. Ngoài ra, nếu khách mua hàng có hóa đơn từ $2000000$đồng trở lên sẽ được giảm tiếp $10%$trên tổng số tiền đã mua. Trong dịp này, người đó đã mua $4$cái áo và $2$ đôi giày. Hỏi người đó đã trả hết tất cả bao nhiêu tiền?\nBiết rằng phương trình bậc hai ${{x}^2}+x+m=0$ có hai nghiệm là ${{x}_1}=\\frac{\\sqrt{2}+1}{\\sqrt{2}-1}$ và ${{x}_2}$. Tính giá trị của biểu thức $A=2024{{x}_1}+2025{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 32_converted_171235.docx"
+  },
+  {
+    "content": "Câu IV: (4,0 điểm)\n1) Một hộp đựng bóng có dạng hình trụ đựng được vừa khít $3$ quả bóng như hình vẽ bên. Coi quả bóng có dạng hình cầu với đường kính $6cm$. Tính thể tích phần khoảng không trong hộp?\n2). Từ điểm $A$ nằm ngoài $\\left( O \\right)$vẽ hai tiếp tuyến $AB,AC$ với đường tròn ($B,C$ là các tiếp điểm). Kẻ đường kính $CD$ của $\\left( O \\right)$.\na) Chứng minh $BD//AO$.\nb) $AD$ cắt $\\left( O \\right)$ tại $E$ ($A,E,D$ theo thứ tự). Chứng minh rằng $A{{B}^2}=AE.AD$.\nc) Vẽ $BH\\bot DC$ tại $H$. Gọi $I$là trung điểm của $BH$. Chứng minh ba điểm $A,I,D$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 32_converted_171235.docx"
+  },
+  {
+    "content": "Câu V: (0,5 điểm) Một nhà máy sản xuất ống thép khi xuất xưởng các ống thép được bó lại tạo thành khối gồm $37$ ống như hình vẽ. Biết các ống có dạng hình trụ đường kính đáy bằng nhau và bằng$10cm$.  Tính độ dài của một sơi dây đai để buột các ống thép lại với nhau.\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 32_converted_171235.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Một siêu thị thống kê hóa đơn mua hàng (đơn vị: nghìn đồng) của $150$ khách hàng đầu tiên trong ngày. Số liệu được ghi lại trong biểu đồ tần số ghép nhóm sau:\nTính tần số tương đối của nhóm có tần số lớn nhất (làm tròn đến số thập phân thứ nhất).\n2) Cho tập hợp $A=\\left\\{ 4;5;6 \\right\\}$. Từ các chữ số của tập hợp $A$ viết ngẫu nhiên một số tự nhiên có $2$ chữ số. Tính xác suất để số được viết có hai chữ số khác nhau.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 33_converted_171534.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{x+3}{\\sqrt{x}-2}$ và $B=\\frac{\\sqrt{x}+3}{\\sqrt{x}-2}-\\frac{3\\sqrt{x}+6}{x-4}$ với $x>0, x\\ne 4$\n1) Tính giá trị của biểu thức $A$ khi $x=16$.\n2) Rút gọn biểu thức $B$.\n3) So sánh biểu thức $\\frac{A}{B}$ với $3$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 33_converted_171534.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm) .\n1) Một cửa hàng xe máy điện cung cấp gói thuê pin theo tháng cho khách hàng dưới hai hình thức như sau:\nGói linh hoạt: mức giá là $189000$ đồng/tháng, cho phép xe di chuyển tối đa $400 km$. Nếu vượt số ki-lô-mét này, người dùng sẽ trả thêm $374$ đồng cho mỗi ki-lô-mét vượt.\nGói cố định: mức giá là $350000$ đồng/tháng, không giới hạn số ki-lô-mét di chuyển. Trung bình mỗi tháng anh Tâm di chuyển $800 km$ bằng xe máy điện. Hỏi anh Tâm nên thuê pin theo hình thức nào thì tiết kiệm hơn? Và tiết kiệm được bao nhiêu tiền mỗi tháng?\n2) Một đội công nhân theo kế hoạch làm $480$ sản phẩm trong một thời gian nhất định. Khi làm được $60$ sản phẩm, do yêu cầu đầy nhanh tiến độ công việc nên mỗi ngày đội đã làm thêm được nhiều hơn dự kiến $5$ sản phẩm, vì vậy đội hoàn thành sớm hơn so với dự kiến $2$ ngày. Hỏi ban đầu đội dự định mỗi ngày làm bao nhiêu sản phẩm?\n3) Gọi ${{x}_1}, {{x}_2}$ là các nghiệm của phương trình ${{x}^2}-3x-10=0$. Không giải phương trình, hãy tính giá trị của biểu thức: $A=\\frac{{{x}_1}+1}{{{x}_2}}+\\frac{{{x}_2}+1}{{{x}_1}}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 33_converted_171534.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm).\n1) Một trục lăn sơn nước có dạng một hình trụ. Đường kính của đường tròn đáy trục lăn là $5 cm$, chiều dài trục lăn là $23 cm$ (hình bên). Sau khi lăn trục lăn trọn $15$ vòng trên một bức tường phẳng thì diện tích phủ sơn là bao nhiêu $cm^2$ (giả sử các đường lăn không chồng lấn lên nhau, lấy $\\pi =3,14)$.\n2) Cho tam giác $ABC$ nhọn. Đường tròn $\\left( O \\right)$ đường kính $BC$ cắt $AB$, $AC$ lần lượt tại $E$ và $D$; $BD$ cắt $CE$ tại $H$, $AH$ cắt $BC$ tại $I$. Từ $A$ kẻ tiếp tuyến $AM$, $AN$ của đường tròn $\\left( O \\right)$ ($M$, $N$ là tiếp điểm).\na) Chứng minh tứ giác $AEHD$ nội tiếp.\nb) Chứng minh $AB.BE=BI.BC$, từ đó suy ra $AB.BE+AC.CD=B{{C}^2}$\nc) Chứng minh ba điểm $M$, $H$, $N$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 33_converted_171534.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Phiên chợ hè Lotus sử dụng hai loại thẻ: loại thẻ giá $3000$ đồng và loại thẻ giá $4000$ đồng. Vào dịp nghỉ hè, bạn An muốn dùng hết số tiền tiết kiệm của mình để mua $x$ thẻ loại giá $3000$ đồng và $y$ thẻ loại giá $4000$ đồng. Tìm số cách mua có đủ cả hai loại thẻ nếu tiền tiết kiệm của bạn An là $2023000$ đồng.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 33_converted_171534.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nBiểu đồ bên biểu diễn tỉ lệ đại biểu tham dự hội nghị theo độ tuổi. Biết rằng có $54$ đại biểu\ntừ $25$ đến $35$tuổi.\nCó bao nhiêu đại biểu tham dự hội nghị? Lập bảng tần số ghép nhóm tương ứng.\nXét phép thử quay bánh xe và quan sát xem khi nó dừng thì mũi kim (được gắn cố định)\nchỉ vào ô số mấy. Tính xác suất của các biến cố A: “Kim chỉ vào ô có số là bội của 3”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho biểu thức $A=\\frac{3x+12}{\\sqrt{x}+3}$ và $B=\\frac{\\sqrt{x}+1}{\\sqrt{x}-3}+\\frac{2\\sqrt{x}}{\\sqrt{x}+3}-\\frac{7\\sqrt{x}+3}{x-9}$  (với$x>0;x\\ne 9$) .\n1) Tính giá trị của biểu thức $A$ khi $x=4$.\n2) Chứng minh$B=\\frac{3\\sqrt{x}}{\\sqrt{x}+3}$.\n3) Tìm giá trị nhỏ nhất của biểu thức $P=\\frac{A}{B}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\nHưởng ứng phong trào của hội đồng đội làm tấm kính chắn giọt bắn gửi các y bác sĩ chống\ndịch. Hai lớp $9A, 9B$ trong đợt 1 đã làm được $1500$chiếc tấm kính chắn giọt bắn. Để đáp ứng nhu cầu\nvới tình hình dịch bệnh, nên trong đợt 2 lớp $9A$ vượt mức $70%$ và lớp $9B$ vượt mức $68%$ nên cả hai lớp đã làm được $2583$ chiếc tấm kính chắn giọt bắn. Hỏi trong đợt 1 mỗi lớp làm được bao nhiêu tấm kính chắn giọt bắn?\nTheo kê hoạch, một công nhân phải hoàn thành $60$ sản phẩm trong một thời gian nhất định.\nNhưng do cải tiến kĩ thuật nên mỗi giờ người công nhân đó đã làm thêm $2$ sản phẩm. Vì vậy, chẳng những đã\nhoàn thành kế hoạch sớm hơn dự định $30$ phút mà còn vượt mức $3$sản phẩm. Hỏi theo kế hoạch, mỗi giờ người đó phải làm bao nhiêu sản phẩm?\n3) Gọi ${{x}_1},{{x}_2}$ là hai nghiệm của phương trình: ${{x}^2}-x-1=0.$ Lập phương trình bậc hai có hai nghiệm là\t $\\frac{{{x}_2}+1}{{{x}_1}};\\frac{{{x}_1}+1}{{{x}_2}}$",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\nMột hộp bóng hình trụ chứa vừa khít $3$ quả bóng tennis có đường kính $6,5 cm$ như hình.\nTính diện tích bề mặt và thể tích của mỗi quả bóng\nTính diện tích xung quanh và thể tích của hộp bóng.\nCho đường tròn $\\left( O \\right)$, từ điểm $A$ở ngoài đường tròn vẽ hai tiếp tuyến $AB$và$AC$($B, C$là các tiếp điểm). $OA$cắt$BC$tại E.\na) Chứng minh tứ giác $ABOC$ nội tiếp.\nb) Chứng minh $BC$ vuông góc với $OA$ và $BA.BE=AE.BO$.\nc) Gọi$I$là trung điểm của $BE$, đường thẳng qua$I$và vuông góc $OI$cắt các tia $AB, AC$theo thứ tự tại $D$và $F$. Chứng minh $F$ là trung điểm của$AC$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu V:  (0,5 điểm)\nMột học sinh được giao thiết kế một cái hộp dạng hình hộp chữ nhật thỏa mãn: Tổng của chiều dài và\nchiều bằng 12cm; tổng của của rộng và chiều cao là 24cm. Giáo viên yêu cầu học sinh ấy phải thiết kế sao\ncho thể tích cái hộp lớn nhất, giá trị lớn nhất ấy bằng bao nhiêu ?\nHẾT\nHƯỚNG DẪN",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nBiểu đồ bên biểu diễn tỉ lệ đại biểu tham dự hội nghị theo độ tuổi. Biết rằng có $54$ đại biểu từ $25$ đến $35$tuổi.\nCó bao nhiêu đại biểu tham dự hội nghị? Lập bảng tần số ghép nhóm tương ứng.\nXét phép thử quay bánh xe và quan sát xem khi nó dừng thì mũi kim (được gắn cố định) chỉ vào ô số mấy. Tính xác suất của các biến cố A: “Kim chỉ vào ô có số là bội của 3”\nChứng minh",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 34_converted_171933.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1)  Sau khi điều tra về số học sinh trong $100$ lớp học (đơn vị: học sinh), người ta có bảng tần số\nghép nhóm như ở bảng sau:\na)\tTìm tần số tương đối của mỗi nhóm đó.\nb)\tLập bảng tần số tương đối ghép nhóm của mẫu số liệu ghép nhóm đó\n2) . Một hộp có $52$ chiếc thẻ cùng loại, mỗi thẻ được ghi một trong các số $1, 2, 3, ..., 52$; hai thẻ khác nhau thì ghi số khác nhau.\nRút ngẫu nhiên một thẻ trong hộp. Tính xác suất các biến cố sau:\na) “Số xuất hiện trên thẻ được rút ra là số nhỏ hơn$27$”.\nb) “Số xuất hiện trên thẻ được rút ra là số lớn hơn $19$và nhỏ hơn $51$”.",
+    "topic": "khac",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{x-2}{\\sqrt{x}+2}$ và $B=\\frac{\\sqrt{x}}{\\sqrt{x}+1}-\\frac{2}{1-\\sqrt{x}}-\\frac{4}{x-1}$ (với $x\\ge 0$; $x\\ne 1$).\n1) . Tính giá trị của $A$ khi $x=16$.\n2) . Rút gọn biểu thức $B$.\n3) . Đặt $P=A.B$. Tìm các giá trị nguyên của $x$ để $P=\\frac{7}{4}$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1). Một trường THCS tổ chức cho $250$ người bao gồm giáo viên và học sinh đi tham quan khu du lịch Đảo Ngọc Xanh. Biết giá vé vào cổng của một giáo viên là $80 000$ đồng, vé vào cổng của một học sinh là $60 000$ đồng. Nhà trường tổ chức đi vào đúng dịp Khai trương nên được giảm $5%$ cho mỗi vé vào cổng, vì vậy nhà trường chỉ phải trả tổng số tiền là $14 535 000$ đồng. Hỏi có bao nhiêu giáo viên và học sinh của trường đi tham quan?\n2). Một xe khách và một xe du lịch khởi hành đồng thời từ $A$đi đến$B$. Biết vận tốc của xe du lịch lớn hơn vận tốc của xe khách là $20$ km/h. Do đó nó đến $B$ trước xe khách $50$ phút. Tính vận tốc của mỗi xe, biết quãng đường $AB$dài $100$ km\n3). Cho phương trình: $2{{x}^2}-4x-3=0$ có hai nghiệm là ${{x}_1}; {{x}_2}$. Không giải phương trình, hãy tính giá trị của biểu thức: $A=\\left( {{x}_1}-{{x}_2} \\right)^2$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1). Một ly đựng đầy nước dạng hình trụ có chiều cao là $15$cm, bán kính đáy bằng $5$ cm.\na. Tính thể tích nước chứa trong ly.\nb. Người ta thả vào ly $5$ viên bi đặc không thấm nước có dạng hình cầu, đường kính mỗi viên bi bằng $3cm.$Tính thể tích nước tràn ra ngoài ly.\n2). Cho tam giác $ABC$ nhọn $\\left( AB<AC \\right)$ có đường cao $AD$ và đường phân giác trong $AO$($D$, $O$ thuộc cạnh $BC$). Kẻ $OM\\bot AB$ tại $M$, $ON\\bot AC$ tại $N$.\na) Chứng minh bốn điểm $O$,$M$, $D$, $N$ cùng nằm trên một đường tròn.\nb) $\\widehat{BDM}=\\widehat{ODN}$.\nc) Qua $O$ kẻ đường thẳng vuông góc với $BC$ cắt $MN$tại $I$, $AI$cắt $BC$tại$K$. Chứng minh $K$là trung điểm của $BC$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một miếng bìa hình vuông có cạnh $6$dm. Ở mỗi góc của hình vuông người ta cắt đi một hình vuông nhỏ cạnh $x$rồi gấp bìa để được một hình hộp chữ nhật (không có nắp). Tính cạnh $x$của mỗi hình vuông nhỏ để hộp có thể tích lớn nhất\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu I (1,5 điểm)\n1) Sau khi điều tra về số học sinh trong $100$ lớp học (đơn vị: học sinh), người ta có bảng tần số\nghép nhóm như ở bảng sau:\na) Tìm tần số tương đối của mỗi nhóm đó.\nb) Lập bảng tần số tương đối ghép nhóm của mẫu số liệu ghép nhóm đó\n2)\tMột hộp có $52$ chiếc thẻ cùng loại, mỗi thẻ được ghi một trong các số $1, 2, 3, ..., 52$; hai thẻ khác nhau thì ghi số khác nhau.\nRút ngẫu nhiên một thẻ trong hộp. Tính xác suất các biến cố sau:\na) “Số xuất hiện trên thẻ được rút ra là số nhỏ hơn$27$”.\nb) “Số xuất hiện trên thẻ được rút ra là số lớn hơn $19$và nhỏ hơn $51$”.",
+    "topic": "khac",
+    "source_file": "Đề số 35_converted_172418.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Thời gian đi từ nhà đến trường (đơn vị: phút) của các bạn học sinh lớp 9C được ghi lại ở bảng sau:\nHãy chia số liệu thành $4$ nhóm, với nhóm thứ nhất là khoảng từ $5$ phút đến dưới $9$ phút và lập bảng tần số ghép nhóm và tần số tương đối ghép nhóm.\n2) Một túi đựng $4$ viên bi có cùng khối lượng và kích thước, được đánh số $1;2;3;4$. Lấy ngẫu nhiên lần lượt $2$ viên bi từ túi đó, viên bi lấy ra lần đầu không trả lại vào túi. Mô tả không gian mẫu của phép thử và tính xác suất để lấy được $2$ viên bi mà tổng hai số trên hai viên bi đó là số lẻ.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 36_converted_172841.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{\\sqrt{x}-2}{\\sqrt{x}+2}$ và $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}-2}-\\frac{3}{\\sqrt{x}+2}-\\frac{12}{x-4}$ với $x\\ge 0$, $x\\ne 4$.\n1) Tính giá trị của biểu thức $A$ khi $x=25$.\n2) Chứng minh $B=\\frac{\\sqrt{x}-1}{\\sqrt{x}-2}$.\n3) Với $P=A.B$. Tìm giá trị của $x$ để $\\left| P \\right|>P$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 36_converted_172841.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một ô tô khách và một ô tô tải chở vật liệu xây dựng khởi hành cùng một lúc từ bến xe khách Lai Châu đến trung tâm thị trấn Mường Tè. Do trọng tải lớn nên xe tải chở vật liệu xây dựng đi với vận tốc chậm hơn xe khách $10$ km/h. Xe khách đến trung tâm thị trấn Mường Tè sớm hơn xe tải $1$ giờ $6$ phút. Tính vận tốc mỗi xe biết quãng đường từ bến xe khách thành phố Lai Châu đến trung tâm thị trấn Mường Tè là $132$ km.\n2) Hai vòi nước cùng chảy vào một bể (không có nước) trong $49$  giờ $48$ phút thì đẩy bể.\nNếu mở vòi thứ nhất trong $3$ giờ và vòi thứ hai trong $4$ giờ thì được $\\frac{3}{4}$ bể nước. Hỏi mỗi vòi chảy riêng thì trong bao lâu sẽ đầy bể.\n3) Gọi ${{x}_1}, {{x}_2}$ là hai nghiệm của phương trình $2{{x}^2}-3x-4=0$. Không giải phương trình, hãy tính giá trị của biểu thức $A={{({{x}_1}+{{x}_2})}^2}+{{x}_1}{{x}_2}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 36_converted_172841.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n2) Cho $\\Delta ABC$ có 3 góc nhọn và đường cao $BE$. Gọi $H,K$ lần lượt là chân đường vuông góc kẻ từ điểm $E$ đến $AB,AC.$\na) Chứng minh tứ giác $BHEK$ nội tiếp;\nb) Chứng minh:$BH.BA=BK.BC;$\nc) Gọi $F$ là chân đường vuông góc kẻ từ điểm $C$ đến đường thẳng $AB$, $I$ là trung điểm của đoạn thẳng$EF$. Chứng minh rằng $H,I,K$ thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 36_converted_172841.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) ) Ông An có $2400$m hàng rào và muốn rào lại cánh đồng hình chữ nhật tiếp giáp với một con sông.Ông không cần rào cho phía giáp bờ sông. Hỏi ông có thể rào được cánh đồng với diện tích lớn nhất là bao nhiêu?\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 36_converted_172841.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nTại một trại hè thanh thiếu niên quốc tế, người ta tìm hiểu xem mỗi đại biểu tham dự có thể sử dụng được bao nhiêu ngoại ngữ. Kết quả được như bảng sau:\na) Hãy lập bảng tần số tương đối ở bảng trên.\nb) Hãy tính tỉ lệ phần trăm đại biểu sử dụng được ít nhất 2 ngoại ngữ.\nc) Tại trại hè thanh thiếu niên quốc tế tổ chức $1$ năm trước đó, có $54$ trong tổng số $220$ đại biểu tham dự có thể sử dụng được từ $3$ngoại ngữ trở lên. Có ý kiến cho rằng “ Tỉ lệ đại biểu sử dụng được $3$ ngoại ngữ trở lên có tăng giữa hai năm đó”. Ý kiến đó đúng hay sai? Giải thích.\nMột hộp có $20$ viên bi với kích thước và khối lượng như nhau. Bạn Ngân viết lên các viên bi đó các số $1,2,3,...,20$; hai viên bi khác nhau thì viết hai số khác nhau. Xét phép thử “Lấy ngẫu nhiên một viên bi trong hộp”.\na) Liệt kê các kết quả có thể xảy ra đối với số xuất hiện trên viên bi được lấy ra.\nb) Viết không gian mẫu phép thử đó.\nc) Tính xác suất biến cố: “Số xuất hiện trên viên bi được lấy ra chia $7$ dư $1$”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 38_converted_173141.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm)\nCho hai biểu thức $N=\\frac{24}{\\sqrt{x}+6}$ và $M=\\frac{\\sqrt{x}}{\\sqrt{x}+6}+\\frac{1}{\\sqrt{x}-6}+\\frac{17\\sqrt{x}+30}{x-36}$ với $x\\ge 0,x\\ne 36.$\n1) Tính giá trị của biểu thức $N$ khi $x=9$\n2) Rút gọn biểu thức $M.$\n3) Tìm số nguyên $x$ để biểu thức $L=N.M$ có giá trị nguyên lớn nhất.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 38_converted_173141.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Có hai loại quặng chứa $75%$ sắt và $50%$ sắt. Tính khối lượng của mỗi loại quặng đem trộn để được $25$ tấn quặng chứa $66%$ sắt\n2) Giải bài toán sau bằng cách lập phương trình hoặc hệ phương trình :\nHai công nhân làm chung một công việc thì sau $5$ giờ $50$ phút sẽ hoàn thành xong công việc. Sau khi làm chung $5$ giờ thì người thứ nhất đi làm việc khác trong khi người thứ hai vẫn tiếp tục làm trong $2$ giờ nữa mới hoàn thành xong công việc. Hỏi nếu làm riêng thì mỗi người phải mất bao nhiêu thời gian để hoàn thành xong công việc?\nCho phương trình $3{{x}^2}-11x-15=0$ có 2 nghiệm là ${{x}_1},{{x}_2}$  Không giải phương trình, hãy tính giá trị của biểu thức\n$A=\\frac{3{{x}_1}}{{{x}_2}}+\\frac{3{{x}_2}}{{{x}_1}}$",
+    "topic": "he_phuong_trinh",
+    "source_file": "Đề số 38_converted_173141.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Đường ống nối hai bể cá trong một thủy cung có dạng một hình trụ, độ dài của đường ống là $30m.$ Dung tích của đường ống nói trên là $1800 {{m}^3}.$ Tính diện tích đáy của đường ống.\n2. Cho tam giác $ABC$ nhọn $\\left( AB<AC \\right)$ nội tiếp đường tròn $(O).$ Hai đường cao $BE$ và $CF$ của tam giác $ABC$ cắt nhau tại điểm $H.$ Gọi $K$ là trung điểm $BC.$\na) Chứng minh $\\Delta AEF$ đồng dạng $\\Delta ABC.$\nb) Chứng minh đường thẳng $OA$ vuông góc với đường thẳng $EF.$\nc) Đường phân giác góc $FHB$ cắt $AB$ và $AC$ lần lượt tại $M$ và $N.$Gọi $I$là trung điểm của $MN, J$là trung điểm của$AH.$ Chứng minh tứ giác $AFHI$nội tiếp và ba điểm$I,J,K$thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 38_converted_173141.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nCho hình lăng trụ đứng $ABCD.{A}'{B}'{C}'{D}'$ có đáy là hình thoi. Biết thể tích của nó là $1280c{{m}^3}$ và chiều cao là $20cm$. Tính giá trị nhỏ nhất của diện tích xung quanh.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 38_converted_173141.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nBiểu đồ bên dưới thống kê thời gian công tác (theo năm) của các y tá ở một phòng khám tư nhân ở Hà Nội.\nCác y tá của phòng khám có thời gian công tác nhận những giá trị nào? Tìm tần số mỗi giá trị đó.\nPhòng khám có tổng bao nhiêu y tá?\nCó bao nhiêu y tá đã công tác ở phòng khám ít nhất 3 năm?\nNhóm học sinh tình nguyện khối 9 của một trường trung học cơ sở có 6 bạn, trong đó có 3 bạn nam là: Trung (lớp 9A); Quý (lớp 9A); Việt (lớp 9C); và 3 bạn nữ là: An (lớp 9A); Châu (lớp 9B); Hương (lớp 9D). Chọn ngẫu nhiên một bạn trong nhóm đó để tham gia hoạt động tình nguyện bên trường\nLiệt kê tất cả các kết quả có thể xảy ra trong phép thử trên. Có tất cả bao nhiêu kết quả có thể xảy ra.\nTính xác suất của mỗi biến cố sau:\nA: “Bạn được chọn là bạn nữ”;\nB: “Bạn được chọn thuộc lớp 9A”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 39_converted_173458.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức $A=\\frac{x-7}{\\sqrt{x}}$và $B=\\frac{1}{\\sqrt{x}+2}+\\frac{\\sqrt{x}}{2-\\sqrt{x}}+\\frac{2x-\\sqrt{x}+2}{x-4}$ với $x>0,x\\ne 4$\n1) \tTính giá trị của biểu thức $A$ khi $x=9$\n2)\tRút gọn biểu thức $B$.\n3) \tTìm tất cả các giá trị nguyên của $x$ để biểu thức $P=A.B$ có giá trị nguyên",
+    "topic": "can_thuc",
+    "source_file": "Đề số 39_converted_173458.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\nGiải bài toán sau bằng cách lập phương trình hoặc hệ phương trình:\nKhoảng cách giữa hai bến sông $C$ và $D$ là $60km$. Một ca nô đi xuôi dòng từ bến $C$ đến bến $D$, nghỉ 36 phút rồi đi ngược dòng quay lại bến $C$. Kể từ lúc khởi hành đến khi về tới bến $C$ hết tất cả 7 giờ. Tìm vận tốc của ca nô trong nước yên lặng, biết rằng vận tốc nước chảy là 5km/h.\nMột nhà may $A$ sản xuất một lô váy 700 chiếc với tổng số vốn ban đầu là 40 triệu đồng và giá bán ra mỗi chiếc váy là 250 000 đồng. Khi đó gọi $X$ (đồng) là số tiền lời (hoặc lỗ) của nhà may $A$thu được khi bán $t$ chiếc váy.\na) Thiết lập biểu thức của $X$theo $t$.\nb) Hỏi phải bán được ít nhất bao nhiêu chiếc váy thì nhà may bắt đầu có lời?\nCho phương trình $3{{x}^2}-2x-4=0$  (1). Biết phương trình có hai nghiệm phân biệt ${{x}_1};{{x}_2}$. Tính giá trị biểu thức :$A=\\frac{1}{{{x}_1}^2}+\\frac{1}{{{x}_2}^2}$",
+    "topic": "he_phuong_trinh",
+    "source_file": "Đề số 39_converted_173458.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\nMột hình nón có độ dài đường sinh bằng 50 cm và bán kính đáy bằng 30cm. Tính thể tích của hình nón đó ( lấy $\\pi \\approx 3,14$).\nCho $\\Delta ABC$ có ba góc nhọn $\\left( AB<AC \\right)$. Ba đường cao $AD,BE,CF$ cắt nhau tại $H$\nChúng minh tứ giác $BFEC$ nội tiếp. Xác định tâm $O$của đường tròn ngoại tiểp tứ giác $BFEC$.\nGọi $I$ là trung điểm của $AH$. Chứng minh $IE$ là tiếp tuyến của đường tròn $\\left( O \\right)$\nVẽ $CI$ cẳt đường tròn $\\left( O \\right)$tại $M$ ($M$  khác $C$ ), $EF$ cắt $AD$tại $K$. Chứng minh ba điểm $B,K,M$thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 39_converted_173458.docx"
+  },
+  {
+    "content": "Câu V:  (0,5 điểm) Một mảnh đất hình vuông $ABCD$ cạnh 30m. Người ta xây dựng một vườn hoa dạng hình vuông $EFGH$ có các đỉnh $E,F,G,H$ thuộc các cạnh của hình vuông $ABCD$ (hình vẽ). Xác định vị trí điểm $E$ trên cạnh $AB$ để diện tích vườn hoa nhỏ nhất.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 39_converted_173458.docx"
+  },
+  {
+    "content": "Câu I: (1,5 điểm)\n1)  Chiều cao (đơn vị: mét) của 35 cây bạch đàn được cho như sau: Hãy ghép các số liệu trên thành năm nhóm ứng với năm nửa khoảng có độ dài bằng nhau.\n2) Một hộp có $20$ viên bi với kích thước và khối lượng như nhau. Bạn Ngân viết lên các viên bi đó các số $1, 2, 3....,20$; hai viên bi khác nhau thì viết hai số khác nhau.\nXét phép thử “Lấy ngẫu nhiên một viên bi trong hộp”. Tính xác suất biến cố: “Số xuất hiện trên viên bi được lấy ra chia $7$ dư $1$”.",
+    "topic": "khac",
+    "source_file": "Đề số 3_converted_160332.docx"
+  },
+  {
+    "content": "Câu II: (1,5 điểm) Cho hai biểu thức\n$A=\\frac{3\\sqrt{x}-9}{x-4}$và $B=\\frac{x+1}{\\left( \\sqrt{x}+2 \\right)\\left( \\sqrt{x}-3 \\right)}+\\frac{\\sqrt{x}+3}{\\sqrt{x}+2}-\\frac{\\sqrt{x}-2}{\\sqrt{x}-3}$($x\\ge 0;x\\ne 4;x\\ne 9$)\n1) Tính giá trị của biểu thức A khi $x=1$\n2) Chứng minh $B=\\frac{\\sqrt{x}-2}{\\sqrt{x}-3}$\n3) Tìm giá trị lớn nhất của biểu thức $P=A.B$",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 3_converted_160332.docx"
+  },
+  {
+    "content": "Câu III: (2,5 điểm)\n1) Bác Bình An vay ở một ngân hàng $500$ triệu đồng để sản xuất trong thời hạn một năm. Lẽ ra đúng một năm sau bác phải trả cả tiền vốn lẫn tiền lãi, song bác đã được ngân hàng cho kéo dài thời hạn thêm 1 năm nữa, số tiền lãi của năm đầu được gộp vào với tiền vốn để tính lãi năm sau và lãi suất vẫn như cũ. Hết hai năm bác Bình An phải trả tất cả $605$ triệu đồng. Hỏi lãi suất cho vay của ngân hàng đó là bao nhiêu phần trăm trong một năm?\n2) Một người mua hai loại hàng và phải trả tổng cộng $2,17$ triệu đồng, kể cả thuế giá trị gia tăng (VAT) với mức ${10 \\%}$ đối với loại hàng loạt hàng thứ nhất và ${8 \\%}$ đối với loại hàng thứ hai. Nếu thuế VAT là ${9 \\%}$ đối với cả hai loại hàng thì người đó phải trả tổng cộng $2,18$triệu đồng. Hỏi nếu không kể thuế VAT thì người đó phải trả bao nhiêu tiền cho mỗi loại hàng?\n3) Cho phương trình ${{x}^2}-5x+a=0$. Biết phương trình có một nghiệm là $x=\\sqrt{6-2\\sqrt{5}}$. Tính giá trị của biểu thức $A=x_1^3-{{x}_1}+x_2^3-{{x}_2}-285$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 3_converted_160332.docx"
+  },
+  {
+    "content": "Câu IV: (4,0 điểm)\n1) Trên bàn có một cốc nước hình trụ chứa đầy nước, có chiều cao trong bằng 3 lần đường kính trong của đáy; một viên bi hình cầu và một khối nón đều bằng thủy tinh. Biết viên bi và khối nón đều có đường kính bằng đường kính trong của cốc nước. Người ta từ từ thả vào cốc nước viên bi và khối nón đó (như hình vẽ) thì thấy nước trong cốc tràn ra ngoài.\na) Tính thể tích nước còn lại trong cốc\nb) Tính tỉ số thể tích của lượng nước còn lại trong cốc và lượng nước ban đầu.\n2) Trên nửa đường tròn $(O;R)$đường kính $BC$, lấy điểm $A$ sao cho $BA=R.$\na) Chứng minh tam giác $ABC$ vuông tại $A$ và tính số đo các góc $B, C$của tam giác vuông $ABC$.\nb) Qua $B$ kẻ tiếp tuyến với nửa đường tròn $(O)$, nó cắt tia $CA$ tại $D$. Qua $D$ kẻ tiếp tuyến $DE$ với nửa đường tròn $(O)$ ($E$ là tiếp điểm). Gọi $I$ là giao điểm của $OD$ và $BE$. Chứng minh rằng $O D \\bot B E v \\grave{a} D I . D O = D A . D C$\nc) Kẻ $EH$vuông góc với$BC$tại $H$. EH cắt$CD$ tại$G$. Chứng minh$IG$song song với$BC.$\nHẾT",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 3_converted_160332.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) . Chỉ số phát triển con người (HDI) là chỉ tiêu tổng hợp phản ánh các mặt thu nhập, sức khỏe, giáo dục của người dân trong một quốc gia. Các nước và vùng lãnh thổ trên thế giới được chia thành 4 nhóm theo HDI: Nhóm 1(rất cao) có HDI từ 0,8 trở lên; Nhóm 2(cao) có HDI từ 0,7 đến dưới 0,8; Nhóm 3(trung bình) có HDI từ 0,55 đến dưới 0,7; Nhóm 4(thấp) có HDI dưới 0,55. Năm 2021, chỉ số HDI của 11 quốc gia Đông Nam Á như sau.\nDựa vào dữ liệu trên, hãy hoàn thành bảng tần số ghép nhóm sau:\n2) Một hộp có chứa 5 quả bóng có cùng khối lượng và kích thước, được đánh số lần lượt từ 1 đến 5. Lấy ra ngẫu nhiên cùng một lúc 2 quả bóng từ hộp.\nHãy liệt kê các phần tử của không gian mẫu của phép thử.\nLiệt kê các kết quả thuận lợi cho biến cố sau:\n$D$: “Trong 2 quả bóng lấy ra có ít nhất 1 quả bóng ghi số chẵn”.\nc)Tính xác suất của biến cố$D$: “Trong 2 quả bóng lấy ra có ít nhất 1 quả bóng ghi số chẵn”.",
+    "topic": "khac",
+    "source_file": "Đề số 40_converted_173652.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm)\n1)  Cho biểu thức$A=\\frac{\\sqrt{x}+4}{\\sqrt{x}+2}$. Tính giá trị của biểu thức$A$với $x=36$.\n2)  Rút gọn biểu thức$B=\\left( \\frac{\\sqrt{x}}{\\sqrt{x}+4}+\\frac{4}{\\sqrt{x}-4} \\right) & :\\frac{x+16}{\\sqrt{x}+2}$ (với $x\\ge 0$, $x\\ne 16$).\n3) Với các biểu thức$A$và$B$ , hãy tìm các giá trị nguyên của $x$ để giá trị của biểu thức $B\\left( A-1 \\right)$là  nhận giá trị nguyên.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 40_converted_173652.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\nBạn Thanh có $100$ nghìn đồng. Bạn muốn mua một cái bút giá $18$ nghìn đồng và một số quyển vở, mỗi quyển vở giá $17$ nghìn đồng. Hỏi bạn Thanh mua được nhiều nhất bao nhiêu quyển vở?\n2) Hai ô tô cùng khởi hành một lúc từ hai tỉnh, cách nhau $150 km,$đi ngược chiều và gặp nhau sau 2 giờ. Tìm vận tốc của mỗi ô tô, biết rằng nếu vận tốc của ô tô $A$ tăng thêm $5km/h$ và vận tốc của ô tô $B$giảm đi $5km/h$thì vận tốc của ô tô$A$ bằng 2 lần vận tốc của ô tô $B$.\n3) Cho phương trình $-{{x}^2}+mx+m+1=0$. Chứng minh phương trình luôn có một nghiệm không phụ thuộc vào $m$. Tìm nghiệm còn lại.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 40_converted_173652.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) .  Một cốc nước có dạng hình trụ với đường kính đáy bằng 8 cm, chiều cao 12 cm và chứa một lượng nước cao 10 cm. Người ta thả từ từ một viên bi làm bằng thép đặc (không thấm nước) có thể tích là $V = 4\\pi \\left( c{{m}^3} \\right)$ vào trong cốc. Hỏi mực nước trong cốc lúc này cao bao nhiêu cm?\n(Giả sử độ dày của cốc không đáng kể).\n2) . Cho đường tròn tâm $(O)$, đường kính $AB=2R$. Trên đường tròn $(O)$lấy điểm $C$ bất kì ($C$ không trùng với $A$ và $B$). Tiếp tuyến của đường tròn $(O)$tại $A$ cắt tia $BC$ ở điểm $D.$ Gọi $H$ là hình chiếu của $A$ trên đường thẳng $DO.$ Tia $AH$ cắt đường tròn $(O)$tại điểm $F$ (không trùng với $A$).\na) Chứng minh tứ giác $AHCD$nội tiếp được một đường tròn.\nb) Chứng minh $\\Delta CFH$ là tam giác vuông.\nc) Tính giá trị của biểu thức $S=\\frac{BH.BC}{BF}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 40_converted_173652.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nCho tấm nhôm hình vuông cạnh 12cm. Người ta cắt ở bốn góc của tấm nhôm đó bốn hình vuông bằng nhau, mỗi hình vuông có cạnh bằng x(cm), rồi gấp tấm nhôm lại như hình vẽ dưới đây để được một cái hộp không nắp. Tìm x để hộp nhận được có thể tích lớn nhất.\nHẾT",
+    "topic": "khac",
+    "source_file": "Đề số 40_converted_173652.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi thống kê chiều cao của $40$ học sinh lớp 9A, cô giáo lập biểu đồ tần số ghép nhóm dưới đây:\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm $[161;164)$.\n2) Một hộp chứa $9$ quả bóng màu cam và một số quả bóng màu trắng. Các quả bóng có cùng kích thước và khối lượng. Lấy ra ngẫu nhiên một quả bóng từ hộp, xem màu rồi trả lại hộp. Biết xác suất của biến cố “Lấy được quả bóng màu trắng” là $\\frac{2}{5}$. Hỏi trong hộp có bao nhiêu quả bóng màu trắng?",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}}{x-9}$ và $B=\\frac{3\\sqrt{x}-6}{\\sqrt{x}-2}+\\frac{x+2\\sqrt{x}}{\\sqrt{x}+2}$ với $x\\ge 0,x\\ne 4,x\\ne 9$.\n1) Tính giá trị của biểu thức A khi $x=16$.\n2) Rút gọn biểu thức $B$.\n3) Xét biểu thức $P=A.B$. Tìm $x$ để $P<1$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Hưởng ứng chiến dịch mùa hè xanh, $27$tình nguyện viên chia thành hai đội tham gia trồng cây gây rừng. Mỗi tình nguyện viên đội A trồng được $2$cây xanh. Mỗi tình nguyện viên đội B trồng được $3$cây xanh. Tổng kết phong trào cả hai đội trồng được $66$cây. Tính số tình nguyện viên mỗi đội.\n2) Lúc $6$ giờ $30$ phút, một ca nô xuôi dòng sông từ $A$ đến $B$ dài $48$km. Khi đến $B$, ca nô nghỉ $30$ phút sau đó lại ngược dòng từ $B$ về $A$ lúc $10$ giờ $36$ phút cùng ngày. Tìm vận tốc riêng của ca nô, biết vận tốc dòng nước là $3$km/h.\n3) Phương trình ${{x}^2}-2x-m+1=0$ ($m$là tham số) có một nghiệm là $x=1+\\sqrt{7}$. Tính giá trị của biểu thức $A=x_1^2{{x}_2}+x_2^2{{x}_1}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Trong chuyện ngụ ngôn La Phông ten, Cò mời Cáo đến ăn tiệc với món súp hảo hạng. Món súp đó Cò thường cho vào một cái bình hình trụ, có bán kính đáy là $4$$cm$, chiều cao $30 cm.$ Nhưng khi Cáo đến Cò chỉ đổ súp sao cho phần súp trong bình đó cao $10 cm$và mời Cáo dùng bữa.\na) Tính thể tích của phần súp mà Cò mời Cáo ăn tiệc.\nb) Cổ của Cáo quá ngắn nên không thể lấy được súp, Cáo nhìn quanh và phát hiện ra nhà Cò có những viên sỏi hình cầu giống hệt nhau, bán kính là $2 cm.$ Cáo bèn cho từng viên sỏi vào bình súp đến khi súp dâng lên vừa đầy đến miệng bình rồi Cáo thảnh thơi ăn súp. Hỏi Cáo đã cho vào bình bao nhiêu viên bi.\n2) Cho nửa đường tròn tâm $O$, bán kính $AB=2R$và tia tiếp tuyến $Ax$ cùng phía với nửa đường tròn đối với $AB.$ Từ điểm $M$ trên $Ax$ kẻ tiếp tuyến thứ hai $MC$với nửa đường tròn ($C$ là tiếp điểm). $AC$ cắt $OM$ tại E ; $MB$ cắt nửa đường tròn (O) tại $D$ ($D\\ne B$).\na) Chứng minh rằng bốn điểm $A,M,C,O$ cùng thuộc một đường tròn.\nb) Tính diện tích hình quạt $OCB$ theo $R$, trong trường hợp $\\widehat{AMC}={{60}^{\\circ }}$ và chứng minh\n$\\widehat{ADE}=\\widehat{ACO}$.\nc) Gọi $H$ là hình chiếu của $C$trên $AB.$Chứng minh rằng $MB$ đi qua trung điểm của $CH$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu V: (0,5 điểm) Cho một tấm nhôm hình vuông có cạnh bằng 12 cm. Người ta cắt ở bốn góc của tấm nhôm đó bốn hình vuông bằng nhau, mỗi hình vuông có cạnh bằng $x cm$, rồi gấp tấm nhôm đó thành hình hộp không có nắp (Hình vẽ). Tìm $x$ để không khí bên trong hộp là nhiều nhất.\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi thống kê chiều cao của $40$ học sinh lớp 9A, cô giáo lập biểu đồ tần số ghép nhóm dưới đây:\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm $[161;164)$.\n2) Một hộp chứa $9$ quả bóng màu cam và một số quả bóng màu trắng. Các quả bóng có cùng kích thước và khối lượng. Lấy ra ngẫu nhiên một quả bóng từ hộp, xem màu rồi trả lại hộp. Biết xác suất của biến cố \"Lấy được quả bóng màu trắng\" là $\\frac{2}{5}$. Hỏi trong hộp có bao nhiêu quả bóng màu trắng?",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 41_converted_174136.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Đề.\n. Để chuẩn bị cho tiết mục kỉ niệm 70 năm Chiến thắng Điện Biên Phủ, phường Mỹ Đình có cử một số lượng người tham gia, được biểu diễn dưới biểu đồ tỉ lệ sau:\n( Biết rằng có 54 người từ 25 tuổi đến 35 tuổi)\na) Có bao nhiêu người tham gia biểu diễn?\nb) Một người cho rằng có trên $50%$ số người biểu diễn dưới $45$ tuổi. Nhận định đó đúng hay sai? Tại sao?\n2) . Hình vẽ dưới đây mô tả một đĩa tròn bằng bìa cứng được chia thành $12$ phần bằng nhau và ghi các số $1;2;3;...;12$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa.\nXét phép thử: “Quay đĩa tròn một lần” và biến cố $P:$ “Chiếc kim chỉ vào hình quạt ghi số là số nguyên tố”. Tính xác suất của biến cố $P$.",
+    "topic": "khac",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm)  Với $x>0$, cho hai biểu thức $A=\\frac{x+2\\sqrt{x}}{x}$ và $B=\\frac{\\sqrt{x}-1}{\\sqrt{x}}+\\frac{2\\sqrt{x}+1}{x+\\sqrt{x}}$.\na) Tính giá trị của biểu thức $A$ khi $x=4$.\nb) Chứng minh $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}+1}$ .\nc) Tìm số nguyên $x$ nhỏ nhất để $\\frac{A}{B}<\\frac{7}{4}$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) . Một người mua hai loại hàng và phải trả tổng cộng $2,17$triệu đồng, kể cả thuế giá trị gia tăng (VAT) với mức $10%$ đối với loại hàng thứ nhất và $8%$ đối với loại hàng thứ hai. Nếu thuế VAT là $9%$ đối với cả hai loại hàng thì người đó phải trả tổng cộng $2,18$ triệu đồng. Hỏi nếu không kể thuế VAT thì người đó phải trả bao nhiêu tiền mỗi loại hàng.\n2)  Nam đi xe đạp từ nhà đến trường trên quãng đường dài $4$km. Khi đi từ trường về nhà, vẫn trên con đường đó, Nam đạp xe với vận tốc trung bình lớn hơn vận tốc trung bình lúc đi là $2$km/h. Tổng thời gian đạp xe cả đi và về của Nam là $44$phút. Tính vận tốc đạp xe trung bình của Nam lúc đi từ nhà đến trường.\n3) Cho phương trình ${{x}^2}-12x+4=0$ có hai nghiệm phân biệt ${{x}_1},{{x}_2}$. Không giải phương trình hãy  tính giá trị của biểu thức $T=\\frac{\\left| {{x}_1} \\right|+\\left| {{x}_2} \\right|}{2x_1^2+24{{x}_2}-4}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) . Tính lượng vải cần mua để tạo ra nón của chú hề với các số liệu trong hình bên. Biết rằng tỉ lệ vải khâu (may) hao (tốn) khi may nón là $15%$. Cho biết $\\pi \\approx 3,14$.\n2) . Cho nửa $(O)$đường kính $AB=2R$,$C$ là điểm bất kì nằm trên nửa đường tròn  sao cho$C$  khác $A$  và $AC<CB$. Điểm $D$ thuộc cung nhỏ $BC$  sao cho: $\\widehat{COD}={{90}^0}$. Gọi $E$ là giao điểm của $AD$ và $BC$,  $F$ là giao điểm của $AC$ và $BD$, I là trung điểm của $EF$.\na) Chứng minh: $CEDF$ là tứ giác nội tiếp\nb) Chứng minh: $FC.FA=FD.FB$\nc) Chứng minh $IC$ là tiếp tuyến của $(O)$\nd) Hỏi khi $C$ thay đổi thỏa mãn điều kiện bài toán, $E$ thuộc đường tròn cố định nào?",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Kim cương là một khoáng sản quý, có rất nhiều giá trị và được sử dụng với nhiều mục đích khác nhau. Giá bán của một viên kim cương rất cao và phụ thuộc vào rất nhiều yếu tố. Giả sử rằng giá bán của viên kim cương tỉ lệ với bình phương khối lượng của nó. Khi đem một viên kim cương cắt thành ba phần và vẫn bán với giá như trên (theo đúng tỉ lệ trên) thì tổng số tiền thu được tăng lên hay giảm đi? Trong trường hợp nào, giá bán của viên kim cương ban đầu giảm nhiều nhất? và giảm bao nhiêu lần?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Đề.\n1) . Để chuẩn bị cho tiết mục kỉ niệm 70 năm Chiến thắng Điện Biên Phủ, phường Mỹ Đình có cử một số lượng người tham gia, được biểu diễn dưới biểu đồ tỉ lệ sau:\n( Biết rằng có 54 người từ 25 tuổi đến 35 tuổi)\na) Có bao nhiêu người tham gia biểu diễn?\nb) Một người cho rằng có trên $50%$ số người biểu diễn dưới$45$tuổi. Nhận định đó đúng hay sai? Tại sao?\n2) . Hình vẽ dưới đây mô tả một đĩa tròn bằng bìa cứng được chia thành $12$ phần bằng nhau và ghi các số $1;2;3;...;12$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa.\nXét phép thử: “Quay đĩa tròn một lần” và biến cố $P:$ “Chiếc kim chỉ vào hình quạt ghi số là số nguyên tố”. Tính xác suất của biến cố $P$.",
+    "topic": "khac",
+    "source_file": "Đề số 42_converted_174511.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) .\n1) Biểu đồ hình cột sau thống kê về sự yêu thích các môn học của học sinh khối $9$. Biết mỗi học sinh chọn một môn yêu thích.\nLập bảng tần số và bảng tần số tương đối của dữ liệu được biểu diễn trên biểu đồ.\n2) Mỗi công nhân của một đội xây dựng làm việc ở một trong năm bộ phận của đội đó là: Lợp mái, ốp gạch bếp, lát nền, trát tường, xây tường. Biểu đồ hình quạt tròn ở dưới đây thống kê tỷ lệ công nhân thuộc mỗi bộ phận. Chọn ngẫu nhiên một công nhân của đội. Tính xác suất của mỗi biến cố $A$: “Công nhân được chọn không thuộc bộ phận Lát nền hoặc Lợp mái”.",
+    "topic": "khac",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}-2}{\\sqrt{x}+9}$ và $B=\\frac{3}{\\sqrt{x}+2}-\\frac{\\sqrt{x}}{2-\\sqrt{x}}+\\frac{9\\sqrt{x}-10}{4-x}$, với $x\\ge 0$, $x\\ne 4$.\n1) Tính giá trị của biểu thức $A$ khi $x=-\\frac{3}{2} \\cdot \\sqrt[3]{\\frac{-8}{27}}$.\n2) Rút gọn biểu thức $B$.\n3) Cho $P=B:A$. Tìm các giá trị $x$ là số thực để $P$ nhận là một số chính phương.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm) Cho .\n1) Một người mua hai loại hàng và phải trả tổng cộng $21,7$ triệu đồng, kể cả thuế giá trị gia tăng (VAT) với mức $10 %$ đối với loại hàng thứ nhất và $8 %$ đối với loại hàng thứ hai. Nếu thuế VAT là $9 %$ đối với cả hai loại hàng thì người đó phải trả tổng cộng $21,8$ triệu đồng. Hỏi nếu không kể thuế VAT thì người đó phải trả bao nhiêu cho mỗi loại hàng ?\n2) Hưởng ứng ngày Chủ nhật xanh với chủ đề “Hãy hành động để môi trường thêm Xanh, Sạch, Đẹp”, một trường THCS đã cử học sinh của hai lớp 9A và 9B cùng tham gia làm tổng vệ sinh một con đường, sau $\\frac{35}{12}$ giờ thì làm xong công việc. Nếu làm riêng từng lớp thì thời gian học sinh lớp 9A làm xong công việc ít hơn thời gian học sinh lớp 9B là $2$ giờ. Hỏi nếu mỗi lớp làm một mình thì sau bao nhiêu giờ sẽ làm xong công việc?\n3) Phương trình ${{x}^2}+mx+2m-4=0$ có${{x}_1}, {{x}_2}$ hai nghiệm và ${{x}_1}=-1$, tính giá trị của  biểu thức $N=\\frac{1}{{{x}_1}+3}+\\frac{1}{{{x}_2}+3}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm) Đề.\n1) Để làm thí nghiệm về sự nổi của vật không chứa nước. Nam chuẩn bị một ly nước thủy tinh với dạng lòng trong của ly là một hình trụ có đường kính đáy là $6 cm$; chiều cao là $10 cm$ và một quả bóng bàn tiêu chuẩn quốc tế có dạng hình cầu với đường kính $40 mm$. Minh tiến hành bỏ quả bóng bàn vào trong ly rồi rót $200 c{{m}^3}$ nước từ từ vào ly và đo được mực nước dâng cao $7,2 cm$.\na) Tính thể tích của quả bóng bàn.\nb) Tính thể tích phần nổi của quả bóng bàn trong thí nghiệm của Nam. (lấy $\\pi \\approx 3,14$ và kết quả làm tròn đến chữ số thập phân thứ hai)\n2) Từ điểm $M$ nằm ngoài đường tròn $\\left( O ;R \\right)$ kẻ các tiếp tuyến $MP$ và $MQ$ với đường tròn $\\left( O;R \\right)$, ($P$ và $Q$ là các tiếp điểm). Kẻ đường kính $PA$. Tiếp tuyến tại $A$ với đường tròn $\\left( O;R \\right)$ cắt $PQ$ tại $B$.\na) Chứng minh: $AQ$ song song với $OM$.\nb) Chứng minh: $PQ.PB=4{{R}^2}$.\nc) Gọi $K$ là trung điểm của $MO$. Tia $PK$ cắt $AQ$ tại $I$. Chứng minh tứ giác $MIAO$ là hình bình hành.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một gia đình muốn cải tạo một ao nước nhỏ thành một hồ nước đẹp hơn.  Hồ nước có dạng hình hộp chữ nhật với chiều dài gấp hai lần chiều rộng và người ta tính được có thể tích bằng $\\frac{62 250}{3} m^3$. Theo thị trường xây dựng, giá tiền xây dựng bình quân là $350 000$ đồng/m2 (bao gồm cả đáy và thành hồ).  Hỏi chi phí thấp nhất mà gia đình đó phải trả để xây dựng hồ nước trên là bao nhiêu tiền ?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) .\n1) Biểu đồ hình cột sau thống kê về sự yêu thích các môn học của học sinh khối $9$. Biết mỗi học sinh chọn một môn yêu thích.\nLập bảng tần số và bảng tần số tương đối của dữ liệu được biểu diễn trên biểu đồ.\n2) Mỗi công nhân của một đội xây dựng làm việc ở một trong năm bộ phận của đội đó là: Lợp mái, ốp gạch bếp, lát nền, trát tường, xây tường. Biểu đồ hình quạt tròn ở dưới đây thống kê tỷ lệ công nhân thuộc mỗi bộ phận. Chọn ngẫu nhiên một công nhân của đội. Tính xác suất của mỗi biến cố $A$: “Công nhân được chọn không thuộc bộ phận Lát nền hoặc Lợp mái”.",
+    "topic": "khac",
+    "source_file": "Đề số 43_converted_175005.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1). Một cuộc điều tra về thời gian một nhóm học sinh làm một bài kiểm tra trắc nghiệm cho kết quả như sau:\nCho biết có bao nhiêu học sinh tham gia điều tra và lập bảng tần số tương đối ghép nhóm cho kết quả điều tra\n2). Một toà nhà chung cư có 30 tầng, được đánh số lần lượt từ 1 đến 30. Bạn Bình vào thang máy ở tầng 1, bấm chọn ngẫu nhiên số một tầng để đi lên. Tính xác suất của các biến cố\nA: “Bình đi lên tầng có số là một số nguyên tố”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}+3}{\\sqrt{x}+1}$ và $B=\\frac{\\sqrt{x}}{\\sqrt{x}-1}+\\frac{1}{\\sqrt{x}+2}-\\frac{3\\sqrt{x}}{x+\\sqrt{x}-2}$với $x\\ge 0;x\\ne 1$.\n1). Tính giá trị của biểu thức A khi  $x=25$\n2).  Rút gọn biểu thức $B$\n3). Cho $P=A.B$. Hãy so sánh và $P$ và $\\sqrt{P}$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1). Một vườn trường hình chữ nhật trước đây có chu vi $120 m$, nhà trường đã mở rộng chiều dài thêm $5 m$ và chiều rộng thêm $3 m$, do đó diện tích vườn trường đã tăng thêm $245 {{m}^2}$. Tính chiều dài và chiều rộng mảnh vườn lúc đầu.\n2). Bạn Bình mua một quyển từ điển và một món đồ chơi với tổng số tiền theo giá niêm yết là $750$nghìn đồng. Vì Bình mua đúng dịp cửa hàng có chương trình khuyến mại nên khi thanh toán giá quyển từ điển được giảm $20%$, giá món đồ chơi được giảm $10%$. Do đó Bình chỉ phải trả $630$ nghìn đồng. Hỏi giá gốc mỗi thứ giá bao nhiêu tiền ?\n3). Gọi ${{x}_1},{{x}_2}$ là hai nghiệm của phương trình:${{x}^2}-4x-7=0$. Không giải phương trình, hãy tính giá trị của biểu thức $T=\\frac{{{x}_1}}{{{x}_2}}+\\frac{{{x}_2}}{{{x}_2}}-2$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu IV: (4,0 điểm)\n1). Một xô nước inox hình trụ (không có nắp đậy) có chiều cao$0,6 m$, bán kính đáy $0,2 m$\na). Tính diện tích inox để làm nên chiếc xô hình trụ trên (bỏ qua phần mép nối).\nb). Trong xô có chứa nước, mực nước đó chiếm $\\frac{2}{3}$ chiều cao của xô. Tính thể tích nước có trong xô.\n2). Cho nửa đường tròn $\\left( O \\right)$, đường kính $AB$. Từ điểm $M$ bất kì trên tiếp tuyến $Ax$ của nửa đường tròn $\\left( O \\right)$ vẽ tiếp tuyến thứ hai $MC$ ($C$ là tiếp điểm). Gọi $I$là giao điểm của $OM$ và $AC$.\na). Chứng minh bốn điểm $A$, $M$, $C$, $O$ cùng thuộc một đường tròn.\nb). Chứng minh $OI.OM=O{{A}^2}$ và $OM // BC$.\nc). Gọi $H$ là chân đường vuông góc kẻ từ $C$ đến $AB$, $MB$ cắt đường tròn $\\left( O \\right)$ tại $D$ và cắt $CH$ tại $K$. Chứng minh $K$ là trung điểm của $CH$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu V: (0,5 điểm) Cửa hàng nhà bác Dũng chuyên kinh doanh máy tính tại Hà Nội. Một loại máy tính có giá nhập vào một chiếc là $18$triệu đồng và bán ra với giá $22$triệu đồng. Với giá bán như trên thì một năm số lượng máy tính bán được dự kiến là $500$chiếc. Để tăng thêm lượng tiêu thụ dòng máy tính này, bác Dũng dự định giảm giá bán và ước lượng cứ giảm $200$nghìn đồng một chiếc thì số lượng máy tính bán ra trong một năm sẽ tăng $50$chiếc. Vậy bác Dũng phải bán với giá bao nhiêu để sau khi giảm giá lợi nhuận thu được sẽ cao nhất ?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu I:\n1). Một cuộc điều tra về thời gian một nhóm học sinh làm một bài kiểm tra trắc nghiệm cho kết quả như sau:\nCho biết có bao nhiêu học sinh tham gia điều tra và lập bảng tần số tương đối ghép nhóm cho kết quả điều tra\n2). Một toà nhà chung cư có 30 tầng, được đánh số lần lượt từ 1 đến 30. Bạn Bình vào thang máy ở tầng 1, bấm chọn ngẫu nhiên số một tầng để đi lên. Tính xác suất của các biến cố\nA: “Bình đi lên tầng có số là một số nguyên tố”.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 44_converted_175440.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi thống kê độ dài (đơn vị: centimét) của $60$ lá dương xỉ trưởng thành, người ta có bảng tần số ghép nhóm như sau\na) Tìm tần số tương đối của mỗi nhóm.\nb) Lập bảng tần số tương đối ghép nhóm của mẫu số liệu ghép nhóm đó.\nc) Vẽ biểu đồ tần số tương đối ghép nhóm ở dạng biểu đồ cột và biểu đồ đoạn thẳng của mẫu số liệu ghép nhóm đó.",
+    "topic": "khac",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu II :  (1,5 điểm)\nCho biểu thức\nA = $\\left( \\frac{\\sqrt{a}}{\\sqrt{a}-1}-\\frac{1}{a-\\sqrt{a}} \\right):\\left( \\frac{1}{\\sqrt{a}+1}+\\frac{2}{a-1} \\right)$\na) Rút gọn biểu thức A\nb) Tính giá trị của biểu thức A, biết  a = 4 +2$\\sqrt{3}$\nc) Tìm a sao cho A < 0",
+    "topic": "can_thuc",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Tìm các hệ số x, y để cân bằng phương trình phản ứng hoá học sau.\n$xZn+4yHN{{O}_3}\\to xZn{{(N{{O}_3})}_2}+2NO+2y{{H}_2}O$\n2)  Bác Lan có $500$ triệu đồng để đầu tư vào hai khoản: Trái phiếu và gửi tiết kiệm ngân hàng với kì hạn $12$ tháng. Lãi suất của trái phiếu và gửi tiết kiệm ngân hàng lần lượt là $7%/$năm và $6%/$năm. Tính số tiền mà bác Lan đầu tư vào mỗi khoản để mỗi năm nhận được tiền lãi là $32$ triệu đồng từ hai khoản đầu tư đó.\n3)  Cho phương trình: ${{x}^2}-5x-6=0$ có hai nghiệm ${{x}_1},{{x}_2}$. Hãy tính giá trị của biểu thức sau: A = $\\frac{{{x}_1}}{{{x}_2}-1}+\\frac{{{x}_2}}{{{x}_1}-1}$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu IV:  (4,0 điểm)\n2) Cho tam giác ABC có ba góc nhọn nội tiếp đường tròn tâm O. Các đường cao AD, BE, CF của tam giác ABC cắt nhau tại H.\na) Chứng minh bốn điểm A, B, D, E cùng thuộc một đường tròn..\nb) Chứng minh  $DB.DC=DH.DA$.\nc) Đường thẳng AO cắt đường tròn tâm O tại điểm K khác điểm A. Gọi I là giao điểm của hai đường thẳng HK và BC. Chứng minh I là trung điểm của đoạn thẳng BC.\nd) Tính $\\frac{AH}{AD}+\\frac{BH}{BE}+\\frac{CH}{CF}$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi thống kê độ dài (đơn vị: centimét) của $60$ lá dương xỉ trưởng thành, người ta có bảng tần số ghép nhóm như sau\na) Tìm tần số tương đối của mỗi nhóm.\nb) Lập bảng tần số tương đối ghép nhóm của mẫu số liệu ghép nhóm đó.\nc) Vẽ biểu đồ tần số tương đối ghép nhóm ở dạng biểu đồ cột và biểu đồ đoạn thẳng của mẫu số liệu ghép nhóm đó.",
+    "topic": "khac",
+    "source_file": "Đề số 45_converted_175844.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\nSau khi thống kê độ dài (đơn vị: centimét) của 60 lá dương xỉ trưởng thành, người ta có bảng tần số ghép nhóm như sau:\nTìm tần số ghép nhóm và tần số tương đối ghép nhóm của nhóm $\\left[ 30;40 \\right)$.\nTrên mặt phẳng cho năm điểm phân biệt $A,B,C,D,E$ trong đó không có 3 điểm nào thẳng hàng. Hai điểm $A,B$ được tô màu đỏ; ba điểm $C,D,E$ được tô màu xanh. Bạn Châu chọn ra ngẫu nhiên một điểm tô màu đỏ, sau đó chọn ngẫu nhiên một điểm tô màu xanh để nối thành một đoạn thẳng.\nTính xác suất của mỗi biến cố $X$:“ Trong hai điểm được chọn ra có điểm $A$”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 4_converted_160516.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức\n$A=\\frac{\\sqrt{x}+1}{\\sqrt{x}-2}$ và $B=\\frac{\\sqrt{x}+2}{\\sqrt{x}-3}+\\frac{\\sqrt{x}-8}{\\left( \\sqrt{x}-2 \\right)\\left( \\sqrt{x}-3 \\right)}$  với $x\\ge 0;x\\ne 4;x\\ne 9$.\nTính giá trị của biểu thức $A$ khi $x=25$.\nRút gọn biểu thức $B$\nTìm tất cả các giá trị nguyên của x để $B<A$",
+    "topic": "can_thuc",
+    "source_file": "Đề số 4_converted_160516.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\nĐể mở rộng kinh doanh, một cửa hàng đã vay $600$triệu đồng kì hạn $12$ tháng từ hai ngân hàng A và B với lãi suất lần lượt là $8%$/năm và $9%$/năm. Tổng số tiền lãi một năm phải trả cho cả hai ngân hàng là $50$ triệu đồng. Tính số tiền của hàng đã vay từ mỗi ngân hàng.\nMột tổ sản xuất phải làm $600$sản phẩm trong một thời gian quy định với năng suất như nhau. Sau khi làm được $400$ sản phẩm, tổ đã tăng năng suất thêm mỗi ngày $10$ sản phẩm, do đó đã hoàn thành công việc sớm hơn một ngày. Tính số sản phẩm làm trong mỗi ngày theo quy định.\nCho phương trình ${{x}^2}-4\\sqrt{3}x+8=0$ có 2 nghiệm ${{x}_1}; {{x}_2},$ không giải phương trình hãy tính giá trị biểu thức:  $Q={{x}_1}^3+{{x}_2}^3$",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 4_converted_160516.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\nTính thể tích của mô hình tên lửa trong hình bên.\n2) Cho tam giác $ABC$ nhọn $\\left( AB<AC \\right)$ nội tiếp đường tròn $(O).$ Hai đường cao $BE$ và $CF$ của tam giác$ABC$ cắt nhau tại điểm $H.$ Gọi $K$ là trung điểm $BC.$\na) Chứng minh $\\Delta AEF$ đồng dạng $\\Delta ABC.$\nb) Chứng minh đường thẳng $OA$ vuông góc với đường thẳng $EF.$\nc) Đường phân giác góc $FHB$ cắt $AB$ và $AC$ lần lượt tại $M$ và $N.$Gọi $I$là trung điểm của $MN, J$là trung điểm của$AH.$ Chứng minh tứ giác $AFHI$nội tiếp và ba điểm $I,J,K$thẳng hàng.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 4_converted_160516.docx"
+  },
+  {
+    "content": "Câu V: (0,5 điểm) Bác Bình có mảnh vườn hình vuông ABCD có cạnh bằng 10m. Ở bốn góc vườn, bác Bình muốn trồng hoa thành các hình tam giác vuông bằng nhau (hình vẽ). Hãy tính khoảng cách từ góc vườn A đến vị trí E sao cho tứ giác EFGH có chu vi nhỏ nhất.\nHẾT\nHƯỚNG DẪN",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 4_converted_160516.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) Sau khi điều tra về thời gian đi từ nhà đến trường của học sinh lớp 9A có 40 học sinh ta có bảng tần số tương đối ghép nhóm sau:\nTìm tần số tương đối ghép nhóm và tần số ghép nhóm của nhóm $\\left[ 10;20 \\right)$?\n2) Một túi đựng 5 viên bi có cùng khối lượng và kích thước như nhau, được đánh số $1;2;3;4;5.$Xét phép thử: “Lấy ngẫu nhiên một viên bi từ trong túi” và biến cố A: “Viên bi lấy được đánh số chẵn”.\nTính xác xuất của biến cố A?",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 5_converted_160717.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho biểu thức $A=\\frac{\\sqrt{x}-2}{\\sqrt{x}-1};B=\\frac{\\sqrt{x}}{\\sqrt{x}+1}+\\frac{1}{1-\\sqrt{x}}+\\frac{2}{x-1}$với $x\\ge 0;x\\ne 1$.\n1) Tính giá trị biểu thức $A$ tại $x=9$\n2) Chứng minh $B=\\frac{\\sqrt{x}-1}{\\sqrt{x}+1}$.\n3) Cho $P=A.B$. Tìm các giá trị nguyên của $x$để $\\left| P \\right|+P=0$ .",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 5_converted_160717.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Cận thị trong học sinh ngày càng tăng. Lớp 9A có 35 học sinh, trong đó chỉ có 25% học sinh nam và 20% số học sinh nữ không bị cận thị. Biết tổng số học sinh nam và học sinh nữ không bị cận thị là 8 học sinh. Tính số học sinh nữ không bị cận thị.\n2) Hưởng ứng phong trào trồng cây xanh vì môi trường xanh sạch đẹp. Một chi đoàn dự định trồng 600 cây xanh trong thời gian quy định. Do mỗi ngày họ trồng được nhiều hơn dự định 30 cây nên công việc được hoàn thành sớm hơn quy định 1 ngày. Tính số ngày chi đoàn dự kiến hoàn thành công việc ?\n3) Cho phương trình $3{{x}^2}+5x-6=0$ có hai nghiệm ${{x}_1},{{x}_2}$.\nKhông giải phương trình, tính: $P=\\frac{2{{x}_2}^2}{{{x}_1}+{{x}_2}}+2{{x}_1}$.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 5_converted_160717.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một cái thùng dùng để đựng gạo có dạng nửa hình cầu với đường kính $50cm$, phần gạo vun lên có dạng hình nón cao $12cm$.\na) Tính thể tích phần gạo trong thùng.\nb) Nhà bạn An dùng lon sữa bò dạng hình trụ với bán kính đáy là$5cm$, chiều cao $14cm$ dùng để đong gạo mỗi ngày. Biết rằng mỗi ngày nhà An ăn 4 lon gạo và mỗi lần đong thì lượng gạo chiếm $90%$ thể tích của lon. Hỏi cần ít nhất bao nhiêu ngày để nhà An có thể ăn hết số gạo trong thùng?\n2) Cho đường tròn tâm $(O)$ và dây $BC$ cố định không đi qua $O$. Trên cung lớn $BC$  lấy điểm $A$ sao cho $AB<AC$. Kẻ đường kính $AK,E$  là hình chiếu của $C$ trên $AK$. $M$ là trung điểm của $BC$.\na) Chứng minh bốn $C, E, M, O$cùng thuộc một đường tròn.\nb) Kẻ $AD\\bot BC$ tại $D$. Chứng minh $AD.AK=AB.AC$  và $\\Delta MDE$ cân.\nc) Gọi $F$ là hình chiếu của $B$  trên $AK$. Chứng minh khi  di chuyển trên cung lớn $BC$ thì tâm đường tròn ngoại tiếp $\\Delta DEF$ là 1 điểm cố định.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 5_converted_160717.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm)\nBác An muốn đặt đóng một chiếc hộp đựng quà lưu niệm có dạng hình hộp chữ nhật với mặt đáy $ABCD$ là hình vuông như hình dưới đây.\nĐể món quà trở nên đặc biệt , bác An muốn mạ bốn mặt xung quanh và mặt đáy dưới (mặt $MNPQ$) của chiếc hộp bằng kim loại quý (không mạ nắp hộp). Em hãy tìm độ dài cạnh $MN$ của mặt đáy và chiều cao $AM$ của hộp quà sao cho tổng diện tích các mặt được mạ kim loại quý của chiếc hộp là nhỏ nhất biết rằng thể tích của chiếc hộp là $4d{{m}^3}$.\nHẾT $$",
+    "topic": "khac",
+    "source_file": "Đề số 5_converted_160717.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Giáo viên ghi lại thời gian bơi cự ly 50 mét của học sinh lớp 9A cho kết quả trong bảng sau:\n1) Lập bảng tần số tương đối?\n2) Gieo một con xúc xắc cân đối đồng chất và có 6 mặt. Tính xác suất của biến cố gieo được mặt có số chấm là bội của 3.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 6_converted_160850.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho biểu thức $A=\\frac{\\sqrt{x}}{\\sqrt{x}-2}$ và $B=\\frac{2\\sqrt{x}}{\\sqrt{x}-3}-\\frac{x+9\\sqrt{x}}{x-9}$ với $x>0;x\\ne 4;x\\ne 9$\n1) Tính giá trị của biểu thức $A$ khi $x=100$\n2) Rút gọn biểu thức $B$\n3) Tìm giá trị nguyên của $x$ để biểu thức $M=A:B$ có giá trị nguyên",
+    "topic": "can_thuc",
+    "source_file": "Đề số 6_converted_160850.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) Một dung dịch chứa $30%$ axit nitơric (tính theo thể tích) và một dung dịch khác chứa $55%$ axit nitơric. Cần phải trộn thêm bao nhiêu lít dung dịch loại 1 và loại 2 để được 100 lít dung dịch $50%$ axit nitơric?\n2) Hai vòi nước cùng chảy vào một bể không chứa nước thì sau $3$ giờ đầy bể. Nếu mở vòi thứ nhất chảy một mình trong $20$ phút, rồi khóa lại, mở tiếp vòi thứ hai chảy trong $30$ phút thì cả hai vòi chảy được $\\frac{1}{8}$ bể. Tính thời gian mỗi vòi chảy một mình đầy bể.\n3) Cho phương trình: ${{x}^2}+5x+m=0$ (*) có một nghiệm là $\\frac{-\\sqrt{13}-5}{2}$\nTìm tổng bình phương hai nghiệm của phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 6_converted_160850.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)  Cô\nHình bên dưới là một món đồ chơi trẻ em có cấu tạo từ một bán cầu (nửa khối cầu) và một hình nón.\nTìm thể tích của món đồ chơi.\nTìm diện tích toàn phần của món đồ chơi.\n2) Cho đường tròn $\\left( O \\right)$ đường kính $AB$. Dây cung $MN$ vuông góc với $AB$, ($AM<BM$). Hai đường thẳng $BM$ và $NA$ cắt nhau tại $K$. Gọi $H$ là chân đường vuông góc kẻ từ $K$ đến đường thẳng $AB$.\na) Chứng minh tứ giác $AHKM$ nội tiếp trong một đường tròn.\nb) Chứng minh rằng $NB . HK=AN . HB$.\nc) Chứng minh $HM$ là tiếp tuyến của đường tròn $\\left( O \\right)$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 6_converted_160850.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Với một tấm tôn hình tròn có bán kính R = 6 cm. Người ta muốn làm một cái phễu bằng cách cắt một phần (dạng hình quạt) của hình tròn như hình bên dưới. Thể tích lớn nhất của hình nón có được khi người ta cắt cung tròn của hình quạt có chiều dài là bao nhiêu?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 6_converted_160850.docx"
+  },
+  {
+    "content": "Câu I (1,5 điểm).\n1) Trong bảng số liệu sau có một số liệu bị điều tra sai. Hãy tìm số liệu đó và sửa cho đúng.\n2) Hình bên dưới mô tả một đĩa tròn bằng bìa cứng được chia làm $12$phần bằng nhau và ghi các số $1,2,3,...,12$; chiếc kim được gắn cố định vào trục quay ở tâm của đĩa.\nXét phép thử “Quay đĩa tròn một lần”. Tính xác suất của biến cố\na) A: “Chiếc kim chỉ vào hình quạt ghi số nguyên tố.”\nb) B: “Chiếc kim chỉ vào hình quạt ghi số chia cho 3 dư 1.”",
+    "topic": "khac",
+    "source_file": "Đề số 7_converted_161051.docx"
+  },
+  {
+    "content": "Câu III (2,5 điểm).\n1) Cô Tâm đi cửa hàng điện máy mua một chiếc ti vi. Dịp này cửa hàng điện máy đang có chương trình khuyến mãi giảm giá $10%$, nhưng có thẻ khách hàng VIP nên được giảm thêm $5%$ trên giá đã giảm. Do đó cô chỉ phải trả số tiền là $17 100 000$đồng. Hỏi giá ban đầu của chiếc ti vi khi chưa khuyến mãi là bao nhiêu tiền?\n2) Theo kế hoạch, một dây chuyền phải sản xuất một số sản phẩm trong 15 ngày với số lượng sản phẩm làm được trong mỗi ngày là như nhau. Thực tế, mỗi ngày dây chuyền đã sản xuất vượt mức 5 sản phẩm nên sau 14 ngày dây chuyền chẳng những đã hoàn thành kế hoạch mà còn làm thêm được 30 sản phẩm nữa. Tìm số sản phẩm thực tế dây chuyền làm được mỗi ngày.\n3) Chứng minh rằng phương trình bậc hai: ${{x}^2}-mx-8=0$ có hai nghiệm phân biệt ${{x}_1}$ và ${{x}_2}$ và biểu thức $M=\\frac{2x_1^2+5{{x}_1}-16}{3{{x}_1}}-\\frac{2x_2^2+5{{x}_2}-16}{3{{x}_2}}$ có giá trị không phụ thuộc vào tham số $m$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 7_converted_161051.docx"
+  },
+  {
+    "content": "Câu IV (4,0 điểm).\n1) Một chiếc cốc hình trụ có diện tích đáy là 16,7cm2, chiều cao là 15cm (như hình dưới đây).\na) Tính thể tích chiếc cốc.\nb) Người ta thả một quả trứng vào cốc thủy tinh hình trụ có chứa nước (như hình trên). Khi trứng chìm hoàn toàn xuống đáy cốc và nằm ngang thì chứng tỏ quả trứng đó còn tươi (được đẻ từ 1 đến 2 ngày). Tính thể tích quả trứng đó biết khi thả quả trứng ngập hoàn toàn trong nước thì nước trong cốc dâng thêm 8,2mm và nước chưa tràn ra ngoài.\n2) Cho tam giác $ABC$ nhọn $\\left( AB<AC \\right)$ nội tiếp đường tròn $\\left( O \\right)$ có hai đường cao $BD,CE$ cắt nhau ở điểm $H$.\na) Chứng minh: Tứ giác $BCDE$ là tứ giác nội tiếp.\nb) Tia $CE$ cắt đường tròn $\\left( O \\right)$ tại điểm thứ hai là $G$. Chứng minh: $\\Delta BHG$ cân ở $B$.\nc) Hai điểm $M$ và $N$ lần lượt là trung điểm của hai đoạn thẳng $CH$ và $CG$. Đường thẳng $NO$ cắt cạnh $AC$ tại điểm $P$. Chứng minh: $CD.CP=CM.CG$ và $MB\\bot MP$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 7_converted_161051.docx"
+  },
+  {
+    "content": "Câu V (0,5 điểm).Bác Minh muốn đặt đóng một chiếc hộp đựng quà lưu niệm có dạng hình hộp chữ nhật với mặt đáy $ABCD$ là hình vuông như hình dưới đây.\nĐể món quà trở nên đặc biệt, bác Minh muốn mạ bốn mặt xung quanh và mặt đáy dưới (đáy $MNPQ$) của chiếc hộp bằng kim loại quý (không mạ nắp hộp). Em hãy tìm độ dài cạnh $MN$ của mặt đáy và chiều cao $AM$ của hộp quà sao cho tổng diện tích các mặt được mạ kim loại quý của chiếc hộp là nhỏ nhất biết rằng thể tích của chiếc hộp là $4d{{m}^3}$.\n-----------------HẾT-----------------",
+    "topic": "khac",
+    "source_file": "Đề số 7_converted_161051.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm)\n1) . Khối lượng (đơn vị: gam) của 30 củ khoai tây thu hoạch được ở gia đình bác Ngọc là:\na)Hãy ghép các số liệu trên thành năm nhóm sau$\\left[ 70;80 \\right), \\left[ 80;90 \\right), \\left[ 90;100 \\right), \\left[ 100;110 \\right), \\left[ 110;120 \\right).$Tìm tần số của mỗi nhóm đó.\nb) Lập bảng tần số ghép nhóm của mẫu số liệu ghép nhóm đó.\n2) Một bó hoa gồm $3$ bông hoa màu đỏ và $1$ bông hoa màu vàng. Bạn Trúc Linh chọn ngẫu nhiên $2$ bông hoa từ bó hoa đó.\na) Liệt kê các cách chọn mà bạn Trúc Linh thực hiện.\nb) Tính xác suất của mỗi biến cố sau:\n$R$: “Trong $2$ bông hoa được chọn, có đúng $1$ bông hoa màu đỏ”;\n$T$: “Trong $2$ bông hoa được chọn, có ít nhất $1$ bông hoa màu đỏ”.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức: $A=\\frac{\\sqrt{x}}{\\sqrt{x}+2}$ và $B=\\frac{5}{\\sqrt{x}-2}-\\frac{16+2\\sqrt{x}}{x-4}$  với $x\\ge 0, x\\ne 4$\n1) . Tính giá trị của biểu thức $A$ khi $x=9$.\n2) . Chứng minh $B=\\frac{3}{\\sqrt{x}+2}$.\n3) . Tìm giá trị nguyên lớn nhất của $x$ để $5A+B\\le 3$.",
+    "topic": "bieu_thuc",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm) .\n1) . Ngày $1/1/2016$, ông Tư mang $50 000 000$ đồng vào ngân hàng gửi tiết kiệm với lãi suất $7%$ năm. Đến ngày $1/1/2017$ông Tư đến ngân hàng không rút lãi ra mà gửi thêm vào  $26 500 000$ đồng với kì hạn 1 năm nhưng lãi suất hiện tại của ngân hàng là $7,5%$ năm. Ngày $1/1/2018$vì bận công việc nên ông không đến rút tiền lãi được và tiền lãi sẽ được cộng vào tiền gốc để tính lãi kép. Hỏi nếu vào ngày $1/1/2019$ông Tư đến rút cả gốc lẫn lãi thì được tất cả bao nhiêu tiền?\n2) . Một đội xe cần chở $480$ tấn hàng, khi sắp khởi hành đội được điều thêm $3$ xe nữa nên mỗi xe chở ít hơn dự định $8$ tấn. Hỏi lúc đầu đội có bao nhiêu chiếc xe? Biết rằng các xe chở số hàng như  nhau.\n3) . Biết phương trình $2{{x}^2}+4x+m=0$ ($m$là tham số) có $1$ nghiệm bằng $1$.Tính tổng bình phương hai nghiệm của phương trình.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\nMột thùng đựng nước có dạng hình trụ chiều cao là $35 cm$ đường kính đáy $30 cm$.\nTính thể tích của thùng.\nb) Người ta sử dụng thùng trên để múc nước đổ vào một bể chứa có dung tích $1 {{m}^3}$. Hỏi cần phải đổ ít nhất bao nhiêu thùng thì đầy bể chứa ? Biết rằng mỗi lần xách người ta chỉ đổ đầy $90 %$ thùng để nước không đổ ra ngoài.\n2) Cho tam giác $ABC$ nhọn nội tiếp đường tròn $\\left( O \\right)$. $AD$, $BE$, $CF$ là ba đường cao của tam giác $ABC$ cắt nhau tại $H$.\na) .Chứng minh bốn điểm $A, F, H, E$ cùng thuộc một đường tròn.\nb). Kẻ đường kính $AM$ của đường tròn $\\left( O \\right)$. Chứng minh $AD.AM=AB.AC$\nc). Gọi $P$ là giao điểm của $AH$ và $EF$, $I$ là giao điểm của $AM$ và $BC$, $K$ là trung điểm của $BC$. Chứng minh: $H, K, M$  thẳng hàng và $PI//HK$",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) .\nMột cái thùng đựng nước được tạo thành từ việc cắt mặt xung quanh  của một hình nón bởi một mặt phẳng vuông góc với trục của hình nón.  Miệng thùng là đường tròn có bán kính bằng hai lần bán kính mặt đáy  của thùng. Bên trong thùng có một cái phễu dạng hình nón có đáy là đáy  của thùng, có đỉnh là tâm của miệng thùng (xem hình minh họa). Biết  rằng đổ $12$ lít nước vào thùng thì đầy thùng (nước không chảy được vào  bên trong phễu), tính thể tích của phễu\nHẾT\nHƯỚNG DẪN",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu I:\n1) Khối lượng (đơn vị: gam) của 30 củ khoai tây thu hoạch được ở gia đình bác Ngọc là:\na)Hãy ghép các số liệu trên thành năm nhóm sau:\n$\\left[ 70;80 \\right), \\left[ 80;90 \\right), \\left[ 90;100 \\right), \\left[ 100;110 \\right), \\left[ 110;120 \\right).$ Tìm tần số của mỗi nhóm đó.\nb) Lập bảng tần số ghép nhóm của mẫu số liệu ghép nhóm đó.",
+    "topic": "bat_phuong_trinh",
+    "source_file": "Đề số 8_converted_161409.docx"
+  },
+  {
+    "content": "Câu I:  (1,5 điểm) Một cửa hàng tạp hóa thống kê số tiền lãi (đơn vị: nghìn đồng) trong $60$ ngày. Số liệu được ghi lại trong biểu đồ tần số ghép nhóm sau:\n1) Tính tần số tương đối của mỗi nhóm (làm tròn đến chữ số thập phân thứ nhất)?\n2) Lập bảng tần số tương đối ghép nhóm cho bảng thống kê trên.",
+    "topic": "khac",
+    "source_file": "Đề số 9_converted_161649.docx"
+  },
+  {
+    "content": "Câu II:  (1,5 điểm) Cho hai biểu thức:\n$A=\\frac{x-3}{\\sqrt{x}}$ và $B=\\frac{\\sqrt{x}}{\\sqrt{x}+2}-\\frac{4\\sqrt{x}}{4-x}$ với $x>0,x\\ne 4$\n1) Tính giá trị của biểu thức $A$ biết $x=16$.\n2) Rút gọn biểu thức $B$.\n3) Cho $P=A.B$. Tìm các giá trị nguyên của $x$ để $P\\le 6$.",
+    "topic": "can_thuc",
+    "source_file": "Đề số 9_converted_161649.docx"
+  },
+  {
+    "content": "Câu III:   (2,5 điểm)\n1) . Anh Bình đến siêu thị để mua $1$ cái bàn ủi và $1$ cái quạt điện có tổng giá niêm yết là $850$ ngàn đồng. Tuy nhiên, thực tế khi trả tiền, nhờ siêu thị khuyến mãi để tri ân khách hàng nên giá bán bàn ủi và quạt điện đã giảm lần lượt $10%$ và $20%$ so với giá niêm yết. Do đó, anh Bình đã được giảm $125$ ngàn đồng khi mua hai sản phẩm trên. Hỏi số tiền chênh lệch giữa giá bán niêm yết với giá bán thực tế của mỗi sản phẩm mà anh Bình đã mua nói trên là bao nhiêu?\n2) Cho quãng đường từ địa điểm$A$ tới địa điểm $B$ dài $90$km. Lúc $6$ giờ một xe máy đi từ $A$ để tới $B$. Lúc $6$ giờ $30$ phút cùng ngày, một ô tô cũng đi từ $A$ để tới $B$ với vận tốc lớn hơn vận tốc xe máy $15$ $km/h$. (Hai xe chạy trên cùng một con đường đã cho). Hai xe nói trên đều đến $B$ cùng lúc. Tính vận tốc mỗi xe.\n3) Biết rằng phương trình bậc hai $2{{x}^2}-4x+m=0$ có một nghiệm $x=\\frac{2+\\sqrt{10}}{2}$. Tính tổng nghịch đảo hai nghiệm của phương trình trên.",
+    "topic": "chuyen_dong",
+    "source_file": "Đề số 9_converted_161649.docx"
+  },
+  {
+    "content": "Câu IV:    (4,0 điểm)\n1) Một ống đồng hình trụ có chiều cao gấp $5$ lần bán kính. Biết thể tích ống đồng bằng$40\\pi cm^3$. Tính chiều cao của ống đồng đó.\n2) Cho $\\left( O;R \\right)$ đường kính$AB$. Bán kính $CO$ vuông góc với $AB$, $M$là điểm bất kì trên cung nhỏ $AC$( $M$ khác $A$ và $C$), $MB$ cắt $AC$tại$H$. Gọi $K$ là hình chiếu  của $H$ trên$AB$.\na) Chứng minh bốn điểm $C, B, H, K$ cùng thuộc một đường tròn.\nb) Chứng minh $CA$ là phân giác $\\widehat{MCK}$.\nc) Kẻ $Ax$ là tiếp tuyến của nửa đường tròn tại$A$. Lấy $P\\in Ax$ sao cho $\\frac{AP.MB}{MA}=R$.\nChứng minh $PB$ đi qua trung điểm của đoạn thẳng$HK$.",
+    "topic": "hinh_hoc",
+    "source_file": "Đề số 9_converted_161649.docx"
+  },
+  {
+    "content": "Câu V:   (0,5 điểm) Một trang chữ của một tạp chí cần diện tích là $384c{{m}^2}$. Lề trên, lề dưới là $3cm$; lề phải, lề trái là $2cm$. Hỏi chiều ngang và chiều dọc tối ưu của trang giấy lần lượt là bao nhiêu để diện tích trang giấy là nhỏ nhất?\nHẾT\nHƯỚNG DẪN",
+    "topic": "khac",
+    "source_file": "Đề số 9_converted_161649.docx"
+  }
+]

@@ -1,0 +1,20 @@
+ĐỀ BÀI
+Câu I:  (1,5 điểm) 
+1) Khảo sát thời gian tập thể dục của một số học sinh lớp $9$ thu được mẫu số liệu ghép nhóm sau:
+Tính tần số tương đối của nhóm $\left[ 40 ; 60 \right)$? (Làm tròn đến hàng phần mười)
+2) ID12 PBT TOAN 7 TBY STT12Hình dưới đây mô tả một đĩa tròn, cân đối bằng bìa cứng được chia làm tám phần bằng nhau và ghi các số $1 ; 2 ; 3 ; 4 ; 5 ; 6 ; 7 ; 8$. Chiếc kim được gắn cố định vào trục quay ở tâm của đĩa. Quay đĩa tròn một lần.
+
+
+
+
+
+
+Tính xác suất của các biến cố sau:  “Mũi tên chỉ vào hình quạt ghi số là ước của $8$”.
+Câu II:  (1,5 điểm) Cho hai biểu thức $A=\frac{\sqrt{x}}{\sqrt{x}-1}+\frac{1}{\sqrt{x}+2}-\frac{3\sqrt{x}}{x+\sqrt{x}-2}$ và $B=\frac{\sqrt{x}+3}{\sqrt{x}+1}$ với $x\ge 0$; $x\ne 1$.
+1) Tính giá trị của biểu thức $B$ với $x=25$.
+2) Chứng minh $A=\frac{\sqrt{x}+1}{\sqrt{x}+2}$.
+3) Tìm $x$ để biểu thức $S=A.B$ đạt giá trị lớn nhất.
+Câu III:   (2,5 điểm) 
+1) Nhân dịp Lễ giỗ tổ Hùng Vương , một siêu thị điện máy đã giảm giá nhiều mặt hàng để kích cầu mua sắm. Giá niêm yết một tủ lạnh và một máy giặt có tổng số tiền là $25,4$triệu đồng nhưng trong dịp này giá một tủ lạnh giảm $40%$ giá bán và giá một máy giặt giảm $25%$ giá bán nên cô Liên đã mua hai món đồ trên với tổng số tiền là $16,77$ triệu đồng. Hỏi giá mỗi món đồ trên khi chưa giảm giá là bao nhiêu tiền ? 
+	2) Một người đi ô tô từ  $A$ đến $B$ cách nhau $100$ km với vận tốc xác định. Khi từ $B$ trở về $A,$ người đó đi theo đường khác dài hơn đường cũ $20$ km nhưng với vận tốc lớn hơn vận tốc lúc đi mỗi giờ $20$ km. Vì vậy thời gian về ít hơn thời gian đi $30$ phút. Tính vận tốc lúc đi.
+	3) Cho phương trình bậc hai ${{x}^2}-6x+c=0$ có hai nghiệm phân biệt là ${{x}_1}=2{{x}_2}$. Tính giá trị biểu thức $S=x_1^3+x_2^3+3{{x}_1}{{x}_2}\left( {{x}_1}+{{x}_2} \right)$.
