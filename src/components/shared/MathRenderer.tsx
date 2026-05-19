@@ -57,6 +57,21 @@ export function renderMathContent(text: string): string {
   text = text.replace(/–/g, '-').replace(/—/g, '-'); // en-dash, em-dash -> hyphen
   text = text.replace(/\u00A0/g, ' '); // non-breaking space -> space
   text = text.replace(/[‘’]/g, "'").replace(/[“”]/g, '"'); // smart quotes -> normal quotes
+  
+  // MathType fix: KaTeX prefers aligned over align for better compatibility inside wrappers
+  text = text.replace(/\\begin{align(\*?)}/g, '\\begin{aligned}');
+  text = text.replace(/\\end{align(\*?)}/g, '\\end{aligned}');
+
+  // KaTeX macros for common MathType abbreviations
+  const KATEX_MACROS = {
+    "\\R": "\\mathbb{R}",
+    "\\N": "\\mathbb{N}",
+    "\\Z": "\\mathbb{Z}",
+    "\\Q": "\\mathbb{Q}",
+    "\\C": "\\mathbb{C}",
+    "\\degree": "^\\circ",
+    "\\temp": "^\\circ\\text{C}",
+  };
 
   // Placeholder storage for rendered KaTeX HTML
   const placeholders: string[] = [];
@@ -72,13 +87,16 @@ export function renderMathContent(text: string): string {
   // First handle block math ($$...$$) - these become centered blocks
   let result = text.replace(/\$\$([\s\S]*?)\$\$/g, (_, latex) => {
     try {
-      // Escape standalone % inside latex so KaTeX doesn't treat it as a comment
-      latex = latex.replace(/(?<!\\)%/g, '\\%');
+      // Unescape HTML entities that rich editors might inject
+      latex = latex.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      // Escape standalone % safely (avoid regex lookbehind for Safari compatibility)
+      latex = latex.replace(/(^|[^\\])%/g, '$1\\%');
       const rendered = `<div class="katex-block">${katex.renderToString(latex.trim(), {
         displayMode: true,
         throwOnError: false,
         trust: true,
         strict: false,
+        macros: KATEX_MACROS,
       })}</div>`;
       return storePlaceholder(rendered);
     } catch {
@@ -89,13 +107,16 @@ export function renderMathContent(text: string): string {
   // Then handle inline math ($...$)
   result = result.replace(/\$([^$]+?)\$/g, (_, latex) => {
     try {
-      // Escape standalone % inside latex so KaTeX doesn't treat it as a comment
-      latex = latex.replace(/(?<!\\)%/g, '\\%');
+      // Unescape HTML entities
+      latex = latex.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
+      // Escape standalone % safely
+      latex = latex.replace(/(^|[^\\])%/g, '$1\\%');
       const rendered = katex.renderToString(latex.trim(), {
         displayMode: false,
         throwOnError: false,
         trust: true,
         strict: false,
+        macros: KATEX_MACROS,
       });
       return storePlaceholder(rendered);
     } catch {
