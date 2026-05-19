@@ -71,7 +71,7 @@ export default function NewQuestionPage() {
         answer: answer || undefined,
         solution: solution || undefined,
         grade,
-        topic: "so_hoc", // Legacy fallback
+        topic: "so_hoc" as Topic, // Legacy fallback
         category_id: categoryId || undefined,
         difficulty,
         question_type: questionType,
