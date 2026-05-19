@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   Upload, FileText, Trash2, Edit, Check, X, ChevronDown, ChevronUp,
@@ -40,8 +40,13 @@ export default function ImportWordPage() {
 
   // Global settings for all imported questions
   const [globalGrade, setGlobalGrade] = useState<Grade>(9);
-  const [globalTopic, setGlobalTopic] = useState<Topic>("khac");
+  const [globalCategoryId, setGlobalCategoryId] = useState("");
+  const [categories, setCategories] = useState<any[]>([]);
   const [globalDifficulty, setGlobalDifficulty] = useState<Difficulty>("van_dung");
+
+  React.useEffect(() => {
+    fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
+  }, []);
 
   // Preview mode
   const [previewIdx, setPreviewIdx] = useState<number | null>(null);
@@ -169,7 +174,7 @@ export default function ImportWordPage() {
   const applyGlobalSettings = () => {
     setQuestions(prev => prev.map(q => ({
       ...q,
-      topic: globalTopic,
+      topic: globalCategoryId, // Actually stores category_id
       difficulty: globalDifficulty,
     })));
     toast.success("Đã áp dụng cài đặt chung cho tất cả câu hỏi");
@@ -211,7 +216,8 @@ export default function ImportWordPage() {
                 answer: q.answer || '',
                 solution: q.solution || '',
                 grade: globalGrade,
-                topic: q.topic,
+                topic: "so_hoc",
+                category_id: q.topic || undefined, // Stored in q.topic field temporarily
                 difficulty: q.difficulty,
                 question_type: q.question_type,
                 is_public: true,
@@ -357,13 +363,24 @@ export default function ImportWordPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề</label>
+                  <label className="block text-xs font-medium text-slate-500 mb-1">Chuyên đề (Danh mục)</label>
                   <select
-                    value={globalTopic}
-                    onChange={e => setGlobalTopic(e.target.value as Topic)}
-                    className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500"
+                    value={globalCategoryId}
+                    onChange={e => setGlobalCategoryId(e.target.value)}
+                    className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-blue-500 truncate"
                   >
-                    {TOPICS.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+                    <option value="">Chọn danh mục</option>
+                    {(() => {
+                      const raw = categories.filter(c => globalGrade ? c.grade === Number(globalGrade) : true);
+                      const display: any[] = [];
+                      const parents = raw.filter(c => !c.parent_id).sort((a,b) => a.sort_order - b.sort_order);
+                      for (const p of parents) {
+                        display.push({ ...p, displayName: p.name });
+                        const children = raw.filter(c => c.parent_id === p.id).sort((a,b) => a.sort_order - b.sort_order);
+                        for (const child of children) display.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+                      }
+                      return display.map(c => <option key={c.id} value={c.id}>{c.displayName}</option>);
+                    })()}
                   </select>
                 </div>
                 <div>
@@ -483,9 +500,10 @@ export default function ImportWordPage() {
                             <select
                               value={q.topic}
                               onChange={e => updateQuestion(idx, { topic: e.target.value })}
-                              className="px-2 py-1.5 border border-slate-200 rounded-lg text-xs"
+                              className="px-2 py-1.5 border border-slate-200 rounded-lg text-xs max-w-[150px] truncate"
                             >
-                              {TOPICS.map(t => <option key={t.value} value={t.value}>{t.label}</option>)}
+                              <option value="">Chọn danh mục</option>
+                              {categories.filter(c => c.grade === globalGrade && c.parent_id !== null).map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
                             </select>
                             <select
                               value={q.difficulty}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
 import { Save, ArrowLeft, Plus, X, Loader2 } from "lucide-react";
@@ -19,7 +19,8 @@ export default function NewQuestionPage() {
   const [answer, setAnswer] = useState("");
   const [solution, setSolution] = useState("");
   const [grade, setGrade] = useState<Grade>(9);
-  const [topic, setTopic] = useState<Topic>("so_hoc");
+  const [categoryId, setCategoryId] = useState("");
+  const [categories, setCategories] = useState<any[]>([]);
   const [difficulty, setDifficulty] = useState<Difficulty>("nhan_biet");
   const [questionType, setQuestionType] = useState<QuestionType>("tu_luan");
   const [options, setOptions] = useState<QuestionOption[]>([
@@ -34,6 +35,10 @@ export default function NewQuestionPage() {
   const [images, setImages] = useState<string[]>([]);
   const [answerImages, setAnswerImages] = useState<string[]>([]);
   const [solutionImages, setSolutionImages] = useState<string[]>([]);
+
+  React.useEffect(() => {
+    fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
+  }, []);
 
 
   const addTag = () => {
@@ -66,7 +71,8 @@ export default function NewQuestionPage() {
         answer: answer || undefined,
         solution: solution || undefined,
         grade,
-        topic,
+        topic: "so_hoc", // Legacy fallback
+        category_id: categoryId || undefined,
         difficulty,
         question_type: questionType,
         options: questionType === "trac_nghiem" ? options : undefined,
@@ -123,9 +129,22 @@ export default function NewQuestionPage() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-600 mb-1.5">Chuyên đề *</label>
-                <select value={topic} onChange={(e) => setTopic(e.target.value as Topic)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500">
-                  {TOPICS.map((t) => <option key={t.value} value={t.value}>{t.label}</option>)}
+                <label className="block text-sm font-medium text-slate-600 mb-1.5">Chuyên đề (Danh mục) *</label>
+                <select value={categoryId} onChange={(e) => setCategoryId(e.target.value)} className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 max-w-[200px] truncate">
+                  <option value="">Chọn danh mục</option>
+                  {(() => {
+                    const raw = categories.filter(c => grade ? c.grade === Number(grade) : true);
+                    const display: any[] = [];
+                    const parents = raw.filter(c => !c.parent_id).sort((a,b) => a.sort_order - b.sort_order);
+                    for (const p of parents) {
+                      display.push({ ...p, displayName: p.name });
+                      const children = raw.filter(c => c.parent_id === p.id).sort((a,b) => a.sort_order - b.sort_order);
+                      for (const child of children) display.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+                    }
+                    const handled = new Set(display.map(c => c.id));
+                    for (const orphan of raw.filter(c => !handled.has(c.id))) display.push({ ...orphan, displayName: orphan.name });
+                    return display.map(c => <option key={c.id} value={c.id}>{c.displayName}</option>);
+                  })()}
                 </select>
               </div>
               <div>
