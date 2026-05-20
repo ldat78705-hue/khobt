@@ -49,7 +49,7 @@ export default function DashboardPage() {
           fetch('/api/questions?count_only=true'),
           fetch('/api/exams?limit=200'),
           fetch('/api/questions?count_only=true&status=pending'),
-          fetch('/api/questions?limit=1000'), // for distributions
+          fetch('/api/questions?limit=10000'), // for distributions
         ]);
         
         if (recentRes.ok) {
