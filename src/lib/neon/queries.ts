@@ -184,14 +184,36 @@ export async function getCategories(grade?: number) {
   const sql = getDb();
   if (grade) {
     return await sql`
-      SELECT c.*, (SELECT COUNT(*)::int FROM public.questions q WHERE q.category_id = c.id) as question_count
+      SELECT c.*,
+        (
+          SELECT COUNT(*)::int FROM public.questions q
+          WHERE q.category_id = c.id
+             OR q.category_id IN (
+               SELECT id FROM public.categories WHERE parent_id = c.id
+               UNION
+               SELECT c3.id FROM public.categories c3
+               JOIN public.categories c2 ON c3.parent_id = c2.id
+               WHERE c2.parent_id = c.id
+             )
+        ) as question_count
       FROM public.categories c
       WHERE grade = ${grade}
       ORDER BY grade, sort_order
     ` as Category[];
   }
   return await sql`
-    SELECT c.*, (SELECT COUNT(*)::int FROM public.questions q WHERE q.category_id = c.id) as question_count
+    SELECT c.*,
+      (
+        SELECT COUNT(*)::int FROM public.questions q
+        WHERE q.category_id = c.id
+           OR q.category_id IN (
+             SELECT id FROM public.categories WHERE parent_id = c.id
+             UNION
+             SELECT c3.id FROM public.categories c3
+             JOIN public.categories c2 ON c3.parent_id = c2.id
+             WHERE c2.parent_id = c.id
+           )
+      ) as question_count
     FROM public.categories c
     ORDER BY grade, sort_order
   ` as Category[];
