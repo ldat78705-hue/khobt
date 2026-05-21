@@ -43,49 +43,31 @@ export default function DashboardPage() {
       setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
     } else {
       try {
-        // Fetch recent questions + counts efficiently
-        const [recentRes, qCountRes, eCountRes, pCountRes, distRes] = await Promise.all([
+        const [recentRes, statsRes] = await Promise.all([
           fetch('/api/questions?limit=5'),
-          fetch('/api/questions?count_only=true'),
-          fetch('/api/exams?limit=200'),
-          fetch('/api/questions?count_only=true&status=pending'),
-          fetch('/api/questions?limit=10000'), // for distributions
+          fetch('/api/admin/stats'),
         ]);
         
         if (recentRes.ok) {
           const json = await recentRes.json();
           setRecentQuestions(json.data || json || []);
         }
-        if (qCountRes.ok) {
-          const json = await qCountRes.json();
-          setQuestionCount(json.count || 0);
-        }
-        if (eCountRes.ok) {
-          const allE = await eCountRes.json();
-          setExamCount(Array.isArray(allE) ? allE.length : 0);
-        }
-        if (pCountRes.ok) {
-          const json = await pCountRes.json();
-          setPendingCount(json.count || 0);
-        }
-        if (distRes.ok) {
-          const json = await distRes.json();
-          const allQ = json.data || json || [];
-          if (Array.isArray(allQ) && allQ.length > 0) {
-            const gd: Record<number, number> = {};
-            const dd: Record<string, number> = {};
-            const td: Record<string, number> = {};
-            allQ.forEach((q: any) => {
-              gd[q.grade] = (gd[q.grade] || 0) + 1;
-              dd[q.difficulty] = (dd[q.difficulty] || 0) + 1;
-              const t = q.category_name || q.topic;
-              td[t] = (td[t] || 0) + 1;
-            });
-            setGradeDistribution(gd);
-            setDifficultyDistribution(dd);
-            const sorted = Object.entries(td).sort((a, b) => b[1] - a[1]).slice(0, 6);
-            setTopicDistribution(sorted.map(([topic, count]) => ({ topic, count })));
-          }
+        if (statsRes.ok) {
+          const data = await statsRes.json();
+          setQuestionCount(data.total || 0);
+          setExamCount(data.totalExams || 0);
+          setPendingCount(data.pending || 0);
+
+          const gd: Record<number, number> = {};
+          (data.byGrade || []).forEach((r: any) => { gd[r.grade] = r.count; });
+          setGradeDistribution(gd);
+
+          const dd: Record<string, number> = {};
+          (data.byDifficulty || []).forEach((r: any) => { dd[r.difficulty] = r.count; });
+          setDifficultyDistribution(dd);
+
+          const topicArr = (data.byTopic || []).slice(0, 6).map((r: any) => ({ topic: r.topic, count: r.count }));
+          setTopicDistribution(topicArr);
         }
       } catch { /* ignore */ }
     }
@@ -176,15 +158,16 @@ export default function DashboardPage() {
               <h3 className="text-sm font-semibold text-slate-800">Phân bố theo lớp</h3>
             </div>
             <div className="space-y-3">
-              {[6, 7, 8, 9].map(grade => {
-                const count = gradeDistribution[grade] || 0;
+              {Object.entries(gradeDistribution).sort(([a], [b]) => Number(a) - Number(b)).map(([g, count]) => {
+                const grade = Number(g);
                 const pct = maxGrade > 0 ? (count / maxGrade) * 100 : 0;
+                const colors: Record<number, string> = { 4: 'from-pink-400 to-pink-600', 5: 'from-rose-400 to-rose-600', 6: 'from-blue-400 to-blue-600', 7: 'from-indigo-400 to-indigo-600', 8: 'from-emerald-400 to-emerald-600', 9: 'from-amber-400 to-amber-600' };
                 return (
                   <div key={grade} className="flex items-center gap-3">
                     <span className="text-xs font-medium text-slate-500 w-12">Lớp {grade}</span>
                     <div className="flex-1 h-6 bg-slate-100 rounded-full overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-600 transition-all duration-500 flex items-center justify-end pr-2"
+                        className={`h-full rounded-full bg-gradient-to-r ${colors[grade] || 'from-gray-400 to-gray-600'} transition-all duration-500 flex items-center justify-end pr-2`}
                         style={{ width: `${Math.max(pct, 8)}%` }}
                       >
                         <span className="text-xs font-bold text-white">{count}</span>
