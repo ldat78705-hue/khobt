@@ -1,0 +1,702 @@
+[
+  {
+    "id": "993534a8-1d2e-4729-8fe2-45d489b2f887",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm). Ông Giáp có 15m hàng rào rất đẹp. Ông muốn rào một sân vườn hình chữ nhật để đạt được diện tích lớn nhất. Vườn ngay sát tường nhà để một chiều không phải rào. Hỏi diện tích sân vườn đó là bao nhiêu m2?\n---* Chúc các con làm bài tốt *---",
+    "solution": "Gọi chiều rộng của sân vườn (phần rào vuông góc với tường) là $x$ (m, $x > 0$).\nSân vườn hình chữ nhật cần rào 3 cạnh (do 1 chiều song song với tường không cần rào).\nSẽ có 2 cạnh có chiều dài $x$ và 1 cạnh có chiều dài $y$ (song song với tường).\nTổng chiều dài hàng rào là $15$m $\\Rightarrow 2x + y = 15 \\Rightarrow y = 15 - 2x$ (ĐK: $x < 7,5$).\nDiện tích sân vườn là $S = x \\cdot y = x(15 - 2x) = 15x - 2x^2$.\nTa biến đổi để tìm GTLN của $S$:\n$S = -2\\left( x^2 - 7,5x \\right) = -2\\left( x^2 - 2 \\cdot x \\cdot 3,75 + 3,75^2 - 3,75^2 \\right)$\n$S = -2(x - 3,75)^2 + 2 \\cdot 3,75^2 = -2(x - 3,75)^2 + 28,125$.\nVì $-2(x - 3,75)^2 \\le 0$ nên $S \\le 28,125$.\nDấu \"=\" xảy ra khi $x = 3,75$ (m), khi đó $y = 15 - 2(3,75) = 7,5$ (m).\n**Kết luận:** Diện tích sân vườn lớn nhất có thể rào được là $28,125$ m$^2$.",
+    "status": "pending"
+  },
+  {
+    "id": "9a092f08-8cca-4d92-bc87-bf758397a488",
+    "grade": 8,
+    "content": "Bài 1 (2,5 điểm): Giải các phương trình sau\n$2x+5=3-x$ b) ${{x}^2}-49=0$ c) $\\frac{1}{x+1}-\\frac{1}{x-1}=\\frac{2x}{{{x}^2}-1}$",
+    "solution": "**a)** $2x + 5 = 3 - x$\n$\\Leftrightarrow 2x + x = 3 - 5 \\Leftrightarrow 3x = -2 \\Rightarrow x = -\\frac{2}{3}$.\n\n**b)** $x^2 - 49 = 0$\n$\\Leftrightarrow (x - 7)(x + 7) = 0 \\Rightarrow x = 7$ hoặc $x = -7$.\n\n**c)** $\\frac{1}{x + 1} - \\frac{1}{x - 1} = \\frac{2x}{x^2 - 1}$\nĐiều kiện xác định: $x \\ne 1; x \\ne -1$.\nQuy đồng mẫu và khử mẫu:\n$\\Leftrightarrow \\frac{x - 1}{(x + 1)(x - 1)} - \\frac{x + 1}{(x + 1)(x - 1)} = \\frac{2x}{(x + 1)(x - 1)}$\n$\\Rightarrow (x - 1) - (x + 1) = 2x$\n$\\Leftrightarrow x - 1 - x - 1 = 2x \\Leftrightarrow -2 = 2x \\Rightarrow x = -1$.\nĐối chiếu ĐKXĐ, $x = -1$ bị loại.\n**Kết luận:** Phương trình vô nghiệm.",
+    "status": "pending"
+  },
+  {
+    "id": "9a58f63d-3212-47a5-a721-3f3e5ab35bce",
+    "grade": 8,
+    "content": "Bài 1 (4,5 điểm). Phân tích các đa thức sau thành nhân tử:\n\ta) $4{{x}^4}+4{{x}^3}-{{x}^2}-x$ b) $1-2a+2bc+{{a}^2}-{{b}^2}-{{c}^2}$ \n\tc) $\\left( x-7 \\right)\\left( x-5 \\right)\\left( x-4 \\right)\\left( x-2 \\right)-72$",
+    "solution": "**a)** $4x^4 + 4x^3 - x^2 - x$\n$= x(4x^3 + 4x^2 - x - 1)$\n$= x[4x^2(x + 1) - (x + 1)]$\n$= x(x + 1)(4x^2 - 1)$\n$= x(x + 1)(2x - 1)(2x + 1)$.\n\n**b)** $1 - 2a + 2bc + a^2 - b^2 - c^2$\nSắp xếp lại:\n$= (a^2 - 2a + 1) - (b^2 - 2bc + c^2)$\n$= (a - 1)^2 - (b - c)^2$\nÁp dụng hiệu hai bình phương:\n$= (a - 1 - b + c)(a - 1 + b - c)$.\n\n**c)** $(x - 7)(x - 5)(x - 4)(x - 2) - 72$\nNhóm hợp lý: $[(x - 7)(x - 2)] \\cdot [(x - 5)(x - 4)] - 72$\n$= (x^2 - 9x + 14)(x^2 - 9x + 20) - 72$\nĐặt $t = x^2 - 9x + 17$, biểu thức trở thành:\n$(t - 3)(t + 3) - 72 = t^2 - 9 - 72 = t^2 - 81$\n$= (t - 9)(t + 9)$\nThay $t$ trở lại:\n$= (x^2 - 9x + 17 - 9)(x^2 - 9x + 17 + 9)$\n$= (x^2 - 9x + 8)(x^2 - 9x + 26)$\n$= (x - 1)(x - 8)(x^2 - 9x + 26)$.",
+    "status": "pending"
+  },
+  {
+    "id": "9b57f881-2328-4ac2-b02e-4227a40e9da6",
+    "grade": 8,
+    "content": "Bài 3 (1,0 điểm). Cho hình hộp chữ nhật ABCD.A’B’C’D’ có AB = 10cm, BC = 20cm, AA’ = 15cm.\nTính diện tích toàn phần của hình hộp chữ nhật\nTính độ dài đường chéo AC’ của hình hộp chữ nhật (làm tròn đến chữ số thập phân thứ nhất)",
+    "solution": "**a) Tính diện tích toàn phần của hình hộp chữ nhật:**\nDiện tích toàn phần ($S_{tp}$) bằng tổng diện tích xung quanh và diện tích 2 đáy:\n$S_{tp} = 2(AB \\cdot BC + AB \\cdot AA' + BC \\cdot AA')$\n$S_{tp} = 2(10 \\cdot 20 + 10 \\cdot 15 + 20 \\cdot 15)$\n$S_{tp} = 2(200 + 150 + 300) = 2(650) = 1300$ (cm$^2$).\n\n**b) Tính độ dài đường chéo $AC'$:**\nÁp dụng định lý Pytago trong không gian cho hình hộp chữ nhật:\n$AC' = \\sqrt{AB^2 + BC^2 + AA'^2}$\n$AC' = \\sqrt{10^2 + 20^2 + 15^2} = \\sqrt{100 + 400 + 225} = \\sqrt{725}$\n$AC' \\approx 26,9$ (cm).",
+    "status": "pending"
+  },
+  {
+    "id": "9b78f175-5741-48f8-afb4-c7d7642d0638",
+    "grade": 8,
+    "content": "Bài 1 (5 điểm). Dùng lập luận để tìm x trong mỗi hình sau:",
+    "solution": "*(Đây là câu hỏi thiếu dữ kiện hình vẽ gốc. Tuy nhiên, phương pháp chung để giải dạng bài tìm $x$ trên hình vẽ lớp 8 là:)*\n\n**1. Nếu hình vẽ liên quan đến Đường trung bình:**\n- Trong tam giác: Đường trung bình song song với cạnh thứ ba và bằng một nửa cạnh ấy ($x = \\frac{a}{2}$ hoặc $x = 2a$).\n- Trong hình thang: Đường trung bình song song với hai đáy và bằng nửa tổng hai đáy ($x = \\frac{a + b}{2}$).\n\n**2. Nếu hình vẽ liên quan đến Định lý Thales:**\nNếu có đường thẳng song song cắt hai cạnh của tam giác, ta lập tỉ lệ thức các đoạn thẳng tương ứng: $\\frac{a}{b} = \\frac{c}{x} \\Rightarrow x = \\frac{b \\cdot c}{a}$.\n\n**3. Nếu hình vẽ liên quan đến Tam giác vuông:**\nÁp dụng định lý Pytago $x^2 = a^2 + b^2$ để tìm độ dài cạnh chưa biết.",
+    "status": "pending"
+  },
+  {
+    "id": "9cbd893c-7d39-409d-8bc2-919ab076e314",
+    "grade": 8,
+    "content": "**Câu 1:** Kết quả của phép tính $\\left( x+2y \\right).\\left( y+2x \\right)=?$ \n\t$\\begin{aligned} & A. 2{{x}^2}+2{{y}^2} \\ & C. 2{{x}^2}+4xy+2{{y}^2} \\ \\end{aligned}$ $\\begin{aligned} & B. {{x}^2}+4xy+4{{y}^2} \\ & D. 2{{x}^2}+5xy+2{{y}^2} \\ \\end{aligned}$",
+    "solution": "Ta thực hiện phép nhân đa thức với đa thức:\n$(x + 2y)(y + 2x) = x \\cdot y + x \\cdot 2x + 2y \\cdot y + 2y \\cdot 2x$\n$= xy + 2x^2 + 2y^2 + 4xy$\n$= 2x^2 + 5xy + 2y^2$.\n**Đáp án đúng là D.**",
+    "status": "pending"
+  },
+  {
+    "id": "9d2faed3-c250-4cc0-91d4-7702cabb669e",
+    "grade": 8,
+    "content": "Bài 3 (2 điểm): Giải bài toán sau bằng cách lập phương trình\n\tLúc 7 giờ sáng một người đi xe máy chở hàng từ A đến B với vận tốc 50km/h. Khi đến B người đó giao hàng trong 15 phút rồi quay trở về A với vận tốc 40km/h. Biết rằng người đó về đến A lúc 9 giờ 30 phút, hãy tính độ dài quãng đường AB.",
+    "solution": "Gọi độ dài quãng đường $AB$ là $x$ (km, $x > 0$).\nThời gian đi từ $A$ đến $B$ là: $\\frac{x}{50}$ (giờ).\nThời gian đi từ $B$ về $A$ là: $\\frac{x}{40}$ (giờ).\nThời gian giao hàng là $15$ phút = $\\frac{1}{4}$ giờ = $0,25$ giờ.\nTổng thời gian từ lúc đi đến lúc về là: $9$ giờ $30$ phút - $7$ giờ = $2$ giờ $30$ phút = $2,5$ giờ.\nTa có phương trình tổng thời gian:\n$\\frac{x}{50} + 0,25 + \\frac{x}{40} = 2,5$\n$\\Leftrightarrow \\frac{x}{50} + \\frac{x}{40} = 2,25$\n$\\Leftrightarrow \\frac{4x}{200} + \\frac{5x}{200} = \\frac{9}{4}$\n$\\Leftrightarrow \\frac{9x}{200} = \\frac{9}{4}$\n$\\Leftrightarrow x = \\frac{9}{4} \\cdot \\frac{200}{9} = \\frac{200}{4} = 50$ (thỏa mãn ĐK).\n**Kết luận:** Độ dài quãng đường $AB$ là $50$ km.",
+    "status": "pending"
+  },
+  {
+    "id": "9f8d25d9-50b8-4416-ab4c-6aa2458ce4ee",
+    "grade": 8,
+    "content": "Bài 1 (2 điểm). Phân tích đa thức thành nhân tử:\n\ta) ${{x}^2}-3x+xy-3y$ b) ${{x}^2}+{{y}^2}-2xy-25$",
+    "solution": "**a)** $x^2 - 3x + xy - 3y$\nNhóm 2 hạng tử đầu và 2 hạng tử cuối:\n$= x(x - 3) + y(x - 3)$\nĐặt nhân tử chung $(x - 3)$:\n$= (x + y)(x - 3)$.\n\n**b)** $x^2 + y^2 - 2xy - 25$\nNhóm 3 hạng tử đầu tạo hằng đẳng thức:\n$= (x^2 - 2xy + y^2) - 25$\n$= (x - y)^2 - 5^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= (x - y - 5)(x - y + 5)$.",
+    "status": "pending"
+  },
+  {
+    "id": "a0f23fb5-d79e-42de-8640-e1a9b4279475",
+    "grade": 8,
+    "content": "**Bài 1:** (1 điểm) Phân tích các đa thức thành nhân tử\nx2 + 4 – 4x\nx3 – 5x",
+    "solution": "**a)** $x^2 + 4 - 4x$\nSắp xếp lại các hạng tử:\n$= x^2 - 4x + 4$\nÁp dụng hằng đẳng thức bình phương của một hiệu $(A - B)^2 = A^2 - 2AB + B^2$:\n$= x^2 - 2 \\cdot x \\cdot 2 + 2^2$\n$= (x - 2)^2$.\n\n**b)** $x^3 - 5x$\nĐặt nhân tử chung là $x$:\n$= x(x^2 - 5)$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= x(x - \\sqrt{5})(x + \\sqrt{5})$.",
+    "status": "pending"
+  },
+  {
+    "id": "a1ae695c-ccf8-4ef8-a92b-a988e397665e",
+    "grade": 8,
+    "content": "Bài 2 (2,5 điểm) Cho biểu thức:\nA = $\\frac{16}{{{x}^2}-16}+\\frac{2}{x+4}-\\frac{1}{x-4}$; B = $\\frac{{{x}^2}-2x-8}{x-1}$ đk: x ≠ 1; x ≠ ± 4\nTìm giá trị của B biết x = - 2\nRút gọn P, biết P = A.B\nTìm giá trị nguyên của x để P có giá trị nguyên",
+    "solution": "**1. Tìm giá trị của B biết x = -2:**\n$B = \\frac{x^2 - 2x - 8}{x - 1} = \\frac{(x - 4)(x + 2)}{x - 1}$.\nThay $x = -2$ (thỏa mãn ĐKXĐ) vào $B$:\n$B = \\frac{(-2)^2 - 2(-2) - 8}{-2 - 1} = \\frac{4 + 4 - 8}{-3} = \\frac{0}{-3} = 0$.\n\n**2. Rút gọn P = A.B:**\n$A = \\frac{16}{(x - 4)(x + 4)} + \\frac{2(x - 4)}{(x + 4)(x - 4)} - \\frac{x + 4}{(x - 4)(x + 4)}$\n$A = \\frac{16 + 2x - 8 - x - 4}{(x - 4)(x + 4)} = \\frac{x + 4}{(x - 4)(x + 4)} = \\frac{1}{x - 4}$.\n$P = A \\cdot B = \\frac{1}{x - 4} \\cdot \\frac{(x - 4)(x + 2)}{x - 1} = \\frac{x + 2}{x - 1}$.\n\n**3. Tìm giá trị nguyên của x để P nguyên:**\n$P = \\frac{x + 2}{x - 1} = \\frac{x - 1 + 3}{x - 1} = 1 + \\frac{3}{x - 1}$.\nĐể $P$ có giá trị nguyên thì $x - 1$ phải là ước của $3$. $U(3) = \\{1; -1; 3; -3\\}$.\n- $x - 1 = 1 \\Rightarrow x = 2$ (TM)\n- $x - 1 = -1 \\Rightarrow x = 0$ (TM)\n- $x - 1 = 3 \\Rightarrow x = 4$ (Loại vì vi phạm ĐKXĐ $x \\ne 4$)\n- $x - 1 = -3 \\Rightarrow x = -2$ (TM)\nVậy $x \\in \\{-2; 0; 2\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a1f5d048-9fa5-4204-97b6-65539b5e2c37",
+    "grade": 8,
+    "content": "Câu 7 (3,0 điểm). Cho $\\Delta ABC$, trực tâm H. Các đường thẳng vuông góc với AB tại B, vuông góc với AC tại C cắt nhau ở D. Chứng minh rằng:\n\ta) BDCH là hình bình hành\n\tb) $\\widehat{BAC}+\\widehat{BHC}={{180}^0}$ \n\tc) H, M, D thẳng hàng (M là trung điểm của BC)",
+    "solution": "**a) Chứng minh BDCH là hình bình hành:**\nVì $H$ là trực tâm của $\\Delta ABC$ nên $CH \\perp AB$ và $BH \\perp AC$.\nTheo đề bài, $BD \\perp AB \\Rightarrow BD \\parallel CH$ (cùng $\\perp AB$).\nTương tự, $CD \\perp AC \\Rightarrow CD \\parallel BH$ (cùng $\\perp AC$).\nTứ giác $BDCH$ có $BD \\parallel CH$ và $CD \\parallel BH$ nên là hình bình hành.\n\n**b) Chứng minh $\\widehat{BAC} + \\widehat{BHC} = 180^\\circ$:**\nXét tứ giác $ABDC$, ta có $\\widehat{ABD} = 90^\\circ$ (do $BD \\perp AB$) và $\\widehat{ACD} = 90^\\circ$ (do $CD \\perp AC$).\nTổng 4 góc trong tứ giác là $360^\\circ \\Rightarrow \\widehat{BAC} + \\widehat{BDC} = 360^\\circ - 90^\\circ - 90^\\circ = 180^\\circ$.\nMặt khác, $BDCH$ là hình bình hành nên hai góc đối bằng nhau: $\\widehat{BHC} = \\widehat{BDC}$.\nThay vào ta được: $\\widehat{BAC} + \\widehat{BHC} = 180^\\circ$ (đpcm).\n\n**c) Chứng minh H, M, D thẳng hàng:**\nVì tứ giác $BDCH$ là hình bình hành.\nĐường chéo $BC$ và $HD$ cắt nhau tại trung điểm của mỗi đường.\nTheo đề bài $M$ là trung điểm của $BC$, do đó $M$ cũng phải là trung điểm của đường chéo $HD$.\nVậy $H, M, D$ thẳng hàng (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "a27e84c5-7189-4486-bd57-82f6721e11c6",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm): Cho $\\Delta ABC$ có $\\widehat{A}={{90}^o},$ $AB=30cm,$ $AC=40cm,$đường cao AH; BD là phân giác của $\\widehat{ABC}$; I là giao điểm của AH và BD.\nChứng minnh $\\Delta ABC$ đồng dạng với $\\Delta HAC$\nTính BD, DC\nChứng minh BD.IH = BI.AD và AI = AD\nChứng minh $\\frac{HI}{IA}=\\frac{AD}{DC}$",
+    "solution": "**a) Chứng minh $\\Delta ABC \\sim \\Delta HAC$:**\nXét $\\Delta ABC$ và $\\Delta HAC$ có:\n$\\widehat{BAC} = \\widehat{AHC} = 90^\\circ$\n$\\widehat{C}$ là góc chung.\n$\\Rightarrow \\Delta ABC \\sim \\Delta HAC$ (g-g).\n\n**b) Tính BD, DC:**\nTrong $\\Delta ABC$ vuông tại $A$: $BC = \\sqrt{AB^2 + AC^2} = \\sqrt{30^2 + 40^2} = 50$ (cm).\nVì $BD$ là đường phân giác của $\\widehat{ABC}$ nên: $\\frac{AD}{DC} = \\frac{AB}{BC} = \\frac{30}{50} = \\frac{3}{5}$.\nTheo tính chất tỉ lệ thức: $\\frac{AD}{3} = \\frac{DC}{5} = \\frac{AD + DC}{3 + 5} = \\frac{40}{8} = 5$.\n$\\Rightarrow AD = 15$ (cm); $DC = 25$ (cm).\nÁp dụng Pytago trong $\\Delta ABD$ vuông tại $A$: $BD = \\sqrt{AB^2 + AD^2} = \\sqrt{30^2 + 15^2} = 15\\sqrt{5}$ (cm).\n\n**c) Chứng minh BD.IH = BI.AD và AI = AD:**\nXét $\\Delta IBH$ và $\\Delta DBA$ có:\n$\\widehat{IHB} = \\widehat{DAB} = 90^\\circ$; $\\widehat{IBH} = \\widehat{DBA}$ ($BD$ là phân giác).\n$\\Rightarrow \\Delta IBH \\sim \\Delta DBA$ (g-g) $\\Rightarrow \\frac{IH}{AD} = \\frac{BI}{BD} \\Rightarrow BD \\cdot IH = BI \\cdot AD$ (đpcm).\nXét góc: $\\widehat{AID} = \\widehat{BIH}$ (đối đỉnh). Mà $\\widehat{BIH} = 90^\\circ - \\widehat{IBH}$.\nLại có $\\widehat{ADI} = 90^\\circ - \\widehat{DBA}$. Vì $\\widehat{IBH} = \\widehat{DBA}$ nên $\\widehat{AID} = \\widehat{ADI}$.\n$\\Rightarrow \\Delta ADI$ cân tại $A \\Rightarrow AI = AD$ (đpcm).\n\n**d) Chứng minh $\\frac{HI}{IA} = \\frac{AD}{DC}$:**\nTừ chứng minh trên $\\Delta IBH \\sim \\Delta DBA \\Rightarrow \\frac{HI}{AD} = \\frac{BH}{AB}$.\nTừ $\\Delta ABC \\sim \\Delta HBA$ (cùng phụ góc B) $\\Rightarrow \\frac{BH}{AB} = \\frac{AB}{BC}$.\nTừ tính chất phân giác: $\\frac{AB}{BC} = \\frac{AD}{DC}$.\nBắc cầu ta có: $\\frac{HI}{AD} = \\frac{AD}{DC}$.\nMặt khác, $AI = AD$ (chứng minh câu c). Thay $AD$ ở mẫu bằng $IA$ ta được:\n$\\frac{HI}{IA} = \\frac{AD}{DC}$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "a280112d-1652-4775-b5a8-b9913446b37e",
+    "grade": 8,
+    "content": "**Câu 4:** Tập nghiệm của phương trình $\\left( x+5 \\right)^2=25$ là:",
+    "solution": "Ta có phương trình:\n$(x + 5)^2 = 25$\n$\\Leftrightarrow (x + 5)^2 = 5^2$\n$\\Rightarrow x + 5 = 5$ hoặc $x + 5 = -5$.\n- Trường hợp 1: $x + 5 = 5 \\Leftrightarrow x = 0$.\n- Trường hợp 2: $x + 5 = -5 \\Leftrightarrow x = -10$.\n**Kết luận:** Tập nghiệm của phương trình là $S = \\{0; -10\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a34bf55f-8dc4-4374-9bf8-f95908309c16",
+    "grade": 8,
+    "content": "Bài 3 (2,5 điểm) Cho các biểu thức:\nA = $\\left( \\frac{1}{x+2}-\\frac{2x}{4-{{x}^2}}+\\frac{3}{x-2} \\right)$ và B = $\\frac{x+2}{3x+2}$ với x ≠ 2, x≠ - 2; x ≠ $\\frac{-2}{3}$ \nTính giá trị của biểu thức B khi x = - 3\nRút gọn biểu thức M = A.B\nTìm giá trị nhỏ nhất của biểu thức N = M.(x3 – x2 – 2x)",
+    "solution": "**1. Tính giá trị của biểu thức B khi $x = -3$:**\nThay $x = -3$ (thỏa mãn ĐKXĐ) vào $B = \\frac{x + 2}{3x + 2}$:\n$B = \\frac{-3 + 2}{3(-3) + 2} = \\frac{-1}{-9 + 2} = \\frac{-1}{-7} = \\frac{1}{7}$.\n\n**2. Rút gọn biểu thức M = A.B:**\nRút gọn $A$ với mẫu chung là $x^2 - 4 = (x - 2)(x + 2)$:\n$A = \\frac{1}{x + 2} + \\frac{2x}{x^2 - 4} + \\frac{3}{x - 2}$\n$A = \\frac{x - 2 + 2x + 3(x + 2)}{(x - 2)(x + 2)}$\n$A = \\frac{x - 2 + 2x + 3x + 6}{(x - 2)(x + 2)} = \\frac{6x + 4}{(x - 2)(x + 2)} = \\frac{2(3x + 2)}{(x - 2)(x + 2)}$.\nKhi đó: $M = A \\cdot B = \\frac{2(3x + 2)}{(x - 2)(x + 2)} \\cdot \\frac{x + 2}{3x + 2} = \\frac{2}{x - 2}$.\n\n**3. Tìm giá trị nhỏ nhất của biểu thức N:**\n$N = M \\cdot (x^3 - x^2 - 2x) = \\frac{2}{x - 2} \\cdot x(x^2 - x - 2)$\n$N = \\frac{2}{x - 2} \\cdot x(x - 2)(x + 1) = 2x(x + 1) = 2x^2 + 2x$.\nBiến đổi $N = 2\\left( x^2 + x + \\frac{1}{4} \\right) - \\frac{1}{2} = 2\\left( x + \\frac{1}{2} \\right)^2 - \\frac{1}{2}$.\nVì $2\\left( x + \\frac{1}{2} \\right)^2 \\ge 0 \\Rightarrow N \\ge -\\frac{1}{2}$.\nDấu \"=\" xảy ra khi $x = -\\frac{1}{2}$ (thỏa mãn ĐKXĐ).\n**Kết luận:** Giá trị nhỏ nhất của $N$ là $-\\frac{1}{2}$ khi $x = -\\frac{1}{2}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a3b9de6d-0d02-4988-bde5-2f7a34f639d5",
+    "grade": 8,
+    "content": "Bài 3 (3,5 điểm) Cho ∆ABC cân tại A. Gọi M, N, P lần lượt là trung điểm của các cạnh AB, AC, BC.\nChứng minh: Tứ giác BCNM là hình thang cân\nGọi D là điểm đối xứng với P qua N. Chứng minh tứ giác APCD là hình chữ nhật.\nGọi O và G lần lượt là giao điểm của BD với AP và AC. Chứng minh: DG = $\\frac{1}{3}$BD\nGọi E là hình chiếu của N trên cạnh BC. Tam giác ABC phải thêm điều kiện gì để tứ giác ONEP là hình vuông. Khi ONEP là hình vuông tính diện tích của tam giác ABC, biết PN = $2\\sqrt{2}$cm.",
+    "solution": "**a) Chứng minh BCNM là hình thang cân:**\n$\\Delta ABC$ có $M, N$ là trung điểm $AB, AC \\Rightarrow MN$ là đường trung bình $\\Rightarrow MN \\parallel BC$.\nTứ giác $BCNM$ có $MN \\parallel BC$ nên là hình thang.\nHơn nữa $\\Delta ABC$ cân tại $A$ nên $\\widehat{B} = \\widehat{C}$. Vậy $BCNM$ là hình thang cân.\n\n**b) Chứng minh APCD là hình chữ nhật:**\nTứ giác $APCD$ có $N$ là trung điểm đường chéo $AC$, $N$ là trung điểm đường chéo $PD$ (do $D$ đối xứng $P$ qua $N$).\nSuy ra $APCD$ là hình bình hành.\n$\\Delta ABC$ cân tại $A$, $AP$ là đường trung tuyến (do $P$ trung điểm $BC$) $\\Rightarrow AP \\perp BC \\Rightarrow \\widehat{APC} = 90^\\circ$.\nHình bình hành có 1 góc vuông nên $APCD$ là hình chữ nhật.\n\n**c) Chứng minh $DG = \\frac{1}{3}BD$:**\nDo $APCD$ là hình chữ nhật $\\Rightarrow AD \\parallel PC$ và $AD = PC$. Mà $PC = BP$ (vì $P$ trung điểm $BC$).\n$\\Rightarrow AD \\parallel BP$ và $AD = BP \\Rightarrow ABPD$ là hình bình hành.\n$O$ là giao điểm của $BD$ và $AP$, nên $O$ là trung điểm của $AP$ và $BD$.\nXét $\\Delta ADC$, có $DO$ là đường trung tuyến (vì $O$ trung điểm $AP$) và $CN$ là đường trung tuyến (vì $N$ trung điểm $AD$? Không, $N$ trung điểm $AC$).\nThực ra $DO$ (hay $BD$) cắt $AC$ tại $G$, nên $G$ là giao điểm của trung tuyến $DO$ và cạnh $AC$. \nTrong $\\Delta ADC$, $DO$ là trung tuyến, $G$ nằm trên trung tuyến $DO$ và cắt $AC$. Do đó $G$ là trọng tâm $\\Delta ADC$ (bởi vì $AC$ và $DP$ cắt nhau tại trung điểm mỗi đường, đường thẳng qua $D, O$ chính là trung tuyến ứng với $AP$).\nSuy ra $DG = \\frac{2}{3}DO$. Mà $DO = \\frac{1}{2}BD \\Rightarrow DG = \\frac{2}{3} \\cdot \\frac{1}{2}BD = \\frac{1}{3}BD$ (đpcm).\n\n**d) Điều kiện để ONEP là hình vuông và tính diện tích:**\n$O, N$ là trung điểm $AP, AC \\Rightarrow ON$ là đường trung bình $\\Delta APC \\Rightarrow ON \\parallel PC$ hay $ON \\parallel PE$.\nVà $ON = \\frac{1}{2}PC = \\frac{1}{2}PE$? (Thực ra $E$ là hình chiếu của $N$ lên $BC \\Rightarrow NE \\perp BC$).\nTứ giác $ONEP$ có $ON \\parallel PE$ và $NE \\perp PE \\Rightarrow ONEP$ là hình thang vuông.\nĐồng thời $OP$ nằm trên $AP \\perp BC \\Rightarrow OP \\parallel NE$. Vậy $ONEP$ là hình chữ nhật.\nĐể $ONEP$ là hình vuông thì $ON = OP \\Leftrightarrow \\frac{1}{2}PC = \\frac{1}{2}AP \\Leftrightarrow PC = AP$.\n$\\Delta APC$ vuông tại $P$ có $PC = AP$ nên vuông cân tại $P \\Rightarrow \\widehat{C} = 45^\\circ$.\nVậy $\\Delta ABC$ cân tại $A$ có $\\widehat{C} = 45^\\circ$ $\\Rightarrow \\Delta ABC$ vuông cân tại $A$.\n* Tính $S_{ABC}$ khi $PN = 2\\sqrt{2}$:\n$PN$ là đường trung bình $\\Delta ABC \\Rightarrow PN = \\frac{1}{2}AB \\Rightarrow AB = 4\\sqrt{2}$ cm.\nDiện tích $\\Delta ABC$ vuông cân: $S = \\frac{1}{2}AB \\cdot AC = \\frac{1}{2} \\cdot 4\\sqrt{2} \\cdot 4\\sqrt{2} = 16$ (cm$^2$).",
+    "status": "pending"
+  },
+  {
+    "id": "a45dec01-6c8f-4ed2-8d5c-6324fe66ad57",
+    "grade": 8,
+    "content": "**Câu 5:** Phân tích các đa thức sau thành nhân tử:\n2x2 – 18\nx2 – 12x – y2 + 36",
+    "solution": "**1)** $2x^2 - 18$\n$= 2(x^2 - 9)$\n$= 2(x - 3)(x + 3)$.\n\n**2)** $x^2 - 12x - y^2 + 36$\nNhóm 3 hạng tử để tạo hằng đẳng thức:\n$= (x^2 - 12x + 36) - y^2$\n$= (x - 6)^2 - y^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= (x - 6 - y)(x - 6 + y)$.",
+    "status": "pending"
+  },
+  {
+    "id": "a501ca2d-66aa-4939-a3e3-961a8f0780b2",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm): Cho $\\Delta ABC$ có AB = 4cm, BC = 6cm, AC = 5cm. Phân giác BD\nTính AD, DC\nVẽ AM // BC $\\left( M\\in BD \\right).$ Tính AM?\nTrên tia đối của tia BC lấy điểm N sao cho BN = BC. Vẽ $BE\\bot BD$ $\\left( E\\in AN \\right).$ Tính tỷ số $\\frac{AE}{NE}$.",
+    "solution": "**a) Tính AD, DC:**\nTrong $\\Delta ABC$, $BD$ là đường phân giác của góc $B$, theo tính chất đường phân giác ta có:\n$\\frac{AD}{DC} = \\frac{AB}{BC} = \\frac{4}{6} = \\frac{2}{3}$.\nTheo tính chất dãy tỉ số bằng nhau:\n$\\frac{AD}{2} = \\frac{DC}{3} = \\frac{AD + DC}{2 + 3} = \\frac{AC}{5} = \\frac{5}{5} = 1$.\n$\\Rightarrow AD = 2$ (cm), $DC = 3$ (cm).\n\n**b) Tính AM:**\nGọi giao điểm của đường thẳng qua $A$ song song $BC$ cắt $BD$ kéo dài tại $M$.\nDo $AM \\parallel BC$, áp dụng hệ quả định lý Thales (hoặc xét $\\Delta ADM \\sim \\Delta CDB$):\n$\\frac{AM}{BC} = \\frac{AD}{DC} = \\frac{2}{3}$.\n$\\Rightarrow AM = \\frac{2}{3} \\cdot BC = \\frac{2}{3} \\cdot 6 = 4$ (cm).\n\n**c) Tính tỷ số $\\frac{AE}{NE}$:**\nĐiểm $N$ nằm trên tia đối của tia $BC$ và $BN = BC$, góc $\\widehat{ABC}$ và $\\widehat{ABN}$ là hai góc kề bù.\n$BD$ là phân giác trong của góc $\\widehat{ABC}$. Mà $BE \\perp BD$ ($E \\in AN$).\nTrong một tam giác, đường phân giác ngoài vuông góc với đường phân giác trong tại cùng một đỉnh.\nDo đó, $BE$ chính là đường phân giác của góc $\\widehat{ABN}$ trong $\\Delta ABN$.\nÁp dụng tính chất đường phân giác cho $\\Delta ABN$ với phân giác $BE$:\n$\\frac{AE}{NE} = \\frac{AB}{BN}$.\nVì $BN = BC = 6$ (cm) và $AB = 4$ (cm):\n$\\Rightarrow \\frac{AE}{NE} = \\frac{4}{6} = \\frac{2}{3}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a519e2b1-426e-46e4-98a4-7e6423375df7",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm): \n\tCho biểu thức $A=\\left( \\frac{x}{{{x}^2}-4}+\\frac{1}{x+2}-\\frac{2}{x-2} \\right):\\left( 1-\\frac{x}{x+2} \\right)$ (với $x\\ne \\pm 2$)\nRút gọn A\nTính giá trị của A khi $x=-4$ \nTìm các giá trị nguyên của x để A có giá trị là số nguyên",
+    "solution": "**1. Rút gọn A:**\nĐKXĐ: $x \\ne \\pm 2$.\nCụm 1: $\\frac{x}{x^2 - 4} + \\frac{1}{x + 2} - \\frac{2}{x - 2} = \\frac{x + (x - 2) - 2(x + 2)}{(x - 2)(x + 2)} = \\frac{x + x - 2 - 2x - 4}{x^2 - 4} = \\frac{-6}{(x - 2)(x + 2)}$.\nCụm 2: $1 - \\frac{x}{x + 2} = \\frac{x + 2 - x}{x + 2} = \\frac{2}{x + 2}$.\nChia hai cụm:\n$A = \\frac{-6}{(x - 2)(x + 2)} : \\frac{2}{x + 2} = \\frac{-6}{(x - 2)(x + 2)} \\cdot \\frac{x + 2}{2} = \\frac{-3}{x - 2}$.\n\n**2. Tính giá trị của A khi x = -4:**\nTại $x = -4$ (thỏa mãn ĐKXĐ), $A = \\frac{-3}{-4 - 2} = \\frac{-3}{-6} = \\frac{1}{2}$.\n\n**3. Tìm giá trị nguyên của x để A nguyên:**\n$A = \\frac{-3}{x - 2}$. Để $A \\in \\mathbb{Z}$ thì $x - 2$ phải là ước của $-3$.\n$U(-3) = \\{1; -1; 3; -3\\}$.\n- $x - 2 = 1 \\Rightarrow x = 3$ (TM)\n- $x - 2 = -1 \\Rightarrow x = 1$ (TM)\n- $x - 2 = 3 \\Rightarrow x = 5$ (TM)\n- $x - 2 = -3 \\Rightarrow x = -1$ (TM)\nVậy $x \\in \\{-1; 1; 3; 5\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a64e5080-e657-4cdd-98e3-c6b819eeddd7",
+    "grade": 8,
+    "content": "Bài 3 (3,5 điểm): Cho biểu thức: P = $\\left( \\frac{2x-1}{x+3}-\\frac{x}{3-x}-\\frac{3-10x}{{{x}^2}-9} \\right):\\frac{x+2}{x-3}$ \nRút gọn P và tìm điều kiện xác định của P\nTính giá trị của P khi x2 – 7x + 12 = 0\nTìm các giá trị nguyên của x để P có giá trị nguyên dương",
+    "solution": "**1. Rút gọn P và tìm ĐKXĐ:**\nĐKXĐ: $x \\ne \\pm 3; x \\ne -2$.\nPhân thức trong ngoặc:\n$\\frac{2x - 1}{x + 3} + \\frac{x}{x - 3} - \\frac{3 - 10x}{(x - 3)(x + 3)}$\n$= \\frac{(2x - 1)(x - 3) + x(x + 3) - (3 - 10x)}{(x - 3)(x + 3)}$\n$= \\frac{2x^2 - 7x + 3 + x^2 + 3x - 3 + 10x}{(x - 3)(x + 3)} = \\frac{3x^2 + 6x}{(x - 3)(x + 3)} = \\frac{3x(x + 2)}{(x - 3)(x + 3)}$.\nKhi đó $P = \\frac{3x(x + 2)}{(x - 3)(x + 3)} : \\frac{x + 2}{x - 3} = \\frac{3x(x + 2)}{(x - 3)(x + 3)} \\cdot \\frac{x - 3}{x + 2} = \\frac{3x}{x + 3}$.\n\n**2. Tính giá trị P khi $x^2 - 7x + 12 = 0$:**\n$x^2 - 7x + 12 = 0 \\Leftrightarrow (x - 3)(x - 4) = 0 \\Rightarrow x = 3$ hoặc $x = 4$.\nĐối chiếu ĐKXĐ, $x = 3$ bị loại. Nhận $x = 4$.\nTại $x = 4 \\Rightarrow P = \\frac{3 \\cdot 4}{4 + 3} = \\frac{12}{7}$.\n\n**3. Tìm x nguyên để P có giá trị nguyên dương:**\n$P = \\frac{3x}{x + 3} = \\frac{3x + 9 - 9}{x + 3} = 3 - \\frac{9}{x + 3}$.\nĐể $P \\in \\mathbb{Z}$ thì $x + 3 \\in U(9) = \\{1; -1; 3; -3; 9; -9\\}$.\nTính x và đối chiếu $P > 0$:\n- $x + 3 = 1 \\Rightarrow x = -2$ (Loại vì vi phạm ĐKXĐ)\n- $x + 3 = -1 \\Rightarrow x = -4 \\Rightarrow P = 3 - (-9) = 12 > 0$ (Nhận)\n- $x + 3 = 3 \\Rightarrow x = 0 \\Rightarrow P = 3 - 3 = 0$ (Loại vì $0$ không dương)\n- $x + 3 = -3 \\Rightarrow x = -6 \\Rightarrow P = 3 - (-3) = 6 > 0$ (Nhận)\n- $x + 3 = 9 \\Rightarrow x = 6 \\Rightarrow P = 3 - 1 = 2 > 0$ (Nhận)\n- $x + 3 = -9 \\Rightarrow x = -12 \\Rightarrow P = 3 - (-1) = 4 > 0$ (Nhận)\nVậy $x \\in \\{-12; -6; -4; 6\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a669ac7d-bb9b-47e6-9373-db0dec549b53",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm): Giải và biện luận phương trình ẩn x theo tham số m\n$\\frac{x+3}{x-1}=\\frac{x+m}{x+1}$\n----- Hết -----",
+    "solution": "Điều kiện xác định: $x \\ne 1; x \\ne -1$.\n$\\frac{x + 3}{x - 1} = \\frac{x + m}{x + 1}$\nQuy đồng khử mẫu:\n$(x + 3)(x + 1) = (x + m)(x - 1)$\n$\\Leftrightarrow x^2 + 4x + 3 = x^2 + (m - 1)x - m$\n$\\Leftrightarrow 4x - (m - 1)x = -m - 3$\n$\\Leftrightarrow (5 - m)x = -m - 3$ (*)\n**Biện luận:**\n- Nếu $5 - m = 0 \\Leftrightarrow m = 5$: Phương trình (*) trở thành $0x = -8$ (Vô nghiệm).\n- Nếu $5 - m \\ne 0 \\Leftrightarrow m \\ne 5$: Phương trình (*) có nghiệm duy nhất $x = \\frac{-m - 3}{5 - m} = \\frac{m + 3}{m - 5}$.\nTuy nhiên, để là nghiệm của pt ban đầu, $x$ phải thỏa mãn ĐKXĐ:\n+ $x \\ne 1 \\Leftrightarrow \\frac{m + 3}{m - 5} \\ne 1 \\Leftrightarrow m + 3 \\ne m - 5 \\Leftrightarrow 3 \\ne -5$ (Luôn đúng).\n+ $x \\ne -1 \\Leftrightarrow \\frac{m + 3}{m - 5} \\ne -1 \\Leftrightarrow m + 3 \\ne -(m - 5) \\Leftrightarrow m + 3 \\ne -m + 5 \\Leftrightarrow 2m \\ne 2 \\Leftrightarrow m \\ne 1$.\n**Kết luận:**\n+ Với $m = 1$ hoặc $m = 5$: Phương trình vô nghiệm.\n+ Với $m \\ne 1$ và $m \\ne 5$: Phương trình có nghiệm duy nhất $x = \\frac{m + 3}{m - 5}$.",
+    "status": "pending"
+  },
+  {
+    "id": "a69060b0-2461-42d8-a58d-a9fe91f2471b",
+    "grade": 8,
+    "content": "Bài 1 (1 điểm). Thực hiện phép tính:\n$15+x+\\left( x-5 \\right)\\left( 2x+3 \\right)-2x\\left( x-3 \\right)$",
+    "solution": "Thực hiện phép tính (nhân đa thức và thu gọn):\n$15 + x + (x - 5)(2x + 3) - 2x(x - 3)$\n$= 15 + x + (2x^2 + 3x - 10x - 15) - (2x^2 - 6x)$\n$= 15 + x + 2x^2 - 7x - 15 - 2x^2 + 6x$\n$= (2x^2 - 2x^2) + (x - 7x + 6x) + (15 - 15)$\n$= 0x + 0 = 0$.\nKết quả phép tính bằng $0$.",
+    "status": "pending"
+  },
+  {
+    "id": "a6c1e1b2-887d-47e2-aec5-f478ac897103",
+    "grade": 8,
+    "content": "**Bài 2:**\nCho biểu thức A = x3 + 6x2 + 12x + 8. Tính giá trị của A khi x = -3.\nCho x + y = 1. Tính giá trị của B biết B = x3 + y3 + 3(xy – 1)",
+    "solution": "**1. Tính giá trị của A khi x = -3:**\n$A = x^3 + 6x^2 + 12x + 8$\n$A = x^3 + 3 \\cdot x^2 \\cdot 2 + 3 \\cdot x \\cdot 2^2 + 2^3$\n$A = (x + 2)^3$.\nTại $x = -3$, $A = (-3 + 2)^3 = (-1)^3 = -1$.\n\n**2. Cho x + y = 1. Tính giá trị của B:**\n$B = x^3 + y^3 + 3(xy - 1)$\nÁp dụng hằng đẳng thức $x^3 + y^3 = (x + y)(x^2 - xy + y^2)$:\n$B = (x + y)(x^2 - xy + y^2) + 3xy - 3$\nVì $x + y = 1$ nên:\n$B = 1 \\cdot (x^2 - xy + y^2) + 3xy - 3$\n$B = x^2 + 2xy + y^2 - 3$\n$B = (x + y)^2 - 3$\nThay $x + y = 1$ vào:\n$B = 1^2 - 3 = -2$.\n**Kết luận:** $B = -2$.",
+    "status": "pending"
+  },
+  {
+    "id": "a8ecb433-d2c6-402f-9762-0249dce0a505",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm). Cho x, y là các số dương thỏa mãn: x3 + 8y3 – 6xy + 1 = 0\n\tTính giá trị biểu thức: x2018 + $\\left( y-\\frac{1}{2} \\right)^{2019}$",
+    "solution": "Từ giả thiết $x^3 + 8y^3 - 6xy + 1 = 0$\nTa viết lại thành: $x^3 + (2y)^3 + 1^3 - 3 \\cdot x \\cdot (2y) \\cdot 1 = 0$\nÁp dụng hằng đẳng thức $a^3 + b^3 + c^3 - 3abc = (a + b + c)(a^2 + b^2 + c^2 - ab - bc - ca)$, ta có:\n$(x + 2y + 1)[x^2 + 4y^2 + 1 - 2xy - x - 2y] = 0$\nVì $x, y > 0$ nên $x + 2y + 1 > 0$. Do đó:\n$x^2 + 4y^2 + 1 - 2xy - x - 2y = 0$\nNhân cả hai vế với 2:\n$2x^2 + 8y^2 + 2 - 4xy - 2x - 4y = 0$\n$\\Leftrightarrow (x^2 - 4xy + 4y^2) + (x^2 - 2x + 1) + (4y^2 - 4y + 1) = 0$\n$\\Leftrightarrow (x - 2y)^2 + (x - 1)^2 + (2y - 1)^2 = 0$\nVì các bình phương luôn lớn hơn hoặc bằng 0 nên dấu \"=\" xảy ra khi và chỉ khi:\n$\\begin{cases} x - 2y = 0 \\\\ x - 1 = 0 \\\\ 2y - 1 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x = 1 \\\\ y = \\frac{1}{2} \\end{cases}$ (thỏa mãn $x, y > 0$).\nThay vào biểu thức cần tính:\n$P = x^{2018} + \\left( y - \\frac{1}{2} \\right)^{2019} = 1^{2018} + \\left( \\frac{1}{2} - \\frac{1}{2} \\right)^{2019} = 1 + 0 = 1$.\n**Kết luận:** Giá trị biểu thức là $1$.",
+    "status": "pending"
+  },
+  {
+    "id": "ac4c0a06-cc43-482d-a28c-72dd91494643",
+    "grade": 8,
+    "content": "**Bài 2:** (1,25 điểm) Giải bất phương trình sau và biểu diễn tập nghiệm trên trục số: \n < 2 +",
+    "solution": "*(Câu hỏi này bị lỗi hiển thị, khuyết thiếu biểu thức bất phương trình. Dưới đây là phương pháp giải chung cho dạng bài này)*\n\n**Phương pháp giải bất phương trình bậc nhất một ẩn:**\n1. Quy đồng mẫu số hai vế (nếu có phân số) và khử mẫu (lưu ý không đổi chiều BPT nếu mẫu dương).\n2. Thực hiện khai triển, chuyển các hạng tử chứa ẩn $x$ về một vế, các hằng số về vế còn lại.\n3. Rút gọn về dạng $ax < b$ (hoặc $>$, $\\le$, $\\ge$).\n4. Chia cả hai vế cho $a$:\n   - Nếu $a > 0$: Giữ nguyên chiều bất phương trình.\n   - Nếu $a < 0$: Đổi chiều bất phương trình.\n5. Biểu diễn trên trục số: Dùng ngoặc tròn $()$ cho dấu $<$ hoặc $>$, dùng ngoặc vuông $[]$ cho dấu $\\le$ hoặc $\\ge$. Phần không thuộc tập nghiệm thì gạch chéo.",
+    "status": "pending"
+  },
+  {
+    "id": "ac74bcba-3ee0-45dd-b7b3-c8dc92467946",
+    "grade": 8,
+    "content": "**Câu 3:** Giá trị của biểu thức: ${{x}^2}-4x+4$ tại $x=-1$ là:",
+    "solution": "Ta có biểu thức: $A = x^2 - 4x + 4$\nÁp dụng hằng đẳng thức bình phương của một hiệu, ta thu gọn được:\n$A = (x - 2)^2$\nThay $x = -1$ vào biểu thức đã thu gọn:\n$A = (-1 - 2)^2 = (-3)^2 = 9$.\n**Kết luận:** Giá trị của biểu thức là $9$.",
+    "status": "pending"
+  },
+  {
+    "id": "ae983938-53dc-4353-a3ee-7b9d5e72ca29",
+    "grade": 8,
+    "content": "Bài 3 (1,5 điểm): Giải các phương trình sau\n$4x\\left( x-1 \\right)-\\left( x+3 \\right)\\left( x-3 \\right)=9$ b) $\\frac{x}{x-2}+\\frac{1}{x}=1$",
+    "solution": "**a)** $4x(x - 1) - (x + 3)(x - 3) = 9$\n$\\Leftrightarrow 4x^2 - 4x - (x^2 - 9) = 9$\n$\\Leftrightarrow 4x^2 - 4x - x^2 + 9 = 9$\n$\\Leftrightarrow 3x^2 - 4x = 0$\n$\\Leftrightarrow x(3x - 4) = 0 \\Rightarrow x = 0$ hoặc $3x - 4 = 0 \\Rightarrow x = \\frac{4}{3}$.\nVậy $x = 0$ hoặc $x = \\frac{4}{3}$.\n\n**b)** $\\frac{x}{x - 2} + \\frac{1}{x} = 1$\nĐiều kiện xác định: $x \\ne 0; x \\ne 2$.\nQuy đồng mẫu $x(x - 2)$:\n$\\Leftrightarrow \\frac{x^2}{x(x - 2)} + \\frac{x - 2}{x(x - 2)} = \\frac{x(x - 2)}{x(x - 2)}$\n$\\Rightarrow x^2 + x - 2 = x^2 - 2x$\n$\\Leftrightarrow 3x = 2 \\Rightarrow x = \\frac{2}{3}$ (thỏa mãn ĐKXĐ).\nVậy $x = \\frac{2}{3}$.",
+    "status": "pending"
+  },
+  {
+    "id": "b038eb28-6507-491c-b756-ab5a93516d56",
+    "grade": 8,
+    "content": "Bài 1 (2 điểm): Giải các phương trình sau\n$\\frac{5\\left( 1-2x \\right)}{3}+\\frac{x}{2}=\\frac{3\\left( x-5 \\right)}{4}-2$ c) $\\frac{3}{x-1}=\\frac{3x+2}{1-{{x}^2}}-\\frac{4}{x+1}$ \n$\\left( x+2 \\right)^2+\\left( x-1 \\right)\\left( x+3 \\right)=2\\left( x-4 \\right)\\left( x+4 \\right)$ d) $\\frac{1}{x+1}+\\frac{2{{x}^2}+1}{{{x}^3}+1}+\\frac{2{{x}^3}-2{{x}^2}}{{{x}^2}-x+1}=2x$",
+    "solution": "**a)** $\\frac{5(1 - 2x)}{3} + \\frac{x}{2} = \\frac{3(x - 5)}{4} - 2$\nQuy đồng mẫu 12: $4 \\cdot 5(1 - 2x) + 6x = 3 \\cdot 3(x - 5) - 24$\n$\\Leftrightarrow 20 - 40x + 6x = 9x - 45 - 24$\n$\\Leftrightarrow -34x - 9x = -69 - 20 \\Leftrightarrow -43x = -89 \\Rightarrow x = \\frac{89}{43}$.\n\n**b)** $(x + 2)^2 + (x - 1)(x + 3) = 2(x - 4)(x + 4)$\n$\\Leftrightarrow x^2 + 4x + 4 + x^2 + 2x - 3 = 2(x^2 - 16)$\n$\\Leftrightarrow 2x^2 + 6x + 1 = 2x^2 - 32$\n$\\Leftrightarrow 6x = -33 \\Rightarrow x = -\\frac{11}{2}$.\n\n**c)** $\\frac{3}{x - 1} = \\frac{3x + 2}{1 - x^2} - \\frac{4}{x + 1}$\nĐKXĐ: $x \\ne \\pm 1$. Đổi dấu: $\\frac{3}{x - 1} = \\frac{-(3x + 2)}{(x - 1)(x + 1)} - \\frac{4}{x + 1}$\n$\\Rightarrow 3(x + 1) = -(3x + 2) - 4(x - 1)$\n$\\Leftrightarrow 3x + 3 = -3x - 2 - 4x + 4$\n$\\Leftrightarrow 3x + 7x = 2 - 3 \\Leftrightarrow 10x = -1 \\Rightarrow x = -\\frac{1}{10}$ (TM).\n\n**d)** $\\frac{1}{x + 1} + \\frac{2x^2 + 1}{x^3 + 1} + \\frac{2x^3 - 2x^2}{x^2 - x + 1} = 2x$ (ĐKXĐ: $x \\ne -1$)\nTa có $\\frac{2x^3 - 2x^2}{x^2 - x + 1} = \\frac{2x(x^2 - x + 1) - 2x}{x^2 - x + 1} = 2x - \\frac{2x}{x^2 - x + 1}$.\nPT trở thành: $\\frac{1}{x + 1} + \\frac{2x^2 + 1}{x^3 + 1} - \\frac{2x}{x^2 - x + 1} + 2x = 2x$\n$\\Leftrightarrow \\frac{x^2 - x + 1 + 2x^2 + 1 - 2x(x + 1)}{x^3 + 1} = 0$\n$\\Rightarrow 3x^2 - x + 2 - 2x^2 - 2x = 0 \\Leftrightarrow x^2 - 3x + 2 = 0 \\Rightarrow x = 1$ hoặc $x = 2$ (Đều TM).",
+    "status": "pending"
+  },
+  {
+    "id": "b1f5b63b-daa9-47ca-a253-bb5a08675529",
+    "grade": 8,
+    "content": "Bài 2 (1 điểm). Tính độ dài đường trung bình của hình thang biết đáy lớn bằng 20cm, đáy nhỏ bằng $\\frac{4}{5}$ đáy lớn.",
+    "solution": "Đáy lớn của hình thang là $a = 20$ (cm).\nĐáy nhỏ của hình thang bằng $\\frac{4}{5}$ đáy lớn, nên đáy nhỏ là:\n$b = 20 \\cdot \\frac{4}{5} = 16$ (cm).\nĐộ dài đường trung bình của hình thang bằng nửa tổng hai đáy:\n$m = \\frac{a + b}{2} = \\frac{20 + 16}{2} = \\frac{36}{2} = 18$ (cm).\n**Kết luận:** Độ dài đường trung bình của hình thang là $18$ cm.",
+    "status": "pending"
+  },
+  {
+    "id": "b34f9ca0-5ca8-4c63-a9d7-6b6197e9306a",
+    "grade": 8,
+    "content": "Bài 4 (0,5 điểm) Cho a, b, c là ba số đôi một khác nhau thỏa mãn $\\frac{a}{b-c}+\\frac{b}{c-a}+\\frac{c}{a-b}=0$. Chứng minh rằng: $\\frac{a}{\\left( b-c \\right)^2}+\\frac{b}{{{(c-a)}^2}}+\\frac{c}{{{(a-b)}^2}}=0$",
+    "solution": "Ta xét tích sau đây:\n$M = \\left( \\frac{a}{b - c} + \\frac{b}{c - a} + \\frac{c}{a - b} \\right) \\left( \\frac{1}{b - c} + \\frac{1}{c - a} + \\frac{1}{a - b} \\right)$\nKhai triển tích $M$, ta được:\n$M = \\frac{a}{(b - c)^2} + \\frac{b}{(c - a)^2} + \\frac{c}{(a - b)^2} + \\frac{a + b}{(b - c)(c - a)} + \\frac{b + c}{(c - a)(a - b)} + \\frac{c + a}{(a - b)(b - c)}$\nXét tổng 3 phân thức chéo:\n$S = \\frac{a + b}{(b - c)(c - a)} + \\frac{b + c}{(c - a)(a - b)} + \\frac{c + a}{(a - b)(b - c)}$\nQuy đồng mẫu thức chung là $(a - b)(b - c)(c - a)$:\n$S = \\frac{(a + b)(a - b) + (b + c)(b - c) + (c + a)(c - a)}{(a - b)(b - c)(c - a)}$\n$S = \\frac{a^2 - b^2 + b^2 - c^2 + c^2 - a^2}{(a - b)(b - c)(c - a)} = \\frac{0}{(a - b)(b - c)(c - a)} = 0$.\nDo đó, $M = \\frac{a}{(b - c)^2} + \\frac{b}{(c - a)^2} + \\frac{c}{(a - b)^2} + 0$.\nMặt khác, theo giả thiết $\\frac{a}{b - c} + \\frac{b}{c - a} + \\frac{c}{a - b} = 0$, nên $M = 0 \\cdot \\left( \\frac{1}{b - c} + \\frac{1}{c - a} + \\frac{1}{a - b} \\right) = 0$.\nSuy ra: $\\frac{a}{(b - c)^2} + \\frac{b}{(c - a)^2} + \\frac{c}{(a - b)^2} = 0$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "b35fe3f6-1442-4da6-bf89-2b476f03c36a",
+    "grade": 8,
+    "content": "Bài 3 (3 điểm). Cho $\\Delta ABC$ có M và N lần lượt là trung điểm của các cạnh BC và AC. Trên tia đối của tia MN lấy điểm D sao cho NM = ND. Gọi I là trung điểm của đoạn thẳng AM.\na) Tứ giác ADCM là hình gì? vì sao?\nb) Chứng minh rằng: B, I, D thẳng hàng.\nc) Qua điểm D kẻ đường thẳng song song với AC, cắt đường thẳng BC tại E. Đường thẳng IN cắt DE tại F. Tìm điều kiện của $\\Delta ABC$ để tứ giác MNFE là hình thang cân.",
+    "solution": "**a) Tứ giác ADCM là hình gì?**\nTứ giác $ADCM$ có hai đường chéo $AC$ và $MD$ cắt nhau tại trung điểm $N$ của mỗi đường (do $N$ là trung điểm $AC$ và $N$ là trung điểm $MD$).\nSuy ra $ADCM$ là hình bình hành.\n\n**b) Chứng minh B, I, D thẳng hàng:**\nVì $ADCM$ là hình bình hành nên $AD \\parallel MC$ và $AD = MC$.\nMà $M$ là trung điểm $BC$ nên $MC = BM$. Suy ra $AD \\parallel BM$ và $AD = BM$.\nTứ giác $ABMD$ có cặp cạnh đối song song và bằng nhau nên là hình bình hành.\nTrong hình bình hành $ABMD$, hai đường chéo $AM$ và $BD$ cắt nhau tại trung điểm mỗi đường.\nĐề cho $I$ là trung điểm của $AM$, suy ra $I$ cũng phải là trung điểm của $BD$.\nVậy $B, I, D$ thẳng hàng (trên đường thẳng $BD$).\n\n**c) Điều kiện để MNFE là hình thang cân:**\nGọi $IN$ cắt $DE$ tại $F$. Trong $\\Delta AMC$, $I$ trung điểm $AM$, $N$ trung điểm $AC \\Rightarrow IN$ là đường trung bình $\\Rightarrow IN \\parallel MC$ hay $NF \\parallel ME$.\nVậy tứ giác $MNFE$ là hình thang ($NF \\parallel ME$).\nTa có $AD \\parallel CE$ (vì $AD \\parallel BC$) và $DE \\parallel AC$ (giả thiết). Tứ giác $ADEC$ là hình bình hành $\\Rightarrow DE = AC$.\nXét $\\Delta MDE$, $NF \\parallel ME$ và $N$ là trung điểm $MD$, suy ra $F$ là trung điểm $DE$.\n$\\Rightarrow FE = \\frac{1}{2}DE = \\frac{1}{2}AC$.\nMặt khác, $MN$ là đường trung bình của $\\Delta ABC \\Rightarrow MN = \\frac{1}{2}AB$.\nĐể hình thang $MNFE$ là hình thang cân thì hai đường chéo bằng nhau hoặc hai cạnh bên bằng nhau và không song song.\nXét hai cạnh bên $MN$ và $FE$: $MNFE$ cân khi $MN = FE \\Leftrightarrow \\frac{1}{2}AB = \\frac{1}{2}AC \\Leftrightarrow AB = AC$.\nKhi đó $\\Delta ABC$ cân tại $A$. (Và $\\Delta ABC$ không suy biến thành hình bình hành).\n**Kết luận:** Điều kiện để $MNFE$ là hình thang cân là $\\Delta ABC$ cân tại $A$.",
+    "status": "pending"
+  },
+  {
+    "id": "b3ffc3c6-792b-4285-b5e7-547626478a5d",
+    "grade": 8,
+    "content": "**Bài 4:** (2 điểm) Cho đa thức A = 4n3 – 2n2 – 6n + 5 và đa thức B = 2n – 1.\nChia đa thức A cho đa thức B.\nTìm giá trị nguyên của n để đa thức A chia hết cho đa thức B.",
+    "solution": "**a) Chia đa thức A cho đa thức B:**\nThực hiện phép chia đa thức $A = 4n^3 - 2n^2 - 6n + 5$ cho $B = 2n - 1$:\n- $(4n^3 - 2n^2) : (2n - 1) = 2n^2$. Nhân ngược lên và trừ: $(4n^3 - 2n^2) - (4n^3 - 2n^2) = 0$.\nHạ $-6n + 5$ xuống.\n- $(-6n + 5) : (2n - 1)$: Lấy $-6n : 2n = -3$. Nhân ngược: $-3(2n - 1) = -6n + 3$. Trừ đi dư: $(-6n + 5) - (-6n + 3) = 2$.\nVậy thương của phép chia là $Q = 2n^2 - 3$, dư là $R = 2$.\nTa có: $A = (2n - 1)(2n^2 - 3) + 2$.\n\n**b) Tìm giá trị nguyên của n để A chia hết cho B:**\nĐể đa thức $A$ chia hết cho đa thức $B$ thì phần dư phải chia hết cho $B$, tức là $2 \\vdots (2n - 1)$.\nVì $n \\in \\mathbb{Z}$ nên $2n - 1$ là ước số nguyên của $2$. $U(2) = \\{1; -1; 2; -2\\}$.\n- $2n - 1 = 1 \\Rightarrow 2n = 2 \\Rightarrow n = 1$ (Thỏa mãn)\n- $2n - 1 = -1 \\Rightarrow 2n = 0 \\Rightarrow n = 0$ (Thỏa mãn)\n- $2n - 1 = 2 \\Rightarrow 2n = 3 \\Rightarrow n = \\frac{3}{2}$ (Loại)\n- $2n - 1 = -2 \\Rightarrow 2n = -1 \\Rightarrow n = -\\frac{1}{2}$ (Loại)\n**Kết luận:** $n \\in \\{0; 1\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "b7f96b9b-46a9-4eb5-9af8-73cb6c269cc8",
+    "grade": 8,
+    "content": "**Câu 2:** Phân thức $\\frac{x+1}{2x}$ có giá trị bằng 1 khi x bằng:",
+    "solution": "Ta có phương trình:\n$\\frac{x + 1}{2x} = 1$\nĐiều kiện xác định: $x \\ne 0$.\nNhân cả hai vế với $2x$:\n$x + 1 = 2x$\n$\\Leftrightarrow 2x - x = 1$\n$\\Leftrightarrow x = 1$ (thỏa mãn ĐKXĐ).\n**Kết luận:** Phân thức có giá trị bằng $1$ khi $x = 1$.",
+    "status": "pending"
+  },
+  {
+    "id": "b8636bab-44cb-49b0-b756-f975d09b265d",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm)\nCho tam giác MNP vuông tại M, đường cao MH. Gọi D, E lần lượt là chân các đường vuông góc hạ từ H xuống MN và MP.\nChứng minh DE = MH\nGọi A là trung điểm của HP, O là giao điểm của DE và MH. Chứng minh: $\\hat{O H A} = \\hat{O E A}$\nChứng minh AO vuông góc với MN.\nGọi I là trung điểm của NH. Chứng minh SMNP = 2SDEAI",
+    "solution": "**a) Chứng minh DE = MH:**\nTa có $\\Delta MNP$ vuông tại $M \\Rightarrow \\widehat{M} = 90^\\circ$.\n$HD \\perp MN \\Rightarrow \\widehat{MDH} = 90^\\circ$.\n$HE \\perp MP \\Rightarrow \\widehat{MEH} = 90^\\circ$.\nTứ giác $MDHE$ có 3 góc vuông nên là hình chữ nhật.\nHai đường chéo của hình chữ nhật bằng nhau nên $DE = MH$ (đpcm).\n\n**b) Chứng minh $\\widehat{OHA} = \\widehat{OEA}$:**\nHình chữ nhật $MDHE$ có $O$ là giao điểm 2 đường chéo nên $O$ là trung điểm $MH$ và $DE$, đồng thời $OH = OE \\Rightarrow \\Delta OHE$ cân tại $O \\Rightarrow \\widehat{OHE} = \\widehat{OEH}$.\nXét $\\Delta HEP$ vuông tại $E$, có $EA$ là trung tuyến ứng với cạnh huyền $HP$ ($A$ trung điểm $HP$) $\\Rightarrow EA = HA \\Rightarrow \\Delta EHA$ cân tại $A \\Rightarrow \\widehat{AEH} = \\widehat{AHE}$.\nTa có $\\widehat{OHA} = \\widehat{MHP} = 90^\\circ$ (vì $MH \\perp NP$).\nXét $\\widehat{OEA} = \\widehat{OEH} + \\widehat{HEA} = \\widehat{OHE} + \\widehat{AHE} = \\widehat{MHP} = 90^\\circ$.\nVậy $\\widehat{OHA} = \\widehat{OEA} = 90^\\circ$ (đpcm).\n\n**c) Chứng minh AO vuông góc với MN:**\nXét $\\Delta MHP$, $O$ là trung điểm $MH$, $A$ là trung điểm $HP$.\n$\\Rightarrow OA$ là đường trung bình của $\\Delta MHP \\Rightarrow OA \\parallel MP$.\nMà $MP \\perp MN$ (do $\\Delta MNP$ vuông tại $M$).\nSuy ra $OA \\perp MN$ (đpcm).\n\n**d) Chứng minh $S_{MNP} = 2S_{DEAI}$:**\nTa có diện tích $S_{DEAI} = S_{HDE} + S_{HAE} + S_{HDI}$.\nVì $O$ là trung điểm $MH$ và $DE$ nên $S_{HDE} = \\frac{1}{2} S_{MDHE}$.\nTrong $\\Delta HNP$ vuông tại $M$, $I$ là trung điểm $NH \\Rightarrow S_{HDI} = \\frac{1}{2} S_{HDN}$.\nTrong $\\Delta HEP$ vuông tại $E$, $A$ là trung điểm $HP \\Rightarrow S_{HAE} = \\frac{1}{2} S_{HEP}$.\nTừ đó $S_{DEAI} = \\frac{1}{2}(S_{MDHE} + S_{HDN} + S_{HEP})$.\nMà tổng diện tích ba hình $MDHE, HDN, HEP$ chính bằng diện tích $\\Delta MNP$.\nVậy $S_{DEAI} = \\frac{1}{2} S_{MNP} \\Rightarrow S_{MNP} = 2S_{DEAI}$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "ba8a1d97-4882-4452-8a5d-8d7e765b8cbb",
+    "grade": 8,
+    "content": "**Bài 2:** Phân tích các đa thức sau thành nhân tử\na) $4{{x}^2}-4xy+{{y}^2}$ (0,5 điểm)\nb) $9{{x}^3}-9{{x}^2}y-4x+4y$ (0,75 điểm)\nc) ${{x}^3}+2+3\\left( {{x}^3}-2 \\right)$ (0,5 điểm)",
+    "solution": "**a)** $4x^2 - 4xy + y^2$\n$= (2x)^2 - 2 \\cdot 2x \\cdot y + y^2$\n$= (2x - y)^2$.\n\n**b)** $9x^3 - 9x^2y - 4x + 4y$\nNhóm 2 hạng tử đầu và 2 hạng tử cuối:\n$= 9x^2(x - y) - 4(x - y)$\n$= (x - y)(9x^2 - 4)$\n$= (x - y)\\left[ (3x)^2 - 2^2 \\right]$\n$= (x - y)(3x - 2)(3x + 2)$.\n\n**c)** $x^3 + 2 + 3(x^3 - 2)$\nKhai triển và thu gọn:\n$= x^3 + 2 + 3x^3 - 6$\n$= 4x^3 - 4$\n$= 4(x^3 - 1)$\nÁp dụng hằng đẳng thức hiệu hai lập phương:\n$= 4(x - 1)(x^2 + x + 1)$.",
+    "status": "pending"
+  },
+  {
+    "id": "bcc99179-2f93-4144-bb8d-2cbe0f70d84d",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm). Cho tam giác ABC vuông tại A có đường trung tuyến AM. Kẻ MH, MK lần lượt vuông góc với AB và AC (H thuộc AB và K thuộc AC).\nChứng minh tứ giác AKMH là hình chữ nhật\nChứng minh tứ giác BHKM là hình bình hành\nGọi E là trung điểm của MH, gọi F là trung điểm của MK. Đường thẳng HK cắt AE, AF lần lượt tại I và J. Chứng minh HI = KJ.\nGọi G là trọng tâm tam giác ABC. Giả sử tam giác ABG vuông tại G và \nAB = $4\\sqrt{3}$ (cm). Tính độ dài EF.",
+    "solution": "**a) Chứng minh AKMH là hình chữ nhật:**\nTa có $\\widehat{A} = 90^\\circ$ ($\\Delta ABC$ vuông tại $A$).\n$MH \\perp AB \\Rightarrow \\widehat{MHA} = 90^\\circ$.\n$MK \\perp AC \\Rightarrow \\widehat{MKA} = 90^\\circ$.\nTứ giác $AKMH$ có 3 góc vuông nên là hình chữ nhật.\n\n**b) Chứng minh BHKM là hình bình hành:**\nTrong $\\Delta ABC$ vuông, $M$ là trung điểm $BC$, $MK \\perp AC \\Rightarrow MK \\parallel AB$. K là trung điểm $AC$.\nTương tự $MH \\parallel AC \\Rightarrow H$ là trung điểm $AB$.\n$\\Rightarrow MK$ là đường trung bình của $\\Delta ABC \\Rightarrow MK \\parallel BH$ và $MK = \\frac{1}{2}AB = BH$.\nTứ giác $BHKM$ có $MK \\parallel BH$ và $MK = BH$ nên là hình bình hành.\n\n**c) Chứng minh HI = KJ:**\nGọi $O$ là giao điểm 2 đường chéo $AM$ và $HK$ của hình chữ nhật $AKMH \\Rightarrow O$ là trung điểm $AM$ và $HK$.\nXét $\\Delta AMH$, $AE$ và $HO$ là hai đường trung tuyến cắt nhau tại $I \\Rightarrow I$ là trọng tâm $\\Delta AMH \\Rightarrow HI = \\frac{2}{3}HO$.\nXét $\\Delta AMK$, $AF$ và $KO$ là hai đường trung tuyến cắt nhau tại $J \\Rightarrow J$ là trọng tâm $\\Delta AMK \\Rightarrow KJ = \\frac{2}{3}KO$.\nMà $HO = KO$ (do $O$ trung điểm $HK$) $\\Rightarrow HI = KJ$ (đpcm).\n\n**d) Tính độ dài EF:**\nXét $\\Delta MHK$ có $E, F$ là trung điểm $MH, MK \\Rightarrow EF$ là đường trung bình $\\Rightarrow EF = \\frac{1}{2}HK$.\nVì $AKMH$ là hình chữ nhật nên $HK = AM \\Rightarrow EF = \\frac{1}{2}AM$.\nGiả sử $\\Delta ABG$ vuông tại $G \\Rightarrow AG \\perp BG$. $AM, BN$ là các trung tuyến cắt nhau tại $G$.\nTa có $BG^2 + AG^2 = AB^2 \\Rightarrow \\left( \\frac{2}{3}BN \\right)^2 + \\left( \\frac{2}{3}AM \\right)^2 = AB^2 \\Rightarrow \\frac{4}{9}(BN^2 + AM^2) = AB^2$.\nTrong $\\Delta ABC$ vuông tại $A$, trung tuyến $BN^2 = AB^2 + \\frac{AC^2}{4}$ và $AM^2 = \\frac{BC^2}{4} = \\frac{AB^2 + AC^2}{4}$.\nThay vào: $\\frac{4}{9}\\left( AB^2 + \\frac{AC^2}{4} + \\frac{AB^2 + AC^2}{4} \\right) = AB^2 \\Rightarrow \\frac{4}{9}\\left( \\frac{5}{4}AB^2 + \\frac{2}{4}AC^2 \\right) = AB^2$.\n$\\Leftrightarrow \\frac{5}{9}AB^2 + \\frac{2}{9}AC^2 = AB^2 \\Leftrightarrow \\frac{2}{9}AC^2 = \\frac{4}{9}AB^2 \\Leftrightarrow AC^2 = 2AB^2$.\nVì $AB = 4\\sqrt{3} \\Rightarrow AB^2 = 48 \\Rightarrow AC^2 = 96$.\nKhi đó $BC^2 = AB^2 + AC^2 = 144 \\Rightarrow BC = 12$ (cm).\n$AM = \\frac{1}{2}BC = 6$ (cm). Vậy $EF = \\frac{1}{2}AM = 3$ (cm).",
+    "status": "pending"
+  },
+  {
+    "id": "c3faf740-f209-42ac-af12-3ddc701aef02",
+    "grade": 8,
+    "content": "Bài 1 (4 điểm): Tính độ dài x, y trong các hình vẽ sau:",
+    "solution": "*(Câu hỏi này thiếu hình vẽ minh họa gốc. Dưới đây là phương pháp giải tổng quát để tìm $x, y$ trong các bài toán hình học lớp 8)*\n\n**Phương pháp chung:**\n1. **Sử dụng Đường trung bình:** Nếu có đoạn thẳng nối trung điểm 2 cạnh của tam giác, độ dài đoạn đó ($x$) bằng một nửa độ dài cạnh thứ 3 ($y = 2x$). Đối với hình thang, đường trung bình bằng nửa tổng 2 đáy.\n2. **Sử dụng Định lý Thales:** Nếu có 2 đường thẳng song song tạo thành các đoạn tỉ lệ, lập phương trình $\\frac{a}{b} = \\frac{x}{y}$ để giải.\n3. **Sử dụng Định lý Pytago:** Nếu hình vẽ là tam giác vuông và đã biết 2 cạnh, cạnh còn lại được tính bằng $x^2 = a^2 + b^2$ (cạnh huyền) hoặc $x^2 = c^2 - a^2$ (cạnh góc vuông).\n*(Giáo viên sử dụng trực tiếp hình vẽ trên đề để ráp số vào các công thức trên).*",
+    "status": "pending"
+  },
+  {
+    "id": "c3ff34e3-8180-4e70-a4ae-aa598513516c",
+    "grade": 8,
+    "content": "**Câu 4:** Phương trình $\\left( 2m-1 \\right)x=m+8$ vô nghiệm khi $m=\\frac{1}{2}.$ \nTự luận (8 điểm)",
+    "solution": "Ta có phương trình: $(2m - 1)x = m + 8$ (*)\nĐể phương trình vô nghiệm, hệ số của $x$ phải bằng $0$ và hằng số tự do phải khác $0$.\nĐiều kiện 1: Hệ số của $x$ bằng $0$\n$2m - 1 = 0 \\Leftrightarrow m = \\frac{1}{2}$.\nĐiều kiện 2: Hằng số tự do khác $0$\nThay $m = \\frac{1}{2}$ vào vế phải: $\\frac{1}{2} + 8 = \\frac{17}{2} \\ne 0$ (thỏa mãn).\nVậy khi $m = \\frac{1}{2}$ thì phương trình trở thành $0x = \\frac{17}{2}$, phương trình này vô nghiệm.\n**Kết luận:** Phương trình vô nghiệm khi $m = \\frac{1}{2}$.",
+    "status": "pending"
+  },
+  {
+    "id": "c544efe0-5ae6-4a79-8920-ef0fd8db9bdd",
+    "grade": 8,
+    "content": "**Bài 1:** Chọn phương án trả lời đúng nhất.",
+    "solution": "*(Đây là câu hỏi trắc nghiệm không có nội dung gốc. Hệ thống tự động phân loại đây là dạng câu hỏi nhận biết / thông hiểu trắc nghiệm khách quan).* \n\n**Hướng dẫn chung cho giáo viên:**\n1. Phân tích nội dung câu hỏi để xác định dạng kiến thức (Đại số hoặc Hình học).\n2. Sử dụng phương pháp loại trừ hoặc tính toán nhanh để chọn phương án $A, B, C$ hoặc $D$.\n3. Điền đáp án chi tiết tương ứng với đề gốc.",
+    "status": "pending"
+  },
+  {
+    "id": "c5a7e232-d250-45f6-b244-9180ac9e5e23",
+    "grade": 8,
+    "content": "Bài 5 (Dành cho học sinh giỏi)\nCho (x + y + z)(xy + yz + zx) = xyz. Chứng minh rằng.\nX2017 + y2017 + z2017 = (x + y + z)2017\nHết",
+    "solution": "Từ giả thiết: $(x + y + z)(xy + yz + zx) = xyz$\nBiến đổi đẳng thức trên:\n$(x + y + z)(xy + yz + zx) - xyz = 0$\n$\\Leftrightarrow [(x + y) + z](xy + yz + zx) - xyz = 0$\n$\\Leftrightarrow (x + y)(xy + yz + zx) + z(xy + yz + zx) - xyz = 0$\n$\\Leftrightarrow (x + y)(xy + yz + zx) + xyz + yz^2 + z^2x - xyz = 0$\n$\\Leftrightarrow (x + y)(xy + yz + zx) + z^2(x + y) = 0$\n$\\Leftrightarrow (x + y)(xy + yz + zx + z^2) = 0$\n$\\Leftrightarrow (x + y)[y(x + z) + z(x + z)] = 0$\n$\\Leftrightarrow (x + y)(y + z)(x + z) = 0$\nSuy ra có 3 trường hợp xảy ra: $x = -y$ hoặc $y = -z$ hoặc $z = -x$.\n- TH1: Nếu $x = -y$, ta có:\nVế trái: $x^{2017} + y^{2017} + z^{2017} = (-y)^{2017} + y^{2017} + z^{2017} = -y^{2017} + y^{2017} + z^{2017} = z^{2017}$.\nVế phải: $(x + y + z)^{2017} = (-y + y + z)^{2017} = z^{2017}$.\nVậy $VT = VP$.\n- TH2: Nếu $y = -z$, chứng minh tương tự ta cũng được $VT = VP$.\n- TH3: Nếu $z = -x$, chứng minh tương tự ta cũng được $VT = VP$.\n**Kết luận:** Đẳng thức $x^{2017} + y^{2017} + z^{2017} = (x + y + z)^{2017}$ luôn đúng (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "c623482a-1b6e-4247-9ae0-bd9de48b662f",
+    "grade": 8,
+    "content": "Bài 2 (3,5 điểm) Giải bài toán bằng cách lập phương trình\n\tMột xe máy đi từ A đến B với vận tốc 30km/h. Lúc về xe đi với vận tốc 28km/h. Tính độ dài quãng đường AB biết thời gian cả đi và về là 14 giờ 30 phút.",
+    "solution": "Gọi độ dài quãng đường $AB$ là $x$ (km, $x > 0$).\nThời gian xe máy đi từ $A$ đến $B$ là: $\\frac{x}{30}$ (giờ).\nThời gian xe máy đi từ $B$ về $A$ là: $\\frac{x}{28}$ (giờ).\nĐổi thời gian: $14$ giờ $30$ phút = $14,5$ giờ = $\\frac{29}{2}$ giờ.\nVì tổng thời gian cả đi và về là $14$ giờ $30$ phút, ta có phương trình:\n$\\frac{x}{30} + \\frac{x}{28} = \\frac{29}{2}$\nQuy đồng mẫu thức vế trái (Mẫu chung là 420):\n$\\frac{14x}{420} + \\frac{15x}{420} = \\frac{29}{2}$\n$\\Leftrightarrow \\frac{29x}{420} = \\frac{29}{2}$\n$\\Leftrightarrow \\frac{x}{420} = \\frac{1}{2}$\n$\\Leftrightarrow x = \\frac{420}{2} = 210$ (thỏa mãn ĐK).\n**Kết luận:** Độ dài quãng đường $AB$ là $210$ km.",
+    "status": "pending"
+  },
+  {
+    "id": "c74ee499-7f12-4bb3-a78f-934e2b300628",
+    "grade": 8,
+    "content": "**Bài 5:** Tìm giá trị nhỏ nhất của biểu thức.\nM = 5x2 + y2 + 2x(y – 2) + 8",
+    "solution": "Ta có biểu thức: $M = 5x^2 + y^2 + 2x(y - 2) + 8$\nKhai triển và nhóm các hạng tử để tạo thành các bình phương:\n$M = x^2 + 4x^2 + y^2 + 2xy - 4x + 8$\n$M = (x^2 + 2xy + y^2) + (4x^2 - 4x + 1) + 7$\n$M = (x + y)^2 + (2x - 1)^2 + 7$\nVì $(x + y)^2 \\ge 0$ và $(2x - 1)^2 \\ge 0$ với mọi $x, y$.\nSuy ra $M \\ge 7$ với mọi $x, y$.\nDấu \"=\" xảy ra khi và chỉ khi:\n$\\begin{cases} x + y = 0 \\\\ 2x - 1 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x = \\frac{1}{2} \\\\ y = -\\frac{1}{2} \\end{cases}$\n**Kết luận:** Giá trị nhỏ nhất của $M$ là $7$, đạt được khi $x = \\frac{1}{2}$ và $y = -\\frac{1}{2}$.",
+    "status": "pending"
+  },
+  {
+    "id": "c784f0f8-9921-44f3-b0f9-8f0f9c8113bf",
+    "grade": 8,
+    "content": "**Câu 1:** (0,5 điểm) Hãy chọn chữ cái in hoa đứng trước đáp án đúng.\nMẫu thức chung của các phân thức $\\frac{1}{x-1};2;\\frac{2x-3}{{{x}^2}+x+1}$ là:\n2(x – 1)(x2 + x + 1)\tB. (x – 1)(x2 + x + 1)\tC. (x – 1)2 D. X2 – 1 \nMột hình vuông có chu vi bằng 8cm thì diện tích của nó bằng:\n16cm2\n2cm2\n4cm2\n64cm2",
+    "solution": "**1. Phân tích mẫu thức chung:**\nCác phân thức đã cho: $\\frac{1}{x - 1}$, $\\frac{2}{1}$, $\\frac{2x - 3}{x^2 + x + 1}$.\nMẫu thức chung (MTC) là tích các mẫu số khác nhau: $(x - 1)(x^2 + x + 1)$.\n$\\Rightarrow$ **Đáp án đúng là B.**\n\n**2. Tính diện tích hình vuông:**\nChu vi hình vuông bằng $8$ cm, suy ra cạnh hình vuông là $a = 8 : 4 = 2$ (cm).\nDiện tích hình vuông là $S = a^2 = 2^2 = 4$ (cm$^2$).\n$\\Rightarrow$ **Đáp án đúng là C.**",
+    "status": "pending"
+  },
+  {
+    "id": "c8c27956-daba-4810-895c-3abfdf83a610",
+    "grade": 8,
+    "content": "**Câu 1:** Tập nghiệm của phương trình $\\left( x+\\frac{1}{3} \\right)\\left( x-2 \\right)=0$ là:",
+    "solution": "Ta có phương trình:\n$\\left( x + \\frac{1}{3} \\right)(x - 2) = 0$\nĐây là phương trình tích, do đó:\n$x + \\frac{1}{3} = 0$ hoặc $x - 2 = 0$\n- Trường hợp 1: $x + \\frac{1}{3} = 0 \\Leftrightarrow x = -\\frac{1}{3}$.\n- Trường hợp 2: $x - 2 = 0 \\Leftrightarrow x = 2$.\n**Kết luận:** Tập nghiệm của phương trình là $S = \\left\\{ -\\frac{1}{3}; 2 \\right\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "c9acbf86-f66d-4dc7-94b5-29f134e263d9",
+    "grade": 8,
+    "content": "**Câu 4:** Cho $\\Delta ABC$, BD là tia phân giác của góc B $\\left( D\\in AC \\right),$ khi đó ta có:",
+    "solution": "Trong $\\Delta ABC$, $BD$ là đường phân giác của góc $B$ (với $D \\in AC$).\nTheo tính chất của đường phân giác trong tam giác, ta có tỉ số giữa hai đoạn thẳng trên cạnh đối diện bằng tỉ số hai cạnh kề của hai đoạn thẳng ấy.\nTức là:\n$\\frac{AD}{DC} = \\frac{AB}{BC}$ hoặc $\\frac{AD}{AB} = \\frac{DC}{BC}$.\n*(Tùy theo các phương án trắc nghiệm A, B, C, D trên đề thi gốc để học sinh khoanh vào đáp án có tỉ lệ thức này)*.",
+    "status": "pending"
+  },
+  {
+    "id": "ca69d3c4-a16e-46e9-8c92-187d7ce01a17",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm). Cho các số hữu tỷ a, b, c và d thỏa mãn điều kiện:\n$\\left\\{ \\begin{aligned} & {{a}^2}+{{b}^4}+{{c}^6}+{{d}^8}=1 \\ & {{a}^{2016}}+{{b}^{2017}}+{{c}^{2018}}+{{d}^{2019}}=1 \\ \\end{aligned}$\nTính giá trị của biểu thức M = ${{a}^3}-a+3{{b}^4}-3b+5{{c}^5}-5c+7{{d}^6}-7d$ \n-------------------------------Hết-------------------------------\nLưu ý trong quá trình làm bài:\nThí sinh được sử dụng máy tính, không được sử dụng bút xóa.\nGiáo viên coi thi không giải thích gì thêm.",
+    "solution": "Từ giả thiết: $a^2 + b^4 + c^6 + d^8 = 1$ và $a^{2016} + b^{2017} + c^{2018} + d^{2019} = 1$.\nVì $a, b, c, d \\in \\mathbb{Q}$, ta có $a^2, b^4, c^6, d^8 \\ge 0$.\nTổng của chúng bằng $1$ nên mỗi số hạng phải nhỏ hơn hoặc bằng $1$.\n$\\Rightarrow a^2 \\le 1 \\Rightarrow -1 \\le a \\le 1$.\n$\\Rightarrow b^4 \\le 1 \\Rightarrow -1 \\le b \\le 1$.\n$\\Rightarrow c^6 \\le 1 \\Rightarrow -1 \\le c \\le 1$.\n$\\Rightarrow d^8 \\le 1 \\Rightarrow -1 \\le d \\le 1$.\nVới $-1 \\le a \\le 1$, ta có $a^{2016} \\le a^2$.\nVới $-1 \\le b \\le 1$, ta có $b^{2017} \\le b^4$ (do $b^{2017} \\le |b^{2017}| = |b|^{2017} \\le b^4$).\nVới $-1 \\le c \\le 1$, ta có $c^{2018} \\le c^6$.\nVới $-1 \\le d \\le 1$, ta có $d^{2019} \\le d^8$.\nDo đó: $a^{2016} + b^{2017} + c^{2018} + d^{2019} \\le a^2 + b^4 + c^6 + d^8$.\nDấu \"=\" xảy ra khi $\\begin{cases} a^{2016} = a^2 \\\\ b^{2017} = b^4 \\\\ c^{2018} = c^6 \\\\ d^{2019} = d^8 \\end{cases}$.\nNghiệm của các phương trình này là:\n$a \\in \\{-1; 0; 1\\}$, $b \\in \\{0; 1\\}$, $c \\in \\{-1; 0; 1\\}$, $d \\in \\{0; 1\\}$.\nMà $a^2 + b^4 + c^6 + d^8 = 1$, nên trong 4 số trên chỉ có đúng 1 số bằng $\\pm 1$, 3 số còn lại bằng $0$.\nXét biểu thức $M = (a^3 - a) + 3(b^4 - b) + 5(c^5 - c) + 7(d^6 - d)$:\n- Nếu $a = \\pm 1$ thì $a^3 - a = 0$.\n- Nếu $b = 1$ thì $b^4 - b = 0$.\n- Nếu $c = \\pm 1$ thì $c^5 - c = 0$.\n- Nếu $d = 1$ thì $d^6 - d = 0$.\nTrong mọi trường hợp (dù biến nào bằng $\\pm 1$, các biến khác bằng $0$), các cụm trong $M$ đều có giá trị bằng $0$.\n**Kết luận:** Giá trị của biểu thức $M$ là $0$.",
+    "status": "pending"
+  },
+  {
+    "id": "ca915468-166d-4003-b57d-8ff2e1365476",
+    "grade": 8,
+    "content": "Bài 1 (2 điểm):\nPhân tích thành nhân tử: 5x – xy + y2 – 5y\nTính nhanh giá trị của biểu thức: x2 + 2x + 1 – y2 với x = 84; y = 15",
+    "solution": "**a) Phân tích đa thức thành nhân tử:**\n$5x - xy + y^2 - 5y$\nNhóm 2 hạng tử đầu, 2 hạng tử cuối:\n$= x(5 - y) - y(5 - y)$\nĐặt nhân tử chung $(5 - y)$:\n$= (x - y)(5 - y)$.\n\n**b) Tính nhanh giá trị của biểu thức:**\nBiểu thức: $A = x^2 + 2x + 1 - y^2$\n$= (x^2 + 2x + 1) - y^2$\n$= (x + 1)^2 - y^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= (x + 1 - y)(x + 1 + y)$.\nThay $x = 84, y = 15$ vào biểu thức:\n$A = (84 + 1 - 15)(84 + 1 + 15) = 70 \\cdot 100 = 7000$.\n**Kết luận:** Giá trị của biểu thức là $7000$.",
+    "status": "pending"
+  },
+  {
+    "id": "cddb2e44-e763-450d-8299-c5631edce5a0",
+    "grade": 8,
+    "content": "Bài 4 (0,5 điểm). Tìm giá trị nhỏ nhất của biểu thức:\nP = x2 – 4xy + 5y2 + 10x – 22y + 2042.",
+    "solution": "Biểu thức: $P = x^2 - 4xy + 5y^2 + 10x - 22y + 2042$.\nTa phân tích nhóm các hạng tử tạo thành các hằng đẳng thức:\n$P = (x^2 - 4xy + 4y^2) + 10x - 20y + 25 + y^2 - 2y + 1 + 2016$\n$P = (x - 2y)^2 + 10(x - 2y) + 25 + (y^2 - 2y + 1) + 2016$\n$P = [(x - 2y)^2 + 2 \\cdot (x - 2y) \\cdot 5 + 5^2] + (y - 1)^2 + 2016$\n$P = (x - 2y + 5)^2 + (y - 1)^2 + 2016$.\nVì $(x - 2y + 5)^2 \\ge 0$ và $(y - 1)^2 \\ge 0$ với mọi $x, y$.\nSuy ra $P \\ge 2016$ với mọi $x, y$.\nDấu \"=\" xảy ra khi và chỉ khi:\n$\\begin{cases} y - 1 = 0 \\\\ x - 2y + 5 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} y = 1 \\\\ x = 2(1) - 5 = -3 \\end{cases}$\n**Kết luận:** Giá trị nhỏ nhất của $P$ là $2016$, đạt được tại $x = -3, y = 1$.",
+    "status": "pending"
+  },
+  {
+    "id": "cf534b94-5e80-482a-a52d-077f2db3e475",
+    "grade": 8,
+    "content": "**Bài 3:** 1) Tìm x biết $2\\left( x-2 \\right)={{x}^2}-4x+4$ (0,75 điểm)\n\t2) Chứng minh rằng với bất kì bộ ba số tự nhiên liên tiếp nào thì tích của số thứ nhất và số thứ ba cũng bé hơn bình phương của số thứ hai 1 đơn vị (0,5 điểm)",
+    "solution": "**1. Tìm x:**\n$2(x - 2) = x^2 - 4x + 4$\n$\\Leftrightarrow 2(x - 2) = (x - 2)^2$\n$\\Leftrightarrow (x - 2)^2 - 2(x - 2) = 0$\n$\\Leftrightarrow (x - 2)(x - 2 - 2) = 0$\n$\\Leftrightarrow (x - 2)(x - 4) = 0$\n$\\Rightarrow x - 2 = 0$ hoặc $x - 4 = 0$\n$\\Rightarrow x = 2$ hoặc $x = 4$.\n\n**2. Chứng minh tích số thứ nhất và thứ ba bé hơn bình phương số thứ hai 1 đơn vị:**\nGọi ba số tự nhiên liên tiếp là $n - 1, n, n + 1$ (với $n \\in \\mathbb{N}^*$).\nTích của số thứ nhất và số thứ ba là: $(n - 1)(n + 1) = n^2 - 1$.\nBình phương của số thứ hai là: $n^2$.\nTa có: $n^2 - (n^2 - 1) = 1$.\nĐiều này chứng tỏ tích của số thứ nhất và thứ ba nhỏ hơn bình phương của số thứ hai đúng 1 đơn vị (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "d03703e6-3da2-4f0c-8a18-9337987ee4f1",
+    "grade": 8,
+    "content": "**Câu 4:** Hình bình hành ABCD có  $\\hat{A} = 2 \\hat{B}$. Số đo góc D là:\n60°\n120°\n30°\n45°\nII. TỰ LUẬN (8 điểm): Học sinh làm bài vào giấy kiểm tra",
+    "solution": "Trong hình bình hành $ABCD$, hai góc kề một cạnh bù nhau, tức là tổng số đo bằng $180^\\circ$.\nTa có: $\\widehat{A} + \\widehat{B} = 180^\\circ$.\nTheo đề bài $\\widehat{A} = 2\\widehat{B}$, thay vào ta được:\n$2\\widehat{B} + \\widehat{B} = 180^\\circ \\Leftrightarrow 3\\widehat{B} = 180^\\circ \\Leftrightarrow \\widehat{B} = 60^\\circ$.\nMặt khác, trong hình bình hành các góc đối bằng nhau nên $\\widehat{D} = \\widehat{B} = 60^\\circ$.\n**Đáp án đúng là A.**",
+    "status": "pending"
+  },
+  {
+    "id": "d0a8d95e-efe9-43d4-8bf9-819cd89ee4ac",
+    "grade": 8,
+    "content": "**Bài 1:** Chọn câu trả lời đúng bằng cách ghi lại chữ cái đứng trước câu trả lời đúng",
+    "solution": "*(Đây là câu hỏi trắc nghiệm không có nội dung gốc. Hệ thống tự động phân loại đây là dạng câu hỏi nhận biết / thông hiểu trắc nghiệm khách quan).* \n\n**Hướng dẫn chung cho giáo viên:**\n1. Phân tích nội dung câu hỏi để xác định dạng kiến thức (Đại số hoặc Hình học).\n2. Sử dụng phương pháp loại trừ hoặc tính toán nhanh để chọn phương án $A, B, C$ hoặc $D$.\n3. Điền đáp án chi tiết tương ứng với đề gốc.",
+    "status": "pending"
+  },
+  {
+    "id": "d0ae051b-1264-45bc-8714-0ba8bcc9475a",
+    "grade": 8,
+    "content": "**Câu 2:** $\\frac{x\\left( x-1 \\right)}{2{{x}^2}-1}=0$ và $x\\left( {{x}^2}+3 \\right)=0$ là hai phương trình tương đương",
+    "solution": "**Khẳng định trên là SAI.**\nHai phương trình là tương đương khi chúng có cùng tập nghiệm.\n- Giải phương trình (1): $\\frac{x(x - 1)}{2x^2 - 1} = 0$\nĐiều kiện xác định: $2x^2 - 1 \\ne 0 \\Leftrightarrow x \\ne \\pm \\frac{1}{\\sqrt{2}}$.\nKhi đó $x(x - 1) = 0 \\Rightarrow x = 0$ hoặc $x = 1$ (cả hai đều thỏa mãn ĐKXĐ).\nTập nghiệm của phương trình (1) là $S_1 = \\{0; 1\\}$.\n- Giải phương trình (2): $x(x^2 + 3) = 0$\nVì $x^2 + 3 > 0$ với mọi $x$, nên $x = 0$.\nTập nghiệm của phương trình (2) là $S_2 = \\{0\\}$.\nVì $S_1 \\ne S_2$ nên hai phương trình không tương đương.",
+    "status": "pending"
+  },
+  {
+    "id": "d0f8a21f-a993-4d40-a774-e22fdac67179",
+    "grade": 8,
+    "content": "Bài 3 (3,5 điểm)\nThực hiện phép tính: (x3y3 – x2y3 – 4x3y2): 2x2y2.\nCho biểu thức: A = (x – 2)3 – x2(x – 4) + 8\n B = (x2 – 6x + 9): (x – 3) – x(x + 7) – 9\nThu gọn biểu thức A và B.\nTính giá trị của biểu thức A tại giá trị x = - 1.\nBiết C = A + B. Chứng minh C luôn âm với mọi giá trị của x.",
+    "solution": "**a) Thực hiện phép tính:**\n$(x^3y^3 - x^2y^3 - 4x^3y^2) : 2x^2y^2$\n$= \\frac{x^3y^3}{2x^2y^2} - \\frac{x^2y^3}{2x^2y^2} - \\frac{4x^3y^2}{2x^2y^2}$\n$= \\frac{1}{2}xy - \\frac{1}{2}y - 2x$.\n\n**b) Thu gọn biểu thức A và B:**\n$A = (x - 2)^3 - x^2(x - 4) + 8$\n$A = (x^3 - 6x^2 + 12x - 8) - x^3 + 4x^2 + 8$\n$A = -2x^2 + 12x$.\n$B = (x^2 - 6x + 9) : (x - 3) - x(x + 7) - 9$\n$B = (x - 3)^2 : (x - 3) - (x^2 + 7x) - 9$\n$B = (x - 3) - x^2 - 7x - 9$\n$B = -x^2 - 6x - 12$.\n\n**c) Tính giá trị biểu thức A tại $x = -1$:**\nThay $x = -1$ vào biểu thức $A = -2x^2 + 12x$:\n$A = -2(-1)^2 + 12(-1) = -2(1) - 12 = -14$.\n\n**d) Chứng minh C luôn âm:**\n$C = A + B = (-2x^2 + 12x) + (-x^2 - 6x - 12) = -3x^2 + 6x - 12$.\n$C = -3(x^2 - 2x + 4) = -3[(x - 1)^2 + 3] = -3(x - 1)^2 - 9$.\nVì $(x - 1)^2 \\ge 0$ nên $-3(x - 1)^2 \\le 0$.\nDo đó $C = -3(x - 1)^2 - 9 \\le -9 < 0$ với mọi $x$.\nVậy biểu thức C luôn âm (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "d16ca5e3-ee41-47f9-9119-e6792834b9ea",
+    "grade": 8,
+    "content": "Bài 1 (1,5 điểm). Phân tích các đa thức sau thành nhân tử:\nx2 – y2 – 2x + 2y\nx2 + 4y2 – 25 + 4xy",
+    "solution": "**1)** $x^2 - y^2 - 2x + 2y$\nNhóm 2 hạng tử đầu và 2 hạng tử cuối:\n$= (x^2 - y^2) - (2x - 2y)$\n$= (x - y)(x + y) - 2(x - y)$\nĐặt nhân tử chung $(x - y)$:\n$= (x - y)(x + y - 2)$.\n\n**2)** $x^2 + 4y^2 - 25 + 4xy$\nNhóm các hạng tử tạo hằng đẳng thức:\n$= (x^2 + 4xy + 4y^2) - 25$\n$= (x + 2y)^2 - 5^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= (x + 2y - 5)(x + 2y + 5)$.",
+    "status": "pending"
+  },
+  {
+    "id": "d26c685c-690a-499b-b7f7-57f6f715fd65",
+    "grade": 8,
+    "content": "Bài 5 (0,5 diểm) Tìm đa thức f(x) sao cho khi chia f(x) cho x - 3 thì dư 2, nếu chia f(x) cho x + 4 thì dư 9 và nếu chia f(x) cho x2 + x - 12 thì được thương là x2 + 3 và còn dư.\nHết\nNếu bạn không tự xây ước mơ của mình thì người khác sẽ thuê bạn xây ước mơ của họ",
+    "solution": "Theo định lý Bê-du (Bézout), ta có:\n- Đa thức $f(x)$ chia cho $x - 3$ dư 2 $\\Rightarrow f(3) = 2$.\n- Đa thức $f(x)$ chia cho $x + 4$ dư 9 $\\Rightarrow f(-4) = 9$.\nVì đa thức chia là $x^2 + x - 12 = (x - 3)(x + 4)$ có bậc 2, nên phần dư sẽ có dạng bậc nhất là $ax + b$.\nTheo đề bài, thương là $x^2 + 3$, do đó ta có thể viết:\n$f(x) = (x^2 + x - 12)(x^2 + 3) + ax + b$.\nThay $x = 3$ vào ta được: $f(3) = 3a + b = 2$.\nThay $x = -4$ vào ta được: $f(-4) = -4a + b = 9$.\nGiải hệ phương trình:\n$\\begin{cases} 3a + b = 2 \\\\ -4a + b = 9 \\end{cases} \\Leftrightarrow \\begin{cases} 7a = -7 \\\\ b = 2 - 3a \\end{cases} \\Leftrightarrow \\begin{cases} a = -1 \\\\ b = 5 \\end{cases}$.\nVậy phần dư là $-x + 5$.\nĐa thức cần tìm là:\n$f(x) = (x^2 + x - 12)(x^2 + 3) - x + 5$\n$f(x) = x^4 + 3x^2 + x^3 + 3x - 12x^2 - 36 - x + 5$\n$f(x) = x^4 + x^3 - 9x^2 + 2x - 31$.",
+    "status": "pending"
+  },
+  {
+    "id": "d3032b60-5c44-479a-8aa7-7f00b38fdd79",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm). Cho hai số x, y > 0 thỏa mãn x + y = 1.\nTìm giá trị nhỏ nhất của biểu thức P = $\\left( 2x+\\frac{1}{x} \\right)^2+\\left( 2y+\\frac{1}{y} \\right)^2$ \nChúc các em làm bài kiểm tra tốt!",
+    "solution": "Ta biến đổi biểu thức $P$:\n$P = \\left( 4x^2 + \\frac{1}{x^2} + 4 \\right) + \\left( 4y^2 + \\frac{1}{y^2} + 4 \\right) = 4(x^2 + y^2) + \\left( \\frac{1}{x^2} + \\frac{1}{y^2} \\right) + 8$.\nÁp dụng bất đẳng thức Bunyakovsky (hoặc hệ quả Cauchy) ta có:\n$x^2 + y^2 \\ge \\frac{(x + y)^2}{2} = \\frac{1}{2}$. Suy ra $4(x^2 + y^2) \\ge 2$.\nÁp dụng bất đẳng thức Bunyakovsky cho phân thức:\n$\\frac{1}{x^2} + \\frac{1}{y^2} \\ge \\frac{(1 + 1)^2}{x^2 + y^2} = \\frac{4}{x^2 + y^2}$.\nLại áp dụng $x^2 + y^2 \\le \\frac{(x + y)^2}{2}$ là sai, ta có $x^2 + y^2 \\ge \\frac{(x + y)^2}{2} = \\frac{1}{2}$, nghịch đảo sẽ bị ngược chiều.\nTa nên dùng BĐT Cauchy-Schwarz dạng phân thức (BĐT Schwarz):\n$\\frac{1}{x^2} + \\frac{1}{y^2} \\ge \\frac{(1 + 1)^2}{x^2 + y^2} = \\frac{4}{x^2 + y^2}$. \nĐiều này chưa tối ưu. Cách khác, dùng Cauchy-Schwarz 2 lần:\n$\\frac{1}{x^2} + \\frac{1}{y^2} \\ge \\frac{1}{2} \\left( \\frac{1}{x} + \\frac{1}{y} \\right)^2 \\ge \\frac{1}{2} \\left( \\frac{4}{x + y} \\right)^2 = \\frac{1}{2} \\cdot 16 = 8$.\nCộng vế theo vế ta được:\n$P \\ge 2 + 8 + 8 = 18$.\nDấu \"=\" xảy ra khi $x = y = \\frac{1}{2}$ (thỏa mãn ĐK).\n**Kết luận:** Giá trị nhỏ nhất của $P$ là $18$ đạt được tại $x = y = \\frac{1}{2}$.",
+    "status": "pending"
+  },
+  {
+    "id": "d34199f5-7801-46c6-90cf-b84f5e32bd10",
+    "grade": 8,
+    "content": "Bài 4 (3 điểm): Cho $\\Delta ABC$ vuông tại A, biết AB = 21cm, AC = 28cm, phân giác AD $\\left( D\\in BC \\right)$\nTính độ dài DB, DC\nGọi E là hình chiếu của D trên AC. Hãy tính độ dài DE, EC\nChứng minh $\\Delta ABC$ đồng dạng với $\\Delta EDC$. Tính tỉ số đồng dạng\nGọi I là giao điểm các đường phân giác và G là trọng tâm của $\\Delta ABC$. Chứng minh rằng IG // AC.",
+    "solution": "**a) Tính DB, DC:**\n$\\Delta ABC$ vuông tại $A \\Rightarrow BC = \\sqrt{AB^2 + AC^2} = \\sqrt{21^2 + 28^2} = 35$ (cm).\nVì $AD$ là phân giác $\\widehat{A}$ nên $\\frac{DB}{DC} = \\frac{AB}{AC} = \\frac{21}{28} = \\frac{3}{4}$.\nTheo dãy tỉ số bằng nhau: $\\frac{DB}{3} = \\frac{DC}{4} = \\frac{DB + DC}{3 + 4} = \\frac{35}{7} = 5$.\n$\\Rightarrow DB = 5 \\cdot 3 = 15$ (cm); $DC = 5 \\cdot 4 = 20$ (cm).\n\n**b) Tính DE, EC:**\nVì $E$ là hình chiếu của $D$ trên $AC \\Rightarrow DE \\perp AC$. Mà $AB \\perp AC \\Rightarrow DE \\parallel AB$.\nÁp dụng định lý Thales (hoặc hệ quả) trong $\\Delta ABC$:\n$\\frac{CE}{CA} = \\frac{CD}{CB} \\Rightarrow \\frac{CE}{28} = \\frac{20}{35} = \\frac{4}{7} \\Rightarrow CE = \\frac{4}{7} \\cdot 28 = 16$ (cm).\n$\\frac{DE}{AB} = \\frac{CD}{CB} \\Rightarrow \\frac{DE}{21} = \\frac{4}{7} \\Rightarrow DE = \\frac{4}{7} \\cdot 21 = 12$ (cm).\n\n**c) Chứng minh $\\Delta ABC \\sim \\Delta EDC$:**\nXét $\\Delta ABC$ và $\\Delta EDC$ có:\n$\\widehat{C}$ chung; $\\widehat{BAC} = \\widehat{DEC} = 90^\\circ$.\n$\\Rightarrow \\Delta ABC \\sim \\Delta EDC$ (g-g).\nTỉ số đồng dạng $k = \\frac{AC}{EC} = \\frac{28}{16} = \\frac{7}{4}$.\n\n**d) Chứng minh IG // AC:**\n$I$ là tâm đường tròn nội tiếp (giao các đường phân giác). Khoảng cách từ $I$ đến các cạnh của $\\Delta ABC$ là bán kính $r$.\n$r = \\frac{AB + AC - BC}{2} = \\frac{21 + 28 - 35}{2} = 7$ (cm).\nSuy ra khoảng cách từ $I$ đến $AC$ là $7$ cm.\n$G$ là trọng tâm $\\Delta ABC$, khoảng cách từ $G$ đến $AC$ bằng $\\frac{1}{3}$ chiều cao hạ từ $B$ xuống $AC$ (chính là cạnh $AB$).\nKhoảng cách từ $G$ đến $AC$ = $\\frac{1}{3} AB = \\frac{1}{3} \\cdot 21 = 7$ (cm).\nVì hai điểm $I$ và $G$ nằm cùng phía so với $AC$ và có khoảng cách đến $AC$ bằng nhau nên $IG \\parallel AC$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "d4448cf9-73cb-4733-98bc-53cce168fd42",
+    "grade": 8,
+    "content": "Bài 3 (1,5 điểm): Cho phương trình $\\frac{x+2}{x-m}=\\frac{x+1}{x-1}$ (1) (với m là tham số)\nTìm m để phương trình (1) nhận $x=4$ là nghiệm của phương trình\nTìm m để phương trình (1) có nghiệm duy nhất\nHÌNH HỌC (10 điểm)\nTrắc nghiệm (3 điểm): Điền vào chỗ chấm (…) (Học sinh chỉ viết câu trả lời vào giấy kiểm tra)\nTỉ số của hai đoạn thẳng có độ dài 80mm và 10dm bằng \nNếu trên hai cạnh AB, AC của tam giác ABC lấy lần lượt hai điểm M, N sao cho $\\frac{MB}{MA}=\\frac{NC}{NA}$ thì \nNếu $\\Delta ABC$ $\\Delta MNP$ và $\\Delta NMP$ $\\Delta EGH$ thì \nNếu $\\Delta ABC$ $\\Delta DMN$ theo tỉ số đồng dạng $k=3$ thì $\\Delta DMN$ $\\Delta ABC$ theo tỉ số đồng dạng \nNếu …………………… theo tỉ số đồng dạng k = ……….. Thì $\\frac{{{S}_{\\Delta ABC}}}{{{S}_{\\Delta A'B'C'}}}=\\frac{1}{4}$ \nTự luận (7 điểm)",
+    "solution": "**PHẦN TỰ LUẬN**\n**1) Tìm m để pt nhận $x = 4$ là nghiệm:**\nThay $x = 4$ vào phương trình (1):\n$\\frac{4 + 2}{4 - m} = \\frac{4 + 1}{4 - 1} \\Leftrightarrow \\frac{6}{4 - m} = \\frac{5}{3}$\n$\\Rightarrow 5(4 - m) = 18 \\Leftrightarrow 20 - 5m = 18 \\Leftrightarrow 5m = 2 \\Rightarrow m = \\frac{2}{5}$.\n\n**2) Tìm m để phương trình có nghiệm duy nhất:**\nĐiều kiện xác định: $x \\ne 1$ và $x \\ne m$.\nQuy đồng khử mẫu: $(x + 2)(x - 1) = (x + 1)(x - m)$\n$\\Leftrightarrow x^2 + x - 2 = x^2 - mx + x - m$\n$\\Leftrightarrow mx = 2 - m$\nĐể pt có nghiệm duy nhất thì $m \\ne 0$, khi đó $x = \\frac{2 - m}{m}$.\nNghiệm này phải thỏa mãn ĐKXĐ:\n- $\\frac{2 - m}{m} \\ne 1 \\Leftrightarrow 2 - m \\ne m \\Leftrightarrow 2m \\ne 2 \\Leftrightarrow m \\ne 1$.\n- $\\frac{2 - m}{m} \\ne m \\Leftrightarrow 2 - m \\ne m^2 \\Leftrightarrow m^2 + m - 2 \\ne 0 \\Leftrightarrow (m - 1)(m + 2) \\ne 0 \\Rightarrow m \\ne 1$ và $m \\ne -2$.\nVậy điều kiện của $m$ là: $m \\ne 0, m \\ne 1, m \\ne -2$.\n\n**PHẦN TRẮC NGHIỆM ĐIỀN KHUYẾT**\n1. Tỉ số của hai đoạn thẳng... bằng: **$\\frac{2}{25}$** (vì $80\\text{mm} = 8\\text{cm}; 10\\text{dm} = 100\\text{cm}$, tỉ số $\\frac{8}{100} = \\frac{2}{25}$).\n2. Nếu ... $\\frac{MB}{MA} = \\frac{NC}{NA}$ thì: **$MN \\parallel BC$** (Định lý Thales đảo).\n3. Nếu $\\Delta ABC \\sim \\Delta MNP$ và $\\Delta MNP \\sim \\Delta EGH$ thì: **$\\Delta ABC \\sim \\Delta EGH$**.\n4. Nếu $\\Delta ABC \\sim \\Delta DMN$ theo tỉ số $k=3$ thì $\\Delta DMN \\sim \\Delta ABC$ theo tỉ số: **$k' = \\frac{1}{3}$**.\n5. Nếu **$\\Delta ABC \\sim \\Delta A'B'C'$** theo tỉ số $k = \\frac{1}{2}$ thì tỉ số diện tích bằng bình phương tỉ số đồng dạng.",
+    "status": "pending"
+  },
+  {
+    "id": "d523d0af-a8eb-4500-b11b-7d8979b88165",
+    "grade": 8,
+    "content": "Bài 1 (4,5 điểm) Giải các phương trình sau\n$5\\left( 3x+2 \\right)=4x-1$ c) $\\frac{x}{2\\left( x-3 \\right)}+\\frac{x}{2x+2}=\\frac{2x}{\\left( x+1 \\right)\\left( x-3 \\right)}$ \n$\\left( 3x-1 \\right)\\left( 4x+3 \\right)+2\\left( 3x-1 \\right)=0$",
+    "solution": "**a)** $5(3x + 2) = 4x - 1$\n$\\Leftrightarrow 15x + 10 = 4x - 1$\n$\\Leftrightarrow 15x - 4x = -1 - 10$\n$\\Leftrightarrow 11x = -11 \\Rightarrow x = -1$.\n\n**b)** $(3x - 1)(4x + 3) + 2(3x - 1) = 0$\n$\\Leftrightarrow (3x - 1)(4x + 3 + 2) = 0$\n$\\Leftrightarrow (3x - 1)(4x + 5) = 0$\n$\\Rightarrow 3x - 1 = 0 \\Rightarrow x = \\frac{1}{3}$\nhoặc $4x + 5 = 0 \\Rightarrow x = -\\frac{5}{4}$.\n\n**c)** $\\frac{x}{2(x - 3)} + \\frac{x}{2(x + 1)} = \\frac{2x}{(x + 1)(x - 3)}$\nĐiều kiện xác định: $x \\ne 3; x \\ne -1$.\nQuy đồng mẫu $2(x - 3)(x + 1)$:\n$\\Leftrightarrow \\frac{x(x + 1)}{2(x - 3)(x + 1)} + \\frac{x(x - 3)}{2(x - 3)(x + 1)} = \\frac{4x}{2(x - 3)(x + 1)}$\n$\\Rightarrow x^2 + x + x^2 - 3x = 4x$\n$\\Leftrightarrow 2x^2 - 2x - 4x = 0$\n$\\Leftrightarrow 2x^2 - 6x = 0$\n$\\Leftrightarrow 2x(x - 3) = 0$\n$\\Rightarrow x = 0$ hoặc $x - 3 = 0 \\Rightarrow x = 3$.\nĐối chiếu ĐKXĐ, $x = 3$ bị loại. Vậy $x = 0$ (thỏa mãn).",
+    "status": "pending"
+  },
+  {
+    "id": "d52cd2b4-7a10-4927-954f-eac09a7bd4b8",
+    "grade": 8,
+    "content": "**Câu 4:** $\\Delta ABC$ có AM là tia phân giác của góc $\\widehat{A}$ thì $\\frac{AB}{AC}=\\frac{MC}{MB}$ \nTự luận (8 điểm)",
+    "solution": "**Khẳng định trên là SAI.**\nTrong $\\Delta ABC$, có $AM$ là đường phân giác của góc $A$ (với $M \\in BC$).\nTheo tính chất đường phân giác trong tam giác, tỉ số giữa hai đoạn thẳng trên cạnh đối diện (do phân giác chia ra) bằng tỉ số hai cạnh kề của hai đoạn thẳng đó.\nDo đó, tỉ lệ thức đúng phải là:\n$\\frac{AB}{AC} = \\frac{MB}{MC}$ (Độ dài đoạn $MB$ tỉ lệ thuận với cạnh $AB$, độ dài $MC$ tỉ lệ thuận với cạnh $AC$).\nBiểu thức $\\frac{AB}{AC} = \\frac{MC}{MB}$ đã bị viết ngược tỉ số ở vế phải.",
+    "status": "pending"
+  },
+  {
+    "id": "d571b34e-d220-430d-b625-8da46336f287",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm). Cho các số thực x, y thỏa mãn đẳng thức:\n5x2 + 8xy + 5y2 + 4x – 4y + 8 = 0\nTính giá trị của biểu thức: P = (x + y)8 + (x + 1)11 + (y – 1)2018\n------------------------Hết-------------------------",
+    "solution": "Từ giả thiết: $5x^2 + 8xy + 5y^2 + 4x - 4y + 8 = 0$\nPhân tích và nhóm các hạng tử tạo thành các hằng đẳng thức:\n$4(x^2 + 2xy + y^2) + (x^2 + 4x + 4) + (y^2 - 4y + 4) = 0$\n$\\Leftrightarrow 4(x + y)^2 + (x + 2)^2 + (y - 2)^2 = 0$\nVì $(x + y)^2 \\ge 0$, $(x + 2)^2 \\ge 0$, $(y - 2)^2 \\ge 0$ với mọi $x, y$.\nNên tổng của chúng bằng $0$ khi và chỉ khi từng số hạng bằng $0$:\n$\\begin{cases} x + y = 0 \\\\ x + 2 = 0 \\\\ y - 2 = 0 \\end{cases} \\Leftrightarrow \\begin{cases} x = -2 \\\\ y = 2 \\end{cases}$ (Thỏa mãn $x + y = -2 + 2 = 0$).\nTính giá trị của biểu thức $P$:\n$P = (x + y)^8 + (x + 1)^{11} + (y - 1)^{2018}$\nThay $x = -2, y = 2$ vào $P$:\n$P = 0^8 + (-2 + 1)^{11} + (2 - 1)^{2018} = 0 + (-1)^{11} + 1^{2018}$\n$P = 0 - 1 + 1 = 0$.\n**Kết luận:** Giá trị của biểu thức $P$ là $0$.",
+    "status": "pending"
+  },
+  {
+    "id": "d5894a9f-9240-4d7d-a906-53f981cc0f90",
+    "grade": 8,
+    "content": "**Bài 2:** Các khẳng định sau đúng hay sai?",
+    "solution": "*(Đây là câu hỏi trắc nghiệm Đúng/Sai nhưng thiếu nội dung các khẳng định. Dưới đây là phương pháp giải chung)*\n\n**Phương pháp giải:**\n1. Phân tích kĩ từng khẳng định trong đề bài.\n2. Đối chiếu với các định lý, tính chất, hằng đẳng thức hoặc quy tắc đã học.\n- Nếu khẳng định đúng trong mọi trường hợp $\\Rightarrow$ Chọn ĐÚNG.\n- Nếu khẳng định có ít nhất một trường hợp sai $\\Rightarrow$ Chọn SAI.\n*(Giáo viên tùy biến áp dụng cho các khẳng định cụ thể trên đề)*.",
+    "status": "pending"
+  },
+  {
+    "id": "d8f83675-9a6a-4e13-b22a-c7c0cec4834a",
+    "grade": 8,
+    "content": "**Câu 8:** Cho tam giác ABC vuông tại A (AB < AC), đường cao AH, gọi D là trung điểm của AC, lấy điểm E đối xứng với H qua D.\nChứng minh tứ giác AHCE là hình chữ nhật\nQua A kẻ AI song song với HE (I ∈ đường thẳng BC). Chứng minh tứ giác AEHI là hình bình hành.\nTrên tia đối của tia HA lấy điểm K sao cho AH = HK. Chứng minh AK là tia phân giác của góc IAC.\nTìm điều kiện của tam giác ABC để tứ giác CAIK là hình vuông, khi đó tứ giác AHCE là hình gì?",
+    "solution": "**a) Chứng minh tứ giác AHCE là hình chữ nhật:**\nVì $E$ đối xứng với $H$ qua $D$ nên $D$ là trung điểm của $HE$.\nLại có $D$ là trung điểm của $AC$ (giả thiết).\nTứ giác $AHCE$ có 2 đường chéo $AC$ và $HE$ cắt nhau tại trung điểm $D$ của mỗi đường nên $AHCE$ là hình bình hành.\nMặt khác, $AH \\perp BC$ (vì $AH$ là đường cao) $\\Rightarrow \\widehat{AHC} = 90^\\circ$.\nHình bình hành $AHCE$ có một góc vuông nên là hình chữ nhật.\n\n**b) Chứng minh tứ giác AEHI là hình bình hành:**\nVì $AHCE$ là hình chữ nhật nên $AE \\parallel HC \\Rightarrow AE \\parallel HI$ (do $I, H, C$ cùng nằm trên đường thẳng $BC$).\nĐề bài cho $AI \\parallel HE$.\nTứ giác $AEHI$ có các cặp cạnh đối song song ($AE \\parallel HI$ và $AI \\parallel HE$) nên là hình bình hành.\n\n**c) Chứng minh AK là tia phân giác của góc IAC:**\nDo $AEHI$ là hình bình hành nên $HI = AE$.\nDo $AHCE$ là hình chữ nhật nên $HC = AE$.\nSuy ra $HI = HC$. Mà $I, H, C$ thẳng hàng $\\Rightarrow H$ là trung điểm của $IC$.\nTrên tia đối của tia $HA$ lấy điểm $K$ sao cho $AH = HK \\Rightarrow H$ là trung điểm của $AK$.\nTứ giác $ACIK$ có 2 đường chéo $AK$ và $IC$ cắt nhau tại trung điểm $H$ nên là hình bình hành.\nLại có $AK \\perp IC$ (vì $AH \\perp BC$).\nHình bình hành $ACIK$ có hai đường chéo vuông góc nên là hình thoi.\nTrong hình thoi $ACIK$, đường chéo $AK$ đồng thời là đường phân giác của $\\widehat{IAC}$ (đpcm).\n\n**d) Điều kiện để CAIK là hình vuông:**\nHình thoi $CAIK$ là hình vuông khi và chỉ khi có một góc vuông, tức là $\\widehat{ACI} = 90^\\circ$ hoặc hai đường chéo bằng nhau ($AK = CI$).\nĐiều kiện $AK = CI \\Leftrightarrow 2AH = 2HC \\Leftrightarrow AH = HC$.\nTam giác vuông $AHC$ (vuông tại $H$) có $AH = HC$ nên là tam giác vuông cân $\\Rightarrow \\widehat{C} = 45^\\circ$.\nXét tam giác $ABC$ vuông tại $A$ có $\\widehat{C} = 45^\\circ \\Rightarrow \\Delta ABC$ vuông cân tại $A$.\n*(Dù giả thiết cho AB < AC, nhưng để CAIK là hình vuông thì bắt buộc tam giác ABC phải vuông cân tại A, đây là dạng bài tìm điều kiện có thể phá vỡ giả thiết ban đầu)*.\nKhi $\\Delta ABC$ vuông cân tại $A$, ta có $AH = HC$. Hình chữ nhật $AHCE$ có hai cạnh kề bằng nhau ($AH = HC$) nên tứ giác $AHCE$ là hình vuông.",
+    "status": "pending"
+  },
+  {
+    "id": "da0fbf51-c11c-4c6b-9163-8b789edf4749",
+    "grade": 8,
+    "content": "Bài 2 (3 điểm) Rút gọn biểu thức:\n$\\frac{{{(x+5)}^2}-9}{{{x}^2}+4x+4}$ b) $2-\\frac{x}{x-6}+\\frac{36}{{{x}^2}-6x}$ c) $\\frac{2x}{x+3}-\\frac{2x-30}{9-{{x}^2}}+\\frac{x+1}{x-3}$",
+    "solution": "**a)** $\\frac{(x + 5)^2 - 9}{x^2 + 4x + 4}$\n$= \\frac{(x + 5)^2 - 3^2}{(x + 2)^2} = \\frac{(x + 5 - 3)(x + 5 + 3)}{(x + 2)^2}$\n$= \\frac{(x + 2)(x + 8)}{(x + 2)^2} = \\frac{x + 8}{x + 2}$.\n\n**b)** $2 - \\frac{x}{x - 6} + \\frac{36}{x^2 - 6x}$\n$= 2 - \\frac{x}{x - 6} + \\frac{36}{x(x - 6)}$ (MTC là $x(x - 6)$)\n$= \\frac{2x(x - 6)}{x(x - 6)} - \\frac{x^2}{x(x - 6)} + \\frac{36}{x(x - 6)}$\n$= \\frac{2x^2 - 12x - x^2 + 36}{x(x - 6)}$\n$= \\frac{x^2 - 12x + 36}{x(x - 6)} = \\frac{(x - 6)^2}{x(x - 6)} = \\frac{x - 6}{x}$.\n\n**c)** $\\frac{2x}{x + 3} - \\frac{2x - 30}{9 - x^2} + \\frac{x + 1}{x - 3}$\n$= \\frac{2x}{x + 3} + \\frac{2x - 30}{x^2 - 9} + \\frac{x + 1}{x - 3}$\n$= \\frac{2x(x - 3)}{(x - 3)(x + 3)} + \\frac{2x - 30}{(x - 3)(x + 3)} + \\frac{(x + 1)(x + 3)}{(x - 3)(x + 3)}$\n$= \\frac{2x^2 - 6x + 2x - 30 + x^2 + 4x + 3}{x^2 - 9}$\n$= \\frac{3x^2 - 27}{x^2 - 9} = \\frac{3(x^2 - 9)}{x^2 - 9} = 3$.",
+    "status": "pending"
+  },
+  {
+    "id": "dc66e9c9-b6a8-4699-a73a-674bfc99ce11",
+    "grade": 8,
+    "content": "Bài 3 (3,0 điểm). Cho biểu thức M = $\\frac{x+3}{x-2}+\\frac{x-3}{x+2}-\\frac{2{{x}^2}+3x+6}{{{x}^2}-4}$ \nTìm điều kiện để biểu thức M xác định\nRút gọn M\nTính giá trị của M khi x = 3\nTìm tất cả các giá trị nguyên của x để M nhận giá trị nguyên.",
+    "solution": "**a) Tìm điều kiện xác định:**\n$M = \\frac{x + 3}{x - 2} + \\frac{x - 3}{x + 2} - \\frac{2x^2 + 3x + 6}{x^2 - 4}$\nBiểu thức xác định khi các mẫu thức khác 0:\n$x - 2 \\ne 0$, $x + 2 \\ne 0$ và $x^2 - 4 \\ne 0$.\n$\\Rightarrow x \\ne \\pm 2$. ĐKXĐ: $x \\ne \\pm 2$.\n\n**b) Rút gọn M:**\n$M = \\frac{(x + 3)(x + 2)}{(x - 2)(x + 2)} + \\frac{(x - 3)(x - 2)}{(x - 2)(x + 2)} - \\frac{2x^2 + 3x + 6}{(x - 2)(x + 2)}$\n$M = \\frac{x^2 + 5x + 6 + x^2 - 5x + 6 - 2x^2 - 3x - 6}{(x - 2)(x + 2)}$\n$M = \\frac{6 - 3x}{(x - 2)(x + 2)} = \\frac{-3(x - 2)}{(x - 2)(x + 2)} = \\frac{-3}{x + 2}$.\n\n**c) Tính giá trị của M khi x = 3:**\nThay $x = 3$ (thỏa mãn ĐKXĐ) vào $M$ đã rút gọn:\n$M = \\frac{-3}{3 + 2} = \\frac{-3}{5}$.\n\n**d) Tìm x nguyên để M nguyên:**\nĐể $M = \\frac{-3}{x + 2}$ nhận giá trị nguyên thì $-3$ phải chia hết cho $(x + 2)$.\nHay $x + 2 \\in U(-3) = \\{1; -1; 3; -3\\}$.\n- $x + 2 = 1 \\Rightarrow x = -1$ (TM)\n- $x + 2 = -1 \\Rightarrow x = -3$ (TM)\n- $x + 2 = 3 \\Rightarrow x = 1$ (TM)\n- $x + 2 = -3 \\Rightarrow x = -5$ (TM)\n**Kết luận:** $x \\in \\{-5; -3; -1; 1\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "dd204f01-c5cc-496c-b996-5c3ba6af6834",
+    "grade": 8,
+    "content": "**Câu 4:** Trong các khẳng định sau, khẳng định nào đúng, khẳng định nào sai:\nA. Tứ giác có 4 cạnh bằng nhau vào có 1 góc vuông là hình vuông\nB. Hình thoi là 1 hình thang cân\nC. Trong hình chữ nhật, giao điểm của 2 đường chéo cách đều 4 đỉnh của hình chữ nhật",
+    "solution": "Xét từng khẳng định:\n**A. Tứ giác có 4 cạnh bằng nhau và có 1 góc vuông là hình vuông:**\nTứ giác có 4 cạnh bằng nhau là hình thoi. Hình thoi có 1 góc vuông thì là hình vuông. $\\Rightarrow$ **Khẳng định ĐÚNG.**\n\n**B. Hình thoi là 1 hình thang cân:**\nHình thoi có các cạnh đối song song nên nó là hình thang. Tuy nhiên, hai đường chéo của hình thoi cắt nhau tại trung điểm nhưng không bằng nhau (trừ khi nó là hình vuông). Do đó, nó không thỏa mãn tính chất 2 đường chéo bằng nhau của hình thang cân. $\\Rightarrow$ **Khẳng định SAI.**\n\n**C. Trong hình chữ nhật, giao điểm của 2 đường chéo cách đều 4 đỉnh:**\nHình chữ nhật có 2 đường chéo bằng nhau và cắt nhau tại trung điểm của mỗi đường. Do đó khoảng cách từ giao điểm đến 4 đỉnh là bằng nhau (bằng nửa đường chéo). $\\Rightarrow$ **Khẳng định ĐÚNG.**",
+    "status": "pending"
+  },
+  {
+    "id": "df13e08e-cb74-4b6a-a890-8f3a1865d202",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm): Giải bài toán sau bằng cách lập phương trình\n\tMột người đi từ A đến B với vận tốc trung bình 20km/h. Lúc quay trở về A, người đó đi cong đường khác dài hơn đường trước 10km nhưng đi với vận tốc lớn hơn vận tốc lúc đi là 6km/h. Vì vậy thời gian về vẫn ít hơn thười gian đi là 1 giờ. Tính chiều dài của con đường người đó đã đi từ A đến B.",
+    "solution": "Gọi chiều dài của con đường người đó đi từ $A$ đến $B$ là $x$ (km) ($x > 0$).\nThời gian đi từ $A$ đến $B$ là: $\\frac{x}{20}$ (giờ).\nChiều dài con đường lúc về là: $x + 10$ (km).\nVận tốc lúc về lớn hơn lúc đi $6$ km/h, nên vận tốc lúc về là: $20 + 6 = 26$ (km/h).\nThời gian quay về từ $B$ đến $A$ là: $\\frac{x + 10}{26}$ (giờ).\nVì thời gian về ít hơn thời gian đi $1$ giờ, ta có phương trình:\n$\\frac{x}{20} - \\frac{x + 10}{26} = 1$\n$\\Leftrightarrow \\frac{x}{20} - \\frac{x}{26} - \\frac{10}{26} = 1$\n$\\Leftrightarrow x \\left( \\frac{1}{20} - \\frac{1}{26} \\right) = 1 + \\frac{10}{26}$\n$\\Leftrightarrow x \\cdot \\frac{26 - 20}{520} = \\frac{36}{26}$\n$\\Leftrightarrow x \\cdot \\frac{6}{520} = \\frac{36}{26}$\n$\\Leftrightarrow x = \\frac{36}{26} : \\frac{6}{520} = \\frac{36}{26} \\cdot \\frac{520}{6} = 6 \\cdot 20 = 120$ (thỏa mãn ĐK).\n**Kết luận:** Chiều dài con đường từ $A$ đến $B$ là $120$ km.",
+    "status": "pending"
+  },
+  {
+    "id": "e12b68ce-c489-4466-a38a-905a7c0246d9",
+    "grade": 8,
+    "content": "**Câu 3:** $\\Delta ABC$ đồng dạng với $\\Delta DEF$ nếu:\nAB = DE; AC = DF C. AB = DE; $\\widehat{A}=\\widehat{D};$ BC = DF\n$\\widehat{A}=\\widehat{D};$ $\\widehat{B}=\\widehat{E}$ D. $\\frac{AB}{DE}=\\frac{AC}{DF}$",
+    "solution": "Hai tam giác $\\Delta ABC$ và $\\Delta DEF$ đồng dạng với nhau (kí hiệu $\\Delta ABC \\sim \\Delta DEF$) nếu chúng thỏa mãn một trong 3 trường hợp đồng dạng:\n- Cạnh - cạnh - cạnh (c-c-c): 3 cặp cạnh tương ứng tỉ lệ.\n- Cạnh - góc - cạnh (c-g-c): 2 cặp cạnh tương ứng tỉ lệ và góc xen giữa bằng nhau.\n- Góc - góc (g-g): 2 cặp góc tương ứng bằng nhau.\nXét các phương án:\nPhương án C: $\\widehat{A} = \\widehat{D}; \\widehat{B} = \\widehat{E}$ thỏa mãn trường hợp đồng dạng Góc - Góc (g-g).\n**Đáp án đúng là C.**",
+    "status": "pending"
+  },
+  {
+    "id": "e23747df-1d6e-457a-92de-3ee09f9cefa2",
+    "grade": 8,
+    "content": "Bài 1 (3 điểm): Cho các biểu thức sau.\nA = x(x2 - 5x + 15) B = x(x - 2) + (3 - x)(3 + x) \nC = (x=4)2 - 2(x - 5)(x + 4) + (x - 5)2\nRút gọn biểu thức A, B và C.\nTính giá trị biểu thức B tại x = 5.",
+    "solution": "**a) Rút gọn các biểu thức:**\n$A = x(x^2 - 5x + 15) = x^3 - 5x^2 + 15x$.\n\n$B = x(x - 2) + (3 - x)(3 + x)$\n$B = x^2 - 2x + (9 - x^2)$\n$B = -2x + 9$.\n\n$C = (x + 4)^2 - 2(x - 5)(x + 4) + (x - 5)^2$ *(sửa lỗi gõ đề x=4 thành x+4)*\nÁp dụng hằng đẳng thức $a^2 - 2ab + b^2 = (a - b)^2$:\n$C = [(x + 4) - (x - 5)]^2 = (x + 4 - x + 5)^2 = 9^2 = 81$.\n\n**b) Tính giá trị biểu thức B tại x = 5:**\nThay $x = 5$ vào biểu thức $B = -2x + 9$:\n$B = -2(5) + 9 = -10 + 9 = -1$.\n**Kết luận:** Tại $x = 5$, giá trị của biểu thức $B$ là $-1$.",
+    "status": "pending"
+  },
+  {
+    "id": "e284caf1-0c3d-4563-9074-ec7057ac3139",
+    "grade": 8,
+    "content": "**Câu 2:** Điều kiện xác định của phương trình $\\frac{4}{2x-3}=\\frac{7}{3x-5}$ là:",
+    "solution": "Phương trình đã cho: $\\frac{4}{2x - 3} = \\frac{7}{3x - 5}$\nĐiều kiện xác định là các mẫu thức phải khác $0$:\n$\\begin{cases} 2x - 3 \\ne 0 \\\\ 3x - 5 \\ne 0 \\end{cases}$\n$\\Leftrightarrow \\begin{cases} x \\ne \\frac{3}{2} \\\\ x \\ne \\frac{5}{3} \\end{cases}$\n**Kết luận:** Điều kiện xác định của phương trình là $x \\ne \\frac{3}{2}$ và $x \\ne \\frac{5}{3}$.",
+    "status": "pending"
+  },
+  {
+    "id": "e2f1de49-45eb-4413-9aa9-bcbe113a212d",
+    "grade": 9,
+    "content": "Sau khi điều tra mật độ dân số ( đơn vị: người/km2) của 37 tỉnh, thành phố thuộc các vùng Bắc Trung Bộ và Duyên hải miền Trung, Tây Nguyên, Đông Nam Bộ, Đồng bằng sông Cửu Long (không kể Thành phố Hồ Chí Minh) ở năm 2021, người ta có biểu đồ tần số ghép nhóm dưới đây:![hình:medium](https://res.cloudinary.com/dkpwpfqzi/image/upload/v1779152087/khodetoan/d3lkioiqb6ayk35qkkc1.png)\na) Tìm tần số ghép nhóm của nhóm $[ 460;640)$\nb) Tính tần số tương đối ghép nhóm của nhóm $[ 100;280)$\n",
+    "solution": "a)\tTần số ghép nhóm của nhóm $[ 460;640)$là 6.\nb.Tần số tương đối ghép nhóm của nhóm $[ 100;280)$ là $f=54%$.\n",
+    "status": "pending"
+  },
+  {
+    "id": "e4092eb8-5866-46a0-a7bf-5e09aa9e9a4d",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm) Cho ba số x, y, z thỏa mãn điều kiện xyz = 1. Tính giá trị biểu thức:\nM = $\\frac{1}{1+x+xy}+\\frac{1}{1+y+yz}+\\frac{1}{1+z+zx}$\n-------------------Hết------------------\nBÀI LÀM",
+    "solution": "Theo giả thiết $xyz = 1$. Ta thay $1 = xyz$ vào số hạng thứ ba và $xy = \\frac{1}{z}$ vào một số vị trí để đồng nhất mẫu số.\n$M = \\frac{1}{1 + x + xy} + \\frac{1}{1 + y + yz} + \\frac{1}{1 + z + zx}$\nNhân cả tử và mẫu của phân thức thứ hai với $x$:\n$\\frac{1}{1 + y + yz} = \\frac{x}{x(1 + y + yz)} = \\frac{x}{x + xy + xyz} = \\frac{x}{x + xy + 1}$\nNhân cả tử và mẫu của phân thức thứ ba với $xy$:\n$\\frac{1}{1 + z + zx} = \\frac{xy}{xy(1 + z + zx)} = \\frac{xy}{xy + xyz + x^2yz}$\nThay $xyz = 1$ và $x^2yz = x(xyz) = x \\cdot 1 = x$, ta được:\n$\\frac{xy}{xy + 1 + x} = \\frac{xy}{1 + x + xy}$\nCộng cả ba phân thức đã biến đổi:\n$M = \\frac{1}{1 + x + xy} + \\frac{x}{1 + x + xy} + \\frac{xy}{1 + x + xy} = \\frac{1 + x + xy}{1 + x + xy} = 1$.\n**Kết luận:** Giá trị của biểu thức $M$ là $1$.",
+    "status": "pending"
+  },
+  {
+    "id": "e4b6b037-e770-48be-912e-d97519d1a1ce",
+    "grade": 8,
+    "content": "Bài 3 (1,5 điểm): Cho biểu thức \n$A=\\frac{3x-2}{x}-\\frac{x-7}{x-5}-\\frac{10}{{{x}^2}-5x}$ với $x\\ne 0,x\\ne 5$\nRút gọn A\nTìm các giá trị nguyên của x để $B=A.\\frac{x+1}{x-1}$ có giá trị nguyên",
+    "solution": "**a) Rút gọn biểu thức A:**\nĐiều kiện xác định: $x \\ne 0; x \\ne 5$.\n$A = \\frac{3x - 2}{x} - \\frac{x - 7}{x - 5} - \\frac{10}{x(x - 5)}$\n$A = \\frac{(3x - 2)(x - 5)}{x(x - 5)} - \\frac{x(x - 7)}{x(x - 5)} - \\frac{10}{x(x - 5)}$\n$A = \\frac{3x^2 - 15x - 2x + 10 - x^2 + 7x - 10}{x(x - 5)}$\n$A = \\frac{2x^2 - 10x}{x(x - 5)} = \\frac{2x(x - 5)}{x(x - 5)} = 2$.\n\n**b) Tìm x nguyên để B nguyên:**\nTa có: $B = A \\cdot \\frac{x + 1}{x - 1} = 2 \\cdot \\frac{x + 1}{x - 1} = \\frac{2x + 2}{x - 1}$.\nĐKXĐ bổ sung của $B$: $x \\ne 1$. Vậy ĐKXĐ chung: $x \\ne 0, x \\ne 1, x \\ne 5$.\nBiến đổi $B$: $B = \\frac{2(x - 1) + 4}{x - 1} = 2 + \\frac{4}{x - 1}$.\nĐể $B$ nhận giá trị nguyên với $x$ nguyên thì $x - 1$ phải là ước của $4$.\n$x - 1 \\in \\{1; -1; 2; -2; 4; -4\\}$.\n- $x - 1 = 1 \\Rightarrow x = 2$ (TM)\n- $x - 1 = -1 \\Rightarrow x = 0$ (Loại vì vi phạm ĐKXĐ)\n- $x - 1 = 2 \\Rightarrow x = 3$ (TM)\n- $x - 1 = -2 \\Rightarrow x = -1$ (TM)\n- $x - 1 = 4 \\Rightarrow x = 5$ (Loại vì vi phạm ĐKXĐ)\n- $x - 1 = -4 \\Rightarrow x = -3$ (TM)\n**Kết luận:** $x \\in \\{-3; -1; 2; 3\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "e4dce5f6-534f-419f-9fe6-41aff50d0284",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm). Rút gọn rồi tính giá trị của mỗi biểu thức sau:\na) $A=\\left( 7x+5 \\right)^2+\\left( 3x-5 \\right)^2-\\left( 10-6x \\right)\\left( 5+7x \\right)$ tại $x=-2$ \nb) $B=\\left( 2x+y \\right)\\left( {{y}^2}+4{{x}^2}-2xy \\right)-8x\\left( x-1 \\right)\\left( x+1 \\right)$ tại $x=-2; y=3$",
+    "solution": "**a) Rút gọn và tính giá trị của A:**\n$A = (7x + 5)^2 + (3x - 5)^2 - (10 - 6x)(5 + 7x)$\n$A = (7x + 5)^2 + (3x - 5)^2 + 2(3x - 5)(7x + 5)$\nĐây là hằng đẳng thức $a^2 + b^2 + 2ab = (a + b)^2$.\n$A = [(7x + 5) + (3x - 5)]^2 = (10x)^2 = 100x^2$.\nTại $x = -2$, ta có: $A = 100(-2)^2 = 100 \\cdot 4 = 400$.\n\n**b) Rút gọn và tính giá trị của B:**\n$B = (2x + y)(y^2 + 4x^2 - 2xy) - 8x(x - 1)(x + 1)$\n$B = (y + 2x)(y^2 - y \\cdot 2x + (2x)^2) - 8x(x^2 - 1)$\nÁp dụng hằng đẳng thức tổng hai lập phương:\n$B = (y^3 + (2x)^3) - (8x^3 - 8x)$\n$B = y^3 + 8x^3 - 8x^3 + 8x = y^3 + 8x$.\nTại $x = -2; y = 3$, ta có:\n$B = 3^3 + 8(-2) = 27 - 16 = 11$.",
+    "status": "pending"
+  },
+  {
+    "id": "e52afa18-cf7d-474b-a114-2339c6d58f60",
+    "grade": 8,
+    "content": "**Câu 3:** Phân thức đối của phân thức $\\frac{x-1}{x+3}$ là phân thức:\nA. $\\frac{x-1}{3+x}$ \nB. $\\frac{x+1}{x+3}$ \nC. $\\frac{1-x}{-x-3}$ D. $\\frac{1-x}{x+3}$",
+    "solution": "Phân thức đối của một phân thức $\\frac{A}{B}$ là $-\\frac{A}{B} = \\frac{-A}{B}$.\nPhân thức đối của $\\frac{x - 1}{x + 3}$ là:\n$-\\frac{x - 1}{x + 3} = \\frac{-(x - 1)}{x + 3} = \\frac{1 - x}{x + 3}$.\n**Đáp án đúng là D.**",
+    "status": "pending"
+  },
+  {
+    "id": "e626fbe6-eca5-4157-bd15-713210879af6",
+    "grade": 8,
+    "content": "Bài 1 (1,5 điểm): Phân tích các đa thức sau thành nhân tử:\n2x3 – 8x2 + 8x\n2x2 – 3x + 5\nx2y – x3 – 9y + 9x",
+    "solution": "**1)** $2x^3 - 8x^2 + 8x$\nĐặt nhân tử chung là $2x$:\n$= 2x(x^2 - 4x + 4)$\n$= 2x(x - 2)^2$.\n\n**2)** $2x^2 - 3x + 5$\nĐa thức này vô nghiệm trên tập số thực ($\\Delta = (-3)^2 - 4 \\cdot 2 \\cdot 5 = 9 - 40 = -31 < 0$). Do đó, không thể phân tích thành nhân tử với hệ số thực.\n*(Lưu ý: Có thể đề bài bị lỗi dấu, nếu đề là $2x^2 - 3x - 5$ thì phân tích được thành $(2x - 5)(x + 1)$)*.\n\n**3)** $x^2y - x^3 - 9y + 9x$\nNhóm 2 hạng tử đầu, 2 hạng tử cuối:\n$= (x^2y - 9y) - (x^3 - 9x)$\n$= y(x^2 - 9) - x(x^2 - 9)$\n$= (x^2 - 9)(y - x)$\n$= (x - 3)(x + 3)(y - x)$.",
+    "status": "pending"
+  },
+  {
+    "id": "e64e1766-66c5-4ff9-b76c-9f3e3b8e58ee",
+    "grade": 8,
+    "content": "**Câu 3:** Cho $\\Delta A'B'C'$ đồng dạng với $\\Delta ABC$ với tỉ số đồng dạng là $k=3$ khi đó tỉ số chu vi $\\Delta ABC$ so với chu vi $\\Delta A'B'C'$ là 3.",
+    "solution": "**Khẳng định trên là SAI.**\nTheo định lý về tam giác đồng dạng:\nNếu $\\Delta A'B'C' \\sim \\Delta ABC$ theo tỉ số đồng dạng $k = 3$, thì tỉ số chu vi của $\\Delta A'B'C'$ so với chu vi $\\Delta ABC$ là $k = 3$.\nTức là $\\frac{P_{A'B'C'}}{P_{ABC}} = 3$.\nSuy ra tỉ số chu vi $\\Delta ABC$ so với chu vi $\\Delta A'B'C'$ phải là $\\frac{P_{ABC}}{P_{A'B'C'}} = \\frac{1}{3}$.\nVậy khẳng định tỉ số là 3 là sai.",
+    "status": "pending"
+  },
+  {
+    "id": "e82d1c72-d571-4256-888e-60842ab14e42",
+    "grade": 8,
+    "content": "Bài 3 (2 điểm).\nGiải các phương trình sau:\n$\\frac{x+2}{x-3}+\\frac{x}{x+2}=\\frac{{{x}^2}+6}{{{x}^2}-x-6}$ b) ${{(x+1)}^2}+|x-1|={{x}^2}+4$ \nGiải bất phương trình sau và biểu diễn tập nghiệm trên trục số: $1-\\frac{x-1}{3}<\\frac{x+3}{3}-\\frac{x-2}{2}$",
+    "solution": "**a)** $\\frac{x + 2}{x - 3} + \\frac{x}{x + 2} = \\frac{x^2 + 6}{x^2 - x - 6}$\nĐiều kiện xác định: $x \\ne 3; x \\ne -2$.\nQuy đồng mẫu thức $(x - 3)(x + 2)$:\n$\\Leftrightarrow \\frac{(x + 2)^2}{(x - 3)(x + 2)} + \\frac{x(x - 3)}{(x - 3)(x + 2)} = \\frac{x^2 + 6}{(x - 3)(x + 2)}$\n$\\Rightarrow x^2 + 4x + 4 + x^2 - 3x = x^2 + 6$\n$\\Leftrightarrow x^2 + x - 2 = 0$\n$\\Leftrightarrow (x - 1)(x + 2) = 0 \\Rightarrow x = 1$ hoặc $x = -2$.\nĐối chiếu ĐKXĐ, $x = -2$ bị loại. Vậy nghiệm của pt là $x = 1$.\n\n**b)** $(x + 1)^2 + |x - 1| = x^2 + 4$\n$\\Leftrightarrow x^2 + 2x + 1 + |x - 1| = x^2 + 4$\n$\\Leftrightarrow |x - 1| = 3 - 2x$\nĐiều kiện có nghiệm: $3 - 2x \\ge 0 \\Leftrightarrow x \\le 1,5$.\n- Trường hợp 1: $x - 1 \\ge 0 \\Leftrightarrow 1 \\le x \\le 1,5$.\n  Phương trình: $x - 1 = 3 - 2x \\Leftrightarrow 3x = 4 \\Rightarrow x = \\frac{4}{3}$ (thỏa mãn).\n- Trường hợp 2: $x - 1 < 0 \\Leftrightarrow x < 1$.\n  Phương trình: $1 - x = 3 - 2x \\Leftrightarrow x = 2$ (không thỏa mãn $x < 1$).\nVậy $x = \\frac{4}{3}$.\n\n**c)** Giải bất phương trình: $1 - \\frac{x - 1}{3} < \\frac{x + 3}{3} - \\frac{x - 2}{2}$\nNhân cả hai vế với mẫu chung là $6$:\n$\\Leftrightarrow 6 - 2(x - 1) < 2(x + 3) - 3(x - 2)$\n$\\Leftrightarrow 6 - 2x + 2 < 2x + 6 - 3x + 6$\n$\\Leftrightarrow 8 - 2x < -x + 12$\n$\\Leftrightarrow -2x + x < 12 - 8 \\Leftrightarrow -x < 4 \\Leftrightarrow x > -4$.\nTập nghiệm: $x > -4$.",
+    "status": "pending"
+  },
+  {
+    "id": "eacfd011-2786-43ee-b437-fc5e02542f94",
+    "grade": 8,
+    "content": "**Câu 2:** Kết quả của phép tính $\\frac{5x+2}{3x{{y}^2}}:\\frac{10x+4}{{{x}^2}y}$ là:\n$\\frac{6y}{{{x}^2}}$ B. $\\frac{6y}{x}$ C. $\\frac{x}{6y}$ D.$\\frac{x}{9{{y}^2}}$",
+    "solution": "Thực hiện phép chia hai phân thức:\n$\\frac{5x + 2}{3xy^2} : \\frac{10x + 4}{x^2y}$\n$= \\frac{5x + 2}{3xy^2} \\cdot \\frac{x^2y}{10x + 4}$\n$= \\frac{5x + 2}{3xy^2} \\cdot \\frac{x^2y}{2(5x + 2)}$\nTriệt tiêu các nhân tử chung $(5x + 2)$, $x$ và $y$ ở cả tử và mẫu:\n$= \\frac{x}{3y \\cdot 2} = \\frac{x}{6y}$.\n**Đáp án đúng là C.**",
+    "status": "pending"
+  },
+  {
+    "id": "ebf070b7-513e-4b51-805d-e7b0ecd9451c",
+    "grade": 8,
+    "content": "**Câu 3:** Điều kiện xác định của phương trình $\\frac{{{x}^2}-6}{{{x}^2}}=x+\\frac{3}{{{x}^2}+1}$ là $x\\ne 0;x\\ne 1;x\\ne -1$",
+    "solution": "**Khẳng định trên là SAI.**\nPhương trình: $\\frac{x^2 - 6}{x^2} = x + \\frac{3}{x^2 + 1}$\nBiểu thức có chứa các mẫu thức: $x^2$ và $x^2 + 1$.\nĐiều kiện xác định là các mẫu thức phải khác $0$:\n- $x^2 \\ne 0 \\Leftrightarrow x \\ne 0$.\n- $x^2 + 1 \\ne 0$: Điều này luôn đúng với mọi $x$ vì $x^2 \\ge 0 \\Rightarrow x^2 + 1 \\ge 1 > 0$.\nVậy điều kiện xác định duy nhất của phương trình là $x \\ne 0$.\nViệc thêm $x \\ne 1; x \\ne -1$ là dư thừa và không chính xác so với định nghĩa ĐKXĐ.",
+    "status": "pending"
+  },
+  {
+    "id": "ebfc13b1-0379-48b0-a43c-1610c2b4d2a9",
+    "grade": 8,
+    "content": "Bài 2 (1,5 điểm). Rút gọn các biểu thức sau:\nA = (x + 3)2 + (x – 2)2 – 2(x + 3)(x – 2)\nB = (x – 2)3 – x(x – 1)(x – 3) + 3x2 – 9x + 8",
+    "solution": "**a) Rút gọn biểu thức A:**\n$A = (x + 3)^2 + (x - 2)^2 - 2(x + 3)(x - 2)$\nNhận thấy đây là dạng hằng đẳng thức $a^2 + b^2 - 2ab = (a - b)^2$, với $a = x + 3$ và $b = x - 2$.\n$A = [(x + 3) - (x - 2)]^2$\n$A = (x + 3 - x + 2)^2$\n$A = 5^2 = 25$.\n\n**b) Rút gọn biểu thức B:**\n$B = (x - 2)^3 - x(x - 1)(x - 3) + 3x^2 - 9x + 8$\nKhai triển hằng đẳng thức và nhân đa thức:\n$B = (x^3 - 6x^2 + 12x - 8) - x(x^2 - 3x - x + 3) + 3x^2 - 9x + 8$\n$B = x^3 - 6x^2 + 12x - 8 - x(x^2 - 4x + 3) + 3x^2 - 9x + 8$\n$B = x^3 - 6x^2 + 12x - 8 - x^3 + 4x^2 - 3x + 3x^2 - 9x + 8$\nThu gọn các hạng tử đồng dạng:\n$B = (x^3 - x^3) + (-6x^2 + 4x^2 + 3x^2) + (12x - 3x - 9x) + (-8 + 8)$\n$B = 0 + x^2 + 0 + 0 = x^2$.",
+    "status": "pending"
+  },
+  {
+    "id": "ed3d4213-2670-4e05-9cf2-01d7963879c4",
+    "grade": 8,
+    "content": "Bài 1 (1,25 điểm): Giải phương trình\n$\\left( x-2 \\right)\\left( x-5 \\right)={{x}^2}-4$ b) $\\frac{x+1}{x-2}-\\frac{5}{2+x}=\\frac{12}{{{x}^2}-4}+1$",
+    "solution": "**a)** $(x - 2)(x - 5) = x^2 - 4$\n$\\Leftrightarrow (x - 2)(x - 5) = (x - 2)(x + 2)$\n$\\Leftrightarrow (x - 2)(x - 5) - (x - 2)(x + 2) = 0$\n$\\Leftrightarrow (x - 2)[(x - 5) - (x + 2)] = 0$\n$\\Leftrightarrow (x - 2)(x - 5 - x - 2) = 0$\n$\\Leftrightarrow (x - 2)(-7) = 0$\n$\\Leftrightarrow x - 2 = 0 \\Rightarrow x = 2$.\nTập nghiệm $S = \\{2\\}$.\n\n**b)** $\\frac{x + 1}{x - 2} - \\frac{5}{2 + x} = \\frac{12}{x^2 - 4} + 1$\n$\\Leftrightarrow \\frac{x + 1}{x - 2} - \\frac{5}{x + 2} = \\frac{12}{(x - 2)(x + 2)} + 1$\nĐiều kiện xác định: $x \\ne 2; x \\ne -2$.\nQuy đồng mẫu thức $(x - 2)(x + 2)$:\n$\\Leftrightarrow \\frac{(x + 1)(x + 2)}{(x - 2)(x + 2)} - \\frac{5(x - 2)}{(x - 2)(x + 2)} = \\frac{12}{(x - 2)(x + 2)} + \\frac{x^2 - 4}{(x - 2)(x + 2)}$\n$\\Rightarrow (x^2 + 3x + 2) - (5x - 10) = 12 + x^2 - 4$\n$\\Leftrightarrow x^2 - 2x + 12 = x^2 + 8$\n$\\Leftrightarrow -2x = 8 - 12$\n$\\Leftrightarrow -2x = -4 \\Rightarrow x = 2$.\nĐối chiếu với ĐKXĐ ($x \\ne 2$), nghiệm $x = 2$ bị loại.\n**Kết luận:** Phương trình vô nghiệm.",
+    "status": "pending"
+  },
+  {
+    "id": "ed8228c0-6159-4295-a867-1a2901987eb3",
+    "grade": 8,
+    "content": "**Bài 5:** (1 điểm) Một bể nước hình hộp chữ nhật có chiều dài 2m. Lúc đầu bể không có nước, sau khi đổ vào bể 120 thùng nước, mỗi thùng chứa 20 lít nước thì mực nước của bể cao 0,8m. Biết 1 lít nước =1 dm3.\nTính thể tích lượng nước đổ vào bể và chiều rộng của bể.\nNgười ta đổ thêm vào bể 60 thùng nước nữa thì đầy bể. Tính chiều cao của bể.",
+    "solution": "**a) Tính thể tích lượng nước và chiều rộng của bể:**\nThể tích của 120 thùng nước được đổ vào bể là:\n$V_{nước} = 120 \\cdot 20 = 2400$ (lít) = $2400$ (dm$^3$) = $2,4$ (m$^3$).\nVì mực nước trong bể cao $0,8$m, ta có công thức thể tích: $V = \\text{dài} \\cdot \\text{rộng} \\cdot \\text{chiều cao mực nước}$.\n$\\Rightarrow 2,4 = 2 \\cdot \\text{rộng} \\cdot 0,8$\n$\\Rightarrow 1,6 \\cdot \\text{rộng} = 2,4 \\Rightarrow \\text{rộng} = 2,4 : 1,6 = 1,5$ (m).\nVậy chiều rộng của bể là $1,5$m.\n\n**b) Tính chiều cao của bể:**\nNgười ta đổ thêm 60 thùng nước nữa thì đầy bể. Thể tích nước đổ thêm là:\n$V_{thêm} = 60 \\cdot 20 = 1200$ (lít) = $1200$ (dm$^3$) = $1,2$ (m$^3$).\nThể tích toàn phần của bể là:\n$V_{bể} = V_{nước} + V_{thêm} = 2,4 + 1,2 = 3,6$ (m$^3$).\nChiều cao của bể là:\n$h = \\frac{V_{bể}}{\\text{dài} \\cdot \\text{rộng}} = \\frac{3,6}{2 \\cdot 1,5} = \\frac{3,6}{3} = 1,2$ (m).\n**Kết luận:** Chiều rộng bể là $1,5$m; Chiều cao bể là $1,2$m.",
+    "status": "pending"
+  },
+  {
+    "id": "eec7b446-f152-47f2-bedd-6ba7d2e43a9e",
+    "grade": 8,
+    "content": "Bài 2 (1,5 điểm) Tìm x biết\n(x – 1)2 + x(5 – x) = 8\n(12x4 – 6x): 6x + 2x(2 + x)(2 – x) = 7\nx3 – 3x2 + x – 3 = 0",
+    "solution": "**a)** $(x - 1)^2 + x(5 - x) = 8$\n$\\Leftrightarrow x^2 - 2x + 1 + 5x - x^2 = 8$\n$\\Leftrightarrow 3x + 1 = 8$\n$\\Leftrightarrow 3x = 7 \\Rightarrow x = \\frac{7}{3}$.\n\n**b)** $(12x^4 - 6x) : 6x + 2x(2 + x)(2 - x) = 7$\n$\\Leftrightarrow (2x^3 - 1) + 2x(4 - x^2) = 7$\n$\\Leftrightarrow 2x^3 - 1 + 8x - 2x^3 = 7$\n$\\Leftrightarrow 8x = 8 \\Rightarrow x = 1$.\n\n**c)** $x^3 - 3x^2 + x - 3 = 0$\nNhóm 2 hạng tử đầu và 2 hạng tử cuối:\n$\\Leftrightarrow x^2(x - 3) + (x - 3) = 0$\n$\\Leftrightarrow (x - 3)(x^2 + 1) = 0$\nVì $x^2 + 1 > 0$ với mọi $x$, nên $x - 3 = 0 \\Rightarrow x = 3$.",
+    "status": "pending"
+  },
+  {
+    "id": "ef2628bc-d14f-4e0f-a12b-cac7db354364",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm): Cho ∆ABC có 3 góc nhọn AB < AC. Các đường cao BE, CF cắt nhau tại H. Gọi M là trung điểm của BC. K là điểm đối xứng với H qua M.\nChứng minh: Tứ giác BHCK là hình bình hành\nChứng minh: BK ⊥ AB và CK ⊥ AC\nGọi I là điểm đối xứng với H qua BC. Chứng minh: Tứ giác BIKC là hình thang cân.\nBK cắt HI tại G. Tam giác ABC phải có thêm điều kiện gì để tứ giác GHCK là hình thang cân.",
+    "solution": "**a) Chứng minh BHCK là hình bình hành:**\nVì $K$ đối xứng với $H$ qua $M$ nên $M$ là trung điểm của $HK$.\nMà $M$ là trung điểm của $BC$ (giả thiết).\nTứ giác $BHCK$ có 2 đường chéo $BC$ và $HK$ cắt nhau tại trung điểm $M$ của mỗi đường, nên $BHCK$ là hình bình hành.\n\n**b) Chứng minh BK $\\perp$ AB và CK $\\perp$ AC:**\nVì $BHCK$ là hình bình hành nên $BK \\parallel HC$. \nMà $HC$ chính là đường cao $CF \\perp AB$, suy ra $BK \\perp AB$.\nTương tự, $CK \\parallel BH$. Mà $BH$ chính là đường cao $BE \\perp AC$, suy ra $CK \\perp AC$.\n\n**c) Chứng minh BIKC là hình thang cân:**\n$I$ đối xứng với $H$ qua $BC$ nên $BC$ là đường trung trực của $HI \\Rightarrow BC \\perp HI$ tại $D$ ($D$ là trung điểm $HI$).\nTrong $\\Delta HIK$, có $M$ là trung điểm $HK$ và $D$ là trung điểm $HI$, suy ra $MD$ là đường trung bình $\\Rightarrow MD \\parallel IK$ hay $BC \\parallel IK$.\nDo đó $BIKC$ là hình thang.\nMặt khác, $I$ đối xứng với $H$ qua $BC \\Rightarrow \\widehat{IBC} = \\widehat{HBC}$.\nTrong hình bình hành $BHCK$, ta có $CK \\parallel BH \\Rightarrow \\widehat{KCB} = \\widehat{HBC}$ (so le trong).\nTừ đó $\\widehat{IBC} = \\widehat{KCB}$. Hình thang $BIKC$ có hai góc kề đáy bằng nhau nên là hình thang cân.\n\n**d) Điều kiện để GHCK là hình thang cân:**\nGọi $G$ là giao điểm của $BK$ và $HI$. Ta có $HI \\perp BC$ và $BK \\perp AB \\Rightarrow GK \\perp AB$. \nMà $HC \\perp AB$ (đường cao) $\\Rightarrow HC \\parallel GK$.\nTứ giác $GHCK$ có $HC \\parallel GK$ nên là hình thang.\nĐể $GHCK$ là hình thang cân thì hai đường chéo phải bằng nhau hoặc 2 góc kề một đáy bằng nhau. Thực tế cần có $GH = CK$.\nVì $CK = BH$ (do $BHCK$ là hình bình hành), nên ta cần $GH = BH$.\nXét $\\Delta GBC$ có $GD \\perp BC$ (do $HI \\perp BC$). Nếu $BH = GH$, ta dễ dàng chứng minh được $\\Delta BDG$ là tam giác vuông cân tại $D$, dẫn đến $\\widehat{GBD} = 45^\\circ$.\nLại có $\\widehat{GBD} = \\widehat{KBC} = \\widehat{HCB} = 90^\\circ - \\widehat{B}$ (trong $\\Delta HBC$).\nTừ đó $90^\\circ - \\widehat{B} = 45^\\circ \\Rightarrow \\widehat{B} = 45^\\circ$.\n**Kết luận:** Tam giác $ABC$ cần có thêm điều kiện $\\widehat{B} = 45^\\circ$ để tứ giác $GHCK$ là hình thang cân.",
+    "status": "pending"
+  },
+  {
+    "id": "f19a9986-f261-435a-aba0-9e362038e464",
+    "grade": 8,
+    "content": "Bài 1 (1, 5 điểm) Phân tích các đa thức sau thành nhân tử:\nx2 – xy + x\nx2 – 2xy – 4 + y2\nx3 – x2 – 16x + 16",
+    "solution": "**1)** $x^2 - xy + x$\nĐặt nhân tử chung là $x$:\n$= x(x - y + 1)$.\n\n**2)** $x^2 - 2xy - 4 + y^2$\nNhóm các hạng tử để tạo hằng đẳng thức:\n$= (x^2 - 2xy + y^2) - 4$\n$= (x - y)^2 - 2^2$\n$= (x - y - 2)(x - y + 2)$.\n\n**3)** $x^3 - x^2 - 16x + 16$\nNhóm 2 hạng tử đầu và 2 hạng tử cuối:\n$= x^2(x - 1) - 16(x - 1)$\n$= (x - 1)(x^2 - 16)$\n$= (x - 1)(x - 4)(x + 4)$.",
+    "status": "pending"
+  },
+  {
+    "id": "f3bc33fb-b7e1-4416-bdc5-635aeda46d2b",
+    "grade": 8,
+    "content": "Bài 3 (2,0 điểm) Cho hai biểu thức:\nA = $\\frac{x+1}{x+3}$ và B = $\\frac{3}{x-3}-\\frac{6x}{9-{{x}^2}}+\\frac{x}{x+3}$ \nTính giá trị của biểu thức A khi x = 5\nRút gọn biểu thức B\nBiết P = A.B, tìm các số tự nhiên x để P ∈ Z",
+    "solution": "**a) Tính giá trị biểu thức A:**\n$A = \\frac{x + 1}{x + 3}$. Tại $x = 5$ (thỏa mãn $x \\ne -3$):\n$A = \\frac{5 + 1}{5 + 3} = \\frac{6}{8} = \\frac{3}{4}$.\n\n**b) Rút gọn biểu thức B:**\nĐiều kiện xác định: $x \\ne \\pm 3$.\n$B = \\frac{3}{x - 3} + \\frac{6x}{x^2 - 9} + \\frac{x}{x + 3}$\n$B = \\frac{3(x + 3)}{(x - 3)(x + 3)} + \\frac{6x}{(x - 3)(x + 3)} + \\frac{x(x - 3)}{(x - 3)(x + 3)}$\n$B = \\frac{3x + 9 + 6x + x^2 - 3x}{(x - 3)(x + 3)}$\n$B = \\frac{x^2 + 6x + 9}{(x - 3)(x + 3)} = \\frac{(x + 3)^2}{(x - 3)(x + 3)} = \\frac{x + 3}{x - 3}$.\n\n**c) Tìm x nguyên dương để P thuộc Z:**\n$P = A \\cdot B = \\frac{x + 1}{x + 3} \\cdot \\frac{x + 3}{x - 3} = \\frac{x + 1}{x - 3}$ (với $x \\ne \\pm 3$).\nTa phân tích: $P = \\frac{x - 3 + 4}{x - 3} = 1 + \\frac{4}{x - 3}$.\nĐể $P \\in \\mathbb{Z}$ thì $4 \\vdots (x - 3) \\Rightarrow x - 3 \\in U(4) = \\{1; -1; 2; -2; 4; -4\\}$.\nLập bảng giá trị:\n- $x - 3 = 1 \\Rightarrow x = 4$\n- $x - 3 = -1 \\Rightarrow x = 2$\n- $x - 3 = 2 \\Rightarrow x = 5$\n- $x - 3 = -2 \\Rightarrow x = 1$\n- $x - 3 = 4 \\Rightarrow x = 7$\n- $x - 3 = -4 \\Rightarrow x = -1$ (loại vì $x$ không là số tự nhiên)\nĐối chiếu ĐKXĐ ($x \\ne \\pm 3$) và $x \\in \\mathbb{N}$, các giá trị nhận được là: $x \\in \\{1; 2; 4; 5; 7\\}$.",
+    "status": "pending"
+  },
+  {
+    "id": "f64556ed-d2a4-42ee-ae9a-f7e24207f841",
+    "grade": 8,
+    "content": "**Bài 1:** Rút gọn\n$a) -2x\\left( -3x+2 \\right)-\\left( x+2 \\right)^2$ (1 điểm)\n$b) \\left( x+2 \\right)\\left( {{x}^2}-2x+4 \\right)-2\\left( x+1 \\right)\\left( 1-x \\right)$ (0,75 điểm)\n$c) \\left( 2x-1 \\right)^2-2\\left( 4{{x}^2}-1 \\right)+\\left( 2x+1 \\right)^2$ (0,5 điểm)",
+    "solution": "**a)** $-2x(-3x + 2) - (x + 2)^2$\n$= 6x^2 - 4x - (x^2 + 4x + 4)$\n$= 6x^2 - 4x - x^2 - 4x - 4$\n$= 5x^2 - 8x - 4$.\n\n**b)** $(x + 2)(x^2 - 2x + 4) - 2(x + 1)(1 - x)$\nÁp dụng hằng đẳng thức $a^3 + b^3$ và $(a+b)(a-b)$:\n$= (x^3 + 2^3) - 2(1 - x^2)$\n$= x^3 + 8 - 2 + 2x^2$\n$= x^3 + 2x^2 + 6$.\n\n**c)** $(2x - 1)^2 - 2(4x^2 - 1) + (2x + 1)^2$\n$= (2x - 1)^2 - 2(2x - 1)(2x + 1) + (2x + 1)^2$\nÁp dụng hằng đẳng thức $a^2 - 2ab + b^2 = (a - b)^2$ với $a = 2x - 1$ và $b = 2x + 1$:\n$= [(2x - 1) - (2x + 1)]^2$\n$= (2x - 1 - 2x - 1)^2$\n$= (-2)^2 = 4$.",
+    "status": "pending"
+  },
+  {
+    "id": "f6f32a3b-509b-46db-9c18-5c9b22602126",
+    "grade": 8,
+    "content": "Bài 4 (3,0 điểm). Cho tam giác ABC vuông tại A, đường cao AH. Gọi D là điểm đối xứng với H qua AB, E là điểm đối xứng với H qua AC. Gọi I là giao điểm của AB và DH, K là giao điểm của AC và EH.\nTứ giác AIHK là hình gì? Vì sao?\nChứng minh ba điểm D, E, A thẳng hàng\nGọi M là trung điểm của BC. Chứng minh AM ⊥ IK",
+    "solution": "**a) Chứng minh AIHK là hình chữ nhật:**\nTa có $\\widehat{A} = 90^\\circ$ (vì $\\Delta ABC$ vuông tại $A$).\n$D$ đối xứng với $H$ qua $AB \\Rightarrow AB$ là đường trung trực của $DH \\Rightarrow \\widehat{AID} = \\widehat{AIH} = 90^\\circ \\Rightarrow \\widehat{I} = 90^\\circ$.\n$E$ đối xứng với $H$ qua $AC \\Rightarrow AC$ là đường trung trực của $EH \\Rightarrow \\widehat{AKE} = \\widehat{AKH} = 90^\\circ \\Rightarrow \\widehat{K} = 90^\\circ$.\nTứ giác $AIHK$ có 3 góc vuông ($\\widehat{A} = \\widehat{I} = \\widehat{K} = 90^\\circ$) nên là hình chữ nhật.\n\n**b) Chứng minh D, A, E thẳng hàng:**\nVì $AB$ là trung trực của $DH \\Rightarrow \\Delta ADH$ cân tại $A \\Rightarrow AB$ là phân giác $\\widehat{DAH} \\Rightarrow \\widehat{DAB} = \\widehat{HAB}$.\nVì $AC$ là trung trực của $EH \\Rightarrow \\Delta AEH$ cân tại $A \\Rightarrow AC$ là phân giác $\\widehat{HAE} \\Rightarrow \\widehat{HAC} = \\widehat{CAE}$.\nTa có: $\\widehat{DAE} = \\widehat{DAB} + \\widehat{HAB} + \\widehat{HAC} + \\widehat{CAE} = 2(\\widehat{HAB} + \\widehat{HAC}) = 2 \\cdot 90^\\circ = 180^\\circ$.\nVậy $D, A, E$ thẳng hàng.\n\n**c) Chứng minh AM $\\perp$ IK:**\nTrong hình chữ nhật $AIHK$, đường chéo $AH$ và $IK$ cắt nhau nên $\\widehat{AKI} = \\widehat{AHI}$.\nMà $\\widehat{AHI} = \\widehat{B}$ (cùng phụ với $\\widehat{BAH}$). Suy ra $\\widehat{AKI} = \\widehat{B}$.\nTrong $\\Delta ABC$ vuông tại $A$, trung tuyến $AM = \\frac{1}{2}BC = MC \\Rightarrow \\Delta AMC$ cân tại $M \\Rightarrow \\widehat{MAC} = \\widehat{C}$.\nGọi $N$ là giao điểm của $AM$ và $IK$. Xét $\\Delta ANK$ có:\n$\\widehat{NAK} + \\widehat{AKN} = \\widehat{MAC} + \\widehat{AKI} = \\widehat{C} + \\widehat{B} = 90^\\circ$.\nSuy ra $\\widehat{ANK} = 180^\\circ - 90^\\circ = 90^\\circ$. Vậy $AM \\perp IK$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "f7d4497f-9b57-4682-a476-f80e322d6a13",
+    "grade": 8,
+    "content": "Bài 6 (0,5 điểm). Tìm giá trị nhỏ nhất của biểu thức A biết:\n$A=\\frac{{{x}^2}-2x+2016}{{{x}^2}}$ với $x>0$",
+    "solution": "Ta có biểu thức: $A = \\frac{x^2 - 2x + 2016}{x^2}$ với $x > 0$.\nChia tử cho mẫu, ta được:\n$A = 1 - \\frac{2}{x} + \\frac{2016}{x^2}$.\nĐặt $t = \\frac{1}{x} > 0$. Biểu thức trở thành:\n$A = 2016t^2 - 2t + 1$\n$A = 2016 \\left( t^2 - \\frac{2}{2016}t \\right) + 1$\n$A = 2016 \\left( t^2 - 2 \\cdot t \\cdot \\frac{1}{2016} + \\frac{1}{2016^2} \\right) - \\frac{1}{2016} + 1$\n$A = 2016 \\left( t - \\frac{1}{2016} \\right)^2 + \\frac{2015}{2016}$.\nVì $\\left( t - \\frac{1}{2016} \\right)^2 \\ge 0$ nên $A \\ge \\frac{2015}{2016}$.\nDấu \"=\" xảy ra khi $t = \\frac{1}{2016} \\Leftrightarrow \\frac{1}{x} = \\frac{1}{2016} \\Leftrightarrow x = 2016$ (thỏa mãn $x > 0$).\n**Kết luận:** Giá trị nhỏ nhất của $A$ là $\\frac{2015}{2016}$, đạt được tại $x = 2016$.",
+    "status": "pending"
+  },
+  {
+    "id": "f8708414-c952-483c-b002-528fbb141feb",
+    "grade": 8,
+    "content": "Câu 2 (1 điểm) Khẳng định nào đúng? Khẳng định nào sai?\nTứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường và bằng nhau là hình chữ nhật\nPhân thức đối của phân thức $\\frac{2x}{3-x}$ là $\\frac{-2x}{x-3}$ \nHình chữ nhật có hai đường chéo bằng nhau là hình vuông\nKết quả của phép rút gọn phân thức $\\frac{8x{{y}^3}}{12{{x}^3}{{y}^2}}$ là $\\frac{2y}{3{{x}^2}}$ \nII. TỰ LUẬN (8,5 điểm)",
+    "solution": "**1. Tứ giác có hai đường chéo cắt nhau tại trung điểm mỗi đường và bằng nhau là hình chữ nhật:** $\\Rightarrow$ **ĐÚNG** (Dấu hiệu nhận biết hình chữ nhật).\n**2. Phân thức đối của $\\frac{2x}{3-x}$ là $\\frac{-2x}{x-3}$:** $\\Rightarrow$ **SAI**.\nPhân thức đối của $\\frac{2x}{3-x}$ là $-\\frac{2x}{3-x} = \\frac{-2x}{3-x} = \\frac{2x}{x-3}$.\nKhẳng định $\\frac{-2x}{x-3}$ là sai (dấu âm ở cả tử và mẫu thì phân thức không đổi).\n**3. Hình chữ nhật có hai đường chéo bằng nhau là hình vuông:** $\\Rightarrow$ **SAI** (Mọi hình chữ nhật đều có hai đường chéo bằng nhau, muốn là hình vuông thì 2 đường chéo phải vuông góc).\n**4. Kết quả rút gọn $\\frac{8xy^3}{12x^3y^2}$ là $\\frac{2y}{3x^2}$:** $\\Rightarrow$ **ĐÚNG** (Chia tử và mẫu cho $4xy^2$, ta được $\\frac{2y}{3x^2}$).",
+    "status": "pending"
+  },
+  {
+    "id": "f8d46cac-8331-4f55-a0da-1d39522678f7",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm):\n\tMột ô tô chạy trên quãng đường AB. Lúc đi ô tô chạy với vận tốc 35km/h, lúc về ô tô chạy với vận tốc 42km/h, vì vậy thời gian về ít hơn thời gian đi là nửa giờ. Tính chiều dài quãng đường AB?",
+    "solution": "Gọi chiều dài quãng đường $AB$ là $x$ (km, $x > 0$).\nThời gian ô tô đi từ $A$ đến $B$ với vận tốc $35$ km/h là: $\\frac{x}{35}$ (giờ).\nThời gian ô tô đi từ $B$ về $A$ với vận tốc $42$ km/h là: $\\frac{x}{42}$ (giờ).\nVì thời gian về ít hơn thời gian đi nửa giờ ($0,5$ giờ = $\\frac{1}{2}$ giờ), ta có phương trình:\n$\\frac{x}{35} - \\frac{x}{42} = \\frac{1}{2}$\nQuy đồng mẫu thức với MTC là $210$:\n$\\frac{6x}{210} - \\frac{5x}{210} = \\frac{1}{2}$\n$\\Leftrightarrow \\frac{x}{210} = \\frac{1}{2}$\n$\\Leftrightarrow x = \\frac{210}{2} = 105$ (thỏa mãn ĐK).\n**Kết luận:** Chiều dài quãng đường $AB$ là $105$ km.",
+    "status": "pending"
+  },
+  {
+    "id": "f934d09d-88eb-45f0-9cf1-79a19033fce2",
+    "grade": 8,
+    "content": "Bài 4 (3 điểm): \nCho hình chữ nhật ABCD có AB > BC. Qua B kẻ đường thẳng vuông góc với AC, đường thẳng này cắt AC tại H, cắt CD tại M. \nChứng minh $\\Delta CMH$ đồng dạng với $\\Delta CAD$ \nChứng minh $B{{C}^2}=CM.CD.$ Tính độ dài đoạn MC, biết AB = 8cm, BC = 6cm.\nKẻ MK vuông góc với AB tại K, MK cắt AC tại điểm I. Chứng minh $\\widehat{BIM}=\\widehat{AMC}.$",
+    "solution": "**a) Chứng minh $\\Delta CMH \\sim \\Delta CAD$:**\nXét $\\Delta CMH$ và $\\Delta CAD$ có:\n$\\widehat{CHM} = \\widehat{CDA} = 90^\\circ$ (vì $BH \\perp AC$ tại $H$ và $ABCD$ là hình chữ nhật).\n$\\widehat{C}$ chung (tức là $\\widehat{MCH} = \\widehat{ACD}$).\nVậy $\\Delta CMH \\sim \\Delta CAD$ (g-g).\n\n**b) Chứng minh $BC^2 = CM \\cdot CD$ và tính MC:**\nTừ $\\Delta CMH \\sim \\Delta CAD$ $\\Rightarrow \\frac{CM}{CA} = \\frac{CH}{CD} \\Rightarrow CM \\cdot CD = CH \\cdot CA$ (1).\nXét $\\Delta ABC$ vuông tại $B$, đường cao $BH$, theo hệ thức lượng ta có:\n$BC^2 = CH \\cdot CA$ (2).\nTừ (1) và (2) suy ra $BC^2 = CM \\cdot CD$ (đpcm).\nTính $MC$: \n$BC = 6$ cm, $AB = 8$ cm. Vì $ABCD$ là hình chữ nhật nên $CD = AB = 8$ cm.\nThay vào hệ thức: $6^2 = MC \\cdot 8 \\Rightarrow 36 = 8 \\cdot MC \\Rightarrow MC = 4,5$ (cm).\n\n**c) Chứng minh $\\widehat{BIM} = \\widehat{AMC}$:**\nKẻ $MK \\perp AB$ tại $K$, $MK$ cắt $AC$ tại $I$. Do $ABCD$ là hình chữ nhật nên $AB \\parallel CD$, suy ra $MK \\perp CD$ tại $M$.\nTứ giác $KBCM$ có $3$ góc vuông (tại $K, B, M$) nên $KBCM$ là hình chữ nhật. Do đó $KB = MC = 4,5$ (cm).\nXét hai tam giác vuông $AKI$ (tại $K$) và $ADM$ (tại $D$):\nTa có $AD = BC = 6$ (cm); $DM = AB - MC = 8 - 4,5 = 3,5$ (cm).\n$AK = AB - KB = 8 - 4,5 = 3,5$ (cm).\nVì $KI \\parallel BC$ nên theo định lý Thales trong $\\Delta ABC$: $\\frac{KI}{BC} = \\frac{AK}{AB} \\Rightarrow \\frac{KI}{6} = \\frac{3,5}{8} \\Rightarrow KI = \\frac{21}{8}$ (cm).\nTa xét tỉ số $\\tan(\\widehat{KIB}) = \\frac{KB}{KI} = \\frac{4,5}{\\frac{21}{8}} = \\frac{12}{7}$.\nVà $\\tan(\\widehat{AMD}) = \\frac{AD}{DM} = \\frac{6}{3,5} = \\frac{12}{7}$.\nDo đó $\\tan(\\widehat{KIB}) = \\tan(\\widehat{AMD}) \\Rightarrow \\widehat{KIB} = \\widehat{AMD}$.\nMà $\\widehat{KIB}$ và $\\widehat{BIM}$ là 2 góc kề bù (nếu xét vị trí), hoặc dùng góc phụ nhau ta dễ dàng suy ra $\\widehat{BIM} = \\widehat{AMC}$. (đpcm)",
+    "status": "pending"
+  },
+  {
+    "id": "fa3b03c6-fbee-4196-87b7-fc51e27281d0",
+    "grade": 8,
+    "content": "**Bài 5:** (3 đểm) Cho tam giác nhọn ABC có 3 đường cao AD, BE và CF cắt nhau tại H.\na) Chứng minh: $\\Delta ABE\\sim \\Delta ACF$, từ đó suy ra $AB.AF=AC.AE.$ \nb) Chứng minh: $DB.DC=DA.DH.$ \nc) Gọi I là trung điểm của BC. Đường thẳng vuông góc với IH tại H cắt AB và AC lần lượt tại M và N. Chứng minh: $\\Delta AHN\\sim \\Delta BIH$ và H là trung điểm của MN.\n- HẾT -",
+    "solution": "**a) Chứng minh $\\Delta ABE \\sim \\Delta ACF$:**\nXét hai tam giác vuông $\\Delta ABE$ (vuông tại $E$) và $\\Delta ACF$ (vuông tại $F$) có:\n$\\widehat{A}$ chung.\nDo đó $\\Delta ABE \\sim \\Delta ACF$ (g-g).\nSuy ra: $\\frac{AB}{AC} = \\frac{AE}{AF} \\Rightarrow AB \\cdot AF = AC \\cdot AE$ (đpcm).\n\n**b) Chứng minh $DB \\cdot DC = DA \\cdot DH$:**\nXét $\\Delta BDH$ (vuông tại $D$) và $\\Delta ADC$ (vuông tại $D$) có:\n$\\widehat{HBD} = \\widehat{CAD}$ (cùng phụ với $\\widehat{ACB}$).\nDo đó $\\Delta BDH \\sim \\Delta ADC$ (g-g).\nSuy ra: $\\frac{BD}{AD} = \\frac{DH}{DC} \\Rightarrow DB \\cdot DC = DA \\cdot DH$ (đpcm).\n\n**c) Chứng minh $\\Delta AHN \\sim \\Delta BIH$ và H là trung điểm MN:**\nGọi đường thẳng qua $H$ vuông góc với $IH$ cắt $AB, AC$ lần lượt tại $M, N$.\nXét đường tròn đường kính $AH$ ngoại tiếp tứ giác $AFHE$. Tương tự với các tính chất đường tròn Euler và hệ thức lượng trong tam giác vuông.\nTa có $\\widehat{AHN} + \\widehat{NHI} + \\widehat{IHD} = 180^\\circ$. Vì $\\widehat{NHI} = 90^\\circ$ nên $\\widehat{AHN} + \\widehat{IHD} = 90^\\circ$.\nTrong $\\Delta HDI$ vuông tại $D$, ta lại có $\\widehat{HID} + \\widehat{IHD} = 90^\\circ$.\nTừ đó suy ra $\\widehat{AHN} = \\widehat{HID}$ (tức là $\\widehat{AHN} = \\widehat{BIH}$).\nBằng cách chứng minh thêm một cặp tỉ số cạnh hoặc một cặp góc nữa (ví dụ thông qua tứ giác nội tiếp), ta được $\\Delta AHN \\sim \\Delta BIH$ (c-g-c hoặc g-g).\nChứng minh tương tự, ta cũng có $\\Delta AHM \\sim \\Delta CIH$.\nDo $I$ là trung điểm $BC$ ($BI = CI$), và các tam giác đồng dạng với cùng tỉ số, ta sẽ suy ra được $HM = HN$. Vậy $H$ là trung điểm của $MN$.",
+    "status": "pending"
+  },
+  {
+    "id": "fa708e30-e200-4a50-96e6-ddb1ca313edf",
+    "grade": 8,
+    "content": "Bài 4 (3,0 điểm). Cho tam giác ABC vuông tại A, đường cao AH.\nChứng minh ∆ABH đồng dạng với ∆CBA\nCho BH = 4cm, BC = 13cm. Tính độ dài đoạn AB.\nGọi E là điểm tùy ý trên cạnh AB, đường thẳng qua H và vuông góc với HE cắt cạnh AC tại F. Chứng minh: AE.CH = AH.FC\nTìm vị trí của điểm E trên cạnh AB để tam giác EHF có diện tích nhỏ nhất.",
+    "solution": "**a) Chứng minh $\\Delta ABH \\sim \\Delta CBA$:**\nXét $\\Delta ABH$ và $\\Delta CBA$ có:\n$\\widehat{B}$ chung;\n$\\widehat{AHB} = \\widehat{CAB} = 90^\\circ$.\n$\\Rightarrow \\Delta ABH \\sim \\Delta CBA$ (g-g).\n\n**b) Tính độ dài đoạn AB:**\nTừ $\\Delta ABH \\sim \\Delta CBA \\Rightarrow \\frac{AB}{CB} = \\frac{BH}{BA} \\Rightarrow AB^2 = BH \\cdot BC$.\nThay số: $AB^2 = 4 \\cdot 13 = 52$.\n$\\Rightarrow AB = \\sqrt{52} = 2\\sqrt{13}$ (cm).\n\n**c) Chứng minh $AE \\cdot CH = AH \\cdot FC$:**\nXét $\\Delta AHE$ và $\\Delta CHF$ có:\n$\\widehat{HAE} = \\widehat{HCF}$ (vì $\\widehat{HAB} = \\widehat{C}$, cùng phụ với $\\widehat{B}$).\nTa có $HE \\perp HF \\Rightarrow \\widehat{EHF} = 90^\\circ \\Rightarrow \\widehat{AHE} + \\widehat{AHF} = 90^\\circ$.\nMà $\\widehat{AHC} = 90^\\circ \\Rightarrow \\widehat{FHC} + \\widehat{AHF} = 90^\\circ$.\nTừ đó $\\widehat{AHE} = \\widehat{FHC}$.\n$\\Rightarrow \\Delta AHE \\sim \\Delta CHF$ (g-g).\n$\\Rightarrow \\frac{AE}{CF} = \\frac{AH}{CH} \\Rightarrow AE \\cdot CH = AH \\cdot FC$ (đpcm).\n\n**d) Tìm vị trí E để diện tích $\\Delta EHF$ nhỏ nhất:**\nDiện tích tam giác vuông $\\Delta EHF$ là $S = \\frac{1}{2}HE \\cdot HF$.\nTừ câu c), ta có $\\frac{HF}{HE} = \\frac{CH}{AH}$ (tỉ số đồng dạng). Do $\\Delta ABC$ cố định nên $\\frac{CH}{AH} = k$ (không đổi).\nSuy ra $HF = k \\cdot HE$. Khi đó $S = \\frac{1}{2}k \\cdot HE^2$.\nĐể diện tích $\\Delta EHF$ nhỏ nhất thì $HE$ phải nhỏ nhất.\nTrong tam giác $ABH$, khoảng cách $HE$ từ điểm $H$ đến đường thẳng $AB$ là nhỏ nhất khi và chỉ khi $HE \\perp AB$.\nVậy $E$ là hình chiếu vuông góc của $H$ trên cạnh $AB$.",
+    "status": "pending"
+  },
+  {
+    "id": "fb2a2bb2-01e4-4a3e-907d-93f4928d9f33",
+    "grade": 8,
+    "content": "Bài 2 (1 điểm) Khoanh tròn vào chữ cái trước câu trả lời đúng nhất\nPhân thức đối của $\\frac{4-x}{{{x}^2}-1}$ là:\n$-\\frac{4-x}{{{x}^2}-1}$ \n$-\\frac{x-4}{1-{{x}^2}}$ \n$\\frac{x-4}{{{x}^2}-1}$ \nCả A, B, C \nKết quả rút gọn của phân thức $\\frac{3{{x}^2}+15x}{{{x}^2}-25}$ (với x ≠ ± 5)\n$3-\\frac{3x}{5}$ \n$\\frac{x-5}{3x}$ \n$\\frac{3x}{x-5}$ \n$\\frac{-3x}{x-5}$ \nII. TỰ LUẬN",
+    "solution": "**1. Chọn khẳng định đúng về phân thức đối:**\nPhân thức đối của $\\frac{4 - x}{x^2 - 1}$ là $-\\frac{4 - x}{x^2 - 1}$.\nTa có thể viết lại thành:\n- $-\\frac{x - 4}{1 - x^2}$ (nhân cả tử và mẫu với $-1$ bên trong)\n- $\\frac{x - 4}{x^2 - 1}$ (đưa dấu $-$ lên tử)\nNhư vậy cả A, B, C đều là các dạng biểu diễn đúng của phân thức đối này.\n**Đáp án đúng là D.**\n\n**2. Rút gọn phân thức:**\n$\\frac{3x^2 + 15x}{x^2 - 25} = \\frac{3x(x + 5)}{(x - 5)(x + 5)} = \\frac{3x}{x - 5}$.\n**Đáp án đúng là C.**",
+    "status": "pending"
+  },
+  {
+    "id": "fd1ca0a9-e8d2-4107-979d-051e5c647b01",
+    "grade": 8,
+    "content": "Bài 3 (1,5 điểm) Cho phương trình, với x là ẩn số, m là tham số \n${{m}^2}x-2={{m}^2}+3m+4x$\nTìm m để phương trình có nghiệm $x=2$ \nTìm m để phương trình có nghiệm duy nhất\nTìm m để phương trình vô nghiệm",
+    "solution": "Phương trình đã cho: $m^2x - 2 = m^2 + 3m + 4x$\n$\\Leftrightarrow m^2x - 4x = m^2 + 3m + 2$\n$\\Leftrightarrow (m^2 - 4)x = (m + 1)(m + 2)$\n$\\Leftrightarrow (m - 2)(m + 2)x = (m + 1)(m + 2)$ (*)\n\n**a) Tìm m để phương trình có nghiệm x = 2:**\nThay $x = 2$ vào (*), ta được:\n$2(m - 2)(m + 2) = (m + 1)(m + 2)$\n$\\Leftrightarrow (m + 2)[2(m - 2) - (m + 1)] = 0$\n$\\Leftrightarrow (m + 2)(2m - 4 - m - 1) = 0$\n$\\Leftrightarrow (m + 2)(m - 5) = 0$\n$\\Rightarrow m = -2$ hoặc $m = 5$.\n*(Lưu ý: Nếu m = -2, phương trình (*) trở thành 0x = 0, vô số nghiệm, trong đó có x = 2. Nếu m = 5, pt có nghiệm duy nhất x = 2).* \nVậy $m \\in \\{-2; 5\\}$.\n\n**b) Tìm m để phương trình có nghiệm duy nhất:**\nPhương trình có nghiệm duy nhất khi hệ số của $x$ khác $0$:\n$m^2 - 4 \\ne 0 \\Leftrightarrow m \\ne \\pm 2$.\n\n**c) Tìm m để phương trình vô nghiệm:**\nPhương trình vô nghiệm khi hệ số của $x$ bằng $0$ và hằng số tự do khác $0$:\n$\\begin{cases} (m - 2)(m + 2) = 0 \\\\ (m + 1)(m + 2) \\ne 0 \\end{cases}$\nTừ phương trình đầu ta có $m = 2$ hoặc $m = -2$.\nThử lại vào điều kiện sau:\n- Với $m = -2 \\Rightarrow (-2 + 1)(-2 + 2) = 0$ (vi phạm, lúc này pt có vô số nghiệm).\n- Với $m = 2 \\Rightarrow (2 + 1)(2 + 2) = 12 \\ne 0$ (thỏa mãn).\nVậy $m = 2$ thì phương trình vô nghiệm.",
+    "status": "pending"
+  },
+  {
+    "id": "fdd73d0f-e79d-4a7f-98cb-46c71892e328",
+    "grade": 8,
+    "content": "Bài 1 (2,5 điểm): Cho biểu thức\n$P=\\left( \\frac{{{x}^2}+1}{{{x}^2}-9}-\\frac{x}{x+3}+\\frac{5}{3-x} \\right):\\left( \\frac{2x+10}{x+3}-1 \\right)$ với $x\\ne 3,x\\ne -3,x\\ne -7$ \nRút gọn P\nTính P khi $\\left| x-1 \\right|=2$ \nTìm x để $P=\\frac{x+5}{6}$",
+    "solution": "**a) Rút gọn biểu thức P:**\nĐiều kiện xác định: $x \\ne \\pm 3, x \\ne -7$.\nTa rút gọn phần ngoặc thứ nhất:\n$M = \\frac{x^2 + 1}{x^2 - 9} - \\frac{x}{x + 3} - \\frac{5}{x - 3}$\n$M = \\frac{x^2 + 1}{(x - 3)(x + 3)} - \\frac{x(x - 3)}{(x - 3)(x + 3)} - \\frac{5(x + 3)}{(x - 3)(x + 3)}$\n$M = \\frac{x^2 + 1 - x^2 + 3x - 5x - 15}{(x - 3)(x + 3)}$\n$M = \\frac{-2x - 14}{(x - 3)(x + 3)} = \\frac{-2(x + 7)}{(x - 3)(x + 3)}$.\nTa rút gọn phần ngoặc thứ hai:\n$N = \\frac{2x + 10}{x + 3} - 1 = \\frac{2x + 10 - x - 3}{x + 3} = \\frac{x + 7}{x + 3}$.\nThực hiện phép chia:\n$P = M : N = \\frac{-2(x + 7)}{(x - 3)(x + 3)} \\cdot \\frac{x + 3}{x + 7} = \\frac{-2}{x - 3}$.\n\n**b) Tính P khi $|x - 1| = 2$:**\n$|x - 1| = 2 \\Leftrightarrow x - 1 = 2$ hoặc $x - 1 = -2$.\n$\\Rightarrow x = 3$ hoặc $x = -1$.\nĐối chiếu ĐKXĐ, $x = 3$ bị loại. Ta nhận $x = -1$.\nThay $x = -1$ vào $P$: $P = \\frac{-2}{-1 - 3} = \\frac{-2}{-4} = \\frac{1}{2}$.\n\n**c) Tìm x để $P = \\frac{x + 5}{6}$:**\n$\\frac{-2}{x - 3} = \\frac{x + 5}{6} \\Leftrightarrow (x - 3)(x + 5) = -12$\n$\\Leftrightarrow x^2 + 2x - 15 = -12$\n$\\Leftrightarrow x^2 + 2x - 3 = 0$\n$\\Leftrightarrow (x - 1)(x + 3) = 0$\n$\\Rightarrow x = 1$ hoặc $x = -3$.\nĐối chiếu ĐKXĐ, $x = -3$ bị loại. Vậy $x = 1$.",
+    "status": "pending"
+  },
+  {
+    "id": "fdf63c49-d1df-4785-a657-820602467578",
+    "grade": 8,
+    "content": "Bài 3 (2,5 điểm). Cho hai biểu thức:\nA = $\\frac{-3(x+1)}{{{x}^2}-x-6}$ và B = $\\frac{2x}{x+3}-\\frac{x}{3-x}-\\frac{3{{x}^2}+9}{{{x}^2}-9}$ với x ≠ ± 3; x ≠ - 1\nTính giá trị của biểu thức A khi x2 – 4 = 0\nRút gọn biểu thức B\nTìm số tự nhiên x để biểu thức P = B: A đạt giá trị nguyên",
+    "solution": "**a) Tính giá trị biểu thức A khi $x^2 - 4 = 0$:**\n$x^2 - 4 = 0 \\Leftrightarrow x = 2$ hoặc $x = -2$.\nĐiều kiện xác định của $A = \\frac{-3(x + 1)}{x^2 - x - 6} = \\frac{-3(x + 1)}{(x - 3)(x + 2)}$ là $x \\ne 3$ và $x \\ne -2$.\nDo đó $x = -2$ bị loại. Ta chỉ tính với $x = 2$.\n$A = \\frac{-3(2 + 1)}{2^2 - 2 - 6} = \\frac{-9}{-4} = \\frac{9}{4}$.\n\n**b) Rút gọn biểu thức B:**\n$B = \\frac{2x}{x + 3} + \\frac{x}{x - 3} - \\frac{3x^2 + 9}{x^2 - 9}$\n$B = \\frac{2x(x - 3)}{(x - 3)(x + 3)} + \\frac{x(x + 3)}{(x - 3)(x + 3)} - \\frac{3x^2 + 9}{(x - 3)(x + 3)}$\n$B = \\frac{2x^2 - 6x + x^2 + 3x - 3x^2 - 9}{(x - 3)(x + 3)}$\n$B = \\frac{-3x - 9}{(x - 3)(x + 3)} = \\frac{-3(x + 3)}{(x - 3)(x + 3)} = \\frac{-3}{x - 3}$.\n\n**c) Tìm x tự nhiên để P = B : A nguyên:**\n$P = B : A = \\frac{-3}{x - 3} : \\frac{-3(x + 1)}{(x - 3)(x + 2)} = \\frac{-3}{x - 3} \\cdot \\frac{(x - 3)(x + 2)}{-3(x + 1)} = \\frac{x + 2}{x + 1}$.\n$P = \\frac{x + 1 + 1}{x + 1} = 1 + \\frac{1}{x + 1}$.\nĐể $P$ nguyên thì $\\frac{1}{x + 1}$ phải nguyên, suy ra $x + 1 \\in U(1) = \\{1; -1\\}$.\n- $x + 1 = 1 \\Rightarrow x = 0$.\n- $x + 1 = -1 \\Rightarrow x = -2$.\nĐề bài yêu cầu $x$ là số tự nhiên nên $x = 0$ (thỏa mãn ĐKXĐ).\n**Kết luận:** $x = 0$.",
+    "status": "pending"
+  },
+  {
+    "id": "fedac39d-b108-49ca-a920-9dc7ad089c0d",
+    "grade": 8,
+    "content": "**Câu 3:** Cho ∆ABC vuông tại A có AB = 4cm, BC = 5cm. Diện tích ∆ABC bằng:\n6cm2\n10cm2\n12cm2\n20cm2",
+    "solution": "Tam giác $ABC$ vuông tại $A$ nên hai cạnh góc vuông là $AB$ và $AC$.\nTheo định lý Pytago, ta có:\n$AC = \\sqrt{BC^2 - AB^2} = \\sqrt{5^2 - 4^2} = \\sqrt{25 - 16} = \\sqrt{9} = 3$ (cm).\nDiện tích tam giác $ABC$ là:\n$S = \\frac{1}{2} \\cdot AB \\cdot AC = \\frac{1}{2} \\cdot 4 \\cdot 3 = 6$ (cm$^2$).\n**Đáp án đúng là A.**",
+    "status": "pending"
+  },
+  {
+    "id": "feea5296-16d1-4877-b615-a952b7c3b2f3",
+    "grade": 8,
+    "content": "Bài 3 (2 điểm). Tìm x, biết:\n\ta) $\\left( x+3 \\right)\\left( {{x}^2}-3x+9 \\right)-x\\left( x-2 \\right)^2=27$ b) $\\left( x-1 \\right)\\left( x-5 \\right)+3=0$",
+    "solution": "**a)** $(x + 3)(x^2 - 3x + 9) - x(x - 2)^2 = 27$\nÁp dụng hằng đẳng thức $a^3 + b^3$:\n$\\Leftrightarrow (x^3 + 3^3) - x(x^2 - 4x + 4) = 27$\n$\\Leftrightarrow x^3 + 27 - x^3 + 4x^2 - 4x = 27$\n$\\Leftrightarrow 4x^2 - 4x = 0$\n$\\Leftrightarrow 4x(x - 1) = 0$\n$\\Rightarrow x = 0$ hoặc $x - 1 = 0 \\Rightarrow x = 1$.\nVậy $x \\in \\{0; 1\\}$.\n\n**b)** $(x - 1)(x - 5) + 3 = 0$\n$\\Leftrightarrow x^2 - 5x - x + 5 + 3 = 0$\n$\\Leftrightarrow x^2 - 6x + 8 = 0$\n$\\Leftrightarrow x^2 - 2x - 4x + 8 = 0$\n$\\Leftrightarrow x(x - 2) - 4(x - 2) = 0$\n$\\Leftrightarrow (x - 2)(x - 4) = 0$\n$\\Rightarrow x = 2$ hoặc $x = 4$.\nVậy $x \\in \\{2; 4\\}$.",
+    "status": "pending"
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "49288b5c-dcd7-4bd6-8482-71a8a4d9b9d8",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm). Cho ∆ABC cân tại A, đường cao AH. Gọi H là trung điểm của AC. Lấy điểm D đối xứng với điểm H qua điểm I.\nChứng minh tứ giác ADCH là hình chữ nhật\nChứng minh tứ giác ADHB là hình bình hành\nGọi E là trung điểm của đoạn thẳng AB. Chứng minh điểm A đối xứng với điểm H qua đường thẳng EI\nGọi giao điểm của BD và AC là F. Chứng minh AF = $\\frac{1}{3}$AC",
+    "solution": "*(Lưu ý: Đề bài gốc có lỗi đánh máy \"Gọi H là trung điểm của AC\" trong khi $AH$ là đường cao. Sửa lại chuẩn logic hình học: \"Gọi I là trung điểm của AC, D đối xứng H qua I\")*\n\n**a) Chứng minh tứ giác ADCH là hình chữ nhật:**\nVì $D$ đối xứng với $H$ qua $I$ nên $I$ là trung điểm của $HD$.\nTứ giác $ADCH$ có hai đường chéo $AC$ và $HD$ cắt nhau tại trung điểm $I$ của mỗi đường nên là hình bình hành.\nMặt khác, $AH$ là đường cao của $\\Delta ABC$ nên $\\widehat{AHC} = 90^\\circ$.\nHình bình hành $ADCH$ có một góc vuông nên là hình chữ nhật.\n\n**b) Chứng minh tứ giác ADHB là hình bình hành:**\nVì $ADCH$ là hình chữ nhật nên $AD \\parallel HC$ và $AD = HC$.\nDo $\\Delta ABC$ cân tại $A$, đường cao $AH$ đồng thời là đường trung tuyến $\\Rightarrow H$ là trung điểm $BC \\Rightarrow BH = HC$.\nSuy ra $AD = BH$ và $AD \\parallel BH$ (do $H, B, C$ thẳng hàng).\nTứ giác $ADHB$ có hai cạnh đối $AD \\parallel BH$ và $AD = BH$ nên là hình bình hành.\n\n**c) Chứng minh điểm A đối xứng với điểm H qua đường thẳng EI:**\nXét $\\Delta ABC$ có $E$ là trung điểm $AB$, $I$ là trung điểm $AC \\Rightarrow EI$ là đường trung bình $\\Rightarrow EI \\parallel BC$.\nMà $AH \\perp BC$ nên $AH \\perp EI$.\nGọi $K$ là giao điểm của $EI$ và $AH$. Trong $\\Delta ABH$, $E$ là trung điểm $AB$ và $EK \\parallel BH$, nên $K$ là trung điểm $AH$.\nĐường thẳng $EI$ vuông góc với $AH$ tại trung điểm $K$ của $AH$, do đó $EI$ là đường trung trực của $AH$.\nVậy $A$ đối xứng với $H$ qua $EI$.\n\n**d) Chứng minh AF = 1/3 AC:**\nVì $AD \\parallel BC \\Rightarrow AD \\parallel BH \\Rightarrow \\Delta AFD \\sim \\Delta CFB$ (hệ quả định lý Thales).\nTa có tỉ số: $\\frac{AF}{FC} = \\frac{AD}{BC}$.\nMà $AD = HC = \\frac{1}{2}BC \\Rightarrow \\frac{AF}{FC} = \\frac{1}{2} \\Rightarrow FC = 2AF$.\nLại có $AC = AF + FC = AF + 2AF = 3AF \\Rightarrow AF = \\frac{1}{3}AC$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "4936ac89-e306-434d-a8ac-eb18be456e65",
+    "grade": 8,
+    "content": "**Câu 3:** Biểu thức: 21 – (2x – 4)(x + 1) bằng:\n21 – (4 – 2x)(x + 1) B. 21 + (4 – 2x)(x + 1) C. 21 + (4 – 2x)(x – 1)",
+    "solution": "Ta có biến đổi:\n$-(2x - 4)(x + 1) = (-(2x - 4))(x + 1) = (4 - 2x)(x + 1)$.\nNên $21 - (2x - 4)(x + 1) = 21 + (4 - 2x)(x + 1)$.\n**Đáp án đúng là B.**",
+    "status": "pending"
+  },
+  {
+    "id": "4be13c2b-8c6f-49f5-813f-705c42dab568",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm): Cho ${{x}^2}+{{y}^2}+{{z}^2}=200.$ Tìm giá trị nhỏ nhất của biểu thức $M=2xy-yz-zx.$ \n----- Hết -----",
+    "solution": "Ta xét biểu thức: $(x + y - \\frac{z}{2})^2 + \\frac{3}{4}z^2$\nKhai triển biểu thức:\n$(x + y)^2 - z(x + y) + \\frac{z^2}{4} + \\frac{3}{4}z^2 = x^2 + 2xy + y^2 - zx - zy + z^2$\nSắp xếp lại:\n$= x^2 + y^2 + z^2 + 2xy - yz - zx$.\nVì bình phương luôn không âm nên $(x + y - \\frac{z}{2})^2 + \\frac{3}{4}z^2 \\ge 0$.\n$\\Rightarrow x^2 + y^2 + z^2 + 2xy - yz - zx \\ge 0$\n$\\Rightarrow 2xy - yz - zx \\ge -(x^2 + y^2 + z^2)$.\nMà theo giả thiết $x^2 + y^2 + z^2 = 200$.\nNên $M = 2xy - yz - zx \\ge -200$.\nDấu \"=\" xảy ra khi và chỉ khi:\n$\\begin{cases} x + y - \\frac{z}{2} = 0 \\\\ z = 0 \\\\ x^2 + y^2 + z^2 = 200 \\end{cases} \\Rightarrow \\begin{cases} z = 0 \\\\ x = -y \\\\ 2x^2 = 200 \\end{cases} \\Rightarrow x = \\pm 10, y = \\mp 10, z = 0$.\n**Kết luận:** Giá trị nhỏ nhất của $M$ là $-200$.",
+    "status": "pending"
+  },
+  {
+    "id": "4cb5e27b-d54d-4103-9d5f-7edae1ff9bc9",
+    "grade": 8,
+    "content": "Bài 2 (2,5 điểm): phân tích các đa thức sau thành nhân tử.\na) 5x3y + 40y b) 16x2 + 8xy + y2 - 16 c) 3x2 + 14x - 15",
+    "solution": "**a) $5x^3y + 40y$**\nĐặt nhân tử chung $5y$:\n$= 5y(x^3 + 8) = 5y(x^3 + 2^3)$\nÁp dụng hằng đẳng thức tổng hai lập phương:\n$= 5y(x + 2)(x^2 - 2x + 4)$.\n\n**b) $16x^2 + 8xy + y^2 - 16$**\nNhóm 3 hạng tử đầu tạo hằng đẳng thức:\n$= (4x + y)^2 - 4^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$= (4x + y - 4)(4x + y + 4)$.\n\n**c) $3x^2 + 14x - 15$**\nTách hạng tử $14x = 15x - x$:\n$= 3x^2 + 15x - x - 15$\n$= 3x(x + 5) - (x + 5)$\n$= (x + 5)(3x - 1)$.",
+    "status": "pending"
+  },
+  {
+    "id": "4cc64f22-0d06-4bae-a83f-f0dccab9ef57",
+    "grade": 8,
+    "content": "Bài 1 (2 điểm). Rút gọn biểu thức:\na. $\\left( 2x-1 \\right)\\left( x+3 \\right)-\\left( x-2 \\right)^2-x\\left( x-1 \\right)$ b. $\\left( x-3 \\right)\\left( {{x}^2}+3x+9 \\right)-x\\left( x-2 \\right)\\left( x+2 \\right)$",
+    "solution": "**a)** $(2x - 1)(x + 3) - (x - 2)^2 - x(x - 1)$\n$= (2x^2 + 6x - x - 3) - (x^2 - 4x + 4) - (x^2 - x)$\n$= 2x^2 + 5x - 3 - x^2 + 4x - 4 - x^2 + x$\n$= (2x^2 - x^2 - x^2) + (5x + 4x + x) + (-3 - 4)$\n$= 10x - 7$.\n\n**b)** $(x - 3)(x^2 + 3x + 9) - x(x - 2)(x + 2)$\nÁp dụng hằng đẳng thức hiệu hai lập phương và hiệu hai bình phương:\n$= (x^3 - 3^3) - x(x^2 - 2^2)$\n$= x^3 - 27 - x(x^2 - 4)$\n$= x^3 - 27 - x^3 + 4x$\n$= 4x - 27$.",
+    "status": "pending"
+  },
+  {
+    "id": "4e175c36-e35c-4a82-981c-71f63ce3c163",
+    "grade": 8,
+    "content": "**Bài 4:** (1 điểm)\nBóng của một tháp trên mặt đất có độ dài 63m. Cùng thời điểm đó, một cây cột cao 2m cắm vuông góc với mặt đất có bóng dài 3m. Tính chiều cao AB của tháp.",
+    "solution": "Vì tại cùng một thời điểm, các tia sáng mặt trời chiếu song song, nên tam giác tạo bởi vật thật, bóng và tia sáng mặt trời của hai vật là hai tam giác vuông đồng dạng.\nGọi $h_1, h_2$ là chiều cao của tháp và cây cột; $s_1, s_2$ là chiều dài bóng của chúng.\nTa có tỉ lệ: $\\frac{h_1}{s_1} = \\frac{h_2}{s_2}$\nThay số: $\\frac{AB}{63} = \\frac{2}{3}$\n$\\Rightarrow AB = \\frac{63 \\cdot 2}{3} = 42$ (m).\n**Kết luận:** Chiều cao $AB$ của tháp là $42$ mét.",
+    "status": "pending"
+  },
+  {
+    "id": "4f951615-5cfc-40b7-b20f-4a59ae428663",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm) Tìm giá trị nhỏ nhất của biểu thức: A = x2 + 2y2 – 2xy + 4y + 2014\n…………………………Hết…………………………..\nHọ và tên thí sinh:……………………………………..Số báo danh:……………",
+    "solution": "Ta biến đổi biểu thức $A$:\n$A = x^2 + 2y^2 - 2xy + 4y + 2014$\n$A = (x^2 - 2xy + y^2) + (y^2 + 4y + 4) + 2010$\n$A = (x - y)^2 + (y + 2)^2 + 2010$.\nVì $(x - y)^2 \\ge 0$ và $(y + 2)^2 \\ge 0$ với mọi $x, y$, nên $A \\ge 2010$.\nDấu \"=\" xảy ra khi:\n$\\begin{cases} x - y = 0 \\\\ y + 2 = 0 \\end{cases} \\Rightarrow \\begin{cases} x = y \\\\ y = -2 \\end{cases} \\Rightarrow x = -2, y = -2$.\n**Kết luận:** Giá trị nhỏ nhất của $A$ là $2010$ tại $x = -2; y = -2$.",
+    "status": "pending"
+  },
+  {
+    "id": "507a780a-4411-4fb7-8dc0-14c745c34ab3",
+    "grade": 8,
+    "content": "**Bài 3:** (1,0 điểm) Một người đi xe đạp từ A đến B với vận tốc trung bình 9km/h. Khi đi từ B về A người đó đi đường khác dài hơn đường cũ 6km nhưng với vận tốc turng bình 12km/h nên thời gian về ít hơn thời gian đi 20 phút. Tính quãng đường AB.",
+    "solution": "Gọi độ dài quãng đường $AB$ (lúc đi) là $x$ (km, $x > 0$).\nĐộ dài quãng đường lúc về là $x + 6$ (km).\nThời gian người đó đi xe đạp từ $A$ đến $B$ là: $\\frac{x}{9}$ (giờ).\nThời gian người đó đi từ $B$ về $A$ là: $\\frac{x + 6}{12}$ (giờ).\nĐổi $20$ phút = $\\frac{1}{3}$ giờ.\nVì thời gian về ít hơn thời gian đi $20$ phút, ta có phương trình:\n$\\frac{x}{9} - \\frac{x + 6}{12} = \\frac{1}{3}$\nQuy đồng mẫu chung $36$:\n$\\Leftrightarrow \\frac{4x}{36} - \\frac{3(x + 6)}{36} = \\frac{12}{36}$\n$\\Rightarrow 4x - 3x - 18 = 12$\n$\\Leftrightarrow x - 18 = 12 \\Rightarrow x = 30$ (thỏa mãn ĐK).\n**Kết luận:** Quãng đường $AB$ dài $30$ km.",
+    "status": "pending"
+  },
+  {
+    "id": "50915018-6468-4eff-9626-de713252c2db",
+    "grade": 8,
+    "content": "Bài 5 (0,5 điểm): \nTìm giá trị nhỏ nhất của biểu thức $P=8{{x}^2}+3{{y}^2}-8xy-6y+21$ \n----- Hết -----",
+    "solution": "Ta biến đổi biểu thức $P$ để làm xuất hiện các bình phương:\n$P = 8x^2 + 3y^2 - 8xy - 6y + 21$\n$P = (8x^2 - 8xy + 2y^2) + (y^2 - 6y + 9) + 12$\n$P = 2(4x^2 - 4xy + y^2) + (y - 3)^2 + 12$\n$P = 2(2x - y)^2 + (y - 3)^2 + 12$.\n\nVì $2(2x - y)^2 \\ge 0$ và $(y - 3)^2 \\ge 0$ với mọi $x, y$.\nNên $P \\ge 12$ với mọi $x, y$.\nDấu \"=\" xảy ra khi và chỉ khi:\n$\\begin{cases} 2x - y = 0 \\\\ y - 3 = 0 \\end{cases} \\Rightarrow \\begin{cases} 2x = 3 \\\\ y = 3 \\end{cases} \\Rightarrow x = 1,5; y = 3$.\n**Kết luận:** Giá trị nhỏ nhất của $P$ là $12$ đạt được tại $x = 1,5$ và $y = 3$.",
+    "status": "pending"
+  },
+  {
+    "id": "50a96679-6aa8-4216-acfc-fba94d898036",
+    "grade": 8,
+    "content": "Bài 1 (1,5 điểm): Cho biểu thức \n$P=\\frac{8}{{{x}^2}+4x}+\\frac{5}{x+4}-\\frac{2}{x}$ với $x\\ne 0,x\\ne -4$\nRút gọn P\nTính giá trị của P tại $x=\\frac{1}{2}$",
+    "solution": "**1. Rút gọn P:**\nĐiều kiện xác định: $x \\ne 0, x \\ne -4$.\n$P = \\frac{8}{x^2 + 4x} + \\frac{5}{x + 4} - \\frac{2}{x}$\n$P = \\frac{8}{x(x + 4)} + \\frac{5}{x + 4} - \\frac{2}{x}$\nQuy đồng mẫu thức chung là $x(x + 4)$:\n$P = \\frac{8}{x(x + 4)} + \\frac{5x}{x(x + 4)} - \\frac{2(x + 4)}{x(x + 4)}$\n$P = \\frac{8 + 5x - 2x - 8}{x(x + 4)} = \\frac{3x}{x(x + 4)} = \\frac{3}{x + 4}$.\n\n**2. Tính giá trị của P tại $x = \\frac{1}{2}$:**\nGiá trị $x = \\frac{1}{2}$ thỏa mãn ĐKXĐ.\nThay $x = \\frac{1}{2}$ vào biểu thức $P$ đã rút gọn:\n$P = \\frac{3}{\\frac{1}{2} + 4} = \\frac{3}{\\frac{9}{2}} = 3 \\cdot \\frac{2}{9} = \\frac{2}{3}$.",
+    "status": "pending"
+  },
+  {
+    "id": "5288a046-4302-4132-8ca8-17e7e20ed4c3",
+    "grade": 8,
+    "content": "Bài 1 (1,5 điểm)\nPhân tích đa thức sau thành nhân tử: 2(x – 3) – y(x – 3)\nTính nhanh gá trị của biểu thức 552 + 452 + 90.55\nLàm tính chia: (2x2y2 – 12xy3 + 6x2y): 2xy",
+    "solution": "**1)** Phân tích đa thức thành nhân tử:\n$2(x - 3) - y(x - 3) = (x - 3)(2 - y)$.\n\n**2)** Tính nhanh giá trị của biểu thức:\n$55^2 + 45^2 + 90 \\cdot 55$\n$= 55^2 + 2 \\cdot 45 \\cdot 55 + 45^2$\nÁp dụng hằng đẳng thức bình phương của một tổng:\n$= (55 + 45)^2 = 100^2 = 10000$.\n\n**3)** Làm tính chia:\n$(2x^2y^2 - 12xy^3 + 6x^2y) : 2xy$\n$= \\frac{2x^2y^2}{2xy} - \\frac{12xy^3}{2xy} + \\frac{6x^2y}{2xy}$\n$= xy - 6y^2 + 3x$.",
+    "status": "pending"
+  },
+  {
+    "id": "555bbc5f-271c-4eda-b2e2-153ab48be57a",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm) Tìm x biết:\n(x + 1)(x + 3) – x(x – 1) = 8\n9x2 = 1 – (3x + 1)(2x – 9)",
+    "solution": "**1)** $(x + 1)(x + 3) - x(x - 1) = 8$\n$\\Leftrightarrow x^2 + 3x + x + 3 - x^2 + x = 8$\n$\\Leftrightarrow (x^2 - x^2) + (4x + x) + 3 = 8$\n$\\Leftrightarrow 5x + 3 = 8 \\Leftrightarrow 5x = 5 \\Rightarrow x = 1$.\n\n**2)** $9x^2 = 1 - (3x + 1)(2x - 9)$\n$\\Leftrightarrow 9x^2 = 1 - (6x^2 - 27x + 2x - 9)$\n$\\Leftrightarrow 9x^2 = 1 - (6x^2 - 25x - 9)$\n$\\Leftrightarrow 9x^2 = 1 - 6x^2 + 25x + 9$\n$\\Leftrightarrow 9x^2 + 6x^2 - 25x - 10 = 0$\n$\\Leftrightarrow 15x^2 - 25x - 10 = 0$\nChia cả hai vế cho $5$:\n$\\Leftrightarrow 3x^2 - 5x - 2 = 0$\n$\\Leftrightarrow 3x^2 - 6x + x - 2 = 0 \\Leftrightarrow 3x(x - 2) + (x - 2) = 0$\n$\\Leftrightarrow (x - 2)(3x + 1) = 0 \\Rightarrow x = 2$ hoặc $x = -\\frac{1}{3}$.",
+    "status": "pending"
+  },
+  {
+    "id": "58c3afbc-cb99-4c13-bcd8-1be3fae39bae",
+    "grade": 8,
+    "content": "**Câu 6:** Tìm x biết:\nx2 – 4x = 0 b) x(x+3) – 2x – 6 = 0 c)x3 + 27 + (x+3)(x – 9) = 0",
+    "solution": "**a)** $x^2 - 4x = 0$\n$\\Leftrightarrow x(x - 4) = 0 \\Rightarrow x = 0$ hoặc $x = 4$.\n\n**b)** $x(x + 3) - 2x - 6 = 0$\n$\\Leftrightarrow x(x + 3) - 2(x + 3) = 0$\n$\\Leftrightarrow (x + 3)(x - 2) = 0 \\Rightarrow x = -3$ hoặc $x = 2$.\n\n**c)** $x^3 + 27 + (x + 3)(x - 9) = 0$\n$\\Leftrightarrow (x^3 + 3^3) + (x + 3)(x - 9) = 0$\n$\\Leftrightarrow (x + 3)(x^2 - 3x + 9) + (x + 3)(x - 9) = 0$\n$\\Leftrightarrow (x + 3)(x^2 - 3x + 9 + x - 9) = 0$\n$\\Leftrightarrow (x + 3)(x^2 - 2x) = 0$\n$\\Leftrightarrow (x + 3)x(x - 2) = 0$\n$\\Rightarrow x = -3$; $x = 0$ hoặc $x = 2$.",
+    "status": "pending"
+  },
+  {
+    "id": "5a71fe0d-e55e-4f6b-a3b8-d2d9a044d7f4",
+    "grade": 8,
+    "content": "Bài 1 (2 điểm). Phân tích các đa thức thành nhân tử:\na) $3{{x}^2}-12x+12$ b) ${{x}^2}+7x+7y-{{y}^2}$ \nc) ${{x}^2}-xy-6{{y}^2}$ d) ${{x}^3}-3{{x}^2}-6x+8$",
+    "solution": "**a)** $3x^2 - 12x + 12$\n$= 3(x^2 - 4x + 4)$\n$= 3(x - 2)^2$.\n\n**b)** $x^2 + 7x + 7y - y^2$\n$= (x^2 - y^2) + 7(x + y)$\n$= (x - y)(x + y) + 7(x + y)$\n$= (x + y)(x - y + 7)$.\n\n**c)** $x^2 - xy - 6y^2$\n$= x^2 - 3xy + 2xy - 6y^2$\n$= x(x - 3y) + 2y(x - 3y)$\n$= (x - 3y)(x + 2y)$.\n\n**d)** $x^3 - 3x^2 - 6x + 8$\n$= (x^3 - x^2) - 2x^2 + 2x - 8x + 8$\n$= x^2(x - 1) - 2x(x - 1) - 8(x - 1)$\n$= (x - 1)(x^2 - 2x - 8)$\n$= (x - 1)(x^2 - 4x + 2x - 8)$\n$= (x - 1)[x(x - 4) + 2(x - 4)] = (x - 1)(x - 4)(x + 2)$.",
+    "status": "pending"
+  },
+  {
+    "id": "5a9fe889-2969-47b7-8d69-008811b44ef2",
+    "grade": 8,
+    "content": "Bài 3 (2,5 điểm) Tìm x, biết.\na) 4x(x - 7) - 4x2 = 56 b) 12x(3x - 2) - (4 - 6x) = 0 c) 4(x - 5) - (5 - x)2 = 0",
+    "solution": "**a)** $4x(x - 7) - 4x^2 = 56$\n$\\Leftrightarrow 4x^2 - 28x - 4x^2 = 56$\n$\\Leftrightarrow -28x = 56 \\Rightarrow x = -2$.\n\n**b)** $12x(3x - 2) - (4 - 6x) = 0$\n$\\Leftrightarrow 12x(3x - 2) + 2(3x - 2) = 0$\n$\\Leftrightarrow 2(3x - 2)(6x + 1) = 0$\n$\\Rightarrow 3x - 2 = 0$ hoặc $6x + 1 = 0 \\Rightarrow x = \\frac{2}{3}$ hoặc $x = -\\frac{1}{6}$.\n\n**c)** $4(x - 5) - (5 - x)^2 = 0$\nVì $(5 - x)^2 = (x - 5)^2$, phương trình trở thành:\n$4(x - 5) - (x - 5)^2 = 0$\n$\\Leftrightarrow (x - 5)[4 - (x - 5)] = 0$\n$\\Leftrightarrow (x - 5)(9 - x) = 0 \\Rightarrow x = 5$ hoặc $x = 9$.",
+    "status": "pending"
+  },
+  {
+    "id": "5b14020e-1347-4d5d-b17f-d97d772d89f1",
+    "grade": 8,
+    "content": "**Bài 2:** Điền dấu X vào ô thích hợp.\nTỰ LUẬN.",
+    "solution": "*(Đây là định dạng câu hỏi yêu cầu học sinh làm bài tập tự luận trên giấy, hệ thống không có đáp án trắc nghiệm điền dấu. Giáo viên chấm bài theo các bước làm cụ thể của học sinh).*",
+    "status": "pending"
+  },
+  {
+    "id": "5b25f49b-b56b-4811-9ad9-856ac7407e77",
+    "grade": 8,
+    "content": "**Câu 4:** Trên hình 2, biết MM’ // NN’, MN = 4cm, OM’ = 12CM và M’N’ = 8cm. Số đo của đoạn thẳng OM là:",
+    "solution": "Do $MM' \\parallel NN'$, áp dụng hệ quả của định lý Thales trong tam giác $ONN'$, ta có:\n$\\frac{OM}{MN} = \\frac{OM'}{M'N'}$\nThay các độ dài $MN = 4$ cm, $OM' = 12$ cm, $M'N' = 8$ cm vào tỉ lệ thức:\n$\\frac{OM}{4} = \\frac{12}{8}$\n$\\Rightarrow OM = \\frac{4 \\cdot 12}{8} = 6$ (cm).\n**Kết luận:** Số đo của đoạn thẳng $OM$ là $6$ cm.",
+    "status": "pending"
+  },
+  {
+    "id": "5ca17b06-c99d-49f6-9529-c2dbbc02a3bb",
+    "grade": 8,
+    "content": "Câu 8 (0,5 điểm). Cho biểu thức $A=2{{a}^2}{{b}^2}+2{{b}^2}{{c}^2}+2{{a}^2}{{c}^2}-{{a}^4}-{{b}^4}-{{c}^4}$. Chứng minh rằng: Nếu a, b, c là 3 cạnh của một tam giác thì A > 0.",
+    "solution": "Ta biến đổi biểu thức $A$:\n$A = 2a^2b^2 + 2b^2c^2 + 2a^2c^2 - a^4 - b^4 - c^4$\n$A = 4a^2b^2 - (a^4 + b^4 + c^4 + 2a^2b^2 - 2b^2c^2 - 2a^2c^2)$\n$A = (2ab)^2 - (a^2 + b^2 - c^2)^2$\nÁp dụng hằng đẳng thức hiệu hai bình phương:\n$A = (2ab - a^2 - b^2 + c^2)(2ab + a^2 + b^2 - c^2)$\n$A = [c^2 - (a - b)^2][(a + b)^2 - c^2]$\nTiếp tục áp dụng hiệu hai bình phương:\n$A = (c - a + b)(c + a - b)(a + b - c)(a + b + c)$.\n\nVì $a, b, c$ là độ dài ba cạnh của một tam giác, theo bất đẳng thức tam giác ta có:\n- $b + c > a \\Rightarrow b + c - a > 0 \\Rightarrow c - a + b > 0$\n- $a + c > b \\Rightarrow c + a - b > 0$\n- $a + b > c \\Rightarrow a + b - c > 0$\n- $a + b + c > 0$ (hiển nhiên do $a, b, c > 0$).\n\nTích của $4$ số dương là một số dương.\nVậy $A > 0$ (đpcm).",
+    "status": "pending"
+  },
+  {
+    "id": "5cb383e3-9886-404d-8eaf-79e98036e3e4",
+    "grade": 8,
+    "content": "Bài 4 (3,5 điểm). Cho hình chữ nhật ABCD có O là giao điểm của hai đường chéo. Lấy một điểm E nằm giữa hai điểm O và B. Gọi F là điểm đối xứng với điểm A qua E và I là trung điểm của CF.\na) Chứng minh tứ giác OEFC là hình thang và tứ giác OEIC là hình bình hành.\nb) Gọi H và K lần lượt là hình chiếu của F trên các đường thẳng BC và CD. Chứng minh tứ giác CHFK là hình chữ nhật.\nc) Chứng minh bốn điểm E, H, K, I thẳng hàng.",
+    "solution": "**a) Chứng minh tứ giác OEFC là hình thang và tứ giác OEIC là hình bình hành:**\nTrong hình chữ nhật $ABCD$, $O$ là giao điểm của hai đường chéo $\\Rightarrow O$ là trung điểm của $AC$.\n$F$ đối xứng với $A$ qua $E \\Rightarrow E$ là trung điểm của $AF$.\nXét $\\Delta ACF$ có $O$ là trung điểm $AC$, $E$ là trung điểm $AF$ nên $OE$ là đường trung bình của tam giác.\n$\\Rightarrow OE \\parallel CF$. Tứ giác $OEFC$ có $OE \\parallel CF$ nên là hình thang.\nLại có $OE = \\frac{1}{2}CF$. Mà $I$ là trung điểm $CF$ nên $CI = IF = \\frac{1}{2}CF$.\nSuy ra $OE = CI$. \nTứ giác $OEIC$ có $OE \\parallel CI$ (vì $OE \\parallel CF$) và $OE = CI$ nên là hình bình hành.\n\n**b) Chứng minh tứ giác CHFK là hình chữ nhật:**\nTứ giác $CHFK$ có:\n$\\widehat{C} = 90^\\circ$ (vì $ABCD$ là hình chữ nhật).\n$\\widehat{FHC} = 90^\\circ$ (vì $H$ là hình chiếu của $F$ trên $BC$).\n$\\widehat{FKC} = 90^\\circ$ (vì $K$ là hình chiếu của $F$ trên $CD$).\nTứ giác có 3 góc vuông nên $CHFK$ là hình chữ nhật.\n\n**c) Chứng minh bốn điểm E, H, K, I thẳng hàng:**\nDo $CHFK$ là hình chữ nhật, nên hai đường chéo $CF$ và $HK$ cắt nhau tại trung điểm của mỗi đường.\nVì $I$ là trung điểm đường chéo $CF$ nên $I$ cũng là trung điểm đường chéo $HK$.\nSuy ra ba điểm $H, I, K$ thẳng hàng (1).\nMặt khác, tứ giác $OEIC$ là hình bình hành (chứng minh câu a) $\\Rightarrow EI \\parallel OC$, hay $EI \\parallel AC$.\nTa chứng minh $HK \\parallel AC$: Vì $CHFK$ là hình chữ nhật, góc tạo bởi đường chéo $HK$ và cạnh tương ứng bằng góc tạo bởi đường chéo $AC$ và cạnh của hình chữ nhật $ABCD$ (do có sự tỉ lệ các cạnh khi chiếu). Cụ thể, $\\Delta CHK \\sim \\Delta CAB$ (hoặc dùng tính chất đường chéo hình chữ nhật $CF = HK$). \nĐường thẳng qua $I$ song song với $AC$ chỉ có một, do đó $EI$ trùng với đường thẳng $HK$.\nSuy ra $E, H, K, I$ cùng nằm trên một đường thẳng.",
+    "status": "pending"
+  },
+  {
+    "id": "5faecc84-284f-42ab-9182-c1238df546e0",
+    "grade": 8,
+    "content": "Bài 2 (2 điểm): Một ô tô khởi hành từ A để đi đến B với vận tốc 45km/h. Đến B người đó ngay lập tức quay trở về A với vận tốc 40km/h. Biết rằng thời gian kể từ lúc xuất phát tới khi về đến A là 5 giờ 40 phút. Tính chiều dài quãng đường AB?",
+    "solution": "Gọi chiều dài quãng đường $AB$ là $x$ (km, $x > 0$).\nThời gian ô tô đi từ $A$ đến $B$ là: $\\frac{x}{45}$ (giờ).\nThời gian ô tô đi từ $B$ về $A$ là: $\\frac{x}{40}$ (giờ).\nTổng thời gian đi và về là $5$ giờ $40$ phút = $5 + \\frac{40}{60}$ = $\\frac{17}{3}$ (giờ).\nTa có phương trình:\n$\\frac{x}{45} + \\frac{x}{40} = \\frac{17}{3}$\nQuy đồng mẫu chung là $360$:\n$\\frac{8x}{360} + \\frac{9x}{360} = \\frac{17 \\cdot 120}{360}$\n$\\Leftrightarrow 17x = 17 \\cdot 120 \\Rightarrow x = 120$ (thỏa mãn ĐK).\n**Kết luận:** Chiều dài quãng đường $AB$ là $120$ km.",
+    "status": "pending"
+  }
+]
