@@ -266,21 +266,44 @@ export default function AutoExamPage() {
               <div className="border border-slate-200 rounded-xl p-4">
                 <label className="block text-sm font-semibold text-slate-700 mb-3">📚 Chuyên đề thực tế</label>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {categories.filter(c => c.grade === grade && c.parent_id !== null).map(c => (
-                    <button
-                      key={c.id}
-                      onClick={() => toggleTopic(c.id)}
-                      className={cn(
-                        "px-3 py-1.5 text-xs font-medium rounded-lg border transition-all",
-                        topics.includes(c.id) ? "border-blue-400 bg-blue-50 text-blue-700" : "border-slate-200 text-slate-500 hover:border-blue-300"
-                      )}
-                    >
-                      {c.name}
-                    </button>
-                  ))}
-                  {categories.filter(c => c.grade === grade && c.parent_id !== null).length === 0 && (
-                    <span className="text-xs text-slate-500 italic">Không có chuyên đề nào cho lớp {grade}.</span>
-                  )}
+                  {(() => {
+                    // Helper function to sort by sort_order first, then natural name sorting
+                    const sortCats = (a: Category, b: Category) => {
+                      if (a.sort_order !== b.sort_order && a.sort_order != null && b.sort_order != null) {
+                        return a.sort_order - b.sort_order;
+                      }
+                      return (a.name || '').localeCompare(b.name || '', 'vi', { numeric: true, sensitivity: 'base' });
+                    };
+
+                    // Sắp xếp các danh mục con theo thứ tự của danh mục cha
+                    const roots = categories.filter(c => c.grade === grade && c.parent_id === null).sort(sortCats);
+                    const orderedLeafCats: typeof categories = [];
+                    
+                    roots.forEach(root => {
+                      const children = categories.filter(c => c.parent_id === root.id).sort(sortCats);
+                      orderedLeafCats.push(...children);
+                    });
+                    
+                    const remaining = categories.filter(c => c.grade === grade && c.parent_id !== null && !orderedLeafCats.some(o => o.id === c.id)).sort(sortCats);
+                    orderedLeafCats.push(...remaining);
+
+                    if (orderedLeafCats.length === 0) {
+                      return <span className="text-xs text-slate-500 italic">Không có chuyên đề nào cho lớp {grade}.</span>;
+                    }
+
+                    return orderedLeafCats.map(c => (
+                      <button
+                        key={c.id}
+                        onClick={() => toggleTopic(c.id)}
+                        className={cn(
+                          "px-3 py-1.5 text-xs font-medium rounded-lg border transition-all",
+                          topics.includes(c.id) ? "border-blue-400 bg-blue-50 text-blue-700" : "border-slate-200 text-slate-500 hover:border-blue-300"
+                        )}
+                      >
+                        {c.name}
+                      </button>
+                    ));
+                  })()}
                 </div>
                 
                 {topics.length > 0 && (

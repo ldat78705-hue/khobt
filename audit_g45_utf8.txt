@@ -1,0 +1,402 @@
+﻿â—‡ injected env (8) from .env.local // tip: âŒ auth for agents [www.vestauth.com]
+
+======================================================
+Báº¯t Ä‘áº§u quĂ©t dá»¯ liá»‡u Khá»‘i Lá»›p 5...
+======================================================
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 1: Ă”N Táº¬P VĂ€ Bá»” SUNG
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 1: Ă”n táº­p sá»‘ tá»± nhiĂªn] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 2: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 3: Ă”n táº­p phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 4: PhĂ¢n sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 5: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 6: Cá»™ng, trá»« hai phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 7: Há»—n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 8: Ă”n táº­p hĂ¬nh há»c vĂ  Ä‘o lÆ°á»ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 9: Luyá»‡n táº­p chung] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+âœ… **TOĂ€N Bá»˜ CHá»¦ Äá»€ 1: Ă”N Táº¬P VĂ€ Bá»” SUNG - ÄĂƒ Äáº T - CHĂNH XĂC 100%**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 10: KhĂ¡i niá»‡m sá»‘ tháº­p phĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 11: So sĂ¡nh cĂ¡c sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 12: Viáº¿t sá»‘ Ä‘o Ä‘áº¡i lÆ°á»£ng dÆ°á»›i dáº¡ng sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 13: LĂ m trĂ²n sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 14: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 3: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 15: Ki-lĂ´-mĂ©t vuĂ´ng. HĂ©c-ta] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 16: CĂ¡c Ä‘Æ¡n vá»‹ Ä‘o diá»‡n tĂ­ch] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 17: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m vá»›i má»™t sá»‘ Ä‘Æ¡n vá»‹ Ä‘o Ä‘áº¡i lÆ°á»£ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 18: Luyá»‡n táº­p chung] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+âœ… **TOĂ€N Bá»˜ CHá»¦ Äá»€ 3: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH - ÄĂƒ Äáº T - CHĂNH XĂC 100%**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 4: CĂC PHĂ‰P TĂNH Vá»I Sá» THáº¬P PHĂ‚N
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 19: PhĂ©p cá»™ng sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 20: PhĂ©p trá»« sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 21: PhĂ©p nhĂ¢n sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 22: PhĂ©p chia sá»‘ tháº­p phĂ¢n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 23: NhĂ¢n, chia sá»‘ tháº­p phĂ¢n vá»›i 10, 100, 1000, ... hoáº·c vá»›i 0,1 ; 0,01 ; 0,001 ; ...] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 24: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 4: CĂC PHĂ‰P TĂNH Vá»I Sá» THáº¬P PHĂ‚N - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 5: Má»˜T Sá» HĂŒNH PHáº²NG, CHU VI VĂ€ DIá»†N TĂCH
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 25: HĂ¬nh tam giĂ¡c. Diá»‡n tĂ­ch hĂ¬nh tam giĂ¡c] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 26: HĂ¬nh thang. Diá»‡n tĂ­ch hĂ¬nh thang] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 27: ÄÆ°á»ng trĂ²n. Chu vi vĂ  diá»‡n tĂ­ch hĂ¬nh trĂ²n] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 28: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m Ä‘o, váº½, láº¯p ghĂ©p, táº¡o hĂ¬nh] - PHĂT HIá»†N Lá»–I
+- [BĂ i 29: Luyá»‡n táº­p chung] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+â ï¸ **CHá»¦ Äá»€ 5: Má»˜T Sá» HĂŒNH PHáº²NG, CHU VI VĂ€ DIá»†N TĂCH - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 30: Ă”n táº­p sá»‘ tháº­p phĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 31: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tháº­p phĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 32: Ă”n táº­p má»™t sá»‘ hĂ¬nh pháº³ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 33: Ă”n táº­p diá»‡n tĂ­ch, chu vi má»™t sá»‘ hĂ¬nh pháº³ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 34: Ă”n táº­p Ä‘o lÆ°á»ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 35: Ă”n táº­p chung] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+â ï¸ **CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1 - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 36. Tá»‰ sá»‘. Tá»‰ sá»‘ pháº§n trÄƒm] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 37: Tá»‰ lá»‡ báº£n Ä‘á»“ vĂ  á»©ng dá»¥ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 38: TĂ¬m hai sá»‘ khi biáº¿t tá»•ng vĂ  tá»‰ sá»‘ cá»§a hai sá»‘ Ä‘Ă³] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 39: TĂ¬m hai sá»‘ khi biáº¿t hiá»‡u vĂ  tá»‰ sá»‘ cá»§a hai sá»‘ Ä‘Ă³] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 40: TĂ¬m tá»‰ sá»‘ pháº§n trÄƒm cá»§a hai sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 41: TĂ¬m giĂ¡ trá»‹ pháº§n trÄƒm cá»§a má»™t sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 42: MĂ¡y tĂ­nh cáº§m tay] - PHĂT HIá»†N Lá»–I
+- [BĂ i 43: Thá»±c hĂ nh vĂ  tráº£ nghiá»‡m sá»­ dá»¥ng mĂ¡y tĂ­nh cáº§m tay] - PHĂT HIá»†N Lá»–I
+- [BĂ i 44: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 45: Thá»ƒ tĂ­ch cá»§a má»™t hĂ¬nh] - PHĂT HIá»†N Lá»–I
+- [BĂ i 46: XÄƒng-ti-mĂ©t khá»‘i. Äá»-xi-mĂ©t khá»‘i] - PHĂT HIá»†N Lá»–I
+- [BĂ i 47: MĂ©t khá»‘i] - PHĂT HIá»†N Lá»–I
+- [BĂ i 48: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 49: HĂ¬nh khai triá»ƒn cá»§a hĂ¬nh láº­p phÆ°Æ¡ng, hĂ¬nh há»™p chá»¯ nháº­t vĂ  hĂ¬nh trá»¥] - PHĂT HIá»†N Lá»–I
+- [BĂ i 50: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh há»™p chá»¯ nháº­t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 51: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh láº­p phÆ°Æ¡ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 52: Thá»ƒ tĂ­ch cá»§a hĂ¬nh há»™p chá»¯ nháº­t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 53: Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 54: Thá»±c hĂ nh tĂ­nh toĂ¡n vĂ  Æ°á»›c lÆ°á»£ng thá»ƒ tĂ­ch má»™t sá»‘ hĂ¬nh khá»‘i] - PHĂT HIá»†N Lá»–I
+- [BĂ i 55: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 56: CĂ¡c Ä‘Æ¡n vá»‹ Ä‘o thá»i gian] - PHĂT HIá»†N Lá»–I
+- [BĂ i 57: Cá»™ng, trá»« sá»‘ Ä‘o thá»i gian] - PHĂT HIá»†N Lá»–I
+- [BĂ i 58: NhĂ¢n, chia sá»‘ Ä‘o thá»i gian vá»›i má»™t sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 59: Váº­n tá»‘c cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 60: QuĂ£ng Ä‘Æ°á»ng, thá»i gian cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 61: Thá»±c hĂ nh] - PHĂT HIá»†N Lá»–I
+- [BĂ i 62: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 63: Thu tháº­p, phĂ¢n loáº¡i, sáº¯p xáº¿p cĂ¡c sá»‘ liá»‡u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 64: Biá»ƒu Ä‘á»“ hĂ¬nh quáº¡t trĂ²n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 65: Tá»‰ sá»‘ cá»§a sá»‘ láº§n láº·p láº¡i má»™t sá»± kiá»‡n so vá»›i tá»•ng sá»‘ láº§n thá»±c hiá»‡n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 66: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m] - PHĂT HIá»†N Lá»–I
+- [BĂ i 67: Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 5
+**Block rĂ  soĂ¡t:** CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 68: Ă”n táº­p sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 69: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 70: Ă”n táº­p tá»‰ sá»‘. Tá»‰ sá»‘ pháº§n trÄƒm] - PHĂT HIá»†N Lá»–I
+- [BĂ i 71: Ă”n táº­p hĂ¬nh há»c] - PHĂT HIá»†N Lá»–I
+- [BĂ i 72: Ă”n táº­p Ä‘o lÆ°á»ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 73: Ă”n táº­p toĂ¡n chuyá»ƒn Ä‘á»™ng Ä‘á»u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 74: Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 75: Ă”n tĂ¢p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M - CĂ“ Lá»–I**
+
+
+======================================================
+Báº¯t Ä‘áº§u quĂ©t dá»¯ liá»‡u Khá»‘i Lá»›p 4...
+======================================================
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 1. Ă”n táº­p cĂ¡c sá»‘ Ä‘áº¿n 100 000] - PHĂT HIá»†N Lá»–I
+- [BĂ i 2. Ă”n táº­p cĂ¡c phĂ©p tĂ­nh trong pháº¡m vi 100 000] - PHĂT HIá»†N Lá»–I
+- [BĂ i 3. Sá»‘ cháºµn, sá»‘ láº»] - PHĂT HIá»†N Lá»–I
+- [BĂ i 4. Biá»ƒu thá»©c sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 5. Giáº£i bĂ i toĂ¡n cĂ³ ba bÆ°á»›c tĂ­nh] - PHĂT HIá»†N Lá»–I
+- [BĂ i 6. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** ToĂ¡n lá»›p 4
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [PhĂ¢n sá»‘ cÆ¡ báº£n] - PHĂT HIá»†N Lá»–I
+- [Äo lÆ°á»ng] - PHĂT HIá»†N Lá»–I
+â ï¸ **ToĂ¡n lá»›p 4 - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 7. GĂ³c, Ä‘Æ¡n vá»‹ Ä‘o gĂ³c] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 8. GĂ³c nhá»n, gĂ³c tĂ¹, gĂ³c báº¹t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 9. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá»
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 10. CĂ¡c sá»‘ cĂ³ sĂ¡u chá»¯ sá»‘. Sá»‘ 1 000 000] - PHĂT HIá»†N Lá»–I
+- [BĂ i 11. HĂ ng vĂ  lá»›p] - PHĂT HIá»†N Lá»–I
+- [BĂ i 12. CĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 13. So sĂ¡nh cĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u] - PHĂT HIá»†N Lá»–I
+- [BĂ i 14. LĂ m trĂ²n sá»‘ Ä‘áº¿n hĂ ng chá»¥c nghĂ¬n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 15. LĂ m quen vá»›i sá»‘ La MĂ£] - PHĂT HIá»†N Lá»–I
+- [BĂ i 16. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 17. XÄƒng-ti-mĂ©t vuĂ´ng] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 18. Äá»-xi-mĂ©t vuĂ´ng, mĂ©t vuĂ´ng, mi-li-mĂ©t vuĂ´ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 20. GiĂ¢y, tháº¿ ká»‰] - PHĂT HIá»†N Lá»–I
+- [BĂ i 21. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 22. PhĂ©p cá»™ng cĂ¡c sá»‘ cĂ³ nhiá»u chá»¯ sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 23. PhĂ©p trá»« cĂ¡c sá»‘ cĂ³ nhiá»u chá»¯ sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 24. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p cá»™ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 25. TĂ¬m hai sá»‘ biáº¿t tá»•ng vĂ  hiá»‡u cá»§a hai sá»‘ Ä‘Ă³] - PHĂT HIá»†N Lá»–I
+- [BĂ i 26. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 27. Hai Ä‘Æ°á»ng tháº³ng vuĂ´ng gĂ³c] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 28. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng vuĂ´ng gĂ³c] - PHĂT HIá»†N Lá»–I
+- [BĂ i 29. Hai Ä‘Æ°á»ng tháº³ng song song] - PHĂT HIá»†N Lá»–I
+- [BĂ i 30. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng song song] - PHĂT HIá»†N Lá»–I
+- [BĂ i 31. HĂ¬nh bĂ¬nh hĂ nh. HĂ¬nh thoi] - PHĂT HIá»†N Lá»–I
+- [BĂ i 32. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 33. Ă”n táº­p cĂ¡c sá»‘ Ä‘áº¿n lá»›p triá»‡u] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 34. Ă”n táº­p phĂ©p cá»™ng, phĂ©p trá»«] - PHĂT HIá»†N Lá»–I
+- [BĂ i 35. Ă”n táº­p hĂ¬nh há»c] - PHĂT HIá»†N Lá»–I
+- [BĂ i 36. Ă”n táº­p Ä‘o lÆ°á»ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 37. Ă”n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 38. NhĂ¢n vá»›i sá»‘ cĂ³ má»™t chá»¯ sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 39. Chia cho sá»‘ cĂ³ má»™t chá»¯ sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 40. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p nhĂ¢n] - PHĂT HIá»†N Lá»–I
+- [BĂ i 41. NhĂ¢n, chia vá»›i 10, 100, 1000,â€¦] - PHĂT HIá»†N Lá»–I
+- [BĂ i 42. TĂ­nh cháº¥t phĂ¢n phá»‘i cá»§a phĂ©p nhĂ¢n Ä‘á»‘i vá»›i phĂ©p cá»™ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 43. NhĂ¢n vá»›i sá»‘ cĂ³ hai chá»¯ sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 44. Chia cho sá»‘ cĂ³ hai chá»¯ sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 46. TĂ¬m sá»‘ trung bĂ¬nh cá»™ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 47. BĂ i toĂ¡n liĂªn quan Ä‘áº¿n rĂºt vá» Ä‘Æ¡n vá»‹] - PHĂT HIá»†N Lá»–I
+- [BĂ i 48. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 49. DĂ£y sá»‘ liá»‡u] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 50. Biá»ƒu Ä‘á»“ cá»™t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 51. Biá»ƒu Ä‘á»“ tranh] - PHĂT HIá»†N Lá»–I
+- [BĂ i 52. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 10: PHĂ‚N Sá»
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 53. KhĂ¡i niá»‡m phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 54. PhĂ¢n sá»‘ vĂ  phĂ©p chia sá»‘ tá»± nhiĂªn] - PHĂT HIá»†N Lá»–I
+- [BĂ i 55. TĂ­nh cháº¥t cÆ¡ báº£n cá»§a phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 56. RĂºt gá»n phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 57. Quy Ä‘á»“ng máº«u sá»‘ cĂ¡c phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 58. So sĂ¡nh phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 59. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 10: PHĂ‚N Sá» - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá»
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 60. PhĂ©p cá»™ng phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 61. PhĂ©p trá»« phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 62. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá» - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá»
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 63. PhĂ©p nhĂ¢n phĂ¢n sá»‘] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 64. PhĂ©p chia phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 65. TĂ¬m phĂ¢n sá»‘ cá»§a má»™t sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 66. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+- [BĂ i 67. Luyá»‡n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá» - CĂ“ Lá»–I**
+
+**Khá»‘i:** Lá»›p 4
+**Block rĂ  soĂ¡t:** Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M
+**Káº¿t quáº£ kiá»ƒm tra chi tiáº¿t theo BĂ i:**
+- [BĂ i 68. Ă”n táº­p sá»‘ tá»± nhiĂªn] - ÄĂƒ Äáº T - CHĂNH XĂC 100%
+- [BĂ i 69. Ă”n táº­p phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn] - PHĂT HIá»†N Lá»–I
+- [BĂ i 70. Ă”n táº­p phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 71. Ă”n táº­p phĂ©p tĂ­nh vá»›i phĂ¢n sá»‘] - PHĂT HIá»†N Lá»–I
+- [BĂ i 72. Ă”n táº­p hĂ¬nh há»c vĂ  Ä‘o lÆ°á»ng] - PHĂT HIá»†N Lá»–I
+- [BĂ i 73. Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t] - PHĂT HIá»†N Lá»–I
+- [BĂ i 73. Ă”n táº­p chung] - PHĂT HIá»†N Lá»–I
+â ï¸ **Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M - CĂ“ Lá»–I**
+
+
+**Báº¢NG BĂO CĂO Lá»–I (Lá»P 4 & 5):**
+| Lá»›p | ChÆ°Æ¡ng | BĂ i | Ná»™i dung lá»—i (Äá»/ÄĂ¡p Ă¡n/Lá»i giáº£i) | Gá»£i Ă½ sá»­a Ä‘á»•i | Tráº¡ng thĂ¡i |
+|---|---|---|---|---|---|
+| Lá»›p 5 | CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N | BĂ i 10: KhĂ¡i niá»‡m sá»‘ tháº­p phĂ¢n (MĂ£: T5-B10-002) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N | BĂ i 14: Luyá»‡n táº­p chung (MĂ£: T5-B14-001) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N | BĂ i 14: Luyá»‡n táº­p chung (MĂ£: T5-B14-002) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 4: CĂC PHĂ‰P TĂNH Vá»I Sá» THáº¬P PHĂ‚N | BĂ i 24: Luyá»‡n táº­p chung (MĂ£: T5-B24-004) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 5: Má»˜T Sá» HĂŒNH PHáº²NG, CHU VI VĂ€ DIá»†N TĂCH | BĂ i 28: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m Ä‘o, váº½, láº¯p ghĂ©p, táº¡o hĂ¬nh (MĂ£: T5-B28-003) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1 | BĂ i 30: Ă”n táº­p sá»‘ tháº­p phĂ¢n (MĂ£: T5-B30-001) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1 | BĂ i 30: Ă”n táº­p sá»‘ tháº­p phĂ¢n (MĂ£: T5-B30-003) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1 | BĂ i 31: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tháº­p phĂ¢n (MĂ£: T5-B31-004) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN | BĂ i 40: TĂ¬m tá»‰ sá»‘ pháº§n trÄƒm cá»§a hai sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN | BĂ i 41: TĂ¬m giĂ¡ trá»‹ pháº§n trÄƒm cá»§a má»™t sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN | BĂ i 42: MĂ¡y tĂ­nh cáº§m tay | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN | BĂ i 43: Thá»±c hĂ nh vĂ  tráº£ nghiá»‡m sá»­ dá»¥ng mĂ¡y tĂ­nh cáº§m tay | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN | BĂ i 44: Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH | BĂ i 45: Thá»ƒ tĂ­ch cá»§a má»™t hĂ¬nh | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH | BĂ i 46: XÄƒng-ti-mĂ©t khá»‘i. Äá»-xi-mĂ©t khá»‘i | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH | BĂ i 47: MĂ©t khá»‘i | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH | BĂ i 48: Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 49: HĂ¬nh khai triá»ƒn cá»§a hĂ¬nh láº­p phÆ°Æ¡ng, hĂ¬nh há»™p chá»¯ nháº­t vĂ  hĂ¬nh trá»¥ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 50: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh há»™p chá»¯ nháº­t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 51: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh láº­p phÆ°Æ¡ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 52: Thá»ƒ tĂ­ch cá»§a hĂ¬nh há»™p chá»¯ nháº­t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 53: Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 54: Thá»±c hĂ nh tĂ­nh toĂ¡n vĂ  Æ°á»›c lÆ°á»£ng thá»ƒ tĂ­ch má»™t sá»‘ hĂ¬nh khá»‘i | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I | BĂ i 55: Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 56: CĂ¡c Ä‘Æ¡n vá»‹ Ä‘o thá»i gian | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 57: Cá»™ng, trá»« sá»‘ Ä‘o thá»i gian | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 58: NhĂ¢n, chia sá»‘ Ä‘o thá»i gian vá»›i má»™t sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 59: Váº­n tá»‘c cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 60: QuĂ£ng Ä‘Æ°á»ng, thá»i gian cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 61: Thá»±c hĂ nh | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U | BĂ i 62: Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T | BĂ i 63: Thu tháº­p, phĂ¢n loáº¡i, sáº¯p xáº¿p cĂ¡c sá»‘ liá»‡u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T | BĂ i 64: Biá»ƒu Ä‘á»“ hĂ¬nh quáº¡t trĂ²n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T | BĂ i 65: Tá»‰ sá»‘ cá»§a sá»‘ láº§n láº·p láº¡i má»™t sá»± kiá»‡n so vá»›i tá»•ng sá»‘ láº§n thá»±c hiá»‡n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T | BĂ i 66: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T | BĂ i 67: Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 68: Ă”n táº­p sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 69: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 70: Ă”n táº­p tá»‰ sá»‘. Tá»‰ sá»‘ pháº§n trÄƒm | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 71: Ă”n táº­p hĂ¬nh há»c | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 72: Ă”n táº­p Ä‘o lÆ°á»ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 73: Ă”n táº­p toĂ¡n chuyá»ƒn Ä‘á»™ng Ä‘á»u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 74: Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 5 | CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 75: Ă”n tĂ¢p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 1. Ă”n táº­p cĂ¡c sá»‘ Ä‘áº¿n 100 000 (MĂ£: T4-B1-002) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 2. Ă”n táº­p cĂ¡c phĂ©p tĂ­nh trong pháº¡m vi 100 000 | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 3. Sá»‘ cháºµn, sá»‘ láº» | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 4. Biá»ƒu thá»©c sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 5. Giáº£i bĂ i toĂ¡n cĂ³ ba bÆ°á»›c tĂ­nh | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG | BĂ i 6. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | ToĂ¡n lá»›p 4 | PhĂ¢n sá»‘ cÆ¡ báº£n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | ToĂ¡n lá»›p 4 | Äo lÆ°á»ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C | BĂ i 8. GĂ³c nhá»n, gĂ³c tĂ¹, gĂ³c báº¹t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C | BĂ i 9. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 10. CĂ¡c sá»‘ cĂ³ sĂ¡u chá»¯ sá»‘. Sá»‘ 1 000 000 (MĂ£: T4-B10-002) | Lá»i giáº£i quĂ¡ ngáº¯n, cĂ³ thá»ƒ chÆ°a Ä‘i theo step-by-step | Cáº§n bá»• sung/cáº­p nháº­t dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 11. HĂ ng vĂ  lá»›p | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 12. CĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 13. So sĂ¡nh cĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 14. LĂ m trĂ²n sá»‘ Ä‘áº¿n hĂ ng chá»¥c nghĂ¬n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 15. LĂ m quen vá»›i sá»‘ La MĂ£ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá» | BĂ i 16. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH | BĂ i 18. Äá»-xi-mĂ©t vuĂ´ng, mĂ©t vuĂ´ng, mi-li-mĂ©t vuĂ´ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH | BĂ i 20. GiĂ¢y, tháº¿ ká»‰ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH | BĂ i 21. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª | BĂ i 23. PhĂ©p trá»« cĂ¡c sá»‘ cĂ³ nhiá»u chá»¯ sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª | BĂ i 24. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p cá»™ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª | BĂ i 25. TĂ¬m hai sá»‘ biáº¿t tá»•ng vĂ  hiá»‡u cá»§a hai sá»‘ Ä‘Ă³ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª | BĂ i 26. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG | BĂ i 28. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng vuĂ´ng gĂ³c | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG | BĂ i 29. Hai Ä‘Æ°á»ng tháº³ng song song | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG | BĂ i 30. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng song song | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG | BĂ i 31. HĂ¬nh bĂ¬nh hĂ nh. HĂ¬nh thoi | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG | BĂ i 32. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I | BĂ i 34. Ă”n táº­p phĂ©p cá»™ng, phĂ©p trá»« | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I | BĂ i 35. Ă”n táº­p hĂ¬nh há»c | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I | BĂ i 36. Ă”n táº­p Ä‘o lÆ°á»ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I | BĂ i 37. Ă”n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 39. Chia cho sá»‘ cĂ³ má»™t chá»¯ sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 40. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p nhĂ¢n | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 41. NhĂ¢n, chia vá»›i 10, 100, 1000,â€¦ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 42. TĂ­nh cháº¥t phĂ¢n phá»‘i cá»§a phĂ©p nhĂ¢n Ä‘á»‘i vá»›i phĂ©p cá»™ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 43. NhĂ¢n vá»›i sá»‘ cĂ³ hai chá»¯ sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 44. Chia cho sá»‘ cĂ³ hai chá»¯ sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 46. TĂ¬m sá»‘ trung bĂ¬nh cá»™ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 47. BĂ i toĂ¡n liĂªn quan Ä‘áº¿n rĂºt vá» Ä‘Æ¡n vá»‹ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA | BĂ i 48. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T | BĂ i 50. Biá»ƒu Ä‘á»“ cá»™t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T | BĂ i 51. Biá»ƒu Ä‘á»“ tranh | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T | BĂ i 52. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 54. PhĂ¢n sá»‘ vĂ  phĂ©p chia sá»‘ tá»± nhiĂªn | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 55. TĂ­nh cháº¥t cÆ¡ báº£n cá»§a phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 56. RĂºt gá»n phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 57. Quy Ä‘á»“ng máº«u sá»‘ cĂ¡c phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 58. So sĂ¡nh phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 10: PHĂ‚N Sá» | BĂ i 59. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá» | BĂ i 61. PhĂ©p trá»« phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá» | BĂ i 62. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá» | BĂ i 64. PhĂ©p chia phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá» | BĂ i 65. TĂ¬m phĂ¢n sá»‘ cá»§a má»™t sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá» | BĂ i 66. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá» | BĂ i 67. Luyá»‡n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 69. Ă”n táº­p phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 70. Ă”n táº­p phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 71. Ă”n táº­p phĂ©p tĂ­nh vá»›i phĂ¢n sá»‘ | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 72. Ă”n táº­p hĂ¬nh há»c vĂ  Ä‘o lÆ°á»ng | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 73. Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+| Lá»›p 4 | Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M | BĂ i 73. Ă”n táº­p chung | Thiáº¿u toĂ n bá»™ cĂ¢u há»i | Cáº§n chĂ¨n thĂªm dá»¯ liá»‡u | Chá» sá»­a |
+
