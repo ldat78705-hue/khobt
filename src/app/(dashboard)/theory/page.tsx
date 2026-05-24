@@ -3,11 +3,12 @@
 import { useState, useEffect } from "react";
 import { 
   BookOpen, Play, CheckCircle2, Circle, ChevronRight, ChevronLeft, 
-  Settings, Loader2, Maximize, X
+  Settings, Loader2, Maximize, X, Edit, Trash2, Plus
 } from "lucide-react";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { MathRenderer } from "@/components/shared/MathRenderer";
+import Link from "next/link";
 
 interface Question {
   id: string;
@@ -98,6 +99,19 @@ export default function TheoryReviewPage() {
     if (newSet.has(id)) newSet.delete(id);
     else newSet.add(id);
     setSelectedIds(newSet);
+  };
+
+  const deleteQuestion = async (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    if (!window.confirm("Bạn có chắc chắn muốn xóa câu hỏi này?")) return;
+    try {
+      const res = await fetch(`/api/questions/${id}`, { method: 'DELETE' });
+      if (!res.ok) throw new Error("Lỗi khi xóa");
+      toast.success("Đã xóa câu hỏi");
+      setQuestions(q => q.filter(x => x.id !== id));
+    } catch (err) {
+      toast.error("Không thể xóa câu hỏi");
+    }
   };
 
   const startPresentation = () => {
@@ -301,14 +315,20 @@ export default function TheoryReviewPage() {
           </p>
         </div>
         
-        <button
-          onClick={startPresentation}
-          disabled={selectedIds.size === 0 || isLoading}
-          className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50 shadow-lg shadow-blue-500/20"
-        >
-          <Play className="w-5 h-5 fill-current" />
-          Bắt đầu trình chiếu ({selectedIds.size})
-        </button>
+        <div className="flex items-center gap-4">
+          <Link href="/questions/new" className="flex items-center gap-2 px-4 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-semibold transition-all">
+            <Plus className="w-5 h-5" />
+            Thêm bài tập
+          </Link>
+          <button
+            onClick={startPresentation}
+            disabled={selectedIds.size === 0 || isLoading}
+            className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-50 shadow-lg shadow-blue-500/20"
+          >
+            <Play className="w-5 h-5 fill-current" />
+            Bắt đầu trình chiếu ({selectedIds.size})
+          </button>
+        </div>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-8">
@@ -396,6 +416,23 @@ export default function TheoryReviewPage() {
                           </div>
                         ))}
                       </div>
+                    </div>
+                    <div className="flex items-center gap-2 shrink-0">
+                      <Link 
+                        href={`/questions/${q.id}/edit`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="p-2 text-slate-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                        title="Sửa bài tập"
+                      >
+                        <Edit className="w-5 h-5" />
+                      </Link>
+                      <button 
+                        onClick={(e) => deleteQuestion(e, q.id)}
+                        className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        title="Xóa bài tập"
+                      >
+                        <Trash2 className="w-5 h-5" />
+                      </button>
                     </div>
                   </div>
                 );
