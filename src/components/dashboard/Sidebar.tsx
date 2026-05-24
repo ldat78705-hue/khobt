@@ -27,6 +27,7 @@ const mainItems = [
 const toolItems = [
   { href: "/exams/auto", icon: Sparkles, label: "Tạo đề tự động" },
   { href: "/worksheets", icon: ClipboardList, label: "Phiếu bài tập" },
+  { href: "/theory", icon: BookOpen, label: "Ôn tập lý thuyết" },
   { href: "/questions/import", icon: Upload, label: "Import Word" },
   { href: "/questions/export", icon: Download, label: "Xuất bài tập" },
 ];

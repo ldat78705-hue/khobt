@@ -44,7 +44,7 @@ export async function getQuestions(filters?: {
       AND (${category_id ?? null}::uuid IS NULL OR q.category_id = ${category_id ?? null}::uuid)
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
-      AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})
+      AND (${question_type ?? null}::text IS NULL OR q.question_type = ANY(string_to_array(${question_type ?? null}::text, ',')))
       AND (${userId ?? null}::uuid IS NULL OR q.user_id = ${userId ?? null}::uuid)
       AND (
         ${search ?? null}::text IS NULL
@@ -77,7 +77,7 @@ export async function getQuestionCount(filters?: {
       AND (${category_id ?? null}::uuid IS NULL OR q.category_id = ${category_id ?? null}::uuid)
       AND (${difficulty ?? null}::text IS NULL OR q.difficulty = ${difficulty ?? null})
       AND (${status ?? null}::text IS NULL OR q.status = ${status ?? null})
-      AND (${question_type ?? null}::text IS NULL OR q.question_type = ${question_type ?? null})
+      AND (${question_type ?? null}::text IS NULL OR q.question_type = ANY(string_to_array(${question_type ?? null}::text, ',')))
       AND (
         ${search ?? null}::text IS NULL
         OR q.question_code ILIKE ${'%' + (search || '') + '%'}
