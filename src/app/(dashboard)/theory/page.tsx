@@ -20,9 +20,11 @@ interface Question {
 
 export default function TheoryReviewPage() {
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [categories, setCategories] = useState<any[]>([]);
   const [selectedIds, setSelectedIds] = useState<Set<string>>(new Set());
   const [isLoading, setIsLoading] = useState(true);
   const [gradeFilter, setGradeFilter] = useState<number>(9);
+  const [categoryFilter, setCategoryFilter] = useState<string>("");
 
   // Presentation State
   const [isPresenting, setIsPresenting] = useState(false);
@@ -30,14 +32,19 @@ export default function TheoryReviewPage() {
   const [showAnswer, setShowAnswer] = useState(false);
 
   useEffect(() => {
+    fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    setCategoryFilter(""); // Reset category when grade changes
     fetchQuestions();
-  }, [gradeFilter]);
+  }, [gradeFilter, categoryFilter]);
 
   const fetchQuestions = async () => {
     setIsLoading(true);
     try {
-      // Lấy cả câu Trắc nghiệm và Đúng/Sai
-      const res = await fetch(`/api/questions?grade=${gradeFilter}&question_type=trac_nghiem,dung_sai`);
+      const url = `/api/questions?grade=${gradeFilter}&question_type=trac_nghiem,dung_sai` + (categoryFilter ? `&category_id=${categoryFilter}` : '');
+      const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
       setQuestions(data.data || data || []);
@@ -199,6 +206,21 @@ export default function TheoryReviewPage() {
     );
   }
 
+  // Build category tree for dropdown
+  const rawFilteredCategories = categories.filter(c => c.grade === gradeFilter || c.grade === null);
+  const displayCategories: any[] = [];
+  const parents = rawFilteredCategories.filter(c => !c.parent_id).sort((a, b) => a.sort_order - b.sort_order);
+  
+  for (const p of parents) {
+    displayCategories.push({ ...p, displayName: p.name });
+    const children = rawFilteredCategories
+      .filter(c => c.parent_id === p.id)
+      .sort((a, b) => a.sort_order - b.sort_order);
+    for (const child of children) {
+      displayCategories.push({ ...child, displayName: `\u00A0\u00A0\u00A0\u00A0${child.name}` });
+    }
+  }
+
   return (
     <div className="p-8 max-w-6xl mx-auto">
       <div className="flex justify-between items-end mb-8">
@@ -208,7 +230,7 @@ export default function TheoryReviewPage() {
             Phòng Ôn Tập Lý Thuyết
           </h1>
           <p className="text-slate-500 mt-2 text-lg">
-            Chọn các câu hỏi trắc nghiệm để trình chiếu trên lớp học.
+            Chọn các câu hỏi trắc nghiệm, đúng/sai theo từng bài học để trình chiếu.
           </p>
         </div>
         
@@ -223,21 +245,37 @@ export default function TheoryReviewPage() {
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden mb-8">
-        <div className="p-4 border-b border-slate-100 bg-slate-50 flex items-center gap-4">
-          <span className="font-semibold text-slate-700">Chọn khối lớp:</span>
-          <div className="flex gap-2">
-            {[6, 7, 8, 9].map(g => (
-              <button
-                key={g}
-                onClick={() => setGradeFilter(g)}
-                className={cn(
-                  "px-4 py-2 rounded-lg font-medium transition-colors",
-                  gradeFilter === g ? "bg-blue-600 text-white shadow-md shadow-blue-500/20" : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-100"
-                )}
-              >
-                Lớp {g}
-              </button>
-            ))}
+        <div className="p-4 border-b border-slate-100 bg-slate-50 flex flex-wrap items-center gap-6">
+          <div className="flex items-center gap-4">
+            <span className="font-semibold text-slate-700">Chọn khối lớp:</span>
+            <div className="flex gap-2">
+              {[6, 7, 8, 9].map(g => (
+                <button
+                  key={g}
+                  onClick={() => setGradeFilter(g)}
+                  className={cn(
+                    "px-4 py-2 rounded-lg font-medium transition-colors",
+                    gradeFilter === g ? "bg-blue-600 text-white shadow-md shadow-blue-500/20" : "bg-white border border-slate-200 text-slate-600 hover:bg-slate-100"
+                  )}
+                >
+                  Lớp {g}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4 flex-1 min-w-[300px]">
+            <span className="font-semibold text-slate-700 whitespace-nowrap">Chọn Bài học:</span>
+            <select 
+              value={categoryFilter} 
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className="w-full px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 font-medium text-slate-700"
+            >
+              <option value="">Tất cả bài học</option>
+              {displayCategories.map(c => (
+                <option key={c.id} value={c.id}>{c.displayName}</option>
+              ))}
+            </select>
           </div>
         </div>
 
