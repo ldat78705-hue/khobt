@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { 
   BookOpen, Play, CheckCircle2, Circle, ChevronRight, ChevronLeft, 
   Settings, Loader2, Maximize, X, Edit, Trash2, Plus
@@ -137,6 +138,11 @@ export default function TheoryReviewPage() {
     }
   };
 
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const nextSlide = () => {
     if (!showAnswer) {
       setShowAnswer(true);
@@ -172,11 +178,11 @@ export default function TheoryReviewPage() {
   const presentationQuestions = questions.filter(q => selectedIds.has(q.id));
   const currentQ = presentationQuestions[currentIndex];
 
-  if (isPresenting && currentQ) {
-    return (
-      <div className="fixed inset-0 z-[100] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black text-white flex flex-col font-sans">
+  if (isPresenting && currentQ && mounted) {
+    return createPortal(
+      <div className="fixed inset-0 z-[9999] bg-slate-900 text-slate-100 flex flex-col font-sans h-screen w-screen overflow-hidden">
         {/* Header */}
-        <div className="h-20 flex items-center justify-between px-8 bg-slate-900/50 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div className="h-20 flex items-center justify-between px-8 bg-slate-800/80 backdrop-blur-md border-b border-slate-700 shadow-lg shrink-0">
           <div className="flex items-center gap-4">
             <div className="p-2.5 bg-blue-500/20 rounded-xl">
               <BookOpen className="w-6 h-6 text-blue-400" />
@@ -184,14 +190,14 @@ export default function TheoryReviewPage() {
             <span className="text-xl font-bold tracking-wide">Ôn tập Lý Thuyết Lớp {gradeFilter}</span>
           </div>
           <div className="flex items-center gap-6">
-            <div className="px-4 py-1.5 bg-white/5 rounded-full border border-white/10">
+            <div className="px-4 py-1.5 bg-slate-700/50 rounded-full border border-slate-600">
               <span className="text-base font-medium text-slate-300">
                 Câu <span className="text-white font-bold">{currentIndex + 1}</span> / {presentationQuestions.length}
               </span>
             </div>
             <button 
               onClick={exitPresentation}
-              className="p-2.5 bg-white/5 hover:bg-red-500/20 hover:text-red-400 border border-white/10 hover:border-red-500/30 rounded-xl transition-all"
+              className="p-2.5 bg-slate-700/50 hover:bg-red-500 hover:text-white border border-slate-600 rounded-xl transition-all"
             >
               <X className="w-6 h-6" />
             </button>
@@ -202,8 +208,8 @@ export default function TheoryReviewPage() {
         <div className="flex-1 overflow-y-auto p-8 md:p-16 flex flex-col justify-center items-center">
           <div className="max-w-6xl w-full">
             <div className="text-3xl md:text-5xl leading-tight md:leading-snug mb-16 font-medium flex items-start gap-6">
-              <span className="font-extrabold text-blue-400 whitespace-nowrap drop-shadow-md">Câu {currentIndex + 1}:</span>
-              <div className="flex-1 text-slate-100 drop-shadow-sm">
+              <span className="font-extrabold text-blue-400 whitespace-nowrap drop-shadow-md shrink-0 pt-2">Câu {currentIndex + 1}:</span>
+              <div className="flex-1 text-slate-100 drop-shadow-sm min-w-0">
                 <MathRenderer content={currentQ.content} />
               </div>
             </div>
@@ -225,8 +231,8 @@ export default function TheoryReviewPage() {
                       "text-left p-6 md:p-8 rounded-3xl border-2 text-2xl md:text-4xl transition-all duration-300 relative overflow-hidden group",
                       showHighlight ? "bg-green-500/20 border-green-400 text-green-100 scale-[1.02] shadow-[0_0_40px_rgba(74,222,128,0.2)]" : 
                       showWrong ? "bg-red-500/20 border-red-500 text-red-200 scale-95 shadow-inner" :
-                      showDim ? "bg-white/5 border-white/5 text-slate-500 opacity-40" : 
-                      "bg-white/5 border-white/10 hover:border-blue-400/50 hover:bg-blue-500/10 hover:scale-[1.01] cursor-pointer"
+                      showDim ? "bg-slate-800/50 border-slate-800 text-slate-500 opacity-40" : 
+                      "bg-slate-800 border-slate-700 hover:border-blue-400/50 hover:bg-slate-800/80 hover:scale-[1.01] cursor-pointer"
                     )}
                   >
                     <div className="flex items-start gap-6 relative z-10">
@@ -250,10 +256,10 @@ export default function TheoryReviewPage() {
             {/* Giải thích */}
             {showAnswer && currentQ.solution && (
               <div className="mt-16 p-8 bg-blue-500/10 border border-blue-500/30 rounded-3xl text-blue-100 text-2xl md:text-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <span className="font-bold text-blue-400 mr-3 inline-flex items-center gap-3 mb-4">
+                <span className="font-bold text-blue-400 mr-3 inline-flex items-center gap-3 mb-4 shrink-0">
                   <CheckCircle2 className="w-8 h-8" /> Lời giải chi tiết:
                 </span>
-                <div className="mt-2 text-slate-300">
+                <div className="mt-2 text-slate-200 min-w-0 break-words">
                   <MathRenderer content={currentQ.solution} />
                 </div>
               </div>
@@ -262,11 +268,11 @@ export default function TheoryReviewPage() {
         </div>
 
         {/* Controls */}
-        <div className="h-32 bg-slate-900/80 backdrop-blur-xl border-t border-white/10 flex items-center justify-center gap-8 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-20">
+        <div className="h-32 bg-slate-800/80 backdrop-blur-xl border-t border-slate-700 flex items-center justify-center gap-8 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-20 shrink-0">
           <button 
             onClick={prevSlide}
             disabled={currentIndex === 0 && !showAnswer}
-            className="px-10 py-5 bg-white/5 hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-white/5 rounded-2xl flex items-center gap-3 font-semibold text-xl transition-all border border-white/10"
+            className="px-10 py-5 bg-slate-700 hover:bg-slate-600 disabled:opacity-30 disabled:hover:bg-slate-700 rounded-2xl flex items-center gap-3 font-semibold text-xl transition-all border border-slate-600"
           >
             <ChevronLeft className="w-8 h-8" /> Quay lại
           </button>
@@ -283,7 +289,8 @@ export default function TheoryReviewPage() {
             <ChevronRight className="w-8 h-8" />
           </button>
         </div>
-      </div>
+      </div>,
+      document.body
     );
   }
 
@@ -390,29 +397,36 @@ export default function TheoryReviewPage() {
                       isSelected ? "border-blue-500 bg-blue-50/50" : "border-slate-100 hover:border-blue-300 bg-white"
                     )}
                   >
-                    <div className="mt-1">
+                    <div className="mt-1 shrink-0">
                       {isSelected ? (
                         <CheckCircle2 className="w-6 h-6 text-blue-600" />
                       ) : (
                         <Circle className="w-6 h-6 text-slate-300" />
                       )}
                     </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-slate-800 mb-3 text-lg flex gap-2">
-                        <span className="whitespace-nowrap">Câu {idx + 1}:</span>
-                        <MathRenderer content={q.content} />
+                    <div className="flex-1 min-w-0">
+                      <div className="font-semibold text-slate-800 mb-4 text-lg flex items-start gap-3">
+                        <span className="whitespace-nowrap pt-0.5 text-blue-600">Câu {idx + 1}:</span>
+                        <div className="flex-1 min-w-0">
+                          <MathRenderer content={q.content} />
+                        </div>
                       </div>
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {q.options?.map(opt => (
                           <div 
                             key={opt.key}
                             className={cn(
-                              "px-4 py-2 rounded-lg text-sm border flex items-start gap-2",
-                              opt.key === q.correct_answer ? "bg-green-50 border-green-200 text-green-700 font-medium" : "bg-slate-50 border-slate-100 text-slate-600"
+                              "px-4 py-3 rounded-xl text-[15px] border flex items-start gap-3 shadow-sm transition-all",
+                              opt.key === q.correct_answer ? "bg-green-50 border-green-300 text-green-800" : "bg-slate-50 border-slate-200 text-slate-700"
                             )}
                           >
-                            <span className="font-bold">{opt.key}.</span>
-                            <MathRenderer content={opt.value} />
+                            <span className={cn(
+                              "font-bold shrink-0 w-6 h-6 rounded flex items-center justify-center pt-0.5",
+                              opt.key === q.correct_answer ? "bg-green-200 text-green-800" : "bg-slate-200 text-slate-600"
+                            )}>{opt.key}</span>
+                            <div className="flex-1 min-w-0 mt-0.5 break-words">
+                              <MathRenderer content={opt.value} />
+                            </div>
                           </div>
                         ))}
                       </div>
