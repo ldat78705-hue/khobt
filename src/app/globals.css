@@ -90,6 +90,15 @@ body {
   background: var(--surface-400);
 }
 
+/* Utilities for hiding scrollbars but allowing scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Selection */
 ::selection {
   background-color: var(--primary-200);

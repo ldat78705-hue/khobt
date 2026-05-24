@@ -1,0 +1,300 @@
+
+=== LỚP 6 ===
+
+[CHƯƠNG] Toán lớp 6
+  - [BÀI HỌC] Số tự nhiên (ID: c7854e13-38e0-4426-9b37-81d97ca07f62) -> Có: 2 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Phân số (ID: 0154d300-fa68-40d4-ad75-4ee7ac67e28b) -> Có: 3 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Số nguyên (ID: 2f932d1a-14e0-4625-b36c-e00a2fe5a664) -> Có: 2 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Hình học 6 (ID: 15c6d3a0-e08c-4ed5-a9f1-0f0983f68132) -> Có: 3 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Số thập phân (ID: 4a7f1f29-536e-489f-a7ce-78bc5e398307) -> Có: 1 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Biểu thức & Tính giá trị (ID: 3249c548-1116-408b-9c47-724853b7fe30) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Thống kê & Xác suất 6 (ID: 581239a2-7ec5-414b-a876-a61f91830ec1) -> Có: 1 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG I. TẬP HỢP CÁC SỐ TỰ NHIÊN
+  - [BÀI HỌC] Bài 1. Tập hợp (ID: df56e4e2-d24d-447e-879e-5d3414b1325e) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 2. Cách ghi số tự nhiên (ID: 2b72ed00-ceba-4922-b2d6-34bed4a4d18d) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 3. Thứ tự trong tập hợp các số tự nhiên (ID: b89132d0-27fb-481b-a80b-7fecf91d1107) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 4. Phép cộng và phép trừ số tự nhiên (ID: f3347891-e482-44db-ad23-7e0685486a97) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 5. Phép nhân và phép chia số tự nhiên (ID: 114c29c4-b3ae-4725-8b58-b395c23247a6) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 6. Luỹ thừa với số mũ tự nhiên (ID: 9c21dcf7-01fa-4879-99c5-921e7490dd33) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 7. Thứ tự thực hiện các phép tính (ID: 4b603ccb-3fc7-46b3-a76b-8948ede004aa) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương I (ID: 6d45e172-f8ef-4dd7-89d9-7014a13df01e) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG II. TÍNH CHIA HẾT TRONG TẬP HỢP CÁC SỐ TỰ NHIÊN
+  - [BÀI HỌC] Bài 8. Quan hệ chia hết và tính chất (ID: 010ee270-e8a7-440f-b9ec-188042821190) -> Có: 12 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 9. Dấu hiệu chia hết (ID: e508496c-7b5e-4dd9-9c40-025a2c885747) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 10. Số nguyên tố (ID: eac8ffdd-be29-4da4-94a4-5d57410c088a) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 11. Ước chung. Ước chung lớn nhất (ID: 5864ce3f-7a9a-4278-a36b-3c1d9cbb7456) -> Có: 13 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 12. Bội chung. Bội chung nhỏ nhất (ID: f1385817-45c4-415d-aea9-014258e59be1) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương II (ID: 2660ebe9-4fad-4be3-a73b-a450166316ce) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG III. SỐ NGUYÊN
+  - [BÀI HỌC] Bài 13. Tập hợp các số nguyên (ID: 45f9f700-53ca-43dc-8651-ac4f4baaaced) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 14. Phép cộng và phép trừ số nguyên (ID: adb5c68f-4fd7-481e-8132-36e96dfaa7bd) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 15. Quy tắc dấu ngoặc (ID: 1e0412bd-0c9c-49a5-9508-7e785d00e63c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 16. Phép nhân số nguyên (ID: efc2618a-4c5b-4483-8d2d-818d3ed639ba) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 17. Phép chia hết. Ước và bội của một số nguyên (ID: 238ab61c-029c-4bda-a9b2-dd3866f975aa) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương III (ID: 518aeec1-fb2f-479c-94c1-59de0d70dee1) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IV. MỘT SỐ HÌNH PHẲNG TRONG THỰC TIỄN
+  - [BÀI HỌC] Bài 18. Hình tam giác đều. Hình vuông. Hình lục giác đều (ID: 85ecf00e-8022-47ca-beab-103d2beef8f6) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 20. Chu vi và diện tích của một số tứ giác đã học (ID: 194d9d53-56c4-4aeb-9139-0a2335921e5b) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương IV (ID: 31c9b1ca-adfd-438d-8049-8a0b2d7233a9) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG V. TÍNH ĐỐI XỨNG CỦA HÌNH PHẲNG TRONG TỰ NHIÊN
+  - [BÀI HỌC] Bài 21. Hình có trục đối xứng (ID: c7bfe0a1-9a55-4666-91da-1fa4238290a4) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 22. Hình có tâm đối xứng (ID: 2a3c4ae3-2153-40c3-9cb8-47b4395f4991) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương V (ID: f5d93d0b-b186-4788-b40f-fad46b58cb20) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VI. PHÂN SỐ
+  - [BÀI HỌC] Bài 23. Mở rộng phân số. Phân số bằng nhau (ID: 444b0570-e454-4530-82bf-973bf3440ec2) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 24. So sánh phân số. Hỗn số dương (ID: 8480acc9-bdbf-4600-9867-eba32069284c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 25. Phép cộng và phép trừ phân số (ID: c671d1eb-d0c6-4f6a-93af-fbc9988f2776) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 26. Phép nhân và phép chia phân số (ID: 47b9033c-f98b-4902-9b1e-54b6b094720f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 27. Hai bài toán về phân số (ID: 4e8b8dd3-9667-46dd-9db2-a80c58c39bc7) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương VI (ID: 0c20dcfc-d889-4f7d-b65a-d9679bbabe18) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VII. SỐ THẬP PHÂN
+  - [BÀI HỌC] Bài 28. Số thập phân (ID: b8dae277-3070-4d2a-ba0f-9cf2e5444819) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 29. Tính toán với số thập phân (ID: 2f1d95e4-231c-4067-8aaa-94394fe5fa0e) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 30. Làm tròn và ước lượng (ID: bf9c99be-8921-4b4e-ba14-20440912d320) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương VII (ID: f40e775c-f038-4a0b-91a9-b83a2e0b68b8) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VIII. NHỮNG HÌNH HÌNH HỌC CƠ BẢN
+  - [BÀI HỌC] Bài 32. Điểm và đường thẳng (ID: 13ce7646-d9c8-47ca-931c-583a4b8d7ad0) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 33. Điểm nằm giữa hai điểm. Tia (ID: 199f24d4-8d73-4df4-8355-f9e9efa5da9c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 34. Đoạn thẳng. Độ dài đoạn thẳng (ID: a5d649e2-4889-4864-a4b7-998ad564abf0) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 35. Trung điểm của đoạn thẳng (ID: f7bfb275-124f-4afe-8572-16a603eb6fa8) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 36. Góc (ID: 690c71e5-c009-4172-8a60-fb16a39a596f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 37. Số đo góc (ID: 293273f0-efd0-4931-93d3-873ed202657f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương VIII (ID: d7e21159-6dc9-45ed-8313-d07b8b79dff3) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IX. DỮ LIỆU VÀ XÁC SUẤT THỰC NGHIỆM
+  - [BÀI HỌC] Bài 38. Dữ liệu và thu thập dữ liệu (ID: 9f922dcc-a465-4caa-a4ef-6440430f21b1) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 39. Bảng thống kê và biểu đồ tranh (ID: ddeebaff-2083-4584-b4e4-c6e3b16edc2c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 40. Biểu đồ cột (ID: cd8d3aa6-af49-40c3-a137-41e435c7ca60) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 41. Biểu đồ cột kép (ID: 6caa006a-02df-4116-8fa5-262dead21762) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 42. Kết quả có thể và sự kiện trong trò chơi, thí nghiệm (ID: 2db00700-438a-4f62-add0-43a0e5dd4cd8) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 43. Xác suất thực nghiệm (ID: 403d31c7-c02c-4c0a-9e17-d6ee84990d69) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Ôn tập chương IX (ID: c4ce2bd3-e41c-465c-95a1-42fdf57ecfca) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Bài tập ôn tập cuối năm (ID: 14959dfc-00fc-4091-8630-053ad4d76bd2) -> Có: 0 câu lý thuyết (Cần thêm)
+
+=== LỚP 7 ===
+
+[CHƯƠNG] Chương I. SỐ HỮU TỈ.
+  - [BÀI HỌC] Bài 1. Tập hợp các số hữu tỉ. (ID: 8581288c-9ebf-4d2b-9bd8-76080f212fdb) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 2. Cộng, trừ, nhân, chia số hữu tỉ. (ID: 5a3b7039-cf13-4036-8636-bc99a9542345) -> Có: 19 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Luyện tập chung. (ID: 7517ac98-43db-464f-91dd-7629822136e8) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Bài 3. Luỹ thừa với số mũ tự nhiên của một số hữu tỉ. (ID: 5bef54dc-6436-4795-a3b8-3cc1acf35d1c) -> Có: 12 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 4. Thứ tự thực hiện các phép tính. Quy tắc chuyển vế. (ID: f5953356-372f-43b0-8229-d43391245fde) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương I. (ID: 8492e4b3-cc87-4967-91e9-8a0a379e6dd0) -> Có: 1 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương II. SỐ THỰC.
+  - [BÀI HỌC] Bài 5. Làm quen với số thập phân vô hạn tuần hoàn. (ID: 9b8ca99f-9554-4437-b328-63b6fc774d42) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 6. Số vô tỉ. Căn bậc hai số học. (ID: a24bffff-4c4a-4a5d-bd42-55beddbeefc4) -> Có: 12 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 7. Tập hợp các số thực. (ID: 4a84521a-11aa-4fe4-b2e1-b8d34e688f2b) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương II. (ID: 7b3c6ad3-82a3-4fdc-8aa7-d8e066354d18) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương III. GÓC VÀ ĐƯỜNG THẲNG SONG SONG.
+  - [BÀI HỌC] Bài 8. Góc ở vị trí đặc biệt. Tia phân giác của một góc. (ID: 31b201a0-599a-4659-82b1-37f5d2913357) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 9. Hai đường thẳng song song và dấu hiệu nhận biết. (ID: 8f5300e2-039e-45f7-b075-59ff45cf6641) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 10. Tiên đề Euclid. Tính chất của hai đường thẳng song song. (ID: bbfdc347-0168-42ca-8265-290017b13697) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 11. Định lí và chứng minh định lí. (ID: c87c83ab-1c0e-467b-b040-d59145b50563) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương III. (ID: fda54110-2d5b-4249-9df0-6d718a094df5) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương IV. TAM GIÁC BẰNG NHAU.
+  - [BÀI HỌC] Bài 12. Tổng các góc trong một tam giác. (ID: 1181b456-b124-4c72-9469-2e4b135cf483) -> Có: 14 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 13. Hai tam giác bằng nhau. Trường hợp bằng nhau thứ nhất của tam giác. (ID: 448a98a5-de09-4071-8cf0-490f344416b9) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 14. Trường hợp bằng nhau thứ hai và thứ ba của tam giác. (ID: 23d98f75-c97b-45fc-bd7f-6e0eabc6ddaa) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 15. Các trường hợp bằng nhau của tam giác vuông. (ID: 09e77e9e-557f-45ab-bcbd-7b600a431224) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 16. Tam giác cân. Đường trung trực của đoạn thẳng. (ID: 2c58fafa-5b32-4b3b-8da0-f8884178e017) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IV. (ID: cbc81c53-36e2-4c02-a2cd-bebd6ab70da5) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương V. THU THẬP VÀ BIỂU DIỄN DỮ LIỆU.
+  - [BÀI HỌC] Bài 17. Thu thập và phân loại dữ liệu. (ID: 01c5684e-18d6-4d3b-aba9-5a57ef915d5c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 18. Biểu đồ hình quạt tròn. (ID: d460a796-d7f2-45c7-9338-4855142c258f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 19. Biểu đồ đoạn thẳng. (ID: 03759771-4f3f-40b0-a9ed-258ae8d850d9) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương V. (ID: 010f998c-d564-4bd7-a148-b94f9a0a30a6) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương VI. TỈ LỆ THỨC VÀ ĐẠI LƯỢNG TỈ LỆ.
+  - [BÀI HỌC] Bài 20. Tỉ lệ thức. (ID: 46231c20-7b80-453c-90e3-33e1453e42e8) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 21. Tính chất của dãy tỉ số bằng nhau. (ID: d54a972f-eb22-4c21-bba0-ccf5fdca190b) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 22. Đại lượng tỉ lệ thuận. (ID: 9734bae1-ca22-4194-b6f0-68c3c758052e) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 23. Đại lượng tỉ lệ nghịch. (ID: 10da6b9f-f290-4a96-8f21-17d4db5b9541) -> Có: 12 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VI. (ID: ad3f2a5b-c2ea-422b-a3bb-bdca9cf8d9dd) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương VII. BIỂU THỨC ĐẠI SỐ VÀ ĐA THỨC MỘT BIẾN.
+  - [BÀI HỌC] Bài 24. Biểu thức đại số. (ID: 145480a0-316d-47b2-914b-3b7bad6f4b76) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 25. Đa thức một biến. (ID: 43744937-728d-479f-a4a1-411004ce8dfb) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 26. Phép cộng và phép trừ đa thức một biến. (ID: 68c75ee5-dcd3-4d8f-a02f-d836b1b084cf) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 27. Phép nhân đa thức một biến. (ID: 1a91946c-2da9-4ebb-942e-5f958fcd5f3d) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 28. Phép chia đa thức một biến. (ID: 3a2797cb-2631-4b6b-9535-b846bb7eaaa3) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VII. (ID: b665e582-8b34-4632-a5b6-699cc4ec745d) -> Có: 1 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương VIII. LÀM QUEN VỚI BIẾN CỐ VÀ XÁC SUẤT CỦA BIẾN CỐ.
+  - [BÀI HỌC] Bài 29. Làm quen với biến cố. (ID: f6bff342-6832-40e6-b17a-111d9cdfb8bd) -> Có: 12 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 30. Làm quen với xác suất của biến cố. (ID: d1a8dd78-0a7c-447e-b76f-99c949d8e7f6) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VIII. (ID: 7841c4e4-ed0c-4955-ad6e-8a894df9d4a0) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương IX. QUAN HỆ GIỮA CÁC YẾU TỐ TRONG MỘT TAM GIÁC.
+  - [BÀI HỌC] Bài 31. Quan hệ giữa góc và cạnh đối diện trong một tam giác. (ID: 2bc8d4ae-3db4-4cb4-8fc7-868ae25585ba) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 32. Quan hệ giữa đường vuông góc và đường xiên. (ID: 50250f72-84b2-4112-9a86-1ab6bbb998a5) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 33. Quan hệ giữa ba cạnh của một tam giác. (ID: 253a61e9-d509-43b9-9080-9fa0dfc8cdfe) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 34. Sự đồng quy của ba trung tuyến, ba đường phân giác trong một tam giác. (ID: c3425308-a38e-4a1c-9157-d8f6af9a3d6d) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 35. Sự đồng quy của ba đường trung trực, ba đường cao trong một tam giác. (ID: a399e53c-27e4-44f7-a5e5-3ede009b1f62) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IX. (ID: da17de57-7e74-4636-a741-ca78bfb9fc06) -> Có: 8 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Chương X. MỘT SỐ HÌNH KHỐI TRONG THỰC TIỄN.
+  - [BÀI HỌC] Bài 36. Hình hộp chữ nhật và hình lập phương. (ID: 3a84c2fb-13f2-4747-badf-004706ef5005) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Luyện tập. (ID: fcd5d496-4507-4a11-a36e-1e5e94e9e2c7) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Bài 37. Hình lăng trụ đứng tam giác và hình lăng trụ đứng tứ giác. (ID: e86e400b-5732-4cf8-997d-4bdee5bae312) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương X. (ID: c7e56e83-55d6-4ccb-9678-41788886f85d) -> Có: 7 câu lý thuyết (Cần thêm)
+
+=== LỚP 8 ===
+
+[CHƯƠNG] CHƯƠNG I. ĐA THỨC
+  - [BÀI HỌC] Bài 1. Đơn thức. (ID: 8bf09c0e-57fe-48e1-96db-f14d155d1de3) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 2. Đa thức. (ID: bd0e2c0a-5424-4cf8-8ced-a0df65d03d4f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 3. Phép cộng và phép trừ đa thức. (ID: c40e2f3d-7642-406c-ba9b-15a8863dfb49) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 4. Phép nhân đa thức. (ID: c6f90a3a-7eb5-48d8-923d-9c8aa799e7da) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 5. Phép chia đa thức cho đơn thức. (ID: d9041ee2-d06c-451c-8811-f9120dc7c70b) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương 1. (ID: ff5e6edb-fdde-417a-90e3-fab807db2918) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG II. HẰNG ĐẲNG THỨC ĐÁNG NHỚ VÀ ỨNG DỤNG
+  - [BÀI HỌC] Bài 6. Hiệu hai bình phương. Bình phương của một tổng hay một hiệu. (ID: 30c01eff-1da3-4f14-b256-cc498f1e9055) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 7. Lập phương của một tổng hay một hiệu. (ID: 6ffe5599-48df-4f13-ae23-3c00e719029b) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 8. Tổng và hiệu hai lập hương. (ID: 8d2c40ee-7cd7-40ff-929f-f5726d6032c2) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 9. Phân tích đa thức thành nhân tử. (ID: 5caed3e1-26b6-4b92-88b0-3738dc803d09) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương II. (ID: 035c1226-afa1-4855-9fa3-15febd59e977) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG III. TỨ GIÁC
+  - [BÀI HỌC] Bài 10. Tứ giác. (ID: 2f9cdeb3-c6e9-496a-bc41-2d395c05d997) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 11. Hình thang cân. (ID: 11fbf9c1-9ad5-4ce0-8233-baedb0561f90) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 12. Hình bình hành. (ID: b472f2ad-5434-4aa2-8c6d-f1aecc064d82) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 13. Hình chữ nhật. (ID: 5e612669-0446-48cd-bae7-97e886399e85) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 14. Hình thoi và hình vuông. (ID: 8717335e-8ca0-4328-b51f-141d26248244) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương III. (ID: 5513a5fc-713e-47fb-90ba-8e8f99b4d882) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IV. ĐỊNH LÍ THALES
+  - [BÀI HỌC] Bài 15. Định lí Thalès trong tam giác. (ID: b13e67c9-7224-47f3-b473-913eb1cfe1a6) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 16. Đường trung bình của tam giác. (ID: 335e427c-405e-4140-8abe-b96feeb8cce1) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 17. Tính chất đường phân giác của tam giác. (ID: 3cae486a-a910-4b74-8e03-92b1184e79b4) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IV. (ID: 4aefb019-2b6e-49c2-981a-8bc2ddec8838) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG V. DỮ LIỆU VÀ BIỂU ĐỒ
+  - [BÀI HỌC] Bài 18. Thu thập và phân loại dữ liệu. (ID: 68427d92-877e-46bb-91e1-ac42abab3274) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 19. Biểu diễn dữ liệu bằng bảng, biểu đồ. (ID: 91f95929-15c0-4d2c-98bb-37149b0638fe) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 20. Phân tích số liệu thống kê dựa vào biểu đó. (ID: ba196aef-2160-41d8-af98-12f8d59b2de0) -> Có: 11 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương V. (ID: b9673cb6-7d68-4d4e-81af-e202c0f63761) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VI. PHÂN THỨC ĐẠI SỐ
+  - [BÀI HỌC] Bài 21. Phần thức đại số. (ID: fc3e7715-ce7b-4e6a-bc89-20862d22a3e8) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 22. Tính chất cơ bản của phân thức đại số. (ID: e8623ea1-37ef-42c0-b688-59d745a29994) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 23. Phép cộng và phép trừ phân thức đại số. (ID: 4a63ce27-01de-4f2a-ae68-03882cde1043) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 24. Phép nhân và phép chia phân thức đại số. (ID: 9193d24c-c98d-4af1-90d2-2ab3874c3954) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VI. (ID: dd85653e-b62a-411e-8e61-2ea5886d7cef) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VII. PHƯƠNG TRÌNH BẬC NHẤT VÀ HÀM SỐ BẬC NHẤT
+  - [BÀI HỌC] Bài 25. Phương trình bậc nhất một ẩn. (ID: a573d790-eeab-4cce-8435-238ea39bbdf9) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 26. Giải bài toán bằng cách lập phương trình. (ID: d67ec853-e283-4b22-b32b-945eab72aed2) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 27. Khái niệm hàm số và đô thị của hàm số. (ID: f06eba8b-9f39-442f-a758-ceafe95ec4d4) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 28. Hàm số bậc nhất và đô thị của hàm số bậc nhất. (ID: f487b483-14ef-4260-aea9-8cd1a0af3bd5) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 29. Hệ số góc của đường thẳng. (ID: 11b6192b-c396-424e-b272-96e96868be55) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VII. (ID: 2442fb08-36bf-4864-8876-a35741cd4c09) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VIII. MỞ ĐẦU VỀ TÍNH XÁC SUẤT CỦA BIẾN CỐ
+  - [BÀI HỌC] Bài 30. Kết quả có thể và kết quả thuận lợi. (ID: 6c66a73a-5aed-46cd-8c70-241ef532c429) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 31. Cách tính xác suất của biến cố bằng tỉ số. (ID: 90a988ed-5a5b-4a9e-ac09-76746c5958d3) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 32. Mối liên hệ giữa xác suất thực nghiệm với xác suất và ứng dụng. (ID: acd867ef-30b0-4676-8a14-7e28ecfd9314) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VIII. (ID: 4fc86063-8d87-45f2-81ac-17e8ee07047a) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IX. TAM GIÁC ĐỒNG DẠNG
+  - [BÀI HỌC] Bài 33. Hai tam giác đồng dạng. (ID: 5de34a26-19d4-4f96-89ab-705cd64af7d2) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 34. Ba trường hợp đồng dạng của hai tam giác. (ID: 981f5327-f5fe-4bc3-8643-5e08713bdc79) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 35. Định lí Pythagore và ứng dụng. (ID: 314a5710-b105-4d0b-91a3-38804b557f65) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 36. Các trường hợp đồng dạng của hai tam giác vuông. (ID: 182ce417-de7e-45cb-b7f2-df65ab184e71) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 37. Hình đồng dạng. (ID: 8094b1c5-28a5-43e5-832c-d8e68ab1037e) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IX. (ID: fe4cf590-d812-4754-b525-7cf469ded7f8) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG X. MỘT SỐ HÌNH KHỐI TRONG THỰC TIỄN
+  - [BÀI HỌC] Bài 38. Hình chóp tam giác đều. (ID: b809f0f7-295b-441c-b212-6bee22b08303) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 39. Hình chóp tứ giác đều. (ID: 5305246b-cac2-4adb-842e-e044acaaa878) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Luyện tập chung. (ID: e1051d89-7b17-4cef-ab66-69d87963d888) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Bài tập cuối chương X. (ID: 1661d5a0-65a0-4253-a8b2-93d490d9b31f) -> Có: 0 câu lý thuyết (Cần thêm)
+
+=== LỚP 9 ===
+
+[CHƯƠNG] CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN
+  - [BÀI HỌC] Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn. (ID: 04886195-366d-43d0-a9da-4043475ccfb2) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn. (ID: 9d3d76bd-e202-47f2-bd44-fd27e81059b7) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 3. Giải bài toán bằng cách lập hệ phương trình. (ID: 5e72ba56-0fd3-4d2e-a9c7-1eb09a7bfd9d) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương I. (ID: c450ac94-ada5-4e02-9b14-ea4ece00711d) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG II. PT VÀ BẤT PT BẬC NHẤT 1 ẨN
+  - [BÀI HỌC] Bài 4. Phương trình quy về phương trình bậc nhất một ẩn. (ID: 35b77b38-8330-4862-9583-9fc30aff47d5) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 5. Bất đẳng thức và tính chất. (ID: 5f573415-dec3-40a8-a24a-7268c223b7f1) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 6. Bất phương trình bậc nhất một ẩn. (ID: 85efec08-5622-423f-8291-4bb9831869f6) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương II. (ID: f348c2b2-8830-4e88-a0db-4ddea391ca84) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA
+  - [BÀI HỌC] Bài 7. Căn bậc hai và căn thức bậc hai. (ID: d6b4f323-757f-4a92-8720-38ca2f4deba8) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 8. Khai căn bậc hai với phép nhân và phép chia. (ID: 4dd3889a-0416-44a1-8d35-3e18e4a8ab58) -> Có: 17 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai. (ID: 7c1c49ae-9cb0-4fe0-92fb-c18b6fa815f7) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 10. Căn bậc ba và căn thức bậc ba. (ID: 272488a7-d30f-4bc0-9b09-abfaf3636bef) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương III. (ID: 9794852a-e151-48ec-b15f-282297f05ea5) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IV. HỆ THỨC LƯỢNG TRONG TAM GIÁC VUÔNG
+  - [BÀI HỌC] Bài 11. Tỉ số lượng giác của góc nhọn. (ID: a36de566-3c04-439f-9997-2f2e0af98edd) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng. (ID: 9fc7a175-90cf-4a55-808c-60a000bfd400) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IV. (ID: 8b7dcc3d-aa7d-44cd-b756-4de1bfdf71b7) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG V. ĐƯỜNG TRÒN
+  - [BÀI HỌC] Bài 13. Mở đầu về đường tròn. (ID: 961fcfb8-7f7d-4955-a150-3a28793a207e) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 14. Cung và dây của một đường tròn. (ID: ef9860a5-4c55-43a4-aed7-672c70232069) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 15. Độ dài của cung tròn. Diện tích hình quạt tròn và hình vành khuyên. (ID: 7ca5321e-d762-4b16-96da-ee285ae77372) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 16. Vị trí tương đối của đường thẳng và đường tròn. (ID: 0c1f8bcc-7de1-4dee-986f-abaf281a99a7) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 17. Vị trí tương đối của hai đường tròn. (ID: edfa77f0-914a-48bc-b5da-f7d5fe189b9f) -> Có: 15 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương V. (ID: e15e6e95-bb3b-49b2-a90b-22795f2ef700) -> Có: 5 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VI. HÀM SỐ y = ax² (a ≠ 0). PHƯƠNG TRÌNH BẬC HAI MỘT ẨN
+  - [BÀI HỌC] Bài 18. Hàm số y = ax2 (a ≠ 0). (ID: cdd6e10b-1c50-4f44-a1ed-03c77109a62c) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 19. Phương trình bậc hai một ẩn. (ID: aeb2710f-29a7-4b02-ad45-4a4d09027780) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 20. Định lí Viète và ứng dụng. (ID: 8b0904e8-14c7-4801-80fe-ea3793cd6d06) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 21. Giải bài toán bằng cách lập phương trình. (ID: d01a0e53-18f0-4973-b065-8eaa970e7f09) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VI. (ID: 5416208f-9252-4961-b77a-989480c89946) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VII. TẦN SỐ VÀ TẦN SỐ TƯƠNG ĐỐI
+  - [BÀI HỌC] Bài 22. Bảng tần số và biểu đồ tần số. (ID: 84df62ce-aa84-4178-a52c-e821a17989cb) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 23. Bảng tần số tương đối và biểu đồ tần số tương đối. (ID: 6c7bdaaa-f5e3-4625-a19f-a83c825c42b1) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 24. Bảng tần số, tần số tương đối ghép nhóm và biểu đồ. (ID: 0bd2aad4-d21f-4bc5-9d3a-ba8d4b89b39f) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VII. (ID: f6374e86-3edf-4611-9927-4973d9eceb5c) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG VIII. XÁC SUẤT CỦA BIẾN CỐ TRONG MỘT SỐ MÔ HÌNH XÁC SUẤT ĐƠN GIẢN
+  - [BÀI HỌC] Bài 25. Phép thử ngẫu nhiên và không gian mẫu. (ID: 364d9a49-21a0-4e3e-8691-21a5f2f2932d) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 26. Xác suất của biến cố liên quan tới phép thử. (ID: 6761ba97-621a-4a08-8f08-dbb218ce7df2) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương VIII. (ID: 8b1f8370-f431-4fa2-8bd2-0131daea6319) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG IX. ĐƯỜNG TRÒN NGOẠI TIẾP VÀ ĐƯỜNG TRÒN NỘI TIẾP
+  - [BÀI HỌC] Bài 27. Góc nội tiếp. (ID: de6eff7c-5049-442b-a019-ccda3152b146) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 28. Đường tròn ngoại tiếp và đường tròn nội tiếp của một tam giác. (ID: 3af258b0-0c69-4f69-bcdb-061db0be4cb7) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 29. Tứ giác nội tiếp. (ID: abd93d32-a146-4ff6-b0d4-dbca1a853684) -> Có: 13 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 30. Đa giác đều. (ID: ba7b12c2-6720-42dd-b587-75aa04738833) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài tập cuối chương IX. (ID: c39528fe-863b-4e0b-8fa1-7c5dfef8bccf) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] CHƯƠNG X. MỘT SỐ HÌNH KHỐI TRONG THỰC TIỄN
+  - [BÀI HỌC] Bài 31. Hình trụ và hình nón. (ID: 8e983753-201a-4a9f-857f-4fac0eb3cbc1) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Bài 32. Hình cầu. (ID: 90fb47e3-2e8b-4936-8b67-a55051e1fbe4) -> Có: 10 câu lý thuyết (Đủ)
+  - [BÀI HỌC] Luyện tập chung. (ID: b4794ef5-e45c-4841-84a0-cfd2c8b67bcf) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Bài tập cuối chương X. (ID: b1ff7e16-00c7-484d-8352-569a384be669) -> Có: 0 câu lý thuyết (Cần thêm)
+
+[CHƯƠNG] Bài tập ôn thi vào 10
+  - [BÀI HỌC] Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét (ID: 36869657-c24e-4024-97b4-465e95d8f3e5) -> Có: 3 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 4. Giải bài toán bằng cách lập phương trình (ID: e2674d33-41c2-4db4-91e9-0c304e293cbc) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 5. Hàm số bậc hai và các bài toán tương giao (ID: ed16a2c8-e432-4a90-9e90-66481fb89eaf) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 6. Rút gọn biểu thức và các bài toán liên quan (ID: d3332fd2-82e1-475e-a018-25e8169d5035) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 7. Hệ thức lượng trong tam giác vuông và ứng dụng (ID: c70c9499-c84d-4d26-9315-4030d966e430) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 8. Một số yếu tố thống kê (ID: 69b77502-8f71-4e46-9a39-7cd72b70238d) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 9. Một số yếu tố xác suất (ID: 38848e04-da93-4c2b-bd9a-9adb246ad5ed) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 10. Nón – trụ – cầu và hình khối (ID: 0cb8da64-8b0c-4858-abdd-8a388f332f3e) -> Có: 2 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 12. Bất đẳng thức và các bài toán cực trị (ID: 6a26c4af-052b-4c6f-b127-1ca2339ef7ee) -> Có: 0 câu lý thuyết (Cần thêm)
+  - [BÀI HỌC] Chuyên đề 13. Các bài toán thực tế có liên quan cực trị (ID: 076fa54f-08ac-4368-a200-9d2c53e066ab) -> Có: 0 câu lý thuyết (Cần thêm)
