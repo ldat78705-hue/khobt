@@ -85,9 +85,71 @@ export default function TheoryReviewPage() {
       const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();
-      setQuestions(data.data || data || []);
+      
+      let fetchedQuestions: Question[] = data.data || data || [];
+
+      // 1. Lọc trùng câu hỏi (dựa theo nội dung để tránh trùng lặp quá nhiều)
+      const uniqueQuestionsMap = new Map<string, Question>();
+      for (const q of fetchedQuestions) {
+        // Loại bỏ khoảng trắng và chuẩn hóa để so sánh
+        const normalizedContent = q.content.trim().replace(/\s+/g, ' ').toLowerCase();
+        if (!uniqueQuestionsMap.has(normalizedContent)) {
+          uniqueQuestionsMap.set(normalizedContent, q);
+        }
+      }
+      fetchedQuestions = Array.from(uniqueQuestionsMap.values());
+
+      // 2. Lọc trùng đáp án trong cùng 1 câu & Hoán đổi ngẫu nhiên
+      fetchedQuestions = fetchedQuestions.map(q => {
+        if (!q.options || q.options.length === 0) return q;
+
+        const correctOpt = q.options.find(o => o.key === q.correct_answer);
+        const correctValue = correctOpt ? correctOpt.value.trim() : null;
+
+        const uniqueValues = new Set<string>();
+        const uniqueOptions = [];
+        
+        for (const opt of q.options) {
+          const val = opt.value.trim();
+          if (!uniqueValues.has(val)) {
+            uniqueValues.add(val);
+            uniqueOptions.push({ ...opt });
+          }
+        }
+
+        // Đảm bảo đáp án đúng luôn có mặt nếu nó lỡ bị mất
+        if (correctValue && !uniqueValues.has(correctValue)) {
+           uniqueOptions.push({ key: q.correct_answer, value: correctValue });
+        }
+
+        // Hoán đổi ngẫu nhiên các đáp án (Thuật toán Fisher-Yates)
+        for (let i = uniqueOptions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [uniqueOptions[i], uniqueOptions[j]] = [uniqueOptions[j], uniqueOptions[i]];
+        }
+
+        // Gán lại các nhãn A, B, C, D tuần tự
+        const labels = ["A", "B", "C", "D", "E", "F", "G", "H"];
+        let newCorrectAnswer = q.correct_answer;
+        
+        const finalOptions = uniqueOptions.map((opt, idx) => {
+          const newKey = labels[idx] || String.fromCharCode(65 + idx);
+          if (opt.value.trim() === correctValue) {
+            newCorrectAnswer = newKey;
+          }
+          return { key: newKey, value: opt.value };
+        });
+
+        return {
+          ...q,
+          options: finalOptions,
+          correct_answer: newCorrectAnswer
+        };
+      });
+
+      setQuestions(fetchedQuestions);
       // Auto select all initially
-      setSelectedIds(new Set((data.data || data || []).map((q: any) => q.id)));
+      setSelectedIds(new Set(fetchedQuestions.map(q => q.id)));
     } catch (err) {
       toast.error("Không thể tải danh sách câu hỏi lý thuyết.");
     } finally {
@@ -235,7 +297,7 @@ export default function TheoryReviewPage() {
                       "bg-slate-800 border-slate-700 hover:border-blue-400/50 hover:bg-slate-800/80 hover:scale-[1.01] cursor-pointer"
                     )}
                   >
-                    <div className="flex items-start gap-6 relative z-10">
+                    <div className="flex items-center gap-6 relative z-10">
                       <div className={cn(
                         "flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full font-bold text-2xl md:text-3xl shrink-0 transition-colors",
                         showHighlight ? "bg-green-500 text-white" : 
@@ -244,7 +306,7 @@ export default function TheoryReviewPage() {
                       )}>
                         {opt.key}
                       </div>
-                      <div className="mt-1.5 md:mt-2 overflow-x-auto no-scrollbar">
+                      <div className="overflow-x-auto no-scrollbar py-2 w-full">
                         <MathRenderer content={opt.value} />
                       </div>
                     </div>

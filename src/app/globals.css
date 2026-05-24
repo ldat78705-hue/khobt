@@ -255,6 +255,17 @@ math-field:focus-within {
   display: inline;
 }
 
+/* Fix Tailwind + KaTeX vertical line issue */
+.katex-html * {
+  border-color: transparent;
+}
+.katex-html .frac-line, 
+.katex-html .sqrt-line,
+.katex-html .fbox,
+.katex-html .rule {
+  border-color: currentColor !important;
+}
+
 /* Markdown tables */
 .md-table {
   width: auto;
