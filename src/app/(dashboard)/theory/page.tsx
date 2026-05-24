@@ -30,6 +30,42 @@ export default function TheoryReviewPage() {
   const [isPresenting, setIsPresenting] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
+  // Procedural Audio
+  const playTone = (type: 'correct' | 'wrong') => {
+    try {
+      const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      
+      if (type === 'correct') {
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(523.25, ctx.currentTime); // C5
+        osc.frequency.exponentialRampToValueAtTime(1046.50, ctx.currentTime + 0.1); // C6
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.5, ctx.currentTime + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.5);
+      } else {
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(150, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(100, ctx.currentTime + 0.2);
+        gain.gain.setValueAtTime(0, ctx.currentTime);
+        gain.gain.linearRampToValueAtTime(0.3, ctx.currentTime + 0.05);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.4);
+      }
+    } catch (e) {
+      console.log('Audio not supported', e);
+    }
+  };
 
   useEffect(() => {
     fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
@@ -72,6 +108,7 @@ export default function TheoryReviewPage() {
     setIsPresenting(true);
     setCurrentIndex(0);
     setShowAnswer(false);
+    setSelectedAnswer(null);
     
     // Yêu cầu Fullscreen nếu trình duyệt hỗ trợ
     if (document.documentElement.requestFullscreen) {
@@ -93,6 +130,7 @@ export default function TheoryReviewPage() {
       if (currentIndex < presentationQuestions.length - 1) {
         setCurrentIndex(prev => prev + 1);
         setShowAnswer(false);
+        setSelectedAnswer(null);
       } else {
         toast.success("Đã hoàn thành bài ôn tập!");
         exitPresentation();
@@ -101,12 +139,20 @@ export default function TheoryReviewPage() {
   };
 
   const prevSlide = () => {
-    if (showAnswer) {
+    if (showAnswer && selectedAnswer === null) {
       setShowAnswer(false);
     } else if (currentIndex > 0) {
       setCurrentIndex(prev => prev - 1);
       setShowAnswer(true);
+      setSelectedAnswer(null);
     }
+  };
+
+  const handleAnswerClick = (key: string, isCorrect: boolean) => {
+    if (showAnswer) return; // Already answered
+    setSelectedAnswer(key);
+    setShowAnswer(true);
+    playTone(isCorrect ? 'correct' : 'wrong');
   };
 
   const presentationQuestions = questions.filter(q => selectedIds.has(q.id));
@@ -114,92 +160,113 @@ export default function TheoryReviewPage() {
 
   if (isPresenting && currentQ) {
     return (
-      <div className="fixed inset-0 z-50 bg-slate-900 text-white flex flex-col">
+      <div className="fixed inset-0 z-[100] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black text-white flex flex-col font-sans">
         {/* Header */}
-        <div className="h-16 flex items-center justify-between px-6 bg-slate-800 border-b border-slate-700">
-          <div className="flex items-center gap-3">
-            <BookOpen className="w-5 h-5 text-blue-400" />
-            <span className="font-semibold">Ôn tập Lý Thuyết Lớp {gradeFilter}</span>
-          </div>
+        <div className="h-20 flex items-center justify-between px-8 bg-slate-900/50 backdrop-blur-md border-b border-white/10 shadow-lg">
           <div className="flex items-center gap-4">
-            <span className="text-sm text-slate-400">
-              Câu {currentIndex + 1} / {presentationQuestions.length}
-            </span>
+            <div className="p-2.5 bg-blue-500/20 rounded-xl">
+              <BookOpen className="w-6 h-6 text-blue-400" />
+            </div>
+            <span className="text-xl font-bold tracking-wide">Ôn tập Lý Thuyết Lớp {gradeFilter}</span>
+          </div>
+          <div className="flex items-center gap-6">
+            <div className="px-4 py-1.5 bg-white/5 rounded-full border border-white/10">
+              <span className="text-base font-medium text-slate-300">
+                Câu <span className="text-white font-bold">{currentIndex + 1}</span> / {presentationQuestions.length}
+              </span>
+            </div>
             <button 
               onClick={exitPresentation}
-              className="p-2 bg-slate-700 hover:bg-red-500/20 hover:text-red-400 rounded-lg transition-colors"
+              className="p-2.5 bg-white/5 hover:bg-red-500/20 hover:text-red-400 border border-white/10 hover:border-red-500/30 rounded-xl transition-all"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
         </div>
 
         {/* Content */}
-        <div className="flex-1 overflow-y-auto p-12 flex flex-col justify-center items-center">
-          <div className="max-w-4xl w-full">
-            <div className="text-3xl leading-relaxed mb-12 font-medium flex items-start gap-4">
-              <span className="font-bold whitespace-nowrap">Câu {currentIndex + 1}:</span>
-              <MathRenderer content={currentQ.content} />
+        <div className="flex-1 overflow-y-auto p-8 md:p-16 flex flex-col justify-center items-center">
+          <div className="max-w-6xl w-full">
+            <div className="text-3xl md:text-5xl leading-tight md:leading-snug mb-16 font-medium flex items-start gap-6">
+              <span className="font-extrabold text-blue-400 whitespace-nowrap drop-shadow-md">Câu {currentIndex + 1}:</span>
+              <div className="flex-1 text-slate-100 drop-shadow-sm">
+                <MathRenderer content={currentQ.content} />
+              </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {currentQ.options?.map((opt) => {
                 const isCorrect = opt.key === currentQ.correct_answer;
+                const isSelected = selectedAnswer === opt.key;
                 const showHighlight = showAnswer && isCorrect;
-                const showDim = showAnswer && !isCorrect;
+                const showWrong = showAnswer && isSelected && !isCorrect;
+                const showDim = showAnswer && !isCorrect && !showWrong;
 
                 return (
-                  <div 
+                  <button 
                     key={opt.key}
+                    onClick={() => handleAnswerClick(opt.key, isCorrect)}
+                    disabled={showAnswer}
                     className={cn(
-                      "p-6 rounded-2xl border-2 text-2xl transition-all duration-500",
-                      showHighlight ? "bg-green-500/20 border-green-500 text-green-300 scale-105 shadow-[0_0_30px_rgba(34,197,94,0.3)]" : 
-                      showDim ? "bg-slate-800 border-slate-700 text-slate-500 opacity-50" : 
-                      "bg-slate-800 border-slate-700 hover:border-slate-500"
+                      "text-left p-6 md:p-8 rounded-3xl border-2 text-2xl md:text-4xl transition-all duration-300 relative overflow-hidden group",
+                      showHighlight ? "bg-green-500/20 border-green-400 text-green-100 scale-[1.02] shadow-[0_0_40px_rgba(74,222,128,0.2)]" : 
+                      showWrong ? "bg-red-500/20 border-red-500 text-red-200 scale-95 shadow-inner" :
+                      showDim ? "bg-white/5 border-white/5 text-slate-500 opacity-40" : 
+                      "bg-white/5 border-white/10 hover:border-blue-400/50 hover:bg-blue-500/10 hover:scale-[1.01] cursor-pointer"
                     )}
                   >
-                    <div className="flex items-start gap-4">
-                      <span className={cn(
-                        "font-bold",
-                        showHighlight ? "text-green-400" : "text-blue-400"
-                      )}>{opt.key}.</span>
-                      <MathRenderer content={opt.value} />
+                    <div className="flex items-start gap-6 relative z-10">
+                      <div className={cn(
+                        "flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full font-bold text-2xl md:text-3xl shrink-0 transition-colors",
+                        showHighlight ? "bg-green-500 text-white" : 
+                        showWrong ? "bg-red-500 text-white" :
+                        "bg-slate-700 text-blue-400 group-hover:bg-blue-500 group-hover:text-white"
+                      )}>
+                        {opt.key}
+                      </div>
+                      <div className="mt-1.5 md:mt-2 overflow-x-auto no-scrollbar">
+                        <MathRenderer content={opt.value} />
+                      </div>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>
 
             {/* Giải thích */}
             {showAnswer && currentQ.solution && (
-              <div className="mt-12 p-6 bg-blue-500/10 border border-blue-500/30 rounded-2xl text-blue-200 text-xl animate-in fade-in slide-in-from-bottom-4">
-                <span className="font-bold text-blue-400 mr-2 flex items-center gap-2 mb-2">
-                  <CheckCircle2 className="w-6 h-6" /> Giải thích:
+              <div className="mt-16 p-8 bg-blue-500/10 border border-blue-500/30 rounded-3xl text-blue-100 text-2xl md:text-3xl leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700">
+                <span className="font-bold text-blue-400 mr-3 inline-flex items-center gap-3 mb-4">
+                  <CheckCircle2 className="w-8 h-8" /> Lời giải chi tiết:
                 </span>
-                <MathRenderer content={currentQ.solution} />
+                <div className="mt-2 text-slate-300">
+                  <MathRenderer content={currentQ.solution} />
+                </div>
               </div>
             )}
           </div>
         </div>
 
         {/* Controls */}
-        <div className="h-24 bg-slate-800 border-t border-slate-700 flex items-center justify-center gap-8">
+        <div className="h-32 bg-slate-900/80 backdrop-blur-xl border-t border-white/10 flex items-center justify-center gap-8 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] z-20">
           <button 
             onClick={prevSlide}
             disabled={currentIndex === 0 && !showAnswer}
-            className="px-8 py-4 bg-slate-700 hover:bg-slate-600 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl flex items-center gap-2 font-medium transition-colors"
+            className="px-10 py-5 bg-white/5 hover:bg-white/10 disabled:opacity-30 disabled:hover:bg-white/5 rounded-2xl flex items-center gap-3 font-semibold text-xl transition-all border border-white/10"
           >
-            <ChevronLeft className="w-6 h-6" /> Lùi lại
+            <ChevronLeft className="w-8 h-8" /> Quay lại
           </button>
           <button 
             onClick={nextSlide}
             className={cn(
-              "px-8 py-4 rounded-xl flex items-center gap-2 font-bold text-lg transition-all shadow-lg",
-              showAnswer ? "bg-blue-600 hover:bg-blue-500 text-white" : "bg-green-600 hover:bg-green-500 text-white animate-pulse"
+              "px-12 py-5 rounded-2xl flex items-center gap-3 font-bold text-2xl transition-all duration-300 shadow-xl",
+              showAnswer 
+                ? "bg-blue-500 hover:bg-blue-400 text-white shadow-blue-500/25 hover:scale-105" 
+                : "bg-emerald-500 hover:bg-emerald-400 text-white shadow-emerald-500/25 hover:scale-105"
             )}
           >
-            {showAnswer ? "Câu tiếp theo" : "Hiển thị đáp án"}
-            <ChevronRight className="w-6 h-6" />
+            {showAnswer ? (currentIndex < presentationQuestions.length - 1 ? "Câu tiếp theo" : "Hoàn thành") : "Hiện đáp án"}
+            <ChevronRight className="w-8 h-8" />
           </button>
         </div>
       </div>
