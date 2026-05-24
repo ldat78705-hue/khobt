@@ -110,6 +110,7 @@ export default function TheoryReviewPage() {
         const uniqueOptions = [];
         
         for (const opt of q.options) {
+          if (!opt || typeof opt.value !== 'string') continue;
           const val = opt.value.trim();
           if (!uniqueValues.has(val)) {
             uniqueValues.add(val);
