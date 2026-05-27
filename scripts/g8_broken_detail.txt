@@ -1,0 +1,296 @@
+﻿=== XEM CHI TIáº¾T 18 CĂ‚U MCQ Lá»P 8 ===
+
+
+================================================================================
+[L8-mpccc5v7-64] Lá»›p 8
+Äá»€: **CĂ¢u 1:** Káº¿t quáº£ rĂºt gá»n cá»§a phĂ¢n thá»©c $\dfrac{{{x}^2}-4x+4}{{{x}^2}-4}$ lĂ :.
+  A. 1
+  B. $\frac{x-2}{x+2}$
+  C. $\frac{x-4}{x}$
+  D. $\frac{2+x}{x-2}$
+
+Lá»œI GIáº¢I: Ta phĂ¢n tĂ­ch tá»­ thá»©c vĂ  máº«u thá»©c thĂ nh nhĂ¢n tá»­:
+- Tá»­ thá»©c: $x^2 - 4x + 4 = (x - 2)^2$ (Háº±ng Ä‘áº³ng thá»©c sá»‘ 2).
+- Máº«u thá»©c: $x^2 - 4 = x^2 - 2^2 = (x - 2)(x + 2)$ (Háº±ng Ä‘áº³ng thá»©c sá»‘ 3).
+Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh: $x \ne 2, x \ne -2$.
+Khi Ä‘Ă³, biá»ƒu thá»©c Ä‘Æ°á»£c rĂºt gá»n lĂ :
+$\dfrac{x^2 - 4x + 4}{x^2 - 4} = \dfrac{(
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccc5wi-65] Lá»›p 8
+Äá»€: **CĂ¢u 2:** PhĂ¢n thá»©c $\dfrac{x+1}{2x}$ cĂ³ giĂ¡ trá»‹ báº±ng 1 khi x báº±ng:.
+  A. (- 2)
+  B. 0
+  C. 1
+  D. (- 1)
+
+Lá»œI GIáº¢I: Ta cĂ³ phÆ°Æ¡ng trĂ¬nh:
+$\dfrac{x + 1}{2x} = 1$
+Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh: $x \ne 0$.
+NhĂ¢n cáº£ hai váº¿ vá»›i $2x$:
+$x + 1 = 2x$
+$\Leftrightarrow 2x - x = 1$
+$\Leftrightarrow x = 1$ (thá»a mĂ£n ÄKXÄ).
+**Káº¿t luáº­n:** PhĂ¢n thá»©c cĂ³ giĂ¡ trá»‹ báº±ng $1$ khi $x = 1$.
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccc8y9-140] Lá»›p 8
+Äá»€: BĂ i 1 (1 Ä‘iá»ƒm). Chá»n Ä‘Ă¡p Ă¡n Ä‘Ăºng:
+1. $\left( 2x-1 \right)^2$ báº±ng:
+	A. $4{{x}^2}-4x+1$ B. $\left( 1-2x \right)^2$ C. $4{{x}^2}-1$ D. $2{{x}^2}-1$
+2. Káº¿t quáº£ rĂºt gá»n cá»§a: $\left( {{x}^2}+xy+{{y}^2} \right)\left( x-y \right)-\left( x+y \right)\left( {{x}^2}-xy+{{y}^2} \right)$ lĂ :.
+  A. $2{{y}^3}$
+  B. $-2{{x}^3}$
+  C. $-2{{y}^3}$
+  D. $2{{x}^3}$
+
+Lá»œI GIáº¢I: **1.** Khai triá»ƒn háº±ng Ä‘áº³ng thá»©c:
+$(2x - 1)^2 = (2x)^2 - 2 \cdot 2x \cdot 1 + 1^2 = 4x^2 - 4x + 1$.
+Máº·t khĂ¡c, $(2x - 1)^2 = (1 - 2x)^2$ (bĂ¬nh phÆ°Æ¡ng cá»§a hai sá»‘ Ä‘á»‘i nhau luĂ´n báº±ng nhau).
+Do Ä‘Ă³, Ä‘Ă¡p Ă¡n Ä‘Ăºng cĂ³ thá»ƒ lĂ  A (náº¿u tráº¯c nghiá»‡m chá»n 1 Ä‘Ă¡p Ă¡n tÆ°á»ng minh dáº¡ng khai triá»ƒn) hoáº·c B.
+
+**2.** RĂºt gá»n 
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccc9p9-159] Lá»›p 8
+Äá»€: **CĂ¢u 3:** GiĂ¡ trá»‹ cá»§a biá»ƒu thá»©c: ${{x}^2}-4x+4$ táº¡i $x=-1$ lĂ :.
+  A. -1
+  B. 1
+  C. -9
+  D. 9
+
+Lá»œI GIáº¢I: Ta cĂ³ biá»ƒu thá»©c: $A = x^2 - 4x + 4$
+Ăp dá»¥ng háº±ng Ä‘áº³ng thá»©c bĂ¬nh phÆ°Æ¡ng cá»§a má»™t hiá»‡u, ta thu gá»n Ä‘Æ°á»£c:
+$A = (x - 2)^2$
+Thay $x = -1$ vĂ o biá»ƒu thá»©c Ä‘Ă£ thu gá»n:
+$A = (-1 - 2)^2 = (-3)^2 = 9$.
+**Káº¿t luáº­n:** GiĂ¡ trá»‹ cá»§a biá»ƒu thá»©c lĂ  $9$.
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccc9xt-165] Lá»›p 8
+Äá»€: **CĂ¢u 1:** Táº­p nghiá»‡m cá»§a phÆ°Æ¡ng trĂ¬nh $\left( x+\dfrac{1}{3} \right)\left( x-2 \right)=0$ lĂ :.
+  A. $\left\{ -\frac{1}{3} \right\}$
+  B. $\left\{ 2 \right\}$
+  C. $\left\{ -\frac{1}{3};-2 \right\}$
+  D. $\left\{ -\frac{1}{3};2 \right\}$
+
+Lá»œI GIáº¢I: Ta cĂ³ phÆ°Æ¡ng trĂ¬nh:
+$\left( x + \dfrac{1}{3} \right)(x - 2) = 0$
+ÄĂ¢y lĂ  phÆ°Æ¡ng trĂ¬nh tĂ­ch, do Ä‘Ă³:
+$x + \dfrac{1}{3} = 0$ hoáº·c $x - 2 = 0$
+- TrÆ°á»ng há»£p 1: $x + \dfrac{1}{3} = 0 \Leftrightarrow x = -\dfrac{1}{3}$.
+- TrÆ°á»ng há»£p 2: $x - 2 = 0 \Leftrightarrow x = 2$.
+**Káº¿t luáº­n:** Táº­p nghiá»‡m cá»§a phÆ°Æ¡ng t
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccca0n-167] Lá»›p 8
+Äá»€: **CĂ¢u 3:** TrĂªn hĂ¬nh 1, cho tam giĂ¡c ABC, AM lĂ  phĂ¢n giĂ¡c. Äá»™ dĂ i Ä‘oáº¡n tháº³ng MB báº±ng:.
+  A. 1,7
+  B. 2,8
+  C. 3,8
+  D. 5,1
+
+Lá»œI GIáº¢I: *(Do cĂ¢u há»i tham chiáº¿u Ä‘áº¿n "hĂ¬nh 1" khĂ´ng cĂ³ sá»‘ liá»‡u cá»¥ thá»ƒ nĂªn Ä‘Ă¢y lĂ  phÆ°Æ¡ng phĂ¡p giáº£i chung)*
+
+Theo tĂ­nh cháº¥t Ä‘Æ°á»ng phĂ¢n giĂ¡c trong tam giĂ¡c:
+Trong $\Delta ABC$, vĂ¬ $AM$ lĂ  tia phĂ¢n giĂ¡c cá»§a $\widehat{A}$ ($M \in BC$), ta cĂ³ tá»‰ lá»‡ thá»©c:
+$\dfrac{MB}{MC} = \dfrac{AB}{AC}$
+Tá»« tá»‰ lá»‡ thá»©c nĂ y, ta cĂ³ t
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccca22-168] Lá»›p 8
+Äá»€: **CĂ¢u 4:** TrĂªn hĂ¬nh 2, biáº¿t MMâ€™ // NNâ€™, MN = 4 cm, OMâ€™ = 12CM vĂ  Mâ€™Nâ€™ = 8 cm. Sá»‘ Ä‘o cá»§a Ä‘oáº¡n tháº³ng OM lĂ :.
+  A. 6cm
+  B. 8cm
+  C. 10cm
+  D. 5cm 
+Tá»± luáº­n (9 Ä‘iá»ƒm)
+
+Lá»œI GIáº¢I: Do $MM' \parallel NN'$, Ă¡p dá»¥ng há»‡ quáº£ cá»§a Ä‘á»‹nh lĂ½ Thales trong tam giĂ¡c $ONN'$, ta cĂ³:
+$\dfrac{OM}{MN} = \dfrac{OM'}{M'N'}$
+Thay cĂ¡c Ä‘á»™ dĂ i $MN = 4$ cm, $OM' = 12$ cm, $M'N' = 8$ cm vĂ o tá»‰ lá»‡ thá»©c:
+$\dfrac{OM}{4} = \dfrac{12}{8}$
+$\Rightarrow OM = \dfrac{4 \cdot 12}{8} = 6$ (cm).
+**Káº¿t luáº­n:** Sá»‘ Ä‘
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccamh-182] Lá»›p 8
+Äá»€: **CĂ¢u 1:** Trong cĂ¡c phÆ°Æ¡ng trĂ¬nh sau Ä‘Ă¢u lĂ  phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n:.
+  A. $0x+3=3$
+  B. $5-\frac{2}{3}x=0$
+  C. $\frac{1}{x}-3=0$
+  D. $2{{x}^2}+3=9$
+
+Lá»œI GIáº¢I: *(ÄĂ¢y lĂ  cĂ¢u há»i lĂ½ thuyáº¿t tráº¯c nghiá»‡m chÆ°a Ä‘áº§y Ä‘á»§ Ä‘Ă¡p Ă¡n. PhÆ°Æ¡ng phĂ¡p nháº­n biáº¿t chung Ä‘Æ°á»£c cung cáº¥p dÆ°á»›i Ä‘Ă¢y).* 
+
+**PhÆ°Æ¡ng phĂ¡p nháº­n biáº¿t phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n:**
+PhÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n lĂ  phÆ°Æ¡ng trĂ¬nh cĂ³ dáº¡ng $ax + b = 0$, trong Ä‘Ă³:
+- $x$ lĂ  áº©n sá»‘.
+- $a$ vĂ  $b$ lĂ  cĂ¡c háº±ng sá»‘ Ä‘Ă£ cho.
+
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccanw-183] Lá»›p 8
+Äá»€: **CĂ¢u 2:** Äiá»u kiá»‡n xĂ£ Ä‘á»‹nh cá»§a phÆ°Æ¡ng trĂ¬nh $\dfrac{x-2}{x}+\dfrac{3}{2x-1}=0$ lĂ :.
+  A. $x\ne 0$
+  B. $x\ne \frac{1}{2}$
+  C. $x\ne 0$ vĂ  $x\ne \frac{1}{2}$
+  D. $x\ne 0$ hoáº·c $x\ne \frac{1}{2}$
+
+Lá»œI GIáº¢I: Äá»ƒ phÆ°Æ¡ng trĂ¬nh $\dfrac{x - 2}{x} + \dfrac{3}{2x - 1} = 0$ xĂ¡c Ä‘á»‹nh, cĂ¡c máº«u thá»©c pháº£i khĂ¡c $0$.
+Ta cĂ³ há»‡ Ä‘iá»u kiá»‡n:
+$\begin{cases} x \ne 0 \\ 2x - 1 \ne 0 \end{cases} \Leftrightarrow \begin{cases} x \ne 0 \\ x \ne \dfrac{1}{2} \end{cases}$
+**Káº¿t luáº­n:** Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh lĂ  $x \ne 0$ vĂ  $x \ne \df
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccapa-184] Lá»›p 8
+Äá»€: **CĂ¢u 3:** PhÆ°Æ¡ng trĂ¬nh $2{{x}^2}-2x=0$ cĂ³ táº­p nghiá»‡m lĂ :.
+  A. $S=\left\{ 0 \right\}$
+  B. $S=\left\{ 0;1 \right\}$
+  C. $S=\left\{ -1;0 \right\}$
+  D. $S=\left\{ 1 \right\}$
+
+Lá»œI GIáº¢I: Giáº£i phÆ°Æ¡ng trĂ¬nh:
+$2x^2 - 2x = 0$
+$\Leftrightarrow 2x(x - 1) = 0$
+$\Leftrightarrow x = 0$ hoáº·c $x - 1 = 0$
+$\Leftrightarrow x = 0$ hoáº·c $x = 1$.
+**Káº¿t luáº­n:** Táº­p nghiá»‡m cá»§a phÆ°Æ¡ng trĂ¬nh lĂ  $S = \{0; 1\}$.
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccaqk-185] Lá»›p 8
+Äá»€: **CĂ¢u 4:** PhÆ°Æ¡ng trĂ¬nh$2y+m=y-1$ nháº­n $y=3$ lĂ  nghiá»‡m khi m báº±ng:.
+  A. 3
+  B. 4
+  C. â€“ 4
+  D. 8
+
+Lá»œI GIáº¢I: **PhÆ°Æ¡ng phĂ¡p giáº£i:**
+Náº¿u $y = 3$ lĂ  nghiá»‡m cá»§a phÆ°Æ¡ng trĂ¬nh, thĂ¬ khi thay $y = 3$ vĂ o phÆ°Æ¡ng trĂ¬nh, hai váº¿ cá»§a phÆ°Æ¡ng trĂ¬nh pháº£i báº±ng nhau.
+
+**CĂ¡ch giáº£i:**
+Thay $y = 3$ vĂ o phÆ°Æ¡ng trĂ¬nh $2y + m = y - 1$, ta Ä‘Æ°á»£c:
+$2 \cdot 3 + m = 3 - 1$
+$\Leftrightarrow 6 + m = 2$
+$\Leftrightarrow m = 2 - 6$
+$\Left
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccarz-186] Lá»›p 8
+Äá»€: **CĂ¢u 5:** Biáº¿t AD lĂ  tia phĂ¢n giĂ¡c gĂ³c A cá»§a $\Delta ABC$ $\left( D\in BC \right)$ vĂ  AB = 5 cm; AC = 10 cm; $DC=2 cm.$ Khi Ä‘Ă³ Ä‘á»™ dĂ i DB báº±ng.
+  A. 1cm
+  B. 2cm
+  C. 3cm
+  D. 4cm
+
+Lá»œI GIáº¢I: Theo tĂ­nh cháº¥t Ä‘Æ°á»ng phĂ¢n giĂ¡c trong tam giĂ¡c, do $AD$ lĂ  phĂ¢n giĂ¡c gĂ³c $A$ cá»§a $\Delta ABC$, ta cĂ³:
+$\dfrac{DB}{DC} = \dfrac{AB}{AC}$
+Thay cĂ¡c sá»‘ liá»‡u $AB = 5$ cm, $AC = 10$ cm, $DC = 2$ cm vĂ o tá»‰ lá»‡ thá»©c:
+$\dfrac{DB}{2} = \dfrac{5}{10} \Rightarrow \dfrac{DB}{2} = \dfrac{1}{2}$
+$\Rightarrow DB = \d
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccate-187] Lá»›p 8
+Äá»€: **CĂ¢u 6:** Hai Ä‘Æ°á»ng chĂ©o cá»§a má»™t hĂ¬nh thoi cĂ³ Ä‘á»™ dĂ i lĂ  a vĂ  b thĂ¬ diá»‡n tĂ­ch cá»§a hĂ¬nh thoi lĂ :.
+  A. ab
+  B. A + b
+  C. $\frac{ab}{2}$
+  D. 2ab
+PHáº¦N Tá»° LUáº¬N (8,5 Ä‘iá»ƒm)
+
+Lá»œI GIáº¢I: Diá»‡n tĂ­ch cá»§a hĂ¬nh thoi báº±ng ná»­a tĂ­ch Ä‘á»™ dĂ i hai Ä‘Æ°á»ng chĂ©o cá»§a nĂ³.
+Do Ä‘Ă³, diá»‡n tĂ­ch $S = \dfrac{1}{2}ab$.
+*(Há»c sinh chá»n Ä‘Ă¡p Ă¡n tÆ°Æ¡ng á»©ng cĂ³ chá»©a biá»ƒu thá»©c $\dfrac{1}{2}ab$)*.
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccbag-199] Lá»›p 8
+Äá»€: **CĂ¢u 1:** Trong cĂ¡c phÆ°Æ¡ng trĂ¬nh sau, phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n lĂ :.
+  A. $\frac{2}{x}-7=0$
+  B. $0x+5=0$
+  C. $\left| 2x \right|-1=0$
+  D. $\frac{3}{2}x+1=0$
+
+Lá»œI GIáº¢I: *(ÄĂ¢y lĂ  cĂ¢u há»i lĂ½ thuyáº¿t tráº¯c nghiá»‡m chÆ°a Ä‘áº§y Ä‘á»§ Ä‘Ă¡p Ă¡n. PhÆ°Æ¡ng phĂ¡p nháº­n biáº¿t chung Ä‘Æ°á»£c cung cáº¥p dÆ°á»›i Ä‘Ă¢y).* 
+
+**PhÆ°Æ¡ng phĂ¡p nháº­n biáº¿t phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n:**
+PhÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n lĂ  phÆ°Æ¡ng trĂ¬nh cĂ³ dáº¡ng $ax + b = 0$, trong Ä‘Ă³:
+- $x$ lĂ  áº©n sá»‘.
+- $a$ vĂ  $b$ lĂ  cĂ¡c háº±ng sá»‘ Ä‘Ă£ cho.
+
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccbbv-200] Lá»›p 8
+Äá»€: **CĂ¢u 2:** Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh cá»§a phÆ°Æ¡ng trĂ¬nh $\dfrac{4}{2x-3}=\dfrac{7}{3x-5}$ lĂ :.
+  A. $x\ne \frac{3}{2}$
+  B. $x\ne \frac{5}{3}$
+  C. $x\ne \frac{3}{2}$ hoáº·c $x\ne \frac{5}{3}$
+  D. $x\ne \frac{3}{2}$ vĂ  $x\ne \frac{5}{3}$
+
+Lá»œI GIáº¢I: PhÆ°Æ¡ng trĂ¬nh Ä‘Ă£ cho: $\dfrac{4}{2x - 3} = \dfrac{7}{3x - 5}$
+Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh lĂ  cĂ¡c máº«u thá»©c pháº£i khĂ¡c $0$:
+$\begin{cases} 2x - 3 \ne 0 \\ 3x - 5 \ne 0 \end{cases}$
+$\Leftrightarrow \begin{cases} x \ne \dfrac{3}{2} \\ x \ne \dfrac{5}{3} \end{cases}$
+**Káº¿t luáº­n:** Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh cá»§a phÆ°Æ¡ng trĂ¬
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpcccbeo-202] Lá»›p 8
+Äá»€: **CĂ¢u 4:** Táº­p nghiá»‡m cá»§a phÆ°Æ¡ng trĂ¬nh $\left( x+5 \right)^2=25$ lĂ :.
+  A. $S=\left\{ 0;-10 \right\}$
+  B. $S=\varnothing$
+  C. $S=\left\{ -10 \right\}$
+  D. $S=\left\{ 0 \right\}$
+
+Lá»œI GIáº¢I: Ta cĂ³ phÆ°Æ¡ng trĂ¬nh:
+$(x + 5)^2 = 25$
+$\Leftrightarrow (x + 5)^2 = 5^2$
+$\Rightarrow x + 5 = 5$ hoáº·c $x + 5 = -5$.
+- TrÆ°á»ng há»£p 1: $x + 5 = 5 \Leftrightarrow x = 0$.
+- TrÆ°á»ng há»£p 2: $x + 5 = -5 \Leftrightarrow x = -10$.
+**Káº¿t luáº­n:** Táº­p nghiá»‡m cá»§a phÆ°Æ¡ng trĂ¬nh lĂ  $S = \{0; -10\}$.
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccccp7-235] Lá»›p 8
+Äá»€: **CĂ¢u 1:** Äiá»u kiá»‡n xĂ¡c Ä‘á»‹nh cá»§a phÆ°Æ¡ng trĂ¬nh $\dfrac{x}{3-x}=\dfrac{5x}{\left( x+2 \right)\left( x-3 \right)}$ lĂ :.
+  A. $x\ne -2$ hoáº·c $x\ne 3$
+  B. $x\ne 2$ hoáº·c $x\ne -3$
+  C. $x\ne 3$ vĂ  $x\ne -2$
+  D. $x\ne 0$ vĂ  $x\ne 3$
+
+Lá»œI GIáº¢I: Äá»ƒ phÆ°Æ¡ng trĂ¬nh $\dfrac{x}{3 - x} = \dfrac{5x}{(x + 2)(x - 3)}$ xĂ¡c Ä‘á»‹nh, cĂ¡c máº«u thá»©c pháº£i khĂ¡c $0$.
+Ta cĂ³:
+- $3 - x \ne 0 \Leftrightarrow x \ne 3$
+- $x + 2 \ne 0 \Leftrightarrow x \ne -2$
+- $x - 3 \ne 0 \Leftrightarrow x \ne 3$
+Gá»™p cĂ¡c Ä‘iá»u kiá»‡n láº¡i, ta Ä‘Æ°á»£c $x \ne 3$ vĂ  $x \ne -2$.
+**Káº¿t luáº­n:** 
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."
+
+================================================================================
+[L8-mpccccqr-236] Lá»›p 8
+Äá»€: **CĂ¢u 2:** PhÆ°Æ¡ng trĂ¬nh $7x+1=2x$ tÆ°Æ¡ng Ä‘Æ°Æ¡ng vá»›i phÆ°Æ¡ng trĂ¬nh nĂ o sau Ä‘Ă¢y.
+  A. $5x=-1$
+  B. $x\left( 7x+1 \right)=2{{x}^2}$
+  C. $\left( x+1 \right)\left( 7x+1 \right)=2x\left( x+1 \right)$
+  D. $x=\frac{1}{5}$
+
+Lá»œI GIáº¢I: Ta giáº£i phÆ°Æ¡ng trĂ¬nh Ä‘Ă£ cho:
+$7x + 1 = 2x \Leftrightarrow 7x - 2x = -1 \Leftrightarrow 5x = -1 \Leftrightarrow x = -\dfrac{1}{5}$.
+PhÆ°Æ¡ng trĂ¬nh tÆ°Æ¡ng Ä‘Æ°Æ¡ng lĂ  phÆ°Æ¡ng trĂ¬nh cĂ³ cĂ¹ng táº­p nghiá»‡m $S = \left\{ -\dfrac{1}{5} \right\}$.
+*(Há»c sinh giáº£i cĂ¡c phÆ°Æ¡ng Ă¡n tráº¯c nghiá»‡m Ä‘Æ°á»£c cho Ä‘á»ƒ tĂ¬m ra phÆ°Æ¡ng trĂ¬
+ANSWER: "GiĂ¡o viĂªn sáº½ cáº­p nháº­t Ä‘Ă¡p Ă¡n."

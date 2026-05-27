@@ -1,0 +1,275 @@
+﻿========================================
+  RĂ€ SOĂT TOĂ€N Bá»˜ KHO Äá»€ TOĂN
+========================================
+
+đŸ“ THá»NG KĂ Tá»”NG QUAN:
+   Tá»•ng sá»‘ cĂ¢u há»i: 7423
+   Tá»•ng sá»‘ danh má»¥c: 426
+
+đŸ“ˆ PHĂ‚N Bá» THEO Lá»P:
+   Lá»›p 4: 918 cĂ¢u
+   Lá»›p 5: 889 cĂ¢u
+   Lá»›p 6: 1183 cĂ¢u
+   Lá»›p 7: 1685 cĂ¢u
+   Lá»›p 8: 1473 cĂ¢u
+   Lá»›p 9: 1275 cĂ¢u
+
+đŸ“‹ PHĂ‚N Bá» THEO LOáº I:
+   tu_luan: 5155 cĂ¢u
+   trac_nghiem: 1983 cĂ¢u
+   dung_sai: 283 cĂ¢u
+   dien_dap_an: 2 cĂ¢u
+
+đŸ·ï¸ PHĂ‚N Bá» THEO TRáº NG THĂI:
+   approved: 7387 cĂ¢u
+   rejected: 36 cĂ¢u
+
+
+========================================
+  Káº¾T QUáº¢ RĂ€ SOĂT
+========================================
+
+âœ… ÄĂ£ kiá»ƒm tra: 7423 cĂ¢u há»i
+âŒ Lá»–I NGHIĂM TRá»ŒNG: 4534
+â ï¸  Cáº¢NH BĂO: 985
+đŸ”„ Ná»™i dung trĂ¹ng láº·p: 85 nhĂ³m
+
+
+âŒ ======= CHI TIáº¾T Lá»–I NGHIĂM TRá»ŒNG =======
+
+--- WRONG_CORRECT_KEY (464 lá»—i) ---
+   [T4-B50-001] Lá»›p 4: correct_answer="HĂ¬nh chá»¯ nháº­t" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B50-002] Lá»›p 4: correct_answer="Sá»‘ liá»‡u cáº§n biá»ƒu diá»…n (táº§n sá»‘, sá»‘ lÆ°á»£ng)" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B50-003] Lá»›p 4: correct_answer="GiĂ¡ trá»‹ lá»›n nháº¥t" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B50-004] Lá»›p 4: correct_answer="GiĂ¡ trá»‹ nhá» nháº¥t" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B50-005] Lá»›p 4: correct_answer="Báº±ng nhau" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B23-001] Lá»›p 4: correct_answer="Sá»‘ bá»‹ trá»«" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B23-002] Lá»›p 4: correct_answer="Tá»« pháº£i sang trĂ¡i" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B23-003] Lá»›p 4: correct_answer="$88 888$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B23-004] Lá»›p 4: correct_answer="$350 000$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B23-005] Lá»›p 4: correct_answer="$1$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B54-001] Lá»›p 4: correct_answer="PhĂ¢n sá»‘" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B54-002] Lá»›p 4: correct_answer="$\frac{3}{4}$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B54-003] Lá»›p 4: correct_answer="$7 : 5$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B54-004] Lá»›p 4: correct_answer="$1$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B54-005] Lá»›p 4: correct_answer="$\frac{10}{2}$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B42-001] Lá»›p 4: correct_answer="$a \times (b + c) = a \times b + a \times c$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B42-002] Lá»›p 4: correct_answer="$a \times b - a \times c$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B42-003] Lá»›p 4: correct_answer="$120$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B42-004] Lá»›p 4: correct_answer="$350$" khĂ´ng khá»›p vá»›i options [,,,]
+   [T4-B42-005] Lá»›p 4: correct_answer="$510$" khĂ´ng khá»›p vá»›i options [,,,]
+   ... vĂ  444 lá»—i khĂ¡c
+
+--- EMPTY_OPTION (1856 lá»—i) ---
+   [T4-B50-001] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-001] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-001] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-001] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-002] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-002] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-002] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-002] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-003] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-003] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-003] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-003] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-004] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-004] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-004] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-004] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-005] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-005] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-005] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   [T4-B50-005] Lá»›p 4: PhÆ°Æ¡ng Ă¡n undefined trá»‘ng
+   ... vĂ  1836 lá»—i khĂ¡c
+
+--- ANSWER_EMPTY (1911 lá»—i) ---
+   [G4-MCQ-M-7060] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-7507] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-7526] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-7793] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-D1CE] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-DD2C] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-E113] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-F3F0] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-6C81] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G4-MCQ-M-98B2] Lá»›p 4: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-F153] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-84F7] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-1413] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-33CF] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-38F9] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-4A13] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-8912] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-9E3E] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-B9CC] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   [G5-MCQ-M-BFB3] Lá»›p 5: Thiáº¿u Ä‘Ă¡p Ă¡n
+   ... vĂ  1891 lá»—i khĂ¡c
+
+--- MATH_ERROR (4 lá»—i) ---
+   [T4-B68-004] Lá»›p 4: PhĂ©p nhĂ¢n: 357Ă—24=8568 nhÆ°ng Ä‘Ă¡p Ă¡n=8
+   [T5-B2-003] Lá»›p 5: PhĂ©p nhĂ¢n: 125Ă—8=1000 nhÆ°ng Ä‘Ă¡p Ă¡n=1
+   [T5-B42-003] Lá»›p 5: PhĂ©p cá»™ng: 15+24=39 nhÆ°ng Ä‘Ă¡p Ă¡n=1
+   [T6-C3B14-003] Lá»›p 6: PhĂ©p trá»«: 15-23=-8 nhÆ°ng Ä‘Ă¡p Ă¡n=8
+
+--- MISSING_OPTIONS (31 lá»—i) ---
+   [T4-B20-004] Lá»›p 4: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (52 options)
+   [7-15-003] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-9-003] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-4-003] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-4-004] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-22-015] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-7-001] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-8-004] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-16-002] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-16-003] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-16-004] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-16-005] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-16-007] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-20-004] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-001] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-002] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-005] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-006] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-008] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   [7-17-009] Lá»›p 7: CĂ¢u tráº¯c nghiá»‡m thiáº¿u phÆ°Æ¡ng Ă¡n (0 options)
+   ... vĂ  11 lá»—i khĂ¡c
+
+--- DUNG_SAI_NO_ANSWER (2 lá»—i) ---
+   [BT036] Lá»›p 6: CĂ¢u Ä‘Ăºng/sai thiáº¿u correct_answer
+   [BT022] Lá»›p 6: CĂ¢u Ä‘Ăºng/sai thiáº¿u correct_answer
+
+--- NO_CORRECT_ANSWER (21 lá»—i) ---
+   [L8-mpccc5v7-64] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccc5wi-65] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccc8y9-140] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccc9p9-159] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccc9qs-160] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccc9xt-165] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccca0n-167] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccca22-168] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccamh-182] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccanw-183] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccapa-184] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccaqk-185] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccarz-186] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccate-187] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccbag-199] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccbbv-200] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccbdc-201] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpcccbeo-202] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccccp7-235] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   [L8-mpccccqr-236] Lá»›p 8: CĂ¢u tráº¯c nghiá»‡m thiáº¿u correct_answer
+   ... vĂ  1 lá»—i khĂ¡c
+
+--- DUPLICATE_CODE (245 lá»—i) ---
+   MĂ£ cĂ¢u há»i "G4-ENR-AB74" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "G4-ENR-EFFC" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "G6-B15B16-ED1C" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-001" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-002" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-003" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-004" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-005" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-006" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-007" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-008" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-009" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-010" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-011" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-012" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-013" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-014" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-015" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-016" bá»‹ trĂ¹ng (2 cĂ¢u)
+   MĂ£ cĂ¢u há»i "7-10-017" bá»‹ trĂ¹ng (2 cĂ¢u)
+   ... vĂ  225 lá»—i khĂ¡c
+
+
+â ï¸ ======= Cáº¢NH BĂO =======
+
+--- DUPLICATE_OPTIONS (476 cáº£nh bĂ¡o) ---
+   [T4-B50-001] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B50-002] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B50-003] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B50-004] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B50-005] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B23-001] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B23-002] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B23-003] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B23-004] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B23-005] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B54-001] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B54-002] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B54-003] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B54-004] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   [T4-B54-005] Lá»›p 4: CĂ³ Ä‘Ă¡p Ă¡n trĂ¹ng láº·p trong phÆ°Æ¡ng Ă¡n
+   ... vĂ  461 cáº£nh bĂ¡o khĂ¡c
+
+--- LATEX_WARNING (93 cáº£nh bĂ¡o) ---
+   [G4-ELITE-LOGIC-1] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-10] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-2] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-3] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-4] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-5] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-6] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-7] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-8] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [G4-ELITE-LOGIC-9] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [T4-B17-002] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [T4-B17-006] Lá»›p 4: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [T5-B26-006] Lá»›p 5: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [T5-B26-009] Lá»›p 5: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   [T5-B33-006] Lá»›p 5: Sá»‘ dáº¥u $ láº» (LaTeX khĂ´ng Ä‘Ă³ng má»Ÿ Ä‘Ăºng)
+   ... vĂ  78 cáº£nh bĂ¡o khĂ¡c
+
+--- NO_CATEGORY (331 cáº£nh bĂ¡o) ---
+   [BT069] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT070] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT071] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT072] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT073] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT074] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT075] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT076] Lá»›p 4: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT077] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT078] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT079] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT080] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT081] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT082] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   [BT083] Lá»›p 5: ChÆ°a phĂ¢n loáº¡i danh má»¥c
+   ... vĂ  316 cáº£nh bĂ¡o khĂ¡c
+
+--- DUPLICATE_CONTENT (85 cáº£nh bĂ¡o) ---
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "quan sĂ¡t biá»ƒu Ä‘á»“ cá»™t vá» sá»‘ sĂ¡ch bĂ¡n Ä‘Æ°á»£c trong 4 tuáº§n. tuáº§n 1: 150, tuáº§n 2: 200,..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "quan sĂ¡t biá»ƒu Ä‘á»“ cá»™t vá» sá»‘ sĂ¡ch bĂ¡n Ä‘Æ°á»£c trong 4 tuáº§n. tuáº§n 1: 150, tuáº§n 2: 200,..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "quan sĂ¡t biá»ƒu Ä‘á»“ cá»™t vá» sá»‘ sĂ¡ch bĂ¡n Ä‘Æ°á»£c trong 4 tuáº§n. tuáº§n 1: 150, tuáº§n 2: 200,..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "quan sĂ¡t biá»ƒu Ä‘á»“ cá»™t vá» sá»‘ sĂ¡ch bĂ¡n Ä‘Æ°á»£c trong 4 tuáº§n. tuáº§n 1: 150, tuáº§n 2: 200,..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "quan sĂ¡t biá»ƒu Ä‘á»“ cá»™t vá» sá»‘ sĂ¡ch bĂ¡n Ä‘Æ°á»£c trong 4 tuáº§n. tuáº§n 1: 150, tuáº§n 2: 200,..."
+   Ná»™i dung trĂ¹ng láº·p (4 cĂ¢u, lá»›p 4): "biá»ƒu Ä‘á»“ cá»™t dĂ¹ng Ä‘á»ƒ lĂ m gĂ¬?..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "náº¿u má»™t cá»™t cao $5$ Ä‘Æ¡n vá»‹ biá»ƒu diá»…n sá»‘ há»c sinh, 2 cá»™t nhÆ° váº­y biá»ƒu diá»…n bao nh..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "sá»‘ liá»‡u: $5, 7, 5, 8$. sá»‘ nĂ o xuáº¥t hiá»‡n nhiá»u nháº¥t?..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "trung bĂ¬nh cá»§a dĂ£y $2, 4, 6$ lĂ ?..."
+   Ná»™i dung trĂ¹ng láº·p (3 cĂ¢u, lá»›p 4): "cá»™t cao nháº¥t trĂªn biá»ƒu Ä‘á»“ thá»ƒ hiá»‡n Ä‘iá»u gĂ¬?..."
+   Ná»™i dung trĂ¹ng láº·p (24 cĂ¢u, lá»›p 4): "tĂ­nh $15 + 25$...."
+   Ná»™i dung trĂ¹ng láº·p (24 cĂ¢u, lá»›p 4): "tĂ­nh $100 - 45$...."
+   Ná»™i dung trĂ¹ng láº·p (24 cĂ¢u, lá»›p 4): "tĂ­nh $12 \times 5$...."
+   Ná»™i dung trĂ¹ng láº·p (24 cĂ¢u, lá»›p 4): "tĂ­nh $75 : 3$...."
+   Ná»™i dung trĂ¹ng láº·p (24 cĂ¢u, lá»›p 4): "tĂ¬m $x$ biáº¿t $x + 10 = 50$...."
+   ... vĂ  70 cáº£nh bĂ¡o khĂ¡c
+
+
+đŸ“ ======= THá»NG KĂ Lá»–I THEO Lá»P =======
+   Lá»›p 4: 918 cĂ¢u | âŒ 682 lá»—i | â ï¸ 154 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 25.7%
+   Lá»›p 5: 889 cĂ¢u | âŒ 12 lá»—i | â ï¸ 47 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 98.7%
+   Lá»›p 6: 1183 cĂ¢u | âŒ 684 lá»—i | â ï¸ 81 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 42.2%
+   Lá»›p 7: 1685 cĂ¢u | âŒ 1322 lá»—i | â ï¸ 179 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 21.5%
+   Lá»›p 8: 1473 cĂ¢u | âŒ 786 lá»—i | â ï¸ 328 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 46.6%
+   Lá»›p 9: 1275 cĂ¢u | âŒ 803 lá»—i | â ï¸ 111 cáº£nh bĂ¡o | ChĂ­nh xĂ¡c: 37.0%
+
+========================================
+  HOĂ€N THĂ€NH RĂ€ SOĂT
+========================================
+
