@@ -73,15 +73,20 @@ export default function TheoryReviewPage() {
     fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
   }, []);
 
+  // Reset category when grade changes (NOT when category itself changes)
   useEffect(() => {
-    setCategoryFilter(""); // Reset category when grade changes
+    setCategoryFilter("");
+  }, [gradeFilter]);
+
+  // Fetch questions when grade or category changes
+  useEffect(() => {
     fetchQuestions();
   }, [gradeFilter, categoryFilter]);
 
   const fetchQuestions = async () => {
     setIsLoading(true);
     try {
-      const url = `/api/questions?grade=${gradeFilter}&question_type=trac_nghiem,dung_sai` + (categoryFilter ? `&category_id=${categoryFilter}` : '');
+      const url = `/api/questions?grade=${gradeFilter}&question_type=trac_nghiem,dung_sai&status=approved&limit=500` + (categoryFilter ? `&category_id=${categoryFilter}` : '');
       const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch");
       const data = await res.json();

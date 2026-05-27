@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getDatabaseProvider, getDb } from '@/lib/neon';
 import { getCurrentUser } from '@/lib/neon/auth';
 
+export const maxDuration = 60; // Allow up to 60 seconds for large backups
+
 export async function GET(req: NextRequest) {
   const provider = getDatabaseProvider();
   
@@ -14,28 +16,35 @@ export async function GET(req: NextRequest) {
     try {
       const sql = getDb();
       
-      // Fetch data from all core tables
-      const [
-        categories,
-        questions,
-        exams,
-        exam_questions,
-        users,
-        favorites,
-        saved_exams
-      ] = await Promise.all([
-        sql`SELECT * FROM public.categories`,
-        sql`SELECT * FROM public.questions`,
-        sql`SELECT * FROM public.exams`,
-        sql`SELECT * FROM public.exam_questions`,
-        sql`SELECT id, email, full_name, role, status, created_at, updated_at FROM public.users`,
-        sql`SELECT * FROM public.favorites`,
-        sql`SELECT * FROM public.saved_exams`
-      ]);
+      // Fetch data from all core tables sequentially to avoid memory spikes
+      const categories = await sql`SELECT * FROM public.categories`;
+      const questions = await sql`SELECT * FROM public.questions`;
+      const exams = await sql`SELECT * FROM public.exams`;
+      const exam_questions = await sql`SELECT * FROM public.exam_questions`;
+      const users = await sql`SELECT id, email, full_name, role, status, created_at, updated_at FROM public.users`;
+      
+      // Optional tables - don't fail if they don't exist
+      let favorites: any[] = [];
+      let saved_exams: any[] = [];
+      try {
+        favorites = await sql`SELECT * FROM public.favorites`;
+      } catch (e) { /* table may not exist */ }
+      try {
+        saved_exams = await sql`SELECT * FROM public.saved_exams`;
+      } catch (e) { /* table may not exist */ }
 
       const backupData = {
         version: "1.0",
         timestamp: new Date().toISOString(),
+        stats: {
+          categories: categories.length,
+          questions: questions.length,
+          exams: exams.length,
+          exam_questions: exam_questions.length,
+          users: users.length,
+          favorites: favorites.length,
+          saved_exams: saved_exams.length,
+        },
         data: {
           categories,
           questions,
@@ -47,18 +56,25 @@ export async function GET(req: NextRequest) {
         }
       };
 
-      return new NextResponse(JSON.stringify(backupData), {
+      const jsonString = JSON.stringify(backupData);
+      const filename = `khode_backup_${new Date().toISOString().replace(/[:.]/g, '-').split('T')[0]}.json`;
+
+      return new NextResponse(jsonString, {
         status: 200,
         headers: {
-          'Content-Type': 'application/json',
-          'Content-Disposition': `attachment; filename="khode_backup_${new Date().toISOString().split('T')[0]}.json"`
+          'Content-Type': 'application/json; charset=utf-8',
+          'Content-Disposition': `attachment; filename="${filename}"`,
+          'Content-Length': String(new TextEncoder().encode(jsonString).length),
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
         }
       });
       
     } catch (err: any) {
-      return NextResponse.json({ error: err.message }, { status: 500 });
+      console.error('[Backup Error]', err);
+      return NextResponse.json({ error: err.message || 'Không thể sao lưu dữ liệu' }, { status: 500 });
     }
   }
 
   return NextResponse.json({ error: 'Neon not active' }, { status: 501 });
 }
+
