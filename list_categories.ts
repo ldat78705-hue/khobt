@@ -8,9 +8,9 @@ async function main() {
   const categories = await sql`
     SELECT id, name, parent_id, sort_order
     FROM categories
-    WHERE grade = 9
+    WHERE grade = 5
     ORDER BY sort_order
   `;
-  console.log(categories);
+  console.log(categories.map(c => c.name).join('\\n'));
 }
 main();
