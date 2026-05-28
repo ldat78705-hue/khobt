@@ -5,17 +5,6 @@ import { neon } from '@neondatabase/serverless';
 
 export const maxDuration = 60;
 
-async function safeQuery(sql: any, query: string, label: string) {
-  try {
-    // Use raw SQL string for maximum compatibility
-    const result = await sql(query);
-    return result;
-  } catch (err: any) {
-    console.error(`[Backup] Failed to query ${label}:`, err.message);
-    return [];
-  }
-}
-
 export async function GET(req: NextRequest) {
   const provider = getDatabaseProvider();
   
@@ -36,17 +25,16 @@ export async function GET(req: NextRequest) {
     
     const sql = neon(databaseUrl);
     
-    // Query each table individually with error isolation
-    const categories = await safeQuery(sql, 'SELECT * FROM public.categories', 'categories');
-    const questions = await safeQuery(sql, 'SELECT * FROM public.questions', 'questions');
-    const exams = await safeQuery(sql, 'SELECT * FROM public.exams', 'exams');
-    const exam_questions = await safeQuery(sql, 'SELECT * FROM public.exam_questions', 'exam_questions');
-    const users = await safeQuery(sql, 
-      'SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users', 
-      'users'
-    );
-    const favorites = await safeQuery(sql, 'SELECT * FROM public.favorites', 'favorites');
-    const saved_exams = await safeQuery(sql, 'SELECT * FROM public.saved_exams', 'saved_exams');
+    // Use tagged template literals - the correct way to call neon() sql function
+    const [categories, questions, exams, exam_questions, users, favorites, saved_exams] = await Promise.all([
+      sql`SELECT * FROM public.categories`,
+      sql`SELECT * FROM public.questions`,
+      sql`SELECT * FROM public.exams`,
+      sql`SELECT * FROM public.exam_questions`,
+      sql`SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users`,
+      sql`SELECT * FROM public.favorites`,
+      sql`SELECT * FROM public.saved_exams`,
+    ]);
 
     const backupData = {
       version: "1.0",
@@ -91,4 +79,5 @@ export async function GET(req: NextRequest) {
     }, { status: 500 });
   }
 }
+
 
