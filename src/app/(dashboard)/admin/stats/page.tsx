@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { Header } from "@/components/dashboard/Header";
-import { BarChart3, BookOpen, FileText, Users, Award, TrendingUp, Flag, Layers, GraduationCap, Target } from "lucide-react";
+import { BarChart3, BookOpen, FileText, Users, Award, TrendingUp, Flag, Layers, GraduationCap, Target, ArrowRight, FolderTree } from "lucide-react";
+import Link from "next/link";
 import { getDifficultyLabel, getTopicLabel } from "@/lib/utils";
 
 interface StatsData {
@@ -97,6 +98,20 @@ export default function StatsPage() {
     <>
       <Header title="Thống kê" subtitle="Tổng quan chất lượng kho bài tập" />
       <div className="p-6 max-w-6xl space-y-6">
+        {/* Quick link to category audit */}
+        <Link
+          href="/admin/stats/categories"
+          className="flex items-center gap-4 p-5 bg-gradient-to-r from-indigo-50 to-blue-50 border-2 border-indigo-200 rounded-2xl hover:shadow-lg transition-all group"
+        >
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center shadow-lg flex-shrink-0">
+            <FolderTree className="w-6 h-6 text-white" />
+          </div>
+          <div className="flex-1">
+            <div className="text-base font-bold text-indigo-800">Rà soát kho bài tập theo danh mục</div>
+            <div className="text-sm text-indigo-600/70 mt-0.5">Xem chi tiết số lượng bài tập theo Lớp → Chương → Bài → Dạng bài</div>
+          </div>
+          <ArrowRight className="w-5 h-5 text-indigo-400 group-hover:translate-x-1 transition-transform" />
+        </Link>
         {/* Overview cards */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
           {overviewCards.map(card => (
