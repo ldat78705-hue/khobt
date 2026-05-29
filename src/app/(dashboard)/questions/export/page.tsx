@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   FileDown, Search, Filter, Printer, Clipboard, BookOpen,
@@ -41,7 +41,10 @@ export default function QuickExportPage() {
   });
   const [showExportPanel, setShowExportPanel] = useState(false);
 
+  const latestRequest = useRef<number>(0);
+
   const fetchQuestions = useCallback(async () => {
+    const requestId = ++latestRequest.current;
     setIsLoading(true);
     try {
       if (isDemoMode) {
@@ -63,6 +66,7 @@ export default function QuickExportPage() {
         params.append("limit", "200");
 
         const res = await fetch(`/api/questions?${params.toString()}`);
+        if (requestId !== latestRequest.current) return;
         if (res.ok) {
           const data = await res.json();
           setQuestions(Array.isArray(data) ? data : (data.data || []));
@@ -71,9 +75,9 @@ export default function QuickExportPage() {
         }
       }
     } catch {
-      toast.error("Không thể tải bài tập");
+      if (requestId === latestRequest.current) toast.error("Không thể tải bài tập");
     } finally {
-      setIsLoading(false);
+      if (requestId === latestRequest.current) setIsLoading(false);
     }
   }, [selectedGrade, selectedTopic, selectedDifficulty, selectedType, searchQuery]);
 

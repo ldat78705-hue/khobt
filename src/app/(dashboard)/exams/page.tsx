@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Header } from "@/components/dashboard/Header";
 import {
   Plus, Search, FileText, Trash2, Copy, Edit, Eye, Download,
@@ -36,7 +36,10 @@ export default function ExamsPage() {
   const { user } = useAuthStore();
   const currentUserId = user?.id || DEMO_USER.id;
 
+  const latestRequest = useRef<number>(0);
+
   const fetchExams = useCallback(async () => {
+    const requestId = ++latestRequest.current;
     setIsLoading(true);
     try {
       if (isDemoMode) {
@@ -56,6 +59,7 @@ export default function ExamsPage() {
         params.append("tab", activeTab);
 
         const res = await fetch(`/api/exams?${params.toString()}`);
+        if (requestId !== latestRequest.current) return;
         if (!res.ok) {
           const data = await res.json();
           throw new Error(data.error || 'Lỗi tải đề thi');
@@ -64,9 +68,9 @@ export default function ExamsPage() {
         setExams(data || []);
       }
     } catch {
-      toast.error("Không thể tải danh sách đề thi");
+      if (requestId === latestRequest.current) toast.error("Không thể tải danh sách đề thi");
     } finally {
-      setIsLoading(false);
+      if (requestId === latestRequest.current) setIsLoading(false);
     }
   }, [selectedGrade, searchQuery, activeTab, currentUserId]);
 

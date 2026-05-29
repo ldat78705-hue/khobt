@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { CheckCircle, XCircle, Eye, Clock, Filter, MessageSquare, ChevronDown, User } from "lucide-react";
 import { cn, getDifficultyLabel, getDifficultyColor, getTopicLabel, getQuestionTypeLabel, formatDate } from "@/lib/utils";
@@ -33,7 +33,10 @@ export default function ReviewQuestionsPage() {
   const [editedAnswerImages, setEditedAnswerImages] = useState<string[]>([]);
   const [editedSolutionImages, setEditedSolutionImages] = useState<string[]>([]);
 
+  const latestRequest = useRef<number>(0);
+
   const fetchQuestions = useCallback(async () => {
+    const requestId = ++latestRequest.current;
     setIsLoading(true);
     try {
       if (isDemoMode) {
@@ -49,6 +52,7 @@ export default function ReviewQuestionsPage() {
         params.append("limit", "50");
 
         const res = await fetch(`/api/questions?${params.toString()}`);
+        if (requestId !== latestRequest.current) return;
         if (res.ok) {
           const data = await res.json();
           setQuestions(Array.isArray(data) ? data : (data.data || []));
@@ -57,9 +61,9 @@ export default function ReviewQuestionsPage() {
         }
       }
     } catch {
-      toast.error("Không thể tải bài tập");
+      if (requestId === latestRequest.current) toast.error("Không thể tải bài tập");
     } finally {
-      setIsLoading(false);
+      if (requestId === latestRequest.current) setIsLoading(false);
     }
   }, [statusFilter, gradeFilter]);
 
