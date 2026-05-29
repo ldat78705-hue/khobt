@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, Suspense } from "react";
+import { useState, useEffect, useCallback, Suspense, useRef, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
 import {
@@ -62,7 +62,10 @@ function QuestionsList() {
     fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
   }, []);
 
+  const latestRequest = useRef<number>(0);
+
   const fetchQuestions = useCallback(async () => {
+    const requestId = ++latestRequest.current;
     setIsLoading(true);
     try {
       if (isDemoMode) {
@@ -88,27 +91,28 @@ function QuestionsList() {
         params.append("limit", PAGE_SIZE.toString());
         params.append("offset", ((currentPage - 1) * PAGE_SIZE).toString());
         
-        const res = await fetch(`/api/questions?${params.toString()}`);
-        if (res.ok) {
-          const json = await res.json();
-          // Support both old array format and new paginated format
-          if (Array.isArray(json)) {
-            setQuestions(json);
-            setTotalCount(json.length);
+          const res = await fetch(`/api/questions?${params.toString()}`);
+          if (requestId !== latestRequest.current) return;
+          if (res.ok) {
+            const json = await res.json();
+            // Support both old array format and new paginated format
+            if (Array.isArray(json)) {
+              setQuestions(json);
+              setTotalCount(json.length);
+            } else {
+              setQuestions(json.data || []);
+              setTotalCount(json.total || 0);
+            }
           } else {
-            setQuestions(json.data || []);
-            setTotalCount(json.total || 0);
+            throw new Error('API error');
           }
-        } else {
-          throw new Error('API error');
         }
+      } catch {
+        if (requestId === latestRequest.current) toast.error("Không thể tải bài tập");
+      } finally {
+        if (requestId === latestRequest.current) setIsLoading(false);
       }
-    } catch {
-      toast.error("Không thể tải bài tập");
-    } finally {
-      setIsLoading(false);
-    }
-  }, [selectedGrade, selectedTopic, selectedCategoryId, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages, currentPage]);
+    }, [selectedGrade, selectedTopic, selectedCategoryId, selectedDifficulty, selectedType, selectedStatus, searchQuery, filterHasSolution, filterHasImages, currentPage]);
 
   useEffect(() => {
     fetchQuestions();
