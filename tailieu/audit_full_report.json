@@ -1,0 +1,44 @@
+{
+  "4": {
+    "total": 666,
+    "clean": 646,
+    "issues": 20,
+    "red": 12,
+    "yellow": 8
+  },
+  "5": {
+    "total": 866,
+    "clean": 703,
+    "issues": 163,
+    "red": 21,
+    "yellow": 142
+  },
+  "6": {
+    "total": 1162,
+    "clean": 882,
+    "issues": 280,
+    "red": 265,
+    "yellow": 15
+  },
+  "7": {
+    "total": 1452,
+    "clean": 983,
+    "issues": 469,
+    "red": 449,
+    "yellow": 20
+  },
+  "8": {
+    "total": 1454,
+    "clean": 985,
+    "issues": 469,
+    "red": 453,
+    "yellow": 16
+  },
+  "9": {
+    "total": 1365,
+    "clean": 961,
+    "issues": 404,
+    "red": 272,
+    "yellow": 132
+  }
+}

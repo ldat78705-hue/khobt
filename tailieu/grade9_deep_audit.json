@@ -1,0 +1,308 @@
+[
+  {
+    "id": "625b57d3-1fb1-4a4b-b602-49a817c43412",
+    "code": "ID:625b57d3-1fb1-4a4b-b602-49a817c43412",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I (1,5 điểm). 1) Trong bảng số liệu sau có một số liệu bị điều tra sai. Hãy "
+  },
+  {
+    "id": "0326b55d-5af4-4a1d-bb83-eedf72953695",
+    "code": "ID:0326b55d-5af4-4a1d-bb83-eedf72953695",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) 1) Sau khi điều tra về số học sinh trong $100$ lớp học (đơn vị"
+  },
+  {
+    "id": "8c7f9126-7b51-44f4-b87d-d7a958f0af06",
+    "code": "T9-C5B17-009",
+    "cat": "Bài 17. Vị trí tương đối của hai đường tròn.",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Hai đường tròn tiếp xúc ngoài. CMR tiếp tuyến chung ngoài đi qua trung điểm đoạn"
+  },
+  {
+    "id": "80dca584-536b-4858-bc31-4af01ea3153b",
+    "code": "ID:80dca584-536b-4858-bc31-4af01ea3153b",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) 1) Chiều cao (đơn vị: mét) của 35 cây bạch đàn được cho như sa"
+  },
+  {
+    "id": "3a25c46e-1fdd-4187-9e0c-565ea3560bd1",
+    "code": "T9-C6BTC-004",
+    "cat": "Bài tập cuối chương VI.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Giải $x^2-4x+1=0$."
+  },
+  {
+    "id": "9cba52dc-9869-40ed-99e7-e03d0575c7df",
+    "code": "ID:9cba52dc-9869-40ed-99e7-e03d0575c7df",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 4:** (4,0 điểm) 1. A) Tòa nhà Burj Khalifa (Các tiểu vương quốc Ả Rập thốn"
+  },
+  {
+    "id": "30591e3c-bdc0-4aa0-93f2-89a7f32fadb2",
+    "code": "ID:30591e3c-bdc0-4aa0-93f2-89a7f32fadb2",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) Tại một trại hè thanh thiếu niên quốc tế, người ta tìm hiểu xe"
+  },
+  {
+    "id": "818df5a4-1adf-4802-9a49-cc571c20f659",
+    "code": "ID:818df5a4-1adf-4802-9a49-cc571c20f659",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Câu V: (0,5 điểm)."
+  },
+  {
+    "id": "dfbdd4c3-a115-452f-9079-dd9ee969c13b",
+    "code": "T9-C3B7-003",
+    "cat": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "$\\sqrt{a^2} = ?$"
+  },
+  {
+    "id": "b6eedfa4-32ac-44d5-831e-aab82aea4d58",
+    "code": "ID:b6eedfa4-32ac-44d5-831e-aab82aea4d58",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) Biểu đồ tần số ghép nhóm dưới đây ghi lại tốc độ (đơn vị: $\\te"
+  },
+  {
+    "id": "944683d2-7c5c-47a8-ae8d-269d79f36cdf",
+    "code": "ID:944683d2-7c5c-47a8-ae8d-269d79f36cdf",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) 1). Biểu đồ bên biểu diễn tỉ lệ đại biểu tham dự hội nghị theo"
+  },
+  {
+    "id": "1c7cdebf-b3c2-43dc-af0d-4d244ab333e8",
+    "code": "ID:1c7cdebf-b3c2-43dc-af0d-4d244ab333e8",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 2:** (1,0 điểm) Cho phương trình $2{{x}^2}-5x+1=0.$ 1) Chứng minh phương t"
+  },
+  {
+    "id": "940217fd-d049-4d81-88c3-1358a7ab0a1e",
+    "code": "T9-C6BTC-001",
+    "cat": "Bài tập cuối chương VI.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Giải $x^2-7x+12=0$."
+  },
+  {
+    "id": "19878709-29fe-4117-9fbb-11d04d4a1b80",
+    "code": "T9-C3B10-008",
+    "cat": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Giải PT $x^3 = 64$."
+  },
+  {
+    "id": "024f45b6-0809-47c0-b076-4fe0ccc93d35",
+    "code": "T9-C4BTC-001",
+    "cat": "Bài tập cuối chương IV.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Tính $\\sin 45°$."
+  },
+  {
+    "id": "9c55351b-0827-4a1a-aa4e-551cdefc39c3",
+    "code": "T9-C4B11-003",
+    "cat": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "$\\tan\\alpha = ?$"
+  },
+  {
+    "id": "659e7c53-08b7-41db-bb4a-51383b4fe121",
+    "code": "ID:659e7c53-08b7-41db-bb4a-51383b4fe121",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) 1). Sau khi điều tra mật độ dân số ( đơn vị: người/km2) của 37"
+  },
+  {
+    "id": "2872c308-d4e2-4249-a42e-a05fef081d87",
+    "code": "T9-C5B16-002",
+    "cat": "Bài 16. Vị trí tương đối của đường thẳng và đường tròn.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Tiếp tuyến là gì?"
+  },
+  {
+    "id": "7b0f2f9b-171d-4073-895a-f031c49040d2",
+    "code": "T9-C9B27-001",
+    "cat": "Bài 27. Góc nội tiếp.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Góc nội tiếp là gì?"
+  },
+  {
+    "id": "cb383c63-8276-46d6-8e82-755bd675146f",
+    "code": "T9-C9B30-001",
+    "cat": "Bài 30. Đa giác đều.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Đa giác đều là gì?"
+  },
+  {
+    "id": "7ee16bf2-579f-4661-8f1e-1aa740cefb5f",
+    "code": "T9-C3B7-002",
+    "cat": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Tính $\\sqrt{49}$."
+  },
+  {
+    "id": "7ea9286a-2ce9-4bb6-8ad8-784b40879381",
+    "code": "T9-C3BTC-001",
+    "cat": "Bài tập cuối chương III.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Tính $\\sqrt{81}$."
+  },
+  {
+    "id": "1f698fe2-a3ef-426e-b1a2-3634f4816f36",
+    "code": "T9-C5B13-003",
+    "cat": "Bài 13. Mở đầu về đường tròn.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Đường kính là gì?"
+  },
+  {
+    "id": "0c47e188-6c41-4d15-be22-5bb94fb49a81",
+    "code": "T9-C5B14-004",
+    "cat": "Bài 14. Cung và dây của một đường tròn.",
+    "issues": [
+      "GIÁO VIÊN: Nội dung câu hỏi quá ngắn (< 20 ký tự)"
+    ],
+    "content": "Góc ở tâm là gì?"
+  },
+  {
+    "id": "55a96ca8-ca8e-44c6-a62d-d1f07bf7b406",
+    "code": "ID:55a96ca8-ca8e-44c6-a62d-d1f07bf7b406",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 5:** (0,5 điểm) Một tấn hoa quả được chở tới siêu thị, trong đó táo được đ"
+  },
+  {
+    "id": "cde21e86-0f0c-4ff9-829b-7f2c621fa128",
+    "code": "ID:cde21e86-0f0c-4ff9-829b-7f2c621fa128",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 2:** (1,5 điểm) Cho biểu thức $A=\\dfrac{\\sqrt{x}}{\\sqrt{x}+3}+\\dfrac{2\\sqr"
+  },
+  {
+    "id": "9dad2d60-94a4-48f8-a1ae-b224c6a9836d",
+    "code": "ID:9dad2d60-94a4-48f8-a1ae-b224c6a9836d",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 1:** (1,5 điểm) Cho hàm số $y=\\dfrac{{{x}^2}}{2}.$ 1) Vẽ đồ thị $\\left( P "
+  },
+  {
+    "id": "716a5536-a101-4495-9fbc-b149d118b770",
+    "code": "ID:716a5536-a101-4495-9fbc-b149d118b770",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 3:** (2,5 điểm) a. Một ôtô tải và xe máy khởi hành cùng một lúc từ $A$ tới"
+  },
+  {
+    "id": "67efe9e4-ec76-4a35-bc91-27802a9bf9e2",
+    "code": "ID:67efe9e4-ec76-4a35-bc91-27802a9bf9e2",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 7:** (3,0 điểm) Cho tam giác $ABC$ có ba góc nhọn $\\left( AB <AC \\right).$"
+  },
+  {
+    "id": "98d44c4e-de10-454b-9141-2b8e6b5a8e41",
+    "code": "ID:98d44c4e-de10-454b-9141-2b8e6b5a8e41",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 6:** (1,0 điểm) Thép không gỉ Ferritic là họ thép hợp kim có chứa từ 12 đế"
+  },
+  {
+    "id": "c54270bc-e3a8-41d3-bad8-50803300f2c9",
+    "code": "ID:c54270bc-e3a8-41d3-bad8-50803300f2c9",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 1:** (1,5 điểm) 1) Phần thưởng trong một chương trình khuyến mãi của một c"
+  },
+  {
+    "id": "2aae0001-c3f5-47ad-876b-cc1c3f3e1b8b",
+    "code": "ID:2aae0001-c3f5-47ad-876b-cc1c3f3e1b8b",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) 1). Nam thống kê lại độ dài quãng đường (đơn vị: km) mình đi b"
+  },
+  {
+    "id": "e98e53b4-3c17-40c4-a25d-7195acbfa75b",
+    "code": "ID:e98e53b4-3c17-40c4-a25d-7195acbfa75b",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Câu không bắt đầu bằng chữ viết hoa chuẩn"
+    ],
+    "content": "**Bài 3:** (1,5 điểm) Biên độ nhiệt là khoảng cách chênh lệch giữa nhiệt độ cao "
+  },
+  {
+    "id": "a6a86333-e100-4149-9c5a-6b7570cbe8f2",
+    "code": "ID:a6a86333-e100-4149-9c5a-6b7570cbe8f2",
+    "cat": "Bài tập ôn thi vào 10",
+    "issues": [
+      "SƯ PHẠM: Dấu câu lặp hoặc dư khoảng trắng"
+    ],
+    "content": "Câu I: (1,5 điểm) Đề. Để chuẩn bị cho tiết mục kỉ niệm 70 năm Chiến thắng Điện B"
+  }
+]

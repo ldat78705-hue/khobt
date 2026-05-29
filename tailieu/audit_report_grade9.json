@@ -1,0 +1,2433 @@
+{
+  "timestamp": "2026-05-29T10:14:47.833Z",
+  "grade": 9,
+  "filter": "",
+  "total": 1365,
+  "clean": 1062,
+  "issues": [
+    {
+      "code": "G9-BATCH1-2253",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Một hệ phương trình bậc nhất hai ẩn có thể có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-390B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường thẳng biểu diễn tập nghiệm của phương trình $3x + 0y = 6$ có đặc điểm gì?"
+    },
+    {
+      "code": "G9-BATCH1-43CB",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số nào sau đây là một nghiệm của phương trình $2x - y = 3$?"
+    },
+    {
+      "code": "G9-BATCH1-443C",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ phương trình $\\begin{cases} x + y = 2 \\\\ 2x + 2y = 4 \\end{cases}$ có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-47B7",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ phương trình $\\begin{cases} x - y = 1 \\\\ x - y = 2 \\end{cases}$ có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-933B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình bậc nhất hai ẩn có dạng tổng quát là:"
+    },
+    {
+      "code": "G9-BATCH1-BE9B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của phương trình bậc nhất hai ẩn $ax + by = c$ được biểu diễn bởi:"
+    },
+    {
+      "code": "G9-BATCH1-D28D",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong phương trình $ax + by = c$ (với $a, b$ không đồng thời bằng 0), điều kiện nào sau đây là bắt b"
+    },
+    {
+      "code": "G9-BATCH1-DBFD",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường thẳng biểu diễn tập nghiệm của phương trình $0x + 2y = 4$ có đặc điểm gì?"
+    },
+    {
+      "code": "G9-BATCH1-FBB8",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ hai phương trình bậc nhất hai ẩn có dạng:"
+    },
+    {
+      "code": "G9-L-6F52",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình bậc nhất hai ẩn $ax + by = c$ có bao nhiêu nghiệm nếu $a \\neq 0$ hoặc $b \\neq 0$?"
+    },
+    {
+      "code": "G9-L10-0AD0",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 7x + 3y = 10 không?"
+    },
+    {
+      "code": "G9-L10-15A6",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 8x + 2y = 10 không?"
+    },
+    {
+      "code": "G9-L10-2049",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 9x + 3y = 12 không?"
+    },
+    {
+      "code": "G9-C34-1FA6",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc ba của 125 là:"
+    },
+    {
+      "code": "G9-C34-39A0",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt[3]{-8} - \\sqrt[3]{27}$ bằng:"
+    },
+    {
+      "code": "G9-C34-4940",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc ba của 343 là:"
+    },
+    {
+      "code": "G9-C34-5331",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt[3]{-27} - \\sqrt[3]{64}$ bằng:"
+    },
+    {
+      "code": "G9-C34-887D",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt[3]{-64} - \\sqrt[3]{125}$ bằng:"
+    },
+    {
+      "code": "G9-C34-896F",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc ba của 64 là:"
+    },
+    {
+      "code": "G9-C34-90A8",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc ba của 216 là:"
+    },
+    {
+      "code": "G9-C34-B30F",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt[3]{-1} - \\sqrt[3]{8}$ bằng:"
+    },
+    {
+      "code": "G9-C34-CA53",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt[3]{-125} - \\sqrt[3]{216}$ bằng:"
+    },
+    {
+      "code": "G9-C34-EA33",
+      "category": "Bài 10. Căn bậc ba và căn thức bậc ba.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc ba của 27 là:"
+    },
+    {
+      "code": "G9-BATCH2-1C26",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức liên hệ giữa $\\sin \\alpha$, $\\cos \\alpha$ và $\\tan \\alpha$ là:"
+    },
+    {
+      "code": "G9-BATCH2-4C0C",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác vuông có một góc nhọn $\\alpha$. Tỉ số giữa cạnh đối và cạnh huyền được gọi là:"
+    },
+    {
+      "code": "G9-BATCH2-7B33",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khi góc $\\alpha$ tăng từ $0^\\circ$ đến $90^\\circ$ thì:"
+    },
+    {
+      "code": "G9-BATCH2-8EBE",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác vuông có một góc nhọn $\\alpha$. Tỉ số giữa cạnh kề và cạnh huyền được gọi là:"
+    },
+    {
+      "code": "G9-BATCH2-A604",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác vuông có một góc nhọn $\\alpha$. Tỉ số giữa cạnh đối và cạnh kề được gọi là:"
+    },
+    {
+      "code": "G9-BATCH2-AEA6",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu hai góc nhọn $\\alpha$ và $\\beta$ phụ nhau (tức là $\\alpha + \\beta = 90^\\circ$) thì:"
+    },
+    {
+      "code": "G9-BATCH2-B74F",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của $\\tan 45^\\circ$ là:"
+    },
+    {
+      "code": "G9-BATCH2-B88D",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ thức cơ bản nào sau đây luôn đúng với mọi góc nhọn $\\alpha$?"
+    },
+    {
+      "code": "G9-BATCH2-C320",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Với mọi góc nhọn $\\alpha$, khẳng định nào sau đây là sai?"
+    },
+    {
+      "code": "G9-BATCH2-E7F1",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của $\\sin 30^\\circ$ là:"
+    },
+    {
+      "code": "G9-C34-AB29",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$. Tỉ số lượng giác $\\sin B$ được tính bằng công thức nào?"
+    },
+    {
+      "code": "G9-C34-DECB",
+      "category": "Bài 11. Tỉ số lượng giác của góc nhọn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khẳng định nào sau đây là ĐÚNG về hệ thức lượng giác cơ bản đối với góc nhọn $\\alpha$?"
+    },
+    {
+      "code": "G9-C34-04D0",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = 15$, góc $\\widehat{C} = 30^\\circ$. Độ dài cạnh $A"
+    },
+    {
+      "code": "G9-C34-4B34",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = 12$, góc $\\widehat{C} = 30^\\circ$. Độ dài cạnh $A"
+    },
+    {
+      "code": "G9-C34-4C88",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = 11$, góc $\\widehat{C} = 30^\\circ$. Độ dài cạnh $A"
+    },
+    {
+      "code": "G9-C34-C6AC",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = 14$, góc $\\widehat{C} = 30^\\circ$. Độ dài cạnh $A"
+    },
+    {
+      "code": "G9-C34-E6B2",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$. Khẳng định nào sau đây là ĐÚNG?"
+    },
+    {
+      "code": "G9-C34-F6BF",
+      "category": "Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tam giác $ABC$ vuông tại $A$, cạnh huyền $BC = 13$, góc $\\widehat{C} = 30^\\circ$. Độ dài cạnh $A"
+    },
+    {
+      "code": "G9-BATCH2-3117",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tâm đường tròn ngoại tiếp một tam giác vuông nằm ở vị trí nào?"
+    },
+    {
+      "code": "G9-BATCH2-40BC",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường tròn tâm $O$ bán kính $R$ (với $R > 0$) là hình gồm các điểm:"
+    },
+    {
+      "code": "G9-BATCH2-58D0",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Một đường tròn được xác định duy nhất khi biết:"
+    },
+    {
+      "code": "G9-BATCH2-9847",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho đường tròn $(O; R)$ và một điểm $M$. Biết $OM > R$, vị trí của điểm $M$ so với đường tròn là:"
+    },
+    {
+      "code": "G9-BATCH2-B0B3",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tập hợp các điểm có khoảng cách đến tâm $O$ nhỏ hơn hoặc bằng bán kính $R$ được gọi là:"
+    },
+    {
+      "code": "G9-BATCH2-B9E3",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Qua ba điểm không thẳng hàng, ta vẽ được bao nhiêu đường tròn?"
+    },
+    {
+      "code": "G9-BATCH2-D220",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường kính của một đường tròn là:"
+    },
+    {
+      "code": "G9-BATCH2-DB02",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường tròn có bao nhiêu tâm đối xứng?"
+    },
+    {
+      "code": "G9-BATCH2-ED5E",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "So sánh độ dài đường kính và dây cung trong một đường tròn, ta có:"
+    },
+    {
+      "code": "G9-BATCH2-F494",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường tròn có bao nhiêu trục đối xứng?"
+    },
+    {
+      "code": "G9-C56-AE28",
+      "category": "Bài 13. Mở đầu về đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tập hợp các điểm cách điểm $O$ cố định một khoảng bằng $R$ ($R > 0$) được gọi là:"
+    },
+    {
+      "code": "G9-C56-7FB1",
+      "category": "Bài 14. Cung và dây của một đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong một đường tròn, khẳng định nào sau đây là ĐÚNG về liên hệ giữa dây và khoảng cách từ tâm đến d"
+    },
+    {
+      "code": "G9-C56-5A25",
+      "category": "Bài 15. Độ dài của cung tròn. Diện tích hình quạt tròn và hình vành khuyên.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức tính độ dài cung tròn $l$ ứng với góc ở tâm $n^\\circ$ của đường tròn bán kính $R$ là:"
+    },
+    {
+      "code": "G9-C56-E35D",
+      "category": "Bài 16. Vị trí tương đối của đường thẳng và đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường thẳng $d$ và đường tròn $(O; R)$ cắt nhau khi và chỉ khi khoảng cách $d$ từ tâm $O$ đến đường "
+    },
+    {
+      "code": "G9-C56-12AD",
+      "category": "Bài 17. Vị trí tương đối của hai đường tròn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai đường tròn $(O; R)$ và $(O'; r)$ (với $R > r$) tiếp xúc ngoài khi khoảng cách đoạn nối tâm $OO'$"
+    },
+    {
+      "code": "G9-BATCH3-30F2",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đồ thị hàm số $y = ax^2 \\ (a \\neq 0)$ nhận trục nào làm trục đối xứng?"
+    },
+    {
+      "code": "G9-BATCH3-3218",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho hàm số $y = -3x^2$. Khẳng định nào sau đây là đúng?"
+    },
+    {
+      "code": "G9-BATCH3-5EBC",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điểm nào sau đây luôn thuộc đồ thị hàm số $y = ax^2 \\ (a \\neq 0)$?"
+    },
+    {
+      "code": "G9-BATCH3-8A05",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho hai hàm số $y = 2x^2$ và $y = -2x^2$. Đồ thị của chúng có tính chất gì đặc biệt?"
+    },
+    {
+      "code": "G9-BATCH3-AB9C",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đồ thị của hàm số $y = ax^2 \\ (a \\neq 0)$ là một đường cong có tên gọi là gì?"
+    },
+    {
+      "code": "G9-BATCH3-C590",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điểm $A(-2; 4)$ thuộc đồ thị hàm số $y = ax^2$. Giá trị của $a$ là:"
+    },
+    {
+      "code": "G9-BATCH3-D89D",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Số giao điểm nhiều nhất có thể có của Parabol $y = ax^2$ và một đường thẳng $y = mx + n$ là:"
+    },
+    {
+      "code": "G9-BATCH3-F1FD",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Với hàm số $y = ax^2 \\ (a \\neq 0)$, nếu $a < 0$ thì hàm số đạt giá trị lớn nhất bằng bao nhiêu?"
+    },
+    {
+      "code": "G9-BATCH3-F2B9",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu $a > 0$, Parabol $y = ax^2$ quay bề lõm về phía nào?"
+    },
+    {
+      "code": "G9-BATCH3-F826",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Với hàm số $y = ax^2 \\ (a \\neq 0)$, nếu $a > 0$ thì hàm số đồng biến khi nào?"
+    },
+    {
+      "code": "G9-C56-B324",
+      "category": "Bài 18. Hàm số y = ax2 (a ≠ 0).",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đồ thị của hàm số $y = ax^2$ ($a \\neq 0$) là một đường cong parabol nhận trục nào làm trục đối xứng?"
+    },
+    {
+      "code": "G9-C56-79A7",
+      "category": "Bài 19. Phương trình bậc hai một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biệt thức $\\Delta$ của phương trình $ax^2 + bx + c = 0$ ($a \\neq 0$) được tính bằng công thức:"
+    },
+    {
+      "code": "G9-L-BE2B",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ phương trình $\\begin{cases} x + y = 3 \\\\ x - y = 1 \\end{cases}$ có nghiệm $(x; y)$ là:"
+    },
+    {
+      "code": "G9-L10-31CF",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 9 \\\\ x - y = 7 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-4895",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 7 \\\\ x - y = 5 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-5DC4",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 12 \\\\ x - y = 10 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-B7BC",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 3 \\\\ x - y = 1 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-BC37",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 6 \\\\ x - y = 4 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-BD73",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 5 \\\\ x - y = 3 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-C337",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 10 \\\\ x - y = 8 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-CFC8",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 8 \\\\ x - y = 6 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-F10A",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 4 \\\\ x - y = 2 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-L10-F1E4",
+      "category": "Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giải hệ phương trình $\\begin{cases} x + y = 11 \\\\ x - y = 9 \\end{cases}$. Nghiệm của hệ là:"
+    },
+    {
+      "code": "G9-FIN-0011",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 3x + 1 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-06D1",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 4x + 2 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-0B73",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 8x + 6 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-4421",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 12x + 10 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-5062",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 9x + 7 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-5998",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 10x + 8 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-97B6",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 5x + 3 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-A6DB",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 7x + 5 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-AFCD",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 6x + 4 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-E10D",
+      "category": "Bài 20. Định lí Viète và ứng dụng.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho phương trình $x^2 - 11x + 9 = 0$. Gọi $x_1, x_2$ là hai nghiệm. Tính $x_1 x_2$."
+    },
+    {
+      "code": "G9-FIN-3D69",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 5 và tích bằng 30. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-57C1",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 4 và tích bằng 20. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-6817",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 10 và tích bằng 110. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-780B",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 7 và tích bằng 56. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-7CA6",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 1 và tích bằng 2. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-841E",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 2 và tích bằng 6. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-AAD7",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 9 và tích bằng 90. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-E360",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 6 và tích bằng 42. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-EBFE",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 8 và tích bằng 72. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-FD18",
+      "category": "Bài 21. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hai số nguyên dương có hiệu bằng 3 và tích bằng 12. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-CB54",
+      "category": "Bài 22. Bảng tần số và biểu đồ tần số.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong bảng tần số, tổng các tần số luôn bằng:"
+    },
+    {
+      "code": "G9-FIN-D673",
+      "category": "Bài 23. Bảng tần số tương đối và biểu đồ tần số tương đối.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tần số tương đối của một giá trị được tính bằng cách:"
+    },
+    {
+      "code": "G9-FIN-936D",
+      "category": "Bài 24. Bảng tần số, tần số tương đối ghép nhóm và biểu đồ.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khi nhóm dữ liệu vào các khoảng $[a; b)$, giá trị $b$ có được tính vào nhóm đó không?"
+    },
+    {
+      "code": "G9-FIN-2D6D",
+      "category": "Bài 25. Phép thử ngẫu nhiên và không gian mẫu.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kí hiệu $\\Omega$ trong xác suất thống kê đại diện cho:"
+    },
+    {
+      "code": "G9-FIN-3BFC",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 2 chấm là:"
+    },
+    {
+      "code": "G9-FIN-5CE9",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 1 chấm là:"
+    },
+    {
+      "code": "G9-FIN-61D3",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 4 chấm là:"
+    },
+    {
+      "code": "G9-FIN-63B6",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 5 chấm là:"
+    },
+    {
+      "code": "G9-FIN-C0D3",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 3 chấm là:"
+    },
+    {
+      "code": "G9-FIN-FF93",
+      "category": "Bài 26. Xác suất của biến cố liên quan tới phép thử.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Gieo một con xúc xắc cân đối. Xác suất để xuất hiện mặt 6 chấm là:"
+    },
+    {
+      "code": "G9-BATCH4-13A3",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong một đường tròn, hai góc nội tiếp cùng chắn một cung thì:"
+    },
+    {
+      "code": "G9-BATCH4-212D",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Dấu hiệu nào sau đây KHÔNG chứng minh được một tứ giác nội tiếp?"
+    },
+    {
+      "code": "G9-BATCH4-4FFF",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu tứ giác $ABCD$ có tổng hai góc đối $\\widehat{A} + \\widehat{C} = 180^\\circ$ thì:"
+    },
+    {
+      "code": "G9-BATCH4-6C68",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Số đo của góc nội tiếp bằng:"
+    },
+    {
+      "code": "G9-BATCH4-700B",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho đường tròn $(O)$, $\\widehat{BAC}$ là góc nội tiếp chắn cung $BC$. Nếu $\\widehat{BAC} = 40^\\circ$"
+    },
+    {
+      "code": "G9-BATCH4-8316",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Góc tạo bởi tia tiếp tuyến và dây cung có số đo bằng:"
+    },
+    {
+      "code": "G9-BATCH4-A31D",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hình nào sau đây luôn luôn nội tiếp được trong một đường tròn?"
+    },
+    {
+      "code": "G9-BATCH4-AED3",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Góc nội tiếp là góc:"
+    },
+    {
+      "code": "G9-BATCH4-DD72",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Góc nội tiếp chắn nửa đường tròn là:"
+    },
+    {
+      "code": "G9-BATCH4-FB01",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho tứ giác nội tiếp đường tròn. Tổng số đo hai góc đối diện của tứ giác đó bằng:"
+    },
+    {
+      "code": "G9-FIN-7558",
+      "category": "Bài 27. Góc nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong một đường tròn, góc nội tiếp chắn nửa đường tròn là:"
+    },
+    {
+      "code": "G9-FIN-FC00",
+      "category": "Bài 28. Đường tròn ngoại tiếp và đường tròn nội tiếp của một tam giác.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tâm đường tròn ngoại tiếp tam giác là giao điểm của:"
+    },
+    {
+      "code": "G9-FIN-52F5",
+      "category": "Bài 29. Tứ giác nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Một tứ giác nội tiếp đường tròn nếu và chỉ nếu:"
+    },
+    {
+      "code": "G9-MCQ-M-16D1",
+      "category": "Bài 29. Tứ giác nội tiếp.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tứ giác nội tiếp đường tròn là tứ giác có:"
+    },
+    {
+      "code": "G9-L-34D7",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong bài toán \"vừa gà vừa chó có 36 con\", nếu gọi số gà là $x$ và số chó là $y$ (điều kiện $x, y \\i"
+    },
+    {
+      "code": "G9-L10-5794",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 24 và hiệu của chúng bằng 4. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-6945",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 28 và hiệu của chúng bằng 8. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-9382",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 27 và hiệu của chúng bằng 7. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-C165",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 25 và hiệu của chúng bằng 5. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-CDD7",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 30 và hiệu của chúng bằng 10. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-D980",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 23 và hiệu của chúng bằng 3. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-DA19",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 22 và hiệu của chúng bằng 2. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-E9E9",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 26 và hiệu của chúng bằng 6. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-EC73",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 21 và hiệu của chúng bằng 1. Hai số đó là:"
+    },
+    {
+      "code": "G9-L10-FBE3",
+      "category": "Bài 3. Giải bài toán bằng cách lập hệ phương trình.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tìm hai số biết tổng của chúng bằng 29 và hiệu của chúng bằng 9. Hai số đó là:"
+    },
+    {
+      "code": "G9-FIN-8720",
+      "category": "Bài 30. Đa giác đều.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đa giác đều là đa giác có:"
+    },
+    {
+      "code": "G9-BATCH4-26B9",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Diện tích mặt cầu có bán kính $R$ là:"
+    },
+    {
+      "code": "G9-BATCH4-27D9",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức tính thể tích của hình trụ có bán kính đáy $r$ và chiều cao $h$ là:"
+    },
+    {
+      "code": "G9-BATCH4-3648",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức tính diện tích xung quanh của hình nón có bán kính đáy $r$ và đường sinh $l$ là:"
+    },
+    {
+      "code": "G9-BATCH4-3B57",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Mặt cắt của một hình cầu cắt bởi một mặt phẳng là hình gì?"
+    },
+    {
+      "code": "G9-BATCH4-6CCB",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Thể tích của hình nón có bán kính đáy $r$ và chiều cao $h$ được tính bằng công thức:"
+    },
+    {
+      "code": "G9-BATCH4-D0AC",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Mối liên hệ giữa đường sinh $l$, chiều cao $h$ và bán kính đáy $r$ của hình nón là:"
+    },
+    {
+      "code": "G9-BATCH4-DF75",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hình được tạo thành khi quay một hình chữ nhật một vòng quanh một cạnh cố định của nó là:"
+    },
+    {
+      "code": "G9-BATCH4-F848",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hình được tạo thành khi quay một tam giác vuông một vòng quanh một cạnh góc vuông cố định của nó là:"
+    },
+    {
+      "code": "G9-FIN-4ADD",
+      "category": "Bài 31. Hình trụ và hình nón.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức diện tích xung quanh của hình trụ bán kính $R$, chiều cao $h$ là:"
+    },
+    {
+      "code": "G9-FIN-A68A",
+      "category": "Bài 32. Hình cầu.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Thể tích của hình cầu có bán kính $R$ là:"
+    },
+    {
+      "code": "G9-BATCH5-16E6",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $|x - 2| = 3$ quy về hai phương trình nào?"
+    },
+    {
+      "code": "G9-BATCH5-577B",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của phương trình $A(x) \\cdot B(x) = 0$ là:"
+    },
+    {
+      "code": "G9-BATCH5-6079",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $x(x - 2) = x$ có thể được quy về phương trình bậc nhất hoặc phương trình tích bằng các"
+    },
+    {
+      "code": "G9-BATCH5-78E4",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Sau khi giải xong một phương trình chứa ẩn ở mẫu, ta cần phải làm gì trước khi kết luận nghiệm?"
+    },
+    {
+      "code": "G9-BATCH5-795F",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình tích có dạng tổng quát là:"
+    },
+    {
+      "code": "G9-BATCH5-7AB4",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Để giải phương trình chứa ẩn ở mẫu, bước ĐẦU TIÊN ta cần làm là gì?"
+    },
+    {
+      "code": "G9-BATCH5-8C80",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $\\dfrac{x^2 - 1}{x - 1} = 0$ có tập nghiệm là:"
+    },
+    {
+      "code": "G9-BATCH5-AA98",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Số nghiệm của phương trình $\\dfrac{2}{x} = 0$ là:"
+    },
+    {
+      "code": "G9-BATCH5-CC82",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $(x - 2)(x + 3) = 0$ có các nghiệm là:"
+    },
+    {
+      "code": "G9-BATCH5-E1DA",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{2x}{x - 1} = \\dfrac{3}{x + 2}$ là:"
+    },
+    {
+      "code": "G9-L-4344",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của phương trình $(x - 2)(2x + 5) = 0$ là:"
+    },
+    {
+      "code": "G9-L10-3666",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+5}{x-5} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-421C",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+3}{x-3} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-4C46",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+4}{x-4} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-4D48",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+7}{x-7} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-57C2",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+9}{x-9} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-89CE",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+6}{x-6} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-93AD",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+2}{x-2} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-9826",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+10}{x-10} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-BF18",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+1}{x-1} = 0$ là:"
+    },
+    {
+      "code": "G9-L10-DF67",
+      "category": "Bài 4. Phương trình quy về phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của phương trình $\\dfrac{x+8}{x-8} = 0$ là:"
+    },
+    {
+      "code": "G9-BATCH5-0E20",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính chất liên hệ giữa thứ tự và phép cộng phát biểu rằng: Nếu $a < b$ thì với mọi số $c$ ta có:"
+    },
+    {
+      "code": "G9-BATCH5-16C2",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu $x \\geq 3$ thì biểu thức $2x - 1$ sẽ thỏa mãn điều kiện nào?"
+    },
+    {
+      "code": "G9-BATCH5-2277",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ thức có dạng $a < b$ (hoặc $a > b, a \\leq b, a \\geq b$) được gọi là:"
+    },
+    {
+      "code": "G9-BATCH5-5AE6",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính chất liên hệ giữa thứ tự và phép nhân: Nếu $a < b$ và $c > 0$ (c dương) thì:"
+    },
+    {
+      "code": "G9-BATCH5-714D",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính chất bắc cầu của bất đẳng thức: Nếu $a < b$ và $b < c$ thì:"
+    },
+    {
+      "code": "G9-BATCH5-91ED",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho bất đẳng thức $-4x > 12$. Để tìm $x$, ta làm thế nào?"
+    },
+    {
+      "code": "G9-BATCH5-9591",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho hai số $a, b$ bất kì. Bất đẳng thức nào sau đây LUÔN ĐÚNG?"
+    },
+    {
+      "code": "G9-BATCH5-A89F",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính chất liên hệ giữa thứ tự và phép nhân: Nếu $a < b$ và $c < 0$ (c âm) thì:"
+    },
+    {
+      "code": "G9-BATCH5-D759",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kí hiệu $a \\leq b$ có nghĩa là gì?"
+    },
+    {
+      "code": "G9-BATCH5-DF71",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cho $a > b$. Khẳng định nào sau đây là ĐÚNG?"
+    },
+    {
+      "code": "G9-L-6DC4",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khẳng định nào sau đây là SAI về tính chất của bất đẳng thức? (Giả sử $a < b$)"
+    },
+    {
+      "code": "G9-L10-04C8",
+      "category": "Bài 5. Bất đẳng thức và tính chất.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu $a > b$, kết luận nào sau đây đúng?"
+    },
+    {
+      "code": "G9-EXAM-RG-10",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-1"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-2",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-10"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-3",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-2"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-4",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-3"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-5",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-4"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-6",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-5"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-7",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-6"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-8",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-7"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-EXAM-RG-9",
+      "category": "Bài 56. Rút gọn phân số",
+      "issues": [
+        "🔴 TRÙNG LẶP với G9-EXAM-RG-8"
+      ],
+      "content": "Cho biểu thức $P = \\left( \\dfrac{\\sqrt{x}}{\\sqrt{x} - 1} - \\dfrac{1}{x - \\sqrt{x}} \\right) : \\left( "
+    },
+    {
+      "code": "G9-L-0154",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tập nghiệm của bất phương trình $-3x > 12$ là:"
+    },
+    {
+      "code": "G9-L10-0FAC",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 7 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-145E",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 8 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-1D2A",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 5 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-29F0",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 6 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-4D2F",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 2 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-6244",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 4 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-A3CA",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 1 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-A88C",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 3 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-CCEA",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 10 > 0$ là:"
+    },
+    {
+      "code": "G9-L10-E146",
+      "category": "Bài 6. Bất phương trình bậc nhất một ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của bất phương trình $x - 9 > 0$ là:"
+    },
+    {
+      "code": "G9-BATCH1-0805",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hằng đẳng thức liên quan đến căn bậc hai là:"
+    },
+    {
+      "code": "G9-BATCH1-1359",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khẳng định nào sau đây là ĐÚNG khi nói về số $0$?"
+    },
+    {
+      "code": "G9-BATCH1-677E",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của phương trình $x^2 = 7$ là:"
+    },
+    {
+      "code": "G9-BATCH1-70CB",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của biểu thức $\\sqrt{x - 3}$ là:"
+    },
+    {
+      "code": "G9-BATCH1-8E16",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt{(-5)^2}$ bằng:"
+    },
+    {
+      "code": "G9-BATCH1-A903",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc hai số học của một số thực không âm $a$ được kí hiệu là:"
+    },
+    {
+      "code": "G9-BATCH1-A989",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện xác định của biểu thức $\\sqrt{-2x}$ là:"
+    },
+    {
+      "code": "G9-BATCH1-B559",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn thức bậc hai $\\sqrt{A}$ xác định (có nghĩa) khi và chỉ khi:"
+    },
+    {
+      "code": "G9-BATCH1-B83D",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Số dương $a$ có bao nhiêu căn bậc hai?"
+    },
+    {
+      "code": "G9-C34-09B4",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính giá trị của biểu thức $\\sqrt{(3 - \\sqrt{14})^2}$."
+    },
+    {
+      "code": "G9-C34-2405",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính giá trị của biểu thức $\\sqrt{(2 - \\sqrt{9})^2}$."
+    },
+    {
+      "code": "G9-C34-3335",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{4x - 8}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-C34-5022",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{2x - 4}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-C34-5204",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính giá trị của biểu thức $\\sqrt{(4 - \\sqrt{21})^2}$."
+    },
+    {
+      "code": "G9-C34-6E0A",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{1x - 2}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-C34-8395",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{3x - 6}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-C34-8765",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính giá trị của biểu thức $\\sqrt{(5 - \\sqrt{30})^2}$."
+    },
+    {
+      "code": "G9-C34-A968",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Tính giá trị của biểu thức $\\sqrt{(6 - \\sqrt{41})^2}$."
+    },
+    {
+      "code": "G9-C34-DEE1",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{5x - 10}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-L-1446",
+      "category": "Bài 7. Căn bậc hai và căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Căn bậc hai số học của 16 là:"
+    },
+    {
+      "code": "G9-C34-0332",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Rút gọn biểu thức $\\dfrac{\\sqrt{16a^2}}{\\sqrt{25}}$ (với $a > 0$), ta được:"
+    },
+    {
+      "code": "G9-C34-3A07",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Rút gọn biểu thức $\\dfrac{\\sqrt{12a^2}}{\\sqrt{25}}$ (với $a > 0$), ta được:"
+    },
+    {
+      "code": "G9-C34-3A47",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kết quả của phép tính $\\sqrt{8} \\cdot \\sqrt{32}$ là:"
+    },
+    {
+      "code": "G9-C34-416A",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kết quả của phép tính $\\sqrt{4} \\cdot \\sqrt{16}$ là:"
+    },
+    {
+      "code": "G9-C34-55C1",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Rút gọn biểu thức $\\dfrac{\\sqrt{8a^2}}{\\sqrt{25}}$ (với $a > 0$), ta được:"
+    },
+    {
+      "code": "G9-C34-5BCA",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kết quả của phép tính $\\sqrt{6} \\cdot \\sqrt{24}$ là:"
+    },
+    {
+      "code": "G9-C34-AD52",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kết quả của phép tính $\\sqrt{10} \\cdot \\sqrt{40}$ là:"
+    },
+    {
+      "code": "G9-C34-E3F8",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Rút gọn biểu thức $\\dfrac{\\sqrt{20a^2}}{\\sqrt{25}}$ (với $a > 0$), ta được:"
+    },
+    {
+      "code": "G9-C34-E546",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Rút gọn biểu thức $\\dfrac{\\sqrt{4a^2}}{\\sqrt{25}}$ (với $a > 0$), ta được:"
+    },
+    {
+      "code": "G9-C34-F78C",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Kết quả của phép tính $\\sqrt{2} \\cdot \\sqrt{8}$ là:"
+    },
+    {
+      "code": "G9-L-7083",
+      "category": "Bài 8. Khai căn bậc hai với phép nhân và phép chia.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Với hai số không âm $a, b$, kết quả của phép tính $\\sqrt{a} \\cdot \\sqrt{b}$ là:"
+    },
+    {
+      "code": "G9-C34-0E74",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đưa thừa số ra ngoài dấu căn của biểu thức $\\sqrt{108}$ ta được:"
+    },
+    {
+      "code": "G9-C34-12CB",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đưa thừa số ra ngoài dấu căn của biểu thức $\\sqrt{12}$ ta được:"
+    },
+    {
+      "code": "G9-C34-1F48",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đưa thừa số ra ngoài dấu căn của biểu thức $\\sqrt{27}$ ta được:"
+    },
+    {
+      "code": "G9-C34-332F",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khử mẫu của biểu thức lấy căn $\\sqrt{\\dfrac{5}{6}}$ ta được:"
+    },
+    {
+      "code": "G9-C34-36BB",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đưa thừa số ra ngoài dấu căn của biểu thức $\\sqrt{48}$ ta được:"
+    },
+    {
+      "code": "G9-C34-3F05",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đưa thừa số ra ngoài dấu căn của biểu thức $\\sqrt{75}$ ta được:"
+    },
+    {
+      "code": "G9-C34-A5EB",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khử mẫu của biểu thức lấy căn $\\sqrt{\\dfrac{3}{4}}$ ta được:"
+    },
+    {
+      "code": "G9-C34-B721",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khử mẫu của biểu thức lấy căn $\\sqrt{\\dfrac{2}{3}}$ ta được:"
+    },
+    {
+      "code": "G9-C34-B77A",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khử mẫu của biểu thức lấy căn $\\sqrt{\\dfrac{1}{2}}$ ta được:"
+    },
+    {
+      "code": "G9-C34-C703",
+      "category": "Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khử mẫu của biểu thức lấy căn $\\sqrt{\\dfrac{4}{5}}$ ta được:"
+    },
+    {
+      "code": "G9-L-B297",
+      "category": "Bài tập cuối chương I.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Một hệ phương trình bậc nhất hai ẩn có thể có số nghiệm là:"
+    },
+    {
+      "code": "G9-L-5296",
+      "category": "Bài tập cuối chương II.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nhân cả hai vế của một bất phương trình với cùng một số âm thì:"
+    },
+    {
+      "code": "G9-L-4001",
+      "category": "Bài tập cuối chương III.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khẳng định nào sau đây là đúng với mọi $A, B \\ge 0$?"
+    },
+    {
+      "code": "G9-L-1113",
+      "category": "Bài tập cuối chương IV.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong tam giác vuông, tỉ số giữa cạnh đối và cạnh huyền được gọi là:"
+    },
+    {
+      "code": "T9-C4BTC-002",
+      "category": "Bài tập cuối chương IV.",
+      "issues": [
+        "🔴 NỘI DUNG QUÁ NGẮN (<15 ký tự)"
+      ],
+      "content": "$\\tan 45° = ?$"
+    },
+    {
+      "code": "T9-C4BTC-004",
+      "category": "Bài tập cuối chương IV.",
+      "issues": [
+        "🔴 NỘI DUNG QUÁ NGẮN (<15 ký tự)"
+      ],
+      "content": "$\\cos 60° = ?$"
+    },
+    {
+      "code": "G9-L-6258",
+      "category": "Bài tập cuối chương V.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Số điểm chung tối đa của một đường thẳng và một đường tròn là:"
+    },
+    {
+      "code": "G9-L-535F",
+      "category": "Bài tập cuối chương VI.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đồ thị của hàm số $y = ax^2 \\, (a \\neq 0)$ là một đường cong có tên gọi là:"
+    },
+    {
+      "code": "ID:31f88489-3848-4765-b1b4-9038d486712d",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"B=\\left( \\dfrac{\\sqrt{x}}{\\sqrt{x}+4}+\\d...\" → KaTeX parse error: Expected 'EOF', got '&' at position 69: …"
+      ],
+      "content": "Câu II: (1,5 điểm)\n1) Cho biểu thức$A=\\dfrac{\\sqrt{x}+4}{\\sqrt{x}+2}$. Tính giá trị của biểu thức$A$"
+    },
+    {
+      "code": "ID:58b225a4-5afb-40f8-bfe8-d3bcdea68d73",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3): \"H$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu IV: (4,0 điểm) Cô\nHình bên dưới là một món đồ chơi trẻ em có cấu tạo từ một bán cầu (nửa khối cầ"
+    },
+    {
+      "code": "ID:59e1fcab-cd53-450a-8e0b-b5513b2272a1",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4): \"EF\\bot AB$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Tính lượng vải cần mua để tạo ra nón của chú hề với các số liệu trong hình bê"
+    },
+    {
+      "code": "ID:5cbc3ed5-82d3-4236-95e9-c50a0e62652c",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"{30%}...\" → KaTeX parse error: Expected '}', got 'EOF' at end of input: "
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Trên địa bàn thành phố $X$ có $1850$ học sinh lớp $9$ đăng kí dự thi tuyển s"
+    },
+    {
+      "code": "ID:66aa08dd-5bdb-43ee-a149-006314de5242",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"\\begin{aligned} & \\Rightarrow OM\\bot AC(...\" → KaTeX parse error: Expected 'EOF', got '\\right' at position "
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Một xô nước inox hình trụ (không có nắp đậy) có chiều cao$0,6 m$, bán kính đá"
+    },
+    {
+      "code": "ID:6dd07c23-6b10-4e5e-8045-16dbc4f58e59",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4): \"\\left\\{ \\begin{array}{l} \\left( \\sqrt{x}...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu II: (1,5 điểm) Cho hai biểu thức:\n$A=\\dfrac{x-3}{\\sqrt{x}}$ và $B=\\dfrac{\\sqrt{x}}{\\sqrt{x}+2}-\\"
+    },
+    {
+      "code": "ID:71eb5883-2aad-4733-8793-a67f37b96aeb",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3): \"0,8x+0,9y=420$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Để khuyến khích tiết kiệm nước, giá nước sinh hoạt được tính theo kiểu bậc th"
+    },
+    {
+      "code": "ID:9b328cb4-e05d-49f5-adab-d89098fb2510",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4): \"\\left\\{ \\begin{aligned} & x+y=250 \\ & 76...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Một trường THCS tổ chức cho $250$ người bao gồm giáo viên và học sinh đi tha"
+    },
+    {
+      "code": "ID:9b874c52-342b-42e2-99ce-555be20d667d",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3): \"\\left\\{ \\begin{array}{l} x+y=5 \\ 12x+11y...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Bác Tuấn vay tổng số tiền là 5 tỉ đồng từ hai ngân hàng Sacombank và Vietcom"
+    },
+    {
+      "code": "ID:a4909118-e23d-440f-bb2d-19dedba5addf",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"\\left\\{ \\begin{aligned} & x=11y \\ & \\dfr...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Ngày của Cha hay còn gọi là Father’s Day là ngày để con bày tỏ lòng biết ơn v"
+    },
+    {
+      "code": "ID:a50fef14-2e10-4e26-99c7-bbed844f92c4",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"\\begin{aligned} & \\left[ \\begin{aligned}...\" → KaTeX parse error: Expected '\\right', got '&' at position 80"
+      ],
+      "content": "Câu III: (2,5 điểm)\nGiải bài toán sau bằng cách lập phương trình hoặc hệ phương trình:."
+    },
+    {
+      "code": "ID:a6a86333-e100-4149-9c5a-6b7570cbe8f2",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"2; 3; 5; 7; 11 &...\" → KaTeX parse error: Expected 'EOF', got '&' at position 16: 2"
+      ],
+      "content": "Câu I: (1,5 điểm) Đề.. Để chuẩn bị cho tiết mục kỉ niệm 70 năm Chiến thắng Điện Biên Phủ, phường Mỹ "
+    },
+    {
+      "code": "ID:a6ac35af-a6a5-4fa5-b6c6-6b3a806dd8d8",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"x=\\dfrac{1}{9}$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu II: (1,5 điểm) Cho hai biểu thức: $A=\\dfrac{\\sqrt{x}-2}{\\sqrt{x}+9}$ và $B=\\dfrac{3}{\\sqrt{x}+2}"
+    },
+    {
+      "code": "ID:ba28665f-8163-4122-8f64-063500d6d777",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"\\dfrac{1}{4}4x\\left( a-2x \\right)\\left( ...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu V: (0,5 điểm) Một miếng tôn phẳng hình vuông với kích thước $a \\left( cm \\right)$, người ta muốn"
+    },
+    {
+      "code": "ID:c381e5dc-a27e-4a34-9c52-76859c00c665",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"\\left[ \\begin{aligned} & x=30 (tm) \\ & x...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm).\n1) Một cửa hàng xe máy điện cung cấp gói thuê pin theo tháng cho khách hàng dướ"
+    },
+    {
+      "code": "ID:c802bfec-f723-4b54-9c0c-02efef16512b",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (7): \"\\left\\{ \\begin{matrix} x+y=850 \\ \\dfrac{...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Một người mua một cái bàn là và một cái quạt điện với tổng số tiền theo giá "
+    },
+    {
+      "code": "ID:ced52625-1b71-4703-bd18-203fbe37d430",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"4$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1) Trong chuyện ngụ ngôn La Phông ten, Cò mời Cáo đến ăn tiệc với món súp hảo hạn"
+    },
+    {
+      "code": "ID:d9dd6c55-1875-413d-9461-0e3664cef0a5",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3): \"\\left\\{ \\begin{aligned} & x=\\dfrac{2}{3}...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Một người gửi 200 triệu vào ngân hàng với lãi suất hàng năm là 5%. Vì bận việ"
+    },
+    {
+      "code": "ID:db26e985-1750-473e-8d7d-ce152c33e40e",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"\\widehat{EKB}=90{}^\\circ$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Để làm một mô hình cái bút chì trang trí, người ta dùng một khối gỗ hình trụ "
+    },
+    {
+      "code": "ID:eaa3c3b6-6c31-4548-87dc-286bc617fe58",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4): \"\\left\\{ \\begin{array}{l} \\dfrac{1}{x}+\\d...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Một ô tô khách và một ô tô tải chở vật liệu xây dựng khởi hành cùng một lúc t"
+    },
+    {
+      "code": "ID:ece0e2e7-9306-4caf-8f0f-4725f5307776",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (6): \"\\Rightarrow$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu IV: (4,0 điểm)\nMột thùng đựng nước có dạng hình trụ chiều cao là $35 cm$ đường kính đáy $30 cm$."
+    },
+    {
+      "code": "ID:f5b7b1d2-b549-4d2d-af38-25a86c009ee3",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3): \"\\left\\{ \\begin{aligned} & x+y=25,4. \\ & ...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm) Cho.\n1). Nhân dịp ngày Giỗ Tổ Hùng Vương, một siêu thị điện máy đã giảm giá nhiề"
+    },
+    {
+      "code": "ID:f6e1aaa1-7301-4434-983f-707199439466",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"P={{P}^4}$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Câu II:(1,5 điểm) Cho hai biểu thức: $A=\\dfrac{2\\sqrt{x}}{\\sqrt{x}-1}$ và $B=\\dfrac{x+\\sqrt{x}-2}{x-"
+    },
+    {
+      "code": "ID:f98a3ccd-10df-48f4-98bf-51bdb21f5406",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2): \"\\left\\{ \\begin{aligned} & x+y=1500 \\left...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\nHưởng ứng phong trào của hội đồng đội làm tấm kính chắn giọt bắn gửi các y bác s"
+    },
+    {
+      "code": "ID:fc66361a-c75b-49cb-8a1f-65a960aaf6fa",
+      "category": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (9): \"\\left( 100%-40% \\right).x+\\left( 100%-25...\" → KaTeX parse error: Expected '\\right', got 'EOF' at end of in"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Nhân dịp Lễ giỗ tổ Hùng Vương, một siêu thị điện máy đã giảm giá nhiều mặt hà"
+    },
+    {
+      "code": "BT004",
+      "category": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $x^2 - 5x + 6 = 0$ có hai nghiệm là:"
+    },
+    {
+      "code": "BT041",
+      "category": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Khẳng định nào sau đây là SAI khi nói về hàm số $y = ax^2 \\ (a \\neq 0)$?"
+    },
+    {
+      "code": "BT063",
+      "category": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $2x^2 + 3x - 5 = 0$ có tổng hai nghiệm bằng:."
+    },
+    {
+      "code": "BT064",
+      "category": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đồ thị hàm số $y = -x^2$ có đỉnh tại:"
+    },
+    {
+      "code": "BT067",
+      "category": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Giá trị của biểu thức $\\sqrt{16} - \\sqrt{9} + \\sqrt{25}$ bằng:."
+    },
+    {
+      "code": "G9-MCQ-4CD1",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để $\\sqrt{A}$ có nghĩa là:"
+    },
+    {
+      "code": "G9-MCQ-M-16D8",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(6 - \\sqrt{11})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-2406",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(10 - \\sqrt{15})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-68C8",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(8 - \\sqrt{13})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-7CD6",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(5 - \\sqrt{10})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-8DDA",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(9 - \\sqrt{14})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-D3B9",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(4 - \\sqrt{9})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-M-E729",
+      "category": "CHƯƠNG III. CĂN BẬC HAI VÀ CĂN BẬC BA",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $\\sqrt{(7 - \\sqrt{12})^2}$ bằng:"
+    },
+    {
+      "code": "G9-MCQ-0835",
+      "category": "CHƯƠNG IX. ĐƯỜNG TRÒN NGOẠI TIẾP VÀ ĐƯỜNG TRÒN NỘI TIẾP",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Góc nội tiếp chắn nửa đường tròn là góc gì?"
+    },
+    {
+      "code": "G9-MCQ-C1EE",
+      "category": "CHƯƠNG VI. HÀM SỐ y = ax² (a ≠ 0). PHƯƠNG TRÌNH BẬC HAI MỘT ẨN",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hàm số bậc nhất $y = ax + b$ ($a \\neq 0$) đồng biến khi nào?"
+    },
+    {
+      "code": "G9-L-837D",
+      "category": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Thể tích của hình trụ có bán kính đáy $R$ và chiều cao $h$ là:"
+    },
+    {
+      "code": "G9-MCQ-M-DEA6",
+      "category": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức tính thể tích hình nón có bán kính đáy $R$ và chiều cao $h$ là:"
+    },
+    {
+      "code": "T9-TTC-03",
+      "category": "Chuyên đề 13. Các bài toán thực tế có liên quan cực trị",
+      "issues": [
+        "🟡 KATEX LỖI (1): \"2{,}1$$...\" → KaTeX parse error: Can't use function '$' in math mode at po"
+      ],
+      "content": "Một khung nhôm hình chữ nhật có chu vi $6$m. Cần cắt kính để lắp vào khung. Diện tích kính lớn nhất "
+    },
+    {
+      "code": "G9-BATCH3-5B1E",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Biểu thức $x_1^2 + x_2^2$ được biến đổi theo $S$ và $P$ (với $S = x_1+x_2, P=x_1x_2$) là:"
+    },
+    {
+      "code": "G9-BATCH3-68B9",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nhẩm nghiệm của phương trình: Nếu $a - b + c = 0$ thì phương trình $ax^2 + bx + c = 0$ có một nghiệm"
+    },
+    {
+      "code": "G9-BATCH3-844D",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Công thức tính biệt thức $\\Delta$ của phương trình bậc hai $ax^2 + bx + c = 0 \\ (a \\neq 0)$ là:"
+    },
+    {
+      "code": "G9-BATCH3-8BEC",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Điều kiện để phương trình bậc hai $ax^2 + bx + c = 0$ có hai nghiệm phân biệt là:"
+    },
+    {
+      "code": "G9-BATCH3-9F7A",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu hai số $u, v$ có tổng $u + v = S$ và tích $u \\cdot v = P$ thì $u, v$ là hai nghiệm của phương tr"
+    },
+    {
+      "code": "G9-BATCH3-B942",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Theo định lí Vi-ét, tích hai nghiệm $P = x_1x_2$ của phương trình $ax^2 + bx + c = 0$ bằng:"
+    },
+    {
+      "code": "G9-BATCH3-BA7C",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình $ax^2 + bx + c = 0$ có hai nghiệm trái dấu khi và chỉ khi:"
+    },
+    {
+      "code": "G9-BATCH3-CCC3",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Theo định lí Vi-ét, nếu phương trình $ax^2 + bx + c = 0$ có hai nghiệm $x_1, x_2$ thì tổng hai nghiệ"
+    },
+    {
+      "code": "G9-BATCH3-E589",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nhẩm nghiệm của phương trình: Nếu $a + b + c = 0$ thì phương trình $ax^2 + bx + c = 0$ có một nghiệm"
+    },
+    {
+      "code": "G9-BATCH3-FD56",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nếu $\\Delta = 0$ thì phương trình bậc hai có nghiệm kép bằng bao nhiêu?"
+    },
+    {
+      "code": "G9-L-3685",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Theo định lí Viète, nếu phương trình $ax^2 + bx + c = 0 \\, (a \\neq 0)$ có 2 nghiệm $x_1, x_2$ thì tổ"
+    },
+    {
+      "code": "G9-MCQ-M-3A8B",
+      "category": "Chuyên đề 2. Phương trình bậc hai và hệ thức Vi-ét",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Theo định lý Vi-ét, nếu phương trình $ax^2 + bx + c = 0$ ($a \\neq 0$) có hai nghiệm $x_1, x_2$ thì t"
+    }
+  ]
+}

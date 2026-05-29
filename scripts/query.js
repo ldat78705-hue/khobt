@@ -1,8 +1,8 @@
 const { neon } = require('@neondatabase/serverless');
-const sql = neon('postgresql://neondb_owner:npg_M5fiq0KWyCbD@ep-wandering-union-aomf3qsq.c-2.ap-southeast-1.aws.neon.tech/neondb?sslmode=require');
+require('dotenv').config({ path: '.env.local' });
 
-async function main() {
-  const cats = await sql`SELECT id, name FROM public.categories WHERE grade = 6 AND parent_id IS NOT NULL AND (name ILIKE '%thống kê%' OR name ILIKE '%xác suất%' OR name ILIKE '%biểu đồ%' OR name ILIKE '%dữ liệu%' OR name ILIKE '%kết quả%')`;
-  console.log(cats);
-}
-main();
+(async () => {
+  const sql = neon(process.env.DATABASE_URL);
+  const res = await sql`SELECT id, content, options, correct_answer FROM questions WHERE id = 'e7b2d4c2-b8e7-47f4-8429-bec889ab22fd'`;
+  console.log(JSON.stringify(res, null, 2));
+})();

@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-05-29T10:02:09.274Z",
+  "grade": 9,
+  "filter": "Bài 1.",
+  "total": 37,
+  "clean": 16,
+  "issues": [
+    {
+      "code": "G9-BATCH1-2253",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Một hệ phương trình bậc nhất hai ẩn có thể có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-390B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường thẳng biểu diễn tập nghiệm của phương trình $3x + 0y = 6$ có đặc điểm gì?"
+    },
+    {
+      "code": "G9-BATCH1-43CB",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số nào sau đây là một nghiệm của phương trình $2x - y = 3$?"
+    },
+    {
+      "code": "G9-BATCH1-443C",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ phương trình $\\begin{cases} x + y = 2 \\\\ 2x + 2y = 4 \\end{cases}$ có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-47B7",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ phương trình $\\begin{cases} x - y = 1 \\\\ x - y = 2 \\end{cases}$ có bao nhiêu nghiệm?"
+    },
+    {
+      "code": "G9-BATCH1-933B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình bậc nhất hai ẩn có dạng tổng quát là:"
+    },
+    {
+      "code": "G9-BATCH1-BE9B",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Nghiệm của phương trình bậc nhất hai ẩn $ax + by = c$ được biểu diễn bởi:"
+    },
+    {
+      "code": "G9-BATCH1-D28D",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Trong phương trình $ax + by = c$ (với $a, b$ không đồng thời bằng 0), điều kiện nào sau đây là bắt b"
+    },
+    {
+      "code": "G9-BATCH1-DBFD",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Đường thẳng biểu diễn tập nghiệm của phương trình $0x + 2y = 4$ có đặc điểm gì?"
+    },
+    {
+      "code": "G9-BATCH1-FBB8",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Hệ hai phương trình bậc nhất hai ẩn có dạng:"
+    },
+    {
+      "code": "G9-L-6F52",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Phương trình bậc nhất hai ẩn $ax + by = c$ có bao nhiêu nghiệm nếu $a \\neq 0$ hoặc $b \\neq 0$?"
+    },
+    {
+      "code": "G9-L10-0AD0",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 7x + 3y = 10 không?"
+    },
+    {
+      "code": "G9-L10-15A6",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 8x + 2y = 10 không?"
+    },
+    {
+      "code": "G9-L10-2049",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 9x + 3y = 12 không?"
+    },
+    {
+      "code": "G9-L10-3007",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 6x + 2y = 8 không?"
+    },
+    {
+      "code": "G9-L10-7461",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 10x + 2y = 12 không?"
+    },
+    {
+      "code": "G9-L10-965E",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 2x + 2y = 4 không?"
+    },
+    {
+      "code": "G9-L10-A0AF",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 1x + 3y = 4 không?"
+    },
+    {
+      "code": "G9-L10-A97C",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 3x + 3y = 6 không?"
+    },
+    {
+      "code": "G9-L10-E328",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 4x + 2y = 6 không?"
+    },
+    {
+      "code": "G9-L10-FB80",
+      "category": "Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn.",
+      "issues": [
+        "🔴 THIẾU ĐÁP ÁN"
+      ],
+      "content": "Cặp số $(1; 1)$ có phải là nghiệm của phương trình 5x + 3y = 8 không?"
+    }
+  ]
+}

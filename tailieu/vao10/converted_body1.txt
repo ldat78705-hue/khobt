@@ -1,0 +1,91 @@
+<body lang=EN-US style='tab-interval:36.0pt;word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;mso-bidi-font-size:16.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'>PHI&#7870;U BÀI T&#7852;P T&#7920; LUY&#7878;N: H&Igrave;NH
+H&#7884;C KHÔNG GIAN TH&#7920;C T&#7870;<o:p></o:p></span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i><span
+style='font-size:13.0pt;mso-bidi-font-size:16.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'>(Chuyên đ&#7873;: H&igrave;nh tr&#7909;, H&igrave;nh nón,
+H&igrave;nh c&#7847;u - Luy&#7879;n thi vào l&#7899;p 10 Hà N&#7897;i)</span></i><span
+style='font-size:13.0pt;mso-bidi-font-size:16.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:13.0pt;
+mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>PH&#7846;N
+A: BÍ KÍP PH&Ograve;NG THI (CH&#7888;NG M&#7844;T ĐI&#7874;M OAN)<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:13.0pt;
+mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>1.
+Quy t&#7855;c dùng d&#7845;u x&#7845;p x&#7881; (</span></b><span
+style='font-size:13.0pt;mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman";color:black;mso-bidi-font-weight:bold'>$\approx$</span><b><span
+style='font-size:13.0pt;mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'>): Giám kh&#7843;o Hà N&#7897;i soi r&#7845;t k&#7929;!</span></b><span
+style='font-size:13.0pt;mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'><o:p></o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify;mso-list:l0 level1 lfo1;
+     tab-stops:list 36.0pt'><b><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>L&#7895;i
+     sai ph&#7893; bi&#7871;n:</span></b><span style='font-size:13.0pt;
+     mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>
+     H&#7885;c sinh thư&#7901;ng vi&#7871;t <span style='color:black'>$V\approx
+     8\cdot 3,14\approx 25,12$</span>. Vi&#7879;c dùng 2 d&#7845;u x&#7845;p x&#7881;
+     liên ti&#7871;p như th&#7871; này là sai b&#7843;n ch&#7845;t toán h&#7885;c
+     (v&igrave; phép nhân <span style='color:black'>$8\cdot 3,14$</span> cho ra
+     k&#7871;t qu&#7843; chính xác tuy&#7879;t đ&#7889;i là 25,12), s&#7869; b&#7883;
+     tr&#7915; <b>0,25 đi&#7875;m</b> l&#7853;p t&#7913;c.<o:p></o:p></span></li>
+ <li class=MsoNormal style='text-align:justify;mso-list:l0 level1 lfo1;
+     tab-stops:list 36.0pt'><b><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>Tr&igrave;nh
+     bày chu&#7849;n m&#7921;c:</span></b><span style='font-size:13.0pt;
+     mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>
+     Ch&#7881; dùng <b>duy nh&#7845;t 1 d&#7845;u </b><span style='color:black;
+     mso-bidi-font-weight:bold'>$\approx$</span> ngay t&#7841;i th&#7901;i đi&#7875;m
+     thay s&#7889; <span style='color:black'>$\pi \approx 3,14$</span>.<o:p></o:p></span></li>
+ <li class=MsoNormal style='text-align:justify;mso-list:l0 level1 lfo1;
+     tab-stops:list 36.0pt'><i><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>Ví d&#7909;
+     cách ghi chu&#7849;n:</span></i><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'> <span
+     style='color:black'>$V=\pi {{r}^2}h\approx 3,14\cdot {{2}^2}\cdot 2=25,12$</span>
+     (<b>cm³</b>). ho&#7863;c <span style='color:black'>$V=\pi {{r}^2}h\approx
+     25,12$</span> (<b>cm³</b>).<o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:13.0pt;
+mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>2.
+Đ&#7915;ng c&#7855;m đ&#7847;u tính khi th&#7845;y ch&#7919; &quot;Đư&#7901;ng
+kính&quot;</span></b><span style='font-size:13.0pt;mso-bidi-font-size:14.0pt;
+line-height:115%;mso-bidi-font-family:"Times New Roman"'><o:p></o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify;mso-list:l3 level1 lfo2;
+     tab-stops:list 36.0pt'><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>Đ&#7873;
+     thi r&#7845;t hay gài b&#7851;y cho đư&#7901;ng kính (<span
+     style='color:black'>$d$</span>) thay v&igrave; bán kính (<span
+     style='color:black'>$R$</span>). Th&#7845;y ch&#7919; &quot;Đư&#7901;ng
+     kính&quot;, vi&#7879;c đ&#7847;u tiên là g&#7841;ch chân nó, và
+     d&ograve;ng đ&#7847;u tiên trong bài làm b&#7855;t bu&#7897;c ph&#7843;i
+     ghi: <i>Bán kính đáy là: <span style='color:black'>$R=\frac{d}{2}=...$</span></i><o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:13.0pt;
+mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>3.
+Nh&#7899; k&#7929; b&#7897; ba &quot;h, r, l&quot; trong H&igrave;nh nón</span></b><span
+style='font-size:13.0pt;mso-bidi-font-size:14.0pt;line-height:115%;mso-bidi-font-family:
+"Times New Roman"'><o:p></o:p></span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='text-align:justify;mso-list:l5 level1 lfo3;
+     tab-stops:list 36.0pt'><span style='font-size:13.0pt;mso-bidi-font-size:
+     14.0pt;line-height:115%;mso-bidi-font-family:"Times New Roman"'>Tính Th&#7875;
+     tích (<span style='color:black'>$V$</span>) th&igrave; dùng đư&#7901;ng
+     cao (<span style='color:black'>$h$</span>).<o:p></o:p></span></li>
+ <li c

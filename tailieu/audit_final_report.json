@@ -1,0 +1,2187 @@
+{
+  "timestamp": "2026-05-29T11:04:17.964Z",
+  "summary": {
+    "4": {
+      "total": 666,
+      "clean": 658,
+      "issues": 8,
+      "red": 0,
+      "yellow": 8
+    },
+    "5": {
+      "total": 857,
+      "clean": 717,
+      "issues": 140,
+      "red": 0,
+      "yellow": 140
+    },
+    "6": {
+      "total": 1162,
+      "clean": 1154,
+      "issues": 8,
+      "red": 1,
+      "yellow": 7
+    },
+    "7": {
+      "total": 1450,
+      "clean": 1434,
+      "issues": 16,
+      "red": 0,
+      "yellow": 16
+    },
+    "8": {
+      "total": 1436,
+      "clean": 1430,
+      "issues": 6,
+      "red": 0,
+      "yellow": 6
+    },
+    "9": {
+      "total": 1355,
+      "clean": 1301,
+      "issues": 54,
+      "red": 0,
+      "yellow": 54
+    }
+  },
+  "issues": [
+    {
+      "code": "ID:f5b7b1d2-b549-4d2d-af38-25a86c009ee3",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu III: (2,5 điểm) Cho.\n1). Nhân dịp ngày Giỗ Tổ Hùng Vương, một siêu thị điện "
+    },
+    {
+      "code": "ID:ece0e2e7-9306-4caf-8f0f-4725f5307776",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu IV: (4,0 điểm)\nMột thùng đựng nước có dạng hình trụ chiều cao là $35 cm$ đườ"
+    },
+    {
+      "code": "ID:9b328cb4-e05d-49f5-adab-d89098fb2510",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Một trường THCS tổ chức cho $250$ người bao gồm giáo viê"
+    },
+    {
+      "code": "ID:8a9de710-444e-40e5-ab2d-d7e6fdff001d",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Câu II: (1,5 điểm)\nCho biểu thức\nA = $\\left( \\dfrac{\\sqrt{a}}{\\sqrt{a}-1}-\\dfrac"
+    },
+    {
+      "code": "ID:a50fef14-2e10-4e26-99c7-bbed844f92c4",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Câu III: (2,5 điểm)\nGiải bài toán sau bằng cách lập phương trình hoặc hệ phương "
+    },
+    {
+      "code": "ID:9b874c52-342b-42e2-99ce-555be20d667d",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Bác Tuấn vay tổng số tiền là 5 tỉ đồng từ hai ngân hàng "
+    },
+    {
+      "code": "ID:31f88489-3848-4765-b1b4-9038d486712d",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu II: (1,5 điểm)\n1) Cho biểu thức$A=\\dfrac{\\sqrt{x}+4}{\\sqrt{x}+2}$. Tính giá "
+    },
+    {
+      "code": "ID:d9dd6c55-1875-413d-9461-0e3664cef0a5",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Một người gửi 200 triệu vào ngân hàng với lãi suất hàng n"
+    },
+    {
+      "code": "ID:c381e5dc-a27e-4a34-9c52-76859c00c665",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Câu III: (2,5 điểm).\n1) Một cửa hàng xe máy điện cung cấp gói thuê pin theo thán"
+    },
+    {
+      "code": "ID:66aa08dd-5bdb-43ee-a149-006314de5242",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (4)"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Một xô nước inox hình trụ (không có nắp đậy) có chiều cao"
+    },
+    {
+      "code": "ID:58b225a4-5afb-40f8-bfe8-d3bcdea68d73",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu IV: (4,0 điểm) Cô\nHình bên dưới là một món đồ chơi trẻ em có cấu tạo từ một "
+    },
+    {
+      "code": "ID:6dd07c23-6b10-4e5e-8045-16dbc4f58e59",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (4)"
+      ],
+      "content": "Câu II: (1,5 điểm) Cho hai biểu thức:\n$A=\\dfrac{x-3}{\\sqrt{x}}$ và $B=\\dfrac{\\sq"
+    },
+    {
+      "code": "ID:f98a3ccd-10df-48f4-98bf-51bdb21f5406",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Câu III: (2,5 điểm)\nHưởng ứng phong trào của hội đồng đội làm tấm kính chắn giọt"
+    },
+    {
+      "code": "ID:71eb5883-2aad-4733-8793-a67f37b96aeb",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (3)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Để khuyến khích tiết kiệm nước, giá nước sinh hoạt được t"
+    },
+    {
+      "code": "ID:c802bfec-f723-4b54-9c0c-02efef16512b",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (7)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1). Một người mua một cái bàn là và một cái quạt điện với tổ"
+    },
+    {
+      "code": "ID:ba28665f-8163-4122-8f64-063500d6d777",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu V: (0,5 điểm) Một miếng tôn phẳng hình vuông với kích thước $a \\left( cm \\ri"
+    },
+    {
+      "code": "ID:fc66361a-c75b-49cb-8a1f-65a960aaf6fa",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (9)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Nhân dịp Lễ giỗ tổ Hùng Vương, một siêu thị điện máy đã g"
+    },
+    {
+      "code": "ID:db26e985-1750-473e-8d7d-ce152c33e40e",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Để làm một mô hình cái bút chì trang trí, người ta dùng m"
+    },
+    {
+      "code": "ID:a6a86333-e100-4149-9c5a-6b7570cbe8f2",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu I: (1,5 điểm) Đề.. Để chuẩn bị cho tiết mục kỉ niệm 70 năm Chiến thắng Điện "
+    },
+    {
+      "code": "ID:eaa3c3b6-6c31-4548-87dc-286bc617fe58",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (4)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Một ô tô khách và một ô tô tải chở vật liệu xây dựng khởi"
+    },
+    {
+      "code": "ID:d2c6101e-840b-4a89-a4a3-bc55161cc5b3",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu I: (1,5 điểm)\n1) Khảo sát thời gian tập thể dục của một số học sinh lớp $9$ "
+    },
+    {
+      "code": "ID:a4909118-e23d-440f-bb2d-19dedba5addf",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu III: (2,5 điểm)\n1) Ngày của Cha hay còn gọi là Father’s Day là ngày để con b"
+    },
+    {
+      "code": "ID:59e1fcab-cd53-450a-8e0b-b5513b2272a1",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (4)"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1). Tính lượng vải cần mua để tạo ra nón của chú hề với các s"
+    },
+    {
+      "code": "ID:6b7190fd-6d30-4f7b-ab96-3e12a48b361f",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Câu II: (1,5 điểm) Cho hai biểu thức: $A=\\dfrac{\\sqrt{x}+3}{\\sqrt{x}+1}$ và $B=\\"
+    },
+    {
+      "code": "ID:ced52625-1b71-4703-bd18-203fbe37d430",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Câu IV: (4,0 điểm)\n1) Trong chuyện ngụ ngôn La Phông ten, Cò mời Cáo đến ăn tiệc"
+    },
+    {
+      "code": "ID:f6e1aaa1-7301-4434-983f-707199439466",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu II:(1,5 điểm) Cho hai biểu thức: $A=\\dfrac{2\\sqrt{x}}{\\sqrt{x}-1}$ và $B=\\df"
+    },
+    {
+      "code": "ID:a6ac35af-a6a5-4fa5-b6c6-6b3a806dd8d8",
+      "grade": 9,
+      "cat": "Bài tập ôn thi vào 10",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Câu II: (1,5 điểm) Cho hai biểu thức: $A=\\dfrac{\\sqrt{x}-2}{\\sqrt{x}+9}$ và $B=\\"
+    },
+    {
+      "code": "BT002",
+      "grade": 9,
+      "cat": "CHƯƠNG I. PT VÀ HỆ PT BẬC NHẤT 2 ẨN",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Giải hệ phương trình: \\$2begin{cases} 2x + y = 5 \\\\ x - 3y = -1 \\end{cases}\\$2"
+    },
+    {
+      "code": "G9-EXAM-NTC-1",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 3 \\text{ cm}$, chiều cao $h = 7 \\text{"
+    },
+    {
+      "code": "G9-EXAM-NTC-10",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 12 \\text{ cm}$, chiều cao $h = 25 \\tex"
+    },
+    {
+      "code": "G9-EXAM-NTC-2",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 4 \\text{ cm}$, chiều cao $h = 9 \\text{"
+    },
+    {
+      "code": "G9-EXAM-NTC-3",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 5 \\text{ cm}$, chiều cao $h = 11 \\text"
+    },
+    {
+      "code": "G9-EXAM-NTC-4",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 6 \\text{ cm}$, chiều cao $h = 13 \\text"
+    },
+    {
+      "code": "G9-EXAM-NTC-5",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 7 \\text{ cm}$, chiều cao $h = 15 \\text"
+    },
+    {
+      "code": "G9-EXAM-NTC-6",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 8 \\text{ cm}$, chiều cao $h = 17 \\text"
+    },
+    {
+      "code": "G9-EXAM-NTC-7",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 9 \\text{ cm}$, chiều cao $h = 19 \\text"
+    },
+    {
+      "code": "G9-EXAM-NTC-8",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 10 \\text{ cm}$, chiều cao $h = 21 \\tex"
+    },
+    {
+      "code": "G9-EXAM-NTC-9",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp sữa hình trụ có bán kính đáy $R = 11 \\text{ cm}$, chiều cao $h = 23 \\tex"
+    },
+    {
+      "code": "T9-KHOI-01",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hình trụ có bán kính đáy $r = 5$ cm và chiều cao $h = 10$ cm. Tính diện tích"
+    },
+    {
+      "code": "T9-KHOI-04",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một cốc nước hình trụ có bán kính đáy $4$ cm, chiều cao $15$ cm. Cốc đang chứa n"
+    },
+    {
+      "code": "T9-KHOI-08",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một xí nghiệp cần làm $100$ chiếc nón lá dạng hình nón. Biết bán kính đáy nón là"
+    },
+    {
+      "code": "V10-HKG-014",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một chiếc cốc giấy có dạng hình nón với đường kính miệng cốc là 8 cm và chiều ca"
+    },
+    {
+      "code": "V10-HKG-016",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hộp đựng kem dạng hình trụ bán kính đáy 10 cm, chiều cao 20 cm. Dụng cụ múc "
+    },
+    {
+      "code": "V10-HKG-017",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Cần đúc các viên bi sắt hình cầu bán kính 1 cm từ một khối sắt hình hộp chữ nhật"
+    },
+    {
+      "code": "V10-HKG-018",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bồn chứa dầu hình trụ bán kính đáy 2 m, chiều cao 5 m. Thùng phuy nhỏ hình trụ đ"
+    },
+    {
+      "code": "V10-HKG-019",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Nồi súp hình trụ đường kính đáy 40 cm, chiều cao 30 cm đang chứa đầy súp. Bát ăn"
+    },
+    {
+      "code": "V10-HKG-020",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Đống cát hình nón đường kính đáy 4 m, chiều cao 1,5 m. Xô xúc cát hình trụ bán k"
+    },
+    {
+      "code": "V10-HKG-021",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Nung chảy quả cầu sáp bán kính 15 cm đúc thành nến hình lập phương cạnh 5 cm. Lư"
+    },
+    {
+      "code": "V10-HKG-022",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bình nước lọc hình trụ bán kính đáy 12 cm, chiều cao 40 cm. Cốc giấy hình nón đư"
+    },
+    {
+      "code": "V10-HKG-023",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bể nước mưa hình hộp chữ nhật 2 m$\\times$1,5 m$\\times$1 m. Bình tưới cây hình tr"
+    },
+    {
+      "code": "V10-HKG-024",
+      "grade": 9,
+      "cat": "Chuyên đề 10. Nón – trụ – cầu và hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Thùng ủ phân dạng nửa hình cầu đường kính 2 m. Chai nhựa hình trụ bán kính 0,05 "
+    },
+    {
+      "code": "T9-TTC-01",
+      "grade": 9,
+      "cat": "Chuyên đề 13. Các bài toán thực tế có liên quan cực trị",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bác An dùng $40$m lưới thép để rào một mảnh vườn hình chữ nhật. Một cạnh của vườ"
+    },
+    {
+      "code": "T9-TTC-03",
+      "grade": 9,
+      "cat": "Chuyên đề 13. Các bài toán thực tế có liên quan cực trị",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Một khung nhôm hình chữ nhật có chu vi $6$m. Cần cắt kính để lắp vào khung. Diện"
+    },
+    {
+      "code": "T9-TTC-06",
+      "grade": 9,
+      "cat": "Chuyên đề 13. Các bài toán thực tế có liên quan cực trị",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bác Ba muốn rào một mảnh vườn hình chữ nhật ven sông (chỉ cần rào 3 cạnh, cạnh c"
+    },
+    {
+      "code": "T8-EQ-NEW7",
+      "grade": 8,
+      "cat": "Bài 26. Giải bài toán bằng cách lập phương trình.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn hình chữ nhật có chu vi $60$m. Chiều dài hơn chiều rộng $10$m. Tín"
+    },
+    {
+      "code": "T8-GEO-NEW16",
+      "grade": 8,
+      "cat": "Bài 39. Hình chóp tứ giác đều.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hình chóp tứ giác đều có cạnh đáy là $6$ cm, chiều cao hình chóp là $4$ cm. "
+    },
+    {
+      "code": "T8-GEO-NEW18",
+      "grade": 8,
+      "cat": "Bài 39. Hình chóp tứ giác đều.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình chóp tứ giác đều $S.ABCD$ có cạnh đáy $5$ cm, trung đoạn (đường cao của mặt"
+    },
+    {
+      "code": "T8-GEO-NEW19",
+      "grade": 8,
+      "cat": "Bài 39. Hình chóp tứ giác đều.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích toàn phần của một hình chóp tứ giác đều biết cạnh đáy bằng $4$ cm"
+    },
+    {
+      "code": "T8-GEO-NEW20",
+      "grade": 8,
+      "cat": "Bài 39. Hình chóp tứ giác đều.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một kim tự tháp ở Ai Cập có hình dạng là hình chóp tứ giác đều. Biết chu vi đáy "
+    },
+    {
+      "code": "L8-mpccc58p-48",
+      "grade": 8,
+      "cat": "CHƯƠNG I. ĐA THỨC",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Bài 5 (0,5 điểm). Cho các số hữu tỷ a, b, c và d thỏa mãn điều kiện:\n$\\left\\{ \\b"
+    },
+    {
+      "code": "7-1-012",
+      "grade": 7,
+      "cat": "Bài 1. Tập hợp các số hữu tỉ.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Tính nhanh\n\na) $-\\dfrac{1}{10}-\\dfrac{1}{100}-\\dfrac{1}{1000}-\\dfrac{1}{10000}-\\"
+    },
+    {
+      "code": "7-6-010",
+      "grade": 7,
+      "cat": "Bài 15. Các trường hợp bằng nhau của tam giác vuông.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho tam giác $ABC$vuông tại $A$. Tia phân giác góc $B$ cắt cạnh $AC$ tại điểm $M"
+    },
+    {
+      "code": "7-11-007",
+      "grade": 7,
+      "cat": "Bài 18. Biểu đồ hình quạt tròn.",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Bảng dưới đây cho biết tỉ lệ học sinh cấp THCS của một thành phố lớn tới trường "
+    },
+    {
+      "code": "7-11-008",
+      "grade": 7,
+      "cat": "Bài 18. Biểu đồ hình quạt tròn.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Một chuyên gia đã đưa ra phương pháp chi tiêu hiệu quả trong gia đình theo quy t"
+    },
+    {
+      "code": "7-12-008",
+      "grade": 7,
+      "cat": "Bài 19. Biểu đồ đoạn thẳng.",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Minh làm bài kiểm tra trình độ tiếng anh trên mạng internet 6 lần và gh"
+    },
+    {
+      "code": "7-3-003",
+      "grade": 7,
+      "cat": "Bài 2. Cộng, trừ, nhân, chia số hữu tỉ.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Tính một cách hợp lí:\\$2\n$A= -(2021.0,7 + 19,75) + 2021.0,7 - \\left( 8 - 19,75 \\"
+    },
+    {
+      "code": "7-15-004",
+      "grade": 7,
+      "cat": "Bài 23. Đại lượng tỉ lệ nghịch.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Cho $x$ và $y$ là hai đại lượng tỉ lệ nghịch với nhau.\n\nGọi ${{x}_1}, {{x}_2}$ l"
+    },
+    {
+      "code": "7-4-007",
+      "grade": 7,
+      "cat": "Bài 3. Luỹ thừa với số mũ tự nhiên của một số hữu tỉ.",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Viết các biểu thức sau dưới dạng lũy thừa của một số hữu tỷ.\n\na) $\\left( -0,2 \\r"
+    },
+    {
+      "code": "7-4-008",
+      "grade": 7,
+      "cat": "Bài 3. Luỹ thừa với số mũ tự nhiên của một số hữu tỉ.",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Tính và so sánh.\n\na) $\\left( 2,5 \\right)^3.\\left( 2,5 \\right)^2$ và ${{2,5}^6}$ "
+    },
+    {
+      "code": "7-4-016",
+      "grade": 7,
+      "cat": "Bài 3. Luỹ thừa với số mũ tự nhiên của một số hữu tỉ.",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Tính\n\na) ${{3}^2}.\\left( 2\\dfrac{2}{3} \\right)^2$ b) $\\left( {{12}^2}.\\left( \\df"
+    },
+    {
+      "code": "7-4-017",
+      "grade": 7,
+      "cat": "Bài 3. Luỹ thừa với số mũ tự nhiên của một số hữu tỉ.",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Tính hợp lý\n\na) $\\left( 1\\dfrac{3}{2}+\\dfrac{3}{4} \\right)^2$ b ) $\\left( \\left("
+    },
+    {
+      "code": "7-5-020",
+      "grade": 7,
+      "cat": "Bài 4. Thứ tự thực hiện các phép tính. Quy tắc chuyển vế.",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Tìm $x$:\n\na) $\\dfrac{- 11}{12}. \\mathrm{x} + 0,25 = \\dfrac{5}{6}$ b) $\\left( \\ma"
+    },
+    {
+      "code": "7-16-016",
+      "grade": 7,
+      "cat": "Bài tập cuối chương VI.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Cho $\\dfrac{a+b}{a-b}=\\dfrac{c+a}{c-a}$\\left( a, b,c>0,a\\ne b, a\\ne c \\right).$ "
+    },
+    {
+      "code": "7-20-012",
+      "grade": 7,
+      "cat": "Bài tập cuối chương VII.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho các đa thức một biến:\n\n$A=3{{x}^4}+2{{x}^3}-x+1;B=2{{x}^4}+2{{x}^3}-{{x}^2}+"
+    },
+    {
+      "code": "7-17-023",
+      "grade": 7,
+      "cat": "Bài tập cuối chương X.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho $\\Delta ABC$ vuông tại $A$ có$AB=9 cm,$ $AC=12 cm,\\$2C=15 cm$. Trên tia đối "
+    },
+    {
+      "code": "7-17-030",
+      "grade": 7,
+      "cat": "Bài tập cuối chương X.",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho $\\Delta\\$2BC$cân tại$A$, $O$ là giao điểm của ba đường trung trực. Lấy điểm "
+    },
+    {
+      "code": "T6-H1-NEW2",
+      "grade": 6,
+      "cat": "Bài 18. Hình tam giác đều. Hình vuông. Hình lục giác đều",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn hình vuông có chu vi là $24$ m. Tính diện tích của mảnh vườn đó."
+    },
+    {
+      "code": "T6-H2-NEW1",
+      "grade": 6,
+      "cat": "Bài 20. Chu vi và diện tích của một số tứ giác đã học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một thửa ruộng hình chữ nhật có chiều dài $120$ m, chiều rộng bằng nửa chiều dài"
+    },
+    {
+      "code": "T6-H2-NEW2",
+      "grade": 6,
+      "cat": "Bài 20. Chu vi và diện tích của một số tứ giác đã học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích hình thoi có độ dài hai đường chéo lần lượt là $8$ cm và $10$ cm."
+    },
+    {
+      "code": "T6-H2-NEW3",
+      "grade": 6,
+      "cat": "Bài 20. Chu vi và diện tích của một số tứ giác đã học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Cửa sổ hình bình hành có độ dài đáy là $80$ cm và chiều cao tương ứng là $60$ cm"
+    },
+    {
+      "code": "T6-H2-NEW5",
+      "grade": 6,
+      "cat": "Bài 20. Chu vi và diện tích của một số tứ giác đã học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn hình chữ nhật có chu vi $80$ m. Chiều dài hơn chiều rộng $10$ m. T"
+    },
+    {
+      "code": "T6-D-NEW8",
+      "grade": 6,
+      "cat": "Bài 29. Tính toán với số thập phân",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn hình chữ nhật có chiều dài $15,2$m và chiều rộng $10,5$m. Tính chu"
+    },
+    {
+      "code": "FINAL-G6-12",
+      "grade": 6,
+      "cat": "Số thập phân",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích một hình chữ nhật có chiều dài $5,2$ m và chiều rộng $3,5$ m."
+    },
+    {
+      "code": "T6-OTC1-003",
+      "grade": 6,
+      "cat": "Ôn tập chương I",
+      "issues": [
+        "🔴 CÒN FORMAT RÁC"
+      ],
+      "content": "Thực hiện phép tính theo yêu cầu bài toán:\n$2^5 = ?$\n\nNhư vậy, kết quả chính xác"
+    },
+    {
+      "code": "T5-B15-001",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$1\\text{ km}^2 = ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B15-002",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$1$ ha $= ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B15-004",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$5$ ha $= ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B15-009",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Nông trường có $120$ ha trồng lúa và $3{,}1\\$2trồng cà phê. Tổng bao nhiêu ha$?"
+    },
+    {
+      "code": "T5-B15-NEW2",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Đổi các số đo sau sang đơn vị mét vuông: $4$ ha; $\\dfrac{1}{2}$ ha; $0{,}1$$$."
+    },
+    {
+      "code": "T5-B15-NEW3",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Khu dân cư A có diện tích $150$ ha, khu dân cư B có diện tích $1{,}1\\$2 Hỏi khu "
+    },
+    {
+      "code": "T5-B15-NEW4",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một trang trại có diện tích $2$ ha. Người ta dành $\\dfrac{1}{5}$ diện tích để là"
+    },
+    {
+      "code": "T5-B15-NEW5",
+      "grade": 5,
+      "cat": "Bài 15: Ki-lô-mét vuông. Héc-ta",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Hồ nước nhân tạo có diện tích $3{,}1\\$2 Nếu mở rộng thêm diện tích $250$ ha thì "
+    },
+    {
+      "code": "T5-B16-003",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$1 \\text{ cm}^2 = ?\\text{ mm}^2$."
+    },
+    {
+      "code": "T5-B16-005",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "$3\\text{ m}^$1 = ?\\text{ dm}^2$."
+    },
+    {
+      "code": "T5-B16-006",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$7\\,$200 \\text{ cm}$^2 = ?\\text{ dm}^2$."
+    },
+    {
+      "code": "T5-B16-007",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Viết $2\\text{ m}^$1$ dưới dạng STP (đơn vị $\\text{m}^2$)$."
+    },
+    {
+      "code": "T5-B16-008",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "$0{,}1$ = ?\\text{ cm}^2$."
+    },
+    {
+      "code": "T5-B16-009",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Mảnh bìa HCN $2$ m $\\times$ $1,5$ m. Tính S bằng $\\text{dm}^2$."
+    },
+    {
+      "code": "T5-B16-010",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$4\\text{ m}^2 $5 \\text{ cm}$^2 = ?\\text{ cm}^2$."
+    },
+    {
+      "code": "T5-B16-NEW1",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Viết số thập phân thích hợp vào chỗ chấm: $5\\text{ m}^$1 =... \\text{m}^2$; $8 \\t"
+    },
+    {
+      "code": "T5-B16-NEW3",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Một tấm bìa hình vuông có cạnh $15$ cm. Tính diện tích tấm bìa đó bằng đề-xi-mét"
+    },
+    {
+      "code": "T5-B16-NEW5",
+      "grade": 5,
+      "cat": "Bài 16: Các đơn vị đo diện tích",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một thửa ruộng hình thang có diện tích là $30$ a. Người nông dân dùng $20\\%$ diệ"
+    },
+    {
+      "code": "T5-B17-010",
+      "grade": 5,
+      "cat": "Bài 17: Thực hành và trải nghiệm với một số đơn vị đo đại lượng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$0{,}1$ = ?$ ha $= ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B18-002",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$2\\text{ km}^2 = ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B18-003",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$5$1 = ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B18-004",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$3,5$ ha $= ?\\text{ m}^2$."
+    },
+    {
+      "code": "T5-B18-005",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$0{,}1$ = ?$ ha."
+    },
+    {
+      "code": "T5-B18-007",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Đổi: $4\\text{ m}^$1 = ?\\text{ dm}^2\\$2"
+    },
+    {
+      "code": "T5-B18-008",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Viết $5\\text{ m}^$1$ dưới dạng STP (đơn vị $\\text{m}^2$)$."
+    },
+    {
+      "code": "T5-B18-009",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Khu đất $2,4$ ha. Dùng $\\dfrac{3}{4}$ trồng cây. Phần trồng cây bao nhiêu $\\text"
+    },
+    {
+      "code": "T5-B18-010",
+      "grade": 5,
+      "cat": "Bài 18: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "So sánh: $5,6$ ha và $5$1\\$2"
+    },
+    {
+      "code": "T5-B21-007",
+      "grade": 5,
+      "cat": "Bài 21: Phép nhân số thập phân",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "HCN dài $3,5$ cm, rộng $2,4$ cm. Tính diện tích."
+    },
+    {
+      "code": "G5-GEO-TG-1",
+      "grade": 5,
+      "cat": "Bài 25: Hình tam giác. Diện tích hình tam giác",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho tam giác $ABC$ có diện tích là $1$1$. Trên cạnh $BC$ lấy điểm $M$ sao cho $B"
+    },
+    {
+      "code": "G5-GEO-TG-10",
+      "grade": 5,
+      "cat": "Bài 25: Hình tam giác. Diện tích hình tam giác",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Cho tam giác $ABC$ có diện tích là $2$1$. Trên cạnh $BC$ lấy điểm $M$ sao cho $B"
+    },
+    {
+      "code": "T5-B26-003",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình thang đáy $8$ cm, $6$ cm, cao $5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B26-004",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình thang đáy $10$ cm, $4$ cm, cao $6$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B26-005",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình thang vuông đáy $12$ cm, $8$ cm, cạnh bên vuông góc $= 5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B26-007",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Mảnh đất hình thang đáy $25$ m, $15$ m, cao $12$ m. Tính DT."
+    },
+    {
+      "code": "T5-B26-008",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HT có đáy lớn gấp đôi đáy bé, đáy bé $5$ cm, cao $8$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B26-010",
+      "grade": 5,
+      "cat": "Bài 26: Hình thang. Diện tích hình thang",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN dài $10$ cm, rộng $6$ cm. Cắt $1$ tam giác vuông ở góc (cạnh $3$ cm, $6$ cm)"
+    },
+    {
+      "code": "T5-B27-004",
+      "grade": 5,
+      "cat": "Bài 27: Đường tròn. Chu vi và diện tích hình tròn",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính DT hình tròn có $r = 5$ cm."
+    },
+    {
+      "code": "T5-B27-005",
+      "grade": 5,
+      "cat": "Bài 27: Đường tròn. Chu vi và diện tích hình tròn",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình tròn có $d = 8$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B27-007",
+      "grade": 5,
+      "cat": "Bài 27: Đường tròn. Chu vi và diện tích hình tròn",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bồn hoa tròn $r = 3$ m. Tính DT bồn hoa."
+    },
+    {
+      "code": "T5-B27-009",
+      "grade": 5,
+      "cat": "Bài 27: Đường tròn. Chu vi và diện tích hình tròn",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HV cạnh $10$ cm. Vẽ hình tròn nội tiếp. Tính DT phần HV ngoài hình tròn."
+    },
+    {
+      "code": "T5-B28-009",
+      "grade": 5,
+      "cat": "Bài 28: Thực hành và trải nghiệm đo, vẽ, lắp ghép, tạo hình",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "DT hình tròn lớn $r = 6$ cm, hình tròn nhỏ $r = 4$ cm (đồng tâm). DT hình vành k"
+    },
+    {
+      "code": "T5-B29-001",
+      "grade": 5,
+      "cat": "Bài 29: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tam giác đáy $8$ cm, cao $5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B29-002",
+      "grade": 5,
+      "cat": "Bài 29: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HT đáy $10$, $6$ cm, cao $4$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B29-004",
+      "grade": 5,
+      "cat": "Bài 29: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình tròn $d = 14$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B29-005",
+      "grade": 5,
+      "cat": "Bài 29: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN $12 \\times 8$ cm. Cắt tam giác vuông (cạnh $4$, $8$ cm). Phần còn lại HT. Tí"
+    },
+    {
+      "code": "T5-B29-007",
+      "grade": 5,
+      "cat": "Bài 29: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HT đáy lớn hơn đáy bé $4$ cm, tổng $2$ đáy $= 16$ cm, cao $5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B2-NEW4",
+      "grade": 5,
+      "cat": "Bài 2: Ôn tập các phép tính với số tự nhiên",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn hình chữ nhật có chu vi $120$ m. Chiều dài hơn chiều rộng $16$ m. "
+    },
+    {
+      "code": "T5-B32-006",
+      "grade": 5,
+      "cat": "Bài 32: Ôn tập một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HBH đáy $8$ cm, cao $5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B32-007",
+      "grade": 5,
+      "cat": "Bài 32: Ôn tập một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình thoi có $2$ đường chéo $6$ cm và $8$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B32-008",
+      "grade": 5,
+      "cat": "Bài 32: Ôn tập một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tam giác đáy $10$ cm, cao $7$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B32-010",
+      "grade": 5,
+      "cat": "Bài 32: Ôn tập một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN $10 \\times 6$ cm. Vẽ tam giác nhọn trong HCN sao cho DT tam giác lớn nhất. D"
+    },
+    {
+      "code": "T5-B33-002",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "DT HV cạnh $9$ cm?"
+    },
+    {
+      "code": "T5-B33-003",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "DT HCN $14 \\times 8$ cm?"
+    },
+    {
+      "code": "T5-B33-005",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "DT tam giác đáy $12$ cm, cao $9$ cm?"
+    },
+    {
+      "code": "T5-B33-007",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HV có $C = 28$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B33-008",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình tròn $r = 5$ cm. Tính DT."
+    },
+    {
+      "code": "T5-B33-010",
+      "grade": 5,
+      "cat": "Bài 33: Ôn tập diện tích, chu vi một số hình phẳng",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "HV cạnh $a$, tăng cạnh $2$ cm → DT tăng $2$1$. Tìm $a\\$2"
+    },
+    {
+      "code": "T5-B41-007",
+      "grade": 5,
+      "cat": "Bài 41: Tìm giá trị phần trăm của một số",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh vườn có diện tích $5$1$. Người ta dành $25\\%$ diện tích để trồng hoa. D"
+    },
+    {
+      "code": "T5-B43-009",
+      "grade": 5,
+      "cat": "Bài 43: Thực hành và trả nghiệm sử dụng máy tính cầm tay",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Dùng máy tính tính diện tích hình chữ nhật có chiều dài $12,5$ m và chiều rộng $"
+    },
+    {
+      "code": "T5-B45-004",
+      "grade": 5,
+      "cat": "Bài 45: Thể tích của một hình",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một hình hộp chữ nhật được xếp từ 12 khối lập phương $1 \\text{ cm}^3$. Thể tích "
+    },
+    {
+      "code": "T5-B46-003",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$1\\text{ dm}^3$ bằng bao nhiêu $\\text{cm}^3$?"
+    },
+    {
+      "code": "T5-B46-004",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$5\\text{ dm}^3$ bằng bao nhiêu $\\text{cm}^3$?"
+    },
+    {
+      "code": "T5-B46-006",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "$2{,}1\\$2bằng bao nhiêu $\\text{cm}^3\\$2"
+    },
+    {
+      "code": "T5-B46-007",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Đổi $\\dfrac{1}{2}\\text{ dm}^3$ sang $\\text{cm}^3$."
+    },
+    {
+      "code": "T5-B46-008",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "$4\\text{ dm}^3$ $3$1$ bằng bao nhiêu $\\text{cm}^3\\$2"
+    },
+    {
+      "code": "T5-B46-009",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "$1$1$ bằng bao nhiêu $\\text{cm}^3\\$2"
+    },
+    {
+      "code": "T5-B46-010",
+      "grade": 5,
+      "cat": "Bài 46: Xăng-ti-mét khối. Đề-xi-mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$7$1$ bằng bao nhiêu $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B47-004",
+      "grade": 5,
+      "cat": "Bài 47: Mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$4\\text{ m}^3$ bằng bao nhiêu $\\text{dm}^3$?"
+    },
+    {
+      "code": "T5-B47-005",
+      "grade": 5,
+      "cat": "Bài 47: Mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "$0{,}1\\$2bằng bao nhiêu $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B47-007",
+      "grade": 5,
+      "cat": "Bài 47: Mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$3\\,$1$ bằng bao nhiêu $\\text{m}^3\\$2"
+    },
+    {
+      "code": "T5-B47-008",
+      "grade": 5,
+      "cat": "Bài 47: Mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$\\dfrac{3}{4}\\text{ m}^3$ bằng bao nhiêu $\\text{dm}^3$?"
+    },
+    {
+      "code": "T5-B47-009",
+      "grade": 5,
+      "cat": "Bài 47: Mét khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Đổi $2\\text{ m}^3$ $5$1$ sang $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B48-001",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "Đổi $3{,}1\\$2sang $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B48-002",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Đổi $4\\,$5$1$ sang $\\text{dm}^3$."
+    },
+    {
+      "code": "T5-B48-003",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (2)"
+      ],
+      "content": "$1{,}1\\$2bằng bao nhiêu $\\text{cm}^3\\$2"
+    },
+    {
+      "code": "T5-B48-004",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Một bể cá có thể tích $2{,}1\\$2 Bể chứa được tối đa bao nhiêu lít nước? (Biết $1"
+    },
+    {
+      "code": "T5-B48-005",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "$1$1$ $8\\text{ dm}^3$ bằng bao nhiêu $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B48-006",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính tổng: $1,$1 + $1$ bằng bao nhiêu $\\text{dm}^3$?"
+    },
+    {
+      "code": "T5-B48-008",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "Số thích hợp điền vào chỗ chấm: $0{,}1$ = \\dots\\text{ cm}^3\\$2"
+    },
+    {
+      "code": "T5-B48-010",
+      "grade": 5,
+      "cat": "Bài 48: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Sắp xếp tăng dần: $2\\,$0$1$; $2\\text{ m}^3$; $2$1\\$2"
+    },
+    {
+      "code": "G5-GEO-HH-1",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $85 \\text{ cm}$, chiều r"
+    },
+    {
+      "code": "G5-GEO-HH-10",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $130 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-2",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $90 \\text{ cm}$, chiều r"
+    },
+    {
+      "code": "G5-GEO-HH-3",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $95 \\text{ cm}$, chiều r"
+    },
+    {
+      "code": "G5-GEO-HH-4",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $100 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-5",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $105 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-6",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $110 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-7",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $115 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-8",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $120 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "G5-GEO-HH-9",
+      "grade": 5,
+      "cat": "Bài 49: Hình khai triển của hình lập phương, hình hộp chữ nhật và hình trụ",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể kính nuôi cá dạng hình hộp chữ nhật có chiều dài $125 \\text{ cm}$, chiều "
+    },
+    {
+      "code": "T5-B50-001",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hộp chữ nhật có chiều dài $5$ cm, rộng $3$ cm, cao $4$ cm. Diện tích xung quanh "
+    },
+    {
+      "code": "T5-B50-002",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Cùng kích thước trên (dài $5$ cm, rộng $3$ cm, cao $4$ cm). Diện tích toàn phần "
+    },
+    {
+      "code": "T5-B50-004",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một phòng học dài $8$ m, rộng $6$ m, cao $3,5$ m. Tính diện tích bốn bức tường ("
+    },
+    {
+      "code": "T5-B50-005",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình hộp chữ nhật có đáy là hình vuông cạnh $4$ cm, cao $5$ cm. Tính diện tích t"
+    },
+    {
+      "code": "T5-B50-006",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích giấy cần để làm một hộp chữ nhật không nắp, dài $10$ cm, rộng $6$"
+    },
+    {
+      "code": "T5-B50-007",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình hộp có tổng diện tích hai đáy là $4$1$, diện tích toàn phần là $1$1$. Diện "
+    },
+    {
+      "code": "T5-B50-009",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Chu vi đáy là $30$ cm, chiều cao $5$ cm. Tính diện tích xung quanh."
+    },
+    {
+      "code": "T5-B50-010",
+      "grade": 5,
+      "cat": "Bài 50: Diện tích xung quanh và diện tích toàn phần của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Người ta quét vôi một căn phòng $5 \\times 4 \\times 3$ (m). Trừ cửa $4\\text{ m}^2"
+    },
+    {
+      "code": "T5-B51-001",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích xung quanh hình lập phương cạnh $3$ cm là bao nhiêu?"
+    },
+    {
+      "code": "T5-B51-002",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích toàn phần hình lập phương cạnh $3$ cm là bao nhiêu?"
+    },
+    {
+      "code": "T5-B51-003",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích một mặt của hình lập phương là $1$1$. Tính diện tích toàn phần$."
+    },
+    {
+      "code": "T5-B51-004",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích xung quanh hình lập phương là $1$1$. Tính diện tích một mặt$."
+    },
+    {
+      "code": "T5-B51-006",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình lập phương không có nắp cạnh $5$ cm. Diện tích các mặt ngoài là bao nhiêu?"
+    },
+    {
+      "code": "T5-B51-008",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một khối rubik hình lập phương có diện tích toàn phần $5$1$. Diện tích xung quan"
+    },
+    {
+      "code": "T5-B51-009",
+      "grade": 5,
+      "cat": "Bài 51: Diện tích xung quanh và diện tích toàn phần của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tổng độ dài tất cả các cạnh của hình lập phương là $48$ cm. Diện tích toàn phần "
+    },
+    {
+      "code": "T5-B52-002",
+      "grade": 5,
+      "cat": "Bài 52: Thể tích của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hộp chữ nhật dài $5$ cm, rộng $4$ cm, cao $3$ cm. Thể tích là?"
+    },
+    {
+      "code": "T5-B52-003",
+      "grade": 5,
+      "cat": "Bài 52: Thể tích của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích đáy hình hộp là $2$1$, chiều cao $6$ cm. Thể tích$?"
+    },
+    {
+      "code": "T5-B52-004",
+      "grade": 5,
+      "cat": "Bài 52: Thể tích của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một bể bơi dài $20$ m, rộng $10$ m, sâu $1,5$ m. Thể tích bể là bao nhiêu?"
+    },
+    {
+      "code": "T5-B52-008",
+      "grade": 5,
+      "cat": "Bài 52: Thể tích của hình hộp chữ nhật",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)",
+        "🟡 $ KHÔNG CẶP (đáp án)",
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "Thể tích $V=$1$. Đổi ra $\\text{dm}^3\\$2"
+    },
+    {
+      "code": "T5-B53-002",
+      "grade": 5,
+      "cat": "Bài 53: Thể tích của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HLP có cạnh $4$ cm. Thể tích là bao nhiêu?"
+    },
+    {
+      "code": "T5-B53-003",
+      "grade": 5,
+      "cat": "Bài 53: Thể tích của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích một mặt của HLP là $2$1$. Thể tích HLP là$?"
+    },
+    {
+      "code": "T5-B53-004",
+      "grade": 5,
+      "cat": "Bài 53: Thể tích của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tổng độ dài các cạnh HLP là $36$ cm. Thể tích là bao nhiêu?"
+    },
+    {
+      "code": "T5-B53-005",
+      "grade": 5,
+      "cat": "Bài 53: Thể tích của hình lập phương",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Thể tích HLP là $8 \\text{ cm}^3$. Tính diện tích toàn phần của nó."
+    },
+    {
+      "code": "T5-B53-008",
+      "grade": 5,
+      "cat": "Bài 53: Thể tích của hình lập phương",
+      "issues": [
+        "🟡 KATEX LỖI (1)"
+      ],
+      "content": "HLP có cạnh $0,5$ m. Tính thể tích."
+    },
+    {
+      "code": "T5-B54-005",
+      "grade": 5,
+      "cat": "Bài 54: Thực hành tính toán và ước lượng thể tích một số hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một phòng học có thể tích $1$1$, chiều cao $3$ m. Diện tích mặt sàn là bao nhiêu"
+    },
+    {
+      "code": "T5-B54-006",
+      "grade": 5,
+      "cat": "Bài 54: Thực hành tính toán và ước lượng thể tích một số hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Mực nước trong bể cá HHCN kích thước $40 \\times 30 \\times 20$ (cm) đang cao $15$"
+    },
+    {
+      "code": "T5-B54-007",
+      "grade": 5,
+      "cat": "Bài 54: Thực hành tính toán và ước lượng thể tích một số hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Bỏ một hòn đá chìm hẳn vào bể nước thì mực nước dâng lên thêm $2$ cm. Biết đáy b"
+    },
+    {
+      "code": "T5-B54-009",
+      "grade": 5,
+      "cat": "Bài 54: Thực hành tính toán và ước lượng thể tích một số hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính thể tích hòn non bộ biết khi vớt nó ra khỏi bể (đáy $40 \\times 40$ cm) thì "
+    },
+    {
+      "code": "T5-B54-010",
+      "grade": 5,
+      "cat": "Bài 54: Thực hành tính toán và ước lượng thể tích một số hình khối",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Thể tích một cục tẩy khoảng bao nhiêu? ($1$1$, $1\\text{ m}^3$, $1$1$)."
+    },
+    {
+      "code": "T5-B55-001",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HHCN dài $4$ m, rộng $3$ m, cao $2$ m. Tính $S_{tp}$."
+    },
+    {
+      "code": "T5-B55-002",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính thể tích HLP có chu vi đáy $24$ cm."
+    },
+    {
+      "code": "T5-B55-003",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HLP có thể tích $1$1$. Diện tích toàn phần$?"
+    },
+    {
+      "code": "T5-B55-004",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hộp không nắp HLP cạnh $10$ cm. Tính diện tích các mặt ngoài."
+    },
+    {
+      "code": "T5-B55-005",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Thể tích HHCN là $2$1$, chiều dài $8$ dm, chiều rộng $6$ dm. Tính diện tích xung"
+    },
+    {
+      "code": "T5-B55-007",
+      "grade": 5,
+      "cat": "Bài 55: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một mảnh tôn HCN $60 \\times 40$ (cm). Cắt 4 góc 4 hình vuông cạnh $5$ cm rồi gập"
+    },
+    {
+      "code": "T5-B71-003",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích hình tam giác đáy $5$ cm, cao $4$ cm."
+    },
+    {
+      "code": "T5-B71-004",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính diện tích hình thang đáy lớn $6$ cm, đáy bé $4$ cm, cao $3$ cm."
+    },
+    {
+      "code": "T5-B71-005",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Tính thể tích hình hộp chữ nhật có kích thước $5 \\times 4 \\times 2$ (cm)."
+    },
+    {
+      "code": "T5-B71-006",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích hình tròn bán kính $3$ cm."
+    },
+    {
+      "code": "T5-B71-007",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Chu vi hình vuông là $20$ cm. Tính diện tích."
+    },
+    {
+      "code": "T5-B71-008",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Thể tích hình lập phương cạnh $4$ cm."
+    },
+    {
+      "code": "T5-B71-009",
+      "grade": 5,
+      "cat": "Bài 71: Ôn tập hình học",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình hộp chữ nhật có $S_{\\text{đáy}} = 15 \\text{ cm}^2$, chiều cao $4$ cm. Tính "
+    },
+    {
+      "code": "T5-B72-003",
+      "grade": 5,
+      "cat": "Bài 72: Ôn tập đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đề)"
+      ],
+      "content": "$2\\text{ m}^2$ $5$1$ bằng bao nhiêu $\\text{m}^2\\$2"
+    },
+    {
+      "code": "T5-B72-004",
+      "grade": 5,
+      "cat": "Bài 72: Ôn tập đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$3\\text{ m}^3$ bằng bao nhiêu $\\text{dm}^3$?"
+    },
+    {
+      "code": "T5-B72-007",
+      "grade": 5,
+      "cat": "Bài 72: Ôn tập đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$45\\,$0$1$ bằng bao nhiêu $\\text{dm}^3$?"
+    },
+    {
+      "code": "T5-B75-010",
+      "grade": 5,
+      "cat": "Bài 75: Ôn tâp chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Một cái ao hình tròn bán kính $5$ m. Diện tích ao?"
+    },
+    {
+      "code": "T5-B8-002",
+      "grade": 5,
+      "cat": "Bài 8: Ôn tập hình học và đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích HCN dài $8$ cm, rộng $5$ cm?"
+    },
+    {
+      "code": "T5-B8-005",
+      "grade": 5,
+      "cat": "Bài 8: Ôn tập hình học và đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$5\\text{ dm}^2 = ?\\text{ cm}^2$."
+    },
+    {
+      "code": "T5-B8-007",
+      "grade": 5,
+      "cat": "Bài 8: Ôn tập hình học và đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình vuông có chu vi $32$ cm. Tính diện tích."
+    },
+    {
+      "code": "T5-B9-008",
+      "grade": 5,
+      "cat": "Bài 9: Luyện tập chung",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN dài $15$ cm, rộng bằng $\\dfrac{2}{3}$ dài. Tính diện tích."
+    },
+    {
+      "code": "T4-B17-002",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$1\\text{ dm}^2 = ?\\text{ cm}^2$."
+    },
+    {
+      "code": "T4-B17-004",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN có chiều dài $5$ cm, chiều rộng $3$ cm. Tính diện tích."
+    },
+    {
+      "code": "T4-B17-006",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "$5\\text{ dm}^2 = ?\\text{ cm}^2$."
+    },
+    {
+      "code": "T4-B17-007",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "HCN dài $8$ cm, rộng $6$ cm. Tính chu vi và diện tích."
+    },
+    {
+      "code": "T4-B17-008",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Hình vuông có chu vi $24$ cm. Tính diện tích."
+    },
+    {
+      "code": "T4-B17-009",
+      "grade": 4,
+      "cat": "Bài 17. Xăng-ti-mét vuông",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Mảnh bìa HCN dài $12$ cm, rộng $9$ cm. Cắt đi hình vuông cạnh $4$ cm. Tính diện "
+    },
+    {
+      "code": "T4-AUTO-4950c969-1",
+      "grade": 4,
+      "cat": "Bài 28. Thực hành vẽ hai đường thẳng vuông góc",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Diện tích hình chữ nhật có chiều dài $5$ cm, rộng $3$ cm?"
+    },
+    {
+      "code": "T4-AUTO-a8ce581c-2",
+      "grade": 4,
+      "cat": "Đo lường",
+      "issues": [
+        "🟡 $ KHÔNG CẶP (đáp án)"
+      ],
+      "content": "Đổi $2\\text{ m}^2$ sang $\\text{dm}^2$."
+    }
+  ]
+}

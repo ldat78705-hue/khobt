@@ -1,0 +1,472 @@
+﻿=== BÆ¯á»C 9: RĂ€ SOĂT TRĂ™NG + PHĂ‚N TĂCH PHĂ‚N Bá» ===
+
+--- A. TĂŒM VĂ€ XĂ“A TRĂ™NG Láº¶P ---
+
+Tá»•ng nhĂ³m trĂ¹ng: 7
+  đŸ“ "1^2 báº±ng bao nhiĂªu ^2?..." (2 báº£n, lá»›p 4) â†’ giá»¯ [T4-B18-002]
+  đŸ“ "thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n: 5^2 = ?^2. nhÆ° váº­..." (2 báº£n, lá»›p 5) â†’ giá»¯ [T5-B8-005]
+  đŸ“ "thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n: 1^2 = ?^2. nhÆ° váº­..." (3 báº£n, lá»›p 5) â†’ giá»¯ [T5-B15-001]
+  đŸ“ "1^3 báº±ng bao nhiĂªu ^3?..." (3 báº£n, lá»›p 5) â†’ giá»¯ [T5-B46-003]
+  đŸ“ "2,1 báº±ng bao nhiĂªu ^3?..." (2 báº£n, lá»›p 5) â†’ giá»¯ [T5-B46-006]
+  đŸ“ "tung Ä‘á»“ng xu 1 láº§n. cĂ³ bao nhiĂªu káº¿t quáº£ cĂ³ thá»ƒ?..." (2 báº£n, lá»›p 6) â†’ giá»¯ [T6-C9B42-002]
+  đŸ“ "náº¿u sá»‘ a chia háº¿t cho sá»‘ b thĂ¬ (a, b) lĂ :..." (2 báº£n, lá»›p 6) â†’ giá»¯ [G6-B10B11-63D5]
+
+đŸ—‘ï¸ Tá»•ng xĂ³a: 9
+đŸ“ Tá»•ng cĂ¢u cĂ²n: 6869
+
+--- B. PHĂ‚N Bá» BĂ€I Táº¬P THEO CHÆ¯Æ NG/CHá»¦ Äá»€ ---
+
+
+đŸ“ Lá»P 4 (676 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG: 83 cĂ¢u
+    â””â”€ BĂ i 1. Ă”n táº­p cĂ¡c sá»‘ Ä‘áº¿n 100 000: 10 cĂ¢u
+    â””â”€ BĂ i 2. Ă”n táº­p cĂ¡c phĂ©p tĂ­nh trong pháº¡m vi 100 000: 23 cĂ¢u
+    â””â”€ BĂ i 3. Sá»‘ cháºµn, sá»‘ láº»: 15 cĂ¢u
+    â””â”€ BĂ i 4. Biá»ƒu thá»©c sá»‘: 15 cĂ¢u
+    â””â”€ BĂ i 5. Giáº£i bĂ i toĂ¡n cĂ³ ba bÆ°á»›c tĂ­nh: 10 cĂ¢u
+    â””â”€ BĂ i 6. Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– ToĂ¡n lá»›p 4: 19 cĂ¢u
+    â””â”€ PhĂ¢n sá»‘ cÆ¡ báº£n: 10 cĂ¢u
+    â””â”€ Äo lÆ°á»ng: 9 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C: 30 cĂ¢u
+    â””â”€ BĂ i 7. GĂ³c, Ä‘Æ¡n vá»‹ Ä‘o gĂ³c: 10 cĂ¢u
+    â””â”€ BĂ i 8. GĂ³c nhá»n, gĂ³c tĂ¹, gĂ³c báº¹t: 10 cĂ¢u
+    â””â”€ BĂ i 9. Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá»: 63 cĂ¢u
+    â””â”€ BĂ i 10. CĂ¡c sá»‘ cĂ³ sĂ¡u chá»¯ sá»‘. Sá»‘ 1 000 000: 10 cĂ¢u
+    â””â”€ BĂ i 11. HĂ ng vĂ  lá»›p: 9 cĂ¢u
+    â””â”€ BĂ i 12. CĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u: 10 cĂ¢u
+    â””â”€ BĂ i 13. So sĂ¡nh cĂ¡c sá»‘ trong pháº¡m vi má»™t triá»‡u: 10 cĂ¢u
+    â””â”€ BĂ i 14. LĂ m trĂ²n sá»‘ Ä‘áº¿n hĂ ng chá»¥c nghĂ¬n: 10 cĂ¢u
+    â””â”€ BĂ i 15. LĂ m quen vá»›i sá»‘ La MĂ£: 10 cĂ¢u
+    â””â”€ BĂ i 16. Luyá»‡n táº­p chung: 4 cĂ¢u đŸŸ¡
+  đŸ“– Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH: 34 cĂ¢u
+    â””â”€ BĂ i 17. XÄƒng-ti-mĂ©t vuĂ´ng: 10 cĂ¢u
+    â””â”€ BĂ i 18. Äá»-xi-mĂ©t vuĂ´ng, mĂ©t vuĂ´ng, mi-li-mĂ©t vuĂ´ng: 9 cĂ¢u
+    â””â”€ BĂ i 20. GiĂ¢y, tháº¿ ká»‰: 10 cĂ¢u
+    â””â”€ BĂ i 21. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª: 45 cĂ¢u
+    â””â”€ BĂ i 22. PhĂ©p cá»™ng cĂ¡c sá»‘ cĂ³ nhiá»u chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 23. PhĂ©p trá»« cĂ¡c sá»‘ cĂ³ nhiá»u chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 24. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p cá»™ng: 10 cĂ¢u
+    â””â”€ BĂ i 25. TĂ¬m hai sá»‘ biáº¿t tá»•ng vĂ  hiá»‡u cá»§a hai sá»‘ Ä‘Ă³: 10 cĂ¢u
+    â””â”€ BĂ i 26. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG: 40 cĂ¢u
+    â””â”€ BĂ i 27. Hai Ä‘Æ°á»ng tháº³ng vuĂ´ng gĂ³c: 10 cĂ¢u
+    â””â”€ BĂ i 28. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng vuĂ´ng gĂ³c: 10 cĂ¢u
+    â””â”€ BĂ i 29. Hai Ä‘Æ°á»ng tháº³ng song song: 5 cĂ¢u
+    â””â”€ BĂ i 30. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng song song: 0 cĂ¢u đŸ”´
+    â””â”€ BĂ i 31. HĂ¬nh bĂ¬nh hĂ nh. HĂ¬nh thoi: 10 cĂ¢u
+    â””â”€ BĂ i 32. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I: 30 cĂ¢u
+    â””â”€ BĂ i 33. Ă”n táº­p cĂ¡c sá»‘ Ä‘áº¿n lá»›p triá»‡u: 10 cĂ¢u
+    â””â”€ BĂ i 34. Ă”n táº­p phĂ©p cá»™ng, phĂ©p trá»«: 5 cĂ¢u
+    â””â”€ BĂ i 35. Ă”n táº­p hĂ¬nh há»c: 5 cĂ¢u
+    â””â”€ BĂ i 36. Ă”n táº­p Ä‘o lÆ°á»ng: 5 cĂ¢u
+    â””â”€ BĂ i 37. Ă”n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA: 91 cĂ¢u
+    â””â”€ BĂ i 38. NhĂ¢n vá»›i sá»‘ cĂ³ má»™t chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 39. Chia cho sá»‘ cĂ³ má»™t chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 40. TĂ­nh cháº¥t giao hoĂ¡n vĂ  káº¿t há»£p cá»§a phĂ©p nhĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 41. NhĂ¢n, chia vá»›i 10, 100, 1000,â€¦: 10 cĂ¢u
+    â””â”€ BĂ i 42. TĂ­nh cháº¥t phĂ¢n phá»‘i cá»§a phĂ©p nhĂ¢n Ä‘á»‘i vá»›i phĂ©p cá»™ng: 10 cĂ¢u
+    â””â”€ BĂ i 43. NhĂ¢n vá»›i sá»‘ cĂ³ hai chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 44. Chia cho sá»‘ cĂ³ hai chá»¯ sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 46. TĂ¬m sá»‘ trung bĂ¬nh cá»™ng: 11 cĂ¢u
+    â””â”€ BĂ i 47. BĂ i toĂ¡n liĂªn quan Ä‘áº¿n rĂºt vá» Ä‘Æ¡n vá»‹: 5 cĂ¢u
+    â””â”€ BĂ i 48. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T: 24 cĂ¢u
+    â””â”€ BĂ i 49. DĂ£y sá»‘ liá»‡u: 10 cĂ¢u
+    â””â”€ BĂ i 50. Biá»ƒu Ä‘á»“ cá»™t: 9 cĂ¢u
+    â””â”€ BĂ i 51. Biá»ƒu Ä‘á»“ tranh: 0 cĂ¢u đŸ”´
+    â””â”€ BĂ i 52. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 10: PHĂ‚N Sá»: 100 cĂ¢u
+    â””â”€ BĂ i 53. KhĂ¡i niá»‡m phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 54. PhĂ¢n sá»‘ vĂ  phĂ©p chia sá»‘ tá»± nhiĂªn: 35 cĂ¢u
+    â””â”€ BĂ i 55. TĂ­nh cháº¥t cÆ¡ báº£n cá»§a phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 56. RĂºt gá»n phĂ¢n sá»‘: 20 cĂ¢u
+    â””â”€ BĂ i 57. Quy Ä‘á»“ng máº«u sá»‘ cĂ¡c phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 58. So sĂ¡nh phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 59. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá»: 25 cĂ¢u
+    â””â”€ BĂ i 60. PhĂ©p cá»™ng phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 61. PhĂ©p trá»« phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 62. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá»: 40 cĂ¢u
+    â””â”€ BĂ i 63. PhĂ©p nhĂ¢n phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 64. PhĂ©p chia phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 65. TĂ¬m phĂ¢n sá»‘ cá»§a má»™t sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 66. Luyá»‡n táº­p chung: 5 cĂ¢u
+    â””â”€ BĂ i 67. Luyá»‡n táº­p chung: 5 cĂ¢u
+  đŸ“– Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M: 52 cĂ¢u
+    â””â”€ BĂ i 68. Ă”n táº­p sá»‘ tá»± nhiĂªn: 17 cĂ¢u
+    â””â”€ BĂ i 69. Ă”n táº­p phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn: 10 cĂ¢u
+    â””â”€ BĂ i 70. Ă”n táº­p phĂ¢n sá»‘: 5 cĂ¢u
+    â””â”€ BĂ i 71. Ă”n táº­p phĂ©p tĂ­nh vá»›i phĂ¢n sá»‘: 5 cĂ¢u
+    â””â”€ BĂ i 72. Ă”n táº­p hĂ¬nh há»c vĂ  Ä‘o lÆ°á»ng: 5 cĂ¢u
+    â””â”€ BĂ i 73. Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t: 5 cĂ¢u
+    â””â”€ BĂ i 73. Ă”n táº­p chung: 5 cĂ¢u
+
+đŸ“ Lá»P 5 (866 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– CHá»¦ Äá»€ 1: Ă”N Táº¬P VĂ€ Bá»” SUNG: 122 cĂ¢u
+    â””â”€ BĂ i 1: Ă”n táº­p sá»‘ tá»± nhiĂªn: 15 cĂ¢u
+    â””â”€ BĂ i 2: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn: 14 cĂ¢u
+    â””â”€ BĂ i 3: Ă”n táº­p phĂ¢n sá»‘: 15 cĂ¢u
+    â””â”€ BĂ i 4: PhĂ¢n sá»‘ tháº­p phĂ¢n: 15 cĂ¢u
+    â””â”€ BĂ i 5: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i phĂ¢n sá»‘: 14 cĂ¢u
+    â””â”€ BĂ i 6: Cá»™ng, trá»« hai phĂ¢n sá»‘: 9 cĂ¢u
+    â””â”€ BĂ i 7: Há»—n sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 8: Ă”n táº­p hĂ¬nh há»c vĂ  Ä‘o lÆ°á»ng: 15 cĂ¢u
+    â””â”€ BĂ i 9: Luyá»‡n táº­p chung: 15 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N: 61 cĂ¢u
+    â””â”€ BĂ i 10: KhĂ¡i niá»‡m sá»‘ tháº­p phĂ¢n: 15 cĂ¢u
+    â””â”€ BĂ i 11: So sĂ¡nh cĂ¡c sá»‘ tháº­p phĂ¢n: 15 cĂ¢u
+    â””â”€ BĂ i 12: Viáº¿t sá»‘ Ä‘o Ä‘áº¡i lÆ°á»£ng dÆ°á»›i dáº¡ng sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 13: LĂ m trĂ²n sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 14: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 3: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH: 46 cĂ¢u
+    â””â”€ BĂ i 15: Ki-lĂ´-mĂ©t vuĂ´ng. HĂ©c-ta: 15 cĂ¢u
+    â””â”€ BĂ i 16: CĂ¡c Ä‘Æ¡n vá»‹ Ä‘o diá»‡n tĂ­ch: 12 cĂ¢u
+    â””â”€ BĂ i 17: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m vá»›i má»™t sá»‘ Ä‘Æ¡n vá»‹ Ä‘o Ä‘áº¡i lÆ°á»£ng: 10 cĂ¢u
+    â””â”€ BĂ i 18: Luyá»‡n táº­p chung: 9 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 4: CĂC PHĂ‰P TĂNH Vá»I Sá» THáº¬P PHĂ‚N: 60 cĂ¢u
+    â””â”€ BĂ i 19: PhĂ©p cá»™ng sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 20: PhĂ©p trá»« sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 21: PhĂ©p nhĂ¢n sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 22: PhĂ©p chia sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 23: NhĂ¢n, chia sá»‘ tháº­p phĂ¢n vá»›i 10, 100, 1000, ... hoáº·c vá»›i 0,1 ; 0,01 ; 0,001 ; ...: 10 cĂ¢u
+    â””â”€ BĂ i 24: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 5: Má»˜T Sá» HĂŒNH PHáº²NG, CHU VI VĂ€ DIá»†N TĂCH: 73 cĂ¢u
+    â””â”€ BĂ i 25: HĂ¬nh tam giĂ¡c. Diá»‡n tĂ­ch hĂ¬nh tam giĂ¡c: 12 cĂ¢u
+    â””â”€ BĂ i 26: HĂ¬nh thang. Diá»‡n tĂ­ch hĂ¬nh thang: 20 cĂ¢u
+    â””â”€ BĂ i 27: ÄÆ°á»ng trĂ²n. Chu vi vĂ  diá»‡n tĂ­ch hĂ¬nh trĂ²n: 20 cĂ¢u
+    â””â”€ BĂ i 28: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m Ä‘o, váº½, láº¯p ghĂ©p, táº¡o hĂ¬nh: 10 cĂ¢u
+    â””â”€ BĂ i 29: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1: 60 cĂ¢u
+    â””â”€ BĂ i 30: Ă”n táº­p sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 31: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tháº­p phĂ¢n: 10 cĂ¢u
+    â””â”€ BĂ i 32: Ă”n táº­p má»™t sá»‘ hĂ¬nh pháº³ng: 10 cĂ¢u
+    â””â”€ BĂ i 33: Ă”n táº­p diá»‡n tĂ­ch, chu vi má»™t sá»‘ hĂ¬nh pháº³ng: 10 cĂ¢u
+    â””â”€ BĂ i 34: Ă”n táº­p Ä‘o lÆ°á»ng: 10 cĂ¢u
+    â””â”€ BĂ i 35: Ă”n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN: 89 cĂ¢u
+    â””â”€ BĂ i 36. Tá»‰ sá»‘. Tá»‰ sá»‘ pháº§n trÄƒm: 10 cĂ¢u
+    â””â”€ BĂ i 37: Tá»‰ lá»‡ báº£n Ä‘á»“ vĂ  á»©ng dá»¥ng: 10 cĂ¢u
+    â””â”€ BĂ i 38: TĂ¬m hai sá»‘ khi biáº¿t tá»•ng vĂ  tá»‰ sá»‘ cá»§a hai sá»‘ Ä‘Ă³: 10 cĂ¢u
+    â””â”€ BĂ i 39: TĂ¬m hai sá»‘ khi biáº¿t hiá»‡u vĂ  tá»‰ sá»‘ cá»§a hai sá»‘ Ä‘Ă³: 10 cĂ¢u
+    â””â”€ BĂ i 40: TĂ¬m tá»‰ sá»‘ pháº§n trÄƒm cá»§a hai sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 41: TĂ¬m giĂ¡ trá»‹ pháº§n trÄƒm cá»§a má»™t sá»‘: 9 cĂ¢u
+    â””â”€ BĂ i 42: MĂ¡y tĂ­nh cáº§m tay: 10 cĂ¢u
+    â””â”€ BĂ i 43: Thá»±c hĂ nh vĂ  tráº£ nghiá»‡m sá»­ dá»¥ng mĂ¡y tĂ­nh cáº§m tay: 10 cĂ¢u
+    â””â”€ BĂ i 44: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 8: THá»‚ TĂCH VĂ€ ÄÆ N Vá» ÄO THá»‚ TĂCH: 45 cĂ¢u
+    â””â”€ BĂ i 45: Thá»ƒ tĂ­ch cá»§a má»™t hĂ¬nh: 10 cĂ¢u
+    â””â”€ BĂ i 46: XÄƒng-ti-mĂ©t khá»‘i. Äá»-xi-mĂ©t khá»‘i: 10 cĂ¢u
+    â””â”€ BĂ i 47: MĂ©t khá»‘i: 7 cĂ¢u
+    â””â”€ BĂ i 48: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I: 89 cĂ¢u
+    â””â”€ BĂ i 49: HĂ¬nh khai triá»ƒn cá»§a hĂ¬nh láº­p phÆ°Æ¡ng, hĂ¬nh há»™p chá»¯ nháº­t vĂ  hĂ¬nh trá»¥: 29 cĂ¢u
+    â””â”€ BĂ i 50: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh há»™p chá»¯ nháº­t: 10 cĂ¢u
+    â””â”€ BĂ i 51: Diá»‡n tĂ­ch xung quanh vĂ  diá»‡n tĂ­ch toĂ n pháº§n cá»§a hĂ¬nh láº­p phÆ°Æ¡ng: 10 cĂ¢u
+    â””â”€ BĂ i 52: Thá»ƒ tĂ­ch cá»§a hĂ¬nh há»™p chá»¯ nháº­t: 10 cĂ¢u
+    â””â”€ BĂ i 53: Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng: 10 cĂ¢u
+    â””â”€ BĂ i 54: Thá»±c hĂ nh tĂ­nh toĂ¡n vĂ  Æ°á»›c lÆ°á»£ng thá»ƒ tĂ­ch má»™t sá»‘ hĂ¬nh khá»‘i: 10 cĂ¢u
+    â””â”€ BĂ i 55: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 10: Sá» ÄO THá»œI GIAN, Váº¬N Tá»C. CĂC BĂ€I TOĂN LIĂN QUAN Äáº¾N CHUYá»‚N Äá»˜NG Äá»€U: 85 cĂ¢u
+    â””â”€ BĂ i 56: CĂ¡c Ä‘Æ¡n vá»‹ Ä‘o thá»i gian: 10 cĂ¢u
+    â””â”€ BĂ i 57: Cá»™ng, trá»« sá»‘ Ä‘o thá»i gian: 10 cĂ¢u
+    â””â”€ BĂ i 58: NhĂ¢n, chia sá»‘ Ä‘o thá»i gian vá»›i má»™t sá»‘: 10 cĂ¢u
+    â””â”€ BĂ i 59: Váº­n tá»‘c cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u: 10 cĂ¢u
+    â””â”€ BĂ i 60: QuĂ£ng Ä‘Æ°á»ng, thá»i gian cá»§a má»™t chuyá»ƒn Ä‘á»™ng Ä‘á»u: 10 cĂ¢u
+    â””â”€ BĂ i 61: Thá»±c hĂ nh: 10 cĂ¢u
+    â””â”€ BĂ i 62: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T: 49 cĂ¢u
+    â””â”€ BĂ i 63: Thu tháº­p, phĂ¢n loáº¡i, sáº¯p xáº¿p cĂ¡c sá»‘ liá»‡u: 10 cĂ¢u
+    â””â”€ BĂ i 64: Biá»ƒu Ä‘á»“ hĂ¬nh quáº¡t trĂ²n: 9 cĂ¢u
+    â””â”€ BĂ i 65: Tá»‰ sá»‘ cá»§a sá»‘ láº§n láº·p láº¡i má»™t sá»± kiá»‡n so vá»›i tá»•ng sá»‘ láº§n thá»±c hiá»‡n: 10 cĂ¢u
+    â””â”€ BĂ i 66: Thá»±c hĂ nh vĂ  tráº£i nghiá»‡m: 10 cĂ¢u
+    â””â”€ BĂ i 67: Luyá»‡n táº­p chung: 10 cĂ¢u
+  đŸ“– CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M: 87 cĂ¢u
+    â””â”€ BĂ i 68: Ă”n táº­p sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n: 19 cĂ¢u
+    â””â”€ BĂ i 69: Ă”n táº­p cĂ¡c phĂ©p tĂ­nh vá»›i sá»‘ tá»± nhiĂªn, phĂ¢n sá»‘, sá»‘ tháº­p phĂ¢n: 9 cĂ¢u
+    â””â”€ BĂ i 70: Ă”n táº­p tá»‰ sá»‘. Tá»‰ sá»‘ pháº§n trÄƒm: 10 cĂ¢u
+    â””â”€ BĂ i 71: Ă”n táº­p hĂ¬nh há»c: 10 cĂ¢u
+    â””â”€ BĂ i 72: Ă”n táº­p Ä‘o lÆ°á»ng: 10 cĂ¢u
+    â””â”€ BĂ i 73: Ă”n táº­p toĂ¡n chuyá»ƒn Ä‘á»™ng Ä‘á»u: 10 cĂ¢u
+    â””â”€ BĂ i 74: Ă”n táº­p má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª vĂ  xĂ¡c suáº¥t: 10 cĂ¢u
+    â””â”€ BĂ i 75: Ă”n tĂ¢p chung: 9 cĂ¢u
+
+đŸ“ Lá»P 6 (1162 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– CHÆ¯Æ NG I. Táº¬P Há»¢P CĂC Sá» Tá»° NHIĂN: 209 cĂ¢u
+    â””â”€ BĂ i 1. Táº­p há»£p: 40 cĂ¢u
+    â””â”€ BĂ i 2. CĂ¡ch ghi sá»‘ tá»± nhiĂªn: 25 cĂ¢u
+    â””â”€ BĂ i 3. Thá»© tá»± trong táº­p há»£p cĂ¡c sá»‘ tá»± nhiĂªn: 34 cĂ¢u
+    â””â”€ BĂ i 4. PhĂ©p cá»™ng vĂ  phĂ©p trá»« sá»‘ tá»± nhiĂªn: 25 cĂ¢u
+    â””â”€ BĂ i 5. PhĂ©p nhĂ¢n vĂ  phĂ©p chia sá»‘ tá»± nhiĂªn: 25 cĂ¢u
+    â””â”€ BĂ i 6. Luá»¹ thá»«a vá»›i sá»‘ mÅ© tá»± nhiĂªn: 23 cĂ¢u
+    â””â”€ BĂ i 7. Thá»© tá»± thá»±c hiá»‡n cĂ¡c phĂ©p tĂ­nh: 25 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng I: 12 cĂ¢u
+  đŸ“– ToĂ¡n lá»›p 6: 104 cĂ¢u
+    â””â”€ Sá»‘ tá»± nhiĂªn: 20 cĂ¢u
+    â””â”€ PhĂ¢n sá»‘: 16 cĂ¢u
+    â””â”€ Sá»‘ nguyĂªn: 15 cĂ¢u
+    â””â”€ HĂ¬nh há»c 6: 13 cĂ¢u
+    â””â”€ Sá»‘ tháº­p phĂ¢n: 9 cĂ¢u
+    â””â”€ Biá»ƒu thá»©c & TĂ­nh giĂ¡ trá»‹: 22 cĂ¢u
+    â””â”€ Thá»‘ng kĂª & XĂ¡c suáº¥t 6: 9 cĂ¢u
+  đŸ“– CHÆ¯Æ NG II. TĂNH CHIA Háº¾T TRONG Táº¬P Há»¢P CĂC Sá» Tá»° NHIĂN: 182 cĂ¢u
+    â””â”€ BĂ i 8. Quan há»‡ chia háº¿t vĂ  tĂ­nh cháº¥t: 41 cĂ¢u
+    â””â”€ BĂ i 9. Dáº¥u hiá»‡u chia háº¿t: 25 cĂ¢u
+    â””â”€ BĂ i 10. Sá»‘ nguyĂªn tá»‘: 23 cĂ¢u
+    â””â”€ BĂ i 11. Æ¯á»›c chung. Æ¯á»›c chung lá»›n nháº¥t: 48 cĂ¢u
+    â””â”€ BĂ i 12. Bá»™i chung. Bá»™i chung nhá» nháº¥t: 29 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng II: 11 cĂ¢u
+  đŸ“– CHÆ¯Æ NG III. Sá» NGUYĂN: 155 cĂ¢u
+    â””â”€ BĂ i 13. Táº­p há»£p cĂ¡c sá»‘ nguyĂªn: 35 cĂ¢u
+    â””â”€ BĂ i 14. PhĂ©p cá»™ng vĂ  phĂ©p trá»« sá»‘ nguyĂªn: 30 cĂ¢u
+    â””â”€ BĂ i 15. Quy táº¯c dáº¥u ngoáº·c: 29 cĂ¢u
+    â””â”€ BĂ i 16. PhĂ©p nhĂ¢n sá»‘ nguyĂªn: 29 cĂ¢u
+    â””â”€ BĂ i 17. PhĂ©p chia háº¿t. Æ¯á»›c vĂ  bá»™i cá»§a má»™t sá»‘ nguyĂªn: 15 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng III: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IV. Má»˜T Sá» HĂŒNH PHáº²NG TRONG THá»°C TIá»„N: 67 cĂ¢u
+    â””â”€ BĂ i 18. HĂ¬nh tam giĂ¡c Ä‘á»u. HĂ¬nh vuĂ´ng. HĂ¬nh lá»¥c giĂ¡c Ä‘á»u: 30 cĂ¢u
+    â””â”€ BĂ i 20. Chu vi vĂ  diá»‡n tĂ­ch cá»§a má»™t sá»‘ tá»© giĂ¡c Ä‘Ă£ há»c: 20 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng IV: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG V. TĂNH Äá»I Xá»¨NG Cá»¦A HĂŒNH PHáº²NG TRONG Tá»° NHIĂN: 76 cĂ¢u
+    â””â”€ BĂ i 21. HĂ¬nh cĂ³ trá»¥c Ä‘á»‘i xá»©ng: 31 cĂ¢u
+    â””â”€ BĂ i 22. HĂ¬nh cĂ³ tĂ¢m Ä‘á»‘i xá»©ng: 30 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng V: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VI. PHĂ‚N Sá»: 95 cĂ¢u
+    â””â”€ BĂ i 23. Má»Ÿ rá»™ng phĂ¢n sá»‘. PhĂ¢n sá»‘ báº±ng nhau: 25 cĂ¢u
+    â””â”€ BĂ i 24. So sĂ¡nh phĂ¢n sá»‘. Há»—n sá»‘ dÆ°Æ¡ng: 15 cĂ¢u
+    â””â”€ BĂ i 25. PhĂ©p cá»™ng vĂ  phĂ©p trá»« phĂ¢n sá»‘: 15 cĂ¢u
+    â””â”€ BĂ i 26. PhĂ©p nhĂ¢n vĂ  phĂ©p chia phĂ¢n sá»‘: 15 cĂ¢u
+    â””â”€ BĂ i 27. Hai bĂ i toĂ¡n vá» phĂ¢n sá»‘: 10 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng VI: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VII. Sá» THáº¬P PHĂ‚N: 70 cĂ¢u
+    â””â”€ BĂ i 28. Sá»‘ tháº­p phĂ¢n: 25 cĂ¢u
+    â””â”€ BĂ i 29. TĂ­nh toĂ¡n vá»›i sá»‘ tháº­p phĂ¢n: 15 cĂ¢u
+    â””â”€ BĂ i 30. LĂ m trĂ²n vĂ  Æ°á»›c lÆ°á»£ng: 15 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng VII: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VIII. NHá»®NG HĂŒNH HĂŒNH Há»ŒC CÆ  Báº¢N: 85 cĂ¢u
+    â””â”€ BĂ i 32. Äiá»ƒm vĂ  Ä‘Æ°á»ng tháº³ng: 20 cĂ¢u
+    â””â”€ BĂ i 33. Äiá»ƒm náº±m giá»¯a hai Ä‘iá»ƒm. Tia: 10 cĂ¢u
+    â””â”€ BĂ i 34. Äoáº¡n tháº³ng. Äá»™ dĂ i Ä‘oáº¡n tháº³ng: 10 cĂ¢u
+    â””â”€ BĂ i 35. Trung Ä‘iá»ƒm cá»§a Ä‘oáº¡n tháº³ng: 10 cĂ¢u
+    â””â”€ BĂ i 36. GĂ³c: 10 cĂ¢u
+    â””â”€ BĂ i 37. Sá»‘ Ä‘o gĂ³c: 10 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng VIII: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IX. Dá»® LIá»†U VĂ€ XĂC SUáº¤T THá»°C NGHIá»†M: 119 cĂ¢u
+    â””â”€ BĂ i 38. Dá»¯ liá»‡u vĂ  thu tháº­p dá»¯ liá»‡u: 20 cĂ¢u
+    â””â”€ BĂ i 39. Báº£ng thá»‘ng kĂª vĂ  biá»ƒu Ä‘á»“ tranh: 15 cĂ¢u
+    â””â”€ BĂ i 40. Biá»ƒu Ä‘á»“ cá»™t: 15 cĂ¢u
+    â””â”€ BĂ i 41. Biá»ƒu Ä‘á»“ cá»™t kĂ©p: 10 cĂ¢u
+    â””â”€ BĂ i 42. Káº¿t quáº£ cĂ³ thá»ƒ vĂ  sá»± kiá»‡n trong trĂ² chÆ¡i, thĂ­ nghiá»‡m: 15 cĂ¢u
+    â””â”€ BĂ i 43. XĂ¡c suáº¥t thá»±c nghiá»‡m: 15 cĂ¢u
+    â””â”€ Ă”n táº­p chÆ°Æ¡ng IX: 14 cĂ¢u
+    â””â”€ BĂ i táº­p Ă´n táº­p cuá»‘i nÄƒm: 15 cĂ¢u
+
+đŸ“ Lá»P 7 (1452 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– ChÆ°Æ¡ng I. Sá» Há»®U Tá»ˆ.: 317 cĂ¢u
+    â””â”€ BĂ i 1. Táº­p há»£p cĂ¡c sá»‘ há»¯u tá»‰.: 58 cĂ¢u
+    â””â”€ BĂ i 2. Cá»™ng, trá»«, nhĂ¢n, chia sá»‘ há»¯u tá»‰.: 79 cĂ¢u
+    â””â”€ Luyá»‡n táº­p chung.: 12 cĂ¢u
+    â””â”€ BĂ i 3. Luá»¹ thá»«a vá»›i sá»‘ mÅ© tá»± nhiĂªn cá»§a má»™t sá»‘ há»¯u tá»‰.: 43 cĂ¢u
+    â””â”€ BĂ i 4. Thá»© tá»± thá»±c hiá»‡n cĂ¡c phĂ©p tĂ­nh. Quy táº¯c chuyá»ƒn váº¿.: 41 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng I.: 70 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng II. Sá» THá»°C.: 152 cĂ¢u
+    â””â”€ BĂ i 5. LĂ m quen vá»›i sá»‘ tháº­p phĂ¢n vĂ´ háº¡n tuáº§n hoĂ n.: 44 cĂ¢u
+    â””â”€ BĂ i 6. Sá»‘ vĂ´ tá»‰. CÄƒn báº­c hai sá»‘ há»c.: 48 cĂ¢u
+    â””â”€ BĂ i 7. Táº­p há»£p cĂ¡c sá»‘ thá»±c.: 43 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng II.: 17 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng III. GĂ“C VĂ€ ÄÆ¯á»œNG THáº²NG SONG SONG.: 108 cĂ¢u
+    â””â”€ BĂ i 8. GĂ³c á»Ÿ vá»‹ trĂ­ Ä‘áº·c biá»‡t. Tia phĂ¢n giĂ¡c cá»§a má»™t gĂ³c.: 27 cĂ¢u
+    â””â”€ BĂ i 9. Hai Ä‘Æ°á»ng tháº³ng song song vĂ  dáº¥u hiá»‡u nháº­n biáº¿t.: 27 cĂ¢u
+    â””â”€ BĂ i 10. TiĂªn Ä‘á» Euclid. TĂ­nh cháº¥t cá»§a hai Ä‘Æ°á»ng tháº³ng song song.: 20 cĂ¢u
+    â””â”€ BĂ i 11. Äá»‹nh lĂ­ vĂ  chá»©ng minh Ä‘á»‹nh lĂ­.: 17 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng III.: 17 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng IV. TAM GIĂC Báº°NG NHAU.: 122 cĂ¢u
+    â””â”€ BĂ i 12. Tá»•ng cĂ¡c gĂ³c trong má»™t tam giĂ¡c.: 23 cĂ¢u
+    â””â”€ BĂ i 13. Hai tam giĂ¡c báº±ng nhau. TrÆ°á»ng há»£p báº±ng nhau thá»© nháº¥t cá»§a tam giĂ¡c.: 20 cĂ¢u
+    â””â”€ BĂ i 14. TrÆ°á»ng há»£p báº±ng nhau thá»© hai vĂ  thá»© ba cá»§a tam giĂ¡c.: 19 cĂ¢u
+    â””â”€ BĂ i 15. CĂ¡c trÆ°á»ng há»£p báº±ng nhau cá»§a tam giĂ¡c vuĂ´ng.: 28 cĂ¢u
+    â””â”€ BĂ i 16. Tam giĂ¡c cĂ¢n. ÄÆ°á»ng trung trá»±c cá»§a Ä‘oáº¡n tháº³ng.: 16 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IV.: 16 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng V. THU THáº¬P VĂ€ BIá»‚U DIá»„N Dá»® LIá»†U.: 130 cĂ¢u
+    â””â”€ BĂ i 17. Thu tháº­p vĂ  phĂ¢n loáº¡i dá»¯ liá»‡u.: 53 cĂ¢u
+    â””â”€ BĂ i 18. Biá»ƒu Ä‘á»“ hĂ¬nh quáº¡t trĂ²n.: 33 cĂ¢u
+    â””â”€ BĂ i 19. Biá»ƒu Ä‘á»“ Ä‘oáº¡n tháº³ng.: 29 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng V.: 15 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng VI. Tá»ˆ Lá»† THá»¨C VĂ€ Äáº I LÆ¯á»¢NG Tá»ˆ Lá»†.: 196 cĂ¢u
+    â””â”€ BĂ i 20. Tá»‰ lá»‡ thá»©c.: 42 cĂ¢u
+    â””â”€ BĂ i 21. TĂ­nh cháº¥t cá»§a dĂ£y tá»‰ sá»‘ báº±ng nhau.: 20 cĂ¢u
+    â””â”€ BĂ i 22. Äáº¡i lÆ°á»£ng tá»‰ lá»‡ thuáº­n.: 37 cĂ¢u
+    â””â”€ BĂ i 23. Äáº¡i lÆ°á»£ng tá»‰ lá»‡ nghá»‹ch.: 38 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VI.: 42 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng VII. BIá»‚U THá»¨C Äáº I Sá» VĂ€ ÄA THá»¨C Má»˜T BIáº¾N.: 149 cĂ¢u
+    â””â”€ BĂ i 24. Biá»ƒu thá»©c Ä‘áº¡i sá»‘.: 21 cĂ¢u
+    â””â”€ BĂ i 25. Äa thá»©c má»™t biáº¿n.: 41 cĂ¢u
+    â””â”€ BĂ i 26. PhĂ©p cá»™ng vĂ  phĂ©p trá»« Ä‘a thá»©c má»™t biáº¿n.: 20 cĂ¢u
+    â””â”€ BĂ i 27. PhĂ©p nhĂ¢n Ä‘a thá»©c má»™t biáº¿n.: 21 cĂ¢u
+    â””â”€ BĂ i 28. PhĂ©p chia Ä‘a thá»©c má»™t biáº¿n.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VII.: 24 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng VIII. LĂ€M QUEN Vá»I BIáº¾N Cá» VĂ€ XĂC SUáº¤T Cá»¦A BIáº¾N Cá».: 89 cĂ¢u
+    â””â”€ BĂ i 29. LĂ m quen vá»›i biáº¿n cá»‘.: 53 cĂ¢u
+    â””â”€ BĂ i 30. LĂ m quen vá»›i xĂ¡c suáº¥t cá»§a biáº¿n cá»‘.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VIII.: 15 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng IX. QUAN Há»† GIá»®A CĂC Yáº¾U Tá» TRONG Má»˜T TAM GIĂC.: 111 cĂ¢u
+    â””â”€ BĂ i 31. Quan há»‡ giá»¯a gĂ³c vĂ  cáº¡nh Ä‘á»‘i diá»‡n trong má»™t tam giĂ¡c.: 20 cĂ¢u
+    â””â”€ BĂ i 32. Quan há»‡ giá»¯a Ä‘Æ°á»ng vuĂ´ng gĂ³c vĂ  Ä‘Æ°á»ng xiĂªn.: 20 cĂ¢u
+    â””â”€ BĂ i 33. Quan há»‡ giá»¯a ba cáº¡nh cá»§a má»™t tam giĂ¡c.: 15 cĂ¢u
+    â””â”€ BĂ i 34. Sá»± Ä‘á»“ng quy cá»§a ba trung tuyáº¿n, ba Ä‘Æ°á»ng phĂ¢n giĂ¡c trong má»™t tam giĂ¡c.: 19 cĂ¢u
+    â””â”€ BĂ i 35. Sá»± Ä‘á»“ng quy cá»§a ba Ä‘Æ°á»ng trung trá»±c, ba Ä‘Æ°á»ng cao trong má»™t tam giĂ¡c.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IX.: 17 cĂ¢u
+  đŸ“– ChÆ°Æ¡ng X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N.: 78 cĂ¢u
+    â””â”€ BĂ i 36. HĂ¬nh há»™p chá»¯ nháº­t vĂ  hĂ¬nh láº­p phÆ°Æ¡ng.: 15 cĂ¢u
+    â””â”€ Luyá»‡n táº­p.: 10 cĂ¢u
+    â””â”€ BĂ i 37. HĂ¬nh lÄƒng trá»¥ Ä‘á»©ng tam giĂ¡c vĂ  hĂ¬nh lÄƒng trá»¥ Ä‘á»©ng tá»© giĂ¡c.: 16 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng X.: 37 cĂ¢u
+
+đŸ“ Lá»P 8 (1454 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– CHÆ¯Æ NG I. ÄA THá»¨C: 417 cĂ¢u
+    â””â”€ BĂ i 1. ÄÆ¡n thá»©c.: 35 cĂ¢u
+    â””â”€ BĂ i 2. Äa thá»©c.: 25 cĂ¢u
+    â””â”€ BĂ i 3. PhĂ©p cá»™ng vĂ  phĂ©p trá»« Ä‘a thá»©c.: 25 cĂ¢u
+    â””â”€ BĂ i 4. PhĂ©p nhĂ¢n Ä‘a thá»©c.: 25 cĂ¢u
+    â””â”€ BĂ i 5. PhĂ©p chia Ä‘a thá»©c cho Ä‘Æ¡n thá»©c.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng 1.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG II. Háº°NG Äáº²NG THá»¨C ÄĂNG NHá» VĂ€ á»¨NG Dá»¤NG: 151 cĂ¢u
+    â””â”€ BĂ i 6. Hiá»‡u hai bĂ¬nh phÆ°Æ¡ng. BĂ¬nh phÆ°Æ¡ng cá»§a má»™t tá»•ng hay má»™t hiá»‡u.: 45 cĂ¢u
+    â””â”€ BĂ i 7. Láº­p phÆ°Æ¡ng cá»§a má»™t tá»•ng hay má»™t hiá»‡u.: 25 cĂ¢u
+    â””â”€ BĂ i 8. Tá»•ng vĂ  hiá»‡u hai láº­p hÆ°Æ¡ng.: 20 cĂ¢u
+    â””â”€ BĂ i 9. PhĂ¢n tĂ­ch Ä‘a thá»©c thĂ nh nhĂ¢n tá»­.: 30 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng II.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG III. Tá»¨ GIĂC: 86 cĂ¢u
+    â””â”€ BĂ i 10. Tá»© giĂ¡c.: 26 cĂ¢u
+    â””â”€ BĂ i 11. HĂ¬nh thang cĂ¢n.: 11 cĂ¢u
+    â””â”€ BĂ i 12. HĂ¬nh bĂ¬nh hĂ nh.: 11 cĂ¢u
+    â””â”€ BĂ i 13. HĂ¬nh chá»¯ nháº­t.: 11 cĂ¢u
+    â””â”€ BĂ i 14. HĂ¬nh thoi vĂ  hĂ¬nh vuĂ´ng.: 10 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng III.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IV. Äá»NH LĂ THALES: 98 cĂ¢u
+    â””â”€ BĂ i 15. Äá»‹nh lĂ­ ThalĂ¨s trong tam giĂ¡c.: 40 cĂ¢u
+    â””â”€ BĂ i 16. ÄÆ°á»ng trung bĂ¬nh cá»§a tam giĂ¡c.: 20 cĂ¢u
+    â””â”€ BĂ i 17. TĂ­nh cháº¥t Ä‘Æ°á»ng phĂ¢n giĂ¡c cá»§a tam giĂ¡c.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IV.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG V. Dá»® LIá»†U VĂ€ BIá»‚U Äá»’: 77 cĂ¢u
+    â””â”€ BĂ i 18. Thu tháº­p vĂ  phĂ¢n loáº¡i dá»¯ liá»‡u.: 20 cĂ¢u
+    â””â”€ BĂ i 19. Biá»ƒu diá»…n dá»¯ liá»‡u báº±ng báº£ng, biá»ƒu Ä‘á»“.: 19 cĂ¢u
+    â””â”€ BĂ i 20. PhĂ¢n tĂ­ch sá»‘ liá»‡u thá»‘ng kĂª dá»±a vĂ o biá»ƒu Ä‘Ă³.: 21 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng V.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VI. PHĂ‚N THá»¨C Äáº I Sá»: 136 cĂ¢u
+    â””â”€ BĂ i 21. Pháº§n thá»©c Ä‘áº¡i sá»‘.: 39 cĂ¢u
+    â””â”€ BĂ i 22. TĂ­nh cháº¥t cÆ¡ báº£n cá»§a phĂ¢n thá»©c Ä‘áº¡i sá»‘.: 26 cĂ¢u
+    â””â”€ BĂ i 23. PhĂ©p cá»™ng vĂ  phĂ©p trá»« phĂ¢n thá»©c Ä‘áº¡i sá»‘.: 26 cĂ¢u
+    â””â”€ BĂ i 24. PhĂ©p nhĂ¢n vĂ  phĂ©p chia phĂ¢n thá»©c Ä‘áº¡i sá»‘.: 26 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VI.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VII. PHÆ¯Æ NG TRĂŒNH Báº¬C NHáº¤T VĂ€ HĂ€M Sá» Báº¬C NHáº¤T: 162 cĂ¢u
+    â””â”€ BĂ i 25. PhÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n.: 45 cĂ¢u
+    â””â”€ BĂ i 26. Giáº£i bĂ i toĂ¡n báº±ng cĂ¡ch láº­p phÆ°Æ¡ng trĂ¬nh.: 25 cĂ¢u
+    â””â”€ BĂ i 27. KhĂ¡i niá»‡m hĂ m sá»‘ vĂ  Ä‘Ă´ thá»‹ cá»§a hĂ m sá»‘.: 25 cĂ¢u
+    â””â”€ BĂ i 28. HĂ m sá»‘ báº­c nháº¥t vĂ  Ä‘Ă´ thá»‹ cá»§a hĂ m sá»‘ báº­c nháº¥t.: 25 cĂ¢u
+    â””â”€ BĂ i 29. Há»‡ sá»‘ gĂ³c cá»§a Ä‘Æ°á»ng tháº³ng.: 25 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VII.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VIII. Má» Äáº¦U Vá»€ TĂNH XĂC SUáº¤T Cá»¦A BIáº¾N Cá»: 94 cĂ¢u
+    â””â”€ BĂ i 30. Káº¿t quáº£ cĂ³ thá»ƒ vĂ  káº¿t quáº£ thuáº­n lá»£i.: 39 cĂ¢u
+    â””â”€ BĂ i 31. CĂ¡ch tĂ­nh xĂ¡c suáº¥t cá»§a biáº¿n cá»‘ báº±ng tá»‰ sá»‘.: 20 cĂ¢u
+    â””â”€ BĂ i 32. Má»‘i liĂªn há»‡ giá»¯a xĂ¡c suáº¥t thá»±c nghiá»‡m vá»›i xĂ¡c suáº¥t vĂ  á»©ng dá»¥ng.: 19 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VIII.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IX. TAM GIĂC Äá»’NG Dáº NG: 161 cĂ¢u
+    â””â”€ BĂ i 33. Hai tam giĂ¡c Ä‘á»“ng dáº¡ng.: 40 cĂ¢u
+    â””â”€ BĂ i 34. Ba trÆ°á»ng há»£p Ä‘á»“ng dáº¡ng cá»§a hai tam giĂ¡c.: 25 cĂ¢u
+    â””â”€ BĂ i 35. Äá»‹nh lĂ­ Pythagore vĂ  á»©ng dá»¥ng.: 25 cĂ¢u
+    â””â”€ BĂ i 36. CĂ¡c trÆ°á»ng há»£p Ä‘á»“ng dáº¡ng cá»§a hai tam giĂ¡c vuĂ´ng.: 20 cĂ¢u
+    â””â”€ BĂ i 37. HĂ¬nh Ä‘á»“ng dáº¡ng.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IX.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N: 72 cĂ¢u
+    â””â”€ BĂ i 38. HĂ¬nh chĂ³p tam giĂ¡c Ä‘á»u.: 20 cĂ¢u
+    â””â”€ BĂ i 39. HĂ¬nh chĂ³p tá»© giĂ¡c Ä‘á»u.: 23 cĂ¢u
+    â””â”€ Luyá»‡n táº­p chung.: 14 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng X.: 15 cĂ¢u
+
+đŸ“ Lá»P 9 (1259 cĂ¢u)
+------------------------------------------------------------
+  đŸ“– CHÆ¯Æ NG I. PT VĂ€ Há»† PT Báº¬C NHáº¤T 2 áº¨N: 135 cĂ¢u
+    â””â”€ BĂ i 1. KhĂ¡i niá»‡m phÆ°Æ¡ng trĂ¬nh vĂ  há»‡ hai phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t hai áº©n.: 37 cĂ¢u
+    â””â”€ BĂ i 2. Giáº£i há»‡ hai phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t hai áº©n.: 22 cĂ¢u
+    â””â”€ BĂ i 3. Giáº£i bĂ i toĂ¡n báº±ng cĂ¡ch láº­p há»‡ phÆ°Æ¡ng trĂ¬nh.: 32 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng I.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG II. PT VĂ€ Báº¤T PT Báº¬C NHáº¤T 1 áº¨N: 104 cĂ¢u
+    â””â”€ BĂ i 4. PhÆ°Æ¡ng trĂ¬nh quy vá» phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n.: 37 cĂ¢u
+    â””â”€ BĂ i 5. Báº¥t Ä‘áº³ng thá»©c vĂ  tĂ­nh cháº¥t.: 28 cĂ¢u
+    â””â”€ BĂ i 6. Báº¥t phÆ°Æ¡ng trĂ¬nh báº­c nháº¥t má»™t áº©n.: 22 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng II.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG III. CÄ‚N Báº¬C HAI VĂ€ CÄ‚N Báº¬C BA: 126 cĂ¢u
+    â””â”€ BĂ i 7. CÄƒn báº­c hai vĂ  cÄƒn thá»©c báº­c hai.: 36 cĂ¢u
+    â””â”€ BĂ i 8. Khai cÄƒn báº­c hai vá»›i phĂ©p nhĂ¢n vĂ  phĂ©p chia.: 22 cĂ¢u
+    â””â”€ BĂ i 9. Biáº¿n Ä‘á»•i Ä‘Æ¡n giáº£n vĂ  rĂºt gá»n biá»ƒu thá»©c chá»©a cÄƒn thá»©c báº­c hai.: 20 cĂ¢u
+    â””â”€ BĂ i 10. CÄƒn báº­c ba vĂ  cÄƒn thá»©c báº­c ba.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng III.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IV. Há»† THá»¨C LÆ¯á»¢NG TRONG TAM GIĂC VUĂ”NG: 70 cĂ¢u
+    â””â”€ BĂ i 11. Tá»‰ sá»‘ lÆ°á»£ng giĂ¡c cá»§a gĂ³c nhá»n.: 27 cĂ¢u
+    â””â”€ BĂ i 12. Má»™t sá»‘ há»‡ thá»©c giá»¯a cáº¡nh, gĂ³c trong tam giĂ¡c vuĂ´ng vĂ  á»©ng dá»¥ng.: 16 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IV.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG V. ÄÆ¯á»œNG TRĂ’N: 83 cĂ¢u
+    â””â”€ BĂ i 13. Má»Ÿ Ä‘áº§u vá» Ä‘Æ°á»ng trĂ²n.: 26 cĂ¢u
+    â””â”€ BĂ i 14. Cung vĂ  dĂ¢y cá»§a má»™t Ä‘Æ°á»ng trĂ²n.: 11 cĂ¢u
+    â””â”€ BĂ i 15. Äá»™ dĂ i cá»§a cung trĂ²n. Diá»‡n tĂ­ch hĂ¬nh quáº¡t trĂ²n vĂ  hĂ¬nh vĂ nh khuyĂªn.: 11 cĂ¢u
+    â””â”€ BĂ i 16. Vá»‹ trĂ­ tÆ°Æ¡ng Ä‘á»‘i cá»§a Ä‘Æ°á»ng tháº³ng vĂ  Ä‘Æ°á»ng trĂ²n.: 11 cĂ¢u
+    â””â”€ BĂ i 17. Vá»‹ trĂ­ tÆ°Æ¡ng Ä‘á»‘i cá»§a hai Ä‘Æ°á»ng trĂ²n.: 11 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng V.: 11 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VI. HĂ€M Sá» y = axÂ² (a â‰  0). PHÆ¯Æ NG TRĂŒNH Báº¬C HAI Má»˜T áº¨N: 142 cĂ¢u
+    â””â”€ BĂ i 18. HĂ m sá»‘ y = ax2 (a â‰  0).: 26 cĂ¢u
+    â””â”€ BĂ i 19. PhÆ°Æ¡ng trĂ¬nh báº­c hai má»™t áº©n.: 11 cĂ¢u
+    â””â”€ BĂ i 20. Äá»‹nh lĂ­ ViĂ¨te vĂ  á»©ng dá»¥ng.: 20 cĂ¢u
+    â””â”€ BĂ i 21. Giáº£i bĂ i toĂ¡n báº±ng cĂ¡ch láº­p phÆ°Æ¡ng trĂ¬nh.: 20 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VI.: 17 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VII. Táº¦N Sá» VĂ€ Táº¦N Sá» TÆ¯Æ NG Äá»I: 48 cĂ¢u
+    â””â”€ BĂ i 22. Báº£ng táº§n sá»‘ vĂ  biá»ƒu Ä‘á»“ táº§n sá»‘.: 11 cĂ¢u
+    â””â”€ BĂ i 23. Báº£ng táº§n sá»‘ tÆ°Æ¡ng Ä‘á»‘i vĂ  biá»ƒu Ä‘á»“ táº§n sá»‘ tÆ°Æ¡ng Ä‘á»‘i.: 11 cĂ¢u
+    â””â”€ BĂ i 24. Báº£ng táº§n sá»‘, táº§n sá»‘ tÆ°Æ¡ng Ä‘á»‘i ghĂ©p nhĂ³m vĂ  biá»ƒu Ä‘á»“.: 11 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VII.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG VIII. XĂC SUáº¤T Cá»¦A BIáº¾N Cá» TRONG Má»˜T Sá» MĂ” HĂŒNH XĂC SUáº¤T ÄÆ N GIáº¢N: 40 cĂ¢u
+    â””â”€ BĂ i 25. PhĂ©p thá»­ ngáº«u nhiĂªn vĂ  khĂ´ng gian máº«u.: 11 cĂ¢u
+    â””â”€ BĂ i 26. XĂ¡c suáº¥t cá»§a biáº¿n cá»‘ liĂªn quan tá»›i phĂ©p thá»­.: 14 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng VIII.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG IX. ÄÆ¯á»œNG TRĂ’N NGOáº I TIáº¾P VĂ€ ÄÆ¯á»œNG TRĂ’N Ná»˜I TIáº¾P: 78 cĂ¢u
+    â””â”€ BĂ i 27. GĂ³c ná»™i tiáº¿p.: 26 cĂ¢u
+    â””â”€ BĂ i 28. ÄÆ°á»ng trĂ²n ngoáº¡i tiáº¿p vĂ  Ä‘Æ°á»ng trĂ²n ná»™i tiáº¿p cá»§a má»™t tam giĂ¡c.: 11 cĂ¢u
+    â””â”€ BĂ i 29. Tá»© giĂ¡c ná»™i tiáº¿p.: 14 cĂ¢u
+    â””â”€ BĂ i 30. Äa giĂ¡c Ä‘á»u.: 11 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng IX.: 15 cĂ¢u
+  đŸ“– CHÆ¯Æ NG X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N: 65 cĂ¢u
+    â””â”€ BĂ i 31. HĂ¬nh trá»¥ vĂ  hĂ¬nh nĂ³n.: 24 cĂ¢u
+    â””â”€ BĂ i 32. HĂ¬nh cáº§u.: 11 cĂ¢u
+    â””â”€ Luyá»‡n táº­p chung.: 15 cĂ¢u
+    â””â”€ BĂ i táº­p cuá»‘i chÆ°Æ¡ng X.: 15 cĂ¢u
+  đŸ“– BĂ i táº­p Ă´n thi vĂ o 10: 368 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 2. PhÆ°Æ¡ng trĂ¬nh báº­c hai vĂ  há»‡ thá»©c Vi-Ă©t: 41 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 4. Giáº£i bĂ i toĂ¡n báº±ng cĂ¡ch láº­p phÆ°Æ¡ng trĂ¬nh: 22 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 5. HĂ m sá»‘ báº­c hai vĂ  cĂ¡c bĂ i toĂ¡n tÆ°Æ¡ng giao: 11 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 6. RĂºt gá»n biá»ƒu thá»©c vĂ  cĂ¡c bĂ i toĂ¡n liĂªn quan: 11 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 7. Há»‡ thá»©c lÆ°á»£ng trong tam giĂ¡c vuĂ´ng vĂ  á»©ng dá»¥ng: 11 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 8. Má»™t sá»‘ yáº¿u tá»‘ thá»‘ng kĂª: 11 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 9. Má»™t sá»‘ yáº¿u tá»‘ xĂ¡c suáº¥t: 11 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 10. NĂ³n â€“ trá»¥ â€“ cáº§u vĂ  hĂ¬nh khá»‘i: 35 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 12. Báº¥t Ä‘áº³ng thá»©c vĂ  cĂ¡c bĂ i toĂ¡n cá»±c trá»‹: 21 cĂ¢u
+    â””â”€ ChuyĂªn Ä‘á» 13. CĂ¡c bĂ i toĂ¡n thá»±c táº¿ cĂ³ liĂªn quan cá»±c trá»‹: 11 cĂ¢u
+
+
+--- C. DANH SĂCH CHá»¦ Äá»€ Cáº¦N THĂM BĂ€I (< 5 cĂ¢u) ---
+
+  Lá»›p 4: "BĂ i 30. Thá»±c hĂ nh váº½ hai Ä‘Æ°á»ng tháº³ng song song" (Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG) â†’ 0 cĂ¢u, cáº§n thĂªm 5
+  Lá»›p 4: "BĂ i 51. Biá»ƒu Ä‘á»“ tranh" (Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T) â†’ 0 cĂ¢u, cáº§n thĂªm 5
+  Lá»›p 4: "BĂ i 16. Luyá»‡n táº­p chung" (Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá») â†’ 4 cĂ¢u, cáº§n thĂªm 1
+
+Tá»•ng: 3 chá»§ Ä‘á» cáº§n thĂªm bĂ i
+Tá»•ng cĂ¢u cáº§n thĂªm: 11
