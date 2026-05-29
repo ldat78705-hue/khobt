@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Header } from "@/components/dashboard/Header";
 import {
   Plus, Search, Filter, Grid3X3, List, MoreHorizontal,
@@ -22,8 +23,9 @@ import { Document, Packer, Paragraph, TextRun, AlignmentType, BorderStyle } from
 import { useGrades } from "@/lib/hooks";
 import { useRouter } from "next/navigation";
 
-export default function QuestionsPage() {
+function QuestionsList() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const activeGrades = useGrades();
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -48,6 +50,13 @@ export default function QuestionsPage() {
 
   const [categories, setCategories] = useState<any[]>([]);
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>("");
+
+  useEffect(() => {
+    const cid = searchParams.get("category_id");
+    if (cid) setSelectedCategoryId(cid);
+    const top = searchParams.get("topic");
+    if (top) setSelectedTopic(top as Topic);
+  }, [searchParams]);
 
   useEffect(() => {
     fetch('/api/categories').then(res => res.json()).then(data => setCategories(data)).catch(() => {});
@@ -701,3 +710,12 @@ export default function QuestionsPage() {
     </>
   );
 }
+
+export default function QuestionsPage() {
+  return (
+    <Suspense fallback={<div>Đang tải...</div>}>
+      <QuestionsList />
+    </Suspense>
+  );
+}
+
