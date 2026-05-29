@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { Header } from "@/components/dashboard/Header";
 import { Users, Shield, Lock, Unlock, Search, Mail, Edit, Save, X, Key, UserCheck, UserX, CheckCircle, XCircle, Clock } from "lucide-react";
 import { cn, formatDate } from "@/lib/utils";
@@ -31,7 +31,10 @@ export default function AdminUsersPage() {
   const [newPassword, setNewPassword] = useState("");
   const [filterTab, setFilterTab] = useState<FilterTab>('all');
 
+  const latestRequest = useRef<number>(0);
+
   const fetchUsers = useCallback(async () => {
+    const requestId = ++latestRequest.current;
     setIsLoading(true);
     try {
       if (isDemoMode) {
@@ -41,6 +44,7 @@ export default function AdminUsersPage() {
         if (searchQuery) params.append("search", searchQuery);
 
         const res = await fetch(`/api/users?${params.toString()}`);
+        if (requestId !== latestRequest.current) return;
         if (res.ok) {
           const data = await res.json();
           setUsers(data || []);
@@ -49,9 +53,9 @@ export default function AdminUsersPage() {
         }
       }
     } catch {
-      toast.error("Không thể tải danh sách người dùng");
+      if (requestId === latestRequest.current) toast.error("Không thể tải danh sách người dùng");
     } finally {
-      setIsLoading(false);
+      if (requestId === latestRequest.current) setIsLoading(false);
     }
   }, [searchQuery]);
 
