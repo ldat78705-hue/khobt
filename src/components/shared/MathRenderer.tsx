@@ -50,9 +50,6 @@ export const MathRenderer = memo(MathRendererInner);
 export function renderMathContent(text: string): string {
   if (!text) return '';
 
-  // Clean up scattered $ signs (e.g. from broken MathType imports)
-  text = text.replace(/\$\s*\$/g, ' ');
-
   // Chuẩn hóa các ký tự đặc biệt hay gặp từ Word có thể làm KaTeX lỗi (ParseError)
   text = text.replace(/–/g, '-').replace(/—/g, '-'); // en-dash, em-dash -> hyphen
   text = text.replace(/\u00A0/g, ' '); // non-breaking space -> space
