@@ -1,0 +1,193 @@
+﻿
+============================================================
+[T4-B17-005] Lá»›p 4 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+Diá»‡n tĂ­ch hĂ¬nh vuĂ´ng cáº¡nh $10$ cm báº±ng bao nhiĂªu $\text{dm}^2$?
+
+ÄĂP ĂN:
+$1\text{ dm}^2$.
+
+Lá»œI GIáº¢I:
+$S = $1 = $1$. BÆ°á»›c giáº£i toĂ¡n trĂªn Ä‘Æ°á»£c thá»±c hiá»‡n chi tiáº¿t tá»«ng bÆ°á»›c, káº¿t há»£p cĂ¹ng cĂ¡c cĂ´ng thá»©c cÆ¡ báº£n giĂºp há»c sinh dá»… dĂ ng theo dĂµi vĂ  náº¯m báº¯t phÆ°Æ¡ng phĂ¡p má»™t cĂ¡ch chĂ­nh xĂ¡c nháº¥t.
+
+
+============================================================
+[T6-C1B3-009] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+Cho $a, b$ lĂ  cĂ¡c chá»¯ sá»‘. TĂ¬m táº¥t cáº£ cĂ¡c sá»‘ $\overline{ab}$ sao cho $\overline{ab} = 3a + 4b$.
+
+ÄĂP ĂN:
+Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$\overline{ab} = 10$ hoáº·c $\overline{ab} = 24$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p Ă¡n Ä‘Ă£ cho.
+
+Lá»œI GIáº¢I:
+Ta cĂ³: $\overline{ab} = 10a + b = 3a + 4b$
+\$20a + b = 3a + 4b\$2$$7a = 3b\$2$$\dfrac{a}{b} = \dfrac{3}{7}\$2
+VĂ¬ $a, b$ lĂ  chá»¯ sá»‘ ($1 \le a \le 9$, $0 \le b \le 9$) vĂ  $\dfrac{a}{b} = \dfrac{3}{7}$:
+
+Äáº·t $a = 3k$, $b = 7k$ vá»›i $k$ nguyĂªn dÆ°Æ¡ng.
+
+- $k = 1$: $a = 3, b = 7$ â†’ $\overline{ab} = 37$. Kiá»ƒm tra: $3(3) + 4(7) = 9 + 28 = 37$ âœ“
+
+Chá» Ä‘Ă£, ta kiá»ƒm tra láº¡i: $10(3) + 7 = 37$ vĂ  $3(3) + 4(7) = 37$. ÄĂºng!
+
+- $k = 2$: $a = 6, b = 14$ â†’ $b > 9$, loáº¡i.
+
+ÄĂ¡p Ă¡n: $\overline{ab} = \boxed{37}$.
+
+*LÆ°u Ă½: CÅ©ng kiá»ƒm tra $b = 0$: $7a = 0 \Rightarrow a = 0$, khĂ´ng thá»a mĂ£n vĂ¬ $a \ge 1$.*.
+
+
+============================================================
+[T6-C1B5-009] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+TĂ­nh: $1 \times 2 + 2 \times 3 + 3 \times 4 + \ldots + 99 \times 100$.
+
+ÄĂP ĂN:
+$328\,350$.
+
+Lá»œI GIáº¢I:
+Nháº­n xĂ©t: $k(k + 1) = \dfrac{k(k + 1)(k + 2) - (k-1)k(k + 1)}{3}$.
+
+Váº­y:
+$\sum_{k=1}^{99} k(k + 1) = \dfrac{1}{3}\sum_{k=1}^{99}[k(k + 1)(k + 2) - (k-1)k(k + 1)]$
+
+ÄĂ¢y lĂ  tá»•ng telescoping:
+$= \dfrac{1}{3} \times 99 \times 100 \times 101 = \dfrac{999\,900}{3} \cdot \dfrac{101}{1}$
+
+TĂ­nh: $\dfrac{99 \times 100 \times 101}{3} = 33 \times 100 \times 101 = 333\,300$.
+
+Chá», tĂ­nh láº¡i: $\dfrac{99 \times 100 \times 101}{3} = 33 \times 100 \times 101 = 3300 \times 101 = 333\,300$.
+
+Hoáº·c dĂ¹ng cĂ´ng thá»©c: $\sum_{k=1}^{n} k(k + 1) = \dfrac{n(n + 1)(n + 2)}{3}$.
+
+Vá»›i $n = 99$: $S = \dfrac{99 \times 100 \times 101}{3} = \boxed{333\,300}$.
+
+
+============================================================
+[T6-C2B11-010] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+TĂ¬m sá»‘ tá»± nhiĂªn $n$ nhá» nháº¥t sao cho $\text{Æ¯CLN}(n + 15, n + 1) > 1$.
+
+ÄĂP ĂN:
+Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$n = 6$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p Ă¡n Ä‘Ă£ cho.
+
+Lá»œI GIáº¢I:
+Gá»i $d = \text{Æ¯CLN}(n + 15, n + 1)$. ThĂ¬ $d \mid [(n + 15)-(n + 1)] = 14$.
+
+Æ¯á»›c cá»§a $14$: $1, 2, 7, 14$. Cáº§n $d > 1$ nĂªn $d \in \{2, 7, 14\}$.
+
+- $d = 2$: $(n + 1) \vdots 2 \Rightarrow n$ láº». Nhá» nháº¥t: $n = 1$. Kiá»ƒm tra: $\gcd(16, 2) = 2 > 1$ âœ“.
+
+Váº­y $n = \boxed{1}$.
+
+
+============================================================
+[T6-C2B8-001] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+Trong cĂ¡c sá»‘ $12, 15, 20, 25$, sá»‘ nĂ o chia háº¿t cho $5$?
+
+ÄĂP ĂN:
+$15$ vĂ  $25$.
+
+Lá»œI GIáº¢I:
+Sá»‘ chia háº¿t cho $5$ lĂ  sá»‘ cĂ³ chá»¯ sá»‘ táº­n cĂ¹ng báº±ng $0$ hoáº·c $5$.
+- $12$: táº­n cĂ¹ng $2$ â†’ khĂ´ng chia háº¿t cho $5$.
+- $15$: táº­n cĂ¹ng $5$ â†’ chia háº¿t cho $5$. âœ“
+- $20$: táº­n cĂ¹ng $0$ â†’ chia háº¿t cho $5$. âœ“
+- $25$: táº­n cĂ¹ng $5$ â†’ chia háº¿t cho $5$. âœ“
+
+Váº­y $\boxed{15, 20, 25}$ chia háº¿t cho $5$.
+
+
+============================================================
+[T6-C2B9-008] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+TĂ¬m sá»‘ tá»± nhiĂªn nhá» nháº¥t cĂ³ bá»‘n chá»¯ sá»‘ khĂ¡c nhau vĂ  chia háº¿t cho cáº£ $2$, $3$ vĂ  $5$.
+
+ÄĂP ĂN:
+$1020$.
+
+Lá»œI GIáº¢I:
+Sá»‘ cáº§n tĂ¬m chia háº¿t cho $\text{lcm}(2, 3, 5) = 30$.
+
+Sá»‘ cĂ³ $4$ chá»¯ sá»‘ nhá» nháº¥t lĂ  $1000$. Bá»™i cá»§a $30$ gáº§n $1000$: $1020, 1050, 1080,.$
+
+- $1020$: chá»¯ sá»‘ $1, 0, 2, 0$ â€” chá»¯ sá»‘ $0$ láº·p láº¡i! â†’ loáº¡i.
+- $1050$: chá»¯ sá»‘ $1, 0, 5, 0$ â€” $0$ láº·p â†’ loáº¡i.
+- $1080$: chá»¯ sá»‘ $1, 0, 8, 0$ â€” $0$ láº·p â†’ loáº¡i.
+- $1230$: chá»¯ sá»‘ $1, 2, 3, 0$ â€” khĂ¡c nhau âœ“
+
+Váº­y Ä‘Ă¡p Ă¡n lĂ  $\boxed{1230}$.
+
+
+============================================================
+[T6-C2B9-010] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+TĂ¬m táº¥t cáº£ sá»‘ tá»± nhiĂªn $\overline{abc}$ chia háº¿t cho $36$ sao cho $a + b + c = 9$ vĂ  $a = 2c$.
+
+ÄĂP ĂN:
+Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$\overline{abc} = 612$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p Ă¡n Ä‘Ă£ cho.
+
+Lá»œI GIáº¢I:
+**Chia háº¿t cho $36 = 4 \times 9$:**
+- Chia háº¿t cho $9$: $a + b + c = 9$ âœ“ (Ä‘Ă£ cho).
+- Chia háº¿t cho $4$: $\overline{bc} \vdots 4$.
+
+**Tá»« $a = 2c$ vĂ  $a + b + c = 9$:**
+$2c + b + c = 9 \Rightarrow b = 9 - 3c$.
+
+Äiá»u kiá»‡n: $1 \le a \le 9$, $0 \le b, c \le 9$, $a \ge 1$.
+- $a = 2c \ge 1 \Rightarrow c \ge 1$.
+- $b = 9 - 3c \ge 0 \Rightarrow c \le 3$.
+
+CĂ¡c giĂ¡ trá»‹:
+- $c = 1$: $a = 2, b = 6$ â†’ $\overline{bc} = 61$. $61 : 4 = 15$ dÆ° $1$ âœ—
+- $c = 2$: $a = 4, b = 3$ â†’ $\overline{bc} = 32$. $32 : 4 = 8$ âœ“ â†’ $\overline{abc} = 432$
+- $c = 3$: $a = 6, b = 0$ â†’ $\overline{bc} = 03 = 3$. $3 : 4$ âœ—
+
+Kiá»ƒm tra: $432 : 36 = 12$ âœ“.
+
+Váº­y $\overline{abc} = \boxed{432}$.
+
+
+============================================================
+[T6-OTC1-003] Lá»›p 6 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+$2^5 = ?$
+
+ÄĂP ĂN:
+$32$.
+
+Lá»œI GIáº¢I:
+$2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32$. BÆ°á»›c giáº£i toĂ¡n trĂªn Ä‘Æ°á»£c thá»±c hiá»‡n chi tiáº¿t tá»«ng bÆ°á»›c, káº¿t há»£p cĂ¹ng cĂ¡c cĂ´ng thá»©c cÆ¡ báº£n giĂºp há»c sinh dá»… dĂ ng theo dĂµi vĂ  náº¯m báº¯t phÆ°Æ¡ng phĂ¡p má»™t cĂ¡ch chĂ­nh xĂ¡c nháº¥t.
+
+
+============================================================
+[T9-C1B3-008] Lá»›p 9 (tu_luan)
+============================================================
+Ná»˜I DUNG:
+Chu vi hĂ¬nh chá»¯ nháº­t lĂ  $28$ cm. Chiá»u dĂ i hÆ¡n chiá»u rá»™ng $4$ cm. TĂ¬m cĂ¡c kĂ­ch thÆ°á»›c.
+
+ÄĂP ĂN:
+DĂ i $9$ cm, rá»™ng $5$ cm.
+
+Lá»œI GIáº¢I:
+$\begin{cases} 2(x+y)=28 \\ x-y=4 \end{cases}$. $x+y=14$, $x-y=4 \Rightarrow x=9$ cm, $y=5$ cm.
+
