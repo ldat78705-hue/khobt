@@ -148,10 +148,11 @@ async function main() {
 
     await sql`INSERT INTO public.questions (
       question_code, content, answer, solution, grade, difficulty, 
-      question_type, category_id, status, topic, created_at, updated_at
+      question_type, category_id, status, topic, user_id, created_at, updated_at
     ) VALUES (
       ${q.question_code}, ${q.content}, ${q.answer}, ${q.solution}, 
-      4, ${q.difficulty}, 'tu_luan', ${q.catId}, 'approved', 'so_hoc', NOW(), NOW()
+      4, ${q.difficulty}, 'tu_luan', ${q.catId}, 'approved', 'so_hoc',
+      '8316c34e-765d-4b8c-9364-b683a17e33f8', NOW(), NOW()
     )`;
     inserted++;
     console.log(`✅ [${q.question_code}] Đã thêm`);
