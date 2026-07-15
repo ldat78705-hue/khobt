@@ -1,0 +1,179 @@
+﻿=== KIá»‚M TRA THá»¦ CĂ”NG 30 BĂ€I KHĂ“ ===
+
+
+========== Lá»P 8 â€” Váº¬N Dá»¤NG CAO ==========
+
+--- [T8-C6B23-010] (#1) ---
+Äá»€: TĂ­nh $\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dfrac{1}{3 \cdot 4} +. + \dfrac{1}{99 \cdot 100}$.
+ÄA: $\dfrac{99}{100}$.
+âœ… OK
+
+--- [G8-VDC-6] (#2) ---
+Äá»€: Cho tam giĂ¡c $ABC$ cĂ³ $AB = 9 \text{ cm}$, $AC = 11 \text{ cm}$. TrĂªn cáº¡nh $AB$ láº¥y Ä‘iá»ƒm $M$ sao cho $AM = 2 \text{ cm}$, qua $M$ káº» Ä‘Æ°á»ng tháº³ng song song vá»›i $BC$ cáº¯t $AC$ táº¡i $N$. TĂ­nh tá»‰ sá»‘ diá»‡n tĂ­
+ÄA: $\dfrac{4}{81}$.
+âœ… OK
+
+--- [T8-ENR-04] (#3) ---
+Äá»€: Trong má»™t bá»™ bĂ i tĂº lÆ¡ khÆ¡ 52 lĂ¡, rĂºt ngáº«u nhiĂªn 1 lĂ¡ bĂ i. HĂ£y liá»‡t kĂª cĂ¡c káº¿t quáº£ thuáº­n lá»£i cho biáº¿n cá»‘ "LĂ¡ bĂ i rĂºt Ä‘Æ°á»£c lĂ  lĂ¡ Ăt (A) mĂ u Ä‘á»".
+ÄA: Ăt cÆ¡ vĂ  Ăt rĂ´.
+âœ… OK
+
+--- [T8-C7B28-009] (#4) ---
+Äá»€: ÄÆ°á»ng tháº³ng $y=ax+b$ qua $A(1;5)$ vĂ  $B(3;9)$. TĂ¬m $a,b$.
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$a=2, b=3$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  
+âœ… OK
+
+--- [T8-ENR-11] (#5) ---
+Äá»€: Cho Ä‘Æ¡n thá»©c $A = \left(-\dfrac{2}{3}x^2y^3\right) \cdot \left(\dfrac{9}{4}x^3y\right)$. Thu gá»n Ä‘Æ¡n thá»©c $A$ vĂ  xĂ¡c Ä‘á»‹nh báº­c cá»§a nĂ³.
+ÄA: $A = -\dfrac{3}{2}x^5y^4$, Báº­c 9.
+âœ… OK
+
+--- [G8-VDC-3] (#6) ---
+Äá»€: Cho tam giĂ¡c $ABC$ cĂ³ $AB = 6 \text{ cm}$, $AC = 8 \text{ cm}$. TrĂªn cáº¡nh $AB$ láº¥y Ä‘iá»ƒm $M$ sao cho $AM = 2 \text{ cm}$, qua $M$ káº» Ä‘Æ°á»ng tháº³ng song song vá»›i $BC$ cáº¯t $AC$ táº¡i $N$. TĂ­nh tá»‰ sá»‘ diá»‡n tĂ­c
+ÄA: $\dfrac{4}{36}$.
+âœ… OK
+
+--- [T8-C8B32-010] (#7) ---
+Äá»€: TrÆ°á»ng kháº£o sĂ¡t $500$ HS: $350$ thĂ­ch ToĂ¡n. Æ¯á»›c tĂ­nh XS má»™t HS báº¥t ká»³ thĂ­ch ToĂ¡n. Háº¡n cháº¿?
+ÄA: $0{,}7$. Háº¡n cháº¿: máº«u cĂ³ thá»ƒ thiĂªn lá»‡ch.
+âœ… OK
+
+--- [T8-BTCC2-010] (#8) ---
+Äá»€: TĂ¬m GTNN: $A = x^2+y^2-2x+4y+7$.
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$A_{\min}=2$ táº¡i $x=1, y=-2$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c
+âœ… OK
+
+--- [T8-C10B38-010] (#9) ---
+Äá»€: ChĂ³p tam giĂ¡c Ä‘á»u $V=24\sqrt{3}$, cáº¡nh Ä‘Ă¡y $6$. TĂ­nh chiá»u cao.
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$h=8$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p Ă¡
+âœ… OK
+
+--- [T8-C7B29-009] (#10) ---
+Äá»€: Viáº¿t PT Ä‘Æ°á»ng tháº³ng qua $A(1;2)$ vĂ  $B(4;8)$.
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$y=2x$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p 
+âœ… OK
+
+--- [T8-ENR-17] (#11) ---
+Äá»€: Cho tam giĂ¡c $ABC$ cĂ³ $AB=3, AC=4, BC=5$. Tam giĂ¡c $A'B'C'$ Ä‘á»“ng dáº¡ng vá»›i tam giĂ¡c $ABC$ vĂ  cĂ³ diá»‡n tĂ­ch lĂ  $54$. TĂ­nh cĂ¡c cáº¡nh cá»§a tam giĂ¡c $A'B'C'$.
+ÄA: $9, 12, 15$.
+âœ… OK
+
+--- [T8-C6B24-009] (#12) ---
+Äá»€: RĂºt gá»n $\dfrac{x^2-9}{x^2-6x+9} : \dfrac{x+3}{x-3}$.
+ÄA: $1$.
+âœ… OK
+
+--- [T8-C2B9-010] (#13) ---
+Äá»€: CMR $n^4+4$ khĂ´ng nguyĂªn tá»‘ vá»›i $n > 1$.
+ÄA: Sophie Germain.
+âœ… OK
+
+--- [T8-C9B35-010] (#14) ---
+Äá»€: $\triangle ABC$, $AB=7, BC=24, CA=25$. TĂ­nh diá»‡n tĂ­ch.
+ÄA: $84$.
+âœ… OK
+
+--- [T8-C8B30-009] (#15) ---
+Äá»€: Chá»n ngáº«u nhiĂªn $2$ HS tá»« nhĂ³m $3$ nam, $2$ ná»¯. Liá»‡t kĂª cĂ¡c cĂ¡ch chá»n.
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$C_5^2 = 10$ cĂ¡ch.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p t
+âœ… OK
+
+
+========== Lá»P 9 â€” Váº¬N Dá»¤NG CAO ==========
+
+--- [G9-RW-LS-5] (#1) ---
+Äá»€: Má»™t ngÆ°á»i gá»­i tiáº¿t kiá»‡m 150 triá»‡u Ä‘á»“ng vĂ o ngĂ¢n hĂ ng vá»›i lĂ£i suáº¥t kĂ©p lĂ  $6\% / \text{nÄƒm}$. Há»i sau 2 nÄƒm ngÆ°á»i Ä‘Ă³ nháº­n Ä‘Æ°á»£c tá»•ng cá»™ng cáº£ vá»‘n láº«n lĂ£i lĂ  bao nhiĂªu?
+ÄA: $168.54$ triá»‡u Ä‘á»“ng.
+âœ… OK
+
+--- [G9-ELITE-VOTI-10] (#2) ---
+Äá»€: Giáº£i phÆ°Æ¡ng trĂ¬nh vĂ´ tá»‰: $\sqrt{x + 10} + \sqrt{x + 15} = 5$.
+ÄA: $x = -6$.
+âœ… OK
+
+--- [V10-VIE-020] (#3) ---
+Äá»€: Cho phÆ°Æ¡ng trĂ¬nh $x^2 - (m+5)x - m + 6 = 0$. TĂ¬m $m$ Ä‘á»ƒ phÆ°Æ¡ng trĂ¬nh cĂ³ hai nghiá»‡m $x_1, x_2$ thá»a mĂ£n: $2x_1 + x_2 = 7$.
+ÄA: PT $x^2 - (m+5)x - m + 6 = 0$. $S = m + 5$, $P = -m + 6$.
+Há»‡: $\begin{cases} x_1 + x_2 = m + 5 \\ 2x
+âœ… OK
+
+--- [T9-C8BTC-010] (#4) ---
+Äá»€: Máº­t kháº©u gá»“m $3$ chá»¯ sá»‘ ($0$-$9$). $P$(Ä‘oĂ¡n Ä‘Ăºng)?
+ÄA: $\dfrac{1}{1000}$.
+âœ… OK
+
+--- [G9-ELITE-HPT-4] (#5) ---
+Äá»€: Giáº£i há»‡ phÆ°Æ¡ng trĂ¬nh sau: $\begin{cases} x^2 + y^2 + x + y = 26 \\ xy(x+1)(y+1) = 104 \end{cases}$.
+ÄA: Xem chi tiáº¿t lá»i giáº£i.
+âœ… OK
+
+--- [G9-RW-LS-2] (#6) ---
+Äá»€: Má»™t ngÆ°á»i gá»­i tiáº¿t kiá»‡m 120 triá»‡u Ä‘á»“ng vĂ o ngĂ¢n hĂ ng vá»›i lĂ£i suáº¥t kĂ©p lĂ  $6\% / \text{nÄƒm}$. Há»i sau 2 nÄƒm ngÆ°á»i Ä‘Ă³ nháº­n Ä‘Æ°á»£c tá»•ng cá»™ng cáº£ vá»‘n láº«n lĂ£i lĂ  bao nhiĂªu?
+ÄA: $134.83$ triá»‡u Ä‘á»“ng.
+âœ… OK
+
+--- [G9-ELITE-HPT-9] (#7) ---
+Äá»€: Giáº£i há»‡ phÆ°Æ¡ng trĂ¬nh sau: $\begin{cases} x^2 + y^2 + x + y = 36 \\ xy(x+1)(y+1) = 144 \end{cases}$.
+ÄA: Xem chi tiáº¿t lá»i giáº£i.
+âœ… OK
+
+--- [T9-C5B16-009] (#8) ---
+Äá»€: $(O; R)$ ná»™i tiáº¿p $\triangle ABC$. CMR $S_{\triangle ABC} = \dfrac{1}{2}(AB+BC+CA) \cdot r$ ($r$: bĂ¡n kĂ­nh ná»™i tiáº¿p).
+ÄA: Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$S = pr$ ($p$: ná»­a chu vi).
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c c
+âœ… OK
+
+--- [V10-LPT-048] (#9) ---
+Äá»€: Má»™t nhĂ  vÆ°á»n Ä‘ang trá»“ng 40 cĂ¢y bÆ°á»Ÿi Diá»…n trĂªn má»™t khu Ä‘áº¥t. Trung bĂ¬nh má»—i cĂ¢y cho thu hoáº¡ch 300 quáº£ má»™t vá»¥. Ká»¹ sÆ° nĂ´ng nghiá»‡p Æ°á»›c tĂ­nh ráº±ng, náº¿u trá»“ng xen thĂªm $1$ cĂ¢y bÆ°á»Ÿi vĂ o khu Ä‘áº¥t Ä‘Ă³ thĂ¬ do cháº­t 
+ÄA: â€¢ Gá»i áº©n: Gá»i $x$ lĂ  sá»‘ cĂ¢y trá»“ng thĂªm ($x \ge 0$). Tá»•ng sá»‘ cĂ¢y: $40 + x$.
+â€¢ Láº­p hĂ m sáº£n lÆ°á»£ng:
+â€¢ NÄƒ
+âœ… OK
+
+--- [T9-C2BTC-009] (#10) ---
+Äá»€: Cho $a, b \geq 0$. CMR $\dfrac{a+b}{2} \geq \sqrt{ab}$.
+ÄA: BÄT AM-GM.
+âœ… OK
+
+--- [G9-EXAM-BDT-8] (#11) ---
+Äá»€: Cho $x, y, z$ lĂ  cĂ¡c sá»‘ thá»±c dÆ°Æ¡ng thá»a mĂ£n $x + y + z = 10$. TĂ¬m giĂ¡ trá»‹ nhá» nháº¥t cá»§a biá»ƒu thá»©c $P = \dfrac{x^2}{y+z} + \dfrac{y^2}{z+x} + \dfrac{z^2}{x+y}$.
+ÄA: $\min P = \dfrac{10}{2}$.
+âœ… OK
+
+--- [T9-C10LTC-009] (#12) ---
+Äá»€: $R$ cáº§u tÄƒng $3$ láº§n. $V$ tÄƒng máº¥y láº§n?
+ÄA: $27$ láº§n.
+âœ… OK
+
+--- [G9-RW-HPT-4] (#13) ---
+Äá»€: Má»™t siĂªu thá»‹ Ä‘iá»‡n mĂ¡y giáº£m giĂ¡. Má»™t chiáº¿c tivi vĂ  má»™t chiáº¿c tá»§ láº¡nh cĂ³ tá»•ng giĂ¡ niĂªm yáº¿t lĂ  24 triá»‡u Ä‘á»“ng. Trong Ä‘á»£t khuyáº¿n mĂ£i, tivi giáº£m $10\%$ vĂ  tá»§ láº¡nh giáº£m $20\%$, do Ä‘Ă³ ngÆ°á»i mua chá»‰ pháº£i tráº£ 2
+ÄA: Tivi: 14 triá»‡u, Tá»§ láº¡nh: 10 triá»‡u (VĂ­ dá»¥).
+âœ… OK
+
+--- [G9-RW-LS-4] (#14) ---
+Äá»€: Má»™t ngÆ°á»i gá»­i tiáº¿t kiá»‡m 140 triá»‡u Ä‘á»“ng vĂ o ngĂ¢n hĂ ng vá»›i lĂ£i suáº¥t kĂ©p lĂ  $6\% / \text{nÄƒm}$. Há»i sau 2 nÄƒm ngÆ°á»i Ä‘Ă³ nháº­n Ä‘Æ°á»£c tá»•ng cá»™ng cáº£ vá»‘n láº«n lĂ£i lĂ  bao nhiĂªu?
+ÄA: $157.30$ triá»‡u Ä‘á»“ng.
+âœ… OK
+
+--- [T9-C6B19-010] (#15) ---
+Äá»€: TĂ¬m $m$ Ä‘á»ƒ PT $x^2 + (m-1)x + m = 0$ cĂ³ $2$ nghiá»‡m dÆ°Æ¡ng.
+ÄA: $0 < m \leq \dfrac{(m-1)^2}{4}$... tĂ­nh.
+âœ… OK
+
