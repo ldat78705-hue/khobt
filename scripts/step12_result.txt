@@ -1,0 +1,115 @@
+﻿=== BÆ¯á»C 12: KIá»‚M TRA SĂ‚U ===
+
+--- A. KIá»‚M TRA 3 "FALSE POSITIVE" ---
+
+đŸ“ [T4-B68-004] (tu_luan)
+   Ná»™i dung: "TĂ­nh: $357 \times 24$."
+   ÄĂ¡p Ă¡n: "$8\,568$"
+   Lá»i giáº£i: "$357 \times 24 = 8\,568$. Tháº­t váº­y, báº±ng cĂ¡ch Ă¡p dá»¥ng cĂ¡c Ä‘á»‹nh lĂ½ vĂ  quy táº¯c phĂ©p tĂ­nh Ä‘Ă£ há»c, ta dá»…..."
+
+đŸ“ [T5-B42-003] (tu_luan)
+   Ná»™i dung: "Äá»ƒ thá»±c hiá»‡n phĂ©p tĂ­nh $15 + 24$ trĂªn mĂ¡y tĂ­nh, ta báº¥m cĂ¡c nĂºt theo thá»© tá»± nĂ o?"
+   ÄĂ¡p Ă¡n: "Thá»±c hiá»‡n phĂ©p tĂ­nh theo yĂªu cáº§u bĂ i toĂ¡n:
+$1$, $5$, $+$, $2$, $4$, $=$.
+
+NhÆ° váº­y, káº¿t quáº£ chĂ­nh xĂ¡c cá»§a phĂ©p tĂ­nh lĂ  Ä‘Ă¡p Ă¡n Ä‘Ă£ cho."
+   Lá»i giáº£i: "Báº¥m $15$, sau Ä‘Ă³ dáº¥u $+$, sau Ä‘Ă³ $24$, vĂ  dáº¥u $=$. BÆ°á»›c giáº£i toĂ¡n trĂªn Ä‘Æ°á»£c thá»±c hiá»‡n chi tiáº¿t tá»«ng ..."
+
+đŸ“ [T6-C3B14-003] (tu_luan)
+   Ná»™i dung: "TĂ­nh: $15 - 23$."
+   ÄĂ¡p Ă¡n: "$-8$."
+   Lá»i giáº£i: "$15 - 23 = 15 + (-23) = -(23 - 15) = \boxed{-8}$. BÆ°á»›c giáº£i toĂ¡n trĂªn Ä‘Æ°á»£c thá»±c hiá»‡n chi tiáº¿t tá»«ng b..."
+
+--- B. CĂ‚U MCQ ĂT HÆ N 4 OPTIONS ---
+
+  â ï¸ [G5-MCQ-M-38F9] Lá»›p 5: 2 options
+     Ná»™i dung: "Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng cĂ³ cáº¡nh $3 \text{ cm}$ lĂ :..."
+     Options: [{"key":"A","value":"B"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G5-MCQ-M-B9CC] Lá»›p 5: 2 options
+     Ná»™i dung: "Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng cĂ³ cáº¡nh $4 \text{ cm}$ lĂ :..."
+     Options: [{"key":"A","value":"C"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G6-BATCH1-0F0C] Lá»›p 6: 2 options
+     Ná»™i dung: "Táº­p há»£p cĂ¡c chá»¯ cĂ¡i tiáº¿ng Viá»‡t cĂ³ máº·t trong tá»« "TOĂN" lĂ :..."
+     Options: [{"key":"A","value":"B"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G6-FIN-7A21] Lá»›p 6: 2 options
+     Ná»™i dung: "HĂ¬nh vuĂ´ng cĂ³ Ä‘á»™ dĂ i cáº¡nh lĂ  $a = 4$ cm. Chu vi cá»§a hĂ¬nh vuĂ´ng Ä‘Ă³ lĂ :..."
+     Options: [{"key":"A","value":"A"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G6-FIN-D81E] Lá»›p 6: 2 options
+     Ná»™i dung: "Cho Ä‘oáº¡n tháº³ng AB dĂ i 2 cm. Gá»i I lĂ  trung Ä‘iá»ƒm cá»§a AB. Äá»™ dĂ i Ä‘oáº¡n IA lĂ :..."
+     Options: [{"key":"A","value":"A"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G8-C123-5EAF] Lá»›p 8: 2 options
+     Ná»™i dung: "Khai triá»ƒn $(x + 1)(x + 1)$ ta Ä‘Æ°á»£c:..."
+     Options: [{"key":"A","value":"A"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+  â ï¸ [G8-C123-7636] Lá»›p 8: 2 options
+     Ná»™i dung: "Káº¿t quáº£ cá»§a phĂ©p chia $(2x^3 + 3x^2) : (1x^2)$ lĂ :..."
+     Options: [{"key":"A","value":"A"},{"key":"B","value":"Má»™t Ä‘Ă¡p Ă¡n khĂ¡c"}]
+     CA: A
+
+Tá»•ng MCQ < 3 options: 7
+
+--- C. CĂ‚U REJECTED ---
+
+Tá»•ng rejected: 28
+  [T4-B1-002] Lá»›p 4 (tu_luan): "Viáº¿t sá»‘: "SĂ¡u mÆ°Æ¡i ba nghĂ¬n hai trÄƒm linh nÄƒm"...."
+  [T4-B10-002] Lá»›p 4 (tu_luan): "Viáº¿t sá»‘: "ChĂ­n trÄƒm linh má»™t nghĂ¬n bá»‘n trÄƒm"...."
+  [7-12-010] Lá»›p 7 (tu_luan): "Cho $\Delta ABC$cĂ³ $\widehat{B}={{45}^0}$, $\widehat{C}={{30..."
+  [7-15-003] Lá»›p 7 (tu_luan): "Cho biáº¿t Ä‘áº¡i lÆ°á»£ng y tá»‰ lá»‡ nghá»‹ch vá»›i Ä‘áº¡i lÆ°á»£ng x theo há»‡ sá»‘..."
+  [7-16-002] Lá»›p 7 (tu_luan): "Cho bá»‘n sá»‘ $3;7;x; y$vá»›i $y\ne 0$vĂ  $3x=7y$, má»™t tá»‰ lá»‡ thá»©c ..."
+  [7-16-003] Lá»›p 7 (tu_luan): "Chá»n Ä‘Ă¡p Ă¡n Ä‘Ăºng. Vá»›i cĂ¡c Ä‘iá»u kiá»‡n cĂ¡c phĂ¢n thá»©c cĂ³ nghÄ©a t..."
+  [7-16-004] Lá»›p 7 (tu_luan): "Chá»n Ä‘Ă¡p Ă¡n sai. Vá»›i Ä‘iá»u kiá»‡n cĂ¡c phĂ¢n thá»©c cĂ³ nghÄ©a vĂ  $\d..."
+  [7-16-005] Lá»›p 7 (tu_luan): "Cho biáº¿t Ä‘áº¡i lÆ°á»£ng y tá»‰ lá»‡ thuáº­n vá»›i Ä‘áº¡i lÆ°á»£ng x theo há»‡ sá»‘ ..."
+  [7-16-007] Lá»›p 7 (tu_luan): "Cho x vĂ Â y lĂ  hai Ä‘áº¡i lÆ°á»£ng tá»‰ lá»‡ nghá»‹ch. Khi $x=6$thĂ¬ $y=7$..."
+  [7-17-002] Lá»›p 7 (tu_luan): "Bá»™ ba Ä‘á»™ dĂ i Ä‘oáº¡n tháº³ng nĂ o sau Ä‘Ă¢y lĂ  Ä‘á»™ dĂ i ba cáº¡nh cá»§a má»™..."
+  [7-17-005] Lá»›p 7 (tu_luan): "Cho $\Delta ABC$ cĂ¢n táº¡i $A$, káº» $AH\bot BC$ táº¡i $H$ta cĂ³:
+
+..."
+  [7-17-006] Lá»›p 7 (tu_luan): "Cho tam giĂ¡c $ABC$ cĂ³ $BC=1 cm, AC=8 cm$ vĂ  Ä‘á»™ dĂ i cáº¡nh $AB$..."
+  [7-17-008] Lá»›p 7 (tu_luan): "Cho $\Delta ABC$ cĂ¢n táº¡i $A$ cĂ³ $AM$ lĂ  Ä‘Æ°á»ng trung tuyáº¿n. K..."
+  [7-17-009] Lá»›p 7 (tu_luan): "Cho $I$ lĂ  giao Ä‘iá»ƒm cá»§a $3$ Ä‘Æ°á»ng phĂ¢n giĂ¡c trong tam giĂ¡c...."
+  [7-17-010] Lá»›p 7 (tu_luan): "Cho tam giĂ¡c $ABC$cĂ³ $\widehat{B}=60{}^\circ$. ÄÆ°á»ng phĂ¢n gi..."
+  [7-20-004] Lá»›p 7 (tu_luan): "Khi chia Ä‘a thá»©c $\left( {{x}^5}+3{{x}^3}-4{{x}^2} \right)$c..."
+  [7-21-001] Lá»›p 7 (tu_luan): "Báº¡n An tung ngáº«u nhiĂªn má»™t Ä‘á»“ng xu. XĂ¡c suáº¥t cá»§a biáº¿n cá»‘: â€œx..."
+  [7-21-005] Lá»›p 7 (tu_luan): "CĂ³ 6 há»c sinh lá»›p 6; 7 há»c sinh lá»›p 7; 8 há»c sinh lá»›p 8 vĂ  9..."
+  [7-22-015] Lá»›p 7 (tu_luan): "(Nháº­n biáº¿t) Quan sĂ¡t biá»ƒu Ä‘á»“ vĂ  cho biáº¿t yáº¿u tá»‘ nĂ o áº£nh hÆ°á»Ÿn..."
+  [7-4-003] Lá»›p 7 (tu_luan): "Sá»‘ ${{x}^{12}}$Â (vá»›i $x\ne 0$) khĂ´ng báº±ng sá»‘ nĂ o trong cĂ¡c s..."
+  [7-4-004] Lá»›p 7 (tu_luan): "Chá»n cĂ¢u Ä‘Ăºng:
+
+A.Â $\left( -2022 \right)^0=0$ B.Â $\left( \df..."
+  [7-7-001] Lá»›p 7 (tu_luan): "Sá»‘ nĂ o sau Ä‘Ă¢y Ä‘Æ°á»£c viáº¿t dÆ°á»›i dáº¡ng sá»‘ tháº­p phĂ¢n vĂ´ háº¡n tuáº§n ..."
+  [7-8-004] Lá»›p 7 (tu_luan): "Sá»‘ vĂ´ tá»‰ lĂ  sá»‘ Ä‘Æ°á»£c viáº¿t dÆ°á»›i dáº¡ng:
+
+A.Â Sá»‘ tá»± nhiĂªn B.Â Sá»‘ ng..."
+  [7-9-003] Lá»›p 7 (tu_luan): "Trong cĂ¡c cĂ¢u sau, cĂ¢u nĂ o sai?
+
+A. Sá»‘ thá»±c Ă¢m nhá» hÆ¡n sá»‘ th..."
+  [T7-C10LT-002] Lá»›p 7 (tu_luan): "CT thá»ƒ tĂ­ch hĂ¬nh láº­p phÆ°Æ¡ng?..."
+  [T7-C10LT-009] Lá»›p 7 (tu_luan): "Cáº¡nh láº­p phÆ°Æ¡ng tÄƒng gáº¥p Ä‘Ă´i. $V$ tÄƒng máº¥y láº§n?..."
+  [T7-C1LTC-005] Lá»›p 7 (tu_luan): "TĂ­nh $(-2)^3+3^2$...."
+  [T7-C1LTC-008] Lá»›p 7 (tu_luan): "TĂ¬m $x$: $|x-1|=3$...."
+
+--- D. THá»NG KĂ PHĂ‚N Bá» ---
+
+Lá»›p | Tá»•ng | TN  | TL   | ÄS  | CĂ³ cat | CĂ³ Ä‘Ă¡p Ă¡n
+----+------+-----+------+-----+--------+----------
+  4  |  675 |  12 |  663 |   0 |   675  |  675
+  5  |  856 |  12 |  844 |   0 |   856  |  856
+  6  | 1162 | 269 |  786 | 105 |  1162  | 1162
+  7  | 1424 | 448 |  932 |  44 |  1424  | 1424
+  8  | 1436 | 435 |  946 |  55 |  1436  | 1436
+  9  | 1355 | 266 | 1011 |  78 |  1355  | 1355
+
+--- E. CĂ‚U APPROVED THIáº¾U ÄĂP ĂN ---
+
+CĂ¢u approved thiáº¿u Ä‘Ă¡p Ă¡n: 0
