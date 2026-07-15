@@ -1,0 +1,151 @@
+﻿=== Sá»¬A CĂ‚U Tá»° LUáº¬N ÄĂP ĂN NGáº®N ===
+
+Tá»•ng: 45 cĂ¢u
+
+âœ… [T4-B17-002] L4: "1" â†’ "$100 \text{ cm}^2$."
+â ï¸ [G5-GEO-TG-10] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho tam giĂ¡c $ABC$ cĂ³ diá»‡n tĂ­ch lĂ  $2$1$. TrĂªn cáº¡nh $BC$ láº¥y Ä‘iá»ƒm $M$ sao cho $B"
+   Sol: "VĂ¬ $BM = \dfrac{1}{3} BC$ nĂªn $MC = \dfrac{2}{3} BC$. Hai tam giĂ¡c $AMC$ vĂ  $ABC"
+â ï¸ [G5-MCQ-M-38F9] L5: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng cĂ³ cáº¡nh $3 \text{ cm}$ lĂ :"
+   Sol: "CĂ´ng thá»©c thá»ƒ tĂ­ch hĂ¬nh láº­p phÆ°Æ¡ng: $V = a \times a \times a = 3 \times 3 \times"
+â ï¸ [G5-MCQ-M-B9CC] L5: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Thá»ƒ tĂ­ch cá»§a hĂ¬nh láº­p phÆ°Æ¡ng cĂ³ cáº¡nh $4 \text{ cm}$ lĂ :"
+   Sol: "CĂ´ng thá»©c thá»ƒ tĂ­ch hĂ¬nh láº­p phÆ°Æ¡ng: $V = a \times a \times a = 4 \times 4 \times"
+â ï¸ [T5-B15-NEW4] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Má»™t trang tráº¡i cĂ³ diá»‡n tĂ­ch $2$ ha. NgÆ°á»i ta dĂ nh $\dfrac{1}{5}$ diá»‡n tĂ­ch Ä‘á»ƒ lĂ "
+   Sol: "**BÆ°á»›c 1:** Äá»•i diá»‡n tĂ­ch trang tráº¡i ra mĂ©t vuĂ´ng.
+$2$ ha $= $1$.$
+
+**BÆ°á»›c 2:** "
+â ï¸ [T5-B18-009] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Khu Ä‘áº¥t $2,4$ ha. DĂ¹ng $\dfrac{3}{4}$ trá»“ng cĂ¢y. Pháº§n trá»“ng cĂ¢y bao nhiĂªu $\text"
+   Sol: "$2,4$ ha $= $1$. $24\,000 \times \dfrac{3}{4} = $1$."
+â ï¸ [T5-B45-004] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Má»™t hĂ¬nh há»™p chá»¯ nháº­t Ä‘Æ°á»£c xáº¿p tá»« 12 khá»‘i láº­p phÆ°Æ¡ng $1 \text{ cm}^3$. Thá»ƒ tĂ­ch "
+   Sol: "Má»—i khá»‘i cĂ³ thá»ƒ tĂ­ch $1 \text{ cm}^3$, $12$ khá»‘i cĂ³ thá»ƒ tĂ­ch 1"
+â ï¸ [T5-B48-005] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "1$ $8\text{ dm}^3$ báº±ng bao nhiĂªu $\text{dm}^3"
+   Sol: "1 = $1$. Cá»™ng thĂªm $8$ lĂ  1"
+â ï¸ [T5-B50-005] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HĂ¬nh há»™p chá»¯ nháº­t cĂ³ Ä‘Ă¡y lĂ  hĂ¬nh vuĂ´ng cáº¡nh $4$ cm, cao $5$ cm. TĂ­nh diá»‡n tĂ­ch t"
+   Sol: "$S_{xq} = (4 + 4)\times 2 \times 5 = 80$. $S_{tp} = 80 + 2 \times (4\times 4) = "
+â ï¸ [T5-B50-007] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HĂ¬nh há»™p cĂ³ tá»•ng diá»‡n tĂ­ch hai Ä‘Ă¡y lĂ  $4$1$, diá»‡n tĂ­ch toĂ n pháº§n lĂ  1$. Diá»‡n tĂ­c"
+   Sol: "$S_{xq} = S_{tp} - S_{2\text{ Ä‘Ă¡y}} = 140 - 40 = $1"
+â ï¸ [T5-B51-006] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HĂ¬nh láº­p phÆ°Æ¡ng khĂ´ng cĂ³ náº¯p cáº¡nh $5$ cm. Diá»‡n tĂ­ch cĂ¡c máº·t ngoĂ i lĂ  bao nhiĂªu?"
+   Sol: "Há»™p khĂ´ng náº¯p cĂ³ 5 máº·t. $5 \times 5 \times 5 = $1"
+â ï¸ [T5-B52-003] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Diá»‡n tĂ­ch Ä‘Ă¡y hĂ¬nh há»™p lĂ  $2$1$, chiá»u cao $6$ cm. Thá»ƒ tĂ­ch$?"
+   Sol: "$V = S_{\text{Ä‘Ă¡y}} \times h = 20 \times 6 = 120 \text{ cm}^3$."
+â ï¸ [T5-B53-003] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Diá»‡n tĂ­ch má»™t máº·t cá»§a HLP lĂ  $2$1$. Thá»ƒ tĂ­ch HLP lĂ $?"
+   Sol: "Cáº¡nh $= 5$ cm (vĂ¬ $5 \times 5 = 25$). $V = 5 \times 5 \times 5 = 125 \text{ cm}^"
+â ï¸ [T5-B54-006] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Má»±c nÆ°á»›c trong bá»ƒ cĂ¡ HHCN kĂ­ch thÆ°á»›c $40 \times 30 \times 20$ (cm) Ä‘ang cao $15$"
+   Sol: "$V_{\text{nÆ°á»›c}} = 40 \times 30 \times 15 = $1"
+â ï¸ [T5-B55-003] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HLP cĂ³ thá»ƒ tĂ­ch 1$. Diá»‡n tĂ­ch toĂ n pháº§n$?"
+   Sol: "Cáº¡nh $5$ cm. $S_{tp} = 5 \times 5 \times 6 = 150 \text{ cm}^2$."
+âœ… [T5-B55-005] L5: "1" â†’ "$48$ ($\text{Ä‘Æ¡n vá»‹}^2$)."
+â ï¸ [T5-B9-008] L5: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HCN dĂ i $15$ cm, rá»™ng báº±ng $\dfrac{2}{3}$ dĂ i. TĂ­nh diá»‡n tĂ­ch."
+   Sol: "Rá»™ng $= 15 \times \dfrac{2}{3} = 10$ cm. $S = 15 \times 10 = $150 \text{ cm}$^2$"
+âœ… [FINAL-G6-12] L6: "1" â†’ "$18,2$ ($\text{Ä‘Æ¡n vá»‹}^2$)."
+â ï¸ [G6-BATCH1-0F0C] L6: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Táº­p há»£p cĂ¡c chá»¯ cĂ¡i tiáº¿ng Viá»‡t cĂ³ máº·t trong tá»« "TOĂN" lĂ :"
+   Sol: "Táº­p há»£p cĂ¡c chá»¯ cĂ¡i gá»“m $T, O, Ă, N$. Má»—i chá»¯ cĂ¡i xuáº¥t hiá»‡n 1 láº§n, phĂ¢n cĂ¡ch nha"
+â ï¸ [G6-FIN-7A21] L6: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "HĂ¬nh vuĂ´ng cĂ³ Ä‘á»™ dĂ i cáº¡nh lĂ  $a = 4$ cm. Chu vi cá»§a hĂ¬nh vuĂ´ng Ä‘Ă³ lĂ :"
+   Sol: "Chu vi hĂ¬nh vuĂ´ng lĂ  $C = 4a = 4 \cdot 4 = 16$ cm."
+â ï¸ [G6-FIN-D81E] L6: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho Ä‘oáº¡n tháº³ng AB dĂ i 2 cm. Gá»i I lĂ  trung Ä‘iá»ƒm cá»§a AB. Äá»™ dĂ i Ä‘oáº¡n IA lĂ :"
+   Sol: "I lĂ  trung Ä‘iá»ƒm cá»§a AB nĂªn $IA = IB = \dfrac{AB}{2} = \dfrac{2}{2} = 1$ cm."
+â ï¸ [7-12-010] L7: "B." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho $\Delta ABC$cĂ³ $\widehat{B}={{45}^0}$, $\widehat{C}={{30}^0}$. ÄÆ°á»ng trung t"
+   Sol: "VĂ¬ Ä‘iá»ƒm $D$ náº±m trĂªn Ä‘Æ°á»ng trung trá»±c cá»§a Ä‘oáº¡n tháº³ng $BC$ nĂªn $D$ cĂ¡ch Ä‘á»u hai Ä‘"
+â ï¸ [7-15-003] L7: "B." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho biáº¿t Ä‘áº¡i lÆ°á»£ng y tá»‰ lá»‡ nghá»‹ch vá»›i Ä‘áº¡i lÆ°á»£ng x theo há»‡ sá»‘ tá»‰ lá»‡ $a=30.$ 
+
+Cáº·p"
+   Sol: "VĂ¬ Ä‘áº¡i lÆ°á»£ng $y$ tá»‰ lá»‡ nghá»‹ch vá»›i Ä‘áº¡i lÆ°á»£ng $x$ theo há»‡ sá»‘ tá»‰ lá»‡ $a=30$ nĂªn ta c"
+âœ… [7-16-003] L7: "A." â†’ "- ÄĂ¡p Ă¡n A: $\dfrac{x+y}{a+b}$ lĂ  Ä‘Ăºng tĂ­nh cháº¥t."
+âœ… [7-16-004] L7: "D." â†’ "D ghi máº«u lĂ  $b+f-d$."
+â ï¸ [7-16-007] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho x vĂ Â y lĂ  hai Ä‘áº¡i lÆ°á»£ng tá»‰ lá»‡ nghá»‹ch. Khi $x=6$thĂ¬ $y=7$. TĂ¬m $y$ khi $x=3$	"
+   Sol: "VĂ¬ $x$ vĂ  $y$ lĂ  hai Ä‘áº¡i lÆ°á»£ng tá»‰ lá»‡ nghá»‹ch nĂªn ta cĂ³ há»‡ sá»‘ tá»‰ lá»‡ $k = x \cdot y"
+â ï¸ [7-17-002] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Bá»™ ba Ä‘á»™ dĂ i Ä‘oáº¡n tháº³ng nĂ o sau Ä‘Ă¢y lĂ  Ä‘á»™ dĂ i ba cáº¡nh cá»§a má»™t tam giĂ¡c?
+
+A. $2 c"
+   Sol: "Äá»ƒ ba Ä‘á»™ dĂ i táº¡o thĂ nh má»™t tam giĂ¡c, chĂºng pháº£i thá»a mĂ£n **Báº¥t Ä‘áº³ng thá»©c tam giĂ¡"
+â ï¸ [7-17-005] L7: "A." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho $\Delta ABC$ cĂ¢n táº¡i $A$, káº» $AH\bot BC$ táº¡i $H$ta cĂ³:
+
+A. $AH<AB$ B. $AH>AB"
+   Sol: "Káº» $AH \perp BC$ táº¡i $H$, nĂªn $AH$ lĂ  Ä‘Æ°á»ng vuĂ´ng gĂ³c háº¡ tá»« $A$ xuá»‘ng Ä‘Æ°á»ng tháº³n"
+â ï¸ [7-17-006] L7: "A." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho tam giĂ¡c $ABC$ cĂ³ $BC=1 cm, AC=8 cm$ vĂ  Ä‘á»™ dĂ i cáº¡nh $AB$ lĂ  má»™t sá»‘ nguyĂªn$(c"
+   Sol: "Trong tam giĂ¡c $ABC$, theo báº¥t Ä‘áº³ng thá»©c tam giĂ¡c, ta cĂ³ chiá»u dĂ i má»™t cáº¡nh luĂ´n"
+âœ… [7-17-008] L7: "D." â†’ "cáº£ 3 tĂ­nh cháº¥t $A, B, C$ Ä‘á»u Ä‘Ăºng."
+âœ… [7-17-009] L7: "A." â†’ "giao Ä‘iá»ƒm $I$ cĂ¡ch Ä‘á»u 3 cáº¡nh cá»§a tam giĂ¡c."
+â ï¸ [7-17-010] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho tam giĂ¡c $ABC$cĂ³ $\widehat{B}=60{}^\circ$. ÄÆ°á»ng phĂ¢n giĂ¡c cá»§a gĂ³c $\widehat"
+   Sol: "Trong $\Delta ABC$, tá»•ng ba gĂ³c lĂ  $180^\circ$.
+Ta cĂ³ $\widehat{A} + \widehat{C}"
+â ï¸ [7-18-022] L7: "2." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Cho $M\left( x \right)=2{{x}^3}-{{x}^2}+x$ vĂ  $N\left( x \right)=2{{x}^2}-2{{x}^"
+   Sol: "Ta cĂ³: 
+$M(x) + N(x) = (2x^3 - x^2 + x) + (2x^2 - 2x^3 + 2x - 1)$
+$= (2x^3 - 2x^"
+âœ… [7-20-004] L7: "B." â†’ ", B lĂ  Ä‘Ă¡p Ă¡n chĂ­nh xĂ¡c."
+âœ… [7-21-001] L7: "A." â†’ "cĂ³ thá»ƒ xáº£y ra: "máº·t sáº¥p" hoáº·c "máº·t ngá»­a"."
+â ï¸ [7-21-005] L7: "D." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "CĂ³ 6 há»c sinh lá»›p 6; 7 há»c sinh lá»›p 7; 8 há»c sinh lá»›p 8 vĂ  9 há»c sinh lá»›p 9. TĂ­n"
+   Sol: "Tá»•ng sá»‘ há»c sinh lĂ : $6 + 7 + 8 + 9 = 30$ (há»c sinh).
+Sá»‘ há»c sinh KHĂ”NG pháº£i lĂ  "
+â ï¸ [7-22-015] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "(Nháº­n biáº¿t) Quan sĂ¡t biá»ƒu Ä‘á»“ vĂ  cho biáº¿t yáº¿u tá»‘ nĂ o áº£nh hÆ°á»Ÿng nháº¥t Ä‘áº¿n sá»± phĂ¡t t"
+   Sol: "*(LÆ°u Ă½: Do thiáº¿u áº£nh biá»ƒu Ä‘á»“, cĂ¢u tráº£ lá»i dÆ°á»›i Ä‘Ă¢y dá»±a vĂ o kiáº¿n thá»©c Sinh há»c/K"
+âœ… [7-4-003] L7: "C." â†’ "sá»‘ $x^{12}$ **khĂ´ng báº±ng** sá»‘ á»Ÿ Ä‘Ă¡p Ă¡n C."
+â ï¸ [7-4-004] L7: "D." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Chá»n cĂ¢u Ä‘Ăºng:
+
+A.Â $\left( -2022 \right)^0=0$ B.Â $\left( \dfrac{1}{3} \right)\cd"
+   Sol: "Kiá»ƒm tra tá»«ng Ä‘Ă¡p Ă¡n:
+A. $(-2022)^0 = 1 \ne 0$ (Sai).
+B. $\left(\dfrac{1}{3}\rig"
+â ï¸ [7-7-001] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Sá»‘ nĂ o sau Ä‘Ă¢y Ä‘Æ°á»£c viáº¿t dÆ°á»›i dáº¡ng sá»‘ tháº­p phĂ¢n vĂ´ háº¡n tuáº§n hoĂ n?
+
+A. $\dfrac{27"
+   Sol: "ÄÆ°a cĂ¡c phĂ¢n sá»‘ vá» dáº¡ng tá»‘i giáº£n vĂ  phĂ¢n tĂ­ch máº«u sá»‘ ra thá»«a sá»‘ nguyĂªn tá»‘:
+A. $\"
+â ï¸ [7-8-004] L7: "D." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Sá»‘ vĂ´ tá»‰ lĂ  sá»‘ Ä‘Æ°á»£c viáº¿t dÆ°á»›i dáº¡ng:
+
+A.Â Sá»‘ tá»± nhiĂªn B.Â Sá»‘ nguyĂªn
+
+C.Â Sá»‘ vĂ´ tá»‰ D."
+   Sol: "Theo Ä‘á»‹nh nghÄ©a, sá»‘ vĂ´ tá»‰ lĂ  sá»‘ Ä‘Æ°á»£c viáº¿t dÆ°á»›i dáº¡ng **sá»‘ tháº­p phĂ¢n vĂ´ háº¡n khĂ´ng "
+â ï¸ [7-9-003] L7: "C." â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Trong cĂ¡c cĂ¢u sau, cĂ¢u nĂ o sai?
+
+A. Sá»‘ thá»±c Ă¢m nhá» hÆ¡n sá»‘ thá»±c dÆ°Æ¡ng. 
+
+B. Sá»‘ tá»±"
+   Sol: "PhĂ¢n tĂ­ch tá»«ng phĂ¡t biá»ƒu:
+A. Sá»‘ thá»±c Ă¢m luĂ´n nhá» hÆ¡n sá»‘ thá»±c dÆ°Æ¡ng. (ÄĂºng)
+B. Sá»‘"
+â ï¸ [G8-C123-5EAF] L8: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Khai triá»ƒn $(x + 1)(x + 1)$ ta Ä‘Æ°á»£c:"
+   Sol: "$(x + 1)(x + 1) = x^2 + x + 1x + 1 = x^2 + 2x + 1$."
+â ï¸ [G8-C123-7636] L8: "A" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Káº¿t quáº£ cá»§a phĂ©p chia $(2x^3 + 3x^2) : (1x^2)$ lĂ :"
+   Sol: "$Chia tá»«ng háº¡ng tá»­: dfrac{2x^3}{1x^2} + \dfrac{3x^2}{1x^2} = 2x + 3.$"
+â ï¸ [T9-KHOI-08] L9: "1" â€” cáº§n xem thá»§ cĂ´ng
+   Äá»: "Má»™t xĂ­ nghiá»‡p cáº§n lĂ m $100$ chiáº¿c nĂ³n lĂ¡ dáº¡ng hĂ¬nh nĂ³n. Biáº¿t bĂ¡n kĂ­nh Ä‘Ă¡y nĂ³n lĂ "
+   Sol: "Diá»‡n tĂ­ch lĂ¡ cho 1 chiáº¿c nĂ³n lĂ  diá»‡n tĂ­ch xung quanh hĂ¬nh nĂ³n: $S_{xq} = \pi r l"
+
+đŸ“ ÄĂ£ sá»­a: 10 | Cáº§n xem thĂªm: 35
