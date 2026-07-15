@@ -1,0 +1,68 @@
+﻿=== Sá»¬A LATEX Há»NG & BOILERPLATE ===
+
+--- 1. Sá»¬A LATEX TRONG Lá»œI GIáº¢I ---
+
+  âœ… [G9-AUTO-0015] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0017] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [7-9-021] L7: LaTeX Ä‘Ă£ sá»­a
+  â„¹ï¸ [G9-AUTO-0044] L9: KhĂ´ng cáº§n sá»­a (false positive)
+  âœ… [G9-AUTO-0021] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0045] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0042] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0110] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0116] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0119] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0130] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0138] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0157] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0163] L9: LaTeX Ä‘Ă£ sá»­a
+  â„¹ï¸ [G9-AUTO-0166] L9: KhĂ´ng cáº§n sá»­a (false positive)
+  âœ… [G9-AUTO-0031] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0067] L9: LaTeX Ä‘Ă£ sá»­a
+  âœ… [G9-AUTO-0175] L9: LaTeX Ä‘Ă£ sá»­a
+
+  ÄĂ£ sá»­a: 16/18
+
+--- 2. XĂC MINH CĂ‚U BOILERPLATE ---
+
+  â ï¸ [T4-AUTO-4950c969-1] L4: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "Diá»‡n tĂ­ch hĂ¬nh chá»¯ nháº­t cĂ³ chiá»u dĂ i $5$ cm, rá»™ng $3$ cm?"
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B15-002] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "$1$ ha $= ?\text{ m}^2$."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B43-009] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "DĂ¹ng mĂ¡y tĂ­nh tĂ­nh diá»‡n tĂ­ch hĂ¬nh chá»¯ nháº­t cĂ³ chiá»u dĂ i $12,5$ m vĂ  chiá»u rá»™ng $"
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B71-003] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "TĂ­nh diá»‡n tĂ­ch hĂ¬nh tam giĂ¡c Ä‘Ă¡y $5$ cm, cao $4$ cm."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B33-003] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "DT HCN $14 \times 8$ cm?"
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B29-004] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "HĂ¬nh trĂ²n $d = 14$ cm. TĂ­nh DT."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B16-003] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "$1 \text{ cm}^2 = ?\text{ mm}^2$."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B46-009] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "1$ báº±ng bao nhiĂªu $\text{cm}^3"
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B41-007] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "Má»™t máº£nh vÆ°á»n cĂ³ diá»‡n tĂ­ch $5$1$. NgÆ°á»i ta dĂ nh $25\%$ diá»‡n tĂ­ch Ä‘á»ƒ trá»“ng hoa. D"
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B50-009] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "Chu vi Ä‘Ă¡y lĂ  $30$ cm, chiá»u cao $5$ cm. TĂ­nh diá»‡n tĂ­ch xung quanh."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B54-010] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "Thá»ƒ tĂ­ch má»™t cá»¥c táº©y khoáº£ng bao nhiĂªu? (1$, $1\text{ m}^3$, 1$)."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T5-B71-004] L5: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "TĂ­nh diá»‡n tĂ­ch hĂ¬nh thang Ä‘Ă¡y lá»›n $6$ cm, Ä‘Ă¡y bĂ© $4$ cm, cao $3$ cm."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+  â ï¸ [T4-B17-004] L4: ÄĂ¡p Ă¡n chá»‰ boilerplate
+     Äá»: "HCN cĂ³ chiá»u dĂ i $5$ cm, chiá»u rá»™ng $3$ cm. TĂ­nh diá»‡n tĂ­ch."
+     Sol: âŒ Lá»i giáº£i cÅ©ng boilerplate
+
+  CĂ¢u thá»±c sá»± thiáº¿u Ä‘Ă¡p Ă¡n: 13

@@ -1,0 +1,86 @@
+﻿=== RĂ€ SOĂT SĂ‚U Láº¦N 2 ===
+
+Báº¯t Ä‘áº§u: 2026-07-15T05:04:15.006Z
+
+--- 1. LATEX Há»NG TRONG Lá»œI GIáº¢I ---
+
+  âŒ [G9-AUTO-0044] L9: {} khĂ´ng cĂ¢n
+  âŒ [G9-AUTO-0166] L9: {} khĂ´ng cĂ¢n
+
+  Tá»•ng: 2 cĂ¢u cĂ³ LaTeX há»ng trong lá»i giáº£i
+
+--- 2. ÄĂP ĂN BOILERPLATE ---
+
+  CĂ¢u cĂ³ Ä‘Ă¡p Ă¡n/lá»i giáº£i boilerplate: 1663
+  Chá»‰ boilerplate (thiáº¿u Ä‘Ă¡p Ă¡n thá»±c): 0
+
+--- 3. PHĂ‚N Bá» BĂ€I THEO CATEGORY ---
+
+  Categories cĂ³ < 3 bĂ i: 53
+    L4: "Chá»§ Ä‘á» 5: PHĂ‰P Cá»˜NG VĂ€ PHĂ‰P TRá»ª" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 4: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 7: Ă”N Táº¬P Há»ŒC KĂŒ I" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 9: LĂ€M QUEN Vá»I Tá»”NG THá»NG KĂ, XĂC SUáº¤T" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 1: Ă”N Táº¬P VĂ€ Bá»” SUNG" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 8: PHĂ‰P NHĂ‚N VĂ€ PHĂ‰P CHIA" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 2: GĂ“C VĂ€ ÄÆ N Vá» ÄO GĂ“C" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 12: PHĂ‰P NHĂ‚N, PHĂ‰P CHIA PHĂ‚N Sá»" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 13: Ă”N Táº¬P CUá»I NÄ‚M" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 6: ÄÆ¯á»œNG THáº²NG VUĂ”NG GĂ“C. ÄÆ¯á»œNG THáº²NG SONG SONG" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 3: Sá» CĂ“ SĂU CHá»® Sá»" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 10: PHĂ‚N Sá»" â†’ 0 bĂ i
+    L4: "ToĂ¡n lá»›p 4" â†’ 0 bĂ i
+    L4: "Chá»§ Ä‘á» 11: PHĂ‰P Cá»˜NG, PHĂ‰P TRá»ª PHĂ‚N Sá»" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 12: Ă”N Táº¬P CUá»I NÄ‚M" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 7: Tá»ˆ Sá» VĂ€ CĂC BĂ€I TOĂN LIĂN QUAN" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 6: Ă”N Táº¬P Há»ŒC KĂŒ 1" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 3: Má»˜T Sá» ÄÆ N Vá» ÄO DIá»†N TĂCH" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 4: CĂC PHĂ‰P TĂNH Vá»I Sá» THáº¬P PHĂ‚N" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 9: DIá»†N TĂCH VĂ€ THá»‚ TĂCH Cá»¦A Má»˜T Sá» HĂŒNH KHá»I" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 1: Ă”N Táº¬P VĂ€ Bá»” SUNG" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 11: Má»˜T Sá» Yáº¾U Tá» THá»NG KĂ VĂ€ XĂC SUáº¤T" â†’ 0 bĂ i
+    L5: "CHá»¦ Äá»€ 2: Sá» THáº¬P PHĂ‚N" â†’ 1 bĂ i
+    L5: "CHá»¦ Äá»€ 5: Má»˜T Sá» HĂŒNH PHáº²NG, CHU VI VĂ€ DIá»†N TĂCH" â†’ 1 bĂ i
+    L6: "CHÆ¯Æ NG I. Táº¬P Há»¢P CĂC Sá» Tá»° NHIĂN" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG V. TĂNH Äá»I Xá»¨NG Cá»¦A HĂŒNH PHáº²NG TRONG Tá»° NHIĂN" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG III. Sá» NGUYĂN" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG IV. Má»˜T Sá» HĂŒNH PHáº²NG TRONG THá»°C TIá»„N" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG VIII. NHá»®NG HĂŒNH HĂŒNH Há»ŒC CÆ  Báº¢N" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG VII. Sá» THáº¬P PHĂ‚N" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG VI. PHĂ‚N Sá»" â†’ 0 bĂ i
+    L6: "CHÆ¯Æ NG IX. Dá»® LIá»†U VĂ€ XĂC SUáº¤T THá»°C NGHIá»†M" â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng II. Sá» THá»°C." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng III. GĂ“C VĂ€ ÄÆ¯á»œNG THáº²NG SONG SONG." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng IV. TAM GIĂC Báº°NG NHAU." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng IX. QUAN Há»† GIá»®A CĂC Yáº¾U Tá» TRONG Má»˜T TAM GIĂC." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng V. THU THáº¬P VĂ€ BIá»‚U DIá»„N Dá»® LIá»†U." â†’ 0 bĂ i
+    L7: "ChÆ°Æ¡ng VIII. LĂ€M QUEN Vá»I BIáº¾N Cá» VĂ€ XĂC SUáº¤T Cá»¦A BIáº¾N Cá»." â†’ 1 bĂ i
+    L7: "ChÆ°Æ¡ng VII. BIá»‚U THá»¨C Äáº I Sá» VĂ€ ÄA THá»¨C Má»˜T BIáº¾N." â†’ 2 bĂ i
+    L8: "CHÆ¯Æ NG V. Dá»® LIá»†U VĂ€ BIá»‚U Äá»’" â†’ 0 bĂ i
+    L8: "CHÆ¯Æ NG X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N" â†’ 0 bĂ i
+    L8: "CHÆ¯Æ NG III. Tá»¨ GIĂC" â†’ 0 bĂ i
+    L8: "CHÆ¯Æ NG VIII. Má» Äáº¦U Vá»€ TĂNH XĂC SUáº¤T Cá»¦A BIáº¾N Cá»" â†’ 1 bĂ i
+    L8: "CHÆ¯Æ NG IV. Äá»NH LĂ THALES" â†’ 1 bĂ i
+    L8: "CHÆ¯Æ NG VI. PHĂ‚N THá»¨C Äáº I Sá»" â†’ 2 bĂ i
+    L8: "CHÆ¯Æ NG VII. PHÆ¯Æ NG TRĂŒNH Báº¬C NHáº¤T VĂ€ HĂ€M Sá» Báº¬C NHáº¤T" â†’ 2 bĂ i
+    L9: "CHÆ¯Æ NG X. Má»˜T Sá» HĂŒNH KHá»I TRONG THá»°C TIá»„N" â†’ 0 bĂ i
+    L9: "CHÆ¯Æ NG II. PT VĂ€ Báº¤T PT Báº¬C NHáº¤T 1 áº¨N" â†’ 0 bĂ i
+    L9: "CHÆ¯Æ NG VIII. XĂC SUáº¤T Cá»¦A BIáº¾N Cá» TRONG Má»˜T Sá» MĂ” HĂŒNH XĂC SUáº¤T ÄÆ N GIáº¢N" â†’ 0 bĂ i
+    L9: "CHÆ¯Æ NG VII. Táº¦N Sá» VĂ€ Táº¦N Sá» TÆ¯Æ NG Äá»I" â†’ 0 bĂ i
+    L9: "CHÆ¯Æ NG IX. ÄÆ¯á»œNG TRĂ’N NGOáº I TIáº¾P VĂ€ ÄÆ¯á»œNG TRĂ’N Ná»˜I TIáº¾P" â†’ 1 bĂ i
+    L9: "CHÆ¯Æ NG V. ÄÆ¯á»œNG TRĂ’N" â†’ 2 bĂ i
+
+--- 4. Ná»˜I DUNG QUĂ NGáº®N ---
+
+  CĂ¢u ná»™i dung < 15 kĂ½ tá»±: 1
+    [T6-OTC1-003] L6: "$2^5 = ?$" â†’ Ä‘Ă¡p Ă¡n: "$32$."
+
+--- 5. Ná»˜I DUNG QUĂ DĂ€I ---
+
+  CĂ¢u ná»™i dung > 3000 kĂ½ tá»±: 2
+    [7-23-001] L7: 4361 kĂ½ tá»±
+    [7-19-001] L7: 3218 kĂ½ tá»±
+
+
+HoĂ n thĂ nh: 2026-07-15T05:04:17.375Z
