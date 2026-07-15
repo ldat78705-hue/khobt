@@ -26,14 +26,14 @@ export async function GET(req: NextRequest) {
     const sql = neon(databaseUrl);
     
     // Query each table individually - if one fails, the rest continue
-    let categories = [], questions = [], exams = [], exam_questions = [], users = [], favorites = [], saved_exams = [];
-    try { categories = await sql`SELECT * FROM public.categories`; } catch(e) { console.error('[Backup] categories:', e.message); }
-    try { questions = await sql`SELECT * FROM public.questions`; } catch(e) { console.error('[Backup] questions:', e.message); }
-    try { exams = await sql`SELECT * FROM public.exams`; } catch(e) { console.error('[Backup] exams:', e.message); }
-    try { exam_questions = await sql`SELECT * FROM public.exam_questions`; } catch(e) { console.error('[Backup] exam_questions:', e.message); }
-    try { users = await sql`SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users`; } catch(e) { console.error('[Backup] users:', e.message); }
-    try { favorites = await sql`SELECT * FROM public.favorites`; } catch(e) { /* optional table */ }
-    try { saved_exams = await sql`SELECT * FROM public.saved_exams`; } catch(e) { /* optional table */ }
+    let categories: any[] = [], questions: any[] = [], exams: any[] = [], exam_questions: any[] = [], users: any[] = [], favorites: any[] = [], saved_exams: any[] = [];
+    try { categories = await sql`SELECT * FROM public.categories`; } catch(e: any) { console.error('[Backup] categories:', e.message); }
+    try { questions = await sql`SELECT * FROM public.questions`; } catch(e: any) { console.error('[Backup] questions:', e.message); }
+    try { exams = await sql`SELECT * FROM public.exams`; } catch(e: any) { console.error('[Backup] exams:', e.message); }
+    try { exam_questions = await sql`SELECT * FROM public.exam_questions`; } catch(e: any) { console.error('[Backup] exam_questions:', e.message); }
+    try { users = await sql`SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users`; } catch(e: any) { console.error('[Backup] users:', e.message); }
+    try { favorites = await sql`SELECT * FROM public.favorites`; } catch(_) { /* optional table */ }
+    try { saved_exams = await sql`SELECT * FROM public.saved_exams`; } catch(_) { /* optional table */ }
 
     const backupData = {
       version: "1.0",
