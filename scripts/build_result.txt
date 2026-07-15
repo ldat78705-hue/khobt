@@ -1,0 +1,91 @@
+﻿â–² Next.js 16.2.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+âœ“ Compiled successfully in 15.0s
+  Running TypeScript ...
+  Finished TypeScript in 14.2s ...
+  Collecting page data using 3 workers ...
+  Generating static pages using 3 workers (0/56) ...
+  Generating static pages using 3 workers (14/56) 
+node : (node:16880) Warning: `--localstorage-file` was provided without a valid path
+At line:1 char:1
++ node node_modules\next\dist\bin\next build 2>&1 | Out-File -Encoding  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:16880) Wa...ut a valid path:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  Generating static pages using 3 workers (28/56) 
+  Generating static pages using 3 workers (42/56) 
+âœ“ Generating static pages using 3 workers (56/56) in 971ms
+  Finalizing page optimization ...
+
+Route (app)
+â”Œ â—‹ /
+â”œ â—‹ /_not-found
+â”œ â—‹ /admin/backup
+â”œ â—‹ /admin/categories
+â”œ â—‹ /admin/grades
+â”œ â—‹ /admin/review
+â”œ â—‹ /admin/review-exams
+â”œ â—‹ /admin/settings
+â”œ â—‹ /admin/stats
+â”œ â—‹ /admin/stats/categories
+â”œ â—‹ /admin/users
+â”œ Æ’ /api/activity
+â”œ Æ’ /api/admin/backup
+â”œ Æ’ /api/admin/restore
+â”œ Æ’ /api/admin/stats
+â”œ Æ’ /api/admin/stats/categories
+â”œ Æ’ /api/auth/change-password
+â”œ Æ’ /api/auth/forgot-password
+â”œ Æ’ /api/auth/login
+â”œ Æ’ /api/auth/logout
+â”œ Æ’ /api/auth/me
+â”œ Æ’ /api/auth/register
+â”œ Æ’ /api/auth/reset-password
+â”œ Æ’ /api/categories
+â”œ Æ’ /api/config/cloudinary
+â”œ Æ’ /api/exam-questions
+â”œ Æ’ /api/exams
+â”œ Æ’ /api/favorites
+â”œ Æ’ /api/health
+â”œ Æ’ /api/import-word
+â”œ Æ’ /api/likes
+â”œ Æ’ /api/questions
+â”œ Æ’ /api/saved-exams
+â”œ Æ’ /api/seed
+â”œ Æ’ /api/upload
+â”œ Æ’ /api/users
+â”œ â—‹ /dashboard
+â”œ â—‹ /exams
+â”œ Æ’ /exams/[id]
+â”œ Æ’ /exams/[id]/edit
+â”œ â—‹ /exams/auto
+â”œ â—‹ /exams/new
+â”œ â—‹ /favorites
+â”œ â—‹ /forgot-password
+â”œ â—‹ /gioi-thieu
+â”œ â—‹ /history
+â”œ â—‹ /icon.png
+â”œ â—‹ /login
+â”œ â—‹ /questions
+â”œ Æ’ /questions/[id]
+â”œ Æ’ /questions/[id]/edit
+â”œ â—‹ /questions/export
+â”œ â—‹ /questions/import
+â”œ â—‹ /questions/new
+â”œ â—‹ /register
+â”œ â—‹ /reset-password
+â”œ â—‹ /saved-exams
+â”œ â—‹ /test
+â”œ â—‹ /theory
+â”” â—‹ /worksheets
+
+
+Æ’ Proxy (Middleware)
+
+â—‹  (Static)   prerendered as static content
+Æ’  (Dynamic)  server-rendered on demand
+

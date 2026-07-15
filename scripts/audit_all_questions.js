@@ -261,7 +261,6 @@ function checkMathLogic(q) {
 
   // For MCQ: check if answer matches correct_answer
   if (q.question_type === 'trac_nghiem' && q.options && q.correct_answer) {
-    // answer field should match correct_answer for MCQ
     if (q.answer && q.answer.trim().length === 1 && q.correct_answer) {
       if (q.answer.trim().toUpperCase() !== q.correct_answer.trim().toUpperCase()) {
         errors.push(`answer="${q.answer}" không khớp correct_answer="${q.correct_answer}"`);
@@ -269,24 +268,38 @@ function checkMathLogic(q) {
     }
   }
 
+  // Skip "bấm nút máy tính" questions - they ask about button sequences, not computation
+  if (content.includes('máy tính') || content.includes('bấm')) return errors;
+
+  // Helper: extract number from LaTeX answer, handling \, separators and negative signs
+  function extractNumber(text) {
+    if (!text) return null;
+    // Match $-8$ or $8\,568$ or just $123$
+    const m = text.match(/\$?\s*(-?\d[\d,.\s\\]*)\s*\$?/);
+    if (!m) return null;
+    // Remove LaTeX formatting: \, \; \! spaces commas dots
+    const clean = m[1].replace(/\\[,;!]/g, '').replace(/\s/g, '').replace(/,/g, '');
+    return parseInt(clean) || null;
+  }
+
   // Check for basic arithmetic in simple cases
   // Pattern: "Tính: $a + b$" with answer "$c$"
   const simpleAddMatch = content.match(/[Tt]ính[:\s]*\$\s*(\d+)\s*\+\s*(\d+)\s*\$/);
   if (simpleAddMatch) {
     const expected = parseInt(simpleAddMatch[1]) + parseInt(simpleAddMatch[2]);
-    const answerNum = answer.match(/\$?\s*(\d+)\s*\$?/);
-    if (answerNum && parseInt(answerNum[1]) !== expected) {
-      errors.push(`Phép cộng: ${simpleAddMatch[1]}+${simpleAddMatch[2]}=${expected} nhưng đáp án=${answerNum[1]}`);
+    const ansVal = extractNumber(answer);
+    if (ansVal !== null && ansVal !== expected) {
+      errors.push(`Phép cộng: ${simpleAddMatch[1]}+${simpleAddMatch[2]}=${expected} nhưng đáp án=${ansVal}`);
     }
   }
 
-  // Pattern: "Tính: $a - b$"
+  // Pattern: "Tính: $a - b$" — result can be negative
   const simpleSubMatch = content.match(/[Tt]ính[:\s]*\$\s*(\d+)\s*-\s*(\d+)\s*\$/);
   if (simpleSubMatch) {
     const expected = parseInt(simpleSubMatch[1]) - parseInt(simpleSubMatch[2]);
-    const answerNum = answer.match(/\$?\s*(\d+)\s*\$?/);
-    if (answerNum && parseInt(answerNum[1]) !== expected) {
-      errors.push(`Phép trừ: ${simpleSubMatch[1]}-${simpleSubMatch[2]}=${expected} nhưng đáp án=${answerNum[1]}`);
+    const ansVal = extractNumber(answer);
+    if (ansVal !== null && ansVal !== expected) {
+      errors.push(`Phép trừ: ${simpleSubMatch[1]}-${simpleSubMatch[2]}=${expected} nhưng đáp án=${ansVal}`);
     }
   }
 
@@ -294,12 +307,9 @@ function checkMathLogic(q) {
   const simpleMulMatch = content.match(/[Tt]ính[:\s]*\$\s*(\d+)\s*\\times\s*(\d+)\s*\$/);
   if (simpleMulMatch) {
     const expected = parseInt(simpleMulMatch[1]) * parseInt(simpleMulMatch[2]);
-    const answerNum = answer.match(/\$?\s*(\d[\d,.\s]*)\s*\$?/);
-    if (answerNum) {
-      const ansVal = parseInt(answerNum[1].replace(/[,.\s\\]/g, ''));
-      if (ansVal && ansVal !== expected) {
-        errors.push(`Phép nhân: ${simpleMulMatch[1]}×${simpleMulMatch[2]}=${expected} nhưng đáp án=${ansVal}`);
-      }
+    const ansVal = extractNumber(answer);
+    if (ansVal !== null && ansVal !== expected) {
+      errors.push(`Phép nhân: ${simpleMulMatch[1]}×${simpleMulMatch[2]}=${expected} nhưng đáp án=${ansVal}`);
     }
   }
 
