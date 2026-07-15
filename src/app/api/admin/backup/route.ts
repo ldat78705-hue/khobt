@@ -25,16 +25,15 @@ export async function GET(req: NextRequest) {
     
     const sql = neon(databaseUrl);
     
-    // Use tagged template literals - the correct way to call neon() sql function
-    const [categories, questions, exams, exam_questions, users, favorites, saved_exams] = await Promise.all([
-      sql`SELECT * FROM public.categories`,
-      sql`SELECT * FROM public.questions`,
-      sql`SELECT * FROM public.exams`,
-      sql`SELECT * FROM public.exam_questions`,
-      sql`SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users`,
-      sql`SELECT * FROM public.favorites`,
-      sql`SELECT * FROM public.saved_exams`,
-    ]);
+    // Query each table individually - if one fails, the rest continue
+    let categories = [], questions = [], exams = [], exam_questions = [], users = [], favorites = [], saved_exams = [];
+    try { categories = await sql`SELECT * FROM public.categories`; } catch(e) { console.error('[Backup] categories:', e.message); }
+    try { questions = await sql`SELECT * FROM public.questions`; } catch(e) { console.error('[Backup] questions:', e.message); }
+    try { exams = await sql`SELECT * FROM public.exams`; } catch(e) { console.error('[Backup] exams:', e.message); }
+    try { exam_questions = await sql`SELECT * FROM public.exam_questions`; } catch(e) { console.error('[Backup] exam_questions:', e.message); }
+    try { users = await sql`SELECT id, email, full_name, role, is_active, is_approved, created_at, updated_at FROM public.users`; } catch(e) { console.error('[Backup] users:', e.message); }
+    try { favorites = await sql`SELECT * FROM public.favorites`; } catch(e) { /* optional table */ }
+    try { saved_exams = await sql`SELECT * FROM public.saved_exams`; } catch(e) { /* optional table */ }
 
     const backupData = {
       version: "1.0",
